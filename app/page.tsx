@@ -7,6 +7,11 @@ import WhySection from './components/WhySection';
 import ModelProvidersSection from './components/ModelProvidersSection';
 import StatsSection from './components/StatsSection';
 import SecuritySection from './components/SecuritySection';
+import PricingSection from './components/PricingSection';
+import BlogsSection from './components/BlogsSection';
+import TestimonialsSection from './components/TestimonialsSection';
+import ContactSection from './components/ContactSection';
+import PngSection from "./components/PngSection";
 
 export default function Home() {
   return (
@@ -18,8 +23,15 @@ export default function Home() {
       <WhySection />
       <StatsSection />
       <SecuritySection />
+
       <ModelProvidersSection />
-      {/* Add more sections here as needed */}
+      <PricingSection />
+      <PngSection />
+
+      <BlogsSection />
+      <TestimonialsSection />
+      <ContactSection />
+
     </>
   );
 }

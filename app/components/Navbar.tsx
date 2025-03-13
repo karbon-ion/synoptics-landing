@@ -32,25 +32,27 @@ const Navbar = () => {
 
   return (
     <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'py-2' : 'py-4'}`}>
-      <div className={`absolute inset-0 transition-all duration-300 ${
-        scrolled 
-          ? 'bg-white/80 shadow-lg backdrop-blur-md' 
+      <div className={`absolute inset-0 transition-all duration-300 ${scrolled
+          ? 'bg-white/80 shadow-lg backdrop-blur-md'
           : 'bg-white/60 backdrop-blur-sm bg-gradient-to-r from-blue-50/40 to-white/60'
-      }`} />
-      
+        }`} />
+
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className={`flex justify-between items-center transition-all duration-300 ${scrolled ? 'h-16' : 'h-[72px]'}`}>
           <div className="flex items-center">
             <Link href="/" className="flex items-center gap-2 group">
               <div className="relative w-7 h-7 transition-transform duration-300 group-hover:scale-110">
                 <Image
-                  src="/synoptix-icon.svg"
+                  src="/synoptix_logo.png"
                   alt=""
                   fill
                   className="object-contain"
                 />
+
               </div>
-              <span className="text-[15px] font-medium text-gray-900 tracking-wide group-hover:text-blue-600 transition-colors duration-300">synoptix.ai</span>
+              <span className="text-[28px] font-bold tracking-tight">
+                Synoptix<span className="text-blue-500">.</span>ai
+              </span>
             </Link>
           </div>
 
