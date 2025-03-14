@@ -10,25 +10,19 @@ const VideoSection = () => {
 
   const { scrollYProgress } = useScroll({
     target: sectionRef,
-    offset: ["start center", "end center"] // Adjusted timing to start transition at center
+    offset: ["start center", "end center"]
   });
 
   const backgroundColor = useTransform(
     scrollYProgress,
-    [0.1, 0.4, 0.6, 0.9], // Adjusted timing points
+    [0, 0.15, 0.6, 0.9],
     ["rgb(255, 255, 255)", "rgb(0, 0, 0)", "rgb(0, 0, 0)", "rgb(255, 255, 255)"]
-  );
-
-  const width = useTransform(
-    scrollYProgress,
-    [0.1, 0.4, 0.6, 0.9], // Adjusted timing points
-    ["85%", "calc(100% - 4rem)", "calc(100% - 4rem)", "85%"] // Added margin consideration
   );
 
   const scale = useTransform(
     scrollYProgress,
-    [0.1, 0.4, 0.6, 0.9], // Adjusted timing points
-    [1, 1.05, 1.05, 1] // Reduced scale for better containment
+    [0.1, 0.45, 0.65, 0.9],
+    [1, 1.05, 1.05, 1]
   );
 
   const handlePlayVideo = () => {
@@ -41,7 +35,7 @@ const VideoSection = () => {
       style={{ backgroundColor }}
       className="relative py-20 min-h-screen flex items-center justify-center transition-colors overflow-hidden"
     >
-      <div className="w-full px-24"> {/* Added horizontal padding */}
+      <div className="w-full px-20"> 
         <div className="text-center mb-12">
           <motion.h2 
             style={{ color: useTransform(scrollYProgress, [0, 0.3, 0.7, 1], ["#111827", "#ffffff", "#ffffff", "#111827"]) }}
@@ -58,7 +52,8 @@ const VideoSection = () => {
         </div>
 
         <motion.div
-          style={{ width, scale }}
+        layoutId="video-section"
+          style={{ scale }}
           className="relative mx-auto rounded-2xl overflow-hidden shadow-xl"
         >
           {!isPlaying ? (
