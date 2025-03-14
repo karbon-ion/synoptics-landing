@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import { useState, useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import thumbnail from '@/public/thumbnail.png'
 
 const VideoSection = () => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -54,13 +55,13 @@ const VideoSection = () => {
         <motion.div
         layoutId="video-section"
           style={{ scale }}
-          className="relative mx-auto rounded-2xl overflow-hidden shadow-xl"
+          className="relative mx-auto rounded-3xl overflow-hidden shadow-xl"
         >
           {!isPlaying ? (
             <>
               <div className="relative aspect-video bg-gray-100 overflow-hidden"> {/* Fixed aspect ratio */}
                 <Image 
-                  src="https://via.placeholder.com/1280x720.png" 
+                  src={thumbnail} 
                   alt="Video thumbnail" 
                   width={1280} 
                   height={720}
