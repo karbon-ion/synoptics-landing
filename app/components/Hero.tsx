@@ -1,12 +1,25 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 
 const Hero = () => {
   return (
     <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Background image */}
+      <div className="absolute inset-0">
+        <Image
+          src="/hero.png"
+          alt="Background"
+          fill
+          priority
+          className="object-cover"
+          quality={100}
+        />
+      </div>
+      
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-white" />
+      <div className="absolute inset-0 bg-white/50 backdrop-blur-[2px]" />
       
       {/* Decorative elements */}
       <div className="absolute inset-0">
@@ -20,7 +33,7 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 text-center max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 text-center max-w-[1060px] mx-auto px-4 sm:px-6 lg:px-8">
         <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-8">
           Let AI Handle the Paperwork—
           <br />
