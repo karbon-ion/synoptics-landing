@@ -17,10 +17,10 @@ const Hero = () => {
           quality={100}
         />
       </div>
-      
+
       {/* Background gradient */}
       {/* <div className="absolute inset-0 bg-white/50 backdrop-blur-[2px]" /> */}
-      
+
       {/* Decorative elements */}
       <div className="absolute inset-0">
         <div className="relative w-full h-full">

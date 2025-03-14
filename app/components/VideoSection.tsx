@@ -1,31 +1,69 @@
 'use client';
 
 import Image from 'next/image';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
 
 const VideoSection = () => {
   const [isPlaying, setIsPlaying] = useState(false);
+  const sectionRef = useRef(null);
+
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start center", "end center"] // Adjusted timing to start transition at center
+  });
+
+  const backgroundColor = useTransform(
+    scrollYProgress,
+    [0.1, 0.4, 0.6, 0.9], // Adjusted timing points
+    ["rgb(255, 255, 255)", "rgb(0, 0, 0)", "rgb(0, 0, 0)", "rgb(255, 255, 255)"]
+  );
+
+  const width = useTransform(
+    scrollYProgress,
+    [0.1, 0.4, 0.6, 0.9], // Adjusted timing points
+    ["85%", "calc(100% - 4rem)", "calc(100% - 4rem)", "85%"] // Added margin consideration
+  );
+
+  const scale = useTransform(
+    scrollYProgress,
+    [0.1, 0.4, 0.6, 0.9], // Adjusted timing points
+    [1, 1.05, 1.05, 1] // Reduced scale for better containment
+  );
 
   const handlePlayVideo = () => {
     setIsPlaying(true);
   };
 
   return (
-    <section className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <motion.section
+      ref={sectionRef}
+      style={{ backgroundColor }}
+      className="relative py-20 min-h-screen flex items-center justify-center transition-colors overflow-hidden"
+    >
+      <div className="w-full px-24"> {/* Added horizontal padding */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <motion.h2 
+            style={{ color: useTransform(scrollYProgress, [0, 0.3, 0.7, 1], ["#111827", "#ffffff", "#ffffff", "#111827"]) }}
+            className="text-3xl md:text-4xl font-bold mb-4"
+          >
             See Synoptix in Action
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          </motion.h2>
+          <motion.p 
+            style={{ color: useTransform(scrollYProgress, [0, 0.3, 0.7, 1], ["#4B5563", "#E5E7EB", "#E5E7EB", "#4B5563"]) }}
+            className="text-xl max-w-3xl mx-auto"
+          >
             Watch how our AI platform automates workflows and entire job functions with built-in safety guardrails.
-          </p>
+          </motion.p>
         </div>
 
-        <div className="relative max-w-4xl mx-auto rounded-2xl overflow-hidden shadow-xl">
+        <motion.div
+          style={{ width, scale }}
+          className="relative mx-auto rounded-2xl overflow-hidden shadow-xl"
+        >
           {!isPlaying ? (
             <>
-              <div className="relative aspect-video bg-gray-100 overflow-hidden">
+              <div className="relative aspect-video bg-gray-100 overflow-hidden"> {/* Fixed aspect ratio */}
                 <Image 
                   src="https://via.placeholder.com/1280x720.png" 
                   alt="Video thumbnail" 
@@ -65,7 +103,7 @@ const VideoSection = () => {
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent h-1/3 pointer-events-none" />
             </>
           ) : (
-            <div className="aspect-video bg-black">
+            <div className="aspect-video bg-black"> {/* Fixed aspect ratio */}
               <iframe
                 width="100%"
                 height="100%"
@@ -78,16 +116,19 @@ const VideoSection = () => {
               ></iframe>
             </div>
           )}
-        </div>
+        </motion.div>
         
-        <div className="mt-8 text-center">
-          <p className="text-sm text-gray-500">
+        <motion.div 
+          style={{ color: useTransform(scrollYProgress, [0, 0.3, 0.7, 1], ["#6B7280", "#9CA3AF", "#9CA3AF", "#6B7280"]) }}
+          className="mt-8 text-center"
+        >
+          <p className="text-sm">
             See how our AI platform can transform your business operations
           </p>
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
-export default VideoSection; 
+export default VideoSection;
