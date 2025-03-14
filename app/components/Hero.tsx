@@ -2,24 +2,24 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-
+import hero from '@/public/hero.png';
 const Hero = () => {
   return (
     <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background image */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 transform translate-x-32 translate-y-12">
         <Image
-          src="/hero.png"
+          src={hero}
           alt="Background"
-          fill
+          width={950}
           priority
-          className="object-cover"
+          className="object-center w-full h-full"
           quality={100}
         />
       </div>
       
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-white/50 backdrop-blur-[2px]" />
+      {/* <div className="absolute inset-0 bg-white/50 backdrop-blur-[2px]" /> */}
       
       {/* Decorative elements */}
       <div className="absolute inset-0">
@@ -33,13 +33,11 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 text-center max-w-[1060px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 text-center max-w-[1060px] mx-auto px-4 sm:px-6 lg:px-8 mt-24">
         <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-8">
-          Let AI Handle the Paperwork—
-          <br />
-          <span className="block">You Focus on What Matters</span>
+          Let AI Handle the Paperwork—You Focus on What Matters
         </h1>
-        <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto">
+        <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-4xl mx-auto">
           Automate not just workflows but entire job functions. Safe AI and responsible AI
           guardrails integrated natively into the core agent architecture.
         </p>
