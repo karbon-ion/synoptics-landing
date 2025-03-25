@@ -1,35 +1,12 @@
 'use client';
-
-import Image from 'next/image';
 import Link from 'next/link';
-import hero from '@/public/hero.png';
+
 const Hero = () => {
   return (
-    <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background image */}
-      <div className="absolute inset-0 transform translate-x-32 translate-y-12">
-        <Image
-          src={hero}
-          alt="Background"
-          width={950}
-          priority
-          className="object-center w-full h-full"
-          quality={100}
-        />
-      </div>
-
-      {/* Background gradient */}
-      {/* <div className="absolute inset-0 bg-white/50 backdrop-blur-[2px]" /> */}
-
-      {/* Decorative elements */}
-      <div className="absolute inset-0">
-        <div className="relative w-full h-full">
-          {/* Add decorative dots and lines here */}
-          <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-yellow-400 rounded-full" />
-          <div className="absolute top-1/3 right-1/3 w-2 h-2 bg-green-400 rounded-full" />
-          <div className="absolute bottom-1/4 left-1/3 w-2 h-2 bg-blue-400 rounded-full" />
-          {/* Add more decorative elements as needed */}
-        </div>
+    <div className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white">
+      {/* Animated blob background */}
+      <div className="container">
+        <div className="blob"></div>
       </div>
 
       {/* Content */}
