@@ -51,8 +51,8 @@ const FeaturesSection = () => {
 
 
         <div className="text-center mb-16 relative">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 max-w-6xl mx-auto leading-tight">
-          Enterprise AI Solutions for Improved Productivity
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 max-w-4xl mx-auto leading-tight">
+            Synoptix AI That Reads, Thinks, and Answers—So You Don't Have To
           </h2>
         </div>
 

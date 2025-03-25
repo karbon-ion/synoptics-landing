@@ -12,12 +12,11 @@ import BlogsSection from './components/BlogsSection';
 import TestimonialsSection from './components/TestimonialsSection';
 import ContactSection from './components/ContactSection';
 import PngSection from "./components/PngSection";
-import ProvidersMarquee from "./components/ProvidersMarquee";
 export default function Home() {
   return (
     <>
       <Hero />
-      <ProvidersMarquee />
+      {/* <ProvidersMarquee /> */}
       <VideoSection />
       <FeaturesSection />
       <ApiSection />

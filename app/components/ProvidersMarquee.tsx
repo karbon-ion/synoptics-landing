@@ -1,4 +1,3 @@
-import { Marquee } from "@/components/magicui/marquee";
 import Image from "next/image";
 
 const logos = [
@@ -89,16 +88,20 @@ const LogoCard = ({ src, alt, name, description }: { src: string; alt: string; n
 };
 
 const ProvidersMarquee = () => {
+    const allLogos = [...logos, ...logos]; // Double the logos for seamless loop
+
     return (
-        <div className="bg-white overflow-visible">
+        <div className="relative py-12">
             <div className="relative w-full overflow-hidden">
-                <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-white z-10"></div>
-                <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white z-10"></div>
-                <Marquee pauseOnHover className="[--duration:40s]">
-                    {logos.map((logo, index) => (
-                        <LogoCard key={index} {...logo} />
-                    ))}
-                </Marquee>
+                <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-white via-white to-transparent z-10"></div>
+                <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white via-white to-transparent z-10"></div>
+                <div className="flex">
+                    <div className="animate-marquee flex shrink-0 gap-8">
+                        {allLogos.map((logo, index) => (
+                            <LogoCard key={`logo-${index}`} {...logo} />
+                        ))}
+                    </div>
+                </div>
             </div>
         </div>
     )
