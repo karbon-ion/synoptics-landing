@@ -78,7 +78,7 @@ const WhySection = () => {
                     <div className="w-full lg:w-1/2">
                         <div className="mb-12">
                             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                                Why<br />Synoptics.ai?
+                                Why Synoptics.AI?
                             </h2>
 
                             <div className="w-16 h-1 bg-blue-500 mb-8"></div>

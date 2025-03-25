@@ -38,7 +38,7 @@ const VideoSection = () => {
     >
       <div className="w-full px-20"> 
         <div className="text-center mb-12">
-          <motion.h2 
+          {/* <motion.h2 
             style={{ color: useTransform(scrollYProgress, [0, 0.3, 0.7, 1], ["#111827", "#ffffff", "#ffffff", "#111827"]) }}
             className="text-3xl md:text-4xl font-bold mb-4"
           >
@@ -49,7 +49,7 @@ const VideoSection = () => {
             className="text-xl max-w-3xl mx-auto"
           >
             Watch how our AI platform automates workflows and entire job functions with built-in safety guardrails.
-          </motion.p>
+          </motion.p> */}
         </div>
 
         <motion.div
@@ -114,14 +114,14 @@ const VideoSection = () => {
           )}
         </motion.div>
         
-        <motion.div 
+        {/* <motion.div 
           style={{ color: useTransform(scrollYProgress, [0, 0.3, 0.7, 1], ["#6B7280", "#9CA3AF", "#9CA3AF", "#6B7280"]) }}
           className="mt-8 text-center"
         >
           <p className="text-sm">
             See how our AI platform can transform your business operations
           </p>
-        </motion.div>
+        </motion.div> */}
       </div>
     </motion.section>
   );
