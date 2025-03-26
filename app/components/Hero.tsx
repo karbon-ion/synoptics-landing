@@ -2,20 +2,20 @@
 import Link from 'next/link';
 import { Typewriter } from 'react-simple-typewriter';
 import { BackgroundGradientAnimation } from '@/components/ui/background-gradient-animation';
-import ProvidersMarquee from "@/app/components/ProvidersMarquee";
+  import ProvidersMarquee from "@/app/components/ProvidersMarquee";
 
 const Hero = () => {
   return (
     <div className="min-h-screen flex items-center justify-center ">
       <BackgroundGradientAnimation
-        gradientBackgroundStart="rgb(255, 255, 255)"
-        gradientBackgroundEnd="rgb(255, 255, 255)"
-        firstColor="255, 255, 255"
-        secondColor="240, 245, 255"
-        thirdColor="245, 240, 255"
-        fourthColor="230, 240, 255"
-        fifthColor="240, 230, 255"
-        pointerColor="200, 200, 255"
+        gradientBackgroundStart="rgb(240, 245, 255)"
+        gradientBackgroundEnd="rgb(255, 255, 255)" 
+        firstColor="230, 240, 255"
+        secondColor="220, 235, 255"
+        thirdColor="235, 230, 255"
+        fourthColor="210, 230, 255"
+        fifthColor="225, 220, 255"
+        pointerColor="180, 200, 255"
         size="100%"
         blendingValue="soft-light"
       >
@@ -59,7 +59,7 @@ const Hero = () => {
               </span>
             </Link>
           </div>
-          <ProvidersMarquee />  
+          {/* <ProvidersMarquee />   */}
         </div>
         
       </BackgroundGradientAnimation>

@@ -1,6 +1,4 @@
 @import "tailwindcss";
-@tailwind utilities;
-
 
 @theme {
   --font-sans: var(--font-geist-sans);
@@ -25,14 +23,6 @@ body {
   to {
     transform: translateX(calc(-100% - 2rem));
   }
-}
-
-.animate-marquee {
-  animation: scroll 95s linear infinite;
-}
-
-.animate-marquee:hover {
-  animation-play-state: paused;
 }
 
 @keyframes moveVertical {
