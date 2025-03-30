@@ -47,6 +47,9 @@ jobs:
     environment:
       name: 'Production'
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
+    permissions:
+      id-token: write  # Required for OIDC authentication
+      contents: read
 
     steps:
       - name: Download artifact from build job
