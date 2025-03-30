@@ -95,17 +95,11 @@ const ProvidersMarquee = () => {
                 <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-white via-white/40 to-transparent z-10"></div>
                 <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white via-white/40 to-transparent z-10"></div>
                 <div className="whitespace-nowrap">
-                    <marquee 
-                        behavior="scroll" 
-                        direction="left" 
-                        scrollamount="3" 
-                        width="100%"
-                        scrolldelay="0"
-                        scrollamount="12"
-                        className="inline-flex items-center"
-                        style={{ display: 'inline-flex' }}
-                        onMouseEnter={(e: any) => e.currentTarget.stop()}
-                        onMouseLeave={(e: any) => e.currentTarget.start()}
+                    <div 
+                        className="inline-flex items-center animate-marquee hover:[animation-play-state:paused]"
+                        style={{
+                            animation: 'marquee 40s linear infinite'
+                        }}
                     >
                         <div className="inline-flex gap-8">
                             {logos.map((logo, index) => (
@@ -115,7 +109,7 @@ const ProvidersMarquee = () => {
                                 <LogoCard key={`logo-${index}-duplicate`} {...logo} />
                             ))}
                         </div>
-                    </marquee>
+                    </div>
                 </div>
             </div>
         </div>
@@ -123,4 +117,3 @@ const ProvidersMarquee = () => {
 };
 
 export default ProvidersMarquee;
-
