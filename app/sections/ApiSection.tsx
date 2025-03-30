@@ -11,7 +11,7 @@ const ApiSection = () => {
           Activate and Control<br />
           Your AI Agents
         </h2>
-        
+        //empty
         <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-10">
           Connect & automate with Synoptix's enterprise-grade API. Easily integrate AI
           capabilities into your existing systems—without disruption.
