@@ -1,3 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
-  <path d="M60 10C32.4 10 10 32.4 10 60C10 87.6 32.4 110 60 110C87.6 110 110 87.6 110 60C110 32.4 87.6 10 60 10ZM40 80L40 40L50 40L50 80L40 80ZM70 80L70 40L80 40L80 80L70 80Z" fill="#D4A9FF"/>
-</svg> 
+<svg version="1.1" id="Layer_1" xmlns:x="ns_extend;" xmlns:i="ns_ai;" xmlns:graph="ns_graphs;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 92.2 65" style="enable-background:new 0 0 92.2 65;" xml:space="preserve">
+ <style type="text/css">
+  .st0{fill:#181818;}
+ </style>
+ <metadata>
+  <sfw xmlns="ns_sfw;">
+   <slices>
+   </slices>
+   <sliceSourceBounds bottomLeftOrigin="true" height="65" width="92.2" x="-43.7" y="-98">
+   </sliceSourceBounds>
+  </sfw>
+ </metadata>
+ <path class="st0" d="M66.5,0H52.4l25.7,65h14.1L66.5,0z M25.7,0L0,65h14.4l5.3-13.6h26.9L51.8,65h14.4L40.5,0C40.5,0,25.7,0,25.7,0z
+	 M24.3,39.3l8.8-22.8l8.8,22.8H24.3z">
+ </path>
+</svg>
