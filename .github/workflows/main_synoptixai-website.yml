@@ -65,7 +65,7 @@ jobs:
         with:
           client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_2BC0FF302D0745A3BCE3ACA5C7AC3BE5 }}
           tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_7E4F22EB57B644DEBBF1C732D9DD2B5D }}
-          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_1FDFECC512EB4FE18F3CA7BAA09A235F }}
 
       - name: Set SCM_DO_BUILD_DURING_DEPLOYMENT to false
         run: echo "SCM_DO_BUILD_DURING_DEPLOYMENT=false" >> $GITHUB_ENV
