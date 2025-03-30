@@ -77,7 +77,7 @@ jobs:
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
         with:
-          app-name: 'Synoptix'
+          app-name: 'SynoptixAI-Website'
           slot-name: 'Production'
           package: .
           start-command: "npx next start -p 8080"
