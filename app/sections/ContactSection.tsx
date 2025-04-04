@@ -9,7 +9,7 @@ const ContactSection = () => {
 
   return (
     <section className="w-max-full px-8 py-20  bg-[#F5FAFF]">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto w-7xl px-4">
         <div className="flex flex-col lg:flex-row justify-between items-start gap-16">
           {/* Left side - Content */}
           <div className="max-w-xl">
@@ -39,8 +39,8 @@ const ContactSection = () => {
             <div className="bg-white rounded-[32px] p-8 border border-blue-100">
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <input
-                    type="text"
+                  <textarea
+                    rows={4}
                     placeholder="How can we help you?"
                     className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-blue-500"
                   />

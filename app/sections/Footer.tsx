@@ -35,7 +35,7 @@ const Footer = () => {
         />
       </div>
 
-      <div className="container relative mx-auto px-4 py-12">
+      <div className="container relative mx-auto w-[80rem] px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
           {/* Logo and Contact Info */}
           <div className="md:col-span-3">
