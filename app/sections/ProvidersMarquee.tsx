@@ -60,7 +60,7 @@ const ProvidersMarquee = () => {
                 <InfiniteMovingCards
                     items={logos}
                     direction="left"
-                    speed="normal"
+                    speed="slow"
                     pauseOnHover={true}
                     className="py-10"
                 />
