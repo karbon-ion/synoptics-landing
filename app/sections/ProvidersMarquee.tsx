@@ -1,116 +1,69 @@
 'use client'
 import Image from "next/image";
+import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 
 const logos = [
     {
+        quote: "Leading AI Research",
         name: "OpenAI",
-        src: "/marquee/OpenAI_Logo.svg.png",
-        alt: "OpenAI Logo",
-        description: "Leading AI Research"
+        title: "AI Research & Development",
+        image: "/marquee/OpenAI_Logo.svg.png"
     },
     {
+        quote: "Cloud Computing & AI Infrastructure",
         name: "Microsoft Azure",
-        src: "/marquee/Microsoft_Azure.svg.png",
-        alt: "Microsoft Azure Logo",
-        description: "Cloud Computing"
+        title: "Enterprise Cloud Solutions",
+        image: "/marquee/Microsoft_Azure.svg.png"
     },
     {
+        quote: "Next-Generation AI Model",
         name: "Google Gemini",
-        src: "/marquee/Google_Gemini_logo.svg.png",
-        alt: "Google Gemini Logo",
-        description: "Next-Gen AI Model"
+        title: "Advanced AI Systems",
+        image: "/marquee/Google_Gemini_logo.svg.png"
     },
     {
+        quote: "Real-time AI Assistant",
         name: "Grok",
-        src: "/marquee/grok.png",
-        alt: "Grok Logo",
-        description: "Real-time AI Assistant"
+        title: "Conversational AI",
+        image: "/marquee/grok.png"
     },
     {
+        quote: "Constitutional AI Development",
         name: "Anthropic",
-        src: "/marquee/Icon.jpeg",
-        alt: "Anthropic Logo",
-        description: "Constitutional AI"
+        title: "Ethical AI Solutions",
+        image: "/marquee/Icon.jpeg"
     },
     {
+        quote: "Advanced Language Model",
         name: "Claude",
-        src: "/marquee/Logo.png",
-        alt: "Claude Logo",
-        description: "Advanced Language Model"
+        title: "AI Language Processing",
+        image: "/marquee/Logo.png"
     },
     {
+        quote: "Enterprise AI Solutions",
         name: "Cohere",
-        src: "/marquee/idKpB5u1dr_logos.png",
-        alt: "Cohere Logo",
-        description: "Enterprise AI Solutions"
+        title: "Business AI Integration",
+        image: "/marquee/idKpB5u1dr_logos.png"
     },
     {
+        quote: "Social AI Innovation",
         name: "Meta AI",
-        src: "/marquee/idW0736plJ_logos.png",
-        alt: "Meta Logo",
-        description: "Social AI Innovation"
+        title: "Social Technology AI",
+        image: "/marquee/idW0736plJ_logos.png"
     }
 ];
 
-const LogoCard = ({ src, alt, name, description }: { src: string; alt: string; name: string; description: string }) => {
-    return (
-        <div className="relative mx-4">
-            <div className="relative h-32 w-[320px] bg-purple-50/80 rounded-xl p-4 flex flex-col justify-between group 
-                hover:shadow-lg transition-all duration-300 border border-purple-100 hover:border-purple-100">
-                <div className="flex items-start space-x-4">
-                    <div className="h-12 w-12 relative bg-white rounded-lg overflow-hidden shadow-xs border border-purple-100">
-                        <Image
-                            src={src}
-                            alt={alt}
-                            fill
-                            className="object-contain p-2"
-                            sizes="(max-width: 48px) 100vw, 48px"
-                        />
-                    </div>
-                    <div className="flex-1">
-                        <h3 className="text-purple-900 font-bold text-lg tracking-tight">{name}</h3>
-                        <p className="text-purple-600 text-sm mt-1 leading-snug">{description}</p>
-                    </div>
-                </div>
-                <div className="mt-3 flex items-center justify-between">
-                    <div className="flex items-center">
-                        <svg className="w-4 h-4 text-purple-400 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                        </svg>
-                        <span className="text-xs text-purple-500 font-medium">AI Powered</span>
-                    </div>
-                    <div className="text-xs text-purple-400 group-hover:text-purple-600 transition-colors duration-300 font-medium">
-                        Explore →
-                    </div>
-                </div>
-            </div>
-        </div>
-    );
-};
-
 const ProvidersMarquee = () => {
     return (
-        <div className="relative py-12 w-full">
-            <div className="relative w-full overflow-hidden">
-                <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-white via-white/40 to-transparent z-10"></div>
-                <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white via-white/40 to-transparent z-10"></div>
-                <div className="whitespace-nowrap">
-                    <div 
-                        className="inline-flex items-center animate-marquee hover:[animation-play-state:paused]"
-                        style={{
-                            animation: 'marquee 40s linear infinite'
-                        }}
-                    >
-                        <div className="inline-flex gap-8">
-                            {logos.map((logo, index) => (
-                                <LogoCard key={`logo-${index}`} {...logo} />
-                            ))}
-                            {logos.map((logo, index) => (
-                                <LogoCard key={`logo-${index}-duplicate`} {...logo} />
-                            ))}
-                        </div>
-                    </div>
-                </div>
+        <div className="relative py-12 w-full bg-white">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <InfiniteMovingCards
+                    items={logos}
+                    direction="left"
+                    speed="slow"
+                    pauseOnHover={true}
+                    className="py-10"
+                />
             </div>
         </div>
     );

@@ -2,42 +2,44 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import f1 from '@/public/features1.png';
-import f2 from '@/public/features2.png';
-import f3 from '@/public/features3.png';
-import f4 from '@/public/features4.png';
+import agentGif from '@/public/gifs/agent.gif';
+import evaluationsGif from '@/public/gifs/evaluations.gif';
+import prebuiltAgentsGif from '@/public/gifs/prebuiltAgents.gif';
+import workflowGif from '@/public/gifs/workflow.gif';
 
 
 const features = [
   {
     title: "Design & Deploy Intelligent AI Agents",
-    subtitle: "AI AGENT",
-    description: "No-code AI Agents! From simple to advanced tasks, Synoptix’s AI platform lets you design, deploy, and scale intelligent agents. Build custom AI agents that works exactly the way your business need.",
-    image: f1,
+    subtitle: "CUSTOM AI AGENT",
+    description: "From simple to advanced tasks, Synoptix's AI platform lets you design, deploy, and scale intelligent agents. Build custom AI agents that work exactly the way you need—without complex coding.",
+    image: agentGif,
+
     ctaText: "Learn More",
     ctaLink: "/platform"
   },
   {
-    title: "Orchestrate Tasks with Precision and Speed",
-    subtitle: "WORKFLOWS",
-    description: "Execute multiple AI agents at once to optimize task management and efficiency. Enhance automation through seamless collaboration, ensuring smarter workflows and maximized productivity.",
-    image: f2,
+    title: "Automate Document Processing",
+    subtitle: "INTELLIGENT DOCUMENT PROCESSING",
+    description: "Extract, analyze, and process information from any document type. Our AI understands context, identifies key data points, and integrates with your existing workflows.",
+    image: evaluationsGif,
+
     ctaText: "Learn More",
     ctaLink: "/document-processing"
   },
   {
-    title: "Precision Analytics for Continuous Improvement",
-    subtitle: "Evaluations",
-    description: "Gain real-time insights into AI performance, efficiency, and accuracy with Synoptix AI. Track usage, measure impact, and continuously refine AI agents to maximize productivity and business value.",
-    image: f3,
+    title: "Enhance Customer Support",
+    subtitle: "AI CUSTOMER SERVICE",
+    description: "Deploy AI agents that understand customer inquiries, access knowledge bases, and provide accurate responses. Scale your support operations without increasing headcount.",
+    image: prebuiltAgentsGif,
     ctaText: "Learn More",
     ctaLink: "/customer-support"
   },
   {
-    title: "Pre-configured Agents for Instant Deployment ",
-    subtitle: "QUICK START AI",
-    description: "Access prebuilt AI agents designed for various business tasks. Customize prompts, upload documents, and configure AI agents to get fast, precise, and context-aware results—hassle-free in seconds.",
-    image: f4,
+    title: "Streamline Operations",
+    subtitle: "WORKFLOW AUTOMATION",
+    description: "Connect systems, automate repetitive tasks, and optimize business processes. Our AI agents work across departments to eliminate bottlenecks and improve efficiency.",
+    image: workflowGif,
     ctaText: "Learn More",
     ctaLink: "/operations"
   },
@@ -61,14 +63,14 @@ const FeaturesSection = () => {
             className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-8 lg:gap-16 items-center mb-24 last:mb-0`}
           >
             <div className="w-full lg:w-1/2">
-              <div className="overflow-hidden ">
+              <div className="overflow-hidden rounded-xl bg-[#f8fafc]">
                 <Image
                   src={feature.image}
                   alt={feature.title}
                   width={600}
                   height={400}
-                  className="w-full h-auto object-cover"
-                  unoptimized
+                  className="w-full h-auto object-cover rounded-xl scale-105"
+                  style={{ margin: '-2px' }}
                 />
               </div>
             </div>
@@ -94,17 +96,6 @@ const FeaturesSection = () => {
             </div>
           </div>
         ))}
-
-{/* <div className="absolute inset-0 transform translate-x-32 -translate-y-24 ">
-          <Image
-            src={f_blob1}
-            alt="Background"
-            width={950}
-            priority
-            className="object-center w-full h-full"
-            quality={100}
-          />
-        </div> */}
       </div>
     </section>
   );
