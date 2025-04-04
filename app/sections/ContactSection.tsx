@@ -13,8 +13,8 @@ const ContactSection = () => {
         <div className="flex flex-col lg:flex-row justify-between items-start gap-16">
           {/* Left side - Content */}
           <div className="max-w-xl">
-            <h3 className="text-sm font-medium uppercase mb-4">CONTACT US</h3>
-            <h2 className="text-[40px] font-bold mb-4">Let's Connect</h2>
+            <h2 className="text-sm font-medium uppercase mb-4">CONTACT US</h2>
+            <h3 className="text-[40px] font-bold mb-4">Let's Connect</h3>
             <p className="text-gray-600 mb-12">
               We're here to help. Whether you have questions,<br />
               need guidance, or just want to learn more, reach out<br />
@@ -22,14 +22,14 @@ const ContactSection = () => {
             </p>
 
             <div className="mb-12">
-              <h2 className="text-[32px] font-bold mb-4">Talk to an AI Expert</h2>
+              <h3 className="text-[32px] font-bold mb-4">Talk to an AI Expert</h3>
               <p className="text-gray-600 mb-6">
                 Need advice on the right solution for your business?<br />
                 Schedule a call with one of our AI specialists and get<br />
                 the answers you need.
               </p>
               <button className="bg-blue-500 text-white px-8 py-3 rounded-full font-medium hover:bg-blue-600 transition-colors">
-                Book a demo
+              Schedule a Call
               </button>
             </div>
           </div>
