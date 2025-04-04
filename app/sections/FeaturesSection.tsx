@@ -6,8 +6,7 @@ import f1 from '@/public/features1.png';
 import f2 from '@/public/features2.png';
 import f3 from '@/public/features3.png';
 import f4 from '@/public/features4.png';
-import f_blob1 from '@/public/f_blob1.png';
-import f_blob2 from '@/public/f_blob2.png';
+
 
 const features = [
   {
