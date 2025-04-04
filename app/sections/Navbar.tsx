@@ -25,7 +25,7 @@ const Navbar = () => {
   const navItems = [
     { name: 'Home', href: '/' },
     { name: 'Platform', href: '/platform' },
-    { name: 'Synoptix Guard', href: '/guard' },
+    { name: 'Synoptix Guard', href: '/syno-guard' },
     { name: 'Services', href: '/services' },
     { name: 'Resources', href: '/resources' },
     { name: 'Company', href: '/company' },
