@@ -1,7 +1,6 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
-import { useMotionValueEvent, useScroll } from "motion/react";
-import { motion } from "motion/react";
+import { useScroll, motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 export const StickyScroll = ({
@@ -85,7 +84,11 @@ export const StickyScroll = ({
             <div 
               key={item.title + index} 
               className="my-20"
-              ref={el => cardRefs.current[index] = el}
+              ref={(el: HTMLDivElement | null) => {
+                if (cardRefs.current) {
+                  cardRefs.current[index] = el;
+                }
+              }}
             >
               <motion.h2
                 initial={{
