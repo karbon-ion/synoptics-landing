@@ -48,13 +48,13 @@ const PricingSection = () => {
     <section className="w-full py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h3 className="text-sm font-semibold tracking-wider uppercase mb-4">OUR PLANS</h3>
-          <h2 className="text-4xl font-bold mb-4">Pricing and Plan</h2>
+          <h3 className="text-sm font-semibold tracking-wider uppercase mb-4">Pricing and Plan</h3>
+          <h2 className="text-4xl font-bold mb-4">Maximize Business Value with Smart Investments </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Dummy Text dummy text dummy text helping businesses improve operations and stay ahead.
+          Choose the plan that fits your needs and scale as you grow with AI tools and integration. 
           </p>
           <button className="mt-8 bg-blue-500 text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-600 transition-colors">
-            Book a demo
+            Start with 30-Day Trial
           </button>
         </div>
 

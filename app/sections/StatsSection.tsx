@@ -3,31 +3,31 @@
 const stats = [
   {
     id: 'azure',
-    category: 'AZURE AI',
-    value: '99.99%',
-    label: 'UPTIME',
-    description: 'Reliable AI services backed by Azure\'s enterprise-grade infrastructure'
+    category: 'AI PRODUCTIVITY BOOST',
+    value: '64%',
+    label: '',
+    description: 'of businesses expect AI to increase overall productivity.'
   },
   {
     id: 'models',
-    category: 'AI MODELS',
-    value: '97%',
+    category: 'AI INTEGRATION',
+    value: '72%',
     label: '',
-    description: 'AI models fine-tuned for precise responses.'
+    description: 'of businesses have adopted AI for at least one business function.'
   },
   {
     id: 'automation',
-    category: 'AI AUTOMATION',
-    value: '80%',
+    category: 'AI ADOPTION',
+    value: '79%',
     label: '',
-    description: 'Reduce manual workflows with AI-powered agents.'
+    description: 'of leaders agree AI is essential to staying competitive.'
   },
   {
     id: 'cost',
-    category: 'COST OPTIMIZATION',
-    value: '$120M',
+    category: 'AI USAGE',
+    value: '78%',
     label: '',
-    description: 'Annual Cost Savings for enterprises at scale'
+    description: 'of AI users are bringing their own tools into the workplace.'
   }
 ];
 
@@ -49,9 +49,7 @@ const StatsSection = () => {
         </h2>
         
         <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-16">
-          Synoptix makes enterprise automation easy. Built on Azure, our AI-powered platform 
-          delivers secure data processing, intelligent automation, and 250+ integrations—
-          helping businesses improve operations and stay ahead.
+        AI isn’t the future—it’s the now. Igniting efficiency, sustaining innovation, and turning insights into strategic business growth. 
         </p>
         
         {/* Stats grid */}

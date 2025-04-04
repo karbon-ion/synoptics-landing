@@ -8,20 +8,18 @@ const ApiSection = () => {
     <section className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-          Activate and Control<br />
-          Your AI Agents
+        Ignite Your Enterprise AI with RAG95 
         </h2>
         
         <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-10">
-          Connect & automate with Synoptix's enterprise-grade API. Easily integrate AI
-          capabilities into your existing systems—without disruption.
+        Instantly process information with knowledge retrieval. Enhance AI accuracy, reduce hallucinations, and get precise, context-aware responses—every time. 
         </p>
         
         <Link
           href="/docs"
           className="inline-flex items-center px-8 py-3 text-lg font-medium text-white bg-gradient-to-r from-blue-400 to-blue-600 rounded-full hover:from-blue-500 hover:to-blue-700 transition-all duration-200 shadow-md hover:shadow-lg"
         >
-          Read Docs
+          Discover How RAG95 Works
         </Link>
         
         <div className="mt-16 max-w-4xl mx-auto">

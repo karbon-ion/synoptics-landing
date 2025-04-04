@@ -24,8 +24,8 @@ const BlogsSection = () => {
     <section className="w-full py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h3 className="text-sm font-semibold tracking-wider uppercase mb-4 text-blue-500">OUR BLOGS</h3>
-          <h2 className="text-4xl font-bold mb-4">Check out our Latest<br />Blogs & Insights</h2>
+          <h3 className="text-sm font-semibold tracking-wider uppercase mb-4 text-blue-500">BLOGS</h3>
+          <h2 className="text-4xl font-bold mb-4">Check out Synoptix AI<br />Latest Blogs & Insights</h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">

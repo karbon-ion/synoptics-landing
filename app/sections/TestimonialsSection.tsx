@@ -8,16 +8,34 @@ const TestimonialsSection = () => {
 
   const testimonials = [
     {
-      name: 'Stephen Brekke',
-      role: 'Legacy Integration Producer',
+      name: 'David R ',
+      role: 'Head of Customer Experience ',
       image: '/images/testimonial1.jpg',
-      text: 'Website design did exactly what you said it does. Just what I was looking for. Nice work on your website design.',
+      text: 'Before Synoptix, we were overwhelmed with customer inquiries. Now, AI handles over 70% of them, cutting down wait times and improving satisfaction. It’s a game changer for us.',
     },
     {
-      name: 'Stephen Brekke',
-      role: 'Legacy Integration Producer',
+      name: 'Samantha L ',
+      role: 'IT Director',
       image: '/images/testimonial2.jpg',
-      text: 'If you want real marketing that works and effective implementation - mobile app\'s got you covered.',
+      text: 'We were looking for a solution that would integrate smoothly with our existing tools and keep our data secure. Synoptix nailed it—they made automation work without compromising on security.',
+    },
+    {
+      name: 'Mark T',
+      role: 'Compliance Officer ',
+      image: '/images/testimonial3.jpg',
+      text: 'Compliance used to be a hassle. With Synoptix, we have automated key processes, reduced errors, and cut our processing time by almost 60%. It’s made life so much easier.',
+    },
+    {
+      name: 'Jessica P ',
+      role: 'VP of Marketing',
+      image: '/images/testimonial4.jpg',
+      text: 'AI felt like a huge leap at first, but Synoptix made it simple. Their AI agents are now part of our sales and marketing, and managing leads and customer interactions has never been smoother.',
+    },
+    {
+      name: 'Dr. Andrew M ',
+      role: 'NovaCare Medica',
+      image: '/images/testimonial5.jpg',
+      text: 'Data security is our priority, and Synoptix gave us that peace of mind. They helped us automate admin tasks, so our staff can focus on what truly matters—patient care.',
     },
   ];
 
@@ -41,13 +59,12 @@ const TestimonialsSection = () => {
           <div className="max-w-xl">
             <h3 className="text-blue-500 text-sm font-medium mb-4">TESTIMONIALS</h3>
             <h2 className="text-[40px] font-bold leading-tight mb-4">
-              AI Evaluations,<br />
-              Redefined Trusted by<br />
-              Enterprise Leaders
+            Success Speaks for Itself <br />
+            Read What Our Clients Say
             </h2>
-            <p className="text-gray-600">
+            {/* <p className="text-gray-600">
               Hear how industry leaders rely on Synoptix for accurate, secure, and business-ready insights.
-            </p>
+            </p> */}
             <div className="flex gap-4 mt-8">
               <button 
                 onClick={prevTestimonial}

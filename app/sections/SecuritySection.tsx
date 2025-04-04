@@ -5,26 +5,38 @@ import Link from 'next/link';
 const features = [
   {
     id: 'stack',
-    title: 'Use Synoptic with your stack',
-    description: 'We offer client and server libraries in everything from React and PHP to .NET and iOS',
+    title: 'Fine Tuning & Optimisation  ',
+    description: 'Get higher accuracy and efficiency with AI models fine-tuned to your specific requirements and objectives.',
     link: '/libraries'
   },
   {
     id: 'no-code',
-    title: 'Try no-code options',
-    description: 'Customize and deploy payments interfaces directly from the Synoptic Dashboard',
+    title: 'AI Consulting',
+    description: 'Partner with our AI consulting experts to develop and execute strategies that maximize AI, ensure compliance, and align with your objectives.',
     link: '/no-code'
   },
   {
     id: 'integration',
-    title: 'Explore pre-built integration',
-    description: 'Connect Synoptic to over a hundred tools including Adobe, Salesforce and Xera.',
+    title: 'AI Strategy Development',
+    description: 'Align AI investments with your business objectives, identify opportunities, and create a roadmap for long-term success.',
     link: '/integrations'
   },
   {
     id: 'apps',
-    title: 'Build on Synoptic Apps',
-    description: 'Create an app just for your team or for the millions of businesses on Synoptic',
+    title: 'Training & Education ',
+    description: 'Boost your workforce’s AI skills with tailored training programs, learning paths, and leadership workshops for business transformation.',
+    link: '/apps'
+  },
+  {
+    id: 'apps',
+    title: 'Automation Consulting',
+    description: 'Streamline operations with AI automation to boost efficiency, cut costs, and create a more agile workforce. ',
+    link: '/apps'
+  },
+  {
+    id: 'apps',
+    title: 'Proof of Concept',
+    description: 'Test, validate, and refine custom AI solutions before full deployment—ensuring they deliver significant business value.',
     link: '/apps'
   }
 ];
@@ -39,20 +51,23 @@ const SecuritySection = () => {
         <div className="text-center mb-16">
           <div className="mb-4">
             <span className="text-sm font-semibold tracking-wider uppercase text-gray-600">
-              GLOBAL IMPACT
+              SERVICES
             </span>
           </div>
           
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8 max-w-4xl mx-auto">
-            Data is stored encrypted in your Azure subscription
+          AI Expertise That Gets Enterprises from Idea to Impact  
           </h2>
+          <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-16">
+          AI only creates value when it’s built, deployed, and managed the right way. Practical solutions, real impact—so your AI works the way you need it to.   
+        </p>
           
           <div className="flex justify-center">
             <Link
               href="/demo"
               className="inline-flex items-center px-8 py-3 text-lg font-medium text-white bg-gradient-to-r from-blue-400 to-blue-600 rounded-full hover:from-blue-500 hover:to-blue-700 transition-all duration-200 shadow-md hover:shadow-lg"
             >
-              Book a demo
+              Optimize Your Business with Synoptix AI 
             </Link>
           </div>
         </div>
