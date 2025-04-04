@@ -33,7 +33,8 @@ jobs:
  
       - name: Zip artifact for deployment
         run: |
-          zip -r release.zip .next public package.json package-lock.json next.config.js node_modules
+          zip -r release.zip . -x "*.git*" "node_modules/.cache/*"
+
  
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
