@@ -2,17 +2,10 @@
 
 import Hero from './sections/hero'
 import Certifications from './sections/certifications'
-import Features from "./sections/features";
-import Ideas from "./sections/ideas";
 import Metrics from "./sections/metrics";
 // import Security from "./sections/security";
 import WhySection from "../sections/WhySection";
-import RagStatsSection from "./sections/rag-stats";
-import QuantumSection from "../rag-application/sections/quantum";
-import FAQ from "./sections/faq";
 import TestimonialsSection from "../sections/TestimonialsSection";
-import FeaturesSection from "../sections/FeaturesSection";
-import Capabilities from "./sections/capabilities";
 import OWASP from './sections/owasp';
 import SmallFoot from "../sections/smallFoot";
 export default function SynoGuard() {

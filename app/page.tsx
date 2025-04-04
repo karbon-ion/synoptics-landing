@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Hero from './sections/Hero';
 import VideoSection from './sections/VideoSection';
 import FeaturesSection from './sections/FeaturesSection';
@@ -11,7 +10,6 @@ import PricingSection from './sections/PricingSection';
 import BlogsSection from './sections/BlogsSection';
 import TestimonialsSection from './sections/TestimonialsSection';
 import ContactSection from './sections/ContactSection';
-import PngSection from "./sections/PngSection";
 import ProvidersMarquee from "./sections/ProvidersMarquee";
 export default function Home() {
   return (

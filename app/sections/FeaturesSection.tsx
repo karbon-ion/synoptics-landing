@@ -7,12 +7,14 @@ import evaluationsGif from '@/public/gifs/evaluations.gif';
 import prebuiltAgentsGif from '@/public/gifs/prebuiltAgents.gif';
 import workflowGif from '@/public/gifs/workflow.gif';
 
+
 const features = [
   {
     title: "Design & Deploy Intelligent AI Agents",
     subtitle: "CUSTOM AI AGENT",
     description: "From simple to advanced tasks, Synoptix's AI platform lets you design, deploy, and scale intelligent agents. Build custom AI agents that work exactly the way you need—without complex coding.",
     image: agentGif,
+
     ctaText: "Learn More",
     ctaLink: "/platform"
   },
@@ -21,6 +23,7 @@ const features = [
     subtitle: "INTELLIGENT DOCUMENT PROCESSING",
     description: "Extract, analyze, and process information from any document type. Our AI understands context, identifies key data points, and integrates with your existing workflows.",
     image: evaluationsGif,
+
     ctaText: "Learn More",
     ctaLink: "/document-processing"
   },

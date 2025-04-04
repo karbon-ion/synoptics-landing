@@ -35,7 +35,7 @@ export default function Features() {
                 <div className="grid md:grid-cols-2 gap-12">
                     <div className="space-y-8">
                         <h2 className="text-4xl md:text-5xl font-bold leading-tight">
-                            Work Freer. Think Bigger. Achieve More.
+                        Think Bigger. Achieve More.
                         </h2>
 
                         <p className="text-gray-900 font-semibold">
@@ -43,8 +43,9 @@ export default function Features() {
                         </p>
 
                         <p className="text-gray-700">
-                            Synoptix AI Agents can handle the repetitive, executing with precision—on demand or
-                            autonomously—so your people can focus on strategy, creativity, and growth.Work smarter. Scale faster. Dominate effortlessly. With automation that evolves with your business, you’re not just keeping up—you’re setting the pace.                        </p>
+                        Synoptix AI Agents can handle the repetitive, executing with precision—on demand or autonomously—so your people can focus on strategy, creativity, and growth. 
+
+Work smarter. Scale faster. Dominate effortlessly. With automation that evolves with your business, you’re not just keeping up—you’re setting the pace.  </p>
 
                         <p className="font-semibold text-xl">
                             The future won’t wait—with Synoptix AI, you won’t have to.                        </p>
@@ -54,7 +55,7 @@ export default function Features() {
                             className="inline-block px-8 py-4 bg-gradient-to-r from-blue-400 to-blue-600 
                                 text-white rounded-full font-semibold hover:shadow-lg transition-all"
                         >
-                            Start Automating Today
+                            Start a Free Trial
                         </a>
                     </div>
 

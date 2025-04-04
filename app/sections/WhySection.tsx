@@ -67,6 +67,7 @@ const features = [
                 </div>
             </div>
         )
+
     }
 ];
 
@@ -79,6 +80,7 @@ const WhySection = () => {
                         Why Synoptics.AI?
                     </h2>
                     <div className="w-16 h-1 bg-blue-500"></div>
+
                 </div>
                 
                 <StickyScroll 

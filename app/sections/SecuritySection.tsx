@@ -18,6 +18,7 @@ const features = [
     title: 'Use Synoptic with your stack',
     description: 'We offer client and server libraries in everything from React and PHP to .NET and iOS',
     icon: <IconTerminal2 />,
+
     link: '/libraries'
   },
   {
@@ -25,6 +26,7 @@ const features = [
     title: 'Try no-code options',
     description: 'Customize and deploy payments interfaces directly from the Synoptic Dashboard',
     icon: <IconEaseInOut />,
+
     link: '/no-code'
   },
   {
@@ -32,7 +34,6 @@ const features = [
     title: 'Explore pre-built integration',
     description: 'Connect Synoptic to over a hundred tools including Adobe, Salesforce and Xera.',
     icon: <IconCurrencyDollar />,
-
     link: '/integrations'
   },
   {
@@ -54,21 +55,25 @@ const SecuritySection = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <div className="mb-4">
-            <span className="text-sm font-semibold tracking-wider uppercase text-blue-600">
-              GLOBAL IMPACT
+
+            <span className="text-sm font-semibold tracking-wider uppercase text-gray-600">
+              SERVICES
             </span>
           </div>
           
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8 max-w-4xl mx-auto">
-            Data is stored encrypted in your Azure subscription
+          AI Expertise That Gets Enterprises from Idea to Impact  
           </h2>
+          <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-16">
+          AI only creates value when it’s built, deployed, and managed the right way. Practical solutions, real impact—so your AI works the way you need it to.   
+        </p>
           
           <div className="flex justify-center">
             <Link
               href="/demo"
               className="inline-flex items-center px-8 py-3 text-lg font-medium text-white bg-gradient-to-r from-blue-500 to-blue-600 rounded-full hover:from-blue-600 hover:to-blue-700 transition-all duration-200 shadow-md hover:shadow-lg"
             >
-              Book a demo
+              Optimize Your Business with Synoptix AI 
             </Link>
           </div>
         </div>

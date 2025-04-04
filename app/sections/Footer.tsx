@@ -5,20 +5,20 @@ import Link from 'next/link';
 const Footer = () => {
   const navigation = {
     platform: [
-      { name: 'RAG 3.0', href: '#' },
-      { name: 'Enterprise AI Agent', href: '#' },
+      { name: 'Quantum RAG', href: '#' },
+      { name: 'AI Agent', href: '#' },
       { name: 'Workflows', href: '#' },
-      { name: 'Evaluation', href: '#' },
+      { name: 'Evaluations', href: '#' },
     ],
     services: [
-      { name: 'Fine-tuning & Optimization', href: '#' },
       { name: 'AI Consulting', href: '#' },
+      { name: 'Fine-tuning & Optimization', href: '#' },
     ],
     resources: [
       { name: 'Blog', href: '#' },
       { name: 'Tutorials', href: '#' },
-      { name: 'Quick Start Agents', href: '#' },
-      { name: 'User Manual', href: '#' },
+      { name: 'Quick Start AI', href: '#' },
+      { name: 'User Guide', href: '#' },
     ],
   };
 
