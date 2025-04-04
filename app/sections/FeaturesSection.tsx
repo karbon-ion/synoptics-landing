@@ -2,19 +2,17 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import f1 from '@/public/features1.png';
-import f2 from '@/public/features2.png';
-import f3 from '@/public/features3.png';
-import f4 from '@/public/features4.png';
-import f_blob1 from '@/public/f_blob1.png';
-import f_blob2 from '@/public/f_blob2.png';
+import agentGif from '@/public/gifs/agent.gif';
+import evaluationsGif from '@/public/gifs/evaluations.gif';
+import prebuiltAgentsGif from '@/public/gifs/prebuiltAgents.gif';
+import workflowGif from '@/public/gifs/workflow.gif';
 
 const features = [
   {
     title: "Design & Deploy Intelligent AI Agents",
     subtitle: "CUSTOM AI AGENT",
     description: "From simple to advanced tasks, Synoptix's AI platform lets you design, deploy, and scale intelligent agents. Build custom AI agents that work exactly the way you need—without complex coding.",
-    image: f1,
+    image: agentGif,
     ctaText: "Learn More",
     ctaLink: "/platform"
   },
@@ -22,7 +20,7 @@ const features = [
     title: "Automate Document Processing",
     subtitle: "INTELLIGENT DOCUMENT PROCESSING",
     description: "Extract, analyze, and process information from any document type. Our AI understands context, identifies key data points, and integrates with your existing workflows.",
-    image: f2,
+    image: evaluationsGif,
     ctaText: "Learn More",
     ctaLink: "/document-processing"
   },
@@ -30,7 +28,7 @@ const features = [
     title: "Enhance Customer Support",
     subtitle: "AI CUSTOMER SERVICE",
     description: "Deploy AI agents that understand customer inquiries, access knowledge bases, and provide accurate responses. Scale your support operations without increasing headcount.",
-    image: f3,
+    image: prebuiltAgentsGif,
     ctaText: "Learn More",
     ctaLink: "/customer-support"
   },
@@ -38,7 +36,7 @@ const features = [
     title: "Streamline Operations",
     subtitle: "WORKFLOW AUTOMATION",
     description: "Connect systems, automate repetitive tasks, and optimize business processes. Our AI agents work across departments to eliminate bottlenecks and improve efficiency.",
-    image: f4,
+    image: workflowGif,
     ctaText: "Learn More",
     ctaLink: "/operations"
   },
@@ -62,14 +60,14 @@ const FeaturesSection = () => {
             className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-8 lg:gap-16 items-center mb-24 last:mb-0`}
           >
             <div className="w-full lg:w-1/2">
-              <div className="overflow-hidden ">
+              <div className="overflow-hidden rounded-xl bg-[#f8fafc]">
                 <Image
                   src={feature.image}
                   alt={feature.title}
                   width={600}
                   height={400}
-                  className="w-full h-auto object-cover"
-                  unoptimized
+                  className="w-full h-auto object-cover rounded-xl scale-105"
+                  style={{ margin: '-2px' }}
                 />
               </div>
             </div>
@@ -95,17 +93,6 @@ const FeaturesSection = () => {
             </div>
           </div>
         ))}
-
-{/* <div className="absolute inset-0 transform translate-x-32 -translate-y-24 ">
-          <Image
-            src={f_blob1}
-            alt="Background"
-            width={950}
-            priority
-            className="object-center w-full h-full"
-            quality={100}
-          />
-        </div> */}
       </div>
     </section>
   );
