@@ -54,8 +54,8 @@ const Footer = () => {
               </div>
             </Link>
             <div className="space-y-2 text-sm text-gray-600">
-              <p>(123) 456-7890</p>
-              <p>hello@synoptix.ai</p>
+              {/* <p>(123) 456-7890</p>
+              <p>hello@synoptix.ai</p> */}
             </div>
           </div>
 

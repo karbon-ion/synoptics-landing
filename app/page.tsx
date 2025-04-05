@@ -24,7 +24,7 @@ export default function Home() {
       <SecuritySection />
 
       <ModelProvidersSection />
-      <PricingSection />
+      {/* <PricingSection /> */}
       {/* <PngSection /> */}
 
       <BlogsSection />
