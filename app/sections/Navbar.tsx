@@ -9,10 +9,14 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [platformDropdownOpen, setPlatformDropdownOpen] = useState(false);
+  const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
   const [dropdownPosition, setDropdownPosition] = useState({ x: 0, y: 0 });
+  const [servicesDropdownPosition, setServicesDropdownPosition] = useState({ x: 0, y: 0 });
   const pathname = usePathname();
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const servicesDropdownRef = useRef<HTMLDivElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
+  const servicesButtonRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,8 +32,10 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node) &&
+          servicesDropdownRef.current && !servicesDropdownRef.current.contains(event.target as Node)) {
         setPlatformDropdownOpen(false);
+        setServicesDropdownOpen(false);
       }
     };
 
@@ -47,29 +53,50 @@ const Navbar = () => {
     }
   }, [platformDropdownOpen, scrolled]);
 
+  useEffect(() => {
+    if (servicesDropdownOpen && servicesButtonRef.current) {
+      const rect = servicesButtonRef.current.getBoundingClientRect();
+      setServicesDropdownPosition({
+        x: rect.left + 5 + (rect.width / 2),
+        y: rect.bottom + 10
+      });
+    }
+  }, [servicesDropdownOpen, scrolled]);
+
   const platformDropdownItems = [
-    { name: 'RAG', href: '/enterprise-rag', description: 'Enterprise RAG Solutions' },
+    { name: 'RAG', href: '/rag-application', description: 'Enterprise RAG Solutions' },
     { name: 'Agent', href: '/enterprise-ai-agent', description: 'AI Agent Platform' },
     { name: 'Workflow', href: '/workflow', description: 'Automated Workflows' },
-    { name: 'Evaluations', href: '/evaluations', description: 'Performance Metrics' },
+    { name: 'Evaluations', href: '/enterprise-rag', description: 'Performance Metrics' },
+  ];
+
+  const servicesDropdownItems = [
+    { name: 'Fine-Tuning', href: '/fine-tuning', description: 'Custom Model Fine-Tuning' },
+    { name: 'AI Consulting', href: '/ai-consulting', description: 'Enterprise AI Solutions' },
   ];
 
   const navItems = [
     { name: 'Home', href: '/' },
-    { name: 'Platform', href: '#', hasDropdown: true },
+    { name: 'Platform', href: '#', hasDropdown: true, dropdownState: platformDropdownOpen, setDropdownState: setPlatformDropdownOpen, buttonRef: buttonRef, items: platformDropdownItems },
     { name: 'Synoptix Guard', href: '/syno-guard' },
-    { name: 'Services', href: '/services' },
+    { name: 'Services', href: '#', hasDropdown: true, dropdownState: servicesDropdownOpen, setDropdownState: setServicesDropdownOpen, buttonRef: servicesButtonRef, items: servicesDropdownItems },
     { name: 'Resources', href: '/resources' },
     { name: 'Company', href: '/company' },
+    { name: 'About us', href: '/about' },
     { name: 'Contact us', href: '/contact' },
   ];
 
-  const handleDropdownToggle = () => {
-    setPlatformDropdownOpen(!platformDropdownOpen);
+  const handleDropdownToggle = (setDropdownState: React.Dispatch<React.SetStateAction<boolean>>) => {
+    // Close any open dropdowns
+    if (platformDropdownOpen) setPlatformDropdownOpen(false);
+    if (servicesDropdownOpen) setServicesDropdownOpen(false);
+    // Toggle the requested dropdown
+    setDropdownState(prev => !prev);
   };
 
   const handleDropdownItemClick = () => {
     setPlatformDropdownOpen(false);
+    setServicesDropdownOpen(false);
   };
 
   return (
@@ -105,10 +132,10 @@ const Navbar = () => {
                 <div key={item.name} className="relative">
                   {item.hasDropdown ? (
                     <button
-                      ref={buttonRef}
-                      onClick={handleDropdownToggle}
-                      onMouseEnter={() => setPlatformDropdownOpen(true)}
-                      className={`text-sm font-medium transition-colors hover:text-blue-600 ${pathname.startsWith('/enterprise') || pathname === '/workflow' ? 'text-blue-600' : 'text-gray-700'}`}
+                      ref={item.buttonRef}
+                      onClick={() => handleDropdownToggle(item.setDropdownState)}
+                      onMouseEnter={() => item.setDropdownState(true)}
+                      className={`text-sm font-medium transition-colors hover:text-blue-600 ${pathname.startsWith('/enterprise') || pathname === '/workflow' || pathname.startsWith(item.items[0].href) ? 'text-blue-600' : 'text-gray-700'}`}
                     >
                       {item.name}
                     </button>
@@ -184,12 +211,12 @@ const Navbar = () => {
                     {item.hasDropdown ? (
                       <>
                         <div
-                          className={`text-[15px] px-2 py-2 font-medium ${pathname.startsWith('/enterprise') || pathname === '/workflow' ? 'text-blue-600' : 'text-gray-700'}`}
+                          className={`text-[15px] px-2 py-2 font-medium ${pathname.startsWith('/enterprise') || pathname === '/workflow' || pathname.includes(item.items[0].href) ? 'text-blue-600' : 'text-gray-700'}`}
                         >
                           {item.name}
                         </div>
                         <div className="pl-4 space-y-2">
-                          {platformDropdownItems.map((dropdownItem) => (
+                          {item.items.map((dropdownItem) => (
                             <Link
                               key={dropdownItem.name}
                               href={dropdownItem.href}
@@ -250,6 +277,39 @@ const Navbar = () => {
         >
           <div className="py-1">
             {platformDropdownItems.map((dropdownItem) => (
+              <Link
+                key={dropdownItem.name}
+                href={dropdownItem.href}
+                className="group flex items-center px-4 py-3 hover:bg-gray-50 transition-colors"
+                onClick={handleDropdownItemClick}
+              >
+                <div className="w-full">
+                  <p className="text-sm font-medium text-gray-900 group-hover:text-blue-600">
+                    {dropdownItem.name}
+                  </p>
+                  <p className="text-xs text-gray-500 group-hover:text-blue-500">
+                    {dropdownItem.description}
+                  </p>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {servicesDropdownOpen && (
+        <div
+          ref={servicesDropdownRef}
+          className="fixed w-64 rounded-xl bg-white shadow-lg ring-1 ring-black ring-opacity-5 z-[60] overflow-hidden"
+          style={{
+            top: `${servicesDropdownPosition.y}px`,
+            left: `${servicesDropdownPosition.x}px`,
+            transform: 'translateX(-50%)'
+          }}
+          onMouseLeave={() => setServicesDropdownOpen(false)}
+        >
+          <div className="py-1">
+            {servicesDropdownItems.map((dropdownItem) => (
               <Link
                 key={dropdownItem.name}
                 href={dropdownItem.href}

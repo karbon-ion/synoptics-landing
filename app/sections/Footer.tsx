@@ -104,7 +104,7 @@ const Footer = () => {
         <div className="mt-12 pt-8 border-t border-gray-100">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-gray-600">
-              © 2025 Synoptix.ai All Rights Reserved.
+              © 2025 Synoptix.AI All Rights Reserved.
             </p>
             <div className="flex gap-6">
               <Link href="/privacy-policy" className="text-sm text-gray-600 hover:text-gray-900">
