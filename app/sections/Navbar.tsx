@@ -64,6 +64,14 @@ const Navbar = () => {
     { name: 'Contact us', href: '/contact' },
   ];
 
+  const handleDropdownToggle = () => {
+    setPlatformDropdownOpen(!platformDropdownOpen);
+  };
+
+  const handleDropdownItemClick = () => {
+    setPlatformDropdownOpen(false);
+  };
+
   return (
     <>
       <nav className={`fixed w-full left-1/2 -translate-x-1/2 border border-transparent z-50 transition-all duration-300 overflow-hidden ${scrolled ? 'my-2 max-w-7xl px-6 rounded-3xl bg-gradient-to-r from-blue-300 via-blue-50/30 to-purple-300' : 'py-4'}`}>
@@ -94,10 +102,11 @@ const Navbar = () => {
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-8">
               {navItems.map((item) => (
-                <div key={item.name} className="relative" ref={item.hasDropdown ? dropdownRef : null}>
+                <div key={item.name} className="relative">
                   {item.hasDropdown ? (
                     <button
                       ref={buttonRef}
+                      onClick={handleDropdownToggle}
                       onMouseEnter={() => setPlatformDropdownOpen(true)}
                       className={`text-sm font-medium transition-colors hover:text-blue-600 ${pathname.startsWith('/enterprise') || pathname === '/workflow' ? 'text-blue-600' : 'text-gray-700'}`}
                     >
@@ -227,9 +236,11 @@ const Navbar = () => {
           )}
         </div>
       </nav>
+      
       {platformDropdownOpen && (
         <div
-          className="fixed w-64 rounded-xl bg-white shadow-lg ring-1 ring-black ring-opacity-5 z-[60]"
+          ref={dropdownRef}
+          className="fixed w-64 rounded-xl bg-white shadow-lg ring-1 ring-black ring-opacity-5 z-[60] overflow-hidden"
           style={{
             top: `${dropdownPosition.y}px`,
             left: `${dropdownPosition.x}px`,
@@ -243,8 +254,9 @@ const Navbar = () => {
                 key={dropdownItem.name}
                 href={dropdownItem.href}
                 className="group flex items-center px-4 py-3 hover:bg-gray-50 transition-colors"
+                onClick={handleDropdownItemClick}
               >
-                <div>
+                <div className="w-full">
                   <p className="text-sm font-medium text-gray-900 group-hover:text-blue-600">
                     {dropdownItem.name}
                   </p>
