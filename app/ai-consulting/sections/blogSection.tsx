@@ -30,7 +30,7 @@ const newsItems = [
   }
 ];
 
-const NewsSection = () => {
+const BlogSection = () => {
   return (
     <section className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -92,7 +92,7 @@ const NewsSection = () => {
         <div className="text-center">
           <Link
             href="/blogs"
-            className="inline-flex items-center justify-center px-8 py-4 border-2 border-blue-500 text-blue-500 rounded-full hover:bg-blue-50 hover:text-blue-600 transition-all duration-300 font-medium text-lg group"
+            className="inline-flex items-center justify-center px-8 py-4 border-2 border-blue-500 text-white hover:bg-blue-50  transition-all duration-300 font-medium text-lg group bg-gradient-to-r from-[#00CCEB] to-[#3A49FF] rounded-lg"
           >
             View All Blogs
             <svg className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -105,4 +105,4 @@ const NewsSection = () => {
   );
 };
 
-export default NewsSection;
+export default BlogSection;
