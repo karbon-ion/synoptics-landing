@@ -20,6 +20,9 @@ const Footer = () => {
       { name: 'Quick Start AI', href: '#' },
       { name: 'User Guide', href: '#' },
     ],
+    standalone: [
+      { name: 'Syno Guard', href: '/syno-guard' },
+    ]
   };
 
   return (
@@ -113,6 +116,15 @@ const Footer = () => {
               <Link href="/terms" className="text-sm text-gray-600 hover:text-gray-900">
                 Terms & Conditions
               </Link>
+              {navigation.standalone.map((item) => (
+                <Link 
+                  key={item.name}
+                  href={item.href} 
+                  className="text-sm text-gray-600 hover:text-gray-900"
+                >
+                  {item.name}
+                </Link>
+              ))}
             </div>
           </div>
         </div>
