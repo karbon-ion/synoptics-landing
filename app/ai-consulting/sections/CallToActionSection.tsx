@@ -15,7 +15,7 @@ const CallToActionSection = () => {
         </h2>
         
         <p className="text-[#4B5563] text-lg mb-10 max-w-2xl mx-auto leading-relaxed">
-          Transform industry-leading insights into real-world results with our expert consulting services.
+        Smarter systems. Faster decisions. Real results. Let’s build your AI-powered future.
         </p>
         
         <div className="flex flex-col sm:flex-row gap-5 justify-center items-center">
@@ -23,13 +23,13 @@ const CallToActionSection = () => {
             href="/contact"
             className="inline-flex items-center px-8 py-3.5 text-[15px] font-semibold text-white bg-gradient-to-r from-[#00CCEB] to-[#3A49FF] rounded-lg hover:opacity-90 transition-all duration-200 shadow-sm hover:shadow-md min-w-[140px] justify-center"
           >
-            Get Started
+            Get in touch
           </Link>
           <Link
             href="/book-consultation"
             className="inline-flex items-center px-8 py-3.5 text-[15px] font-semibold text-white bg-[#0F162E] border border-[#00A3FF] rounded-lg hover:bg-blue-50 transition-all duration-200 min-w-[140px] justify-center"
           >
-            Book Consultation
+            Book a Consultation
           </Link>
         </div>
       </div>

@@ -22,8 +22,7 @@ const IntroSection = () => {
           {/* Content */}
           <div className="space-y-8">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
-              Work Smarter with Synoptix Consulting—<br />
-              Not Harder
+              Work Smarter with Synoptix Consulting
             </h2>
 
             <p className="text-gray-600 text-lg">
