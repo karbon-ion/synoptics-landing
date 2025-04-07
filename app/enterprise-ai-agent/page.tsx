@@ -13,21 +13,25 @@ import TestimonialsSection from "../sections/TestimonialsSection";
 import FeaturesSection from "../sections/FeaturesSection";
 import Capabilities from "./sections/capabilities";
 import SmallFoot from "../sections/smallFoot";
+import ResultSection from "./sections/results";
+import TechniquesSection from "./sections/TechniqueSection";
 export default function RagApplication() {
     return (
         <main className="w-full">
             <RagHero />
             <Features />
-            <Capabilities />
             <Ideas />
+            <Capabilities />
             <FeaturesSection />
-            <Metrics />
+            {/* <Metrics /> */}
             {/* <Security /> */}
             <WhySection />
             {/* <RagStatsSection /> */}
-            <QuantumSection />
+            <ResultSection/>
+            <TechniquesSection/>
+            {/* <QuantumSection /> */}
             <FAQ />
-            <TestimonialsSection />
+            {/* <TestimonialsSection /> */}
             <SmallFoot title="Explore Enterprise AI Agent" buttonOne="Request a Demo" buttonTwo="Need answers? Let's Talk." />
         </main>
     );

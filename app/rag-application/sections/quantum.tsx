@@ -104,22 +104,28 @@ const QuantumSection = () => {
         </div>
         
         {/* Enterprise advantages grid */}
-        {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {advantages.map((advantage) => (
             <div 
               key={advantage.id}
-              className="bg-white rounded-3xl p-8 shadow-sm border border-blue-100 hover:shadow-md transition-all duration-200 flex flex-col h-full"
+              className="relative bg-white rounded-[32px] p-8 overflow-hidden group transform transition-all duration-300 hover:scale-[1.02] hover:shadow-lg cursor-pointer"
             >
-              <h3 className="text-xl font-bold text-gray-900 mb-4">
-                {advantage.title}
-              </h3>
+              {/* Gradient border using pseudo-element */}
+              <div className="absolute inset-0 rounded-[32px] border border-[rgba(66,153,225,0.2)] bg-gradient-to-b from-[rgba(66,153,225,0.1)] to-transparent transition-opacity duration-300 group-hover:from-[rgba(66,153,225,0.2)] group-hover:border-[rgba(66,153,225,0.3)]" />
               
-              <p className="text-gray-600 flex-grow">
-                {advantage.description}
-              </p>
+              {/* Content */}
+              <div className="relative z-10">
+                <h3 className="text-[20px] font-medium text-gray-900 mb-4">
+                  {advantage.title}
+                </h3>
+                
+                <p className="text-[15px] leading-[1.6] text-gray-600">
+                  {advantage.description}
+                </p>
+              </div>
             </div>
           ))}
-        </div> */}
+        </div>
       </div>
     </section>
   );

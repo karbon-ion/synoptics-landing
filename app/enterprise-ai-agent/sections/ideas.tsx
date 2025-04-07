@@ -1,4 +1,5 @@
 'use client'
+import { InfiniteMovingTags } from "@/components/ui/infinite-moving-tags";
 
 const agentTags = [
     "Chat Support Agent",
@@ -30,10 +31,10 @@ export default function Ideas() {
         <section className="relative w-full py-24 px-4 bg-white">
             <div className="max-w-7xl mx-auto text-center">
                 <h2 className="text-4xl md:text-5xl font-bold mb-4">
-                    Too Many Ideas, Not Enough Direction?
+                    Too Many Ideas, Not<br />Enough Direction?
                 </h2>
                 <p className="text-gray-600 mb-12 max-w-2xl mx-auto">
-                Focus on what matters—turn processes into practical, automated solutions that work. 
+                    Focus on what matters—turn processes into practical, automated solutions that work.
                 </p>
                 <a 
                     href="#contact" 
@@ -45,46 +46,37 @@ export default function Ideas() {
 
                 {/* Tags Section */}
                 <div className="space-y-6">
-                    {/* First Row */}
-                    <div className="flex flex-wrap justify-center gap-4">
-                        {agentTags.map((tag, index) => (
-                            <span
-                                key={`agent-${index}`}
-                                className="px-6 py-3 rounded-full border border-blue-200 
-                                    bg-white text-gray-800 hover:border-blue-400 
-                                    transition-colors shadow-sm"
-                            >
-                                {tag}
-                            </span>
-                        ))}
+                    {/* First Row - Moving Right */}
+                    <div className="py-1">
+                        <InfiniteMovingTags
+                            items={agentTags}
+                            direction="right"
+                            speed="normal"
+                            pauseOnHover={false}
+                            className="py-1"
+                        />
                     </div>
 
-                    {/* Second Row */}
-                    <div className="flex flex-wrap justify-center gap-4">
-                        {industryTags.map((tag, index) => (
-                            <span
-                                key={`industry-${index}`}
-                                className="px-6 py-3 rounded-full border border-blue-200 
-                                    bg-white text-gray-800 hover:border-blue-400 
-                                    transition-colors shadow-sm"
-                            >
-                                {tag}
-                            </span>
-                        ))}
+                    {/* Second Row - Moving Left */}
+                    <div className="py-1 w-5xl mx-auto">
+                        <InfiniteMovingTags
+                            items={industryTags}
+                            direction="left"
+                            speed="normal"
+                            pauseOnHover={false}
+                            className="py-1"
+                        />
                     </div>
 
-                    {/* Third Row */}
-                    <div className="flex flex-wrap justify-center gap-4">
-                        {supportTags.map((tag, index) => (
-                            <span
-                                key={`support-${index}`}
-                                className="px-6 py-3 rounded-full border border-blue-200 
-                                    bg-white text-gray-800 hover:border-blue-400 
-                                    transition-colors shadow-sm"
-                            >
-                                {tag}
-                            </span>
-                        ))}
+                    {/* Third Row - Moving Right */}
+                    <div className="py-1">
+                        <InfiniteMovingTags
+                            items={supportTags}
+                            direction="right"
+                            speed="normal"
+                            pauseOnHover={false}
+                            className="py-1"
+                        />
                     </div>
                 </div>
             </div>
