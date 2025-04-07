@@ -6,8 +6,8 @@ import { StickyScroll } from '@/components/ui/sticky-scroll-reveal';
 
 const features = [
     {
-        title: "Why Choose Synoptix AI?",
-        description: "Synoptix isn't just another AI platform—it's the AI platform. Built for security, scalability, and real-world impact, it gives businesses full control over AI that actually delivers.",
+        title: "Accelerate Task Execution",
+        description: "Reduce downtime and boost efficiency with AI-driven automation, delivering faster, smarter results effortlessly.",
         content: (
             <div className="w-full h-full flex items-center justify-center">
                 <div className="p-6 flex flex-col items-center">
@@ -24,8 +24,8 @@ const features = [
         )
     },
     {
-        title: 'Zero Data Exposure',
-        description: 'Your data never leaves your environment. Our platform ensures complete data privacy and security with zero exposure to external systems.',
+        title: 'Flexible Model Selection',
+        description: 'Choose the right LLM to fit your needs, ensuring optimal AI performance and seamless business integration.',
         content: (
             <div className="w-full h-full flex items-center justify-center">
                 <div className="p-6 flex flex-col items-center">
@@ -42,8 +42,8 @@ const features = [
         )
     },
     {
-        title: 'Enterprise-Grade Control',
-        description: 'Gain complete control over AI operations with enterprise-grade governance, monitoring, and compliance tools built for scale.',
+        title: 'Seamless Data Integration',
+        description: 'Easily integrate AI into your existing software ecosystem, enhancing workflows and operational efficiency instantly.',
         content: (
             <div className="w-full h-full flex items-center justify-center">
                 <div className="p-6 flex flex-col items-center">
@@ -60,8 +60,8 @@ const features = [
         )
     },
     {
-        title: 'Flexible AI Infrastructure',
-        description: 'Deploy on-premises, in your cloud, or use our managed service. Our flexible architecture adapts to your existing infrastructure.',
+        title: 'Zero Data Retention',
+        description: 'Keep your data private with a closed-source AI system, ensuring full confidentiality and compliance.',
         content: (
             <div className="w-full h-full flex items-center justify-center">
                 <div className="p-6 flex flex-col items-center">
@@ -78,8 +78,8 @@ const features = [
         )
     },
     {
-        title: 'Content Safety',
-        description: 'Built-in content moderation and safety guardrails ensure AI outputs meet your organization\'s standards and compliance requirements.',
+        title: 'Enterprise-Grade Security',
+        description: 'Protect sensitive information with encryption, role-based access, and built-in safety tools for maximum security.',
         content: (
             <div className="w-full h-full flex items-center justify-center">
                 <div className="p-6 flex flex-col items-center">
@@ -104,7 +104,7 @@ const WhySection = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="mb-12">
                     <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                        Why Synoptics.AI?
+                        Why Synoptix AI?
                     </h2>
                     <div className="w-16 h-1 bg-blue-500"></div>
 
