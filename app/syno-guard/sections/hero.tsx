@@ -18,7 +18,7 @@ export default function RagHero() {
                     hover:to-blue-700 transition-all duration-300 shadow-lg 
                     hover:shadow-xl"
             >
-                Book a Demo
+                Get your free security demo
             </a>
         </section>
     );
