@@ -2,8 +2,9 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
 
-// Technique button component
+// Technique button component for desktop view
 const TechniqueButton = ({ 
   name, 
   isActive = false,
@@ -38,8 +39,81 @@ const TechniqueButton = ({
   );
 };
 
+// Accordion item component for mobile view
+const AccordionItem = ({
+  name,
+  description,
+  benefits,
+  isOpen,
+  toggleAccordion,
+  index
+}: {
+  name: string;
+  description: string;
+  benefits: string[];
+  isOpen: boolean;
+  toggleAccordion: (index: number) => void;
+  index: number;
+}) => {
+  return (
+    <div className="border border-blue-100 rounded-lg mb-3 overflow-hidden">
+      <button
+        onClick={() => toggleAccordion(index)}
+        className={`w-full px-4 py-3 flex items-center justify-between ${isOpen ? 'bg-gradient-to-r from-[#3A49FF] to-[#00CCEB] text-white' : 'bg-white text-gray-800'}`}
+      >
+        <span className="font-medium text-sm">{name}</span>
+        <svg
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className={`transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
+        >
+          <path
+            d="M7 10L12 15L17 10"
+            stroke={isOpen ? 'white' : '#3A49FF'}
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      </button>
+      
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: 'auto', opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="overflow-hidden"
+          >
+            <div className="p-4 bg-white">
+              <p className="text-gray-700 text-sm mb-4">{description}</p>
+              <div className="space-y-3">
+                {benefits.map((benefit, idx) => (
+                  <div key={idx} className="flex items-start">
+                    <span className="text-blue-500 text-lg mr-2 leading-none">•</span>
+                    <span className="text-gray-700 text-sm">{benefit}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+};
+
 const TechniquesSection = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [openAccordion, setOpenAccordion] = useState<number | null>(0);
+  
+  const toggleAccordion = (index: number) => {
+    setOpenAccordion(openAccordion === index ? null : index);
+  };
 
   // Technique definitions with their respective benefits
   const techniqueData = [
@@ -54,11 +128,11 @@ const TechniquesSection = () => {
     },
     {
       name: "Instruction Fine-Tuning",
-      description: "Your AI should understand and follow instructions exactly as intended. We train models to process complex commands with precision.",
+      description: "We refine your model to follow specific instructions with greater precision:",
       benefits: [
-        "Teach model to handle detailed, multi-step instructions",
-        "Improve response quality for better user interaction",
-        "Make AI models adaptable across different business applications"
+        "Improve contextual understanding of complex prompts",
+        "Enhance response relevance and accuracy",
+        "Reduce hallucinations and incorrect outputs"
       ]
     },
     {
@@ -123,12 +197,13 @@ const TechniquesSection = () => {
         {/* Header */}
         <div className="text-center mb-14">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Take the Next Step
+            Advanced Fine Tuning & Optimisation<br />
+            Techniques offered by Synoptix
           </h2>
           
           <p className="text-gray-600 text-sm max-w-2xl mx-auto mb-6">
-          Kickstart your AI journey with a strategic briefing. Identify where generative AI can drive
-          the most value and how Synoptix AI can maximize your AI investments.
+            At Synoptix.ai, we don't just fine-tune AI—we make it smarter, faster, and tailored 
+            exactly to your needs. The practical benefits? More accuracy, lower costs, and quicker results.
           </p>
           
           <div className="flex justify-center">
@@ -136,14 +211,15 @@ const TechniquesSection = () => {
               href="/docs"
               className="inline-flex items-center px-6 py-2.5 text-sm font-medium text-white bg-[#00A3FF] rounded-lg hover:bg-[#0096eb] transition-colors duration-200"
             >
-              Request an AI Strategy Briefing
+              Read Docs
             </Link>
           </div>
         </div>
         
         {/* Main content area with blue background */}
         <div className="bg-[#e9fcff] rounded-3xl overflow-hidden">
-          <div className="flex flex-col lg:flex-row items-stretch">
+          {/* Desktop view */}
+          <div className="hidden lg:flex flex-col lg:flex-row items-stretch">
             {/* Techniques column */}
             <div className="w-full lg:w-[40%] p-8">
               <div className="max-w-[280px]">
@@ -175,6 +251,21 @@ const TechniquesSection = () => {
                 </div>
               </div>
             </div>
+          </div>
+          
+          {/* Mobile view - Accordion */}
+          <div className="lg:hidden p-4 sm:p-6">
+            {techniqueData.map((technique, index) => (
+              <AccordionItem
+                key={index}
+                name={technique.name}
+                description={technique.description}
+                benefits={technique.benefits}
+                isOpen={openAccordion === index}
+                toggleAccordion={toggleAccordion}
+                index={index}
+              />
+            ))}
           </div>
         </div>
       </div>

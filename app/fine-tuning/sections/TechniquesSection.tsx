@@ -2,8 +2,9 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
 
-// Technique button component
+// Technique button component for desktop view
 const TechniqueButton = ({ 
   name, 
   isActive = false,
@@ -38,8 +39,81 @@ const TechniqueButton = ({
   );
 };
 
+// Accordion item component for mobile view
+const AccordionItem = ({
+  name,
+  description,
+  benefits,
+  isOpen,
+  toggleAccordion,
+  index
+}: {
+  name: string;
+  description: string;
+  benefits: string[];
+  isOpen: boolean;
+  toggleAccordion: (index: number) => void;
+  index: number;
+}) => {
+  return (
+    <div className="border border-blue-100 rounded-lg mb-3 overflow-hidden">
+      <button
+        onClick={() => toggleAccordion(index)}
+        className={`w-full px-4 py-3 flex items-center justify-between ${isOpen ? 'bg-gradient-to-r from-[#3A49FF] to-[#00CCEB] text-white' : 'bg-white text-gray-800'}`}
+      >
+        <span className="font-medium text-sm">{name}</span>
+        <svg
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className={`transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
+        >
+          <path
+            d="M7 10L12 15L17 10"
+            stroke={isOpen ? 'white' : '#3A49FF'}
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      </button>
+      
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: 'auto', opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="overflow-hidden"
+          >
+            <div className="p-4 bg-white">
+              <p className="text-gray-700 text-sm mb-4">{description}</p>
+              <div className="space-y-3">
+                {benefits.map((benefit, idx) => (
+                  <div key={idx} className="flex items-start">
+                    <span className="text-blue-500 text-lg mr-2 leading-none">•</span>
+                    <span className="text-gray-700 text-sm">{benefit}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+};
+
 const TechniquesSection = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [openAccordion, setOpenAccordion] = useState<number | null>(0);
+  
+  const toggleAccordion = (index: number) => {
+    setOpenAccordion(openAccordion === index ? null : index);
+  };
 
   // Technique definitions with their respective benefits
   const techniqueData = [
@@ -54,65 +128,65 @@ const TechniquesSection = () => {
     },
     {
       name: "Instruction Fine-Tuning",
-      description: "Your AI should understand and follow instructions exactly as intended. We train models to process complex commands with precision.",
+      description: "We refine your model to follow specific instructions with greater precision:",
       benefits: [
-        "Teach model to handle detailed, multi-step instructions",
-        "Improve response quality for better user interaction",
-        "Make AI models adaptable across different business applications"
+        "Improve contextual understanding of complex prompts",
+        "Enhance response relevance and accuracy",
+        "Reduce hallucinations and incorrect outputs"
       ]
     },
     {
       name: "Transfer Learning",
-      description: "Why start from scratch? We take powerful pre-trained models and refine them to fit your needs with minimal effort and data.",
+      description: "We adapt pre-trained models to your specific domain:",
       benefits: [
-        "Retain what works; fine-tune what matters",
-        "Adapt existing models to new domains quickly",
-        "Deliver high performance without heavy resource consumption"
+        "Leverage existing knowledge for specialized tasks",
+        "Drastically reduce training data requirements",
+        "Accelerate time-to-production for new applications"
       ]
     },
     {
       name: "Task-Specific Fine-Tuning",
-      description: "Generic AI doesn’t cut it. We customize models for specialized industries like finance, healthcare, legal tech, and many more.",
+      description: "We optimize models for your particular business need:",
       benefits: [
-        "Train AI to handle domain-specific language and data",
-        "Ensure compliance with industry specific regulations and standards",
-        "Deliver results that match real-world business needs"
+        "Customize AI behavior for your exact use case",
+        "Improve performance on niche industry tasks",
+        "Focus computational resources where they matter most"
       ]
     },
     {
       name: "Multi-Task Learning",
-      description: "We build AI that can do more—handling multiple tasks at once without losing accuracy.",
+      description: "We enable your model to handle multiple related tasks effectively:",
       benefits: [
-        "Teach models to learn multiple related tasks",
-        "Improve adaptability and efficiency across different use cases",
-        "Get AI models that evolves with your business needs"
+        "Create versatile AI solutions that solve diverse problems",
+        "Improve generalization across related domains",
+        "Reduce the need for multiple specialized models"
       ]
     },
     {
       name: "Few-Shot Learning",
-      description: "AI should perform well even with limited data. We make that happen with few-shot learning.",
+      description: "We train your model to learn from minimal examples:",
       benefits: [
-        "Train AI to generalize from minimal examples",
-        "Reduce data dependency while maintaining accuracy",
-        "Make AI useful even in data-scarce environments"
+        "Adapt quickly to new tasks with limited training data",
+        "Reduce annotation costs and data gathering burden",
+        "Enable rapid prototyping and experimentation"
       ]
     },
     {
-      name: "Reinforcement Learning from Human Feedback (RLHF)",
-      description: "We train AI with real human input to make its responses smarter and more reliable over time.",
+      name: "RLHF",
+      description: "We implement Reinforcement Learning from Human Feedback:",
       benefits: [
-        "Use real-world feedback to refine decision-making",
-        "Continuously adjust AI behavior to meet user expectations",
-        "Ensure the model stays relevant, efficient, and aligned with user’s preferences."
+        "Align model outputs with human preferences",
+        "Reduce harmful, biased, or undesired outputs",
+        "Continuously improve based on real user interactions"
       ]
     },
     {
       name: "Supervised Fine-Tuning",
-      description: "We don’t just fine-tune models—we make them work exactly how you need them to.",
+      description: "We enhance models with carefully labeled training data:",
       benefits: [
-        "Define relevant structured datasets tailored to your business needs",
-        "Train models to generate precise, task-specific outputs",
-        "Continuously integrate feedback to improve performance"
+        "Increase accuracy on specific domains and terminology",
+        "Teach models proper handling of edge cases",
+        "Ensure outputs meet quality standards consistently"
       ]
     }
   ];
@@ -128,7 +202,7 @@ const TechniquesSection = () => {
           </h2>
           
           <p className="text-gray-600 text-sm max-w-2xl mx-auto mb-6">
-            At Synoptix AI, we don't just fine-tune AI—we make it smarter, faster, and tailored 
+            At Synoptix.ai, we don't just fine-tune AI—we make it smarter, faster, and tailored 
             exactly to your needs. The practical benefits? More accuracy, lower costs, and quicker results.
           </p>
           
@@ -144,7 +218,8 @@ const TechniquesSection = () => {
         
         {/* Main content area with blue background */}
         <div className="bg-[#e9fcff] rounded-3xl overflow-hidden">
-          <div className="flex flex-col lg:flex-row items-stretch">
+          {/* Desktop view */}
+          <div className="hidden lg:flex flex-col lg:flex-row items-stretch">
             {/* Techniques column */}
             <div className="w-full lg:w-[40%] p-8">
               <div className="max-w-[280px]">
@@ -176,6 +251,21 @@ const TechniquesSection = () => {
                 </div>
               </div>
             </div>
+          </div>
+          
+          {/* Mobile view - Accordion */}
+          <div className="lg:hidden p-4 sm:p-6">
+            {techniqueData.map((technique, index) => (
+              <AccordionItem
+                key={index}
+                name={technique.name}
+                description={technique.description}
+                benefits={technique.benefits}
+                isOpen={openAccordion === index}
+                toggleAccordion={toggleAccordion}
+                index={index}
+              />
+            ))}
           </div>
         </div>
       </div>

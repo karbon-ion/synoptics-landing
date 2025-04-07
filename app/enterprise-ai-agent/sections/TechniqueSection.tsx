@@ -2,8 +2,9 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
 
-// Technique button component
+// Technique button component for desktop view
 const TechniqueButton = ({ 
   name, 
   isActive = false,
@@ -38,8 +39,81 @@ const TechniqueButton = ({
   );
 };
 
+// Accordion item component for mobile view
+const AccordionItem = ({
+  name,
+  description,
+  benefits,
+  isOpen,
+  toggleAccordion,
+  index
+}: {
+  name: string;
+  description: string;
+  benefits: string[];
+  isOpen: boolean;
+  toggleAccordion: (index: number) => void;
+  index: number;
+}) => {
+  return (
+    <div className="border border-blue-100 rounded-lg mb-3 overflow-hidden">
+      <button
+        onClick={() => toggleAccordion(index)}
+        className={`w-full px-4 py-3 flex items-center justify-between ${isOpen ? 'bg-gradient-to-r from-[#3A49FF] to-[#00CCEB] text-white' : 'bg-white text-gray-800'}`}
+      >
+        <span className="font-medium text-sm">{name}</span>
+        <svg
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className={`transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
+        >
+          <path
+            d="M7 10L12 15L17 10"
+            stroke={isOpen ? 'white' : '#3A49FF'}
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      </button>
+      
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: 'auto', opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="overflow-hidden"
+          >
+            <div className="p-4 bg-white">
+              <p className="text-gray-700 text-sm mb-4">{description}</p>
+              <div className="space-y-3">
+                {benefits.map((benefit, idx) => (
+                  <div key={idx} className="flex items-start">
+                    <span className="text-blue-500 text-lg mr-2 leading-none">•</span>
+                    <span className="text-gray-700 text-sm">{benefit}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+};
+
 const TechniquesSection = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [openAccordion, setOpenAccordion] = useState<number | null>(0);
+  
+  const toggleAccordion = (index: number) => {
+    setOpenAccordion(openAccordion === index ? null : index);
+  };
 
   // Technique definitions with their respective benefits
   const techniqueData = [
@@ -144,7 +218,8 @@ const TechniquesSection = () => {
         
         {/* Main content area with blue background */}
         <div className="bg-[#e9fcff] rounded-3xl overflow-hidden">
-          <div className="flex flex-col lg:flex-row items-stretch">
+          {/* Desktop view */}
+          <div className="hidden lg:flex flex-col lg:flex-row items-stretch">
             {/* Techniques column */}
             <div className="w-full lg:w-[40%] p-8">
               <div className="max-w-[280px]">
@@ -176,6 +251,21 @@ const TechniquesSection = () => {
                 </div>
               </div>
             </div>
+          </div>
+          
+          {/* Mobile view - Accordion */}
+          <div className="lg:hidden p-4 sm:p-6">
+            {techniqueData.map((technique, index) => (
+              <AccordionItem
+                key={index}
+                name={technique.name}
+                description={technique.description}
+                benefits={technique.benefits}
+                isOpen={openAccordion === index}
+                toggleAccordion={toggleAccordion}
+                index={index}
+              />
+            ))}
           </div>
         </div>
       </div>
