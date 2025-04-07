@@ -38,7 +38,7 @@ const VideoSection = () => {
   const backgroundColor = useTransform(
     scrollYProgress,
     [0, 0.15, 0.6, 0.9],
-    ["rgb(255, 255, 255)", "rgb(0, 0, 0)", "rgb(0, 0, 0)", "rgb(255, 255, 255)"]
+    ["rgb(255, 255, 255)", "rgb(231, 241, 255)", "rgb(231, 241, 255)", "rgb(255, 255, 255)"]
   );
 
   const scale = useTransform(

@@ -28,7 +28,7 @@ const ContactSection = () => {
                 Schedule a call with one of our AI specialists and get<br />
                 the answers you need.
               </p>
-              <button className="bg-blue-500 text-white px-8 py-3 rounded-full font-medium hover:bg-blue-600 transition-colors">
+              <button className="inline-flex items-center px-8 py-3 text-lg font-medium text-white bg-gradient-to-r from-blue-400 to-blue-600 rounded-full hover:from-blue-500 hover:to-blue-700 transition-all duration-200 shadow-md hover:shadow-lg">
               Schedule a Call
               </button>
             </div>

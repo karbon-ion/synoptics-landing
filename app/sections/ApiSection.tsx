@@ -25,17 +25,15 @@ const ApiSection = () => {
         <div className="mt-16 max-w-4xl mx-auto">
           <div className="rounded-lg overflow-hidden shadow-lg">
             <Image
-              src="https://via.placeholder.com/1200x600.png"
+              src="/image.jpeg"
               alt="API Documentation Preview"
               width={1200}
               height={600}
               className="w-full h-auto"
-              unoptimized
+              priority
             />
           </div>
-          <p className="mt-4 text-sm text-gray-500">
-            Our comprehensive API documentation makes integration simple
-          </p>
+          
         </div>
       </div>
     </section>
