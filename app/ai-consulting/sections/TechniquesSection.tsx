@@ -123,13 +123,12 @@ const TechniquesSection = () => {
         {/* Header */}
         <div className="text-center mb-14">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Advanced Fine Tuning & Optimisation<br />
-            Techniques offered by Synoptix
+            Take the Next Step
           </h2>
           
           <p className="text-gray-600 text-sm max-w-2xl mx-auto mb-6">
-            At Synoptix AI, we don't just fine-tune AI—we make it smarter, faster, and tailored 
-            exactly to your needs. The practical benefits? More accuracy, lower costs, and quicker results.
+          Kickstart your AI journey with a strategic briefing. Identify where generative AI can drive
+          the most value and how Synoptix AI can maximize your AI investments.
           </p>
           
           <div className="flex justify-center">
@@ -137,7 +136,7 @@ const TechniquesSection = () => {
               href="/docs"
               className="inline-flex items-center px-6 py-2.5 text-sm font-medium text-white bg-[#00A3FF] rounded-lg hover:bg-[#0096eb] transition-colors duration-200"
             >
-              Read Docs
+              Request an AI Strategy Briefing
             </Link>
           </div>
         </div>

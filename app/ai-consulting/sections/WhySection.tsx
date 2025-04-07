@@ -6,8 +6,8 @@ import { StickyScroll } from '@/components/ui/sticky-scroll-reveal';
 
 const features = [
     {
-        title: "Why Partner with Synoptix AI Consulting Services?",
-        description: "Synoptix isn't just another AI platform—it's the AI platform. Built for security, scalability, and real-world impact, it gives businesses full control over AI that actually delivers.",
+        title: "Maximized Platform Usage",
+        description: "Ensure seamless adoption and utilization across your organization, enhancing overall performance.",
         content: (
             <div className="w-full h-full flex items-center justify-center">
                 <Image
@@ -21,8 +21,8 @@ const features = [
         )
     },
     {
-        title: 'Zero Data Exposure',
-        description: 'Your data never leaves your environment. Our platform ensures complete data privacy and security with zero exposure to external systems.',
+        title: 'Dedicated Expert Support ',
+        description: 'Receive personalized, ongoing assistance to resolve complex challenges and optimize workflows.',
         content: (
             <div className="w-full h-full flex items-center justify-center">
                 <div className="p-4 text-white text-center">
@@ -33,8 +33,8 @@ const features = [
         )
     },
     {
-        title: 'Enterprise-Grade Control',
-        description: 'Gain complete control over AI operations with enterprise-grade governance, monitoring, and compliance tools built for scale.',
+        title: 'Enhanced Data Quality',
+        description: 'Improve the accuracy and relevance of retrieved information for better insights and decision-making.',
         content: (
             <div className="w-full h-full flex items-center justify-center">
                 <div className="p-4 text-white text-center">
@@ -45,8 +45,8 @@ const features = [
         )
     },
     {
-        title: 'Flexible AI Infrastructure',
-        description: 'Deploy on-premises, in your cloud, or use our managed service. Our flexible architecture adapts to your existing infrastructure.',
+        title: 'Proactive Security & Performance Monitoring ',
+        description: 'Maintain system integrity with continuous security and performance oversight.',
         content: (
             <div className="w-full h-full flex items-center justify-center">
                 <div className="p-4 text-white text-center">
@@ -57,8 +57,8 @@ const features = [
         )
     },
     {
-        title: 'Content Safety',
-        description: 'Built-in content moderation and safety guardrails ensure AI outputs meet your organization\'s standards and compliance requirements.',
+        title: 'AI-Driven Competitive Edge',
+        description: 'Stay ahead of the competition with advanced AI strategies tailored to your business needs.',
         content: (
             <div className="w-full h-full flex items-center justify-center">
                 <div className="p-4 text-white text-center">
