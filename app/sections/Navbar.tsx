@@ -78,7 +78,7 @@ const Navbar = () => {
   const navItems = [
     { name: 'Home', href: '/' },
     { name: 'Platform', href: '#', hasDropdown: true, dropdownState: platformDropdownOpen, setDropdownState: setPlatformDropdownOpen, buttonRef: buttonRef, items: platformDropdownItems },
-    { name: 'Synoptix Guard', href: '/syno-guard' },
+    { name: 'Syno Guard', href: '/syno-guard' },
     { name: 'Services', href: '#', hasDropdown: true, dropdownState: servicesDropdownOpen, setDropdownState: setServicesDropdownOpen, buttonRef: servicesButtonRef, items: servicesDropdownItems },
     { name: 'Resources', href: '/resources' },
     { name: 'Company', href: '/company' },

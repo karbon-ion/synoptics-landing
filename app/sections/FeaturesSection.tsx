@@ -11,34 +11,34 @@ import workflowGif from '@/public/gifs/workflow.gif';
 const features = [
   {
     title: "Design & Deploy Intelligent AI Agents",
-    subtitle: "CUSTOM AI AGENT",
-    description: "From simple to advanced tasks, Synoptix's AI platform lets you design, deploy, and scale intelligent agents. Build custom AI agents that work exactly the way you need—without complex coding.",
+    subtitle: "AI AGENT",
+    description: "No-code AI Agents! From simple to advanced tasks, Synoptix’s AI platform lets you design, deploy, and scale intelligent agents. Build custom AI agents that works exactly the way your business need.",
     image: agentGif,
 
     ctaText: "Learn More",
     ctaLink: "/platform"
   },
   {
-    title: "Automate Document Processing",
-    subtitle: "INTELLIGENT DOCUMENT PROCESSING",
-    description: "Extract, analyze, and process information from any document type. Our AI understands context, identifies key data points, and integrates with your existing workflows.",
+    title: "Orchestrate Tasks with Precision and Speed",
+    subtitle: "Workflows",
+    description: "Execute multiple AI agents at once to optimize task management and efficiency. Enhance automation through seamless collaboration, ensuring smarter workflows and maximized productivity.",
     image: evaluationsGif,
 
     ctaText: "Learn More",
     ctaLink: "/document-processing"
   },
   {
-    title: "Enhance Customer Support",
-    subtitle: "AI CUSTOMER SERVICE",
-    description: "Deploy AI agents that understand customer inquiries, access knowledge bases, and provide accurate responses. Scale your support operations without increasing headcount.",
+    title: "Precision Analytics for Continuous Improvement",
+    subtitle: "Evaluations",
+    description: "Gain real-time insights into AI performance, efficiency, and accuracy with Synoptix AI. Track usage, measure impact, and continuously refine AI agents to maximize productivity and business value.",
     image: prebuiltAgentsGif,
     ctaText: "Learn More",
     ctaLink: "/customer-support"
   },
   {
-    title: "Streamline Operations",
-    subtitle: "WORKFLOW AUTOMATION",
-    description: "Connect systems, automate repetitive tasks, and optimize business processes. Our AI agents work across departments to eliminate bottlenecks and improve efficiency.",
+    title: "Pre-configured Agents for Instant Deployment",
+    subtitle: "Quick Start AI",
+    description: "Access prebuilt AI agents designed for various business tasks. Customize prompts, upload documents, and configure AI agents to get fast, precise, and context-aware results—hassle-free in seconds.",
     image: workflowGif,
     ctaText: "Learn More",
     ctaLink: "/operations"
@@ -53,7 +53,7 @@ const FeaturesSection = () => {
 
         <div className="text-center mb-16 relative">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 max-w-4xl mx-auto leading-tight">
-            Synoptix AI That Reads, Thinks, and Answers—So You Don't Have To
+            Enterprise AI Solutions for Improved Productivity
           </h2>
         </div>
 
