@@ -40,16 +40,10 @@ const Hero = () => {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-10">
             <Link
-              href="/trial"
+              href="#contact"
               className="inline-flex items-center px-8 py-3 text-lg font-medium text-white bg-gradient-to-r from-blue-400 to-blue-600 rounded-full hover:from-blue-500 hover:to-blue-700 transition-all duration-200 shadow-md hover:shadow-lg"
             >
-              Start a Free Trial
-            </Link>
-            <Link
-              href="/contact"
-              className="inline-flex items-center px-8 py-3 text-lg font-medium text-white bg-gradient-to-r from-blue-400 to-blue-600 rounded-full hover:from-blue-500 hover:to-blue-700 transition-all duration-200 shadow-md hover:shadow-lg"
-            >
-              Contact Us
+              Request a demo
             </Link>
           </div>
           {/* <ProvidersMarquee />   */}
