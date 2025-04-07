@@ -1,6 +1,7 @@
 'use client';
 
 import Link from "next/link";
+import ContactSection from "./ContactSection";
 
 const stats = [
   {
@@ -88,7 +89,8 @@ const StatsSection = () => {
       </div>
       <div className="flex justify-center mt-16 relative z-10">
         <Link
-          href="/demo"
+          href="#contact"
+          scroll={true}
           className="inline-flex items-center px-8 py-3 text-lg font-medium text-white bg-gradient-to-r from-blue-400 to-blue-600 rounded-full hover:from-blue-500 hover:to-blue-700 transition-all duration-200 shadow-md hover:shadow-lg"
         >
           Optimize Your Business with Synoptix AI 

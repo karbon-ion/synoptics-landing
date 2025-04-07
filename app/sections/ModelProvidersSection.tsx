@@ -55,14 +55,14 @@ const ModelProvidersSection = () => {
             Why Choose Synoptix.ai<br />Quantum RAG for Enterprise?
           </h2>
           
-          <div className="flex justify-center mb-16">
+          {/* <div className="flex justify-center mb-16">
             <Link
               href="/demo"
               className="inline-flex items-center px-8 py-3 text-lg font-medium text-white bg-gradient-to-r from-blue-400 to-blue-600 rounded-full hover:from-blue-500 hover:to-blue-700 transition-all duration-200 shadow-md hover:shadow-lg"
             >
               Book a demo
             </Link>
-          </div>
+          </div> */}
         </div>
         
         {/* Model provider logos */}

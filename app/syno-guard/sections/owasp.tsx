@@ -19,7 +19,7 @@ export default function OWASP() {
                             href="#contact"
                             className="inline-flex items-center justify-center px-6 py-3 bg-[#0066FF] text-white font-medium rounded-full hover:bg-[#0052CC] transition-colors"
                         >
-                            Contact Us
+                            Contact us for more information
                         </a>
                     </div>
                 </div>

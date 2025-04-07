@@ -54,11 +54,11 @@ const TechniquesSection = () => {
     },
     {
       name: "Instruction Fine-Tuning",
-      description: "We refine your model to follow specific instructions with greater precision:",
+      description: "Your AI should understand and follow instructions exactly as intended. We train models to process complex commands with precision.",
       benefits: [
-        "Improve contextual understanding of complex prompts",
-        "Enhance response relevance and accuracy",
-        "Reduce hallucinations and incorrect outputs"
+        "Teach model to handle detailed, multi-step instructions",
+        "Improve response quality for better user interaction",
+        "Make AI models adaptable across different business applications"
       ]
     },
     {
@@ -128,7 +128,7 @@ const TechniquesSection = () => {
           </h2>
           
           <p className="text-gray-600 text-sm max-w-2xl mx-auto mb-6">
-            At Synoptix.ai, we don't just fine-tune AI—we make it smarter, faster, and tailored 
+            At Synoptix AI, we don't just fine-tune AI—we make it smarter, faster, and tailored 
             exactly to your needs. The practical benefits? More accuracy, lower costs, and quicker results.
           </p>
           

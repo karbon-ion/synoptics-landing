@@ -54,65 +54,65 @@ const TechniquesSection = () => {
     },
     {
       name: "Instruction Fine-Tuning",
-      description: "We refine your model to follow specific instructions with greater precision:",
+      description: "Your AI should understand and follow instructions exactly as intended. We train models to process complex commands with precision.",
       benefits: [
-        "Improve contextual understanding of complex prompts",
-        "Enhance response relevance and accuracy",
-        "Reduce hallucinations and incorrect outputs"
+        "Teach model to handle detailed, multi-step instructions",
+        "Improve response quality for better user interaction",
+        "Make AI models adaptable across different business applications"
       ]
     },
     {
       name: "Transfer Learning",
-      description: "We adapt pre-trained models to your specific domain:",
+      description: "Why start from scratch? We take powerful pre-trained models and refine them to fit your needs with minimal effort and data.",
       benefits: [
-        "Leverage existing knowledge for specialized tasks",
-        "Drastically reduce training data requirements",
-        "Accelerate time-to-production for new applications"
+        "Retain what works; fine-tune what matters",
+        "Adapt existing models to new domains quickly",
+        "Deliver high performance without heavy resource consumption"
       ]
     },
     {
       name: "Task-Specific Fine-Tuning",
-      description: "We optimize models for your particular business need:",
+      description: "Generic AI doesn’t cut it. We customize models for specialized industries like finance, healthcare, legal tech, and many more.",
       benefits: [
-        "Customize AI behavior for your exact use case",
-        "Improve performance on niche industry tasks",
-        "Focus computational resources where they matter most"
+        "Train AI to handle domain-specific language and data",
+        "Ensure compliance with industry specific regulations and standards",
+        "Deliver results that match real-world business needs"
       ]
     },
     {
       name: "Multi-Task Learning",
-      description: "We enable your model to handle multiple related tasks effectively:",
+      description: "We build AI that can do more—handling multiple tasks at once without losing accuracy.",
       benefits: [
-        "Create versatile AI solutions that solve diverse problems",
-        "Improve generalization across related domains",
-        "Reduce the need for multiple specialized models"
+        "Teach models to learn multiple related tasks",
+        "Improve adaptability and efficiency across different use cases",
+        "Get AI models that evolves with your business needs"
       ]
     },
     {
       name: "Few-Shot Learning",
-      description: "We train your model to learn from minimal examples:",
+      description: "AI should perform well even with limited data. We make that happen with few-shot learning.",
       benefits: [
-        "Adapt quickly to new tasks with limited training data",
-        "Reduce annotation costs and data gathering burden",
-        "Enable rapid prototyping and experimentation"
+        "Train AI to generalize from minimal examples",
+        "Reduce data dependency while maintaining accuracy",
+        "Make AI useful even in data-scarce environments"
       ]
     },
     {
-      name: "RLHF",
-      description: "We implement Reinforcement Learning from Human Feedback:",
+      name: "Reinforcement Learning from Human Feedback (RLHF)",
+      description: "We train AI with real human input to make its responses smarter and more reliable over time.",
       benefits: [
-        "Align model outputs with human preferences",
-        "Reduce harmful, biased, or undesired outputs",
-        "Continuously improve based on real user interactions"
+        "Use real-world feedback to refine decision-making",
+        "Continuously adjust AI behavior to meet user expectations",
+        "Ensure the model stays relevant, efficient, and aligned with user’s preferences."
       ]
     },
     {
       name: "Supervised Fine-Tuning",
-      description: "We enhance models with carefully labeled training data:",
+      description: "We don’t just fine-tune models—we make them work exactly how you need them to.",
       benefits: [
-        "Increase accuracy on specific domains and terminology",
-        "Teach models proper handling of edge cases",
-        "Ensure outputs meet quality standards consistently"
+        "Define relevant structured datasets tailored to your business needs",
+        "Train models to generate precise, task-specific outputs",
+        "Continuously integrate feedback to improve performance"
       ]
     }
   ];
@@ -128,7 +128,7 @@ const TechniquesSection = () => {
           </h2>
           
           <p className="text-gray-600 text-sm max-w-2xl mx-auto mb-6">
-            At Synoptix.ai, we don't just fine-tune AI—we make it smarter, faster, and tailored 
+            At Synoptix AI, we don't just fine-tune AI—we make it smarter, faster, and tailored 
             exactly to your needs. The practical benefits? More accuracy, lower costs, and quicker results.
           </p>
           

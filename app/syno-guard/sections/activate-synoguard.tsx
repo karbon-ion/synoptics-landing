@@ -45,51 +45,54 @@ const ActivateSynoGuard = () => {
   const techniqueData = [
     {
       name: "Content Safety",
-      description: "We adjust model parameters to sharpen accuracy, reduce errors, and ensure smooth performance:",
+      description:
+        "Your business runs on trust—including the technology that powers it. Synoptix ensures every interaction is secure, compliant, and risk-free, so you can focus on growth with confidence.\n\nBad actors use prompt injection and jailbreaks to exploit vulnerabilities, bypass security, and access sensitive data. Synoptix stops these threats before they become a problem, keeping your business protected, compliant, and in control.",
       benefits: [
-        "Update weights for better predictions",
-        "Optimize layers for faster, more efficient processing",
-        "Cut down computational costs without compromising performance"
+        "Prompt Injection: Don’t let bad actors manipulate your systems. SynoGuard ensures every response is secure, accurate, and compliant, preventing data leaks and breaches.",
+        "Jailbreaks: Hackers look for loopholes—SynoGuard makes sure they don’t find any. Our built-in safeguards ensure compliance, uphold ethical standards, and keep your business data secure."
       ]
     },
     {
-      name: "Toxcity Detection",
-      description: "We refine your model to follow specific instructions with greater precision:",
+      name: "Toxicity Detection",
+      description:
+        "A single harmful message can damage trust, but with SynoGuard, your platform stays secure, respectful, and compliant—without disrupting the user experience. Our AI-powered system scans content instantly, filtering out threats before they become a problem.",
       benefits: [
-        "Improve contextual understanding of complex prompts",
-        "Enhance response relevance and accuracy",
-        "Reduce hallucinations and incorrect outputs"
+        "Violent Content: Block harmful content before it escalates. Synoptix detects and blocks threats, graphic violence, and incitement—protecting your users and your business.",
+        "Hate Content: Toxic content damages trust. Our AI-powered filters stop slurs, harmful biases, and offensive language—ensuring an inclusive and compliant platform.",
+        "Sexual Content: Explicit and exploitative content can ruin credibility. Synoptix automatically scans and blocks inappropriate material, keeping your platform aligned with content policies.",
+        "Self-Harm Content: Early detection saves lives. Our system flags suicide or self-injury in real time, allowing businesses to act responsibly and prevent harmful messaging."
       ]
     },
     {
       name: "Data Privacy",
-      description: "We adapt pre-trained models to your specific domain:",
+      description:
+        "Your business runs on data—keeping it secure isn’t optional. Synoptix Guard protects sensitive information, prevents data leaks, and ensures compliance, all without slowing you down.",
       benefits: [
-        "Leverage existing knowledge for specialized tasks",
-        "Drastically reduce training data requirements",
-        "Accelerate time-to-production for new applications"
+        "Automatically detect and redact sensitive information before it’s exposed.",
+        "Meet regulatory requirements effortlessly with real-time privacy enforcement.",
+        "Zero-trust security, end-to-end encryption, and integration into your existing systems."
       ]
     },
     {
       name: "PII Extraction",
-      description: "We optimize models for your particular business need:",
+      description:
+        "Your business handles sensitive information daily—keeping it secure is non-negotiable. Synoptix Guard automates PII detection and redaction, ensuring names, addresses, financial data, and proprietary information stay protected.",
       benefits: [
-        "Customize AI behavior for your exact use case",
-        "Improve performance on niche industry tasks",
-        "Focus computational resources where they matter most"
+        "Custom PII filters: Not all data is the same, and neither are your security needs. Synoptix Guard lets you customize what gets masked, redacted, or restricted, giving you full control over sensitive information."
       ]
     },
     {
       name: "Anti Hallucination",
-      description: "We enable your model to handle multiple related tasks effectively:",
+      description:
+        "AI hallucinations aren’t just mistakes—they’re risks. Misinformation can mislead customers, damage credibility, and create compliance issues. SynoGuard keeps your AI honest by detecting and eliminating false or misleading outputs before they reach your users.",
       benefits: [
-        "Create versatile AI solutions that solve diverse problems",
-        "Improve generalization across related domains",
-        "Reduce the need for multiple specialized models"
+        "Real-Time Hallucination Detection: Instantly flag and correct AI-generated misinformation to ensure accuracy.",
+        "Customisable AI Fine-Tuning: Train your models to minimize inaccuracies and align with verified data.",
+        "Continuous Model Evaluation: Identify Knowledge Gaps and stop AI drift by securing lexical analysis, field mapping, and data enrichment before inconsistencies disrupt your business."
       ]
-    },
-   
+    }
   ];
+  
 
   return (
     <section className="py-24 bg-white relative overflow-hidden">

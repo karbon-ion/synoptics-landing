@@ -21,12 +21,12 @@ const ResultSection = () => {
       description: "A fine-tuned model doesn't just perform, it understands. Expect more relevant outputs that align with your specific needs."
     },
     {
-      title: "Optimized Compute Costs",
-      description: "Optimized Compute Costs Training from scratch is expensive and time consuming. Fine-tuning optimizes existing models, cutting costs."
+      title: "Bias Mitigation",
+      description: "Bias in AI is a real problem. We train models on diverse data to ensure balanced, ethical decisions you can trust."
     },
     {
-      title: "Faster & Reliable Deployment",
-      description: "Get models that fit effortlessly into your system—ready to use, easy to scale, and built for long-term reliability."
+      title: "Optimized Compute Costs",
+      description: "Enhance performance by leveraging powerful foundational models. Fine-tuning ensures maximum efficiency, faster processing, and reduced computational expenses."
     }
   ];
 

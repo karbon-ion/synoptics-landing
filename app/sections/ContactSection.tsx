@@ -8,7 +8,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section className="w-max-full px-8 py-20  bg-[#F5FAFF]">
+    <section className="w-max-full px-8 py-20  bg-[#F5FAFF]" id="contact">
       <div className="container mx-auto w-7xl px-4">
         <div className="flex flex-col lg:flex-row justify-between items-start gap-16">
           {/* Left side - Content */}

@@ -6,8 +6,8 @@ import { StickyScroll } from '@/components/ui/sticky-scroll-reveal';
 
 const features = [
     {
-        title: "Why Partner with Synoptix AI Consulting Services?",
-        description: "Synoptix isn't just another AI platform—it's the AI platform. Built for security, scalability, and real-world impact, it gives businesses full control over AI that actually delivers.",
+        title: "Why Synoptix?",
+        description: "We’re your trusted partner for AI Fine-Tuning & Optimisation. Get AI that works for you—precise, reliable, and secure, custom-built for your business. Fine-Tune Your AI with Synoptix—Get Started Today.",
         content: (
             <div className="w-full h-full flex items-center justify-center">
                 <Image
@@ -21,8 +21,8 @@ const features = [
         )
     },
     {
-        title: 'Zero Data Exposure',
-        description: 'Your data never leaves your environment. Our platform ensures complete data privacy and security with zero exposure to external systems.',
+        title: 'Strategic Alignment',
+        description: 'YWe fine-tune your AI to sync perfectly with your business goals—constantly refining for peak performance.',
         content: (
             <div className="w-full h-full flex items-center justify-center">
                 <div className="p-4 text-white text-center">
@@ -33,8 +33,8 @@ const features = [
         )
     },
     {
-        title: 'Enterprise-Grade Control',
-        description: 'Gain complete control over AI operations with enterprise-grade governance, monitoring, and compliance tools built for scale.',
+        title: 'Reliable, High-Speed Performance',
+        description: 'Get improved accuracy, minimal downtime, and accelerated deployments—delivering measurable ROI.',
         content: (
             <div className="w-full h-full flex items-center justify-center">
                 <div className="p-4 text-white text-center">
@@ -45,8 +45,8 @@ const features = [
         )
     },
     {
-        title: 'Flexible AI Infrastructure',
-        description: 'Deploy on-premises, in your cloud, or use our managed service. Our flexible architecture adapts to your existing infrastructure.',
+        title: 'Enterprise-Grade Security',
+        description: 'Detect and remove biases, ensure full compliance, and safeguard your AI assets with robust security protocols.',
         content: (
             <div className="w-full h-full flex items-center justify-center">
                 <div className="p-4 text-white text-center">
@@ -55,19 +55,6 @@ const features = [
                 </div>
             </div>
         )
-    },
-    {
-        title: 'Content Safety',
-        description: 'Built-in content moderation and safety guardrails ensure AI outputs meet your organization\'s standards and compliance requirements.',
-        content: (
-            <div className="w-full h-full flex items-center justify-center">
-                <div className="p-4 text-white text-center">
-                    <div className="text-4xl mb-4">🛡️</div>
-                    <div className="font-semibold">Safety First</div>
-                </div>
-            </div>
-        )
-
     }
 ];
 
@@ -77,7 +64,7 @@ const WhySection = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="mb-12">
                     <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                    Why Partner with Synoptix AI Consulting Services?
+                    Why Synoptix?
                     </h2>
                     <div className="w-16 h-1 bg-blue-500"></div>
 
