@@ -8,6 +8,7 @@ import WhySection from './sections/WhySection';
 import ResultSection from './sections/ResultSection';
 import TestimonialSection from './sections/TestimonialSection';
 import BlogSection from './sections/blogSection';
+import TechniquesSection from './sections/TechniquesSection';
 
 export default function AIConsulting() {
   return (
@@ -18,6 +19,7 @@ export default function AIConsulting() {
       <ResultSection/>
       <WhySection/>
       <TestimonialSection />
+      <TechniquesSection/>
       <BlogSection />
       {/* <ContactSection /> */}
     </>

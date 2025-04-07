@@ -18,7 +18,7 @@ export default function SynoGuard() {
             <Capabilities />
             <Ideas />
             <FeaturesSection /> */}
-            <Metrics />
+            {/* <Metrics /> */}
             {/* <Security /> */}
             <ActivateSynoGuard />
             <WhySection />
@@ -26,7 +26,7 @@ export default function SynoGuard() {
             {/* <RagStatsSection /> */}
             {/* <QuantumSection />
             <FAQ /> */}
-            <TestimonialsSection />
+            {/* <TestimonialsSection /> */}
             <SmallFoot title="Take Control of Your Platform’s Security" buttonOne="Request a Demo" buttonTwo="Talk to an Expert" />
         </main>
     );
