@@ -52,11 +52,11 @@ const TestimonialsSection = () => {
   };
 
   return (
-    <section className=" py-20 w-min-full mx-8">
-      <div className="container mx-auto w-[90rem] px-4">
-        <div className="flex flex-col lg:flex-row justify-between items-start gap-16">
+    <section className="py-20 w-full">
+      <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col lg:flex-row justify-between items-center lg:items-start gap-8 lg:gap-16">
           {/* Left side - Title and description */}
-          <div className="max-w-xl">
+          <div className="w-full lg:max-w-xl text-center lg:text-left">
             <h3 className="text-blue-500 text-sm font-medium mb-4">TESTIMONIALS</h3>
             <h2 className="text-[40px] font-bold leading-tight mb-4">
             Success Speaks for Itself <br />
@@ -84,7 +84,7 @@ const TestimonialsSection = () => {
           </div>
 
           {/* Right side - Testimonial cards */}
-          <div className="flex-1 grid grid-cols-1 lg:grid-cols-2 gap-6 w-full">
+          <div className="w-full lg:flex-1 grid grid-cols-1 md:grid-cols-2 gap-6">
             {testimonials.slice(currentIndex, currentIndex + 2).map((testimonial, index) => (
               <div
                 key={index}

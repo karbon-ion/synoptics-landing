@@ -8,24 +8,24 @@ const ContactSection = () => {
   };
 
   return (
-    <section className="w-max-full px-8 py-20  bg-[#F5FAFF]" id="contact">
-      <div className="container mx-auto w-7xl px-4">
-        <div className="flex flex-col lg:flex-row justify-between items-start gap-16">
+    <section className="w-full py-20 bg-[#F5FAFF]" id="contact">
+      <div className="container mx-auto p-4 sm:p-6 lg:p-8">
+        <div className="flex flex-col lg:flex-row justify-between items-center lg:items-start gap-8 lg:gap-16">
           {/* Left side - Content */}
-          <div className="max-w-xl">
+          <div className="w-full lg:w-1/2 text-center lg:text-left">
             <h2 className="text-sm font-medium uppercase mb-4">CONTACT US</h2>
             <h3 className="text-[40px] font-bold mb-4">Book a Demo</h3>
             <p className="text-gray-600 mb-12">
-              We're here to help. Whether you have questions,<br />
-              need guidance, or just want to learn more, reach out<br />
+              We're here to help. Whether you have questions,
+              need guidance, or just want to learn more, reach out
               —we'd love to hear from you
             </p>
 
             <div className="mb-12">
               <h3 className="text-[32px] font-bold mb-4">Talk to an AI Expert</h3>
               <p className="text-gray-600 mb-6">
-                Need advice on the right solution for your business?<br />
-                Schedule a call with one of our AI specialists and get<br />
+                Need advice on the right solution for your business?
+                Schedule a call with one of our AI specialists and get
                 the answers you need.
               </p>
               {/* <button className="inline-flex items-center px-8 py-3 text-lg font-medium text-white bg-gradient-to-r from-blue-400 to-blue-600 rounded-full hover:from-blue-500 hover:to-blue-700 transition-all duration-200 shadow-md hover:shadow-lg">
@@ -35,7 +35,7 @@ const ContactSection = () => {
           </div>
 
           {/* Right side - Contact Form */}
-          <div className="flex-1 w-full max-w-xl">
+          <div className="w-full lg:flex-1 max-w-xl mx-auto lg:mx-0">
             <div className="bg-white rounded-[32px] p-8 border border-blue-100">
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
@@ -52,7 +52,7 @@ const ContactSection = () => {
                     className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-blue-500"
                   />
                 </div>
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <input
                     type="email"
                     placeholder="Email"
