@@ -27,7 +27,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="relative bg-gradient-to-b from-[#F5FAFF] to-white border-t border-gray-100 w-max-full px-8">
+    <footer className="relative bg-gradient-to-b from-[#F5FAFF] to-white border-t border-gray-100 w-full">
       {/* Background Blob */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <Image
@@ -39,10 +39,10 @@ const Footer = () => {
         />
       </div>
 
-      <div className="container relative mx-auto w-[80rem] px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
+      <div className="container relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
           {/* Logo and Contact Info */}
-          <div className="md:col-span-3">
+          <div className="col-span-1 sm:col-span-2 md:col-span-1 text-center sm:text-left">
             <Link href="/" className="inline-block mb-6">
               <div className="flex items-center gap-2">
                 <Image
@@ -64,7 +64,7 @@ const Footer = () => {
           </div>
 
           {/* Navigation Links */}
-          <div className="md:col-span-3">
+          <div className="col-span-1 text-center sm:text-left">
             <h3 className="text-sm font-semibold text-blue-500 uppercase mb-4">PLATFORM</h3>
             <ul className="space-y-3">
               {navigation.platform.map((item) => (
@@ -77,7 +77,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="md:col-span-3">
+          <div className="col-span-1 text-center sm:text-left">
             <h3 className="text-sm font-semibold text-blue-500 uppercase mb-4">SERVICES</h3>
             <ul className="space-y-3">
               {navigation.services.map((item) => (
@@ -90,7 +90,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="md:col-span-3">
+          <div className="col-span-1 text-center sm:text-left">
             <h3 className="text-sm font-semibold text-blue-500 uppercase mb-4">RESOURCES</h3>
             <ul className="space-y-3">
               {navigation.resources.map((item) => (
@@ -106,7 +106,7 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-gray-100">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
             <p className="text-sm text-gray-600">
               © 2025 Synoptix.AI All Rights Reserved.
             </p>
