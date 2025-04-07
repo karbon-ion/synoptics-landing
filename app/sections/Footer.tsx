@@ -5,11 +5,11 @@ import Link from 'next/link';
 const Footer = () => {
   const navigation = {
     platform: [
-      { name: 'Quantum RAG', href: '#' },
+      { name: 'Enterprise RAG', href: '#' },
       { name: 'AI Agent', href: '#' },
       { name: 'Workflows', href: '#' },
       { name: 'Evaluations', href: '#' },
-      { name: 'Syno Guard', href: '/syno-guard' },
+      { name: 'Synoguard', href: '/syno-guard' },
     ],
     services: [
       { name: 'AI Consulting', href: '#' },
