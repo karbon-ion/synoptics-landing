@@ -70,7 +70,7 @@ const ServiceProcessSection = () => {
             href="/contact"
             className="inline-flex items-center px-8 py-3.5 text-base font-medium text-white bg-gradient-to-r from-[#00CCEB] to-[#3A49FF] rounded-lg hover:opacity-90 transition-all duration-200 shadow-sm hover:shadow-md"
           >
-            Book Your Fine Tuning Session Now
+            Consult for Fine-Tuning Session
           </Link>
         </div>
         

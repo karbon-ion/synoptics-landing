@@ -3,20 +3,28 @@ import { useState } from 'react';
 
 const faqs = [
     {
-        question: "What are the applications of RAG in enterprises?",
-        answer: "RAG turns scattered data into instant knowledge, automating workflows and eliminating manual research."
+        question: "What is fine-tuning in AI?",
+        answer: "Fine-tuning involves adapting a pre-trained AI model to perform specific tasks more effectively by training it further on a targeted dataset."
     },
     {
-        question: "What are the benefits of RAG as a service in enterprises?",
-        answer: "RAG as a service provides seamless data integration, automated insights generation, and secure enterprise-wide knowledge sharing without the overhead of managing complex infrastructure."
+        question: "Why fine-tune a model?",
+        answer: "Fine-tuning enhances a model's performance on specialized tasks, making it more accurate and relevant to applications."
     },
     {
-        question: "How does RAG differ for enterprises vs. midsize businesses?",
-        answer: "Enterprise RAG offers enhanced security features, larger data processing capabilities, and customizable workflows tailored to complex organizational structures, while midsize solutions focus on quick deployment and essential functionalities."
+        question: "What are the benefits of fine-tuning an AI model?",
+        answer: "Benefits include improved task-specific performance, reduced training costs compared to building models from scratch, and the ability to incorporate domain-specific knowledge."
     },
     {
-        question: "What makes Synoptix Enterprise RAG unique?",
-        answer: "Synoptix Enterprise RAG combines advanced security, seamless integration capabilities, and enterprise-grade scalability with an intuitive user interface, making it the ideal choice for organizations prioritizing both power and ease of use."
+        question: "What kind of data is needed to fine-tune an LLM?",
+        answer: "High-quality, domain-specific data that accurately represents the language and scenarios of the intended application is essential for effective fine-tuning."
+    },
+    {
+        question: "How do you ensure secure fine-tuning and confidentiality throughout the process?",
+        answer: "Implementing strict data handling protocols, encryption, and access controls ensures data security and confidentiality during the fine-tuning process."
+    },
+    {
+        question: "Does Synoptix offer post-deployment & maintenance support for fine-tuning & optimisation services?",
+        answer: "Yes, Synoptix offers ongoing post-deployment and maintenance to ensure your system remains efficient and up to date."
     }
 ];
 
@@ -27,7 +35,7 @@ export default function FAQ() {
         <section className="relative w-full py-24 px-4 bg-gradient-to-b from-[#F7FAFF] to-white">
             <div className="max-w-4xl mx-auto">
                 <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
-                    Frequently Asked Questions
+                Frequently asked questions about Fine tuning & Optimisation
                 </h2>
 
                 <div className="space-y-4">
