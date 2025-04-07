@@ -10,13 +10,16 @@ const features = [
         description: "Synoptix isn't just another AI platform—it's the AI platform. Built for security, scalability, and real-world impact, it gives businesses full control over AI that actually delivers.",
         content: (
             <div className="w-full h-full flex items-center justify-center">
+                <div className="p-6 flex flex-col items-center">
                 <Image
-                    src="/why.png"
+                    src="https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1000"
                     alt="AI Platform Overview"
-                    width={300}
-                    height={300}
-                    className="object-cover rounded-md"
+                    width={600}
+                    height={600}
+                    className="object-cover rounded-lg shadow-lg"
+                    unoptimized
                 />
+                </div>
             </div>
         )
     },
@@ -25,9 +28,15 @@ const features = [
         description: 'Your data never leaves your environment. Our platform ensures complete data privacy and security with zero exposure to external systems.',
         content: (
             <div className="w-full h-full flex items-center justify-center">
-                <div className="p-4 text-white text-center">
-                    <div className="text-4xl mb-4">🔒</div>
-                    <div className="font-semibold">Secure Data Environment</div>
+                <div className="p-6 flex flex-col items-center">
+                    <Image
+                        src="https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=800"
+                        alt="Data Security"
+                        width={400}
+                        height={300}
+                        className="object-cover rounded-lg shadow-lg"
+                        unoptimized
+                    />
                 </div>
             </div>
         )
@@ -37,9 +46,15 @@ const features = [
         description: 'Gain complete control over AI operations with enterprise-grade governance, monitoring, and compliance tools built for scale.',
         content: (
             <div className="w-full h-full flex items-center justify-center">
-                <div className="p-4 text-white text-center">
-                    <div className="text-4xl mb-4">⚙️</div>
-                    <div className="font-semibold">Advanced Controls</div>
+                <div className="p-6 flex flex-col items-center">
+                    <Image
+                        src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800"
+                        alt="Enterprise Controls"
+                        width={400}
+                        height={300}
+                        className="object-cover rounded-lg shadow-lg"
+                        unoptimized
+                    />
                 </div>
             </div>
         )
@@ -49,9 +64,15 @@ const features = [
         description: 'Deploy on-premises, in your cloud, or use our managed service. Our flexible architecture adapts to your existing infrastructure.',
         content: (
             <div className="w-full h-full flex items-center justify-center">
-                <div className="p-4 text-white text-center">
-                    <div className="text-4xl mb-4">🚀</div>
-                    <div className="font-semibold">Flexible Deployment</div>
+                <div className="p-6 flex flex-col items-center">
+                    <Image
+                        src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=800"
+                        alt="Cloud Infrastructure"
+                        width={400}
+                        height={300}
+                        className="object-cover rounded-lg shadow-lg"
+                        unoptimized
+                    />
                 </div>
             </div>
         )
@@ -61,9 +82,15 @@ const features = [
         description: 'Built-in content moderation and safety guardrails ensure AI outputs meet your organization\'s standards and compliance requirements.',
         content: (
             <div className="w-full h-full flex items-center justify-center">
-                <div className="p-4 text-white text-center">
-                    <div className="text-4xl mb-4">🛡️</div>
-                    <div className="font-semibold">Safety First</div>
+                <div className="p-6 flex flex-col items-center">
+                    <Image
+                        src="https://images.unsplash.com/photo-1614064641938-3bbee52942c7?q=80&w=800"
+                        alt="Content Safety"
+                        width={400}
+                        height={300}
+                        className="object-cover rounded-lg shadow-lg"
+                        unoptimized
+                    />
                 </div>
             </div>
         )
