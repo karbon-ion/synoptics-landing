@@ -15,7 +15,7 @@ const Hero = () => {
         thirdColor="235, 230, 255"
         fourthColor="210, 230, 255"
         fifthColor="225, 220, 255"
-        pointerColor="180, 200, 255"
+        pointerColor="141, 124, 246"
         size="100%"
         blendingValue="soft-light"
       >
