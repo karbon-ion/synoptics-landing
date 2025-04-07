@@ -2,7 +2,6 @@
 import Link from 'next/link';
 import { Typewriter } from 'react-simple-typewriter';
 import { BackgroundGradientAnimation } from '@/components/ui/background-gradient-animation';
-  import ProvidersMarquee from "@/app/sections/ProvidersMarquee";
 
 const Hero = () => {
   return (
@@ -15,7 +14,7 @@ const Hero = () => {
         thirdColor="235, 230, 255"
         fourthColor="210, 230, 255"
         fifthColor="225, 220, 255"
-        pointerColor="141, 124, 246"
+        pointerColor="108, 126, 212"
         size="100%"
         blendingValue="soft-light"
       >
