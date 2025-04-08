@@ -88,8 +88,8 @@ export const Menu = ({
   return (
     <nav
       onMouseLeave={() => setActive(null)}
-      className={`relative rounded-full border border-transparent flex justify-center space-x-6 px-8 py-4 transition-all duration-300 ${
-        isScrolled ? 'bg-white/60 backdrop-blur-sm shadow-sm' : ''
+      className={`relative rounded-full border border-transparent flex items-center justify-center space-x-6 px-8 py-4 transition-all duration-300 ${
+        isScrolled ? 'bg-white/80 backdrop-blur-sm shadow-md' : 'bg-transparent'
       }`}
     >
       {children}
@@ -171,24 +171,26 @@ export const NavbarMenu = () => {
   ];
 
   return (
-    <div className={`fixed w-full left-0 top-0 z-50 transition-all duration-300 ${scrolled ? 'py-2' : 'py-6'}`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
-        <Link href="/" className="flex items-center gap-2 group">
-          <div className="relative w-7 h-7 transition-transform duration-300 group-hover:scale-110">
-            <Image
-              src="/synoptix_logo.png"
-              alt="Synoptix Logo"
-              fill
-              className="object-contain"
-            />
+    <div className={`fixed w-full left-0 top-0 z-50 transition-all duration-300 flex justify-center items-center ${scrolled ? 'py-2' : 'py-6'}`}>
+      <div className="max-w-7xl w-full flex justify-center">
+        <Menu setActive={setActive} isScrolled={scrolled}>
+          <div className="flex items-center mr-8">
+            <Link href="/" className="flex items-center gap-2 group">
+              <div className="relative w-8 h-8 transition-transform duration-300 group-hover:scale-110">
+                <Image
+                  src="/synoptix_logo.png"
+                  alt="Synoptix Logo"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+              <span className="text-[28px] font-bold tracking-tight">
+                Synoptix<span className="text-blue-500">.</span>AI
+              </span>
+            </Link>
           </div>
-          <span className="text-[28px] font-bold tracking-tight">
-            Synoptix<span className="text-blue-500">.</span>AI
-          </span>
-        </Link>
-        
-        <div className="hidden md:block">
-          <Menu setActive={setActive} isScrolled={scrolled}>
+          
+          <div className="flex items-center space-x-8">
             <MenuItem setActive={setActive} active={active} item="Home" href="/" />
             
             <MenuItem setActive={setActive} active={active} item="Platform">
@@ -236,24 +238,11 @@ export const NavbarMenu = () => {
             <MenuItem setActive={setActive} active={active} item="Resources" href="/resources" />
             <MenuItem setActive={setActive} active={active} item="About us" href="/about" />
             <MenuItem setActive={setActive} active={active} item="Contact us" href="/contact" />
-          </Menu>
-        </div>
+          </div>
+        </Menu>
         
-        <div className="hidden md:block">
-          <Link
-            href="/demo"
-            className={`px-6 py-2.5 rounded-[14px] text-[15px] transition-colors duration-300 shadow-sm hover:shadow-md ${
-              pathname === '/demo'
-                ? 'bg-blue-600 text-white'
-                : 'bg-black text-white hover:bg-blue-600'
-            }`}
-          >
-            Log in
-          </Link>
-        </div>
-        
-        {/* Mobile menu button - simplified for now */}
-        <div className="md:hidden">
+        {/* Mobile menu button */}
+        <div className="md:hidden fixed top-4 right-4">
           <button
             onClick={() => {}}
             className="inline-flex items-center justify-center p-2 text-gray-700 hover:text-blue-600 transition-colors duration-300"
