@@ -10,35 +10,43 @@ import workflowGif from '@/public/gifs/workflow.gif';
 
 const features = [
   {
-    title: "Design & Deploy Intelligent AI Agents",
-    subtitle: "AI AGENT",
-    description: "No-code AI Agents! From simple to advanced tasks, Synoptix’s AI platform lets you design, deploy, and scale intelligent agents. Build custom AI agents that works exactly the way your business need.",
+    title: "Smarter Code. Faster Development",
+    subtitle: "Code Gen agents",
+    description: "Eliminate redundant tasks and empower developers to focus on innovation. Synoptix Code Gen Agents generate clean, efficient code and optimize logic in real time—reducing development cycles and minimizing human error across your engineering workflows.",
     image: agentGif,
 
     ctaText: "Learn More",
     ctaLink: "/enterprise-ai-agent"
   },
   {
-    title: "Orchestrate Tasks with Precision and Speed",
-    subtitle: "Workflows",
-    description: "Execute multiple AI agents at once to optimize task management and efficiency. Enhance automation through seamless collaboration, ensuring smarter workflows and maximized productivity.",
+    title: "On-Demand Creation for Enterprise Agility",
+    subtitle: "Generative agents",
+    description: "From content generation to complex creative outputs, Synoptix Generative Agents convert ideas into actionable deliverables. Generate text, visuals, and code at scale—adapting instantly to your needs and enhancing productivity across teams.",
     image: evaluationsGif,
 
     ctaText: "Learn More",
     ctaLink: "/workflow"
   },
   {
-    title: "Precision Analytics for Continuous Improvement",
-    subtitle: "Evaluations",
-    description: "Gain real-time insights into AI performance, efficiency, and accuracy with Synoptix AI. Track usage, measure impact, and continuously refine AI agents to maximize productivity and business value.",
+    title: "Built-In Compliance, Consistency, and Quality Control",
+    subtitle: "Assurance agents",
+    description: "Maintain operational excellence with Synoptix Assurance Agents. These AI agents proactively monitor for inconsistencies, enforce enterprise standards, and ensure every output aligns with regulatory and organizational benchmarks. ",
     image: prebuiltAgentsGif,
     ctaText: "Learn More",
     ctaLink: "/enterprise-rag"
   },
   {
-    title: "Pre-configured Agents for Instant Deployment",
-    subtitle: "Quick Start AI",
-    description: "Access prebuilt AI agents designed for various business tasks. Customize prompts, upload documents, and configure AI agents to get fast, precise, and context-aware results—hassle-free in seconds.",
+    title: "Transform Enterprise Data into Strategic Action",
+    subtitle: "Decision Support & Analytical Agents ",
+    description: "Empower your teams with real-time insights. Synoptix Analytical Agents analyze complex datasets, identify trends, and deliver actionable recommendations—enabling smarter, faster decision-making across the enterprise. ",
+    image: workflowGif,
+    ctaText: "Learn More",
+    ctaLink: "/enterprise-ai-agent"
+  },
+  {
+    title: "Proactive Risk Management at Scale",
+    subtitle: "Anomalies Detection Agents  ",
+    description: "Synoptix Anomaly Detection Agents provide continuous monitoring to detect irregularities and potential threats before they impact your business. Ensure operational integrity and security with real-time intelligence that preempts disruptions.",
     image: workflowGif,
     ctaText: "Learn More",
     ctaLink: "/enterprise-ai-agent"
@@ -53,7 +61,7 @@ const FeaturesSection = () => {
 
         <div className="text-center mb-16 relative">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 max-w-4xl mx-auto leading-tight">
-            Enterprise AI Solutions for Improved Productivity
+          Discover the AI Agents Designed for Enterprise Impact 
           </h2>
         </div>
 

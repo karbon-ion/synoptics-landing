@@ -118,75 +118,46 @@ const TechniquesSection = () => {
   // Technique definitions with their respective benefits
   const techniqueData = [
     {
-      name: "Parameter Fine-Tuning",
-      description: "We adjust model parameters to sharpen accuracy, reduce errors, and ensure smooth performance:",
+      name: "Connect & Unify All Your Data",
+      description: "Gather knowledge from every corner of your business on one centralized platform. Synoptix AI ensures that all your data—whether structured or unstructured—is integrated, indexed, and instantly retrievable. ",
       benefits: [
-        "Update weights for better predictions",
-        "Optimize layers for faster, more efficient processing",
-        "Cut down computational costs without compromising performance"
+        "Unstructured Data – Documents, emails, reports, PDFs, and raw text.",
+        "Structured Data – Databases, spreadsheets, and enterprise records.",
+        "Application APIs – Integrate third-party apps and internal systems effortlessly.",
+        "Social Media Platforms – LinkedIn, YouTube, X, Facebook and more."
       ]
     },
     {
-      name: "Instruction Fine-Tuning",
-      description: "We refine your model to follow specific instructions with greater precision:",
+      name: "Secure Data Ingestion for Enterprise",
+      description: "Not all data is useful—or safe. Synoptix AI ensures that only clean, structured, and relevant data is accessible by applying advanced filtering, pre-processing, and strict security controls. This prevents outdated, irrelevant, or sensitive data from entering your workflows. ",
       benefits: [
-        "Improve contextual understanding of complex prompts",
-        "Enhance response relevance and accuracy",
-        "Reduce hallucinations and incorrect outputs"
+        "Role-Based Access Control (RBAC) – Restrict data access to only authorized users. ",
+        "Automated Filtering & Pre-Processing – Remove redundant or low-quality content.  ",
+        "Compliance & Security Measures – Ensure all data meets enterprise security standards. "
       ]
     },
     {
-      name: "Transfer Learning",
-      description: "We adapt pre-trained models to your specific domain:",
+      name: "Smarter Search & Instant Retrieval ",
+      description: "Stop searching—start finding. Synoptix AI refines queries, ranks information intelligently, and retrieves only the most relevant and actionable insights. Unlike traditional search, it leverages context-aware ranking, multi-retriever models, and privacy-first protocols to ensure that every answer is timely and accurate. ",
       benefits: [
-        "Leverage existing knowledge for specialized tasks",
-        "Drastically reduce training data requirements",
-        "Accelerate time-to-production for new applications"
+        "AI-Enhanced Ranking – Surfaces the most relevant insights instantly. ",
+        "Privacy-First Retrieval – Ensures sensitive data is not stored post-search."
       ]
     },
     {
-      name: "Task-Specific Fine-Tuning",
-      description: "We optimize models for your particular business need:",
+      name: "Accurate Responses with Built-In Validation ",
+      description: "Decisions should be based on facts. Synoptix AI ensures the accuracy, safety, and reliability of every response through hallucination detection, PII filtering, and real-time monitoring. Built-in learning continuously refines results, ensuring enterprises receive high-confidence, fact-checked insights. ",
       benefits: [
-        "Customize AI behavior for your exact use case",
-        "Improve performance on niche industry tasks",
-        "Focus computational resources where they matter most"
+        "Misinformation Prevention – Detects and eliminates false or misleading data.",
+        "Continuous Learning & Monitoring – Improves response quality over time. "
       ]
     },
     {
-      name: "Multi-Task Learning",
-      description: "We enable your model to handle multiple related tasks effectively:",
+      name: "Enterprise-Ready Scalability & Security ",
+      description: "Technology should fit your business, not disrupt it. Synoptix AI integrates effortlessly into existing IT ecosystems, scaling as your business grows while maintaining the highest security and compliance standards. ",
       benefits: [
-        "Create versatile AI solutions that solve diverse problems",
-        "Improve generalization across related domains",
-        "Reduce the need for multiple specialized models"
-      ]
-    },
-    {
-      name: "Few-Shot Learning",
-      description: "We train your model to learn from minimal examples:",
-      benefits: [
-        "Adapt quickly to new tasks with limited training data",
-        "Reduce annotation costs and data gathering burden",
-        "Enable rapid prototyping and experimentation"
-      ]
-    },
-    {
-      name: "RLHF",
-      description: "We implement Reinforcement Learning from Human Feedback:",
-      benefits: [
-        "Align model outputs with human preferences",
-        "Reduce harmful, biased, or undesired outputs",
-        "Continuously improve based on real user interactions"
-      ]
-    },
-    {
-      name: "Supervised Fine-Tuning",
-      description: "We enhance models with carefully labeled training data:",
-      benefits: [
-        "Increase accuracy on specific domains and terminology",
-        "Teach models proper handling of edge cases",
-        "Ensure outputs meet quality standards consistently"
+        "Seamless IT Integration – Works within your current enterprise systems. ",
+        "Enterprise-Grade Security – Protects sensitive data with robust security controls. "
       ]
     }
   ];
@@ -197,23 +168,21 @@ const TechniquesSection = () => {
         {/* Header */}
         <div className="text-center mb-14">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Advanced Fine Tuning & Optimisation<br />
-            Techniques offered by Synoptix
+          Your Enterprise Deserves Better Intelligence—Discover RAG95 
           </h2>
           
           <p className="text-gray-600 text-sm max-w-2xl mx-auto mb-6">
-            At Synoptix.ai, we don't just fine-tune AI—we make it smarter, faster, and tailored 
-            exactly to your needs. The practical benefits? More accuracy, lower costs, and quicker results.
+          Get the right information at the right time, every time. Synoptix ensures speed, security, and precision—at enterprise scale 
           </p>
           
-          <div className="flex justify-center">
+          {/* <div className="flex justify-center">
             <Link
               href="/docs"
               className="inline-flex items-center px-6 py-2.5 text-sm font-medium text-white bg-[#00A3FF] rounded-lg hover:bg-[#0096eb] transition-colors duration-200"
             >
               Read Docs
             </Link>
-          </div>
+          </div> */}
         </div>
         
         {/* Main content area with blue background */}

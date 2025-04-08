@@ -97,7 +97,7 @@ export default function PrivacyPolicy() {
           <h2 className="text-2xl font-semibold mb-4">CONTACT INFORMATION</h2>
           <p className="mb-4">For any questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us at:</p>
           <p className="mb-4">
-            Email: <a href="mailto:info@ihaconsulting.com.au" className="text-blue-600 hover:underline">info@ihaconsulting.com.au</a>
+            Email: <a href="mailto:hello@synoptix.ai" className="text-blue-600 hover:underline">hello@synoptix.ai</a>
           </p>
           <p className="mt-8 text-gray-600">
             Thank you for choosing SYNOPTIX.AI. We remain committed to protecting your privacy while providing secure, innovative AI-driven solutions tailored to your enterprise needs.
