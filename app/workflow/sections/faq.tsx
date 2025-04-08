@@ -3,20 +3,28 @@ import { useState } from 'react';
 
 const faqs = [
     {
-        question: "What are the applications of RAG in enterprises?",
-        answer: "RAG turns scattered data into instant knowledge, automating workflows and eliminating manual research."
+        question: "How does Synoptix AI improve workflow efficiency?",
+        answer: "Synoptix AI intelligently routes tasks, consolidates insights, and refines outputs—eliminating delays, reducing manual effort, and keeping operations seamless."
     },
     {
-        question: "What are the benefits of RAG as a service in enterprises?",
-        answer: "RAG as a service provides seamless data integration, automated insights generation, and secure enterprise-wide knowledge sharing without the overhead of managing complex infrastructure."
+        question: "Can it integrate with our existing systems?",
+        answer: "Yes. Synoptix AI works with your current tools, databases, and platforms, ensuring a frictionless transition without disrupting operations."
     },
     {
-        question: "How does RAG differ for enterprises vs. midsize businesses?",
-        answer: "Enterprise RAG offers enhanced security features, larger data processing capabilities, and customizable workflows tailored to complex organizational structures, while midsize solutions focus on quick deployment and essential functionalities."
+        question: "Does AI replace human decision-making?",
+        answer: "No. AI handles the execution, your team stays in control. Routine tasks are automated, while critical decisions always have human oversight."
     },
     {
-        question: "What makes Synoptix Enterprise RAG unique?",
-        answer: "Synoptix Enterprise RAG combines advanced security, seamless integration capabilities, and enterprise-grade scalability with an intuitive user interface, making it the ideal choice for organizations prioritizing both power and ease of use."
+        question: "Is it scalable for enterprise growth?",
+        answer: "Absolutely. Synoptix AI adapts to your needs, whether you're streamlining a few processes or scaling workflows across a global operation."
+    },
+    {
+        question: "What is the Router Workflow?",
+        answer: "It analyzes tasks in real time and routes them to the most relevant AI agent, ensuring precision and efficiency."
+    },
+    {
+        question: "How does the Consolidator Workflow improve decision-making?",
+        answer: "It gathers insights from multiple AI agents and delivers a clear, structured output, eliminating fragmented data."
     }
 ];
 

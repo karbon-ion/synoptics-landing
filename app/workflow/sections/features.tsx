@@ -29,26 +29,30 @@ export default function Features() {
 
             <div className="relative z-10 max-w-7xl mx-auto">
                 {/* Header */}
-                <div className="text-cyan-500 font-medium mb-4 text-center md:text-left">QUICK START AGENTS</div>
+                {/* <div className="text-cyan-500 font-medium mb-4 text-center md:text-left">QUICK START AGENTS</div> */}
 
                 {/* Main Content */}
                 <div className="grid md:grid-cols-2 gap-8 md:gap-12">
                     <div className="space-y-6 md:space-y-8">
                         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight text-center md:text-left">
-                        Think Bigger. Achieve More.
+                        Your Business Moves Fast—Your Workflows Should Too.
                         </h2>
 
-                        <p className="text-gray-900 font-semibold text-center md:text-left">
+                        {/* <p className="text-gray-900 font-semibold text-center md:text-left">
                             Your team wasn’t built for busy work—so why let it steal their focus?
-                        </p>
+                        </p> */}
 
                         <p className="text-gray-700 text-center md:text-left">
-                        Synoptix AI Agents can handle the repetitive, executing with precision—on demand or autonomously—so your people can focus on strategy, creativity, and growth. 
+                        Advanced automation isn’t built for complex operations. Synoptix AI goes further—breaking down intricate tasks, distributing work intelligently, and executing every step with precision—eliminating delays and inefficiencies. 
 
-Work smarter. Scale faster. Dominate effortlessly. With automation that evolves with your business, you’re not just keeping up—you’re setting the pace.  </p>
+In real time, specialized agents analyze data, structure insights, and refine outputs, ensuring accuracy at every stage. Whether managing multi-step operations or high-stakes decisions, Synoptix AI adapts dynamically to keep everything on track. 
 
-                        <p className="font-semibold text-lg sm:text-xl text-center md:text-left">
-                            The future won’t wait—with Synoptix AI, you won’t have to.                        </p>
+This isn’t just automation—it’s intelligent workflow at its best. Tasks move forward seamlessly, approvals happen without hold-ups, and systems stay perfectly in sync.  
+
+Stop waiting. Start executing—with Synoptix AI. </p>
+
+                        {/* <p className="font-semibold text-lg sm:text-xl text-center md:text-left">
+                            The future won’t wait—with Synoptix AI, you won’t have to. </p> */}
 
                         <div className="text-center md:text-left">
                             <a
@@ -56,7 +60,7 @@ Work smarter. Scale faster. Dominate effortlessly. With automation that evolves 
                                 className="inline-flex items-center px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-blue-400 to-blue-600 
                                     text-white rounded-full font-semibold hover:shadow-lg transition-all"
                             >
-                            Start a Free Trial
+                            Start Automating Today
                             </a>
                         </div>
                     </div>
