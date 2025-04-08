@@ -23,7 +23,7 @@ export default function Home() {
       <StatsSection />
       {/* <SecuritySection /> */}
 
-      <ModelProvidersSection />
+      {/* <ModelProvidersSection /> */}
       {/* <PricingSection /> */}
       {/* <PngSection /> */}
 
