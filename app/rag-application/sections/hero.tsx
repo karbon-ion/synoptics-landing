@@ -2,11 +2,10 @@ export default function RagHero() {
     return (
         <section className="min-h-screen flex flex-col items-center justify-center text-center px-4 py-16 bg-gradient-to-b bg-[#f0f5ff]">
             <h1 className="text-5xl md:text-6xl font-bold mb-8">
-                Enterprise Quantum RAG
+            Future of Enterprise Search —Introducing RAG95
             </h1>
             <p className="text-xl md:text-2xl text-gray-700 max-w-4xl mb-6">
-                Empower your team with Synoptix Enterprise RAG, which delivers spot-on responses 
-                using your business data-so you get the right information, right when you need it.
+            Empower your teams with RAG95—an AI system that delivers precise, real-time responses powered by your internal business data. 
             </p>
             <p className="text-2xl md:text-3xl font-semibold text-gray-800 max-w-3xl mb-12">
                 Your data holds the answers—put it to work and take control.
@@ -18,7 +17,7 @@ export default function RagHero() {
                     hover:to-blue-700 transition-all duration-300 shadow-lg 
                     hover:shadow-xl"
             >
-                Book a demo
+                Get a demo
             </a>
         </section>
     );

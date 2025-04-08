@@ -73,10 +73,10 @@ export default function Metrics() {
                 {/* Header */}
                 <div className="text-center">
                     <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 md:mb-4">
-                        Real-Time Performance Metrics
+                    Your Enterprise Deserves Better Intelligence—Discover RAG95 
                     </h2>
                     <p className="text-gray-600 mb-6 md:mb-8 px-2">
-                        Stay Ahead with Live AI Monitoring
+                        Get the right information at the right time, every time. Synoptix ensures speed, security, and precision—at enterprise scale 
                     </p>
                     <a
                         href="#docs"

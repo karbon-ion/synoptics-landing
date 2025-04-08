@@ -29,36 +29,37 @@ export default function Features() {
 
             <div className="relative z-10 max-w-7xl mx-auto">
                 {/* Header */}
-                <div className="text-cyan-500 font-medium mb-4 text-center md:text-left">QUICK START AGENTS</div>
+                {/* <div className="text-cyan-500 font-medium mb-4 text-center md:text-left">QUICK START AGENTS</div> */}
                 
                 {/* Main Content */}
                 <div className="grid md:grid-cols-2 gap-8 md:gap-12">
                     <div className="space-y-6 md:space-y-8">
                         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight text-center md:text-left">
-                            Faster, Smarter, and Secure—Enterprise-Ready RAG
+                        Insight You Can Trust. Intelligence You Control. 
                         </h2>
                         
                         <p className="text-gray-700 text-center md:text-left">
-                            Synoptix RAG 3.0 delivers you the right information at the right time. 
-                            It pulls from multiple sources, refines the data, and delivers only 
-                            the most relevant insights—so you can act with confidence instead of 
-                            getting lost in research.
+                        RAG95 delivers you the right information at the right time. It pulls from multiple sources, refines the data, and delivers only the most relevant insights—so you can act with confidence instead of getting lost in research. 
+
+Designed for enterprise use, RAG95 ensures your data stays under your control—always. Unlike other tools, it protects sensitive business information and keeps proprietary knowledge safe. 
+
+With real-time data refinement, Synoptix AI helps you cut research time and make better decisions, faster. 
                         </p>
                         
-                        <p className="text-gray-700 text-center md:text-left">
+                        {/* <p className="text-gray-700 text-center md:text-left">
                             Designed for enterprise use, Synoptix RAG 3.0 ensures your data stays 
                             under your control—always. Unlike other tools, it protects sensitive 
                             business information and keeps proprietary knowledge safe.
-                        </p>
+                        </p> */}
                         
-                        <p className="text-gray-700 text-center md:text-left">
+                        {/* <p className="text-gray-700 text-center md:text-left">
                             With real-time data refinement, Synoptix helps you cut research time 
                             and make better decisions, faster.
-                        </p>
+                        </p> */}
                         
-                        <p className="font-semibold text-lg sm:text-xl text-center md:text-left">
+                        {/* <p className="font-semibold text-lg sm:text-xl text-center md:text-left">
                             Turn Data into Action—On Demand, On Your Terms.
-                        </p>
+                        </p> */}
                         
                         <div className="text-center md:text-left">
                             <a 
