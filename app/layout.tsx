@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Navbar from "./sections/Navbar";
+import { NavbarMenu } from "@/components/ui/navbar-menu";
 import Footer from "./sections/Footer";
 import Script from "next/script";
 
@@ -32,7 +32,7 @@ export default function RootLayout({
         </Script>
       </head>
       <body className={inter.className}>
-        <Navbar />
+        <NavbarMenu />
         <main>{children}</main>
         <Footer />
       </body>
