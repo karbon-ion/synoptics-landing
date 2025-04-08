@@ -6,8 +6,8 @@ import { StickyScroll } from '@/components/ui/sticky-scroll-reveal';
 // import Picture from ''
 const features = [
     {
-        title: "Accelerate Task Execution",
-        description: "Reduce downtime and boost efficiency with AI-driven automation, delivering faster, smarter results effortlessly.",
+        title: "Precision at Scale",
+        description: "Complex tasks demand accuracy. Our multi-agent model ensures every step is executed with intelligence—no missed details, no inefficiencies. ",
         content: (
             <div className="w-full h-full flex items-center justify-center">
                 <div className="p-6 flex flex-col items-center">
@@ -24,8 +24,8 @@ const features = [
         )
     },
     {
-        title: 'Flexible Model Selection',
-        description: 'Choose the right LLM to fit your needs, ensuring optimal AI performance and seamless business integration.',
+        title: 'Seamless Coordination',
+        description: 'Tasks don’t sit idle. AI-driven workflows dynamically route, consolidate, and refine information, keeping processes in motion without delays. ',
         content: (
             <div className="w-full h-full flex items-center justify-center">
                 <div className="p-6 flex flex-col items-center">
@@ -42,8 +42,8 @@ const features = [
         )
     },
     {
-        title: 'Seamless Data Integration',
-        description: 'Easily integrate AI into your existing software ecosystem, enhancing workflows and operational efficiency instantly.',
+        title: 'Human-Guided AI',
+        description: 'Automation with oversight—AI handles execution, while your team stays in control, making final decisions where it matters.',
         content: (
             <div className="w-full h-full flex items-center justify-center">
                 <div className="p-6 flex flex-col items-center">
@@ -60,8 +60,8 @@ const features = [
         )
     },
     {
-        title: 'Zero Data Retention',
-        description: 'Keep your data private with a closed-source AI system, ensuring full confidentiality and compliance.',
+        title: 'Enterprise-Ready Efficiency',
+        description: 'From approvals to data processing, Synoptix AI adapts to your operations, optimizing workflows for speed, accuracy, and business impact. ',
         content: (
             <div className="w-full h-full flex items-center justify-center">
                 <div className="p-6 flex flex-col items-center">
@@ -76,25 +76,6 @@ const features = [
                 </div>
             </div>
         )
-    },
-    {
-        title: 'Enterprise-Grade Security',
-        description: 'Protect sensitive information with encryption, role-based access, and built-in safety tools for maximum security.',
-        content: (
-            <div className="w-full h-full flex items-center justify-center">
-                <div className="p-6 flex flex-col items-center">
-                    <Image
-                        src="https://images.unsplash.com/photo-1614064641938-3bbee52942c7?q=80&w=800"
-                        alt="Content Safety"
-                        width={400}
-                        height={300}
-                        className="object-cover rounded-lg shadow-lg"
-                        unoptimized
-                    />
-                </div>
-            </div>
-        )
-
     }
 ];
 
@@ -104,7 +85,7 @@ const WhySection = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="mb-12">
                     <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                        Why Synoptix AI?
+                    Why Choose Synoptix AI Workflows for Enterprise?
                     </h2>
                     <div className="w-16 h-1 bg-blue-500"></div>
 
