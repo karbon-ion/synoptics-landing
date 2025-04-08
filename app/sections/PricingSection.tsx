@@ -69,7 +69,7 @@ const PricingSection = () => {
                 <h3 className="text-sm font-semibold mb-4">{plan.name}</h3>
                 <div className="flex items-baseline">
                   <span className="text-4xl font-bold">{plan.price}</span>
-                  <span className="text-gray-600 ml-2">/month</span>
+                  {plan.name === 'SAAS ESSENTIALS' && <span className="text-gray-600 ml-2">/month</span>}
                 </div>
                 <p className="text-xs text-gray-500 mt-2">{plan.subtitle}</p>
               </div>
