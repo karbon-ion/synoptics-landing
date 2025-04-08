@@ -20,23 +20,23 @@ const modelProviders = [
 const advantages = [
   {
     id: 'efficiency',
-    title: 'Increase Efficiency',
-    description: 'Automate repetitive tasks, streamline workflows, and optimize resources—enhancing productivity while reducing operational overhead.'
+    title: 'Instant answers',
+    description: 'Leverage quantum-powered AI to surface the most relevant insights in seconds—eliminating hours of manual searching. '
   },
   {
     id: 'domain',
-    title: 'Domain-Specific Agent',
-    description: 'Leverage domain-specific automation that adapts in real time, drives informed decision-making, and scales without added costs.'
+    title: 'Quantum accuracy',
+    description: 'Make confident decisions with precise answers drawn from verified, up-to-date data sources.'
   },
   {
     id: 'customer',
-    title: 'Customer-Centric Automation',
-    description: 'Deliver precise, context-aware responses that improve customer satisfaction, drive retention, and enhance brand loyalty.'
+    title: 'Scalable AI ',
+    description: 'RAG95 is built for enterprise scale—delivering instant insights with zero lag, zero downtime, and zero frustration. '
   },
   {
     id: 'employees',
-    title: 'Employees Engagement',
-    description: 'Eliminate bottlenecks, enhance service delivery, and create a high-performance work environment that fosters innovation and growth.'
+    title: 'Seamless Integration',
+    description: 'Integrates with your existing tools and systems, so you can get started with zero disruption. '
   }
 ];
 
