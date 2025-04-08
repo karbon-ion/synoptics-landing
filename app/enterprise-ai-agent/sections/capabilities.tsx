@@ -14,11 +14,11 @@ export default function Capabilities() {
                                 </span>
                             </h3>
                             <p className="text-gray-600 text-sm leading-relaxed mb-4">
-                                Synoptix AI Agent makes automation simple. Set up workflows, reduce time to configure or train a model, and customize AI agents to fit your business without writing code.
+                            Synoptix AI empowers enterprises to design and deploy scalable, no-code AI workflows—eliminating the need for complex model training or time-consuming configuration. Tailor AI agents to your unique business needs and free your teams to focus on strategic initiatives. 
                             </p>
-                            <p className="text-gray-600 text-sm leading-relaxed">
+                            {/* <p className="text-gray-600 text-sm leading-relaxed">
                                 Teach and train AI to work the way you need, so you can stay focused on what's important.
-                            </p>
+                            </p> */}
                         </div>
                     </div>
 
@@ -36,35 +36,40 @@ export default function Capabilities() {
                             <li>• CRM - Sales force, Microsoft Dynamic</li>
                             <li>• Google Drive and Sharepoint</li>
                         </ul>
+                        <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                        and many more. <br/>
+
+Empower cross-functional teams with AI agents that work securely, reliably, and at scale. 
+                        </p>
                     </div>
 
                     {/* Train Your AI Agents */}
                     <div className="relative p-8 rounded-3xl bg-gradient-to-b from-white to-[#F7FAFF] border border-[#E2E8F0]">
                         <h3 className="text-xl font-semibold mb-4">
-                            Train Your AI Agents How Your Business Works
+                        Operationalize Your Business Knowledge 
                         </h3>
                         <p className="text-gray-600 text-sm leading-relaxed">
-                            Your processes are what make your business unique. Now, you can turn them into step-by-step instructions for your AI agents, ensuring they execute tasks exactly the way you want. From customer interactions to backend operations, your AI learns and improves over time.
+                        Your business processes are to your competitive advantage. Synoptix AI translates them into structured, repeatable AI instructions—ensuring consistent execution across customer engagement, finance, HR, and operations. Our agents continuously learn and adapt to maximize performance on a scale. 
                         </p>
                     </div>
 
                     {/* Start Fast */}
                     <div className="relative p-8 rounded-3xl bg-gradient-to-b from-white to-[#F7FAFF] border border-[#E2E8F0] md:col-span-1">
                         <h3 className="text-xl font-semibold mb-4">
-                            Start Fast with Pre-Built Templates
+                        Accelerate Deployment with Pre-Built Templates 
                         </h3>
                         <p className="text-gray-600 text-sm leading-relaxed">
-                            No need to start from scratch. Our growing library of AI Agent and Tool templates lets you deploy automation quickly—whether you're enhancing customer service, analyzing data, or streamlining workflows.
+                        Avoid starting from scratch. Use Synoptix AI growing library of pre-built agent and tool templates to jumpstart automation—whether you’re enhancing customer journeys, unlocking data insights, or improving operational efficiency. 
                         </p>
                     </div>
 
                     {/* Flexibility */}
                     <div className="relative p-8 rounded-3xl bg-gradient-to-b from-white to-[#F7FAFF] border border-[#E2E8F0] md:col-span-1">
                         <h3 className="text-xl font-semibold mb-4">
-                            Flexibility to Choose the Best AI Model
+                        LLM-Agnostic by Design 
                         </h3>
                         <p className="text-gray-600 text-sm leading-relaxed">
-                            We believe in giving you options. Our platform is LLM-agnostic, meaning you can choose the AI model that works best for you. Whether it's OpenAI, Meta, DeepSeek or Mistral you have the flexibility to switch between providers and stay at the cutting edge of AI technology.
+                        Synoptix AI gives you the flexibility to choose the best large language model for your enterprise—whether it’s OpenAI, Meta, DeepSeek, Mistral, or others. Stay agile and innovation-ready by seamlessly switching between leading AI providers. 
                         </p>
                     </div>
                     <div className="relative p-8 rounded-3xl bg-gradient-to-b from-white to-[#F7FAFF] border border-[#E2E8F0] md:col-span-1">
