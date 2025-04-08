@@ -6,8 +6,8 @@ import { StickyScroll } from '@/components/ui/sticky-scroll-reveal';
 // import Picture from ''
 const features = [
     {
-        title: "Precision at Scale",
-        description: "Complex tasks demand accuracy. Our multi-agent model ensures every step is executed with intelligence—no missed details, no inefficiencies. ",
+        title: "Automated Complex Workflows ",
+        description: "Optimize document processing, data extraction, and customer interactions with intelligent, hands-free automation. ",
         content: (
             <div className="w-full h-full flex items-center justify-center">
                 <div className="p-6 flex flex-col items-center">
@@ -24,8 +24,8 @@ const features = [
         )
     },
     {
-        title: 'Seamless Coordination',
-        description: 'Tasks don’t sit idle. AI-driven workflows dynamically route, consolidate, and refine information, keeping processes in motion without delays. ',
+        title: 'Custom-Tailored Intelligence ',
+        description: 'Train your AI agent with your specific business logic, language, and workflows for precise, context-aware performance. ',
         content: (
             <div className="w-full h-full flex items-center justify-center">
                 <div className="p-6 flex flex-col items-center">
@@ -42,8 +42,8 @@ const features = [
         )
     },
     {
-        title: 'Human-Guided AI',
-        description: 'Automation with oversight—AI handles execution, while your team stays in control, making final decisions where it matters.',
+        title: '24/7 Operational Efficiency',
+        description: 'Ensure continuous productivity with an AI agent that delivers accurate, error-free results—anytime, anywhere. ',
         content: (
             <div className="w-full h-full flex items-center justify-center">
                 <div className="p-6 flex flex-col items-center">
@@ -60,8 +60,8 @@ const features = [
         )
     },
     {
-        title: 'Enterprise-Ready Efficiency',
-        description: 'From approvals to data processing, Synoptix AI adapts to your operations, optimizing workflows for speed, accuracy, and business impact. ',
+        title: 'Integration & Rapid Deployment',
+        description: 'Deploy AI automation effortlessly within your existing infrastructure—minimizing disruption and maximizing ROI. ',
         content: (
             <div className="w-full h-full flex items-center justify-center">
                 <div className="p-6 flex flex-col items-center">
@@ -85,7 +85,7 @@ const WhySection = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="mb-12">
                     <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                    Why Choose Synoptix AI Workflows for Enterprise?
+                    Why Choose Synoptix AI Agents for Enterprise?
                     </h2>
                     <div className="w-16 h-1 bg-blue-500"></div>
 
