@@ -35,7 +35,7 @@ export default function FAQ() {
         <section className="relative w-full py-24 px-4 bg-gradient-to-b from-[#F7FAFF] to-white">
             <div className="max-w-4xl mx-auto">
                 <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
-                Frequently asked questions about Fine tuning & Optimisation
+                Frequently Asked Questions
                 </h2>
 
                 <div className="space-y-4">

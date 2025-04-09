@@ -6,23 +6,8 @@ import { StickyScroll } from '@/components/ui/sticky-scroll-reveal';
 
 const features = [
     {
-        title: "Why Synoptix?",
-        description: "We’re your trusted partner for AI Fine-Tuning & Optimisation. Get AI that works for you—precise, reliable, and secure, custom-built for your business. Fine-Tune Your AI with Synoptix—Get Started Today.",
-        content: (
-            <div className="w-full h-full flex items-center justify-center">
-                <Image
-                    src="/why.png"
-                    alt="AI Platform Overview"
-                    width={300}
-                    height={300}
-                    className="object-cover rounded-md"
-                />
-            </div>
-        )
-    },
-    {
         title: 'Strategic Alignment',
-        description: 'YWe fine-tune your AI to sync perfectly with your business goals—constantly refining for peak performance.',
+        description: 'We fine-tune your AI to sync perfectly with your business goals—constantly refining for peak performance.',
         content: (
             <div className="w-full h-full flex items-center justify-center">
                 <div className="p-4 text-white text-center">
@@ -64,7 +49,7 @@ const WhySection = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="mb-12">
                     <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                    Why Synoptix?
+                    Why choose Synoptix AI for Fine Tuning and Optimisation Services?
                     </h2>
                     <div className="w-16 h-1 bg-blue-500"></div>
 

@@ -13,7 +13,7 @@ const ResultSection = () => {
   // Define the benefits
   const benefits = [
     {
-      title: "Industry-Specific Customization",
+      title: "Industry-Specific Customisation",
       description: "A generic AI model isn't cut out for the tough challenges of handling real-world challenges in healthcare, finance, and legal industries with precision."
     },
     {
@@ -25,7 +25,7 @@ const ResultSection = () => {
       description: "Bias in AI is a real problem. We train models on diverse data to ensure balanced, ethical decisions you can trust."
     },
     {
-      title: "Optimized Compute Costs",
+      title: "Optimised Compute Costs",
       description: "Enhance performance by leveraging powerful foundational models. Fine-tuning ensures maximum efficiency, faster processing, and reduced computational expenses."
     }
   ];

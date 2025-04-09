@@ -172,7 +172,7 @@ const TechniquesSection = () => {
       ]
     },
     {
-      name: "RLHF",
+      name: "Reinforcement Learning from Human Feedback (RLHF)",
       description: "We implement Reinforcement Learning from Human Feedback:",
       benefits: [
         "Align model outputs with human preferences",
