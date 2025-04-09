@@ -18,8 +18,8 @@ export default function RagApplication() {
             <RagHero />
             <Features />
             <Ideas />
-            {/* <Metrics /> */}
-            <TechniquesSection/>
+            <Metrics />
+            {/* <TechniquesSection/> */}
             {/* <Security /> */}
             <WhySection />
             <RagStatsSection />
