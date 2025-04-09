@@ -1,24 +1,37 @@
-export default function RagHero() {
-    return (
-        <section className="min-h-screen flex flex-col items-center justify-center text-center px-4 py-16 bg-gradient-to-b bg-[#f0f5ff]">
-            <h1 className="text-5xl md:text-6xl font-bold mb-8">
-            Launch Your Enterprise AI Agent in Few Clicks 
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-700 max-w-4xl mb-6">
-            Build, deploy, and scale custom AI agents for your enterprise in just clicks. Automate tasks, boost productivity, and ignite innovation—effortlessly. 
-            </p>
-            <p className="text-2xl md:text-3xl font-semibold text-gray-800 max-w-3xl mb-12">
-            The future of work isn’t coming—it’s here.
-            </p>
-            <a
-                href="#demo"
-                className="px-8 py-4 text-xl font-semibold text-white rounded-full 
-                    bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 
-                    hover:to-blue-700 transition-all duration-300 shadow-lg 
-                    hover:shadow-xl"
-            >
-                Request a Demo
-            </a>
-        </section>
-    );
-}
+'use client';
+
+import Link from 'next/link';
+
+const Hero = () => {
+  return (
+    <section className="py-24 bg-[#e9fcff] relative overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0)_0%,rgba(255,255,255,0.8)_100%)]" />
+      
+      <div className="max-w-7xl mt-10 mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center relative z-10">
+        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
+          Fine Tuning & Optimization Services
+        </h1>
+        
+        <div className="space-y-5 max-w-3xl mx-auto mb-10">
+          <p className="text-gray-600 text-lg">
+            Stop settling for generic AI that doesn't get your business. Synoptix fine-tunes open-source models into domain-specific AI that aligns with your industry, goals, and workflow.
+          </p>
+          <p className="text-gray-700 text-lg font-medium">
+            Experience AI that's sharp, focused, and built for impact.
+          </p>
+        </div>
+        
+        <div className="flex justify-center">
+          <Link
+            href="/contact"
+            className="inline-flex items-center px-8 py-3.5 text-base font-medium text-white bg-gradient-to-r from-[#00CCEB] to-[#3A49FF] rounded-lg hover:opacity-90 transition-all duration-200 shadow-sm hover:shadow-md min-w-[140px] justify-center"
+          >
+            Book a demo today
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Hero;

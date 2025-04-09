@@ -17,14 +17,17 @@ import ResultSection from "./sections/results";
 import TechniquesSection from "./sections/TechniqueSection";
 import WhySection from "./sections/WhySection";
 import FeaturesSection from "./sections/FeaturesSection";
+import IntroSection from "./sections/IntroSection";
 export default function RagApplication() {
     return (
         <main className="w-full">
             <RagHero />
-            <Features />
+            {/* <Features />
+             */}
+            <IntroSection />
             <Ideas />
             <Capabilities />
-            <FeaturesSection />
+            {/* <FeaturesSection /> */}
             {/* <Metrics /> */}
             {/* <Security /> */}
             <WhySection />

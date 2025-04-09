@@ -19,7 +19,7 @@ const TechniqueButton = ({
       onClick={onClick}
       className={`group w-full ${isActive ? 'bg-gradient-to-r from-[#3A49FF] to-[#00CCEB] text-white' : 'bg-white text-gray-800'} rounded-full py-3 px-6 mb-3 flex items-center justify-between transition-all duration-200 border border-blue-100`}
     >
-      <div className="flex-1 flex items-center justify-center">
+      <div className="flex-1 flex items-center justify-start"> {/* Changed justify-center to justify-start */}
         <span className={`inline-block w-1.5 h-1.5 ${isActive ? 'bg-white' : 'bg-blue-500'} rounded-full mr-2 flex-shrink-0`}></span>
         <span className="text-xs font-medium">{name}</span>
       </div>
@@ -164,34 +164,23 @@ const TechniquesSection = () => {
 
   return (
     <section className="py-24 bg-white relative overflow-hidden">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> {/* Changed from max-w-6xl to max-w-7xl */}
         {/* Header */}
         <div className="text-center mb-14">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-          Your Enterprise Deserves Better Intelligence—Discover RAG95 
-          </h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Your Enterprise Deserves Better Intelligence—Discover RAG95</h2>
           
           <p className="text-gray-600 text-sm max-w-2xl mx-auto mb-6">
           Get the right information at the right time, every time. Synoptix ensures speed, security, and precision—at enterprise scale 
           </p>
-          
-          {/* <div className="flex justify-center">
-            <Link
-              href="/docs"
-              className="inline-flex items-center px-6 py-2.5 text-sm font-medium text-white bg-[#00A3FF] rounded-lg hover:bg-[#0096eb] transition-colors duration-200"
-            >
-              Read Docs
-            </Link>
-          </div> */}
         </div>
         
-        {/* Main content area with blue background */}
-        <div className="bg-[#e9fcff] rounded-3xl overflow-hidden">
+        {/* Main content area with blue background - Increased size here */}
+        <div className="bg-[#e9fcff] rounded-3xl overflow-hidden min-h-[400px]"> {/* Added min-height */}
           {/* Desktop view */}
-          <div className="hidden lg:flex flex-col lg:flex-row items-stretch">
-            {/* Techniques column */}
-            <div className="w-full lg:w-[40%] p-8">
-              <div className="max-w-[280px]">
+          <div className="hidden lg:flex flex-col lg:flex-row items-stretch"> {/* Added h-full */}
+            {/* Techniques column - made wider */}
+            <div className="w-full lg:w-[35%] p-10"> {/* Increased from 40% to 35% and p-8 to p-10 */}
+              <div className="max-w-[320px]"> {/* Increased from 280px */}
                 {techniqueData.map((technique, index) => (
                   <TechniqueButton 
                     key={index} 
@@ -203,18 +192,18 @@ const TechniquesSection = () => {
               </div>
             </div>
             
-            {/* Benefits column - changes based on selected technique */}
-            <div className="w-full lg:w-[60%] p-8 flex items-center">
+            {/* Benefits column - changes based on selected technique - made wider */}
+            <div className="w-full lg:w-[65%] p-10 flex items-center"> {/* Increased from 60% to 65% and p-8 to p-10 */}
               <div className="w-full">
-                <p className="text-gray-700 text-sm mb-6">
+              <p className="text-lg text-gray-600 mb-8"> {/* Updated to match WhySection styling */}
                   {techniqueData[activeIndex].description}
                 </p>
                 
-                <div className="space-y-4">
+                <div className="space-y-5"> {/* Increased space-y-4 to space-y-5 */}
                   {techniqueData[activeIndex].benefits.map((benefit, index) => (
                     <div key={index} className="flex items-start">
-                      <span className="text-blue-500 text-lg mr-2.5 leading-none">•</span>
-                      <span className="text-gray-700 text-sm">{benefit}</span>
+                      <span className="text-blue-500 text-lg mr-3 leading-none">•</span> {/* Increased mr-2.5 to mr-3 */}
+                      <span className="text-lg text-gray-600">{benefit}</span>
                     </div>
                   ))}
                 </div>
@@ -223,7 +212,7 @@ const TechniquesSection = () => {
           </div>
           
           {/* Mobile view - Accordion */}
-          <div className="lg:hidden p-4 sm:p-6">
+          <div className="lg:hidden p-6"> {/* Increased from p-4 sm:p-6 to p-6 */}
             {techniqueData.map((technique, index) => (
               <AccordionItem
                 key={index}

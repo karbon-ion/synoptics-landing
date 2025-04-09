@@ -4,42 +4,43 @@ import { Check } from 'lucide-react';
 const PricingSection = () => {
   const plans = [
     {
-      name: 'SMALL',
-      price: '$19',
+      name: 'SAAS ESSENTIALS',
+      price: '$3000',
       subtitle: 'EVERYTHING IN SMALL PLAN',
       features: [
-        { name: 'Multi-step Zap', included: true },
-        { name: 'Unlimited Premium Apps', included: 'Limited' },
-        { name: 'Unlimited Users Team', included: true },
-        { name: 'Advanced Admin', included: true },
-        { name: 'Unlimited Users Team', included: true },
+        { name: 'Users', included: 'Unlimited' },
+        { name: 'Quick Start Agents', included: true },
+        { name: 'Customized Agents', included: true },
+        { name: 'SharePoint Integration', included: true },
+        { name: 'Token per user/month', included: 'Unlimited' },
+        { name: 'Integrations', included: 'Contact Us' },
+        { name: 'Advanced Evaluations', included: true },
       ],
     },
     {
-      name: 'MEDIUM',
-      price: '$19',
-      subtitle: 'EVERYTHING IN MEDIUM PLAN',
+      name: 'MANAGED PRO',
+      price: 'CONTACT US',
+      subtitle: 'EVERYTHING IN SAAS ESSENTIALS PLUS',
       features: [
-        { name: 'Multi-step Zap', included: true },
-        { name: 'Unlimited Premium Apps', included: 'Limited' },
-        { name: 'Unlimited Users Team', included: true },
-        { name: 'Advanced Admin', included: true },
-        { name: 'Custom Data Retention', included: 'Unlimited' },
-        { name: 'Unlimited Premium Apps', included: 'Unlimited' },
+        { name: 'Advanced Applications', included: true },
+        { name: 'Managed Application', included: true },
+        { name: 'Security + Safety', included: true },
+        { name: 'Sentiment Analysis', included: true },
+        { name: 'Toxcity Detection', included: true },
+        { name: 'Premium Support', included: true },
       ],
     },
     {
-      name: 'LARGE',
-      price: '$19',
-      subtitle: 'EVERYTHING IN LARGE PLAN',
+      name: 'ENTERPRISE ELITE',
+      price: 'CONTACT US',
+      subtitle: 'EVERYTHING IN MANAGED PRO PLUS:',
       features: [
-        { name: 'Multi-step Zap', included: true },
-        { name: 'Unlimited Premium Apps', included: 'Limited' },
-        { name: 'Unlimited Users Team', included: true },
-        { name: 'Advanced Admin', included: true },
-        { name: 'Custom Data Retention', included: 'Unlimited' },
-        { name: 'Unlimited Premium Apps', included: 'Unlimited' },
-        { name: 'Unlimited Users Team', included: true },
+        { name: 'Advanced Reasoning Agents', included: true },
+        { name: 'Tailored AI Adpotion Strategy', included: true },
+        { name: 'Self Hosted Models', included: true },
+        { name: 'Training and Upskilling', included: true },
+        { name: 'Developer API', included: 'Unlimited' },
+        { name: 'Dedicated Manager', included: true },
       ],
     },
   ];
@@ -68,7 +69,7 @@ const PricingSection = () => {
                 <h3 className="text-sm font-semibold mb-4">{plan.name}</h3>
                 <div className="flex items-baseline">
                   <span className="text-4xl font-bold">{plan.price}</span>
-                  <span className="text-gray-600 ml-2">/month</span>
+                  {plan.name === 'SAAS ESSENTIALS' && <span className="text-gray-600 ml-2">/month</span>}
                 </div>
                 <p className="text-xs text-gray-500 mt-2">{plan.subtitle}</p>
               </div>

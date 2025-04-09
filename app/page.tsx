@@ -21,10 +21,10 @@ export default function Home() {
       <ApiSection />
       <WhySection />
       <StatsSection />
-      {/* <SecuritySection /> */}
+      <SecuritySection />
 
-      <ModelProvidersSection />
-      {/* <PricingSection /> */}
+      {/* <ModelProvidersSection /> */}
+      <PricingSection />
       {/* <PngSection /> */}
 
       <BlogsSection />

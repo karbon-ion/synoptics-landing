@@ -1,33 +1,24 @@
-'use client';
-
-import Link from 'next/link';
-
-const Hero = () => {
+export default function RagHero() {
   return (
-    <div className="min-h-[80vh] sm:min-h-[85vh] md:min-h-[90vh] flex items-center justify-center overflow-hidden relative bg-gradient-to-b from-blue-50 to-white py-12 sm:py-16 md:py-24">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[40px] font-bold text-gray-900 mb-4 sm:mb-6 leading-tight">
-          Artificial Intelligence <br className="sm:hidden" />Consulting Services
-        </h1>
-        
-        <div className="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
-          <p className="text-base sm:text-lg text-gray-600 px-2">
-            Boost efficiency, automate workflows, and accelerate success with customized AI integration.
+      <section className="min-h-screen flex flex-col items-center justify-center text-center px-4 py-16 bg-gradient-to-b bg-[#f0f5ff]">
+          <h1 className="text-5xl md:text-6xl font-bold mb-8">
+          Future of Enterprise Search —Introducing RAG95
+          </h1>
+          <p className="text-xl md:text-2xl text-gray-700 max-w-4xl mb-6">
+          Empower your teams with RAG95—an AI system that delivers precise, real-time responses powered by your internal business data. 
           </p>
-          <p className="text-base sm:text-lg text-gray-600 px-2">
-            Let's transform the way you work.
+          <p className="text-2xl md:text-3xl font-semibold text-gray-800 max-w-3xl mb-12">
+              Your data holds the answers—put it to work and take control.
           </p>
-        </div>
-        
-        <Link 
-          href="/contact"
-          className="inline-flex items-center px-5 sm:px-6 py-2.5 sm:py-3 text-sm sm:text-base font-medium text-white bg-blue-500 rounded-lg hover:bg-blue-600 transition-colors duration-200 shadow-sm hover:shadow-md"
-        >
-          Book a meeting
-        </Link>
-      </div>
-    </div>
+          <a 
+              href="#demo" 
+              className="px-8 py-4 text-xl font-semibold text-white rounded-full 
+                  bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 
+                  hover:to-blue-700 transition-all duration-300 shadow-lg 
+                  hover:shadow-xl"
+          >
+              Get a demo
+          </a>
+      </section>
   );
-};
-
-export default Hero;
+}
