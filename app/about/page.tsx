@@ -11,7 +11,7 @@ export default function About() {
       <Hero />
       <VideoSection />
       <HeadquartersSection />
-      <QuantumSection />
+      {/* <QuantumSection /> */}
       <NewsSection />
       <ContactSection/>
     </>

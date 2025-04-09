@@ -1,152 +1,155 @@
-'use client'
+'use client';
+import { cn } from "@/lib/utils";
+import Link from 'next/link';
 
-export default function OWASP() {
-    return (
-        <section className="relative w-full bg-white py-24">
-            <div className="max-w-7xl mx-auto px-4">
-                {/* Header */}
-                <div className="text-center space-y-4 mb-16">
-                    <h2 className="text-4xl md:text-[40px] font-bold">
-                        OWASP Top 10 for LLMs
-                    </h2>
-                    <p className="text-gray-600 text-lg max-w-3xl mx-auto">
-                        Ensure your AI stays secure and compliant with Synoptix Guard. We continuously update 
-                        your guardrails to align with the latest security standards, including the OWASP 
-                        Top 10 for LLMs, so you're always protected against emerging threats.
-                    </p>
-                    <div className="mt-8">
-                        <a
-                            href="#contact"
-                            className="inline-flex items-center justify-center px-6 py-3 bg-[#0066FF] text-white font-medium rounded-full hover:bg-[#0052CC] transition-colors"
-                        >
-                            Contact us for more information
-                        </a>
-                    </div>
-                </div>
+const features = [
+  {
+    id: 'llm01',
+    title: 'Prompt Injections',
+    description: 'Smart hackers can feed your AI harmful inputs to steal data or trigger unauthorized actions. With Synoptix, we intercept these attacks before they even start.',
+    code: 'LLM01',
+  },
+  {
+    id: 'llm02',
+    title: 'Insecure Output Handling',
+    description: 'Unchecked AI responses can be a prospect for malicious actors. Synoptix makes sure every output gets the green light before it ever leaves your system.',
+    code: 'LLM02',
+  },
+  {
+    id: 'llm03',
+    title: 'Training Data Poisoning',
+    description: 'If your AI learns from the wrong data, it could mislead users and spread misinformation. Synoptix filters out toxic data, ensuring your AI stays sharp, focused, and trustworthy.',
+    code: 'LLM03',
+  },
+  {
+    id: 'llm04',
+    title: 'Denial of Service',
+    description: 'Some attacks aim to slow your AI down or rack up costs. Synoptix keeps a real-time eye on usage, spotting any spikes before they become a problem.',
+    code: 'LLM04',
+  },
+  {
+    id: 'llm05',
+    title: 'Supply Chain',
+    description: 'Vulnerabilities in the AI supply chain are a hidden risk. Synoptix evaluates your models for biases, weaknesses, and performance gaps, so you can spot and fix them before they harm your system.',
+    code: 'LLM05',
+  },
+  {
+    id: 'llm06',
+    title: 'Permission Issues',
+    description: 'Weak permissions can leave the door open for unwanted access. Synoptix tracks everything—no one gets in without permission, and no actions go unchecked.',
+    code: 'LLM06',
+  },
+  {
+    id: 'llm07',
+    title: 'Data Leakage',
+    description: 'Sensitive data slipping through the cracks? Not with Synoptix. We scan your inputs and outputs to stop leaks in their tracks, protecting your privacy and user data.',
+    code: 'LLM07',
+  },
+  {
+    id: 'llm08',
+    title: 'Excessive Agency',
+    description: 'LLMs shouldn\'t be making decisions on their own. Synoptix ensures your system only does what it\'s supposed to, with strict controls embedded into every action.',
+    code: 'LLM08',
+  },
+  {
+    id: 'llm09',
+    title: 'Overreliance',
+    description: 'AI mistakes can lead to chaos, misleading responses and faulty data. Synoptix makes it easy to identify and correct these errors, keeping your AI on track and accurate every time.',
+    code: 'LLM09',
+  },
+  {
+    id: 'llm10',
+    title: 'Insecure Plugins',
+    description: 'Plugins can be a weak spot for your AI. Synoptix continuously monitors these connections, ensuring malicious requests don\'t slip through the cracks and compromise your system.',
+    code: 'LLM10',
+  }
+];
 
-                {/* Grid of Security Features */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-center gap-8">
-                    {/* LLM01 - Prompt Injections */}
-                    <div className="space-y-4">
-                        <div className="text-[#0066FF] font-medium text-sm">LLM01</div>
-                        <h3 className="text-xl font-semibold border-b border-[#0066FF] pb-2 mb-4">
-                            Prompt Injections
-                        </h3>
-                        <p className="text-gray-600">
-                            Smart hackers can feed your AI harmful inputs to steal data or trigger unauthorized actions. 
-                            With Synoptix, we intercept these attacks before they even start.
-                        </p>
-                    </div>
+const OWASP = () => {
+  return (
+    <section className="py-24 relative overflow-hidden">
+      {/* Gradient background */}
+      <div className="absolute inset-0 bg-gradient-to-b from-white via-blue-50 to-blue-100 z-0" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(59,130,246,0.04),transparent_25%),radial-gradient(circle_at_70%_50%,rgba(59,130,246,0.04),transparent_25%)]" />
+      
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <div className="mb-4">
+            <span className="text-sm font-semibold tracking-wider uppercase text-gray-600">
+              SECURITY
+            </span>
+          </div>
+          
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8 max-w-4xl mx-auto">
+            OWASP Top 10 for LLMs
+          </h2>
+          <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-16">
+            Ensure your AI stays secure and compliant with Synoptix Guard. We continuously update 
+            your guardrails to align with the latest security standards, including the OWASP 
+            Top 10 for LLMs, so you're always protected against emerging threats.
+          </p>
+          
+          <div className="flex justify-center">
+            <Link
+              href="#contact"
+              className="inline-flex items-center px-8 py-3 text-lg font-medium text-white bg-gradient-to-r from-blue-500 to-blue-600 rounded-full hover:from-blue-600 hover:to-blue-700 transition-all duration-200 shadow-md hover:shadow-lg"
+            >
+              Contact us for more information
+            </Link>
+          </div>
+        </div>
+        
+        <FeaturesSection />
+      </div>
+    </section>
+  );
+};
 
-                    {/* LLM02 - Insecure Output Handling */}
-                    <div className="space-y-4">
-                        <div className="text-[#0066FF] font-medium text-sm">LLM02</div>
-                        <h3 className="text-xl font-semibold border-b border-[#0066FF] pb-2 mb-4">
-                            Insecure Output Handling
-                        </h3>
-                        <p className="text-gray-600">
-                            Unchecked AI responses can be a prospect for malicious actors. Synoptix makes sure every 
-                            output gets the green light before it ever leaves your system.
-                        </p>
-                    </div>
+export default OWASP;
 
-                    {/* LLM03 - Training Data Poisoning */}
-                    <div className="space-y-4">
-                        <div className="text-[#0066FF] font-medium text-sm">LLM03</div>
-                        <h3 className="text-xl font-semibold border-b border-[#0066FF] pb-2 mb-4">
-                            Training Data Poisoning
-                        </h3>
-                        <p className="text-gray-600">
-                            If your AI learns from the wrong data, it could mislead users and spread misinformation. 
-                            Synoptix filters out toxic data, ensuring your AI stays sharp, focused, and trustworthy.
-                        </p>
-                    </div>
+function FeaturesSection() {
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 relative z-10 py-10 max-w-7xl mx-auto">
+      {features.map((feature, index) => (
+        <Feature key={feature.title} {...feature} index={index} />
+      ))}
+    </div>
+  );
+}
 
-                    {/* LLM04 - Denial of Service */}
-                    <div className="space-y-4">
-                        <div className="text-[#0066FF] font-medium text-sm">LLM04</div>
-                        <h3 className="text-xl font-semibold border-b border-[#0066FF] pb-2 mb-4">
-                            Denial of Service
-                        </h3>
-                        <p className="text-gray-600">
-                            Some attacks aim to slow your AI down or rack up costs. Synoptix keeps a real-time eye on usage, 
-                            spotting any spikes before they become a problem.
-                        </p>
-                    </div>
-
-                    {/* LLM05 - Supply Chain */}
-                    <div className="space-y-4">
-                        <div className="text-[#0066FF] font-medium text-sm">LLM05</div>
-                        <h3 className="text-xl font-semibold border-b border-[#0066FF] pb-2 mb-4">
-                            Supply Chain
-                        </h3>
-                        <p className="text-gray-600">
-                            Vulnerabilities in the AI supply chain are a hidden risk. Synoptix evaluates your models for biases, 
-                            weaknesses, and performance gaps, so you can spot and fix them before they harm your system.
-                        </p>
-                    </div>
-
-                    {/* LLM06 - Permission Issues */}
-                    <div className="space-y-4">
-                        <div className="text-[#0066FF] font-medium text-sm">LLM06</div>
-                        <h3 className="text-xl font-semibold border-b border-[#0066FF] pb-2 mb-4">
-                            Permission Issues
-                        </h3>
-                        <p className="text-gray-600">
-                            Weak permissions can leave the door open for unwanted access. Synoptix tracks everything—no 
-                            one gets in without permission, and no actions go unchecked.
-                        </p>
-                    </div>
-
-                    {/* LLM07 - Data Leakage */}
-                    <div className="space-y-4">
-                        <div className="text-[#0066FF] font-medium text-sm">LLM07</div>
-                        <h3 className="text-xl font-semibold border-b border-[#0066FF] pb-2 mb-4">
-                            Data Leakage
-                        </h3>
-                        <p className="text-gray-600">
-                            Sensitive data slipping through the cracks? Not with Synoptix. We scan your inputs and outputs to 
-                            stop leaks in their tracks, protecting your privacy and user data.
-                        </p>
-                    </div>
-
-                    {/* LLM08 - Excessive Agency */}
-                    <div className="space-y-4">
-                        <div className="text-[#0066FF] font-medium text-sm">LLM08</div>
-                        <h3 className="text-xl font-semibold border-b border-[#0066FF] pb-2 mb-4">
-                            Excessive Agency
-                        </h3>
-                        <p className="text-gray-600">
-                            LLMs shouldn't be making decisions on their own. Synoptix ensures your system only does 
-                            what it's supposed to, with strict controls embedded into every action.
-                        </p>
-                    </div>
-
-                    {/* LLM09 - Overreliance */}
-                    <div className="space-y-4">
-                        <div className="text-[#0066FF] font-medium text-sm">LLM09</div>
-                        <h3 className="text-xl font-semibold border-b border-[#0066FF] pb-2 mb-4">
-                            Overreliance
-                        </h3>
-                        <p className="text-gray-600">
-                            AI mistakes can lead to chaos, misleading responses and faulty data. Synoptix makes it easy to 
-                            identify and correct these errors, keeping your AI on track and accurate every time.
-                        </p>
-                    </div>
-
-                    {/* LLM10 - Insecure Plugins */}
-                    <div className="space-y-4">
-                        <div className="text-[#0066FF] font-medium text-sm">LLM10</div>
-                        <h3 className="text-xl font-semibold border-b border-[#0066FF] pb-2 mb-4">
-                            Insecure Plugins
-                        </h3>
-                        <p className="text-gray-600">
-                            Plugins can be a weak spot for your AI. Synoptix continuously monitors these connections, 
-                            ensuring malicious requests don't slip through the cracks and compromise your system.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    );
-} 
+const Feature = ({
+  title,
+  description,
+  code,
+  index,
+}: {
+  title: string;
+  description: string;
+  code: string;
+  index: number;
+}) => {
+  return (
+    <div
+      className={cn(
+        "flex flex-col py-10 relative group/feature bg-white/40 backdrop-blur-sm",
+        (index === 0 || index === 5 || index === 10) && "lg:border-l border-blue-100",
+        index < 10 && (index % 5 === 4 ? "" : "lg:border-b border-blue-100"),
+        (index + 1) % 5 !== 0 && "lg:border-r border-blue-100"
+      )}
+    >
+      <div className="opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-t from-white/80 to-transparent pointer-events-none" />
+      <div className="mb-4 relative z-10 px-10 text-blue-500">
+        <span className="text-sm font-medium">{code}</span>
+      </div>
+      <div className="text-lg font-bold mb-2 relative z-10 px-10">
+        <div className="absolute left-0 inset-y-0 h-6 group-hover/feature:h-8 w-1 rounded-tr-full rounded-br-full bg-blue-400 group-hover/feature:bg-blue-500 transition-all duration-200 origin-center" />
+        <span className="group-hover/feature:translate-x-2 transition duration-200 inline-block text-gray-800">
+          {title}
+        </span>
+      </div>
+      <p className="text-sm text-gray-600 max-w-xs relative z-10 px-10">
+        {description}
+      </p>
+    </div>
+  );
+};
