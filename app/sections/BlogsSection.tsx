@@ -39,8 +39,8 @@ const BlogSection = () => {
           <span className="text-blue-500 text-sm font-medium tracking-wider uppercase">
             LEARN MORE
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold-600 text-gray-900 mt-3 mb-4">
-            Checkout out latest <br/> blogs and insights
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8 max-w-4xl mx-auto">
+                        Checkout out latest <br/> blogs and insights
           </h2>
           
           <div className="h-1 w-16 bg-blue-500 mx-auto rounded-full"></div>
