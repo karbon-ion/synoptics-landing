@@ -20,23 +20,23 @@ const modelProviders = [
 const advantages = [
   {
     id: 'efficiency',
-    title: 'Instant answers',
-    description: 'Leverage quantum-powered AI to surface the most relevant insights in seconds—eliminating hours of manual searching. '
+    title: 'Access Foundational Language Models',
+    description: 'Harness a vast selection of large language models to power a wide range of business use cases—from automation to customer support and beyond.'
   },
   {
     id: 'domain',
-    title: 'Quantum accuracy',
-    description: 'Make confident decisions with precise answers drawn from verified, up-to-date data sources.'
+    title: 'Microsoft Integration',
+    description: 'Full compatibility with Microsoft technologies, including Microsoft 365 and SharePoint, ensures smooth enterprise adoption.'
   },
   {
     id: 'customer',
-    title: 'Scalable AI ',
-    description: 'RAG95 is built for enterprise scale—delivering instant insights with zero lag, zero downtime, and zero frustration. '
+    title: 'System Integrations ',
+    description: 'Connect with your existing business tools, platforms, and workflows. Synoptix.AI adapts to your ecosystem, not the other way around.'
   },
   {
     id: 'employees',
-    title: 'Seamless Integration',
-    description: 'Integrates with your existing tools and systems, so you can get started with zero disruption. '
+    title: 'Enterprise-Grade Security & Compliance',
+    description: 'Enjoy robust role-based access controls, advanced encryption, and full alignment with Microsoft compliance standards.'
   }
 ];
 
@@ -47,12 +47,12 @@ const QuantumSection = () => {
         <div className="text-center mb-16">
           <div className="mb-4">
             <span className="text-sm font-semibold tracking-wider uppercase text-gray-600">
-              ENTERPRISE ADVANTAGE
+              Integrations
             </span>
           </div>
           
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8 max-w-4xl mx-auto">
-            Why Choose Synoptix.ai<br />Quantum RAG for Enterprise?
+          Onboard Synoptix AI with Your Tech Stack
           </h2>
           
           <div className="flex justify-center mb-16">
@@ -60,7 +60,7 @@ const QuantumSection = () => {
               href="/demo"
               className="inline-flex items-center px-8 py-3 text-lg font-medium text-white bg-gradient-to-r from-blue-400 to-blue-600 rounded-full hover:from-blue-500 hover:to-blue-700 transition-all duration-200 shadow-md hover:shadow-lg"
             >
-              Book a demo
+             Get Started with Synoptix AI
             </Link>
           </div>
         </div>

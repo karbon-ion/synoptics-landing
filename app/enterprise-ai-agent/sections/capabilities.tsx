@@ -5,7 +5,7 @@ export default function Capabilities() {
         <section className="relative w-full bg-white py-24">
               <div className="max-w-7xl mx-auto text-center">
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-10 px-4">
-                   Heading
+              Explore Fastest Way to Deploy Enterprise AI Agent
                 </h2>
                 </div>
             <div className="max-w-7xl mx-auto px-4">
@@ -33,9 +33,9 @@ export default function Capabilities() {
                             Seamless Integration with Your Tech Stack
                         </h3>
                         <p className="text-gray-600 text-sm leading-relaxed mb-4">
-                            Your AI agent should work where you work. Synoptix AI integrates smoothly with:
+                        Synoptix AI connects effortlessly with the tools you already use—Microsoft 365, PDF workflows, SQL, Oracle, SAP ERP, Salesforce, Dynamics, Google Drive, SharePoint, and more. Enable secure, scalable automation without disrupting your existing operations. 
                         </p>
-                        <ul className="text-gray-600 text-sm leading-relaxed ">
+                        {/* <ul className="text-gray-600 text-sm leading-relaxed ">
                             <li>• Business applications - Word, PDF, excel, outlook</li>
                             <li>• Databases - SQL, Oracle Database, SAP ERP</li>
                             <li>• CRM - Sales force, Microsoft Dynamic</li>
@@ -45,7 +45,7 @@ export default function Capabilities() {
                         and many more. <br/>
 
 Empower cross-functional teams with AI agents that work securely, reliably, and at scale. 
-                        </p>
+                        </p> */}
                     </div>
 
                     {/* Train Your AI Agents */}

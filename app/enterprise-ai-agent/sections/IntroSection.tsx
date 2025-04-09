@@ -11,22 +11,26 @@ const IntroSection = () => {
           {/* Content */}
           <div className="space-y-8">
             <h2 className="text-4xl font-bold text-gray-900 leading-tight">
-              AI Doesn't Just Work<br />
-              It Works for You When Tuned
+            Think Bigger. Achieve More.
             </h2>
             
             <p className="text-lg text-gray-600">
-              AI is strong—fine-tuned AI is unstoppable. Sharper. Smarter. Fully aligned 
-              with your business for flawless performance every time.
+            Your team wasn’t built for busy work—so why let it steal their focus?  <br/><br/>
+
+Synoptix AI Agents can handle the repetitive, executing with precision—on demand or autonomously—so your people can focus on strategy, creativity, and growth.
+Work smarter. Scale faster. Dominate effortlessly. With automation that evolves with your business, you’re not just keeping up—you’re setting the pace. <br/><br/>
+
+The future won’t wait—with Synoptix AI, you won’t have to.
+
             </p>
             
             <div className="space-y-2">
-              <p className="text-lg font-medium text-gray-800">
+              {/* <p className="text-lg font-medium text-gray-800">
                 We don't just refine AI. We will make it work for you.
               </p>
               <p className="text-lg font-medium text-gray-800">
                 Tune it. Own it. Lead with it.
-              </p>
+              </p> */}
             </div>
             
             <div>
@@ -34,7 +38,7 @@ const IntroSection = () => {
                 href="/contact"
                 className="inline-flex items-center px-8 py-3.5 text-base font-medium text-white bg-gradient-to-r from-[#00CCEB] to-[#3A49FF] rounded-lg hover:opacity-90 transition-all duration-200 shadow-sm hover:shadow-md"
               >
-                Book Your Fine-Tune Session Now
+                Start a free trial
               </Link>
             </div>
           </div>
