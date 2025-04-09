@@ -10,11 +10,13 @@ import RagStatsSection from "./sections/rag-stats";
 // import QuantumSection from "./sections/quantum";
 import FAQ from "./sections/faq";
 import SmallFoot from "../sections/smallFoot";
+import IntroSection from "./sections/IntroSection";
 export default function RagApplication() {
     return (
         <main className="w-full">
             <RagHero />
-            <Features />
+            <IntroSection />
+            {/* <Features /> */}
             <Ideas />
             <Metrics />
             {/* <Security /> */}
