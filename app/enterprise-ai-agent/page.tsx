@@ -24,7 +24,7 @@ export default function RagApplication() {
             <Features />
             <Ideas />
             <Capabilities />
-            <FeaturesSection />
+            {/* <FeaturesSection /> */}
             {/* <Metrics /> */}
             {/* <Security /> */}
             <WhySection />

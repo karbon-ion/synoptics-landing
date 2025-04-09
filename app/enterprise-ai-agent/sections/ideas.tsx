@@ -26,7 +26,7 @@ const supportTags = [
     "Customer Churn Predictor"
 ];
 
-export default function Ideas() {
+export default function Ideas() { 
     return (
         <section className="relative w-full py-16 sm:py-20 md:py-24 px-4 sm:px-6 lg:px-8 bg-white">
             <div className="max-w-7xl mx-auto text-center">
