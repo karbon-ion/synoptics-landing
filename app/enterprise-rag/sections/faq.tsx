@@ -3,20 +3,28 @@ import { useState } from 'react';
 
 const faqs = [
     {
-        question: "What are the applications of RAG in enterprises?",
-        answer: "RAG turns scattered data into instant knowledge, automating workflows and eliminating manual research."
+        question: "What is Synoptix AI Evaluations?",
+        answer: "A real-time AI performance tracker that measures accuracy, efficiency, and user sentiment to optimize workflows."
     },
     {
-        question: "What are the benefits of RAG as a service in enterprises?",
-        answer: "RAG as a service provides seamless data integration, automated insights generation, and secure enterprise-wide knowledge sharing without the overhead of managing complex infrastructure."
+        question: "How does it improve AI performance?",
+        answer: "Tracks response time, accuracy, latency, hallucinations, and token usage, helping refine AI models for precision and speed."
     },
     {
-        question: "How does RAG differ for enterprises vs. midsize businesses?",
-        answer: "Enterprise RAG offers enhanced security features, larger data processing capabilities, and customizable workflows tailored to complex organizational structures, while midsize solutions focus on quick deployment and essential functionalities."
+        question: "Why is AI evaluation important?",
+        answer: "Ensures AI-driven decisions are accurate, relevant, and optimized, reducing errors and workflow inefficiencies."
     },
     {
-        question: "What makes Synoptix Enterprise RAG unique?",
-        answer: "Synoptix Enterprise RAG combines advanced security, seamless integration capabilities, and enterprise-grade scalability with an intuitive user interface, making it the ideal choice for organizations prioritizing both power and ease of use."
+        question: "What are AI hallucinations, and how does Synoptix detect them?",
+        answer: "Hallucinations are misleading AI responses. Synoptix identifies them by analysing factual accuracy and consistency."
+    },
+    {
+        question: "Can Synoptix AI help reduce costs?",
+        answer: "Yes! Monitors token usage to prevent waste, optimize resource allocation, and cut AI processing costs."
+    },
+    {
+        question: "How fast can I see results?",
+        answer: "Expect faster workflows and improved accuracy within 90 days, with real-time tracking for continuous optimization."
     }
 ];
 

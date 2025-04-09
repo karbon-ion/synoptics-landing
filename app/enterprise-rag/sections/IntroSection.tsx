@@ -11,22 +11,24 @@ const IntroSection = () => {
           {/* Content */}
           <div className="space-y-8">
             <h2 className="text-4xl font-bold text-gray-900 leading-tight">
-              AI Doesn't Just Work<br />
-              It Works for You When Tuned
+            Know Your AI. Control Its Performance.
             </h2>
             
             <p className="text-lg text-gray-600">
-              AI is strong—fine-tuned AI is unstoppable. Sharper. Smarter. Fully aligned 
-              with your business for flawless performance every time.
+            AI is only as good as its performance—but without real-time tracking, you’re operating blind. <br/><br/>
+Slow responses, inaccuracies, and inefficiencies creep in, bottlenecking workflows and weakening decision-making. Over time, these flaws cost businesses time, money, and missed opportunities.<br/><br/>
+Synoptix AI Evaluations puts you in control. It continuously tracks performance, fine-tunes execution, and eliminates inefficiencies—so AI stays sharp, fast, and on point. Every response is precise, fact-driven, and aligned with business goals, keeping workflows smooth and decisions reliable.<br/><br/>
+Optimize with Confidence. 
+
             </p>
             
             <div className="space-y-2">
-              <p className="text-lg font-medium text-gray-800">
+              {/* <p className="text-lg font-medium text-gray-800">
                 We don't just refine AI. We will make it work for you.
               </p>
               <p className="text-lg font-medium text-gray-800">
                 Tune it. Own it. Lead with it.
-              </p>
+              </p> */}
             </div>
             
             <div>
@@ -34,7 +36,7 @@ const IntroSection = () => {
                 href="/contact"
                 className="inline-flex items-center px-8 py-3.5 text-base font-medium text-white bg-gradient-to-r from-[#00CCEB] to-[#3A49FF] rounded-lg hover:opacity-90 transition-all duration-200 shadow-sm hover:shadow-md"
               >
-                Book Your Fine-Tune Session Now
+                Get Started Today
               </Link>
             </div>
           </div>

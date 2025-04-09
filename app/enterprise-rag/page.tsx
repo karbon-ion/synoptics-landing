@@ -24,7 +24,7 @@ export default function RagApplication() {
             <RagStatsSection />
             {/* <QuantumSection /> */}
             <FAQ />
-            <SmallFoot title="Take Control of Your Platform’s Security" buttonOne="Request a Demo" buttonTwo="Need answers? Let's Talk." />
+            <SmallFoot title="Get Started with Smarter AI Evaluations" buttonOne="Request a Demo" buttonTwo="Need answers? Let's Talk." />
         </main>
     );
 }
