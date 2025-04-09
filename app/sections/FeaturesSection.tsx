@@ -22,7 +22,7 @@ const features = [
     title: "Orchestrate Tasks with Precision and Speed",
     subtitle: "Workflows",
     description: "Execute multiple AI agents at once to optimize task management and efficiency. Enhance automation through seamless collaboration, ensuring smarter workflows and maximized productivity.",
-    image: evaluationsGif,
+    image: workflowGif,
 
     ctaText: "Learn More",
     ctaLink: "/workflow"
@@ -31,7 +31,7 @@ const features = [
     title: "Precision Analytics for Continuous Improvement",
     subtitle: "Evaluations",
     description: "Gain real-time insights into AI performance, efficiency, and accuracy with Synoptix AI. Track usage, measure impact, and continuously refine AI agents to maximize productivity and business value.",
-    image: prebuiltAgentsGif,
+    image: evaluationsGif,
     ctaText: "Learn More",
     ctaLink: "/enterprise-rag"
   },
@@ -39,7 +39,7 @@ const features = [
     title: "Pre-configured Agents for Instant Deployment",
     subtitle: "Quick Start AI",
     description: "Access prebuilt AI agents designed for various business tasks. Customize prompts, upload documents, and configure AI agents to get fast, precise, and context-aware results—hassle-free in seconds.",
-    image: workflowGif,
+    image: prebuiltAgentsGif,
     ctaText: "Learn More",
     ctaLink: "/enterprise-ai-agent"
   },
@@ -48,16 +48,7 @@ const features = [
 const FeaturesSection = () => {
   return (
     <section className="py-20 bg-white relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-
-
-        <div className="text-center mb-16 relative">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 max-w-4xl mx-auto leading-tight">
-            Enterprise AI Solutions for Improved Productivity
-          </h2>
-        </div>
-
-        {features.map((feature, index) => (
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative"><div className="text-center mb-16 relative"><h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 max-w-5xl mx-auto leading-tight">Enterprise AI Solutions for Improved Productivity</h2></div>{features.map((feature, index) => (
           <div
             key={index}
             className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-8 lg:gap-16 items-center mb-24 last:mb-0`}
