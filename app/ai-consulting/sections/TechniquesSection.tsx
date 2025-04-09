@@ -118,75 +118,73 @@ const TechniquesSection = () => {
   // Technique definitions with their respective benefits
   const techniqueData = [
     {
-      name: "Parameter Fine-Tuning",
-      description: "We adjust model parameters to sharpen accuracy, reduce errors, and ensure smooth performance:",
+      name: "AI Readiness Assessment",
+      description: "Before implementing AI, we work with your team to ensure they understand the technology and its impact. We assess your data, IT infrastructure, and AI readiness—providing support for a smooth, compliant transition.",
       benefits: [
-        "Update weights for better predictions",
-        "Optimize layers for faster, more efficient processing",
-        "Cut down computational costs without compromising performance"
+       ""
       ]
     },
     {
-      name: "Instruction Fine-Tuning",
-      description: "We refine your model to follow specific instructions with greater precision:",
+      name: "AI Governance Consulting",
+      description: "Develop a responsible and transparent AI framework with automated governance tools to ensure long-term success.",
       benefits: [
-        "Improve contextual understanding of complex prompts",
-        "Enhance response relevance and accuracy",
-        "Reduce hallucinations and incorrect outputs"
+        ""
       ]
     },
     {
-      name: "Transfer Learning",
-      description: "We adapt pre-trained models to your specific domain:",
+      name: "AI Envisioning Workshop",
+      description: "Identify high-value AI use cases, explore generative AI opportunities, and define a roadmap for innovation.",
       benefits: [
-        "Leverage existing knowledge for specialized tasks",
-        "Drastically reduce training data requirements",
-        "Accelerate time-to-production for new applications"
+        ""
       ]
     },
     {
-      name: "Task-Specific Fine-Tuning",
-      description: "We optimize models for your particular business need:",
+      name: "Generative AI Custom Implementation",
+      description: "Deploy AI solutions tailored to your unique business needs—optimizing workflows, enhancing automation, and solving most complicated challenges .",
       benefits: [
-        "Customize AI behavior for your exact use case",
-        "Improve performance on niche industry tasks",
-        "Focus computational resources where they matter most"
+       ""
       ]
     },
     {
-      name: "Multi-Task Learning",
-      description: "We enable your model to handle multiple related tasks effectively:",
+      name: "AI Strategy Development",
+      description: "Align AI investments with measurable business outcomes, uncover opportunities, and build a roadmap for scalable AI success.",
       benefits: [
-        "Create versatile AI solutions that solve diverse problems",
-        "Improve generalization across related domains",
-        "Reduce the need for multiple specialized models"
+       ""
       ]
     },
     {
-      name: "Few-Shot Learning",
-      description: "We train your model to learn from minimal examples:",
+      name: "AI Training & Capacity Building",
+      description: "Empower your workforce with AI expertise through customized training, learning paths, and leadership workshops.",
       benefits: [
-        "Adapt quickly to new tasks with limited training data",
-        "Reduce annotation costs and data gathering burden",
-        "Enable rapid prototyping and experimentation"
+        ""
       ]
     },
     {
-      name: "Reinforcement Learning from Human Feedback (RLHF)",
-      description: "We implement Reinforcement Learning from Human Feedback:",
+      name: "Data & Analytics Consulting",
+      description: "Transform enterprise data into actionable insights with AI-driven models that enhance decision-making and automate workflows.",
       benefits: [
-        "Align model outputs with human preferences",
-        "Reduce harmful, biased, or undesired outputs",
-        "Continuously improve based on real user interactions"
+        ""
       ]
     },
     {
-      name: "Supervised Fine-Tuning",
-      description: "We enhance models with carefully labeled training data:",
+      name: "Automation Consulting",
+      description: "Streamline operations with AI-powered automation, eliminating inefficiencies and enabling a smarter, hybrid workforce.",
       benefits: [
-        "Increase accuracy on specific domains and terminology",
-        "Teach models proper handling of edge cases",
-        "Ensure outputs meet quality standards consistently"
+        ""
+      ]
+    },
+    {
+      name: "Proof of Concept (PoC)",
+      description: "Validate AI solutions with rapid prototyping and real-world testing—minimizing risk and maximizing feasibility before full-scale implementation.",
+      benefits: [
+        ""
+      ]
+    },
+    {
+      name: "Synoptix AI Platform",
+      description: "At the core of our AI solutions, Synoptix AI drives generative AI adoption, optimises workflows, automates processes, and enhances decision-making—securely and at scale.",
+      benefits: [
+        ""
       ]
     }
   ];
@@ -197,11 +195,11 @@ const TechniquesSection = () => {
         {/* Header */}
         <div className="text-center mb-14">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-          Your Enterprise Deserves Better Intelligence—Discover RAG95 
+          Our Artificial Intelligence Consulting Services 
           </h2>
           
           <p className="text-gray-600 text-sm max-w-2xl mx-auto mb-6">
-          Get the right information at the right time, every time. Synoptix ensures speed, security, and precision—at enterprise scale 
+          AI Solutions That Drive Real Business Value
           </p>
         </div>
         
