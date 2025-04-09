@@ -25,7 +25,7 @@ export default function RagApplication() {
             <RagStatsSection />
             {/* <QuantumSection /> */}
             <FAQ />
-            <TestimonialsSection />
+            {/* <TestimonialsSection /> */}
             <SmallFoot title="Start Your Journey to Smarter Workflows" buttonOne="Request a Demo" buttonTwo="Need answers? Let's Talk." />
         </main>
     );
