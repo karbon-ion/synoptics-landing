@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 const faqs = [
     {
-        question: "WWhat Are AI Agents? ",
+        question: "What Are AI Agents? ",
         answer: "AI agents use advanced reasoning to process requests, make decisions, and execute tasks—driving business outcomes. "
     },
     {

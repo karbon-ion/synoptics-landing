@@ -9,15 +9,15 @@ const Hero = () => {
       
       <div className="max-w-7xl mt-10 mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center relative z-10">
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
-          Fine Tuning & Optimization Services
+        Launch Your Enterprise AI Agent in Few Clicks
         </h1>
         
         <div className="space-y-5 max-w-3xl mx-auto mb-10">
           <p className="text-gray-600 text-lg">
-            Stop settling for generic AI that doesn't get your business. Synoptix fine-tunes open-source models into domain-specific AI that aligns with your industry, goals, and workflow.
+          Launch Your Enterprise AI Agent in Few Clicks
           </p>
           <p className="text-gray-700 text-lg font-medium">
-            Experience AI that's sharp, focused, and built for impact.
+          The future of AI isn’t coming—it’s here. 
           </p>
         </div>
         
@@ -26,7 +26,7 @@ const Hero = () => {
             href="/contact"
             className="inline-flex items-center px-8 py-3.5 text-base font-medium text-white bg-gradient-to-r from-[#00CCEB] to-[#3A49FF] rounded-lg hover:opacity-90 transition-all duration-200 shadow-sm hover:shadow-md min-w-[140px] justify-center"
           >
-            Book a demo today
+            Request a Demo
           </Link>
         </div>
       </div>

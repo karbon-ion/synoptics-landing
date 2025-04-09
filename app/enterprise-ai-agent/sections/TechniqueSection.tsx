@@ -118,75 +118,38 @@ const TechniquesSection = () => {
   // Technique definitions with their respective benefits
   const techniqueData = [
     {
-      name: "Parameter Fine-Tuning",
-      description: "We adjust model parameters to sharpen accuracy, reduce errors, and ensure smooth performance:",
+      name: "Code Gen agents",
+      description: "Eliminate redundant tasks and empower developers to focus on innovation. Synoptix Code Gen Agents generate clean, efficient code and optimize logic in real time—reducing development cycles and minimizing human error across your engineering workflows.",
       benefits: [
-        "Update weights for better predictions",
-        "Optimize layers for faster, more efficient processing",
-        "Cut down computational costs without compromising performance"
+       ""
       ]
     },
     {
-      name: "Instruction Fine-Tuning",
-      description: "We refine your model to follow specific instructions with greater precision:",
+      name: "Generative agents",
+      description: " From content generation to complex creative outputs, Synoptix Generative Agents convert ideas into actionable deliverables. Generate text, visuals, and code at scale—adapting instantly to your needs and enhancing productivity across teams.",
       benefits: [
-        "Improve contextual understanding of complex prompts",
-        "Enhance response relevance and accuracy",
-        "Reduce hallucinations and incorrect outputs"
+        ""
       ]
     },
     {
-      name: "Transfer Learning",
-      description: "We adapt pre-trained models to your specific domain:",
+      name: "Assurance agents",
+      description: "Maintain operational excellence with Synoptix Assurance Agents. These AI agents proactively monitor for inconsistencies, enforce enterprise standards, and ensure every output aligns with regulatory and organizational benchmarks.",
       benefits: [
-        "Leverage existing knowledge for specialized tasks",
-        "Drastically reduce training data requirements",
-        "Accelerate time-to-production for new applications"
+       ""
       ]
     },
     {
-      name: "Task-Specific Fine-Tuning",
-      description: "We optimize models for your particular business need:",
+      name: "Decision Support & Analytical Agents",
+      description: "Empower your teams with real-time insights. Synoptix Analytical Agents analyse complex datasets, identify trends, and deliver actionable recommendations—enabling smarter, faster decision-making across the enterprise.",
       benefits: [
-        "Customize AI behavior for your exact use case",
-        "Improve performance on niche industry tasks",
-        "Focus computational resources where they matter most"
+        ""
       ]
     },
     {
-      name: "Multi-Task Learning",
-      description: "We enable your model to handle multiple related tasks effectively:",
+      name: "Anomalies Detection Agents",
+      description: "Synoptix Anomaly Detection Agents provide continuous monitoring to detect irregularities and potential threats before they impact your business. Ensure operational integrity and security with real-time intelligence that pre-empts disruptions.",
       benefits: [
-        "Create versatile AI solutions that solve diverse problems",
-        "Improve generalization across related domains",
-        "Reduce the need for multiple specialized models"
-      ]
-    },
-    {
-      name: "Few-Shot Learning",
-      description: "We train your model to learn from minimal examples:",
-      benefits: [
-        "Adapt quickly to new tasks with limited training data",
-        "Reduce annotation costs and data gathering burden",
-        "Enable rapid prototyping and experimentation"
-      ]
-    },
-    {
-      name: "RLHF",
-      description: "We implement Reinforcement Learning from Human Feedback:",
-      benefits: [
-        "Align model outputs with human preferences",
-        "Reduce harmful, biased, or undesired outputs",
-        "Continuously improve based on real user interactions"
-      ]
-    },
-    {
-      name: "Supervised Fine-Tuning",
-      description: "We enhance models with carefully labeled training data:",
-      benefits: [
-        "Increase accuracy on specific domains and terminology",
-        "Teach models proper handling of edge cases",
-        "Ensure outputs meet quality standards consistently"
+        ""
       ]
     }
   ];
@@ -197,12 +160,12 @@ const TechniquesSection = () => {
         {/* Header */}
         <div className="text-center mb-14">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-          Your Enterprise Deserves Better Intelligence—Discover RAG95 
+          Discover the AI Agents Designed for Enterprise Impact
           </h2>
           
-          <p className="text-gray-600 text-sm max-w-2xl mx-auto mb-6">
+          {/* <p className="text-gray-600 text-sm max-w-2xl mx-auto mb-6">
           Get the right information at the right time, every time. Synoptix ensures speed, security, and precision—at enterprise scale 
-          </p>
+          </p> */}
         </div>
         
         {/* Main content area with blue background - Increased size here */}

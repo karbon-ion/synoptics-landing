@@ -31,7 +31,7 @@ export default function Ideas() {
         <section className="relative w-full py-16 sm:py-20 md:py-24 px-4 sm:px-6 lg:px-8 bg-white">
             <div className="max-w-7xl mx-auto text-center">
                 <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 px-4">
-                    Too Many Ideas, Not<br className="hidden sm:block" />Enough Direction?
+                    Too Many Ideas, Not Enough Direction?
                 </h2>
                 <p className="text-gray-600 mb-8 sm:mb-12 max-w-2xl mx-auto px-4">
                     Focus on what matters—turn processes into practical, automated solutions that work.
