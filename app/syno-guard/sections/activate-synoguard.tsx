@@ -173,11 +173,11 @@ const TechniquesSection = () => {
         {/* Header */}
         <div className="text-center mb-14">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-          Your Enterprise Deserves Better Intelligence—Discover RAG95 
+          Shield Your AI Now—Activate SYNOGUARD
           </h2>
           
           <p className="text-gray-600 text-sm max-w-2xl mx-auto mb-6">
-          Get the right information at the right time, every time. Synoptix ensures speed, security, and precision—at enterprise scale 
+          Adaptive Security. Uncompromised AI Protection.  
           </p>
         </div>
         

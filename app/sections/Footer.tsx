@@ -9,7 +9,7 @@ const Footer = () => {
       { name: 'AI Agent', href: '#' },
       { name: 'Workflows', href: '#' },
       { name: 'Evaluations', href: '#' },
-      { name: 'Synoguard', href: '/syno-guard' },
+      { name: 'SynoGuard', href: '/syno-guard' },
     ],
     services: [
       { name: 'AI Consulting', href: '#' },
