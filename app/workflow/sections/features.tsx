@@ -43,11 +43,11 @@ export default function Features() {
                         </p> */}
 
                         <p className="text-gray-700 text-center md:text-left">
-                        Advanced automation isn’t built for complex operations. Synoptix AI goes further—breaking down intricate tasks, distributing work intelligently, and executing every step with precision—eliminating delays and inefficiencies. 
+                        Advanced automation isn’t built for complex operations. <b>Synoptix AI </b>goes further—breaking down intricate tasks, distributing work intelligently, and executing every step with precision—eliminating delays and inefficiencies. <br/><br/>
 
-In real time, specialized agents analyze data, structure insights, and refine outputs, ensuring accuracy at every stage. Whether managing multi-step operations or high-stakes decisions, Synoptix AI adapts dynamically to keep everything on track. 
+In real time, specialized agents analyze data, structure insights, and refine outputs, ensuring accuracy at every stage. Whether managing multi-step operations or high-stakes decisions, Synoptix AI adapts dynamically to keep everything on track. <br/><br/>
 
-This isn’t just automation—it’s intelligent workflow at its best. Tasks move forward seamlessly, approvals happen without hold-ups, and systems stay perfectly in sync.  
+This isn’t just automation—it’s intelligent workflow at its best. Tasks move forward seamlessly, approvals happen without hold-ups, and systems stay perfectly in sync.  <br/><br/>
 
 Stop waiting. Start executing—with Synoptix AI. </p>
 

@@ -73,17 +73,17 @@ export default function Metrics() {
                 {/* Header */}
                 <div className="text-center">
                     <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 md:mb-4">
-                        Real-Time Performance Metrics
+                    Orchestrated Intelligence at Every Step
                     </h2>
                     <p className="text-gray-600 mb-6 md:mb-8 px-2">
-                        Stay Ahead with Live AI Monitoring
+                    Route queries to the right expert, consolidate insights across agents, and deliver precise, context-aware outputs—instantly.
                     </p>
                     <a
                         href="#docs"
                         className="inline-block px-6 sm:px-8 py-3 sm:py-4 bg-[#00A3FF] text-white rounded-full 
                             font-semibold hover:bg-[#0095eb] transition-all text-sm sm:text-base"
                     >
-                        Read Docs
+                        Request a Demo
                     </a>
                 </div>
 
@@ -105,7 +105,7 @@ export default function Metrics() {
                             <div key={`mobile_card_${cardIndex}`} className="bg-white rounded-2xl border border-[#E2E8F0] p-6 sm:p-8">
                                 <div className="relative z-10">
                                     <h3 className="text-xl sm:text-2xl font-bold mb-4">
-                                        Get Instant AI Performance Insights
+                                    Router Workflow
                                     </h3>
                                     <p className="text-gray-600 mb-8 text-sm sm:text-base">
                                         AI performance shouldn't be a black box. Track, measure, and optimize key
