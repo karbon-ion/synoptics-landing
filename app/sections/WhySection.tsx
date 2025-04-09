@@ -12,7 +12,7 @@ const features = [
             <div className="w-full h-full flex items-center justify-center">
                 <div className="p-6 flex flex-col items-center">
                 <Image
-                    src="/images/SVG/accelrate task.svg"
+                    src="/images/SVG/test1.jpg"
                     alt="AI Platform Overview"
                     width={600}
                     height={600}
@@ -30,7 +30,7 @@ const features = [
             <div className="w-full h-full flex items-center justify-center">
                 <div className="p-6 flex flex-col items-center">
                     <Image
-                        src="/images/SVG/modal selection.svg"
+                        src="/images/SVG/test4.jpg"
                         alt="Data Security"
                         width={400}
                         height={300}
@@ -48,7 +48,7 @@ const features = [
             <div className="w-full h-full flex items-center justify-center">
                 <div className="p-6 flex flex-col items-center">
                     <Image
-                        src="/images/SVG/data integration.svg"
+                        src="/images/SVG/test1.jpg"
                         alt="Enterprise Controls"
                         width={400}
                         height={300}
@@ -66,7 +66,7 @@ const features = [
             <div className="w-full h-full flex items-center justify-center">
                 <div className="p-6 flex flex-col items-center">
                     <Image
-                        src="/images/SVG/zero exposure.svg"
+                        src="/images/SVG/test3.jpg"
                         alt="Cloud Infrastructure"
                         width={400}
                         height={300}
@@ -84,7 +84,7 @@ const features = [
             <div className="w-full h-full flex items-center justify-center">
                 <div className="p-6 flex flex-col items-center">
                     <Image
-                        src="/images/SVG/grade control.svg"
+                        src="/images/SVG/test2.jpg"
                         alt="Content Safety"
                         width={400}
                         height={300}

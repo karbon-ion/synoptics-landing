@@ -39,9 +39,9 @@ export default function Features() {
                         </h2>
                         
                         <p className="text-gray-700 text-center md:text-left">
-                        RAG95 delivers you the right information at the right time. It pulls from multiple sources, refines the data, and delivers only the most relevant insights—so you can act with confidence instead of getting lost in research. 
+                        RAG95 delivers you the right information at the right time. It pulls from multiple sources, refines the data, and delivers only the most relevant insights—so you can act with confidence instead of getting lost in research. <br/><br/>
 
-Designed for enterprise use, RAG95 ensures your data stays under your control—always. Unlike other tools, it protects sensitive business information and keeps proprietary knowledge safe. 
+Designed for enterprise use, RAG95 ensures your data stays under your control—always. Unlike other tools, it protects sensitive business information and keeps proprietary knowledge safe. <br/><br/>
 
 With real-time data refinement, Synoptix AI helps you cut research time and make better decisions, faster. 
                         </p>

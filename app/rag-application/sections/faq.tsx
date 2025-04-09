@@ -3,20 +3,20 @@ import { useState } from 'react';
 
 const faqs = [
     {
-        question: "What are the applications of RAG in enterprises?",
-        answer: "RAG turns scattered data into instant knowledge, automating workflows and eliminating manual research."
+        question: "What is RAG95?",
+        answer: "An advanced AI method that improves how models retrieve and generate answers from large datasets."
     },
     {
-        question: "What are the benefits of RAG as a service in enterprises?",
-        answer: "RAG as a service provides seamless data integration, automated insights generation, and secure enterprise-wide knowledge sharing without the overhead of managing complex infrastructure."
+        question: "How is RAG95 different from traditional RAG?",
+        answer: "RAG95 improves retrieval speed and precision by using quantum-inspired algorithms, offering better context matching and lower latency compared to standard RAG systems."
     },
     {
-        question: "How does RAG differ for enterprises vs. midsize businesses?",
-        answer: "Enterprise RAG offers enhanced security features, larger data processing capabilities, and customizable workflows tailored to complex organizational structures, while midsize solutions focus on quick deployment and essential functionalities."
+        question: "Does Quantum RAG require RAG95 computing?",
+        answer: "ENo. RAG95 runs on classical hardware. It uses quantum-inspired techniques, not actual quantum processors."
     },
     {
-        question: "What makes Synoptix Enterprise RAG unique?",
-        answer: "Synoptix Enterprise RAG combines advanced security, seamless integration capabilities, and enterprise-grade scalability with an intuitive user interface, making it the ideal choice for organizations prioritizing both power and ease of use."
+        question: "What are the use cases of RAG95?",
+        answer: "RAG95 is ideal for enterprise search, knowledge management, legal research, customer support, and any scenario requiring accurate, real-time information retrieval."
     }
 ];
 
