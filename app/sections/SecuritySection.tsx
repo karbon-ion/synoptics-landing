@@ -15,33 +15,33 @@ import Link from 'next/link';
 const features = [
   {
     id: 'stack',
-    title: 'Use Synoptic with your stack',
-    description: 'We offer client and server libraries in everything from React and PHP to .NET and iOS',
+    title: 'Fine Tuning & Optimisation',
+    description: 'Get higher accuracy and efficiency with AI models fine-tuned to your specific requirements and objectives. ',
     icon: <IconTerminal2 />,
 
-    link: '/libraries'
+    link: '/fine-tuning'
   },
   {
     id: 'no-code',
-    title: 'Try no-code options',
-    description: 'Customize and deploy payments interfaces directly from the Synoptic Dashboard',
+    title: 'AI Consulting',
+    description: 'Partner with our AI consulting experts to develop and execute strategies that maximize AI, ensure compliance, and align with your objectives.',
     icon: <IconEaseInOut />,
 
-    link: '/no-code'
+    link: '/ai-consulting'
   },
   {
     id: 'integration',
-    title: 'Explore pre-built integration',
-    description: 'Connect Synoptic to over a hundred tools including Adobe, Salesforce and Xera.',
+    title: 'AI Strategy Development',
+    description: 'Align AI investments with your business objectives, identify opportunities, and create a roadmap for long-term success.',
     icon: <IconCurrencyDollar />,
-    link: '/integrations'
+    link: '/ai-consulting'
   },
   {
     id: 'apps',
-    title: 'Build on Synoptic Apps',
-    description: 'Create an app just for your team or for the millions of businesses on Synoptic',
+    title: 'Training & Education',
+    description: 'Boost your workforce’s AI skills with tailored training programs, learning paths, and leadership workshops for business transformation.',
     icon: <IconCloud />,
-    link: '/apps'
+    link: '/ai-consulting'
   }
 ];
 

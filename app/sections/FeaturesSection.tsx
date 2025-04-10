@@ -11,7 +11,7 @@ import workflowGif from '@/public/gifs/workflow.gif';
 const features = [
   {
     title: "Design & Deploy Intelligent AI Agents",
-    subtitle: "AI AGENT",
+    subtitle: "AI AGENTS",
     description: "No-code AI Agents! From simple to advanced tasks, Synoptix’s AI platform lets you design, deploy, and scale intelligent agents. Build custom AI agents that works exactly the way your business need.",
     image: agentGif,
 
