@@ -3,8 +3,37 @@
 import { useRef, useState, useEffect } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
+// Define YouTube Player types
+declare global {
+  interface Window {
+    YT: {
+      Player: new (
+        elementId: string,
+        config: {
+          videoId: string;
+          playerVars?: {
+            autoplay?: number;
+            rel?: number;
+            [key: string]: any;
+          };
+          events?: {
+            onReady?: (event: { target: any }) => void;
+            [key: string]: any;
+          };
+        }
+      ) => {
+        playVideo: () => void;
+        pauseVideo: () => void;
+        setVolume: (volume: number) => void;
+      };
+    };
+    onYouTubeIframeAPIReady: () => void;
+  }
+}
+
 const VideoSection = () => {
-  const sectionRef = useRef(null);
+  const sectionRef = useRef<HTMLElement>(null);
+  const playerRef = useRef<any>(null);
   const [isInView, setIsInView] = useState(false);
 
   const { scrollYProgress } = useScroll({
@@ -31,9 +60,54 @@ const VideoSection = () => {
     };
   }, []);
 
-  const videoUrl = isInView 
-    ? "https://www.youtube.com/embed/MgRh-vN9ZBg?si=2cCxYwAaUmSEDIrb&autoplay=1&mute=1&rel=0"
-    : "https://www.youtube.com/embed/MgRh-vN9ZBg?si=2cCxYwAaUmSEDIrb&rel=0";
+  // Load YouTube API
+  useEffect(() => {
+    // Load the YouTube IFrame API script
+    const tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+    const firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode?.insertBefore(tag, firstScriptTag);
+
+    // Define the onYouTubeIframeAPIReady callback
+    window.onYouTubeIframeAPIReady = () => {
+      if (playerRef.current) return;
+      
+      playerRef.current = new window.YT.Player('video-player', {
+        videoId: 'MgRh-vN9ZBg',
+        playerVars: {
+          autoplay: isInView ? 1 : 0,
+          rel: 0,
+        },
+        events: {
+          onReady: (event) => {
+            event.target.setVolume(50); // Set volume to 50%
+            if (isInView) {
+              event.target.playVideo();
+            }
+          }
+        }
+      });
+    };
+
+    return () => {
+      if (playerRef.current) {
+        playerRef.current = null;
+      }
+      // Clean up the global callback
+      window.onYouTubeIframeAPIReady = () => {};
+    };
+  }, []);
+
+  // Control player based on isInView changes
+  useEffect(() => {
+    if (!playerRef.current) return;
+    
+    if (isInView) {
+      playerRef.current.playVideo();
+    } else {
+      playerRef.current.pauseVideo();
+    }
+  }, [isInView]);
 
   const backgroundColor = useTransform(
     scrollYProgress,
@@ -59,14 +133,7 @@ const VideoSection = () => {
           style={{ scale }}
           className="relative mx-auto rounded-3xl overflow-hidden shadow-2xl aspect-video"
         >
-          <iframe
-            src={videoUrl}
-            title="Synoptix Demo Video"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-            className="w-full h-full absolute inset-0"
-          />
+          <div id="video-player" className="w-full h-full absolute inset-0"></div>
         </motion.div>
       </div>
     </motion.section>
