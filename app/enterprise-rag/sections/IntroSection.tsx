@@ -12,7 +12,7 @@ const IntroSection = () => {
           {/* Content */}
           <div className="space-y-8">
             <h2 className="text-4xl font-bold text-gray-900 leading-tight">
-            Know Your AI. Control Its Performance.
+            Know Your AI! Control Its Performance.
             </h2>
             
             <p className="text-lg text-gray-600">

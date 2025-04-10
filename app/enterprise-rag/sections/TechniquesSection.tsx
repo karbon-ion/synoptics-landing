@@ -156,7 +156,7 @@ const TechniquesSection = () => {
       ]
     },
     {
-      name: "AI Performance Benchmarks That Drive Results",
+      name: "AI Performance Benchmarks",
       description: "AI performance goes beyond speed—it’s about precision, consistency, and usability. Synoptix AI evaluates critical metrics to ensure every response meets high-quality standards.",
       benefits: [
         "Groundedness: Ensure AI responses are factually accurate and backed by reliable data. Prevent misinformation and maintain trust in AI-driven decisions.",

@@ -29,7 +29,7 @@ const stats = [
     category: 'AI TRUST GAP',
     value: '52%',
     label: '',
-    description: 'of professionals using AI still hesitate to acknowledge its role in key tasks—despite its growing impact. '
+    description: 'of professionals using AI still hesitate to acknowledge its role in key tasks.'
   }
 ];
 

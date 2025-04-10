@@ -29,7 +29,7 @@ const Hero = () => {
                     size="lg"
                     className="mb-10 sm:mb-16"
                 >
-            Book a Demo
+            Request a Demo
           </Button>
         </div>
       </div>
