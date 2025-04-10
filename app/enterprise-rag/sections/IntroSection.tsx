@@ -34,7 +34,7 @@ Optimize with Confidence.
             
             <div>
             <Button 
-                    href="#contact" 
+                    href="/#contact" 
                     variant="primary"
                     size="lg"
                     className="mb-10 sm:mb-16"

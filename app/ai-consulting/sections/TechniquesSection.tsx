@@ -121,70 +121,64 @@ const TechniquesSection = () => {
       name: "AI Readiness Assessment",
       description: "Before implementing AI, we work with your team to ensure they understand the technology and its impact. We assess your data, IT infrastructure, and AI readiness—providing support for a smooth, compliant transition.",
       benefits: [
-       ""
+       
       ]
     },
     {
       name: "AI Governance Consulting",
       description: "Develop a responsible and transparent AI framework with automated governance tools to ensure long-term success.",
       benefits: [
-        ""
+       
       ]
     },
     {
       name: "AI Envisioning Workshop",
       description: "Identify high-value AI use cases, explore generative AI opportunities, and define a roadmap for innovation.",
       benefits: [
-        ""
+       
       ]
     },
     {
       name: "Generative AI Custom Implementation",
       description: "Deploy AI solutions tailored to your unique business needs—optimizing workflows, enhancing automation, and solving most complicated challenges .",
       benefits: [
-       ""
+       
       ]
     },
     {
       name: "AI Strategy Development",
       description: "Align AI investments with measurable business outcomes, uncover opportunities, and build a roadmap for scalable AI success.",
       benefits: [
-       ""
       ]
     },
     {
       name: "AI Training & Capacity Building",
       description: "Empower your workforce with AI expertise through customized training, learning paths, and leadership workshops.",
       benefits: [
-        ""
       ]
     },
     {
       name: "Data & Analytics Consulting",
       description: "Transform enterprise data into actionable insights with AI-driven models that enhance decision-making and automate workflows.",
       benefits: [
-        ""
       ]
     },
     {
       name: "Automation Consulting",
       description: "Streamline operations with AI-powered automation, eliminating inefficiencies and enabling a smarter, hybrid workforce.",
       benefits: [
-        ""
       ]
     },
     {
       name: "Proof of Concept (PoC)",
       description: "Validate AI solutions with rapid prototyping and real-world testing—minimizing risk and maximizing feasibility before full-scale implementation.",
       benefits: [
-        ""
       ]
     },
     {
       name: "Synoptix AI Platform",
       description: "At the core of our AI solutions, Synoptix AI drives generative AI adoption, optimises workflows, automates processes, and enhances decision-making—securely and at scale.",
       benefits: [
-        ""
       ]
     }
   ];

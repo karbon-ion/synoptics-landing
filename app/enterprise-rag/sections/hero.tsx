@@ -23,7 +23,7 @@ const Hero = () => {
         
         <div className="flex justify-center">
           <Button
-            href="/contact"
+            href="/#contact"
             variant="primary"
             size="lg"
           >
