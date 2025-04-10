@@ -118,46 +118,53 @@ const TechniquesSection = () => {
   // Technique definitions with their respective benefits
   const techniqueData = [
     {
-      name: "Connect & Unify All Your Data",
-      description: "Gather knowledge from every corner of your business on one centralized platform. Synoptix AI ensures that all your data—whether structured or unstructured—is integrated, indexed, and instantly retrievable. ",
+      name: "Real-Time Performance Metrics",
+      description: "AI performance shouldn’t a black box. Track, measure, and optimize key insights in real time to ensure every response is fast, accurate, and aligned with expectations.",
       benefits: [
-        "Unstructured Data – Documents, emails, reports, PDFs, and raw text.",
-        "Structured Data – Databases, spreadsheets, and enterprise records.",
-        "Application APIs – Integrate third-party apps and internal systems effortlessly.",
-        "Social Media Platforms – LinkedIn, YouTube, X, Facebook and more."
+        "Query Count: Track the total number of processed requests in real time. Gain visibility into AI workload and system efficiency.",
+        "Response Time: Measure how fast AI processes and delivers responses. Identify and eliminate latency issues for seamless performance.",
+        "User Feedback: Monitor approval and rejection rates from real users. Understand AI effectiveness and refine outputs for better engagement.",
+        "Accuracy Score: Evaluate how well AI-generated responses align with expectations. Ensure precision, relevance, and reliability in every interaction."
       ]
     },
     {
-      name: "Secure Data Ingestion for Enterprise",
-      description: "Not all data is useful—or safe. Synoptix AI ensures that only clean, structured, and relevant data is accessible by applying advanced filtering, pre-processing, and strict security controls. This prevents outdated, irrelevant, or sensitive data from entering your workflows. ",
+      name: "User Sentiment Insights",
+      description: "AI effectiveness goes beyond accuracy—it’s about how users interact with it. Track real-time sentiment analysis to refine responses and enhance engagement.",
       benefits: [
-        "Role-Based Access Control (RBAC) – Restrict data access to only authorized users. ",
-        "Automated Filtering & Pre-Processing – Remove redundant or low-quality content.  ",
-        "Compliance & Security Measures – Ensure all data meets enterprise security standards. "
+        "Positive Responses: Track where AI successfully meets user expectations. Leverage these insights to reinforce accuracy and maintain high engagement.",
+        "Negative Responses: Detect where AI-generated outputs fail to meet user needs. Adjust models to improve accuracy, reduce errors, and optimize performance."
       ]
     },
     {
-      name: "Smarter Search & Instant Retrieval ",
-      description: "Stop searching—start finding. Synoptix AI refines queries, ranks information intelligently, and retrieves only the most relevant and actionable insights. Unlike traditional search, it leverages context-aware ranking, multi-retriever models, and privacy-first protocols to ensure that every answer is timely and accurate. ",
+      name: "Hallucination & Latency Tracking ",
+      description: "AI should be accurate, reliable, and free from misinformation. Monitor, detect, and correct errors in real time to maintain precision and efficiency.",
       benefits: [
-        "AI-Enhanced Ranking – Surfaces the most relevant insights instantly. ",
-        "Privacy-First Retrieval – Ensures sensitive data is not stored post-search."
+        "Identify Hallucinations: Detect AI-generated responses that are incorrect, misleading, or out of context. Ensure fact-based outputs every time.",
+        "Track Latency: Monitor slow response times and pinpoint inefficiencies. Optimize AI processing speed for seamless interactions.",
+        "Eliminate Errors: Proactively address inaccuracies before they disrupt workflows. Keep AI performance sharp, responsive, and trustworthy."
+
       ]
     },
     {
-      name: "Accurate Responses with Built-In Validation ",
-      description: "Decisions should be based on facts. Synoptix AI ensures the accuracy, safety, and reliability of every response through hallucination detection, PII filtering, and real-time monitoring. Built-in learning continuously refines results, ensuring enterprises receive high-confidence, fact-checked insights. ",
+      name: "Usage & Cost Management ",
+      description: "AI processing comes at a cost—ensure every token is used efficiently. Monitor usage in real time to reduce waste and maximize value.",
       benefits: [
-        "Misinformation Prevention – Detects and eliminates false or misleading data.",
-        "Continuous Learning & Monitoring – Improves response quality over time. "
+        "Incoming Tokens: Track how much input data AI is processing. Optimize requests to avoid unnecessary consumption.",
+        "Outgoing Tokens: Measure the size of AI-generated responses. Streamline outputs without sacrificing accuracy.",
+        "Caching: Help reduce token consumption by storing and reusing recent response and improved response time."
+
       ]
     },
     {
-      name: "Enterprise-Ready Scalability & Security ",
-      description: "Technology should fit your business, not disrupt it. Synoptix AI integrates effortlessly into existing IT ecosystems, scaling as your business grows while maintaining the highest security and compliance standards. ",
+      name: "AI Performance Benchmarks That Drive Results",
+      description: "AI performance goes beyond speed—it’s about precision, consistency, and usability. Synoptix AI evaluates critical metrics to ensure every response meets high-quality standards.",
       benefits: [
-        "Seamless IT Integration – Works within your current enterprise systems. ",
-        "Enterprise-Grade Security – Protects sensitive data with robust security controls. "
+        "Groundedness: Ensure AI responses are factually accurate and backed by reliable data. Prevent misinformation and maintain trust in AI-driven decisions.",
+        "Relevance: Verify that AI delivers meaningful, useful answers tailored to user needs. Eliminate off-topic or low-value responses.",
+        "Fluency: Assess if AI-generated responses are well-structured and natural. Improve readability and clarity for better user interactions.",
+        "Similarity: Maintain consistency across responses to avoid contradictions. Ensure AI provides uniform answers across different queries.",
+        "F1 Score: Measure overall AI performance with a balanced accuracy benchmark. Optimize AI for precision, recall, and efficiency."
+
       ]
     }
   ];
@@ -167,10 +174,10 @@ const TechniquesSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> {/* Changed from max-w-6xl to max-w-7xl */}
         {/* Header */}
         <div className="text-center mb-14">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Your Enterprise Deserves Better Intelligence—Discover RAG95</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Actionable AI Analytics for Enterprise-Grade Performance</h2>
           
           <p className="text-gray-600 text-sm max-w-2xl mx-auto mb-6">
-          Get the right information at the right time, every time. Synoptix ensures speed, security, and precision—at enterprise scale 
+          Go beyond the black box with real-time visibility into accuracy, speed, sentiment, and cost. Monitor, evaluate, and optimize every aspect of your AI—live.
           </p>
         </div>
         
