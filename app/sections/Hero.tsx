@@ -1,4 +1,5 @@
 'use client';
+
 import Link from 'next/link';
 import { Typewriter } from 'react-simple-typewriter';
 import { BackgroundGradientAnimation } from '@/components/ui/background-gradient-animation';

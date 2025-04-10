@@ -1,4 +1,3 @@
-'use client'
 
 import RagHero from "./sections/hero";
 import Features from "./sections/features";
@@ -12,6 +11,7 @@ import SmallFoot from "../sections/smallFoot";
 import IntroSection from "./sections/IntroSection";
 import TechniquesSection from "./sections/TechniquesSection";
 import WhySection from "./sections/WhySection";
+
 export default function RagApplication() {
     return (
         <main className="w-full">

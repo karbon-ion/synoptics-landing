@@ -1,4 +1,3 @@
-'use client'
 
 import Hero from './sections/hero'
 import Certifications from './sections/certifications'
@@ -9,6 +8,7 @@ import OWASP from './sections/owasp';
 import SmallFoot from "../sections/smallFoot";
 import ActivateSynoGuard from './sections/activate-synoguard';
 import WhySection from './sections/WhySection';
+
 export default function SynoGuard() {
     return (
         <main className="w-full">
