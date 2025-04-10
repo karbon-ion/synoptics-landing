@@ -25,7 +25,7 @@ const ApiSection = () => {
         <div className="mt-16 max-w-4xl mx-auto">
           <div className="rounded-lg overflow-hidden shadow-lg">
             <Image
-              src="/Synoptix AI Platform.png"
+              src="/web-banner.svg"
               alt="Synoptix AI Platform"
               width={1200}
               height={600}

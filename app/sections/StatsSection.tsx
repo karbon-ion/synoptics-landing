@@ -138,11 +138,11 @@ const StatsSection = () => {
         
       </div>
       <div className="flex flex-col items-center mt-16 relative z-10">
-        <div className="flex justify-center gap-4 flex-wrap">
+        <div className="flex flex-col items-center">
           <Link
             href="#contact"
             scroll={true}
-            className="inline-flex items-center px-8 py-3 text-lg font-medium text-white bg-gradient-to-r from-blue-400 to-blue-600 rounded-full hover:from-blue-500 hover:to-blue-700 transition-all duration-200 shadow-md hover:shadow-lg"
+            className="inline-flex items-center px-8 py-3 text-lg font-medium text-white bg-gradient-to-r from-blue-400 to-blue-600 rounded-full hover:from-blue-500 hover:to-blue-700 transition-all duration-200 shadow-md hover:shadow-lg mb-3"
           >
             Optimize Your Business with Synoptix AI 
           </Link>
@@ -151,7 +151,7 @@ const StatsSection = () => {
             href="https://teams.microsoft.com/l/message/19:22f8201f-64f9-4559-8509-6f1461872305_3670589d-1426-4074-8f3c-4da1bbc17110@unq.gbl.spaces/1744174255896?context=%7B%22contextType%22%3A%22chat%22%7D"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center px-8 py-3 text-lg font-medium text-white bg-gradient-to-r from-blue-400 to-blue-600 rounded-full hover:from-blue-500 hover:to-blue-700 transition-all duration-200 shadow-md hover:shadow-lg"
+            className="text-sm text-blue-600 hover:text-blue-800 hover:underline transition-all duration-200"
           >
             Source
           </a>

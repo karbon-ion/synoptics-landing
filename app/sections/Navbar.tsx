@@ -83,7 +83,7 @@ const Navbar = () => {
     { name: 'Resources', href: '/resources' },
     // { name: 'Company', href: '/company' },
     { name: 'About us', href: '/about' },
-    { name: 'Contact us', href: '/contact' },
+    { name: 'Contact us', href: '/#contact' },
   ];
 
   const handleDropdownToggle = (setDropdownState: React.Dispatch<React.SetStateAction<boolean>>) => {
@@ -143,6 +143,19 @@ const Navbar = () => {
                     <Link
                       href={item.href}
                       className={`text-sm font-medium transition-colors hover:text-blue-600 ${pathname === item.href ? 'text-blue-600' : 'text-gray-700'}`}
+                      onClick={(e) => {
+                        // Special handling for contact link
+                        if (item.name === 'Contact us') {
+                          e.preventDefault();
+                          // If already on homepage, just scroll to contact section
+                          if (pathname === '/') {
+                            document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                          } else {
+                            // Otherwise navigate to homepage with contact hash
+                            window.location.href = '/#contact';
+                          }
+                        }
+                      }}
                     >
                       {item.name}
                     </Link>

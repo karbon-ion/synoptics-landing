@@ -11,6 +11,7 @@ import BlogsSection from './sections/BlogsSection';
 import TestimonialsSection from './sections/TestimonialsSection';
 import ContactSection from './sections/ContactSection';
 import ProvidersMarquee from "./sections/ProvidersMarquee";
+import CtaBanner from './sections/CtaBanner';
 export default function Home() {
   return (
     <>
@@ -20,6 +21,7 @@ export default function Home() {
       <FeaturesSection />
       <ApiSection />
       <WhySection />
+      <CtaBanner/>
       <StatsSection />
       <SecuritySection />
 

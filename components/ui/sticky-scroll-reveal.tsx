@@ -22,11 +22,13 @@ export const StickyScroll = ({
     const handleScroll = () => {
       if (!ref.current) return;
       
-      const container = ref.current;
       const cards = cardRefs.current.filter(Boolean);
       const viewportHeight = window.innerHeight;
-      const viewportCenter = viewportHeight / 2;
       
+      // Add offset for navbar (approximately 80px)
+      const navbarOffset = 80;
+      
+      // Find which card is closest to being in view
       let closestCard = 0;
       let minDistance = Infinity;
       
@@ -34,11 +36,15 @@ export const StickyScroll = ({
         if (!card) return;
         
         const rect = card.getBoundingClientRect();
-        const cardCenter = rect.top + rect.height / 2;
-        const distanceToCenter = Math.abs(cardCenter - viewportCenter);
         
-        if (distanceToCenter < minDistance) {
-          minDistance = distanceToCenter;
+        // Calculate how far the card is from being in the optimal viewing position
+        // We want the card to be just below the navbar
+        const optimalPosition = navbarOffset + 50; // 50px buffer below navbar
+        const distanceFromOptimal = Math.abs(rect.top - optimalPosition);
+        
+        // If this card is closer to the optimal position than any previous card
+        if (distanceFromOptimal < minDistance) {
+          minDistance = distanceFromOptimal;
           closestCard = index;
         }
       });
@@ -47,85 +53,93 @@ export const StickyScroll = ({
     };
     
     window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Initial check
+    // Initial check after a short delay to ensure all elements are properly rendered
+    setTimeout(handleScroll, 100);
     
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Removed background colors array since we're using a consistent background
   const backgroundColors = [
-    "rgb(239 246 255)", // blue-50
-    "rgb(239 246 255)", // blue-50
-    "rgb(239 246 255)", // blue-50
+    "rgb(239 246 255)", // blue-50 for all cards
   ];
   
+  // Removed gradient variations since we're using a consistent style
   const linearGradients = [
-    "linear-gradient(to bottom right, rgb(59 130 246), rgb(37 99 235))", // blue-500 to blue-600
-    "linear-gradient(to bottom right, rgb(59 130 246), rgb(37 99 235))", // blue-500 to blue-600
-    "linear-gradient(to bottom right, rgb(59 130 246), rgb(37 99 235))", // blue-500 to blue-600
+    "none", // No gradient, we'll use the image itself
   ];
 
   const [backgroundGradient, setBackgroundGradient] = useState(linearGradients[0]);
 
-  useEffect(() => {
-    setBackgroundGradient(linearGradients[activeCard % linearGradients.length]);
-  }, [activeCard]);
-
   return (
     <motion.div
       animate={{
-        backgroundColor: backgroundColors[activeCard % backgroundColors.length],
+        backgroundColor: backgroundColors[0],
       }}
-      className="relative flex min-h-[30rem] justify-center space-x-10 rounded-2xl p-10 border border-blue-100"
+      className="relative flex flex-col md:flex-row min-h-[30rem] rounded-2xl p-6 md:p-10 border border-blue-100"
       ref={ref}
     >
-      <div className="div relative flex items-start px-4">
-        <div className="max-w-2xl">
+      {/* Content column */}
+      <div className="w-full md:w-1/2 relative">
+        <div className="space-y-24 md:space-y-28">
           {content.map((item, index) => (
             <div 
               key={item.title + index} 
-              className="my-20"
+              className="relative"
               ref={(el: HTMLDivElement | null) => {
                 if (cardRefs.current) {
                   cardRefs.current[index] = el;
                 }
               }}
             >
-              <motion.h2
-                initial={{
-                  opacity: 0,
-                }}
+              <motion.div
                 animate={{
-                  opacity: activeCard === index ? 1 : 0.3,
+                  opacity: activeCard === index ? 1 : 0.4,
                 }}
-                className="text-2xl font-bold text-gray-900"
+                transition={{ duration: 0.3 }}
               >
-                {item.title}
-              </motion.h2>
-              <motion.p
-                initial={{
-                  opacity: 0,
-                }}
-                animate={{
-                  opacity: activeCard === index ? 1 : 0.3,
-                }}
-                className="text-lg mt-6 max-w-sm text-gray-600"
-              >
-                {item.description}
-              </motion.p>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                  {item.title}
+                </h3>
+                <p className="text-gray-600">
+                  {item.description}
+                </p>
+              </motion.div>
+              
+              {/* Mobile-only image */}
+              <div className="mt-6 md:hidden">
+                {activeCard === index && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5 }}
+                  >
+                    {item.content}
+                  </motion.div>
+                )}
+              </div>
             </div>
           ))}
-          <div className="h-40" />
+          <div className="h-20" /> {/* Spacer at bottom */}
         </div>
       </div>
-      <div className="sticky top-0 hidden h-screen lg:flex items-center">
-        <div
-          style={{ background: backgroundGradient }}
-          className={cn(
-            "h-80 w-96 overflow-hidden rounded-2xl bg-white shadow-lg flex items-center justify-center",
-            contentClassName,
-          )}
-        >
-          {content[activeCard].content ?? null}
+      
+      {/* Image column */}
+      <div className="hidden md:block w-1/2 relative">
+        <div className="sticky top-20 pt-4 pb-4 h-[500px] overflow-hidden">
+          {content.map((item, index) => (
+            <motion.div 
+              key={index}
+              initial={{ opacity: 0 }}
+              animate={{ 
+                opacity: activeCard === index ? 1 : 0,
+              }}
+              transition={{ duration: 0.4 }}
+              className={`absolute inset-0 flex items-start justify-center ${activeCard === index ? 'z-10' : 'z-0'}`}
+            >
+              {item.content}
+            </motion.div>
+          ))}
         </div>
       </div>
     </motion.div>

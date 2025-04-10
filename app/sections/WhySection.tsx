@@ -14,8 +14,8 @@ const features = [
                 <Image
                     src="/images/SVG/test1.jpg"
                     alt="AI Platform Overview"
-                    width={600}
-                    height={600}
+                    width={400}
+                    height={300}
                     className="object-cover rounded-lg shadow-lg"
                     unoptimized
                 />

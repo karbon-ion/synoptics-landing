@@ -5,21 +5,21 @@ import Link from 'next/link';
 const Footer = () => {
   const navigation = {
     platform: [
-      { name: 'Enterprise RAG', href: '#' },
-      { name: 'AI Agent', href: '#' },
-      { name: 'Workflows', href: '#' },
-      { name: 'Evaluations', href: '#' },
+      { name: 'Enterprise RAG', href: '/enterprise-rag' },
+      { name: 'AI Agent', href: '/enterprise-ai-agent' },
+      { name: 'Workflows', href: '/workflow' },
+      { name: 'Evaluations', href: '/enterprise-rag' },
       { name: 'SynoGuard', href: '/syno-guard' },
     ],
     services: [
-      { name: 'AI Consulting', href: '#' },
-      { name: 'Fine-tuning & Optimization', href: '#' },
+      { name: 'AI Consulting', href: '/ai-consulting' },
+      { name: 'Fine-tuning & Optimization', href: '/fine-tuning' },
     ],
     resources: [
-      { name: 'Blog', href: '#' },
-      { name: 'Tutorials', href: '#' },
-      { name: 'Quick Start AI', href: '#' },
-      { name: 'User Guide', href: '#' },
+      { name: 'Blog', href: '/blogs' },
+      { name: 'Tutorials', href: '/tutorials' },
+      // { name: 'Quick Start AI', href: '/quick-start' },
+      // { name: 'User Guide', href: '/user-guide' },
     ],
     standalone: [
       { name: '', href: '#' },
