@@ -11,7 +11,7 @@ const features = [
         content: (
             <div className="w-full h-full flex items-center justify-center">
                 <Image
-                    src="/why.png"
+                    src="/images/SVG/Precision at scale.svg"
                     alt="AI Platform Overview"
                     width={300}
                     height={300}
@@ -25,10 +25,13 @@ const features = [
         description: 'Receive personalized, ongoing assistance to resolve complex challenges and optimize workflows.',
         content: (
             <div className="w-full h-full flex items-center justify-center">
-                <div className="p-4 text-white text-center">
-                    <div className="text-4xl mb-4">🔒</div>
-                    <div className="font-semibold">Secure Data Environment</div>
-                </div>
+                <Image
+                    src="/images/SVG/accelrate task copy 5.svg"
+                    alt="AI Platform Overview"
+                    width={300}
+                    height={300}
+                    className="object-cover rounded-3xl shadow-xl border border-blue-100"
+                />
             </div>
         )
     },
@@ -37,11 +40,14 @@ const features = [
         description: 'Improve the accuracy and relevance of retrieved information for better insights and decision-making.',
         content: (
             <div className="w-full h-full flex items-center justify-center">
-                <div className="p-4 text-white text-center">
-                    <div className="text-4xl mb-4">⚙️</div>
-                    <div className="font-semibold">Advanced Controls</div>
-                </div>
-            </div>
+            <Image
+                src="/images/SVG/Human Guided ai.svg"
+                alt="AI Platform Overview"
+                width={300}
+                height={300}
+                className="object-cover rounded-3xl shadow-xl border border-blue-100"
+            />
+        </div>
         )
     },
     {
@@ -49,11 +55,14 @@ const features = [
         description: 'Maintain system integrity with continuous security and performance oversight.',
         content: (
             <div className="w-full h-full flex items-center justify-center">
-                <div className="p-4 text-white text-center">
-                    <div className="text-4xl mb-4">🚀</div>
-                    <div className="font-semibold">Flexible Deployment</div>
-                </div>
-            </div>
+            <Image
+                src="/images/SVG/grade control.svg"
+                alt="AI Platform Overview"
+                width={300}
+                height={300}
+                className="object-cover rounded-3xl shadow-xl border border-blue-100"
+            />
+        </div>
         )
     },
     {
@@ -61,11 +70,14 @@ const features = [
         description: 'Stay ahead of the competition with advanced AI strategies tailored to your business needs.',
         content: (
             <div className="w-full h-full flex items-center justify-center">
-                <div className="p-4 text-white text-center">
-                    <div className="text-4xl mb-4">🛡️</div>
-                    <div className="font-semibold">Safety First</div>
-                </div>
-            </div>
+            <Image
+                src="/images/SVG/accelrate task copy 16.svg"
+                alt="AI Platform Overview"
+                width={300}
+                height={300}
+                className="object-cover rounded-3xl shadow-xl border border-blue-100"
+            />
+        </div>
         )
 
     }

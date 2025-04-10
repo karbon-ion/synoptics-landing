@@ -12,7 +12,7 @@ const features = [
             <div className="w-full h-full flex items-center justify-center">
                 <div className="p-6 flex flex-col items-center">
                 <Image
-                    src="/images/SVG/test1.jpg"
+                    src="/images/SVG/Faster Execution .svg"
                     alt="AI Platform Overview"
                     width={400}
                     height={300}
