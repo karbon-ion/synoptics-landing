@@ -247,7 +247,7 @@ export const NavbarMenu = () => {
               </div>
             </MenuItem>
 
-            <MenuItem setActive={setActive} active={active} item="Synoguard" href="/syno-guard" />
+            <MenuItem setActive={setActive} active={active} item="SynoGuard" href="/syno-guard" />
 
             <MenuItem setActive={setActive} active={active} item="Services">
               <div className="grid gap-4 w-64">
