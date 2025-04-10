@@ -1,5 +1,6 @@
 'use client';
 
+import { Button } from '@/components/ui/Button';
 import Link from 'next/link';
 
 // Process card component for reusability and consistent styling
@@ -66,12 +67,14 @@ const ServiceProcessSection = () => {
             transform standard models into high-performance machines—built exclusively for your business.
           </p>
           
-          <Link
-            href="/contact"
-            className="inline-flex items-center px-8 py-3.5 text-base font-medium text-white bg-gradient-to-r from-[#00CCEB] to-[#3A49FF] rounded-lg hover:opacity-90 transition-all duration-200 shadow-sm hover:shadow-md"
-          >
+          <Button
+                    href="#contact" 
+                    variant="primary"
+                    size="lg"
+                    className="mb-10 sm:mb-16"
+                >
             Consult for Fine-Tuning Session
-          </Link>
+          </Button>
         </div>
         
         {/* Process cards */}

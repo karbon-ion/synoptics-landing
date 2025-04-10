@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Button } from '@/components/ui/Button';
 
 // Technique button component for desktop view
 const TechniqueButton = ({ 
@@ -207,12 +208,14 @@ const TechniquesSection = () => {
           </p>
           
           <div className="flex justify-center">
-            <Link
-              href="/docs"
-              className="inline-flex items-center px-6 py-2.5 text-sm font-medium text-white bg-[#00A3FF] rounded-lg hover:bg-[#0096eb] transition-colors duration-200"
-            >
+          <Button 
+                    href="#contact" 
+                    variant="primary"
+                    size="lg"
+                    className="mb-10 sm:mb-16"
+                >
               Read Docs
-            </Link>
+            </Button>
           </div>
         </div>
         

@@ -1,5 +1,6 @@
 'use client'
 import { InfiniteMovingTags } from "@/components/ui/infinite-moving-tags";
+import { Button } from "@/components/ui/Button";
 
 const agentTags = [
     "Chat Support Agent",
@@ -36,12 +37,14 @@ export default function Ideas() {
                 <p className="text-gray-600 mb-8 sm:mb-12 max-w-2xl mx-auto px-4">
                     Focus on what matters—turn processes into practical, automated solutions that work.
                 </p>
-                <a 
+                <Button 
                     href="#contact" 
-                    className="inline-flex items-center px-8 py-3 text-lg font-medium text-white bg-gradient-to-r from-blue-400 to-blue-600 rounded-full hover:from-blue-500 hover:to-blue-700 transition-all duration-200 shadow-md hover:shadow-lg mb-10 sm:mb-16"
+                    variant="primary"
+                    size="lg"
+                    className="mb-10 sm:mb-16"
                 >
                     Contact Us
-                </a>
+                </Button>
 
                 {/* Tags Section */}
                 <div className="space-y-4 sm:space-y-6 overflow-hidden">

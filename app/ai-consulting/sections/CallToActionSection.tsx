@@ -1,5 +1,6 @@
 'use client';
 
+import { Button } from '@/components/ui/Button';
 import Link from 'next/link';
 
 const CallToActionSection = () => {
@@ -19,18 +20,22 @@ const CallToActionSection = () => {
         </p>
         
         <div className="flex flex-col sm:flex-row gap-5 justify-center items-center">
-          <Link
-            href="/contact"
-            className="inline-flex items-center px-8 py-3.5 text-[15px] font-semibold text-white bg-gradient-to-r from-[#00CCEB] to-[#3A49FF] rounded-lg hover:opacity-90 transition-all duration-200 shadow-sm hover:shadow-md min-w-[140px] justify-center"
-          >
+        <Button
+                    href="#contact" 
+                    variant="primary"
+                    size="lg"
+                    className="mb-10 sm:mb-16"
+                >
             Get in Touch
-          </Link>
-          <Link
-            href="/book-consultation"
-            className="inline-flex items-center px-8 py-3.5 text-[15px] font-semibold text-white bg-[#0F162E] border border-[#00A3FF] rounded-lg hover:bg-blue-50 transition-all duration-200 min-w-[140px] justify-center"
-          >
+          </Button>
+          <Button 
+                    href="#contact" 
+                    variant="primary"
+                    size="lg"
+                    className="mb-10 sm:mb-16"
+                >
             Book a Consultation
-          </Link>
+          </Button>
         </div>
       </div>
     </section>

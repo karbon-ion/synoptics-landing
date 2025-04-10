@@ -1,6 +1,7 @@
 'use client';
 import Link from 'next/link';
 import { BackgroundGradientAnimation } from '@/components/ui/background-gradient-animation';
+import { Button } from '@/components/ui/Button';
 
 const Hero = () => {
   return (
@@ -29,12 +30,14 @@ const Hero = () => {
             help deliver value from AI investments faster with better data by providing an end-to-end
             solution to manage the entire ML lifecycle.
           </p>
-          <Link 
-            href="/contact"
-            className="inline-flex items-center px-8 py-3 text-lg font-medium text-white bg-blue-500 rounded-lg hover:bg-blue-600 transition-colors duration-200"
-          >
+          <Button 
+                    href="#contact" 
+                    variant="primary"
+                    size="lg"
+                    className="mb-10 sm:mb-16"
+                > 
             Book a demo
-          </Link>
+          </Button>
         </div>
       {/* </BackgroundGradientAnimation> */}
     </div>

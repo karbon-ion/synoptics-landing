@@ -1,5 +1,6 @@
 'use client';
 
+import { Button } from '@/components/ui/Button';
 import Link from 'next/link';
 
 const Hero = () => {
@@ -22,12 +23,14 @@ const Hero = () => {
         </div>
         
         <div className="flex justify-center">
-          <Link
-            href="/contact"
-            className="inline-flex items-center px-8 py-3.5 text-base font-medium text-white bg-gradient-to-r from-[#00CCEB] to-[#3A49FF] rounded-lg hover:opacity-90 transition-all duration-200 shadow-sm hover:shadow-md min-w-[140px] justify-center"
-          >
+        <Button
+                    href="#contact" 
+                    variant="primary"
+                    size="lg"
+                    className="mb-10 sm:mb-16"
+                >
             Request a Demo
-          </Link>
+          </Button>
         </div>
       </div>
     </section>

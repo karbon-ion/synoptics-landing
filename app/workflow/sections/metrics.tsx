@@ -1,5 +1,6 @@
 'use client'
 
+import { Button } from "@/components/ui/Button";
 import CardStack from "@/components/ui/card-stack";
 import { useScroll } from "framer-motion";
 import { useRef } from "react";
@@ -78,13 +79,14 @@ export default function Metrics() {
                     <p className="text-gray-600 mb-6 md:mb-8 px-2">
                     Route queries to the right expert, consolidate insights across agents, and deliver precise, context-aware outputs—instantly.
                     </p>
-                    <a
-                        href="#docs"
-                        className="inline-block px-6 sm:px-8 py-3 sm:py-4 bg-[#00A3FF] text-white rounded-full 
-                            font-semibold hover:bg-[#0095eb] transition-all text-sm sm:text-base"
-                    >
+                    <Button
+                    href="#contact" 
+                    variant="primary"
+                    size="lg"
+                    className="mb-10 sm:mb-16"
+                >
                         Request a Demo
-                    </a>
+                    </Button>
                 </div>
 
                 {/* Cards Section */}
@@ -126,13 +128,14 @@ export default function Metrics() {
                                         ))}
                                     </div>
                                     {cardIndex === data.length - 1 && (
-                                        <a
-                                            href="#learn"
-                                            className="inline-block mt-8 px-6 py-2 bg-[#00A3FF] text-white 
-                                                rounded-full font-semibold hover:bg-[#0095eb] transition-all text-sm sm:text-base"
-                                        >
+                                       <Button 
+                                       href="#contact" 
+                                       variant="primary"
+                                       size="lg"
+                                       className="mb-10 sm:mb-16"
+                                   >
                                             Learn More
-                                        </a>
+                                        </Button>
                                     )}
                                 </div>
                             </div>
