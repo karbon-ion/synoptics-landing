@@ -34,12 +34,14 @@ const CtaBanner = () => {
               Limited Spots Available. Reserve Yours Now!
             </p> */}
             
-            <Link
-              href="/syno-guard"
-              className="inline-flex items-center px-6 py-3 text-base font-medium text-white bg-[#00A3FF] rounded-lg hover:bg-[#0096eb] transition-colors duration-200 shadow-sm"
-            >
+            <Button 
+                    href="/syno-guard" 
+                    variant="primary"
+                    size="lg"
+                    className="mb-10 sm:mb-16"
+                >
               Discover Enterprise AI Security 
-            </Link>
+            </Button>
           </div>
           
           {/* Right side - Image */}

@@ -189,6 +189,11 @@ export const NavbarMenu = () => {
     { name: 'AI Consulting', href: '/ai-consulting', description: 'Enterprise AI Solutions' },
   ];
 
+  const resourcesItems = [
+    { name: 'Blog', href: '/blogs', description: 'Latest insights and updates' },
+    { name: 'Tutorials', href: '/tutorials', description: 'Step-by-step guides' },
+  ];
+
   return (
     <div className={`fixed w-full left-0 top-0 z-50 transition-all duration-300 flex justify-center items-center ${scrolled ? 'py-2' : 'py-6'}`}>
       <div className="max-w-7xl w-full flex justify-center">
@@ -264,7 +269,25 @@ export const NavbarMenu = () => {
               </div>
             </MenuItem>
 
-            <MenuItem setActive={setActive} active={active} item="Resources" href="/resources" />
+            <MenuItem setActive={setActive} active={active} item="Resources">
+              <div className="grid gap-4 w-64">
+                {resourcesItems.map((item) => (
+                  <div key={item.name} className="w-full">
+                    <Link 
+                      href={item.href}
+                      className="group flex flex-col py-2 px-2 hover:bg-gray-50 rounded-lg transition-colors"
+                    >
+                      <p className="text-sm font-medium text-gray-900 group-hover:text-blue-600">
+                        {item.name}
+                      </p>
+                      <p className="text-xs text-gray-500 group-hover:text-blue-500">
+                        {item.description}
+                      </p>
+                    </Link>
+                  </div>
+                ))}
+              </div>
+            </MenuItem>
             <MenuItem setActive={setActive} active={active} item="About us" href="/about" />
             <MenuItem setActive={setActive} active={active} item="Contact us" href="/contact" />
           </div>
