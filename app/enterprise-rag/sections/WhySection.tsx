@@ -12,7 +12,7 @@ const features = [
             <div className="w-full h-full flex items-center justify-center">
                 <div className="p-6 flex flex-col items-center">
                 <Image
-                    src="/images/SVG/test1.jpg"
+                    src="/images/SVG/Precision at scale.svg"
                     alt="AI Platform Overview"
                     width={400}
                     height={300}
@@ -30,7 +30,7 @@ const features = [
             <div className="w-full h-full flex items-center justify-center">
                 <div className="p-6 flex flex-col items-center">
                     <Image
-                        src="/images/SVG/test4.jpg"
+                        src="/images/SVG/accelrate task copy 15.svg"
                         alt="Data Security"
                         width={400}
                         height={300}
@@ -48,7 +48,7 @@ const features = [
             <div className="w-full h-full flex items-center justify-center">
                 <div className="p-6 flex flex-col items-center">
                     <Image
-                        src="/images/SVG/test1.jpg"
+                        src="/images/SVG/accelrate task copy 11.svg"
                         alt="Enterprise Controls"
                         width={400}
                         height={300}
@@ -66,7 +66,7 @@ const features = [
             <div className="w-full h-full flex items-center justify-center">
                 <div className="p-6 flex flex-col items-center">
                     <Image
-                        src="/images/SVG/test3.jpg"
+                        src="/images/SVG/accelrate task copy 4.svg"
                         alt="Cloud Infrastructure"
                         width={400}
                         height={300}
@@ -85,8 +85,7 @@ const WhySection = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="mb-12">
                     <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                    Why Choose Synoptix AI
-Evaluation for Enterprise? 
+                    Why Choose Synoptix AI for Evaluations?
 
                     </h2>
                     <div className="w-16 h-1 bg-blue-500"></div>

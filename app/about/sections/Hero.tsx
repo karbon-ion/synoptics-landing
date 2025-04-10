@@ -36,7 +36,7 @@ const Hero = () => {
                     size="lg"
                     className="mb-10 sm:mb-16"
                 > 
-            Book a demo
+            Want To Learn More?
           </Button>
         </div>
       {/* </BackgroundGradientAnimation> */}

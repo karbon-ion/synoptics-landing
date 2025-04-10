@@ -1,4 +1,5 @@
 "use client";
+
 import React, { useState } from "react";
 import { motion } from "motion/react";
 import Link from "next/link";
@@ -288,8 +289,8 @@ export const NavbarMenu = () => {
                 ))}
               </div>
             </MenuItem>
-            <MenuItem setActive={setActive} active={active} item="About us" href="/about" />
-            <MenuItem setActive={setActive} active={active} item="Contact us" href="/#contact" />
+            <MenuItem setActive={setActive} active={active} item="About Us" href="/about" />
+            <MenuItem setActive={setActive} active={active} item="Contact Us" href="/#contact" />
           </div>
         </Menu>
 

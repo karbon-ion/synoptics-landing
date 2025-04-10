@@ -8,7 +8,7 @@ const faqs = [
     },
     {
         question: "How does it improve AI performance?",
-        answer: "Tracks response time, accuracy, latency, hallucinations, and token usage, helping refine AI models for precision and speed."
+        answer: "Tracks response time, accuracy, hallucinations, and token usage, helping refine AI models for precision and speed."
     },
     {
         question: "Why is AI evaluation important?",
