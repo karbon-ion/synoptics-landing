@@ -73,7 +73,7 @@ const SecuritySection = () => {
               href="/demo"
               className="inline-flex items-center px-8 py-3 text-lg font-medium text-white bg-gradient-to-r from-blue-500 to-blue-600 rounded-full hover:from-blue-600 hover:to-blue-700 transition-all duration-200 shadow-md hover:shadow-lg"
             >
-              Optimize Your Business with Synoptix AI 
+              Optimise Your Business with Synoptix AI 
             </Link>
           </div>
         </div>
