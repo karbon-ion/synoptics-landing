@@ -16,7 +16,7 @@ const features = [
                     alt="AI Platform Overview"
                     width={400}
                     height={300}
-                    className="object-cover rounded-lg shadow-lg"
+                    className="object-cover rounded-3xl shadow-xl border border-blue-100"
                     unoptimized
                 />
                 </div>
@@ -34,7 +34,7 @@ const features = [
                         alt="Data Security"
                         width={400}
                         height={300}
-                        className="object-cover rounded-lg shadow-lg"
+                        className="object-cover rounded-3xl shadow-xl border border-blue-100"
                         unoptimized
                     />
                 </div>
@@ -52,7 +52,7 @@ const features = [
                         alt="Enterprise Controls"
                         width={400}
                         height={300}
-                        className="object-cover rounded-lg shadow-lg"
+                        className="object-cover rounded-3xl shadow-xl border border-blue-100"
                         unoptimized
                     />
                 </div>
@@ -70,7 +70,7 @@ const features = [
                         alt="Cloud Infrastructure"
                         width={400}
                         height={300}
-                        className="object-cover rounded-lg shadow-lg"
+                        className="object-cover rounded-3xl shadow-xl border border-blue-100"
                         unoptimized
                     />
                 </div>

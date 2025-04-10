@@ -113,6 +113,7 @@ export const StickyScroll = ({
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
+                    className="rounded-2xl overflow-hidden"
                   >
                     {item.content}
                   </motion.div>
@@ -126,7 +127,7 @@ export const StickyScroll = ({
       
       {/* Image column */}
       <div className="hidden md:block w-1/2 relative">
-        <div className="sticky top-20 pt-4 pb-4 h-[500px] overflow-hidden">
+        <div className="sticky top-20 pt-4 pb-4 h-[500px] overflow-hidden rounded-3xl">
           {content.map((item, index) => (
             <motion.div 
               key={index}

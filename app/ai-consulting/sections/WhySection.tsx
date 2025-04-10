@@ -15,7 +15,7 @@ const features = [
                     alt="AI Platform Overview"
                     width={300}
                     height={300}
-                    className="object-cover rounded-md"
+                    className="object-cover rounded-3xl shadow-xl border border-blue-100"
                 />
             </div>
         )
