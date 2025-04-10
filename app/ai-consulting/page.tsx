@@ -20,7 +20,7 @@ export default function AIConsulting() {
       <WhySection/>
       <TestimonialSection />
       <TechniquesSection/>
-      <BlogSection />
+      {/* <BlogSection /> */}
       {/* <ContactSection /> */}
     </>
   );

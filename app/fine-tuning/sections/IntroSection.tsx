@@ -1,5 +1,6 @@
 'use client';
 
+import { Button } from '@/components/ui/Button';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -30,12 +31,14 @@ const IntroSection = () => {
             </div>
             
             <div>
-              <Link 
-                href="/contact"
-                className="inline-flex items-center px-8 py-3.5 text-base font-medium text-white bg-gradient-to-r from-[#00CCEB] to-[#3A49FF] rounded-lg hover:opacity-90 transition-all duration-200 shadow-sm hover:shadow-md"
-              >
+            <Button
+                    href="#contact" 
+                    variant="primary"
+                    size="lg"
+                    className="mb-10 sm:mb-16"
+                >
                 Book Your Fine-Tune Session
-              </Link>
+            </Button>
             </div>
           </div>
           

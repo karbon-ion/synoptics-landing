@@ -1,3 +1,5 @@
+import { Button } from "@/components/ui/Button";
+
 export default function RagHero() {
     return (
         <section className="min-h-screen flex flex-col items-center justify-center text-center px-4 py-16 bg-gradient-to-b bg-[#f0f5ff]">
@@ -11,15 +13,14 @@ export default function RagHero() {
             {/* <p className="text-2xl md:text-3xl font-semibold text-gray-800 max-w-3xl mb-12">
                 The future of work isn’t coming—it’s here.
             </p> */}
-            <a
-                href="#demo"
-                className="px-8 py-4 text-xl font-semibold text-white rounded-full 
-                    bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 
-                    hover:to-blue-700 transition-all duration-300 shadow-lg 
-                    hover:shadow-xl"
-            >
+            <Button
+                    href="#contact" 
+                    variant="primary"
+                    size="lg"
+                    className="mb-10 sm:mb-16"
+                >   
                 Get Your Free Security Demo
-            </a>
+            </Button>
         </section>
     );
 }

@@ -1,6 +1,7 @@
 'use client'
 
 import Image from 'next/image'
+import { Button } from '@/components/ui/Button'
 
 export default function SmallFoot({title, buttonOne, buttonTwo}: {title: string, buttonOne: string, buttonTwo: string}) {
     return (
@@ -25,18 +26,22 @@ export default function SmallFoot({title, buttonOne, buttonTwo}: {title: string,
                         {title}
                     </h2>
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                        <a
+                        <Button
                             href="#demo"
-                            className="inline-flex items-center justify-center px-6 py-3 bg-[#0066FF] text-white font-medium rounded-full hover:bg-[#0052CC] transition-colors min-w-[200px]"
+                            variant="primary"
+                            size="lg"
+                            className="min-w-[200px]"
                         >
                             {buttonOne}
-                        </a>
-                        <a
+                        </Button>
+                        <Button
                             href="#talk"
-                            className="inline-flex items-center justify-center px-6 py-3 bg-[#1A1A1A] text-white font-medium rounded-full hover:bg-[#333333] transition-colors min-w-[200px]"
+                            variant="outline"
+                            size="lg"
+                            className="min-w-[200px] bg-[#1A1A1A] text-white border-[#1A1A1A] hover:bg-[#333333] hover:border-[#333333]"
                         >
                             {buttonTwo}
-                        </a>
+                        </Button>
                     </div>
                 </div>
             </div>
