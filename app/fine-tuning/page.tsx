@@ -9,6 +9,7 @@ import ContactSection from '../sections/ContactSection';
 import WhySection from './sections/WhySection';
 import ResultSection from './sections/ResultsSection';
 import FAQ from './sections/faq';
+import SmallFoot from '../sections/smallFoot';
 
 export default function FineTuning() {
   return (
@@ -22,6 +23,7 @@ export default function FineTuning() {
       <WhySection />
       <ResultSection />
       <FAQ />
+      <SmallFoot title="SynoGuard" buttonOne="Request a Demo" buttonTwo="Need answers? Let's Talk." />
     </>
   );
 }
