@@ -10,6 +10,7 @@ const CtaBanner = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           {/* Left side - Text content */}
           <div className="text-left w-full md:w-1/2">
+          <h2 className="text-sm font-medium uppercase mb-4">Heading</h2>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Claim Your Free AI Strategy Session
             </h2>
