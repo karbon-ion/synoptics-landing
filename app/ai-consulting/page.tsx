@@ -25,7 +25,7 @@ export default function AIConsulting() {
       <FAQ/>
       {/* <BlogSection /> */}
       {/* <ContactSection /> */}
-      <SmallFoot title="Something" buttonOne="Request a Demo" buttonTwo="Need answers? Let's Talk." />
+      <SmallFoot title="Take the Next Step " buttonOne="Request an AI Strategy Briefing" buttonTwo="Need answers? Let's Talk." />
     </>
   );
 }

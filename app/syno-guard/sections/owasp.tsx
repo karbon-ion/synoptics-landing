@@ -97,7 +97,7 @@ const OWASP = () => {
                     size="lg"
                     className="mb-10 sm:mb-16"
                 >
-              Contact us for more information
+              Contact Us For More Information
             </Button>
           </div>
         </div>

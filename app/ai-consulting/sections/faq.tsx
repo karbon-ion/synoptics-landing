@@ -3,20 +3,24 @@ import { useState } from 'react';
 
 const faqs = [
     {
-        question: "What is RAG95?",
-        answer: "An advanced AI method that improves how models retrieve and generate answers from large datasets."
+        question: "Who is Synoptix AI Consulting for?",
+        answer: "Our services are built for enterprises across industries seeking to integrate AI, automate workflows, and make smarter, data-driven decisions. "
     },
     {
-        question: "How is RAG95 different from traditional RAG?",
-        answer: "RAG95 improves retrieval speed and precision by using quantum-inspired algorithms, offering better context matching and lower latency compared to standard RAG systems."
+        question: "How long does implementation take? ",
+        answer: "We move fast. With quick assessments, pilot programs, and phased rollouts, you start seeing results without the wait. "
     },
     {
-        question: "Does Quantum RAG require RAG95 computing?",
-        answer: "ENo. RAG95 runs on classical hardware. It uses quantum-inspired techniques, not actual quantum processors."
+        question: "Do I need existing AI tools or infrastructure? ",
+        answer: "Not at all. Whether you're starting from zero or scaling existing tools, we tailor our approach to your current environment. "
     },
     {
-        question: "What are the use cases of RAG95?",
-        answer: "RAG95 is ideal for enterprise search, knowledge management, legal research, customer support, and any scenario requiring accurate, real-time information retrieval."
+        question: "Is my data secure with Synoptix? ",
+        answer: "Yes—your data stays within your enterprise. Our platform is built with robust security and compliance at its core. "
+    },
+    {
+        question: "What makes Synoptix AI Consulting different? ",
+        answer: "We combine expert consulting with our no-code AI platform to deliver faster deployments, smarter automation, and long-term strategic value. "
     }
 ];
 
