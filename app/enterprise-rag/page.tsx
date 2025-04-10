@@ -5,12 +5,13 @@ import Features from "./sections/features";
 import Ideas from "./sections/ideas";
 import Metrics from "./sections/metrics";
 // import Security from "./sections/security";
-import WhySection from "../sections/WhySection";
 import RagStatsSection from "./sections/rag-stats";
 // import QuantumSection from "./sections/quantum";
 import FAQ from "./sections/faq";
 import SmallFoot from "../sections/smallFoot";
 import IntroSection from "./sections/IntroSection";
+import TechniquesSection from "./sections/TechniquesSection";
+import WhySection from "./sections/WhySection";
 export default function RagApplication() {
     return (
         <main className="w-full">
@@ -18,7 +19,8 @@ export default function RagApplication() {
             <IntroSection />
             {/* <Features /> */}
             <Ideas />
-            <Metrics />
+            {/* <Metrics /> */}
+            <TechniquesSection />
             {/* <Security /> */}
             <WhySection />
             <RagStatsSection />
