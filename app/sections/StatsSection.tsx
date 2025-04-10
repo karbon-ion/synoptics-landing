@@ -144,7 +144,7 @@ const StatsSection = () => {
             scroll={true}
             className="inline-flex items-center px-8 py-3 text-lg font-medium text-white bg-gradient-to-r from-blue-400 to-blue-600 rounded-full hover:from-blue-500 hover:to-blue-700 transition-all duration-200 shadow-md hover:shadow-lg mb-3"
           >
-            Optimize Your Business with Synoptix AI 
+            Optimise Your Business with Synoptix AI 
           </Link>
           
           <a

@@ -79,10 +79,10 @@ Empower cross-functional teams with AI agents that work securely, reliably, and 
                     </div>
                     <div className="relative p-8 rounded-3xl bg-gradient-to-b from-white to-[#F7FAFF] border border-[#E2E8F0] md:col-span-1">
                         <h3 className="text-xl font-semibold mb-4">
-                            Flexibility to Choose the Best AI Model
+                        Enterprise-Grade Security & Compliance
                         </h3>
                         <p className="text-gray-600 text-sm leading-relaxed">
-                            We believe in giving you options. Our platform is LLM-agnostic, meaning you can choose the AI model that works best for you. Whether it's OpenAI, Meta, DeepSeek or Mistral you have the flexibility to switch between providers and stay at the cutting edge of AI technology.
+                        Synoptix AI is built for enterprises that demand security and trust. All data remains securely within your infrastructure—never stored externally. With built-in access controls, audit logs, and governance tools, you can deploy AI confidently while staying aligned with global compliance standards.
                         </p>
                     </div>
                 </div>
