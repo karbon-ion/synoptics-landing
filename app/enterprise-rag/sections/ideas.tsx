@@ -38,7 +38,7 @@ export default function Ideas() {
                     Focus on what matters—turn processes into practical, automated solutions that work.
                 </p>
                 <Button 
-                    href="#contact" 
+                    href="/#contact" 
                     variant="primary"
                     size="lg"
                     className="mb-10 sm:mb-16"

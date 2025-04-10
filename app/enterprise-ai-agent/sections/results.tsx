@@ -31,7 +31,7 @@ const stats = [
   }
 ];
 
-const ResultSection = () => {
+const ResultSection = () => { 
   return (
     <section className="py-24 relative overflow-hidden">
       {/* Gradient background */}

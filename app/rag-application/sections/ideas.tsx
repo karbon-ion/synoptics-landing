@@ -37,7 +37,7 @@ export default function Ideas() {
                     Focus on what matters—turn processes into practical, automated solutions that work.
                 </p>
                 <a 
-                    href="#contact" 
+                    href="/#contact" 
                     className="inline-flex items-center px-8 py-3 text-lg font-medium text-white bg-gradient-to-r from-blue-400 to-blue-600 rounded-full hover:from-blue-500 hover:to-blue-700 transition-all duration-200 shadow-md hover:shadow-lg mb-10 sm:mb-16"
                 >
                     Contact Us

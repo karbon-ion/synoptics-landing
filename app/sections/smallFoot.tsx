@@ -27,7 +27,7 @@ export default function SmallFoot({title, buttonOne, buttonTwo}: {title: string,
                     </h2>
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                         <Button
-                            href="#demo"
+                            href="/#contact"
                             variant="primary"
                             size="lg"
                             className="min-w-[200px]"
@@ -35,7 +35,7 @@ export default function SmallFoot({title, buttonOne, buttonTwo}: {title: string,
                             {buttonOne}
                         </Button>
                         <Button
-                            href="#talk"
+                            href="/#contact"
                             variant="outline"
                             size="lg"
                             className="min-w-[200px] bg-[#1A1A1A] text-white border-[#1A1A1A] hover:bg-[#333333] hover:border-[#333333]"

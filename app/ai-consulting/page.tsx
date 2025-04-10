@@ -9,6 +9,8 @@ import ResultSection from './sections/ResultSection';
 import TestimonialSection from './sections/TestimonialSection';
 import BlogSection from './sections/blogSection';
 import TechniquesSection from './sections/TechniquesSection';
+import SmallFoot from '../sections/smallFoot';
+import FAQ from './sections/faq';
 
 export default function AIConsulting() {
   return (
@@ -20,8 +22,10 @@ export default function AIConsulting() {
       <WhySection/>
       <TestimonialSection />
       <TechniquesSection/>
+      <FAQ/>
       {/* <BlogSection /> */}
       {/* <ContactSection /> */}
+      <SmallFoot title="Something" buttonOne="Request a Demo" buttonTwo="Need answers? Let's Talk." />
     </>
   );
 }

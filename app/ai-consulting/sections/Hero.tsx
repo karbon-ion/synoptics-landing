@@ -13,7 +13,7 @@ export default function RagHero() {
               Your data holds the answers—put it to work and take control.
           </p> */}
         <Button 
-                    href="#contact" 
+                    href="/#contact" 
                     variant="primary"
                     size="lg"
                     className="mb-10 sm:mb-16"
