@@ -105,20 +105,23 @@ const Feature = ({
   description,
   icon,
   index,
+  link,
 }: {
   title: string;
   description: string;
   icon: React.ReactNode;
   index: number;
+  link: string;
 }) => {
   return (
-    <div
-      className={cn(
-        "flex flex-col lg:border-r py-10 relative group/feature bg-white/40 backdrop-blur-sm",
-        (index === 0 || index === 4) && "lg:border-l border-blue-100",
-        index < 4 && "lg:border-b border-blue-100"
-      )}
-    >
+    <Link href={link}>
+      <div
+        className={cn(
+          "flex flex-col lg:border-r py-10 relative group/feature bg-white/40 backdrop-blur-sm cursor-pointer hover:shadow-md transition-shadow duration-200",
+          (index === 0 || index === 4) && "lg:border-l border-blue-100",
+          index < 4 && "lg:border-b border-blue-100"
+        )}
+      >
       {index < 4 && (
         <div className="opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-t from-white/80 to-transparent pointer-events-none" />
       )}
@@ -137,6 +140,7 @@ const Feature = ({
       <p className="text-sm text-gray-600 max-w-xs relative z-10 px-10">
         {description}
       </p>
-    </div>
+      </div>
+    </Link>
   );
 };
