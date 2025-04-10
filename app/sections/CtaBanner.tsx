@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
+import { Button } from '@/components/ui/Button';
 
 const CtaBanner = () => {
   return (
@@ -33,12 +34,14 @@ const CtaBanner = () => {
               Limited Spots Available. Reserve Yours Now!
             </p>
             
-            <Link
-              href="/contact"
-              className="inline-flex items-center px-6 py-3 text-base font-medium text-white bg-[#00A3FF] rounded-lg hover:bg-[#0096eb] transition-colors duration-200 shadow-sm"
-            >
+            <Button
+                    href="#contact" 
+                    variant="primary"
+                    size="lg"
+                    className="mb-10 sm:mb-16"
+                >
               Speak with an AI Expert Today
-            </Link>
+            </Button>
           </div>
           
           {/* Right side - Image */}
