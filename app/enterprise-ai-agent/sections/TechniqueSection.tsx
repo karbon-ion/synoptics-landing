@@ -121,35 +121,35 @@ const TechniquesSection = () => {
       name: "Code Gen agents",
       description: "Eliminate redundant tasks and empower developers to focus on innovation. Synoptix Code Gen Agents generate clean, efficient code and optimize logic in real time—reducing development cycles and minimizing human error across your engineering workflows.",
       benefits: [
-       ""
+       
       ]
     },
     {
       name: "Generative agents",
       description: " From content generation to complex creative outputs, Synoptix Generative Agents convert ideas into actionable deliverables. Generate text, visuals, and code at scale—adapting instantly to your needs and enhancing productivity across teams.",
       benefits: [
-        ""
+        
       ]
     },
     {
       name: "Assurance agents",
       description: "Maintain operational excellence with Synoptix Assurance Agents. These AI agents proactively monitor for inconsistencies, enforce enterprise standards, and ensure every output aligns with regulatory and organizational benchmarks.",
       benefits: [
-       ""
+       
       ]
     },
     {
       name: "Decision Support & Analytical Agents",
       description: "Empower your teams with real-time insights. Synoptix Analytical Agents analyse complex datasets, identify trends, and deliver actionable recommendations—enabling smarter, faster decision-making across the enterprise.",
       benefits: [
-        ""
+        
       ]
     },
     {
       name: "Anomalies Detection Agents",
       description: "Synoptix Anomaly Detection Agents provide continuous monitoring to detect irregularities and potential threats before they impact your business. Ensure operational integrity and security with real-time intelligence that pre-empts disruptions.",
       benefits: [
-        ""
+        
       ]
     }
   ];

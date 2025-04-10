@@ -19,9 +19,9 @@ const TechniqueButton = ({
       onClick={onClick}
       className={`group w-full ${isActive ? 'bg-gradient-to-r from-[#3A49FF] to-[#00CCEB] text-white' : 'bg-white text-gray-800'} rounded-full py-3 px-6 mb-3 flex items-center justify-between transition-all duration-200 border border-blue-100`}
     >
-      <div className="flex-1 flex items-center justify-center">
-        <span className={`inline-block w-1.5 h-1.5 ${isActive ? 'bg-white' : 'bg-blue-500'} rounded-full mr-2 flex-shrink-0`}></span>
-        <span className="text-xs font-medium">{name}</span>
+      <div className="flex-1 flex items-start justify-start">
+        <span className={`inline-block w-1.5 h-1.5 ${isActive ? 'bg-white' : 'bg-blue-500'} rounded-full mr-2 flex-shrink-0 mt-1.5`}></span>
+        <span className="text-sm font-medium text-left">{name}</span>
       </div>
       <svg 
         width="14" 

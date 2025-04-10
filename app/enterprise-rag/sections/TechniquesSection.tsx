@@ -21,7 +21,7 @@ const TechniqueButton = ({
     >
       <div className="flex-1 flex items-center justify-start"> {/* Changed justify-center to justify-start */}
         <span className={`inline-block w-1.5 h-1.5 ${isActive ? 'bg-white' : 'bg-blue-500'} rounded-full mr-2 flex-shrink-0`}></span>
-        <span className="text-xs font-medium">{name}</span>
+        <span className="text-sm font-medium text-left">{name}</span>
       </div>
       <svg 
         width="14" 
@@ -182,7 +182,7 @@ const TechniquesSection = () => {
         </div>
         
         {/* Main content area with blue background - Increased size here */}
-        <div className="bg-[#e9fcff] rounded-3xl overflow-hidden min-h-[400px]"> {/* Added min-height */}
+        <div className="bg-[#e9fcff] rounded-3xl overflow-hidden min-h-[600px]"> {/* Added min-height */}
           {/* Desktop view */}
           <div className="hidden lg:flex flex-col lg:flex-row items-stretch"> {/* Added h-full */}
             {/* Techniques column - made wider */}
