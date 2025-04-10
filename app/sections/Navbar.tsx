@@ -82,8 +82,8 @@ const Navbar = () => {
     { name: 'Services', href: '#', hasDropdown: true, dropdownState: servicesDropdownOpen, setDropdownState: setServicesDropdownOpen, buttonRef: servicesButtonRef, items: servicesDropdownItems },
     { name: 'Resources', href: '/resources' },
     // { name: 'Company', href: '/company' },
-    { name: 'About us', href: '/about' },
-    { name: 'Contact us', href: '/#contact' },
+    { name: 'About Us', href: '/about' },
+    { name: 'Contact Us', href: '/#contact' },
   ];
 
   const handleDropdownToggle = (setDropdownState: React.Dispatch<React.SetStateAction<boolean>>) => {

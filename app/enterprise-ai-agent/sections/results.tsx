@@ -91,8 +91,8 @@ const ResultSection = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         
         
-        <h2 className="text-4xl md:text-5xl text-gray-900 mb-6 max-w-4xl mx-auto">
-          RESULTS YOU CAN EXPECT
+      <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 max-w-4xl mx-auto">
+          Results You Can Expect 
         </h2>
         
        
