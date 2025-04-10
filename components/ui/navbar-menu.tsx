@@ -289,7 +289,7 @@ export const NavbarMenu = () => {
               </div>
             </MenuItem>
             <MenuItem setActive={setActive} active={active} item="About us" href="/about" />
-            <MenuItem setActive={setActive} active={active} item="Contact us" href="/contact" />
+            <MenuItem setActive={setActive} active={active} item="Contact us" href="/#contact" />
           </div>
         </Menu>
 

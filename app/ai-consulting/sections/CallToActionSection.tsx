@@ -21,7 +21,7 @@ const CallToActionSection = () => {
         
         <div className="flex flex-col sm:flex-row gap-5 justify-center items-center">
         <Button
-                    href="#contact" 
+                    href="/#contact" 
                     variant="primary"
                     size="lg"
                     className="mb-10 sm:mb-16"
@@ -29,7 +29,7 @@ const CallToActionSection = () => {
             Get in Touch
           </Button>
           <Button 
-                    href="#contact" 
+                    href="/#contact" 
                     variant="primary"
                     size="lg"
                     className="mb-10 sm:mb-16"

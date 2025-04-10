@@ -80,7 +80,7 @@ export default function Metrics() {
                     Route queries to the right expert, consolidate insights across agents, and deliver precise, context-aware outputs—instantly.
                     </p>
                     <Button
-                    href="#contact" 
+                    href="/#contact" 
                     variant="primary"
                     size="lg"
                     className="mb-10 sm:mb-16"

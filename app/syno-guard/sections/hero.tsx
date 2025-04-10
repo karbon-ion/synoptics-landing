@@ -14,7 +14,7 @@ export default function RagHero() {
                 The future of work isn’t coming—it’s here.
             </p> */}
             <Button
-                    href="#contact" 
+                    href="/#contact" 
                     variant="primary"
                     size="lg"
                     className="mb-10 sm:mb-16"

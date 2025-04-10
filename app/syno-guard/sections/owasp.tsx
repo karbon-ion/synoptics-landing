@@ -92,7 +92,7 @@ const OWASP = () => {
           
           <div className="flex justify-center">
           <Button 
-                    href="#contact" 
+                    href="/#contact" 
                     variant="primary"
                     size="lg"
                     className="mb-10 sm:mb-16"
