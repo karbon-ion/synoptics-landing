@@ -8,10 +8,10 @@ export async function POST(request: Request) {
 
     // Step 1: Get access token
     const tokenResponse = await axios.post(
-      `https://login.microsoftonline.com/f7ba4e6d-9e6b-47e3-aab6-800536bc5404/oauth2/v2.0/token`,
+      `https://login.microsoftonline.com/${process.env.GRAPH_TENANT_ID}/oauth2/v2.0/token`,
       new URLSearchParams({
-        client_id: '531570d5-b1c3-441e-afc5-b1039b538894',
-        client_secret: 'lRE8Q~MrMMc~hHIoeS9kDBIZpL45wM6Lw3K8-aum',
+        client_id: process.env.GRAPH_CLIENT_ID!,
+        client_secret: process.env.GRAPH_CLIENT_SECRET!,
         scope: "https://graph.microsoft.com/.default",
         grant_type: "client_credentials",
       }),
@@ -26,7 +26,7 @@ export async function POST(request: Request) {
 
     // Step 2: Send mail via Graph API
     const response = await axios.post(
-      `https://graph.microsoft.com/v1.0/users/hello@synoptix.ai/sendMail`,
+      `https://graph.microsoft.com/v1.0/users/${process.env.GRAPH_SENDER_EMAIL}/sendMail`,
       {
         message: {
           subject: "New contact form message",
@@ -40,7 +40,7 @@ export async function POST(request: Request) {
           toRecipients: [
             {
               emailAddress: {
-                address: "hello@synoptix.ai",
+                address: process.env.GRAPH_SENDER_EMAIL,
               },
             },
           ],
