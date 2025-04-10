@@ -10,12 +10,12 @@ const Hero = () => {
       
       <div className="max-w-7xl mt-10 mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center relative z-10">
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
-        Launch Your Enterprise AI Agent in Few Clicks
+        Launch Your Enterprise AI Agent in a Few Clicks
         </h1>
         
         <div className="space-y-5 max-w-3xl mx-auto mb-10">
           <p className="text-gray-600 text-lg">
-          Launch Your Enterprise AI Agent in Few Clicks
+          Build, deploy, and scale custom AI agents for your enterprise in just clicks. Automate tasks, boost productivity, and ignite innovation—effortlessly.
           </p>
           <p className="text-gray-700 text-lg font-medium">
           The future of AI isn’t coming—it’s here. 

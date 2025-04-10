@@ -128,7 +128,7 @@ const TechniquesSection = () => {
       ]
     },
     {
-      name: "Secure Data Ingestion for Enterprise",
+      name: "Secure Data Ingestion",
       description: "Not all data is useful—or safe. Synoptix AI ensures that only clean, structured, and relevant data is accessible by applying advanced filtering, pre-processing, and strict security controls. This prevents outdated, irrelevant, or sensitive data from entering your workflows. ",
       benefits: [
         "Role-Based Access Control (RBAC) – Restrict data access to only authorized users. ",
@@ -145,7 +145,7 @@ const TechniquesSection = () => {
       ]
     },
     {
-      name: "Accurate Responses with Built-In Validation ",
+      name: "Responses with Built-In Validation ",
       description: "Decisions should be based on facts. Synoptix AI ensures the accuracy, safety, and reliability of every response through hallucination detection, PII filtering, and real-time monitoring. Built-in learning continuously refines results, ensuring enterprises receive high-confidence, fact-checked insights. ",
       benefits: [
         "Misinformation Prevention – Detects and eliminates false or misleading data.",
@@ -153,7 +153,7 @@ const TechniquesSection = () => {
       ]
     },
     {
-      name: "Enterprise-Ready Scalability & Security ",
+      name: "Scalability & Security ",
       description: "Technology should fit your business, not disrupt it. Synoptix AI integrates effortlessly into existing IT ecosystems, scaling as your business grows while maintaining the highest security and compliance standards. ",
       benefits: [
         "Seamless IT Integration – Works within your current enterprise systems. ",

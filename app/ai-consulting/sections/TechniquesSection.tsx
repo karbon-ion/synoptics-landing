@@ -139,7 +139,7 @@ const TechniquesSection = () => {
       ]
     },
     {
-      name: "Generative AI Custom Implementation",
+      name: "Custom AI Implementation",
       description: "Deploy AI solutions tailored to your unique business needs—optimizing workflows, enhancing automation, and solving most complicated challenges .",
       benefits: [
        ""
@@ -195,7 +195,7 @@ const TechniquesSection = () => {
         {/* Header */}
         <div className="text-center mb-14">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-          Our Artificial Intelligence Consulting Services 
+          Our AI Consulting Services 
           </h2>
           
           <p className="text-gray-600 text-sm max-w-2xl mx-auto mb-6">

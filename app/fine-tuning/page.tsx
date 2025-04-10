@@ -23,7 +23,7 @@ export default function FineTuning() {
       <WhySection />
       <ResultSection />
       <FAQ />
-      <SmallFoot title="SynoGuard" buttonOne="Request a Demo" buttonTwo="Need answers? Let's Talk." />
+      <SmallFoot title="Take the Next Step" buttonOne="Request a Demo" buttonTwo="Need answers? Let's Talk." />
     </>
   );
 }

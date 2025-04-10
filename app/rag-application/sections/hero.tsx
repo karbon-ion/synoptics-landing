@@ -9,16 +9,16 @@ export default function RagHero() {
             <p className="text-xl md:text-2xl text-gray-700 max-w-4xl mb-6">
             Empower your teams with RAG95—an AI system that delivers precise, real-time responses powered by your internal business data. 
             </p>
-            <p className="text-2xl md:text-3xl font-semibold text-gray-800 max-w-3xl mb-12">
+            {/* <p className="text-2xl md:text-3xl font-semibold text-gray-800 max-w-3xl mb-12">
                 Your data holds the answers—put it to work and take control.
-            </p>
+            </p> */}
             <Button 
                     href="/#contact" 
                     variant="primary"
                     size="lg"
                     className="mb-10 sm:mb-16"
                 >
-                Get a demo
+                Request a Demo
             </Button>
         </section>
     );
