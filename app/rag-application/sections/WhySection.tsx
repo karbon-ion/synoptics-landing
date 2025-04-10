@@ -6,8 +6,8 @@ import { StickyScroll } from '@/components/ui/sticky-scroll-reveal';
 // import Picture from ''
 const features = [
     {
-        title: "Instant answers",
-        description: "Leverage quantum-powered AI to surface the most relevant insights in seconds—eliminating hours of manual searching.",
+        title: "Instant Answers",
+        description: "Leverage RAG95-powered AI to surface the most relevant insights in seconds—eliminating hours of manual searching.",
         content: (
             <div className="w-full h-full flex items-center justify-center">
                 <div className="p-6 flex flex-col items-center">
@@ -24,7 +24,7 @@ const features = [
         )
     },
     {
-        title: 'Quantum accuracy ',
+        title: 'Quantum Accuracy ',
         description: 'Make confident decisions with precise answers drawn from verified, up-to-date data sources. ',
         content: (
             <div className="w-full h-full flex items-center justify-center">
