@@ -83,17 +83,17 @@ const HeadquartersSection = () => {
         {/* Stats grid */}
         <div className="flex justify-center">
           {stats.map((stat, index) => (
-            <div key={stat.id} className="flex flex-col items-start">
-              <div className="w-full mb-4">
+            <div key={stat.id} className="flex flex-col items-center">
+              <div className="w-full mb-4 text-center">
                 
-                <h3 className="text-sm font-semibold tracking-wider uppercase text-gray-600 mb-2 text-left">
+                <h3 className="text-sm font-semibold tracking-wider uppercase text-gray-600 mb-2 text-center">
                   {stat.category}
                 </h3>
                 <div className="h-[2px] w-full bg-gradient-to-r from-blue-400 to-blue-600 rounded-full" />
               </div>
               
-              <div className="flex flex-col items-start">
-                <div className="flex items-baseline">
+              <div className="flex flex-col items-center">
+                <div className="flex items-baseline justify-center">
                   <span className="text-5xl font-bold text-gray-900">
                     {animated ? percentages[index] : '0'}
                   </span>
@@ -103,7 +103,7 @@ const HeadquartersSection = () => {
                     </span>
                   )}
                 </div>
-                <p className="mt-2 text-gray-600 text-left">
+                <p className="mt-2 text-gray-600 text-center">
                   {stat.description}
                 </p>
               </div>

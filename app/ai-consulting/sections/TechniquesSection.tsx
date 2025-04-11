@@ -214,10 +214,10 @@ const TechniquesSection = () => {
     <section className="py-24 bg-white relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> {/* Changed from max-w-6xl to max-w-7xl */}
         {/* Header */}
-        <div className="text-center mb-14">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-          Our AI Consulting Services 
-          </h2>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+        Our AI Consulting Services
+        </h2>
           
           <p className="text-gray-600 text-sm max-w-2xl mx-auto mb-6">
           AI Solutions That Drive Real Business Value
