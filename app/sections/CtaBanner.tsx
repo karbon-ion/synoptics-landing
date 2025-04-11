@@ -6,18 +6,28 @@ import { Button } from '@/components/ui/Button';
 
 const CtaBanner = () => {
   return (
-    <section className="py-16 bg-[#e9fcff] border-t border-b border-blue-100">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="relative py-16 bg-[#e9fcff] border-t border-b border-blue-100 overflow-hidden">
+      <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 via-purple-50/30 to-transparent" />
+        <Image
+          src="/rag_blob.png"
+          alt="Background Blob"
+          fill
+          className="object-center  "
+          priority
+        />
+      </div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           {/* Left side - Text content */}
           <div className="text-left w-full md:w-1/2">
-          <h2 className="text-sm font-medium uppercase mb-4">SynoGuard</h2>
+            <h2 className="text-sm font-medium uppercase mb-4">SynoGuard</h2>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Secure and Built for Enterprise 
+              Secure and Built for Enterprise 
             </h2>
             
             <p className="text-gray-600 text-lg mb-6">
-            Protect AI interactions with SynoGuard—prevent harmful content, secure sensitive data, and block unauthorized access for complete control. 
+              Protect AI interactions with SynoGuard—prevent harmful content, secure sensitive data, and block unauthorized access for complete control. 
             </p>
             
             {/* <div className="flex flex-wrap mb-6">
@@ -35,11 +45,11 @@ const CtaBanner = () => {
             </p> */}
             
             <Button 
-                    href="/syno-guard" 
-                    variant="primary"
-                    size="lg"
-                    className="mb-10 sm:mb-16"
-                >
+              href="/syno-guard" 
+              variant="primary"
+              size="lg"
+              className="mb-10 sm:mb-16"
+            >
               Discover Enterprise AI Security 
             </Button>
           </div>

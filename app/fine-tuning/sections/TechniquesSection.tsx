@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/Button';
+import Image from 'next/image';
 
 // Technique button component for desktop view
 const TechniqueButton = ({ 
@@ -208,21 +209,33 @@ const TechniquesSection = () => {
           </p>
           
           <div className="flex justify-center">
-          <Button 
-                    href="#contact" 
-                    variant="primary"
-                    size="lg"
-                    className="mb-10 sm:mb-16"
-                >
+            <Button 
+              href="#contact" 
+              variant="primary"
+              size="lg"
+              className="mb-10 sm:mb-16"
+            >
               Read Docs
             </Button>
           </div>
         </div>
         
         {/* Main content area with blue background */}
-        <div className="bg-[#e9fcff] rounded-3xl overflow-hidden">
+        <div className="bg-[#e9fcff] rounded-3xl overflow-hidden relative">
+          {/* Background image */}
+          <div className="absolute inset-0 z-0">
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 via-purple-50/30 to-transparent" />
+            <Image
+              src="/rag_blob.png"
+              alt="Background Blob"
+              fill
+              className="object-center opacity-50"
+              priority
+            />
+          </div>
+
           {/* Desktop view */}
-          <div className="hidden lg:flex flex-col lg:flex-row items-stretch">
+          <div className="hidden lg:flex flex-col lg:flex-row items-stretch relative z-10">
             {/* Techniques column */}
             <div className="w-full lg:w-[40%] p-8">
               <div className="max-w-[280px]">
@@ -237,7 +250,7 @@ const TechniquesSection = () => {
               </div>
             </div>
             
-            {/* Benefits column - changes based on selected technique */}
+            {/* Benefits column */}
             <div className="w-full lg:w-[60%] p-8 flex items-center">
               <div className="w-full">
                 <p className="text-gray-700 text-lg mb-6">
@@ -257,7 +270,7 @@ const TechniquesSection = () => {
           </div>
           
           {/* Mobile view - Accordion */}
-          <div className="lg:hidden p-4 sm:p-6">
+          <div className="lg:hidden p-4 sm:p-6 relative z-10">
             {techniqueData.map((technique, index) => (
               <AccordionItem
                 key={index}
