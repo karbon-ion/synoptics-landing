@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 
 // Technique button component for desktop view
@@ -44,6 +45,7 @@ const AccordionItem = ({
   name,
   description,
   benefits,
+  image,
   isOpen,
   toggleAccordion,
   index
@@ -51,6 +53,7 @@ const AccordionItem = ({
   name: string;
   description: string;
   benefits: string[];
+  image: string;
   isOpen: boolean;
   toggleAccordion: (index: number) => void;
   index: number;
@@ -91,6 +94,14 @@ const AccordionItem = ({
           >
             <div className="p-4 bg-white">
               <p className="text-gray-700 text-sm mb-4">{description}</p>
+              <div className="relative w-full h-60 my-4 rounded-lg overflow-hidden">
+                <Image 
+                  src={image} 
+                  alt={name}
+                  fill
+                  className="object-cover"
+                />
+              </div>
               <div className="space-y-3">
                 {benefits.map((benefit, idx) => (
                   <div key={idx} className="flex items-start">
@@ -120,71 +131,81 @@ const TechniquesSection = () => {
     {
       name: "AI Readiness Assessment",
       description: "Before implementing AI, we work with your team to ensure they understand the technology and its impact. We assess your data, IT infrastructure, and AI readiness—providing support for a smooth, compliant transition.",
+      image: "https://images.unsplash.com/photo-1591453089816-0fbb971b454c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       benefits: [
-       ""
+       
       ]
     },
     {
       name: "AI Governance Consulting",
       description: "Develop a responsible and transparent AI framework with automated governance tools to ensure long-term success.",
+      image: "https://images.unsplash.com/photo-1589254065878-42c9da997008?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       benefits: [
-        ""
+       
       ]
     },
     {
       name: "AI Envisioning Workshop",
       description: "Identify high-value AI use cases, explore generative AI opportunities, and define a roadmap for innovation.",
+      image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       benefits: [
-        ""
+       
       ]
     },
     {
       name: "Custom AI Implementation",
       description: "Deploy AI solutions tailored to your unique business needs—optimizing workflows, enhancing automation, and solving most complicated challenges .",
+      image: "https://images.unsplash.com/photo-1677442135136-760c813028c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       benefits: [
-       ""
+       
       ]
     },
     {
       name: "AI Strategy Development",
       description: "Align AI investments with measurable business outcomes, uncover opportunities, and build a roadmap for scalable AI success.",
+      image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       benefits: [
-       ""
+       
       ]
     },
     {
       name: "AI Training & Capacity Building",
       description: "Empower your workforce with AI expertise through customized training, learning paths, and leadership workshops.",
+      image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       benefits: [
-        ""
+       
       ]
     },
     {
       name: "Data & Analytics Consulting",
       description: "Transform enterprise data into actionable insights with AI-driven models that enhance decision-making and automate workflows.",
+      image: "https://images.unsplash.com/photo-1599658880436-c61792e70672?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       benefits: [
-        ""
+        
       ]
     },
     {
       name: "Automation Consulting",
       description: "Streamline operations with AI-powered automation, eliminating inefficiencies and enabling a smarter, hybrid workforce.",
+      image: "https://images.unsplash.com/photo-1488229297570-58520851e868?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       benefits: [
-        ""
+        
       ]
     },
     {
       name: "Proof of Concept (PoC)",
       description: "Validate AI solutions with rapid prototyping and real-world testing—minimizing risk and maximizing feasibility before full-scale implementation.",
+      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       benefits: [
-        ""
+        
       ]
     },
     {
       name: "Synoptix AI Platform",
       description: "At the core of our AI solutions, Synoptix AI drives generative AI adoption, optimises workflows, automates processes, and enhances decision-making—securely and at scale.",
+      image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       benefits: [
-        ""
+        
       ]
     }
   ];
@@ -224,9 +245,18 @@ const TechniquesSection = () => {
             {/* Benefits column - changes based on selected technique - made wider */}
             <div className="w-full lg:w-[65%] p-10 flex items-center"> {/* Increased from 60% to 65% and p-8 to p-10 */}
               <div className="w-full">
-              <p className="text-lg text-gray-600 mb-8"> {/* Updated to match WhySection styling */}
+              <p className="text-lg text-gray-600 mb-6"> {/* Updated to match WhySection styling */}
                   {techniqueData[activeIndex].description}
                 </p>
+                
+                <div className="relative w-full h-100 mb-8 rounded-lg overflow-hidden">
+                  <Image 
+                    src={techniqueData[activeIndex].image} 
+                    alt={techniqueData[activeIndex].name}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
                 
                 <div className="space-y-5"> {/* Increased space-y-4 to space-y-5 */}
                   {techniqueData[activeIndex].benefits.map((benefit, index) => (
@@ -248,6 +278,7 @@ const TechniquesSection = () => {
                 name={technique.name}
                 description={technique.description}
                 benefits={technique.benefits}
+                image={technique.image}
                 isOpen={openAccordion === index}
                 toggleAccordion={toggleAccordion}
                 index={index}

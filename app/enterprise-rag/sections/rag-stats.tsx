@@ -45,6 +45,10 @@ const RagStatsSection = () => {
         if (entry.isIntersecting && !animated) {
           setAnimated(true);
           animatePercentages();
+        } else if (!entry.isIntersecting && animated) {
+          // Reset animation state when section goes out of view
+          setAnimated(false);
+          setPercentages(stats.map(() => 0));
         }
       },
       { threshold: 0.2 } // Trigger when 20% of the section is visible

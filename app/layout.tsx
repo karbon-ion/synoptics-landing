@@ -4,6 +4,7 @@ import "./globals.css";
 import { NavbarMenu } from "@/components/ui/navbar-menu";
 import Footer from "./sections/Footer";
 import Script from "next/script";
+import FontAwesome from "@/components/FontAwesome";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -32,6 +33,7 @@ export default function RootLayout({
         </Script>
       </head>
       <body className={inter.className}>
+        <FontAwesome />
         <NavbarMenu />
         <main>{children}</main>
         <Footer />
