@@ -32,26 +32,17 @@ const CardStack = ({ i, metricsData, progress, range, targetScale }: { i: number
           <div className="absolute inset-0 bg-[url('/grid-pattern.png')] opacity-5 rounded-2xl"></div>
           <div className="relative z-10">
             <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-6">
-              Get Instant AI Performance Insights
+              {metricsData.metricsData[0].title}
             </h3>
+            <h4 className="text-lg font-semibold mb-4">
+              {metricsData.metricsData[0].description}
+            </h4>
             <p className="text-sm md:text-base text-gray-600 mb-8 md:mb-12 max-w-3xl">
-              AI performance shouldn't be a black box. Track, measure, and optimize key
-              insights in real-time to ensure every response is fast, accurate, and aligned
-              with expectations.
+              {metricsData.metricsData[1].description}
             </p>
-            <div className="space-y-3 md:space-y-4">
-              {metricsData.metricsData.map((metric, index) => (
-                <div key={index} className="flex items-start gap-2 md:gap-3">
-                  <div className="flex-shrink-0 w-5 h-5 md:w-6 md:h-6 rounded-full bg-[#E5F6FF] flex items-center justify-center mt-1">
-                    <div className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-[#00A3FF]"></div>
-                  </div>
-                  <div className="flex-1">
-                    <h4 className="font-semibold text-base md:text-lg mb-0.5 md:mb-1">{metric.title}</h4>
-                    <p className="text-sm md:text-base text-gray-600">{metric.description}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
+            <p className="text-sm md:text-base text-gray-600 mt-8 md:mt-12">
+              {metricsData.metricsData[2].description}
+            </p>
             <a
               href="#learn"
               className="inline-block mt-8 md:mt-12 px-6 md:px-8 py-2 bg-[#00A3FF] text-white 
