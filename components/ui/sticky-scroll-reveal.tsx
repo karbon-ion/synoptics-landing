@@ -76,11 +76,11 @@ export const StickyScroll = ({
       animate={{
         backgroundColor: backgroundColors[0],
       }}
-      className="relative flex flex-col md:flex-row min-h-[30rem] rounded-2xl p-6 md:p-10 border border-blue-100"
+      className="relative flex flex-col md:flex-row min-h-[30rem] rounded-2xl p-10 md:p-20 border border-blue-100"
       ref={ref}
     >
       {/* Content column */}
-      <div className="w-full md:w-1/2 relative">
+      <div className="w-full md:w-1/2 relative ">
         <div className="space-y-24 md:space-y-28">
           {content.map((item, index) => (
             <div 
@@ -127,7 +127,7 @@ export const StickyScroll = ({
       
       {/* Image column */}
       <div className="hidden md:block w-1/2 relative">
-        <div className="sticky top-20 pt-4 pb-4 h-[500px] overflow-hidden rounded-3xl">
+        <div className="sticky mt-[-100px] top-20 pt-4 h-[500px] overflow-hidden rounded-3xl">
           {content.map((item, index) => (
             <motion.div 
               key={index}
