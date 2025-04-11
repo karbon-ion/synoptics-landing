@@ -198,10 +198,9 @@ const TechniquesSection = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-14">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Advanced Fine Tuning & Optimisation
-            Techniques
-          </h2>
+        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+        Advanced Fine Tuning & Optimisation Techniques
+        </h2>
           
           <p className="text-gray-600 text-sm max-w-2xl mx-auto mb-6">
             At Synoptix.ai, we don't just fine-tune AI—we make it smarter, faster, and tailored 

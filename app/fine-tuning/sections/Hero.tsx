@@ -1,51 +1,25 @@
-'use client';
+import { Button } from "@/components/ui/Button";
 
-import { Button } from '@/components/ui/Button';
-import Link from 'next/link';
-import Image from 'next/image';
-
-const Hero = () => {
+export default function RagHero() {
   return (
-    <section className="py-24 bg-[#e9fcff] relative overflow-hidden">
-      <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0)_0%,rgba(255,255,255,0.8)_100%)]" />
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 via-purple-50/30 to-transparent" />
-        <Image
-          src="/rag_blob.png"
-          alt="Background Blob"
-          fill
-          className="object-center opacity-50"
-          priority
-        />
-      </div>
-      
-      <div className="max-w-7xl mt-10 mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center relative z-10">
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
+      <section className="min-h-screen flex flex-col items-center justify-center text-center px-4 py-16 bg-gradient-to-b bg-[#f0f5ff]">
+          <h1 className="text-5xl md:text-6xl font-bold mb-8">
           Fine Tuning & Optimisation Services
-        </h1>
-        
-        <div className="space-y-5 max-w-3xl mx-auto mb-10">
-          <p className="text-gray-600 text-lg">
-            Stop settling for generic AI that doesn't get your business. Synoptix fine-tunes open-source models into domain-specific AI that aligns with your industry, goals, and workflow.
+          </h1>
+          <p className="text-xl md:text-2xl text-gray-700 max-w-4xl mb-6">
+          Stop settling for generic AI that doesn't get your business. Synoptix fine-tunes open-source models into domain-specific AI that aligns with your industry, goals, and workflow.
           </p>
-          <p className="text-gray-700 text-lg font-medium">
-            Experience AI that's sharp, focused, and built for impact.
-          </p>
-        </div>
-        
-        <div className="flex justify-center">
-          <Button
-            href="/#contact" 
-            variant="primary"
-            size="lg"
-            className="mb-10 sm:mb-16"
-          >
-            Request a Demo
+          {/* <p className="text-2xl md:text-3xl font-semibold text-gray-800 max-w-3xl mb-12">
+          Experience AI that's sharp, focused, and built for impact.
+          </p> */}
+        <Button 
+                    href="/#contact" 
+                    variant="primary"
+                    size="lg"
+                    className="mb-10 sm:mb-16"
+                >
+              Book a Meeting
           </Button>
-        </div>
-      </div>
-    </section>
+      </section>
   );
-};
-
-export default Hero;
+}
