@@ -159,10 +159,10 @@ const TechniquesSection = () => {
     <section className="py-24 bg-white relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-14">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Discover the AI Agents Designed for Enterprise Impact
-          </h2>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+        Discover the AI Agents Designed for Enterprise
+        </h2>
         </div>
         
         {/* Main content area with blue background */}

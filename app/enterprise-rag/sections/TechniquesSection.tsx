@@ -174,8 +174,10 @@ const TechniquesSection = () => {
     <section className="py-24 bg-white relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-14">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Actionable AI Analytics for Enterprise-Grade Performance</h2>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+        AI Analytics for Enterprise-Grade Performance
+        </h2>
           
           <p className="text-gray-600 text-sm max-w-2xl mx-auto mb-6">
             Go beyond the black box with real-time visibility into accuracy, speed, sentiment, and cost. Monitor, evaluate, and optimize every aspect of your AI—live.

@@ -10,8 +10,8 @@ const CallToActionSection = () => {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0)_0%,rgba(255,255,255,0.8)_100%)]" />
       
       {/* Content container */}
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-        <h2 className="text-[40px] font-bold text-gray-900 mb-5 tracking-tight whitespace-nowrap leading-tight">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
         Transform the Way You Work—Starting Now
         </h2>
         
