@@ -12,7 +12,7 @@ const features = [
             <div className="w-full h-full flex items-center justify-center">
                 <div className="p-6 flex flex-col items-center">
                 <Image
-                    src="https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1000"
+                    src="/images/SVG/accelrate task copy 5.svg"
                     alt="AI Platform Overview"
                     width={600}
                     height={600}
@@ -30,7 +30,7 @@ const features = [
             <div className="w-full h-full flex items-center justify-center">
                 <div className="p-6 flex flex-col items-center">
                     <Image
-                        src="https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=800"
+                        src="/images/SVG/accelrate task copy 3.svg"
                         alt="Data Security"
                         width={400}
                         height={300}
@@ -48,7 +48,7 @@ const features = [
             <div className="w-full h-full flex items-center justify-center">
                 <div className="p-6 flex flex-col items-center">
                     <Image
-                        src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800"
+                        src="/images/SVG/accelrate task copy 11.svg"
                         alt="Enterprise Controls"
                         width={400}
                         height={300}
@@ -66,7 +66,7 @@ const features = [
             <div className="w-full h-full flex items-center justify-center">
                 <div className="p-6 flex flex-col items-center">
                     <Image
-                        src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=800"
+                        src="/images/SVG/test1.jpg"
                         alt="Cloud Infrastructure"
                         width={400}
                         height={300}
