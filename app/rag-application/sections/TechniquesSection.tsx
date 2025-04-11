@@ -172,9 +172,11 @@ const TechniquesSection = () => {
             Your Enterprise Deserves Better Intelligence
           </h2>
 
-          <p className="text-gray-600 text-sm max-w-2xl mx-auto mb-6">
-            Get the right information at the right time, every time. Synoptix ensures speed, security, and precision—at enterprise scale
-          </p>
+          <div className="flex justify-center mb-6">
+            <p className="text-gray-600 text-sm whitespace-nowrap px-4">
+              Get the right information at the right time, every time. Synoptix ensures speed, security, and precision—at enterprise scale
+            </p>
+          </div>
         </div>
 
         {/* Main content area with blue background - Increased size here */}
