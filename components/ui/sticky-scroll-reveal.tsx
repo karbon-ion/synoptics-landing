@@ -138,7 +138,7 @@ export const StickyScroll = ({
               transition={{ duration: 0.4 }}
               className={`absolute inset-0 flex items-start justify-center ${activeCard === index ? 'z-10' : 'z-0'}`}
             >
-              <div className="max-w-[450px] max-h-[450px] min-w-[450px] min-h-[450px] flex items-center justify-center">
+              <div className="w-[450px] h-[450px] flex items-center justify-center">
                 <div className="w-full h-full relative overflow-hidden">
                   {item.content}
                 </div>

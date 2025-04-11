@@ -82,7 +82,7 @@ export default function Metrics() {
                 </div>
 
                 {/* Cards Section */}
-                <div className="relative mt-6 sm:mt-8">
+                <div className="relative ">
                     {/* Background Card */}
                     <div className="hidden md:block">
                         {
