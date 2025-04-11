@@ -2,11 +2,23 @@
 
 import { Button } from '@/components/ui/Button';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const CtaBanner = () => {
   return (
-    <section className="py-16 bg-[#e9fcff] border-t border-b border-blue-100">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <section className="py-16 bg-[#e9fcff] border-t border-b border-blue-100 relative overflow-hidden">
+      <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 via-purple-50/30 to-transparent" />
+        <Image
+          src="/rag_blob.png"
+          alt="Background Blob"
+          fill
+          className="object-center opacity-50"
+          priority
+        />
+      </div>
+
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
           Claim Your Free AI Strategy Session
         </h2>
@@ -30,11 +42,11 @@ const CtaBanner = () => {
         </p>
         
         <Button 
-                    href="/#contact" 
-                    variant="primary"
-                    size="lg"
-                    className="mb-10 sm:mb-16"
-                >
+          href="/#contact" 
+          variant="primary"
+          size="lg"
+          className="mb-10 sm:mb-16"
+        >
           Speak with an AI Expert Today
         </Button>
       </div>

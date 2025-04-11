@@ -20,7 +20,7 @@ const faqs = [
     },
     {
         question: "What is the Router Workflow?",
-        answer: "It analyzes tasks in real time and routes them to the most relevant AI agent, ensuring precision and efficiency."
+        answer: "It analyses tasks in real time and routes them to the most relevant AI agent, ensuring precision and efficiency."
     },
     {
         question: "How does the Consolidator Workflow improve decision-making?",

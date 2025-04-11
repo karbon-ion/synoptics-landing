@@ -12,7 +12,7 @@ const features = [
   {
     title: "Smarter Code. Faster Development",
     subtitle: "Code Gen agents",
-    description: "Eliminate redundant tasks and empower developers to focus on innovation. Synoptix Code Gen Agents generate clean, efficient code and optimize logic in real time—reducing development cycles and minimizing human error across your engineering workflows.",
+    description: "Eliminate redundant tasks and empower developers to focus on innovation. Synoptix Code Gen Agents generate clean, efficient code and optimise logic in real time—reducing development cycles and minimizing human error across your engineering workflows.",
     image: agentGif,
 
     ctaText: "Learn More",

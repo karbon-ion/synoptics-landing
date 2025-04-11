@@ -4,7 +4,7 @@ import { useState } from 'react';
 const faqs = [
     {
         question: "What is Synoptix AI Evaluations?",
-        answer: "A real-time AI performance tracker that measures accuracy, efficiency, and user sentiment to optimize workflows."
+        answer: "A real-time AI performance tracker that measures accuracy, efficiency, and user sentiment to optimise workflows."
     },
     {
         question: "How does it improve AI performance?",
@@ -20,11 +20,7 @@ const faqs = [
     },
     {
         question: "Can Synoptix AI help reduce costs?",
-        answer: "Yes! Monitors token usage to prevent waste, optimize resource allocation, and cut AI processing costs."
-    },
-    {
-        question: "How fast can I see results?",
-        answer: "Expect faster workflows and improved accuracy within 90 days, with real-time tracking for continuous optimization."
+        answer: "Yes! Monitors token usage to prevent waste, optimise resource allocation, and cut AI processing costs."
     }
 ];
 

@@ -61,7 +61,7 @@ const features = [
     },
     {
         title: 'Cost Optimisation',
-        description: 'Track AI resource usage to prevent waste and reduce costs. Optimize token efficiency without compromising performance.',
+        description: 'Track AI resource usage to prevent waste and reduce costs. Optimise token efficiency without compromising performance.',
         content: (
             <div className="w-full h-full flex items-center justify-center">
                 <div className="p-6 flex flex-col items-center">

@@ -73,7 +73,7 @@ const TutorialsPage = () => {
             Learn AI Implementation with Our Tutorials
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-            Explore our collection of video tutorials designed to help you master AI technologies and implement them effectively in your organization.
+          Explore our collection of video tutorials designed to help you master AI technologies and implement them effectively in your organisation.
           </p>
           <div className="h-1 w-16 bg-blue-500 mx-auto rounded-full"></div>
         </div>

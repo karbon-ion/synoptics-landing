@@ -18,7 +18,7 @@ const IntroSection = () => {
             AI is only as good as its performance—but without real-time tracking, you’re operating blind. <br/><br/>
 Slow responses, inaccuracies, and inefficiencies creep in, bottlenecking workflows and weakening decision-making. Over time, these flaws cost businesses time, money, and missed opportunities.<br/><br/>
 Synoptix AI Evaluations puts you in control. It continuously tracks performance, fine-tunes execution, and eliminates inefficiencies—so AI stays sharp, fast, and on point. Every response is precise, fact-driven, and aligned with business goals, keeping workflows smooth and decisions reliable.<br/><br/>
-Optimize with Confidence. 
+Optimise with Confidence. 
 
             </p>
             
@@ -48,7 +48,7 @@ Optimize with Confidence.
             <div className="w-full h-full rounded-2xl overflow-hidden bg-blue-50 flex items-center justify-center border border-gray-200">
               {/* Fallback if Image component doesn't work */}
               <img 
-                src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=800" 
+                src="/images/New/Platform Page - Evaluation.png" 
                 alt="AI Tuning Visualization"
                 className="w-full h-full object-cover"
               />

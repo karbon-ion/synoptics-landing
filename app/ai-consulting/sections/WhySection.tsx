@@ -6,8 +6,8 @@ import { StickyScroll } from '@/components/ui/sticky-scroll-reveal';
 
 const features = [
     {
-        title: "Maximized Platform Usage",
-        description: "Ensure seamless adoption and utilization across your organization, enhancing overall performance.",
+        title: "Maximised Platform Usage",
+        description: "Ensure seamless adoption and utilisation across your organisation, enhancing overall performance.",
         content: (
             <div className="w-full h-full flex items-center justify-center">
                 <Image
@@ -21,8 +21,8 @@ const features = [
         )
     },
     {
-        title: 'Dedicated Expert Support ',
-        description: 'Receive personalized, ongoing assistance to resolve complex challenges and optimize workflows.',
+        title: 'Dedicated Expert Support',
+        description: 'Receive personalised, ongoing assistance to resolve complex challenges and optimize workflows.',
         content: (
             <div className="w-full h-full flex items-center justify-center">
                 <Image

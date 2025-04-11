@@ -7,7 +7,7 @@ const features = [
   {
     id: 'llm01',
     title: 'Prompt Injections',
-    description: 'Smart hackers can feed your AI harmful inputs to steal data or trigger unauthorized actions. With Synoptix, we intercept these attacks before they even start.',
+    description: 'Smart hackers can feed your AI harmful inputs to steal data or trigger unauthorised actions. With Synoptix, we intercept these attacks before they even start.',
     code: 'LLM01',
   },
   {

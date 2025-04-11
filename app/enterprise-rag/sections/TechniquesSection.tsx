@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
+import Image from 'next/image';
 
 // Technique button component for desktop view
 const TechniqueButton = ({ 
@@ -119,7 +120,7 @@ const TechniquesSection = () => {
   const techniqueData = [
     {
       name: "Real-Time Performance Metrics",
-      description: "AI performance shouldn’t a black box. Track, measure, and optimize key insights in real time to ensure every response is fast, accurate, and aligned with expectations.",
+      description: "AI performance shouldn't be a black box. Track, measure, and optimise key insights in real time to ensure every response is fast, accurate, and aligned with expectations.",
       benefits: [
         "Query Count: Track the total number of processed requests in real time. Gain visibility into AI workload and system efficiency.",
         "Response Time: Measure how fast AI processes and delivers responses. Identify and eliminate latency issues for seamless performance.",
@@ -129,10 +130,10 @@ const TechniquesSection = () => {
     },
     {
       name: "User Sentiment Insights",
-      description: "AI effectiveness goes beyond accuracy—it’s about how users interact with it. Track real-time sentiment analysis to refine responses and enhance engagement.",
+      description: "AI effectiveness goes beyond accuracy—it's about how users interact with it. Track real-time sentiment analysis to refine responses and enhance engagement.",
       benefits: [
         "Positive Responses: Track where AI successfully meets user expectations. Leverage these insights to reinforce accuracy and maintain high engagement.",
-        "Negative Responses: Detect where AI-generated outputs fail to meet user needs. Adjust models to improve accuracy, reduce errors, and optimize performance."
+        "Negative Responses: Detect where AI-generated outputs fail to meet user needs. Adjust models to improve accuracy, reduce errors, and optimise performance."
       ]
     },
     {
@@ -140,16 +141,16 @@ const TechniquesSection = () => {
       description: "AI should be accurate, reliable, and free from misinformation. Monitor, detect, and correct errors in real time to maintain precision and efficiency.",
       benefits: [
         "Identify Hallucinations: Detect AI-generated responses that are incorrect, misleading, or out of context. Ensure fact-based outputs every time.",
-        "Track Latency: Monitor slow response times and pinpoint inefficiencies. Optimize AI processing speed for seamless interactions.",
+        "Track Latency:  Monitor slow response times and pinpoint inefficiencies. Optimise AI processing speed for seamless interactions.",
         "Eliminate Errors: Proactively address inaccuracies before they disrupt workflows. Keep AI performance sharp, responsive, and trustworthy."
 
       ]
     },
     {
       name: "Usage & Cost Management ",
-      description: "AI processing comes at a cost—ensure every token is used efficiently. Monitor usage in real time to reduce waste and maximize value.",
+      description: "AI processing comes at a cost—ensure every token is used efficiently. Monitor usage in real time to reduce waste and maximise value.",
       benefits: [
-        "Incoming Tokens: Track how much input data AI is processing. Optimize requests to avoid unnecessary consumption.",
+        "Incoming Tokens: Track how much input data AI is processing. Optimise requests to avoid unnecessary consumption.",
         "Outgoing Tokens: Measure the size of AI-generated responses. Streamline outputs without sacrificing accuracy.",
         "Caching: Help reduce token consumption by storing and reusing recent response and improved response time."
 
@@ -157,37 +158,50 @@ const TechniquesSection = () => {
     },
     {
       name: "AI Performance Benchmarks",
-      description: "AI performance goes beyond speed—it’s about precision, consistency, and usability. Synoptix AI evaluates critical metrics to ensure every response meets high-quality standards.",
+      description: "AI performance goes beyond speed—it's about precision, consistency, and usability. Synoptix AI evaluates critical metrics to ensure every response meets high-quality standards.",
       benefits: [
         "Groundedness: Ensure AI responses are factually accurate and backed by reliable data. Prevent misinformation and maintain trust in AI-driven decisions.",
         "Relevance: Verify that AI delivers meaningful, useful answers tailored to user needs. Eliminate off-topic or low-value responses.",
         "Fluency: Assess if AI-generated responses are well-structured and natural. Improve readability and clarity for better user interactions.",
         "Similarity: Maintain consistency across responses to avoid contradictions. Ensure AI provides uniform answers across different queries.",
-        "F1 Score: Measure overall AI performance with a balanced accuracy benchmark. Optimize AI for precision, recall, and efficiency."
-
+        "F1 Score: Measure overall AI performance with a balanced accuracy benchmark. Optimise AI for precision, recall, and efficiency."
       ]
     }
   ];
 
   return (
     <section className="py-24 bg-white relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> {/* Changed from max-w-6xl to max-w-7xl */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-14">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Actionable AI Analytics for Enterprise-Grade Performance</h2>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+        Actionable AI Analytics for Enterprise-Grade Performance
+        </h2>
           
           <p className="text-gray-600 text-sm max-w-2xl mx-auto mb-6">
-          Go beyond the black box with real-time visibility into accuracy, speed, sentiment, and cost. Monitor, evaluate, and optimize every aspect of your AI—live.
+          Go beyond the black box with real-time visibility into accuracy, speed, sentiment, and cost. Monitor, evaluate, and optimise every aspect of your AI—live.
           </p>
         </div>
         
-        {/* Main content area with blue background - Increased size here */}
-        <div className="bg-[#e9fcff] rounded-3xl overflow-hidden min-h-[600px]"> {/* Added min-height */}
+        {/* Main content area with blue background */}
+        <div className="bg-[#e9fcff] rounded-3xl overflow-hidden min-h-[600px] relative">
+          {/* Background image */}
+          <div className="absolute inset-0 z-0">
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 via-purple-50/30 to-transparent" />
+            <Image
+              src="/rag_blob.png"
+              alt="Background Blob"
+              fill
+              className="object-center opacity-50"
+              priority
+            />
+          </div>
+
           {/* Desktop view */}
-          <div className="hidden lg:flex flex-col lg:flex-row items-stretch"> {/* Added h-full */}
-            {/* Techniques column - made wider */}
-            <div className="w-full lg:w-[35%] p-10"> {/* Increased from 40% to 35% and p-8 to p-10 */}
-              <div className="max-w-[320px]"> {/* Increased from 280px */}
+          <div className="hidden lg:flex flex-col lg:flex-row items-stretch relative z-10">
+            {/* Techniques column */}
+            <div className="w-full lg:w-[35%] p-10">
+              <div className="max-w-[320px]">
                 {techniqueData.map((technique, index) => (
                   <TechniqueButton 
                     key={index} 
@@ -199,17 +213,17 @@ const TechniquesSection = () => {
               </div>
             </div>
             
-            {/* Benefits column - changes based on selected technique - made wider */}
-            <div className="w-full lg:w-[65%] p-10 flex items-center"> {/* Increased from 60% to 65% and p-8 to p-10 */}
+            {/* Benefits column */}
+            <div className="w-full lg:w-[65%] p-10 flex items-center">
               <div className="w-full">
-              <p className="text-lg text-gray-600 mb-8"> {/* Updated to match WhySection styling */}
+                <p className="text-lg text-gray-600 mb-8">
                   {techniqueData[activeIndex].description}
                 </p>
                 
-                <div className="space-y-5"> {/* Increased space-y-4 to space-y-5 */}
+                <div className="space-y-5">
                   {techniqueData[activeIndex].benefits.map((benefit, index) => (
                     <div key={index} className="flex items-start">
-                      <span className="text-blue-500 text-lg mr-3 leading-none">•</span> {/* Increased mr-2.5 to mr-3 */}
+                      <span className="text-blue-500 text-lg mr-3 leading-none">•</span>
                       <span className="text-lg text-gray-600">{benefit}</span>
                     </div>
                   ))}
@@ -219,7 +233,7 @@ const TechniquesSection = () => {
           </div>
           
           {/* Mobile view - Accordion */}
-          <div className="lg:hidden p-6"> {/* Increased from p-4 sm:p-6 to p-6 */}
+          <div className="lg:hidden p-6 relative z-10">
             {techniqueData.map((technique, index) => (
               <AccordionItem
                 key={index}

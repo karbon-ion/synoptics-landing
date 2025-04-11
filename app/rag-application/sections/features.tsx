@@ -81,20 +81,20 @@ With real-time data refinement, Synoptix AI helps you cut research time and make
                                 <h3 className="text-sm font-bold tracking-wider mb-4 sm:mb-6 after:content-[''] after:block after:w-12 after:h-0.5 after:bg-gradient-to-r after:from-cyan-500 after:to-blue-500 after:mt-2 after:mx-auto sm:after:mx-0 text-center sm:text-left">
                                     TEAM INTELLIGENCE
                                 </h3>
-                                <div className="flex flex-col gap-3 sm:gap-4">
+                                <div className="flex flex-col gap-3 sm:gap-4 w-full">
                                     {employeeExperience.map((item, index) => (
-                                        <span 
+                                        <div 
                                             key={index}
-                                            className="px-4 sm:px-6 py-2 sm:py-3 rounded-full bg-white border border-blue-100 
+                                            className="flex items-center justify-center sm:justify-start px-4 sm:px-6 py-2 sm:py-3 rounded-full bg-white border border-blue-100 
                                                 text-gray-800 hover:border-blue-300 transition-colors
-                                                shadow-sm hover:shadow-md text-center sm:text-left text-sm sm:text-base"
+                                                shadow-sm hover:shadow-md text-sm sm:text-base"
                                         >
-                                            {item}
-                                        </span>
+                                            <span className="whitespace-nowrap truncate">{item}</span>
+                                        </div>
                                     ))}
-                                    <span className="px-4 sm:px-6 py-2 sm:py-3 text-gray-400 hover:text-gray-600 transition-colors cursor-pointer text-center sm:text-left">
+                                    {/* <span className="px-4 sm:px-6 py-2 sm:py-3 text-gray-400 hover:text-gray-600 transition-colors cursor-pointer text-center sm:text-left">
                                         More...
-                                    </span>
+                                    </span> */}
                                 </div>
                             </div>
                         </div>
@@ -106,20 +106,20 @@ With real-time data refinement, Synoptix AI helps you cut research time and make
                                 <h3 className="text-sm font-bold tracking-wider mb-4 sm:mb-6 after:content-[''] after:block after:w-12 after:h-0.5 after:bg-gradient-to-r after:from-cyan-500 after:to-blue-500 after:mt-2 after:mx-auto sm:after:mx-0 text-center sm:text-left">
                                     CUSTOMER EXPERIENCE
                                 </h3>
-                                <div className="flex flex-col gap-3 sm:gap-4">
+                                <div className="flex flex-col gap-3 sm:gap-4 w-full">
                                     {customerExperience.map((item, index) => (
-                                        <span 
+                                        <div 
                                             key={index}
-                                            className="px-4 sm:px-6 py-2 sm:py-3 rounded-full bg-white border border-blue-100 
+                                            className="flex items-center justify-center sm:justify-start px-4 sm:px-6 py-2 sm:py-3 rounded-full bg-white border border-blue-100 
                                                 text-gray-800 hover:border-blue-300 transition-colors
-                                                shadow-sm hover:shadow-md text-center sm:text-left text-sm sm:text-base"
+                                                shadow-sm hover:shadow-md text-sm sm:text-base"
                                         >
-                                            {item}
-                                        </span>
+                                            <span className="whitespace-nowrap truncate">{item}</span>
+                                        </div>
                                     ))}
-                                    <span className="px-4 sm:px-6 py-2 sm:py-3 text-gray-400 hover:text-gray-600 transition-colors cursor-pointer text-center sm:text-left">
+                                    {/* <span className="px-4 sm:px-6 py-2 sm:py-3 text-gray-400 hover:text-gray-600 transition-colors cursor-pointer text-center sm:text-left">
                                         More...
-                                    </span>
+                                    </span> */}
                                 </div>
                             </div>
                         </div>

@@ -61,7 +61,7 @@ const features = [
     },
     {
         title: 'Enterprise-Ready Efficiency',
-        description: 'From approvals to data processing, Synoptix AI adapts to your operations, optimizing workflows for speed, accuracy, and business impact. ',
+        description: 'From approvals to data processing, Synoptix AI adapts to your operations, optimising workflows for speed, accuracy, and business impact.',
         content: (
             <div className="w-full h-full flex items-center justify-center">
                 <div className="p-6 flex flex-col items-center">

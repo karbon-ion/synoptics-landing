@@ -21,7 +21,7 @@ const IntroSection = () => {
 Synoptix AI Agents can handle the repetitive, executing with precision—on demand or autonomously—so your people can focus on strategy, creativity, and growth.
 Work smarter. Scale faster. Dominate effortlessly. With automation that evolves with your business, you’re not just keeping up—you’re setting the pace. <br/><br/>
 
-The future won’t wait—with Synoptix AI, you won’t have to.
+The future won’t wait—with Synoptix AI, you don’t have to.
 
             </p>
             
@@ -51,7 +51,7 @@ The future won’t wait—with Synoptix AI, you won’t have to.
             <div className="w-full h-full rounded-2xl overflow-hidden bg-blue-50 flex items-center justify-center border border-gray-200">
               {/* Fallback if Image component doesn't work */}
               <img 
-                src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=800" 
+                src="/images/New/Platform Page - Agent.png" 
                 alt="AI Tuning Visualization"
                 className="w-full h-full object-cover"
               />

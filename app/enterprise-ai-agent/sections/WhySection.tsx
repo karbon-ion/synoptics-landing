@@ -7,7 +7,7 @@ import { StickyScroll } from '@/components/ui/sticky-scroll-reveal';
 const features = [
     {
         title: "Automated Complex Workflows ",
-        description: "Optimize document processing, data extraction, and customer interactions with intelligent, hands-free automation. ",
+        description: "Optimise document processing, data extraction, and customer interactions with intelligent, hands-free automation.",
         content: (
             <div className="w-full h-full flex items-center justify-center">
                 <div className="p-6 flex flex-col items-center">
@@ -61,7 +61,7 @@ const features = [
     },
     {
         title: 'Integration & Rapid Deployment',
-        description: 'Deploy AI automation effortlessly within your existing infrastructure—minimizing disruption and maximizing ROI. ',
+        description: 'Deploy AI automation effortlessly within your existing infrastructure—minimising disruption and maximising ROI.',
         content: (
             <div className="w-full h-full flex items-center justify-center">
                 <div className="p-6 flex flex-col items-center">

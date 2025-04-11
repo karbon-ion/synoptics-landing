@@ -10,7 +10,7 @@ const IntroSection = () => {
           {/* Image */}
           <div className="relative aspect-square w-full max-w-lg mx-auto lg:max-w-none">
             <Image
-              src="https://images.unsplash.com/photo-1677442136019-21780ecad995"
+              src="/images/New/Services - AI Consulting.png"
               alt="AI Technology Visualization"
               width={600}
               height={600}

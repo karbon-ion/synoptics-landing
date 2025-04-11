@@ -163,25 +163,25 @@ export const NavbarMenu = () => {
       name: 'RAG', 
       href: '/rag-application', 
       description: 'Enterprise RAG Solutions with powerful context retrieval capabilities.',
-      image: 'https://images.unsplash.com/photo-1677442135968-8d288c4cb2f3?q=80&w=400&auto=format&fit=crop'
+      image: '/images/New/Header - RAG.jpg'
     },
     { 
       name: 'Agent', 
       href: '/enterprise-ai-agent', 
       description: 'AI Agent Platform for automating complex tasks and workflows.',
-      image: 'https://images.unsplash.com/photo-1655720031554-a929595ffad7?q=80&w=400&auto=format&fit=crop'
+      image: '/images/New/Header - Agent.png'
     },
     { 
       name: 'Workflow', 
       href: '/workflow', 
       description: 'Automated Workflows that streamline your business processes.',
-      image: 'https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?q=80&w=400&auto=format&fit=crop'
+      image: '/images/New/Header - Workflows.png'
     },
     { 
       name: 'Evaluations', 
       href: '/enterprise-rag', 
       description: 'Performance Metrics to measure and optimize AI system quality.',
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=400&auto=format&fit=crop'
+      image: '/images/New/Header -  Evaluations.png'
     },
   ];
 
@@ -219,14 +219,14 @@ export const NavbarMenu = () => {
             <MenuItem setActive={setActive} active={active} item="Home" href="/" />
 
             <MenuItem setActive={setActive} active={active} item="Platform">
-              <div className="grid grid-cols-2 gap-6 p-6 w-[800px]">
+              <div className="grid grid-cols-2 gap-4 p-4 w-[650px]">
                 {platformItems.map((item) => (
                   <Link 
                     key={item.name}
                     href={item.href}
                     className="group flex hover:bg-gray-50 transition-colors overflow-hidden"
                   >
-                    <div className="w-[180px] h-full relative bg-gray-100 overflow-hidden rounded-xl">
+                    <div className="w-[140px] h-full relative bg-gray-100 overflow-hidden rounded-xl">
                       <Image 
                         src={item.image} 
                         alt={item.name}
@@ -235,7 +235,7 @@ export const NavbarMenu = () => {
                         unoptimized
                       />
                     </div>
-                    <div className="p-4 flex h-full flex-col text-start justify-start flex-1">
+                    <div className="p-3 flex h-full flex-col text-start justify-start flex-1">
                       <h3 className="text-xl font-bold text-gray-900 group-hover:text-blue-600 mb-2">
                         {item.name}
                       </h3>

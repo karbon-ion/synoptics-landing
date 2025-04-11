@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/Button';
+import Image from 'next/image';
 
 // Technique button component for desktop view
 const TechniqueButton = ({ 
@@ -123,7 +124,7 @@ const TechniquesSection = () => {
       description: "We adjust model parameters to sharpen accuracy, reduce errors, and ensure smooth performance:",
       benefits: [
         "Update weights for better predictions",
-        "Optimize layers for faster, more efficient processing",
+        "Optimise layers for faster, more efficient processing",
         "Cut down computational costs without compromising performance"
       ]
     },
@@ -147,9 +148,9 @@ const TechniquesSection = () => {
     },
     {
       name: "Task-Specific Fine-Tuning",
-      description: "We optimize models for your particular business need:",
+      description: "We optimise models for your particular business need:",
       benefits: [
-        "Customize AI behavior for your exact use case",
+        "Customise AI behavior for your exact use case",
         "Improve performance on niche industry tasks",
         "Focus computational resources where they matter most"
       ]
@@ -159,7 +160,7 @@ const TechniquesSection = () => {
       description: "We enable your model to handle multiple related tasks effectively:",
       benefits: [
         "Create versatile AI solutions that solve diverse problems",
-        "Improve generalization across related domains",
+        "Improve generalisation across related domains",
         "Reduce the need for multiple specialized models"
       ]
     },
@@ -197,10 +198,9 @@ const TechniquesSection = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-14">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Advanced Fine Tuning & Optimisation
-            Techniques
-          </h2>
+        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+        Advanced Fine Tuning & Optimisation Techniques
+        </h2>
           
           <p className="text-gray-600 text-sm max-w-2xl mx-auto mb-6">
             At Synoptix.ai, we don't just fine-tune AI—we make it smarter, faster, and tailored 
@@ -208,21 +208,33 @@ const TechniquesSection = () => {
           </p>
           
           <div className="flex justify-center">
-          <Button 
-                    href="#contact" 
-                    variant="primary"
-                    size="lg"
-                    className="mb-10 sm:mb-16"
-                >
+            <Button 
+              href="#contact" 
+              variant="primary"
+              size="lg"
+              className="mb-10 sm:mb-16"
+            >
               Read Docs
             </Button>
           </div>
         </div>
         
         {/* Main content area with blue background */}
-        <div className="bg-[#e9fcff] rounded-3xl overflow-hidden">
+        <div className="bg-[#e9fcff] rounded-3xl overflow-hidden relative">
+          {/* Background image */}
+          <div className="absolute inset-0 z-0">
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 via-purple-50/30 to-transparent" />
+            <Image
+              src="/rag_blob.png"
+              alt="Background Blob"
+              fill
+              className="object-center opacity-50"
+              priority
+            />
+          </div>
+
           {/* Desktop view */}
-          <div className="hidden lg:flex flex-col lg:flex-row items-stretch">
+          <div className="hidden lg:flex flex-col lg:flex-row items-stretch relative z-10">
             {/* Techniques column */}
             <div className="w-full lg:w-[40%] p-8">
               <div className="max-w-[280px]">
@@ -237,7 +249,7 @@ const TechniquesSection = () => {
               </div>
             </div>
             
-            {/* Benefits column - changes based on selected technique */}
+            {/* Benefits column */}
             <div className="w-full lg:w-[60%] p-8 flex items-center">
               <div className="w-full">
                 <p className="text-gray-700 text-lg mb-6">
@@ -257,7 +269,7 @@ const TechniquesSection = () => {
           </div>
           
           {/* Mobile view - Accordion */}
-          <div className="lg:hidden p-4 sm:p-6">
+          <div className="lg:hidden p-4 sm:p-6 relative z-10">
             {techniqueData.map((technique, index) => (
               <AccordionItem
                 key={index}

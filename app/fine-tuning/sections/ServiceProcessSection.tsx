@@ -41,7 +41,7 @@ const ServiceProcessSection = () => {
     },
     {
       title: "Model Adjustments",
-      description: "No two businesses are the same; your AI shouldn't be either. We fine-tune settings and optimize performance for smooth, efficient operation."
+      description: "No two businesses are the same; your AI shouldn't be either. We fine-tune settings and optimise performance for smooth, efficient operation."
     },
     {
       title: "Model Evaluation & Iteration",
@@ -63,8 +63,7 @@ const ServiceProcessSection = () => {
           </h2>
           
           <p className="text-gray-600 text-lg max-w-3xl mx-auto mb-10">
-            Standard AI works—tuned AI outperforms. Our Fine-Tuning & Optimization services
-            transform standard models into high-performance machines—built exclusively for your business.
+          Standard AI works—tuned AI outperforms. Our Fine-Tuning & Optimisation services transform standard models into high-performance machines—built exclusively for your business.
           </p>
           
           <Button

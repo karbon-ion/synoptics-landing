@@ -3,35 +3,36 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
+import Image from 'next/image';
 
 // Technique button component for desktop view
-const TechniqueButton = ({ 
-  name, 
+const TechniqueButton = ({
+  name,
   isActive = false,
   onClick
-}: { 
-  name: string; 
+}: {
+  name: string;
   isActive?: boolean;
   onClick: () => void;
 }) => {
   return (
-    <button 
+    <button
       onClick={onClick}
       className={`group w-full ${isActive ? 'bg-gradient-to-r from-[#3A49FF] to-[#00CCEB] text-white' : 'bg-white text-gray-800'} rounded-full py-3 px-6 mb-3 flex items-center justify-between transition-all duration-200 border border-blue-100`}
     >
       <div className="flex-1 flex items-center justify-start"> {/* Changed justify-center to justify-start */}
         <span className={`inline-block w-1.5 h-1.5 ${isActive ? 'bg-white' : 'bg-blue-500'} rounded-full mr-2 flex-shrink-0`}></span>
-        <span className="text-xs font-medium">{name}</span>
+        <span className="text-md font-medium text-left">{name}</span>
       </div>
-      <svg 
-        width="14" 
-        height="14" 
-        viewBox="0 0 16 16" 
+      <svg
+        width="14"
+        height="14"
+        viewBox="0 0 16 16"
         className={`${isActive ? 'text-white' : 'text-blue-500'} group-hover:translate-x-1 transition-transform duration-200 flex-shrink-0 ml-2`}
         xmlns="http://www.w3.org/2000/svg"
       >
-        <path 
-          d="M8 0L6.59 1.41L12.17 7H0V9H12.17L6.59 14.59L8 16L16 8L8 0Z" 
+        <path
+          d="M8 0L6.59 1.41L12.17 7H0V9H12.17L6.59 14.59L8 16L16 8L8 0Z"
           fill="currentColor"
         />
       </svg>
@@ -79,7 +80,7 @@ const AccordionItem = ({
           />
         </svg>
       </button>
-      
+
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -110,7 +111,7 @@ const AccordionItem = ({
 const TechniquesSection = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [openAccordion, setOpenAccordion] = useState<number | null>(0);
-  
+
   const toggleAccordion = (index: number) => {
     setOpenAccordion(openAccordion === index ? null : index);
   };
@@ -119,94 +120,102 @@ const TechniquesSection = () => {
   const techniqueData = [
     {
       name: "Code Gen agents",
-      description: "Eliminate redundant tasks and empower developers to focus on innovation. Synoptix Code Gen Agents generate clean, efficient code and optimize logic in real time—reducing development cycles and minimizing human error across your engineering workflows.",
+      description: "Eliminate redundant tasks and empower developers to focus on innovation. Synoptix Code Gen Agents generate clean, efficient code and optimise logic in real time—reducing development cycles and minimizing human error across your engineering workflows.",
       benefits: [
-       
+
       ]
     },
     {
       name: "Generative agents",
       description: " From content generation to complex creative outputs, Synoptix Generative Agents convert ideas into actionable deliverables. Generate text, visuals, and code at scale—adapting instantly to your needs and enhancing productivity across teams.",
       benefits: [
-        
+
       ]
     },
     {
       name: "Assurance agents",
       description: "Maintain operational excellence with Synoptix Assurance Agents. These AI agents proactively monitor for inconsistencies, enforce enterprise standards, and ensure every output aligns with regulatory and organizational benchmarks.",
       benefits: [
-       
+
       ]
     },
     {
       name: "Decision Support & Analytical Agents",
       description: "Empower your teams with real-time insights. Synoptix Analytical Agents analyse complex datasets, identify trends, and deliver actionable recommendations—enabling smarter, faster decision-making across the enterprise.",
       benefits: [
-        
+
       ]
     },
     {
       name: "Anomalies Detection Agents",
       description: "Synoptix Anomaly Detection Agents provide continuous monitoring to detect irregularities and potential threats before they impact your business. Ensure operational integrity and security with real-time intelligence that pre-empts disruptions.",
       benefits: [
-        
+
       ]
     }
   ];
 
   return (
     <section className="py-24 bg-white relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> {/* Changed from max-w-6xl to max-w-7xl */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-14">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-          Discover the AI Agents Designed for Enterprise Impact
-          </h2>
-          
-          {/* <p className="text-gray-600 text-sm max-w-2xl mx-auto mb-6">
-          Get the right information at the right time, every time. Synoptix ensures speed, security, and precision—at enterprise scale 
-          </p> */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+        Discover the AI Agents Designed for Enterprise
+        </h2>
         </div>
-        
-        {/* Main content area with blue background - Increased size here */}
-        <div className="bg-[#e9fcff] rounded-3xl overflow-hidden min-h-[400px]"> {/* Added min-height */}
+
+        {/* Main content area with blue background */}
+        <div className="bg-[#e9fcff] rounded-3xl overflow-hidden min-h-[400px] relative">
+          {/* Background image */}
+          <div className="absolute inset-0 z-0">
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 via-purple-50/30 to-transparent" />
+            <Image
+              src="/rag_blob.png"
+              alt="Background Blob"
+              fill
+              className="object-center opacity-50"
+              priority
+            />
+          </div>
+
           {/* Desktop view */}
-          <div className="hidden lg:flex flex-col lg:flex-row items-stretch"> {/* Added h-full */}
-            {/* Techniques column - made wider */}
-            <div className="w-full lg:w-[35%] p-10"> {/* Increased from 40% to 35% and p-8 to p-10 */}
-              <div className="max-w-[320px]"> {/* Increased from 280px */}
+          <div className="hidden lg:flex flex-col lg:flex-row items-stretch relative z-10">
+            {/* Techniques column */}
+            <div className="w-full lg:w-[40%] p-10"> {/* Increased from 40% to 35% and p-8 to p-10 */}
+              <div className="max-w-[500px]"> {/* Increased from 280px */}
                 {techniqueData.map((technique, index) => (
-                  <TechniqueButton 
-                    key={index} 
-                    name={technique.name} 
+                  <TechniqueButton
+                    key={index}
+                    name={technique.name}
                     isActive={index === activeIndex}
                     onClick={() => setActiveIndex(index)}
                   />
                 ))}
               </div>
             </div>
-            
-            {/* Benefits column - changes based on selected technique - made wider */}
-            <div className="w-full lg:w-[65%] p-10 flex items-center"> {/* Increased from 60% to 65% and p-8 to p-10 */}
+
+            {/* Benefits column */}
+            <div className="w-full lg:w-[65%] p-10 flex items-center">
               <div className="w-full">
-                <p className="text-lg text-gray-600 mb-8"> {/* Updated to match WhySection styling */}
+                <p className="text-lg text-gray-800 mb-8">
                   {techniqueData[activeIndex].description}
                 </p>
-                
-                <div className="space-y-5"> {/* Increased space-y-4 to space-y-5 */}
+
+                <div className="space-y-5">
                   {techniqueData[activeIndex].benefits.map((benefit, index) => (
                     <div key={index} className="flex items-start">
-                      <span className="text-blue-500 text-lg mr-3 leading-none">•</span> {/* Increased mr-2.5 to mr-3 */}
-                      <span className="text-lg text-gray-600">{benefit}</span>
+                      <span className="text-blue-500 text-lg mr-3 leading-none">•</span>
+                      <span className="text-lg text-gray-800">{benefit}</span>
                     </div>
                   ))}
                 </div>
               </div>
             </div>
           </div>
-          
+
           {/* Mobile view - Accordion */}
-          <div className="lg:hidden p-6"> {/* Increased from p-4 sm:p-6 to p-6 */}
+          <div className="lg:hidden p-6 relative z-10">
             {techniqueData.map((technique, index) => (
               <AccordionItem
                 key={index}

@@ -76,8 +76,7 @@ export default function Metrics() {
                     Actionable AI Analytics for Enterprise-Grade Performance 
                     </h2>
                     <p className="text-gray-600 mb-6 md:mb-8 px-2">
-                    Go beyond the black box with real-time visibility into accuracy, speed, sentiment, and 
-                    cost. Monitor, evaluate, and optimize every aspect of your AI—live.
+                    AI performance shouldn’t be a black box. Track, measure, and optimise key insights in real time to ensure every response is fast, accurate, and aligned with expectations.
                     </p>
                     <a
                         href="#docs"

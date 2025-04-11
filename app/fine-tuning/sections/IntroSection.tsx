@@ -47,7 +47,7 @@ const IntroSection = () => {
             <div className="w-full h-full rounded-2xl overflow-hidden bg-blue-50 flex items-center justify-center border border-gray-200">
               {/* Fallback if Image component doesn't work */}
               <img 
-                src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=800" 
+                src="/images/New/Services - Finetuning and Optimisation.png" 
                 alt="AI Tuning Visualization"
                 className="w-full h-full object-cover"
               />

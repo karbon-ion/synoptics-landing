@@ -11,9 +11,9 @@ const CallToActionSection = () => {
       
       {/* Content container */}
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-        <h2 className="text-[40px] font-bold text-gray-900 mb-5 tracking-tight whitespace-nowrap leading-tight">
-        Transform the Way You Work—Starting Now
-        </h2>
+      <h2 className="text-5xl md:text-5xl font-bold text-gray-900 mb-6">
+      Transform the Way You Work  
+      </h2>
         
         <p className="text-[#4B5563] text-lg mb-10 max-w-2xl mx-auto leading-relaxed">
         Smarter systems. Faster decisions. Real results. Let’s build your AI-powered future.

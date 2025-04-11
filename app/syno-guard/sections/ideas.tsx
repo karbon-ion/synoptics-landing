@@ -33,7 +33,7 @@ export default function Ideas() {
                     Too Many Ideas, Not<br />Enough Direction?
                 </h2>
                 <p className="text-gray-600 mb-12 max-w-2xl mx-auto">
-                    Focus on what matters—turn processes into practical, automated solutions that work.
+                    Focus on what matters—turn processes into practical, automated solutions that works.
                 </p>
                 <a 
                     href="#contact" 

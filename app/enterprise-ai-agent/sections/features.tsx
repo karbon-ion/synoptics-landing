@@ -48,7 +48,7 @@ export default function Features() {
 Work smarter. Scale faster. Dominate effortlessly. With automation that evolves with your business, you’re not just keeping up—you’re setting the pace.  </p>
 
                         <p className="font-semibold text-lg sm:text-xl text-center md:text-left">
-                            The future won’t wait—with Synoptix AI, you won’t have to.                        </p>
+                            The future won’t wait—with Synoptix AI, you don’t have to.                        </p>
 
                         <div className="text-center md:text-left">
                             <a
