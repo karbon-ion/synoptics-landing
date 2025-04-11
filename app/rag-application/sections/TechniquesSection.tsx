@@ -21,7 +21,7 @@ const TechniqueButton = ({
     >
       <div className="flex-1 flex items-start justify-start"> {/* Using items-start to ensure text is top-aligned when wrapping */}
         <span className={`inline-block w-1.5 h-1.5 ${isActive ? 'bg-white' : 'bg-blue-500'} rounded-full mr-2 flex-shrink-0 mt-1.5`}></span>
-        <span className="text-sm font-medium text-left">{name}</span>
+        <span className="text-md font-medium text-left">{name}</span>
       </div>
       <svg
         width="14"
@@ -193,7 +193,7 @@ const TechniquesSection = () => {
           <div className="hidden lg:flex flex-col lg:flex-row items-stretch relative z-10"> {/* Added relative z-10 */}
             {/* Techniques column - made wider */}
 
-            <div className="w-full lg:w-[35%] p-10"> {/* Increased from 40% to 35% and p-8 to p-10 */}
+            <div className="w-full lg:w-[50%] p-10"> {/* Increased from 40% to 35% and p-8 to p-10 */}
               <div className="max-w-[320px]"> {/* Increased from 280px */}
                 {techniqueData.map((technique, index) => (
                   <TechniqueButton

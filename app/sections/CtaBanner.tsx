@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/Button';
 
 const CtaBanner = () => {
   return (
-    <section className="relative py-16 bg-[#e9fcff] border-t border-b border-blue-100 overflow-hidden">
+    <section className="relative py-16 bg-[#f0f5ff]  overflow-hidden">
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 via-purple-50/30 to-transparent" />
         <Image
