@@ -242,25 +242,27 @@ const TechniquesSection = () => {
             </div>
 
             {/* Benefits column - changes based on selected technique - made wider */}
-            <div className="w-full lg:w-[65%] p-10 flex items-center"> {/* Increased from 60% to 65% and p-8 to p-10 */}
+            <div className="w-full lg:w-[65%] p-10 "> {/* Increased from 60% to 65% and p-8 to p-10 */}
               <div className="w-full">
-                <p className="text-lg text-gray-800 mb-6"> {/* Updated to match WhySection styling */}
+                <p className="text-lg text-gray-800 mb-6">
                   {techniqueData[activeIndex].description}
                 </p>
 
-                <div className="relative w-full h-100 mb-8 rounded-lg overflow-hidden">
+                <div className="relative w-full aspect-[16/9] mb-8 rounded-2xl overflow-hidden shadow-lg">
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-50/20 to-transparent z-10" />
                   <Image
                     src={techniqueData[activeIndex].image}
                     alt={techniqueData[activeIndex].name}
                     fill
                     className="object-cover"
+                    priority
                   />
                 </div>
 
-                <div className="space-y-5"> {/* Increased space-y-4 to space-y-5 */}
+                <div className="space-y-5">
                   {techniqueData[activeIndex].benefits.map((benefit, index) => (
                     <div key={index} className="flex items-start">
-                      <span className="text-blue-500 text-lg mr-3 leading-none">•</span> {/* Increased mr-2.5 to mr-3 */}
+                      <span className="text-blue-500 text-lg mr-3 leading-none">•</span>
                       <span className="text-lg text-gray-800">{benefit}</span>
                     </div>
                   ))}
