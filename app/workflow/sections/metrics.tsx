@@ -18,47 +18,39 @@ const data: MetricsGroup[] = [
     {
         metricsData: [
             {
-                title: "Query Count",
-                description: "Track the total number of processed requests in real time. Gain visibility into AI workload and system efficiency.",
+                title: "Router Workflow",
+                description: "Right Query. Right Expert. Instant Action.",
                 src: "/images/metrics/query-count.png"
             },
             {
-                title: "Response Time",
-                description: "Measure how fast AI processes and delivers responses. Identify and eliminate latency issues for seamless performance.",
+                title: "",
+                description: "Not every request needs the same answer. The Router Workflow analyses incoming queries, identifies the most relevant expert agent, and routes tasks accordingly. Each request is handled with precision, ensuring accuracy and efficiency—no misrouted queries, no wasted time.",
                 src: "/images/metrics/response-time.png"
             },
             {
-                title: "User Feedback",
-                description: "Monitor approval and rejection rates from real users. Understand AI effectiveness and refine outputs for better engagement.",
+                title: "",
+                description: "Get the Right Answer, Instantly",
                 src: "/images/metrics/user-feedback.png"
-            },
-            {
-                title: "Accuracy Score",
-                description: "Evaluate how well AI-generated responses align with expectations.Ensure precision, relevance, and reliability in every interaction.",
-                src: "/images/metrics/accuracy-score.png"
-            }]
+            }
+        ]
     }, {
         metricsData: [
             {
-                title: "Query Count",
-                description: "Track the total number of processed requests in real time. Gain visibility into AI workload and system efficiency.",
+                title: "Consolidator Workflow",
+                description: "All Insights. One Clear Decision.",
                 src: "/images/metrics/query-count.png"
             },
             {
-                title: "Response Time",
-                description: "Measure how fast AI processes and delivers responses. Identify and eliminate latency issues for seamless performance.",
+                title: "",
+                description: "Data without structure slows everything down. The Consolidator Workflow pulls key retrieved information from multiple agents, consolidates it, and delivers a single, refined output. No scattered details, no missing insights—just the complete picture for better decision-making. By unifying responses across agents, the Consolidator ensures higher accuracy, consistency, and context in every output.",
                 src: "/images/metrics/response-time.png"
             },
             {
-                title: "User Feedback",
-                description: "Monitor approval and rejection rates from real users. Understand AI effectiveness and refine outputs for better engagement.",
+                title: "",
+                description: "Make Informed Decisions Faster",
                 src: "/images/metrics/user-feedback.png"
-            },
-            {
-                title: "Accuracy Score",
-                description: "Evaluate how well AI-generated responses align with expectations.Ensure precision, relevance, and reliability in every interaction.",
-                src: "/images/metrics/accuracy-score.png"
-            }]
+            }
+        ]
     },
 ];
 
@@ -107,26 +99,19 @@ export default function Metrics() {
                             <div key={`mobile_card_${cardIndex}`} className="bg-white rounded-2xl border border-[#E2E8F0] p-6 sm:p-8">
                                 <div className="relative z-10">
                                     <h3 className="text-xl sm:text-2xl font-bold mb-4">
-                                    Router Workflow
+                                    {cardIndex === 0 ? "Router Workflow" : "Consolidator Workflow"}
                                     </h3>
+                                    <h4 className="text-lg font-semibold mb-4">
+                                    {cardIndex === 0 ? "Right Query. Right Expert. Instant Action." : "All Insights. One Clear Decision."}
+                                    </h4>
                                     <p className="text-gray-600 mb-8 text-sm sm:text-base">
-                                        AI performance shouldn't be a black box. Track, measure, and optimize key
-                                        insights in real-time to ensure every response is fast, accurate, and aligned
-                                        with expectations.
+                                        {cardIndex === 0 ? 
+                                            "Not every request needs the same answer. The Router Workflow analyses incoming queries, identifies the most relevant expert agent, and routes tasks accordingly. Each request is handled with precision, ensuring accuracy and efficiency—no misrouted queries, no wasted time." :
+                                            "Data without structure slows everything down. The Consolidator Workflow pulls key retrieved information from multiple agents, consolidates it, and delivers a single, refined output. No scattered details, no missing insights—just the complete picture for better decision-making. By unifying responses across agents, the Consolidator ensures higher accuracy, consistency, and context in every output."}
                                     </p>
-                                    <div className="space-y-4">
-                                        {datum.metricsData.map((metric, index) => (
-                                            <div key={`mobile_metric_${cardIndex}_${index}`} className="flex items-start gap-2">
-                                                <div className="flex-shrink-0 w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-[#E5F6FF] flex items-center justify-center mt-1">
-                                                    <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-[#00A3FF]"></div>
-                                                </div>
-                                                <div>
-                                                    <h4 className="font-semibold text-base sm:text-lg mb-1">{metric.title}</h4>
-                                                    <p className="text-gray-600 text-sm sm:text-base">{metric.description}</p>
-                                                </div>
-                                            </div>
-                                        ))}
-                                    </div>
+                                    <p className="text-gray-600 mb-4 text-sm sm:text-base">
+                                        {cardIndex === 0 ? "Get the Right Answer, Instantly" : "Make Informed Decisions Faster"}
+                                    </p>
                                     {cardIndex === data.length - 1 && (
                                        <Button 
                                        href="#contact" 
