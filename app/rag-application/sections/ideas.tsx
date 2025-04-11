@@ -33,9 +33,11 @@ export default function Ideas() {
                 <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 px-4">
                     Too Many Ideas, Not Enough Direction?
                 </h2>
-                <p className="text-gray-600 mb-8 sm:mb-12 max-w-2xl mx-auto px-4">
-                    Focus on what matters—turn processes into practical, automated solutions that work.
-                </p>
+                <div className="flex justify-center mb-8 sm:mb-12">
+                    <p className="text-gray-600 whitespace-nowrap px-4">
+                        Focus on what matters—turn processes into practical, automated solutions that work.
+                    </p>
+                </div>
                 <a 
                     href="/#contact" 
                     className="inline-flex items-center px-8 py-3 text-lg font-medium text-white bg-gradient-to-r from-blue-400 to-blue-600 rounded-full hover:from-blue-500 hover:to-blue-700 transition-all duration-200 shadow-md hover:shadow-lg mb-10 sm:mb-16"
