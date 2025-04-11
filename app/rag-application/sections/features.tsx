@@ -2,14 +2,14 @@
 import Image from 'next/image';
 
 const employeeExperience = [
-    "IT", "Procurement", "Cybersecurity", "HR", 
-    "Supply Chain", "Talent Management"
+    "IT Operations", "Procurement", "Workforce Planning", "Compliance", 
+    "Finance & Budgeting", "Knowledge Management"
 ];
 
 const customerExperience = [
-    "Wealth Management", "Clinical Trial Operations", 
-    "Hi-Tech Semiconductors", "Insurance", 
-    "Medical Affairs", "Media & Entertainment"
+    "Sales Enablement", "Customer Support", 
+    "Marketing Campaigns", "Product Design", 
+    "Client Success", "Communications"
 ];
 
 export default function Features() {
@@ -79,7 +79,7 @@ With real-time data refinement, Synoptix AI helps you cut research time and make
                             <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 opacity-50" />
                             <div className="relative z-10">
                                 <h3 className="text-sm font-bold tracking-wider mb-4 sm:mb-6 after:content-[''] after:block after:w-12 after:h-0.5 after:bg-gradient-to-r after:from-cyan-500 after:to-blue-500 after:mt-2 after:mx-auto sm:after:mx-0 text-center sm:text-left">
-                                    EMPLOYEE EXPERIENCE
+                                    TEAM INTELLIGENCE
                                 </h3>
                                 <div className="flex flex-col gap-3 sm:gap-4">
                                     {employeeExperience.map((item, index) => (

@@ -24,7 +24,7 @@ const features = [
         )
     },
     {
-        title: 'Quantum Accuracy ',
+        title: 'Improved Accuracy ',
         description: 'Make confident decisions with precise answers drawn from verified, up-to-date data sources. ',
         content: (
             <div className="w-full h-full flex items-center justify-center">
@@ -43,7 +43,7 @@ const features = [
     },
     {
         title: 'Scalable AI ',
-        description: 'RAG95 is built for enterprise scale—delivering instant insights with zero lag, zero downtime, and zero frustration. ',
+        description: 'RAG95 is built for enterprise scale—delivering instant insights with zero lag, minimum downtime, and zero frustration.',
         content: (
             <div className="w-full h-full flex items-center justify-center">
                 <div className="p-6 flex flex-col items-center">

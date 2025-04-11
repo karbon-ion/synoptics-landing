@@ -119,7 +119,7 @@ const TechniquesSection = () => {
   const techniqueData = [
     {
       name: "Connect & Unify All Your Data",
-      description: "Gather knowledge from every corner of your business on one centralized platform. Synoptix AI ensures that all your data—whether structured or unstructured—is integrated, indexed, and instantly retrievable. ",
+      description: "Gather knowledge from every corner of your business on one centralised platform. Synoptix AI ensures that all your data—whether structured or unstructured—is integrated, indexed, and instantly retrievable.",
       benefits: [
         "Unstructured Data – Documents, emails, reports, PDFs, and raw text.",
         "Structured Data – Databases, spreadsheets, and enterprise records.",
@@ -131,7 +131,7 @@ const TechniquesSection = () => {
       name: "Secure Data Ingestion",
       description: "Not all data is useful—or safe. Synoptix AI ensures that only clean, structured, and relevant data is accessible by applying advanced filtering, pre-processing, and strict security controls. This prevents outdated, irrelevant, or sensitive data from entering your workflows. ",
       benefits: [
-        "Role-Based Access Control (RBAC) – Restrict data access to only authorized users. ",
+        "Role-Based Access Control (RBAC) – Restrict data access to only authorised users.",
         "Automated Filtering & Pre-Processing – Remove redundant or low-quality content.  ",
         "Compliance & Security Measures – Ensure all data meets enterprise security standards. "
       ]

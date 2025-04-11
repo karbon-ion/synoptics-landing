@@ -11,12 +11,8 @@ const faqs = [
         answer: "RAG95 improves retrieval speed and precision by using quantum-inspired algorithms, offering better context matching and lower latency compared to standard RAG systems."
     },
     {
-        question: "Does Quantum RAG require RAG95 computing?",
-        answer: "ENo. RAG95 runs on classical hardware. It uses quantum-inspired techniques, not actual quantum processors."
-    },
-    {
         question: "What are the use cases of RAG95?",
-        answer: "RAG95 is ideal for enterprise search, knowledge management, legal research, customer support, and any scenario requiring accurate, real-time information retrieval."
+        answer: "For applications that handle large, complex datasets and require scalable accuracy alongside fast response times, RAG95 stands out."
     }
 ];
 
