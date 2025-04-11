@@ -20,9 +20,9 @@ const TechniqueButton = ({
       onClick={onClick}
       className={`group w-full ${isActive ? 'bg-gradient-to-r from-[#3A49FF] to-[#00CCEB] text-white' : 'bg-white text-gray-800'} rounded-full py-3 px-6 mb-3 flex items-center justify-between transition-all duration-200 border border-blue-100`}
     >
-      <div className="flex-1 flex items-center justify-start"> {/* Changed justify-center to justify-start */}
+      <div className="flex-1 flex items-center justify-start"> 
         <span className={`inline-block w-1.5 h-1.5 ${isActive ? 'bg-white' : 'bg-blue-500'} rounded-full mr-2 flex-shrink-0`}></span>
-        <span className="text-xs font-medium">{name}</span>
+        <span className="text-md font-medium text-left">{name}</span>
       </div>
       <svg 
         width="14" 
@@ -197,10 +197,10 @@ const TechniquesSection = () => {
           </div>
 
           {/* Desktop view */}
-          <div className="hidden lg:flex flex-col lg:flex-row items-stretch relative z-10">
+          <div className="hidden lg:flex h-[600px] flex-col lg:flex-row items-stretch relative z-10">
             {/* Techniques column */}
-            <div className="w-full lg:w-[35%] p-10">
-              <div className="max-w-[320px]">
+            <div className="w-full  lg:w-[40%] p-10"> {/* Increased from 40% to 35% and p-8 to p-10 */}
+              <div className="max-w-[500px] "> {/* Increased from 280px */}
                 {techniqueData.map((technique, index) => (
                   <TechniqueButton 
                     key={index} 
@@ -213,9 +213,9 @@ const TechniquesSection = () => {
             </div>
             
             {/* Benefits column */}
-            <div className="w-full lg:w-[65%] p-10 flex items-center">
+            <div className="w-full lg:w-[65%] p-10">
               <div className="w-full">
-                <p className="text-lg text-gray-600 mb-8">
+                <p className="text-lg text-gray-800 mb-8">
                   {techniqueData[activeIndex].description}
                 </p>
                 
@@ -223,7 +223,18 @@ const TechniquesSection = () => {
                   {techniqueData[activeIndex].benefits.map((benefit, index) => (
                     <div key={index} className="flex items-start">
                       <span className="text-blue-500 text-lg mr-3 leading-none">•</span>
-                      <span className="text-lg text-gray-600">{benefit}</span>
+                      <span className="text-lg text-gray-800">
+                        {benefit.includes(':') ? (
+                          benefit.split(':').map((part, i) => (
+                            <span key={i}>
+                              {i === 0 ? <strong>{part}</strong> : part}
+                              {i < benefit.split(':').length - 1 && ':'}
+                            </span>
+                          ))
+                        ) : (
+                          benefit
+                        )}
+                      </span>
                     </div>
                   ))}
                 </div>
