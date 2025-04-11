@@ -13,7 +13,7 @@ const CtaBanner = () => {
           src="/rag_blob.png"
           alt="Background Blob"
           fill
-          className="object-center  "
+          className="object-center  opacity-50"
           priority
         />
       </div>
