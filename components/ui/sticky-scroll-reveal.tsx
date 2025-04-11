@@ -76,11 +76,11 @@ export const StickyScroll = ({
       animate={{
         backgroundColor: backgroundColors[0],
       }}
-      className="relative flex flex-col md:flex-row min-h-[30rem] rounded-2xl p-6 md:p-10 border border-blue-100"
+      className="relative flex flex-col md:flex-row min-h-[30rem] rounded-2xl  pt-10 pl-10 pr-10 md:pt-20 md:pl-20 md:pr-20 border border-blue-100"
       ref={ref}
     >
       {/* Content column */}
-      <div className="w-full md:w-1/2 relative">
+      <div className="w-full md:w-1/2 relative ">
         <div className="space-y-24 md:space-y-28">
           {content.map((item, index) => (
             <div 
@@ -121,13 +121,13 @@ export const StickyScroll = ({
               </div>
             </div>
           ))}
-          <div className="h-20" /> {/* Spacer at bottom */}
+          <div className="h-40" /> {/* Spacer at bottom */}
         </div>
       </div>
       
       {/* Image column */}
       <div className="hidden md:block w-1/2 relative">
-        <div className="sticky top-20 pt-4 pb-4 h-[500px] overflow-hidden rounded-3xl">
+        <div className="sticky mt-[-100px] top-20 pt-4 h-[500px] overflow-hidden rounded-3xl">
           {content.map((item, index) => (
             <motion.div 
               key={index}
@@ -138,7 +138,11 @@ export const StickyScroll = ({
               transition={{ duration: 0.4 }}
               className={`absolute inset-0 flex items-start justify-center ${activeCard === index ? 'z-10' : 'z-0'}`}
             >
-              {item.content}
+              <div className="max-w-[450px] max-h-[450px] min-w-[450px] min-h-[450px] flex items-center justify-center">
+                <div className="w-full h-full relative overflow-hidden">
+                  {item.content}
+                </div>
+              </div>
             </motion.div>
           ))}
         </div>
