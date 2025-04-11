@@ -19,8 +19,8 @@ const TechniqueButton = ({
       onClick={onClick}
       className={`group w-full ${isActive ? 'bg-gradient-to-r from-[#3A49FF] to-[#00CCEB] text-white' : 'bg-white text-gray-800'} rounded-full py-3 px-6 mb-3 flex items-center justify-between transition-all duration-200 border border-blue-100`}
     >
-      <div className="flex-1 flex items-start justify-start"> {/* Using items-start to ensure text is top-aligned when wrapping */}
-        <span className={`inline-block w-1.5 h-1.5 ${isActive ? 'bg-white' : 'bg-blue-500'} rounded-full mr-2 flex-shrink-0 mt-1.5`}></span>
+      <div className="flex-1 flex items-center justify-start"> 
+        <span className={`inline-block w-1.5 h-1.5 ${isActive ? 'bg-white' : 'bg-blue-500'} rounded-full mr-2 flex-shrink-0`}></span>
         <span className="text-md font-medium text-left">{name}</span>
       </div>
       <svg
@@ -193,8 +193,8 @@ const TechniquesSection = () => {
           <div className="hidden lg:flex flex-col lg:flex-row items-stretch relative z-10"> {/* Added relative z-10 */}
             {/* Techniques column - made wider */}
 
-            <div className="w-full lg:w-[50%] p-10"> {/* Increased from 40% to 35% and p-8 to p-10 */}
-              <div className="max-w-[320px]"> {/* Increased from 280px */}
+            <div className="w-full lg:w-[40%] p-10"> {/* Increased from 40% to 35% and p-8 to p-10 */}
+              <div className="max-w-[500px]"> {/* Increased from 280px */}
                 {techniqueData.map((technique, index) => (
                   <TechniqueButton
                     key={index}
@@ -209,7 +209,7 @@ const TechniquesSection = () => {
             {/* Benefits column - changes based on selected technique - made wider */}
             <div className="w-full lg:w-[65%] p-10 flex items-center"> {/* Increased from 60% to 65% and p-8 to p-10 */}
               <div className="w-full">
-                <p className="text-lg text-gray-600 mb-8"> {/* Updated to match WhySection styling */}
+                <p className="text-lg text-gray-800 mb-8"> {/* Updated to match WhySection styling */}
                   {techniqueData[activeIndex].description}
                 </p>
 
@@ -217,7 +217,7 @@ const TechniquesSection = () => {
                   {techniqueData[activeIndex].benefits.map((benefit, index) => (
                     <div key={index} className="flex items-start">
                       <span className="text-blue-500 text-lg mr-3 leading-none">•</span> {/* Increased mr-2.5 to mr-3 */}
-                      <span className="text-lg text-gray-600">{benefit}</span>
+                      <span className="text-lg text-gray-800">{benefit}</span>
                     </div>
                   ))}
                 </div>
