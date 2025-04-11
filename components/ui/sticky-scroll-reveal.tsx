@@ -76,7 +76,7 @@ export const StickyScroll = ({
       animate={{
         backgroundColor: backgroundColors[0],
       }}
-      className="relative flex flex-col md:flex-row min-h-[30rem] rounded-2xl p-10 md:p-20 border border-blue-100"
+      className="relative flex flex-col md:flex-row min-h-[30rem] rounded-2xl  pt-10 pl-10 pr-10 md:pt-20 md:pl-20 md:pr-20 border border-blue-100"
       ref={ref}
     >
       {/* Content column */}
@@ -121,7 +121,7 @@ export const StickyScroll = ({
               </div>
             </div>
           ))}
-          <div className="h-20" /> {/* Spacer at bottom */}
+          <div className="h-40" /> {/* Spacer at bottom */}
         </div>
       </div>
       
@@ -138,7 +138,11 @@ export const StickyScroll = ({
               transition={{ duration: 0.4 }}
               className={`absolute inset-0 flex items-start justify-center ${activeCard === index ? 'z-10' : 'z-0'}`}
             >
-              {item.content}
+              <div className="max-w-[450px] max-h-[450px] min-w-[450px] min-h-[450px] flex items-center justify-center">
+                <div className="w-full h-full relative overflow-hidden">
+                  {item.content}
+                </div>
+              </div>
             </motion.div>
           ))}
         </div>
