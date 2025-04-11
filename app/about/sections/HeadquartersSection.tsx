@@ -4,25 +4,11 @@ import { useEffect, useRef, useState } from "react";
 
 const stats = [
   {
-    id: 'azure',
-    category: 'Faster Workflows',
-    value: '40%',
-    label: 'UPTIME',
-    description: 'Cut process delays and keep operations moving—clients see results within just 3 months'
-  },
-  {
-    id: 'models',
-    category: 'Fewer Errors',
-    value: '60%',
+    id: 'founded',
+    category: 'Founded',
+    value: '2024',
     label: '',
-    description: 'Reduce human mistakes with AI-powered precision, ensuring smoother execution and higher accuracy..'
-  },
-  {
-    id: 'automation',
-    category: 'Faster Approvals',
-    value: '70%',
-    label: '',
-    description: 'Reduce manual workflows with AI-powered agents.'
+    description: 'Established to transform enterprise AI with innovative solutions.'
   }
 ];
 
@@ -56,7 +42,7 @@ const HeadquartersSection = () => {
 
   const animatePercentages = () => {
     stats.forEach((stat, index) => {
-      const targetValue = parseInt(stat.value.replace('%', ''));
+      const targetValue = parseInt(stat.value);
       let startValue = 0;
       const duration = 1500; // Animation duration in milliseconds
       const increment = Math.ceil(targetValue / (duration / 16)); // Approximately 60fps
@@ -95,7 +81,7 @@ const HeadquartersSection = () => {
        
         
         {/* Stats grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8">
+        <div className="flex justify-center">
           {stats.map((stat, index) => (
             <div key={stat.id} className="flex flex-col items-start">
               <div className="w-full mb-4">
@@ -109,7 +95,7 @@ const HeadquartersSection = () => {
               <div className="flex flex-col items-start">
                 <div className="flex items-baseline">
                   <span className="text-5xl font-bold text-gray-900">
-                    {animated ? `${percentages[index]}%` : '0%'}
+                    {animated ? percentages[index] : '0'}
                   </span>
                   {stat.label && (
                     <span className="ml-2 text-xs font-semibold uppercase text-gray-500">

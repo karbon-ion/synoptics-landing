@@ -166,8 +166,10 @@ const TechniquesSection = () => {
     <section className="py-24 bg-white relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> {/* Changed from max-w-6xl to max-w-7xl */}
         {/* Header */}
-        <div className="text-center mb-14">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Your Enterprise Deserves Better Intelligence—Discover RAG95</h2>
+        <div className="max-w-7xl mx-auto text-center">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 px-4">
+        Your Enterprise Deserves Better Intelligence
+                </h2>
           
           <p className="text-gray-600 text-sm max-w-2xl mx-auto mb-6">
           Get the right information at the right time, every time. Synoptix ensures speed, security, and precision—at enterprise scale 
