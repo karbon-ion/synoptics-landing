@@ -16,10 +16,11 @@ const Footer = () => {
       { name: 'Fine-tuning & Optimization', href: '/fine-tuning' },
     ],
     resources: [
-      { name: 'Blog', href: '/blogs' },
-      { name: 'Tutorials', href: '/tutorials' },
+      // { name: 'Blog', href: '/blogs' },
+      // { name: 'Tutorials', href: '/tutorials' },
       // { name: 'Quick Start AI', href: '/quick-start' },
       // { name: 'User Guide', href: '/user-guide' },
+      { name: '', href: '#' },
     ],
     standalone: [
       { name: '', href: '#' },

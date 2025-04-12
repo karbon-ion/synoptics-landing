@@ -270,7 +270,7 @@ export const NavbarMenu = () => {
               </div>
             </MenuItem>
 
-            <MenuItem setActive={setActive} active={active} item="Resources">
+            {/* <MenuItem setActive={setActive} active={active} item="Resources">
               <div className="grid gap-4 w-64">
                 {resourcesItems.map((item) => (
                   <div key={item.name} className="w-full">
@@ -288,7 +288,7 @@ export const NavbarMenu = () => {
                   </div>
                 ))}
               </div>
-            </MenuItem>
+            </MenuItem> */}
             <MenuItem setActive={setActive} active={active} item="About Us" href="/about" />
             <MenuItem setActive={setActive} active={active} item="Contact Us" href="/#contact" />
           </div>

@@ -15,13 +15,8 @@ const features = [
   {
     id: 'stack',
     title: 'Fine Tuning & Optimisation',
-<<<<<<< HEAD
-    description: 'Get higher accuracy and efficiency with AI model fine tune to your specific industry and business objectives',
-    icon: <IconTerminal2 />,
-=======
     description: 'Get higher accuracy and efficiency with AI models fine-tuned to your specific requirements and objectives. ',
     icon: <i className="fa-sharp fa-solid fa-rectangle-terminal text-blue-500 text-[20px]"></i>,
->>>>>>> b25821651e7207cb10866d51f91acc1ae9300d81
 
     link: '/fine-tuning'
   },
@@ -36,13 +31,8 @@ const features = [
   {
     id: 'integration',
     title: 'AI Strategy Development',
-<<<<<<< HEAD
-    description: 'Align AI investments with your business vision, identify opportunities, and create a roadmap for long-term success.',
-    icon: <IconCurrencyDollar />,
-=======
     description: 'Align AI investments with your business objectives, identify opportunities, and create a roadmap for long-term success.',
     icon: <i className="fa-sharp fa-solid fa-chess-queen text-blue-500 text-[20px]"></i>,
->>>>>>> b25821651e7207cb10866d51f91acc1ae9300d81
     link: '/ai-consulting'
   },
   {
