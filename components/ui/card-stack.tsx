@@ -46,11 +46,11 @@ const CardStack = ({ i, metricsData, progress, range, targetScale }: { i: number
                   {metricsData.metricsData[2].description}
                 </p>
                 <a
-                  href="#learn"
+                  href="/#contact"
                   className="inline-block mt-8 md:mt-12 px-6 md:px-8 py-2 bg-[#00A3FF] text-white 
                                         rounded-full font-semibold hover:bg-[#0095eb] transition-all text-sm md:text-base"
                 >
-                  Learn More
+                  Request a Demo
                 </a>
               </div>
               <div className="md:w-1/3 flex justify-center items-center mt-8 md:mt-0">

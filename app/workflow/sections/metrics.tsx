@@ -125,12 +125,12 @@ export default function Metrics() {
                                     </div>
                                     {cardIndex === data.length - 1 && (
                                        <Button 
-                                       href="#contact" 
+                                       href="/#contact" 
                                        variant="primary"
                                        size="lg"
                                        className="mb-10 sm:mb-16 mt-4"
                                    >
-                                            Learn More
+                                            Request a Demo
                                         </Button>
                                     )}
                                 </div>
