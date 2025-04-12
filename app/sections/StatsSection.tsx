@@ -92,9 +92,7 @@ const StatsSection = () => {
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="mb-4">
-          <span className="text-sm font-semibold tracking-wider uppercase text-gray-600">
-            GLOBAL IMPACT
-          </span>
+        <h2 className="text-sm font-medium uppercase mb-4">GLOBAL IMPACT</h2>
         </div>
         
         <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 max-w-4xl mx-auto">

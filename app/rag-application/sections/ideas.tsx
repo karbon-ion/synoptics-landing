@@ -34,7 +34,7 @@ export default function Ideas() {
                     Too Many Ideas, Not Enough Direction?
                 </h2>
                 <div className="flex justify-center mb-8 sm:mb-12">
-                    <p className="text-gray-600 whitespace-nowrap px-4">
+                    <p className="text-gray-600 max-w-xs sm:max-w-md md:max-w-lg lg:max-w-2xl mx-auto px-4">
                         Focus on what matters—turn processes into practical, automated solutions that works.
                     </p>
                 </div>

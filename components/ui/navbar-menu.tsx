@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { motion } from "motion/react";
+import { motion, AnimatePresence } from "motion/react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -89,7 +89,7 @@ export const Menu = ({
   return (
     <nav
       onMouseLeave={() => setActive(null)}
-      className={`relative rounded-full border border-transparent flex items-center justify-center space-x-6 px-8 py-4 transition-all duration-300 ${isScrolled ? 'bg-white/80 backdrop-blur-sm shadow-md' : 'bg-transparent'
+      className={`relative rounded-full border border-transparent hidden md:flex items-center justify-center space-x-6 px-8 py-4 transition-all duration-300 ${isScrolled ? 'bg-white/80 backdrop-blur-sm shadow-md' : 'bg-transparent'
         }`}
     >
       {children}
@@ -144,6 +144,7 @@ export const HoveredLink = ({ children, href, ...rest }: any) => {
 export const NavbarMenu = () => {
   const [active, setActive] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
 
   React.useEffect(() => {
@@ -197,6 +198,63 @@ export const NavbarMenu = () => {
 
   return (
     <div className={`fixed w-full left-0 top-0 z-50 transition-all duration-300 flex justify-center items-center ${scrolled ? 'py-2' : 'py-6'}`}>
+      {/* Mobile header bar with logo and hamburger - Only visible on mobile */}
+      <div className="md:hidden fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-4 py-3 bg-white/80 backdrop-blur-sm">
+        <Link href="/" className="flex items-center gap-2 group">
+          <div className="relative w-7 h-7 transition-transform duration-300 group-hover:scale-110">
+            <Image
+              src="/synoptix_logo.png"
+              alt="Synoptix Logo"
+              fill
+              className="object-contain"
+            />
+          </div>
+          <span className="text-xl font-bold tracking-tight">
+            Synoptix<span className="text-blue-500">.</span>AI
+          </span>
+        </Link>
+        
+        {/* Hamburger button */}
+        <button
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          className="inline-flex items-center justify-center p-2 text-gray-700 hover:text-blue-600 transition-colors duration-300"
+        >
+          <span className="sr-only">Open main menu</span>
+          {!isMobileMenuOpen ? (
+            <svg
+              className="block h-6 w-6"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          ) : (
+            <svg
+              className="block h-6 w-6"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          )}
+        </button>
+      </div>
+      
+
       <div className="max-w-7xl w-full flex justify-center">
         <Menu setActive={setActive} isScrolled={scrolled}>
           <div className="flex items-center mr-8">
@@ -294,29 +352,102 @@ export const NavbarMenu = () => {
           </div>
         </Menu>
 
-        {/* Mobile menu button */}
-        <div className="md:hidden fixed top-4 right-4">
-          <button
-            onClick={() => { }}
-            className="inline-flex items-center justify-center p-2 text-gray-700 hover:text-blue-600 transition-colors duration-300"
-          >
-            <span className="sr-only">Open main menu</span>
-            <svg
-              className="block h-6 w-6"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
+        {/* Mobile menu button removed from here - now in the header */}
+
+        {/* Mobile Menu */}
+        <AnimatePresence>
+          {isMobileMenuOpen && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              className="md:hidden fixed inset-0 top-0 z-40 bg-white/95 backdrop-blur-sm overflow-y-auto"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            </svg>
-          </button>
-        </div>
+              <div className="flex flex-col pt-16 pb-8 px-6 space-y-4">
+                <div className="h-12"></div> {/* Spacer for fixed header */}
+
+                <div className="animate-fadeIn" style={{ animationDelay: '150ms' }}>
+                  <Link 
+                    href="/" 
+                    className={`text-lg font-medium py-3 px-4 rounded-lg transition-colors ${pathname === '/' ? 'text-blue-600 bg-blue-50/50' : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50/50'}`}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Home
+                  </Link>
+                </div>
+
+                <div className="space-y-2 animate-fadeIn" style={{ animationDelay: '200ms' }}>
+                  <div className="text-lg font-medium py-2 px-4 text-gray-700">
+                    Platform
+                  </div>
+                  <div className="pl-4 space-y-2">
+                    {platformItems.map((item) => (
+                      <Link
+                        key={item.name}
+                        href={item.href}
+                        className={`flex items-center py-2 px-4 rounded-lg transition-colors ${pathname === item.href ? 'text-blue-600 bg-blue-50/50' : 'text-gray-600 hover:text-blue-600 hover:bg-blue-50/50'}`}
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        <span>{item.name}</span>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="animate-fadeIn" style={{ animationDelay: '250ms' }}>
+                  <Link 
+                    href="/syno-guard" 
+                    className={`text-lg font-medium py-3 px-4 rounded-lg transition-colors ${pathname === '/syno-guard' ? 'text-blue-600 bg-blue-50/50' : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50/50'}`}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    SynoGuard
+                  </Link>
+                </div>
+
+                <div className="space-y-2 animate-fadeIn" style={{ animationDelay: '300ms' }}>
+                  <div className="text-lg font-medium py-2 px-4 text-gray-700">
+                    Services
+                  </div>
+                  <div className="pl-4 space-y-2">
+                    {servicesItems.map((item) => (
+                      <Link
+                        key={item.name}
+                        href={item.href}
+                        className={`flex items-center py-2 px-4 rounded-lg transition-colors ${pathname === item.href ? 'text-blue-600 bg-blue-50/50' : 'text-gray-600 hover:text-blue-600 hover:bg-blue-50/50'}`}
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        <span>{item.name}</span>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="animate-fadeIn" style={{ animationDelay: '350ms' }}>
+                  <Link 
+                    href="/about" 
+                    className={`text-lg font-medium py-3 px-4 rounded-lg transition-colors ${pathname === '/about' ? 'text-blue-600 bg-blue-50/50' : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50/50'}`}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    About Us
+                  </Link>
+                </div>
+
+                <div className="animate-fadeIn" style={{ animationDelay: '400ms' }}>
+                  <Link 
+                    href="/#contact" 
+                    className={`text-lg font-medium py-3 px-4 rounded-lg transition-colors ${pathname === '/#contact' ? 'text-blue-600 bg-blue-50/50' : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50/50'}`}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Contact Us
+                  </Link>
+                </div>
+
+
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </div>
   );
