@@ -12,8 +12,8 @@ const IntroSection = () => {
           {/* Content */}
           <div className="space-y-8">
             <h2 className="text-4xl font-bold text-gray-900 leading-tight">
-              AI Doesn't Just Work<br />
-              It Works for You When Tuned
+              AI doesn't just work<br />
+              It works for you when tuned!
             </h2>
             
             <p className="text-lg text-gray-600">
