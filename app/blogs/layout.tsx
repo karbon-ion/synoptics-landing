@@ -7,3 +7,15 @@ export const metadata: Metadata = {
     canonical: '/blogs',
   },
 };
+
+export default function BlogsLayout({
+    children,
+}: {
+    children: React.ReactNode
+}) {
+    return (
+        <main className="min-h-screen">
+            {children}
+        </main>
+    );
+}

@@ -7,3 +7,15 @@ export const metadata: Metadata = {
     canonical: '/privacy-policy',
   },
 };
+
+export default function PrivacyPolicyLayout({
+    children,
+}: {
+    children: React.ReactNode
+}) {
+    return (
+        <main className="min-h-screen">
+            {children}
+        </main>
+    );
+}

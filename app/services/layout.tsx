@@ -7,3 +7,15 @@ export const metadata: Metadata = {
     canonical: '/services',
   },
 };
+
+export default function ServicesLayout({
+    children,
+}: {
+    children: React.ReactNode
+}) {
+    return (
+        <main className="min-h-screen">
+            {children}
+        </main>
+    );
+}

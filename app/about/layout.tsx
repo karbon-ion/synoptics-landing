@@ -7,3 +7,15 @@ export const metadata: Metadata = {
     canonical: '/about',
   },
 };
+
+export default function AboutLayout({
+    children,
+}: {
+    children: React.ReactNode
+}) {
+    return (
+        <main className="min-h-screen">
+            {children}
+        </main>
+    );
+}

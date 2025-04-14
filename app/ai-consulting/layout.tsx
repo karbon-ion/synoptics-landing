@@ -7,3 +7,15 @@ export const metadata: Metadata = {
     canonical: '/ai-consulting',
   },
 };
+
+export default function AIConsultingLayout({
+    children,
+}: {
+    children: React.ReactNode
+}) {
+    return (
+        <main className="min-h-screen">
+            {children}
+        </main>
+    );
+}
