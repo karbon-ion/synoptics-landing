@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { IconBrandFacebook, IconBrandTwitter, IconBrandLinkedin, IconShieldCheck, IconMail } from '@tabler/icons-react';
 
 const Footer = () => {
   const navigation = {
@@ -41,7 +42,7 @@ const Footer = () => {
       </div>
 
       <div className="container relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {/* Logo and Contact Info */}
           <div className="col-span-1 sm:col-span-2 md:col-span-1 text-center sm:text-left">
             <Link href="/" className="inline-block mb-6">
@@ -59,7 +60,27 @@ const Footer = () => {
               </div>
             </Link>
             <div className="space-y-2 text-sm text-gray-600">
-              <p>hello@synoptix.ai</p>
+              <div className="flex items-center pl-[3px] gap-2">
+                <IconMail size={18} stroke={1.5} />
+                <p>hello@synoptix.ai</p>
+              </div>
+            </div>
+            <div className="mt-4 flex items-center gap-4">
+              <Link href="https://www.facebook.com/profile.php?id=61574933377526" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-500 transition-colors">
+                <IconBrandFacebook size={24} stroke={1.5} />
+              </Link>
+              <Link href="https://x.com/Synoptix_AI" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-500 transition-colors">
+                <IconBrandTwitter size={24} stroke={1.5} />
+              </Link>
+              <Link href="https://www.linkedin.com/company/synoptix-ai" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-500 transition-colors">
+                <IconBrandLinkedin size={24} stroke={1.5} />
+              </Link>
+            </div>
+            <div className="mt-4 flex items-center">
+              <div className="flex items-center gap-2 text-gray-600">
+                <IconShieldCheck size={24} stroke={1.5} />
+                <span className="text-xs font-medium">ISO 27001 Certified</span>
+              </div>
             </div>
           </div>
 
@@ -90,7 +111,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="col-span-1 text-center sm:text-left">
+          {/* <div className="col-span-1 text-center sm:text-left">
             <h3 className="text-sm font-semibold text-blue-500 uppercase mb-4">RESOURCES</h3>
             <ul className="space-y-3">
               {navigation.resources.map((item) => (
@@ -101,7 +122,7 @@ const Footer = () => {
                 </li>
               ))}
             </ul>
-          </div>
+          </div> */}
         </div>
 
         {/* Bottom Bar */}
