@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { headers } from "next/headers";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { NavbarMenu } from "@/components/ui/navbar-menu";
@@ -11,6 +12,10 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Synoptix.ai - Enterprise AI Solutions",
   description: "Enterprise AI solutions for businesses",
+  metadataBase: new URL('https://synoptix.ai'),
+  alternates: {
+    canonical: '/',
+  },
 };
 
 export default function RootLayout({
