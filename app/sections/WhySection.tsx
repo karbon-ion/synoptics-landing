@@ -6,7 +6,7 @@ import { StickyScroll } from '@/components/ui/sticky-scroll-reveal';
 const features = [
     {
         title: "Accelerate Task Execution",
-        description: "Reduce downtime and boost efficiency with AI-driven automation, delivering faster, smarter results effortlessly.",
+        description: "Minimise downtime and enhance efficiency through AI-driven automation that delivers faster, smarter results, enabling your team to focus on strategic initiatives.",
         content: (
             <div className="w-full h-full flex items-center justify-center">
                 <div className="p-6 flex flex-col items-center">
@@ -24,7 +24,7 @@ const features = [
     },
     {
         title: 'Flexible Model Selection',
-        description: 'Choose the right LLM to fit your needs, ensuring optimal AI performance and seamless business integration.',
+        description: 'Select the most suitable large language model (LLM) to meet your specific requirements, ensuring optimal AI performance and seamless integration within your business operations.',
         content: (
             <div className="w-full h-full flex items-center justify-center">
                 <div className="p-6 flex flex-col items-center">
@@ -42,7 +42,7 @@ const features = [
     },
     {
         title: 'Seamless Data Integration',
-        description: 'Easily integrate AI into your existing software ecosystem, enhancing workflows and operational efficiency instantly.',
+        description: 'Integrate AI effortlessly into your existing software ecosystem, enhancing workflows and operational efficiency by connecting with various data sources, including ERP systems and databases.',
         content: (
             <div className="w-full h-full flex items-center justify-center">
                 <div className="p-6 flex flex-col items-center">
@@ -60,7 +60,7 @@ const features = [
     },
     {
         title: 'Zero Data Retention',
-        description: 'Keep your data private with a closed-source AI system, ensuring full confidentiality and compliance.',
+        description: 'Maintain complete data privacy with a closed-source AI system that processes information in-memory without storing it, ensuring full confidentiality and compliance with data protection standards.',
         content: (
             <div className="w-full h-full flex items-center justify-center">
                 <div className="p-6 flex flex-col items-center">
@@ -78,7 +78,7 @@ const features = [
     },
     {
         title: 'Enterprise-Grade Security',
-        description: 'Protect sensitive information with encryption, role-based access, and built-in safety tools for maximum security.',
+        description: 'Safeguard sensitive information through robust security measures, including encryption, role-based access controls, and built-in safety tools, aligning with industry-standard security protocols.',
         content: (
             <div className="w-full h-full flex items-center justify-center">
                 <div className="p-6 flex flex-col items-center">

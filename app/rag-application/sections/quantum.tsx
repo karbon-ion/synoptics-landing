@@ -5,15 +5,15 @@ import Image from 'next/image';
 
 // Define the model providers
 const modelProviders = [
-  { id: 'openai1', name: 'OpenAI', logo: '/images/logos/openai.svg' },
-  { id: 'meta', name: 'Meta', logo: '/images/logos/meta.svg' },
-  { id: 'cohere', name: 'Cohere', logo: '/images/logos/cohere.svg' },
-  { id: 'deepseek', name: 'DeepSeek', logo: '/images/logos/deepseek.svg' },
-  { id: 'microsoft', name: 'Microsoft', logo: '/images/logos/microsoft.svg' },
-  { id: 'openai2', name: 'OpenAI', logo: '/images/logos/openai.svg' },
-  { id: 'nvidia', name: 'NVIDIA', logo: '/images/logos/nvidia.svg' },
+  { id: 'sharepoint', name: 'Sharepoint', logo: '/images/logos/sharepoint.png' },
+  { id: 'SAP', name: 'SAP', logo: '/images/logos/SAP.png' },
+  { id: 'Salesforce', name: 'Salesforce', logo: '/images/logos/salesforce.svg' },
+  { id: 'unknown', name: 'Unknown', logo: '/images/logos/03.png' },
+  { id: 'ServiceNow', name: 'ServiceNow', logo: '/images/logos/ServiceNow.png' },
+  { id: 'Oracle', name: 'Oracle', logo: '/images/logos/Oracle.png' },
+  { id: 'openai', name: 'openai', logo: '/images/logos/openai.svg' },
   { id: 'anthropic', name: 'Anthropic', logo: '/images/logos/anthropic.svg' },
-  { id: 'qwen', name: 'Qwen', logo: '/images/logos/qwen.svg' },
+  { id: 'meta', name: 'Meta', logo: '/images/logos/meta.svg' },
 ];
 
 // Define the enterprise advantages
