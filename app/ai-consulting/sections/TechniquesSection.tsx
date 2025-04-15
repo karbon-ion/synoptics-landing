@@ -179,7 +179,7 @@ const TechniquesSection = () => {
     {
       name: "Data & Analytics Consulting",
       description: "Transform enterprise data into actionable insights with AI-driven models that enhance decision-making and automate workflows.",
-      image: "/images/New/Data & Analytics Consulting.png",
+      image: "/images/New/Data.png",
       benefits: [
 
       ]
