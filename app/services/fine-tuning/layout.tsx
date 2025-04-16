@@ -4,7 +4,7 @@ export const metadata: Metadata = {
   title: "AI Fine Tuning and Optimisation Services | Synoptix.AI",
   description: "Customise and fine-tune AI models for your enterprise needs with expert optimisation services for higher precision and relevance.",
   alternates: {
-    canonical: '/fine-tuning',
+    canonical: '/services/fine-tuning',
   },
 };
 

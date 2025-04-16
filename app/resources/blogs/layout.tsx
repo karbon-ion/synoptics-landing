@@ -4,7 +4,7 @@ export const metadata: Metadata = {
   title: "Blogs - Synoptix.ai",
   description: "Insights and articles from Synoptix.ai",
   alternates: {
-    canonical: '/blogs',
+    canonical: '/resources/blogs',
   },
 };
 

@@ -4,7 +4,7 @@ export const metadata: Metadata = {
   title: "AI Performance Evaluation for Enterprises | Synoptix.AI",
   description: "Measure groundedness, accuracy, and relevance of AI outputs to ensure performance, compliance, and business reliability.",
   alternates: {
-    canonical: '/enterprise-rag',
+    canonical: '/platform/ai-performace-evaluation',
   },
 };
 

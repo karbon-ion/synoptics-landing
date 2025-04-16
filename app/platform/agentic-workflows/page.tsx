@@ -8,10 +8,9 @@ import Metrics from "./sections/metrics";
 import RagStatsSection from "./sections/rag-stats";
 // import QuantumSection from "./sections/quantum";
 import FAQ from "./sections/faq";
-import TestimonialsSection from "../sections/TestimonialsSection";
-import SmallFoot from "../sections/smallFoot";
 import WhySection from "./sections/WhySection";
 import TechniquesSection from "./sections/TechniquesSection";
+import SmallFoot from "@/app/sections/smallFoot";
 export default function RagApplication() {
     return (
         <main className="w-full">

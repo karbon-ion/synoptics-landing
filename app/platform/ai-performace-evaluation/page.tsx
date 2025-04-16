@@ -7,7 +7,7 @@ import Metrics from "./sections/metrics";
 import RagStatsSection from "./sections/rag-stats";
 // import QuantumSection from "./sections/quantum";
 import FAQ from "./sections/faq";
-import SmallFoot from "../sections/smallFoot";
+import SmallFoot from "@/app/sections/smallFoot";
 import IntroSection from "./sections/IntroSection";
 import TechniquesSection from "./sections/TechniquesSection";
 import WhySection from "./sections/WhySection";
