@@ -5,11 +5,10 @@ import IntroSection from './sections/IntroSection';
 import ServiceProcessSection from './sections/ServiceProcessSection';
 import CtaBanner from './sections/CtaBanner';
 import TechniquesSection from './sections/TechniquesSection';
-import ContactSection from '../sections/ContactSection';
 import WhySection from './sections/WhySection';
 import ResultSection from './sections/ResultsSection';
 import FAQ from './sections/faq';
-import SmallFoot from '../sections/smallFoot';
+import SmallFoot from '@/app/sections/smallFoot';
 
 export default function FineTuning() {
   return (
