@@ -162,38 +162,38 @@ export const NavbarMenu = () => {
   const platformItems = [
     { 
       name: 'RAG', 
-      href: '/rag-application', 
+      href: '/enterprise-rag-application', 
       description: 'Enterprise RAG Solutions with powerful context retrieval capabilities.',
       image: '/images/New/Header - RAG.jpg'
     },
     { 
       name: 'Agent', 
-      href: '/enterprise-ai-agent', 
+      href: '/enterprise-ai-agents', 
       description: 'AI Agent Platform for automating complex tasks and workflows.',
       image: '/images/New/Header - Agent.png'
     },
     { 
       name: 'Workflow', 
-      href: '/workflow', 
+      href: '/agentic-workflows', 
       description: 'Automated Workflows that streamline your business processes.',
       image: '/images/New/Header - Workflows.png'
     },
     { 
       name: 'Evaluations', 
-      href: '/enterprise-rag', 
+      href: '/ai-performace-evaluation', 
       description: 'Performance Metrics to measure and optimize AI system quality.',
       image: '/images/New/Header -  Evaluations.png'
     },
   ];
 
   const servicesItems = [
-    { name: 'Fine-Tuning', href: '/fine-tuning', description: 'Custom Model Fine-Tuning' },
-    { name: 'AI Consulting', href: '/ai-consulting', description: 'Enterprise AI Solutions' },
+    { name: 'Fine-Tuning', href: '/services/fine-tuning', description: 'Custom Model Fine-Tuning' },
+    { name: 'AI Consulting', href: '/services/ai-consulting', description: 'Enterprise AI Solutions' },
   ];
 
   const resourcesItems = [
-    { name: 'Blog', href: '/blogs', description: 'Latest insights and updates' },
-    { name: 'Tutorials', href: '/tutorials', description: 'Step-by-step guides' },
+    { name: 'Blog', href: '/resources/blogs', description: 'Latest insights and updates' },
+    { name: 'Tutorials', href: '/resources/tutorials', description: 'Step-by-step guides' },
   ];
 
   return (
@@ -306,7 +306,7 @@ export const NavbarMenu = () => {
               </div>
             </MenuItem>
 
-            <MenuItem setActive={setActive} active={active} item="SynoGuard" href="/syno-guard" />
+            <MenuItem setActive={setActive} active={active} item="SynoGuard" href="/ai-security-tool/syno-guard" />
 
             <MenuItem setActive={setActive} active={active} item="Services">
               <div className="grid gap-4 w-64">

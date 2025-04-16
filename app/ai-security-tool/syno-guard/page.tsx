@@ -3,9 +3,9 @@ import Hero from './sections/hero'
 import Certifications from './sections/certifications'
 import Metrics from "./sections/metrics";
 // import Security from "./sections/security";
-import TestimonialsSection from "../sections/TestimonialsSection";
+import TestimonialsSection from "../../sections/TestimonialsSection";
 import OWASP from './sections/owasp';
-import SmallFoot from "../sections/smallFoot";
+import SmallFoot from "../../sections/smallFoot";
 import ActivateSynoGuard from './sections/activate-synoguard';
 import WhySection from './sections/WhySection';
 
