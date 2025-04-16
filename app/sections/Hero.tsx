@@ -7,7 +7,7 @@ import { BackgroundGradientAnimation } from '@/components/ui/background-gradient
 const Hero = () => {
   return (
     <div className="min-h-screen flex items-center justify-center ">
-      {/* <BackgroundGradientAnimation
+      <BackgroundGradientAnimation
         gradientBackgroundStart="rgb(240, 245, 255)"
         gradientBackgroundEnd="rgb(255, 255, 255)" 
         firstColor="230, 240, 255"
@@ -18,13 +18,13 @@ const Hero = () => {
         pointerColor="108, 126, 212"
         size="100%"
         blendingValue="soft-light"
-      > */}
+      > 
         {/* Content */}
         <div className="absolute z-40 inset-0 flex flex-col items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl mt-32">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-4">
             Let AI Handle Your{' '}
             <span className="text-blue-600">
-              <Typewriter
+              {/* <Typewriter
                 words={['Paperwork', 'Routine Tasks', 'Manual Workflows', 'Repetitive Tasks']}
                 loop={true}
                 cursor
@@ -32,7 +32,7 @@ const Hero = () => {
                 typeSpeed={70}
                 deleteSpeed={80}
                 delaySpeed={2000}
-              />
+              /> */}
             </span>
           </h1>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-gray-800 mb-8">
@@ -50,7 +50,7 @@ const Hero = () => {
           {/* <ProvidersMarquee />   */}
         </div>
         
-      {/* </BackgroundGradientAnimation> */}
+      </BackgroundGradientAnimation>
     </div>
   );
 };
