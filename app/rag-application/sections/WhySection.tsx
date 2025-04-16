@@ -7,7 +7,7 @@ import { StickyScroll } from '@/components/ui/sticky-scroll-reveal';
 const features = [
     {
         title: "Instant Answers",
-        description: "Leverage RAG95-powered AI to surface the most relevant insights in seconds—eliminating hours of manual searching.",
+        description: "Leverage Enterprise RAG-powered AI to surface the most relevant insights in seconds—eliminating hours of manual searching.",
         content: (
             <div className="w-full h-full flex items-center justify-center">
                 <div className="p-6 flex flex-col items-center">
@@ -43,7 +43,7 @@ const features = [
     },
     {
         title: 'Scalable AI ',
-        description: 'RAG95 is built for enterprise scale—delivering instant insights with zero lag, minimum downtime, and zero frustration.',
+        description: 'Enterprise RAG is built for enterprise scale—delivering instant insights with zero lag, minimum downtime, and zero frustration.',
         content: (
             <div className="w-full h-full flex items-center justify-center">
                 <div className="p-6 flex flex-col items-center">
@@ -85,7 +85,7 @@ const WhySection = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="mb-12">
                     <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                    Why Choose Synoptix RAG95 for Enterprise?  
+                    Why Choose Synoptix Enterprise RAG for Enterprise?  
                     </h2>
                     <div className="w-16 h-1 bg-blue-500"></div>
 

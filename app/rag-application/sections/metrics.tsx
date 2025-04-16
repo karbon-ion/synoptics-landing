@@ -73,7 +73,7 @@ export default function Metrics() {
                 {/* Header */}
                 <div className="text-center">
                     <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 md:mb-4">
-                    Your Enterprise Deserves Better Intelligence—Discover RAG95 
+                    Your Enterprise Deserves Better Intelligence—Discover Enterprise RAG 
                     </h2>
                     <p className="text-gray-600 mb-6 md:mb-8 px-2">
                         Get the right information at the right time, every time. Synoptix ensures speed, security, and precision—at enterprise scale 

@@ -25,7 +25,7 @@ export default function RagApplication() {
             {/* <RagStatsSection /> */}
             <QuantumSection />
             <FAQ />
-            <SmallFoot title="Explore RAG95" buttonOne="Request a Demo" buttonTwo="Need answers? Let's Talk." />
+            <SmallFoot title="Explore Enterprise RAG" buttonOne="Request a Demo" buttonTwo="Need answers? Let's Talk." />
         </main>
     );
 }

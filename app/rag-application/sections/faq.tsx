@@ -3,16 +3,16 @@ import { useState } from 'react';
 
 const faqs = [
     {
-        question: "What is RAG95?",
+        question: "What is Enterprise RAG?",
         answer: "An advanced AI method that improves how models retrieve and generate answers from large datasets."
     },
     {
-        question: "How is RAG95 different from traditional RAG?",
-        answer: "RAG95 improves retrieval speed and precision by using quantum-inspired algorithms, offering better context matching and lower latency compared to standard RAG systems."
+        question: "How is Enterprise RAG different from traditional RAG?",
+        answer: "Enterprise RAG improves retrieval speed and precision by using quantum-inspired algorithms, offering better context matching and lower latency compared to standard RAG systems."
     },
     {
-        question: "What are the use cases of RAG95?",
-        answer: "For applications that handle large, complex datasets and require scalable accuracy alongside fast response times, RAG95 stands out."
+        question: "What are the use cases of Enterprise RAG?",
+        answer: "For applications that handle large, complex datasets and require scalable accuracy alongside fast response times, Enterprise RAG stands out."
     }
 ];
 
