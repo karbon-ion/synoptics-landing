@@ -162,25 +162,25 @@ export const NavbarMenu = () => {
   const platformItems = [
     { 
       name: 'RAG', 
-      href: '/enterprise-rag-application', 
+      href: '/platform/enterprise-rag-application', 
       description: 'Enterprise RAG Solutions with powerful context retrieval capabilities.',
       image: '/images/New/Header - RAG.jpg'
     },
     { 
       name: 'Agent', 
-      href: '/enterprise-ai-agents', 
+      href: '/platform/enterprise-ai-agents', 
       description: 'AI Agent Platform for automating complex tasks and workflows.',
       image: '/images/New/Header - Agent.png'
     },
     { 
       name: 'Workflow', 
-      href: '/agentic-workflows', 
+      href: '/platform/agentic-workflows', 
       description: 'Automated Workflows that streamline your business processes.',
       image: '/images/New/Header - Workflows.png'
     },
     { 
       name: 'Evaluations', 
-      href: '/ai-performace-evaluation', 
+      href: '/platform/ai-performace-evaluation', 
       description: 'Performance Metrics to measure and optimize AI system quality.',
       image: '/images/New/Header -  Evaluations.png'
     },
