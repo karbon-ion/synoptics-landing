@@ -10,8 +10,8 @@ import FontAwesome from "@/components/FontAwesome";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Synoptix.ai - Enterprise AI Solutions",
-  description: "Enterprise AI solutions for businesses",
+  title: "Enterprise AI Platform for Secure Automation | Synoptix.AI",
+  description: "Explore Synoptix.AI – an enterprise AI platform to automate workflows, boost productivity, and keep your business data fully secure.",
   metadataBase: new URL('https://synoptix.ai'),
   alternates: {
     canonical: '/',

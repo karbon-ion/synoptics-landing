@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Enterprise RAG - Synoptix.ai",
-  description: "Enterprise Retrieval-Augmented Generation solutions",
+  title: "AI Performance Evaluation for Enterprises | Synoptix.AI",
+  description: "Measure groundedness, accuracy, and relevance of AI outputs to ensure performance, compliance, and business reliability.",
   alternates: {
     canonical: '/enterprise-rag',
   },
