@@ -24,7 +24,7 @@ const Hero = () => {
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-4">
             Let AI Handle Your{' '}
             <span className="text-blue-600">
-              {/* <Typewriter
+              <Typewriter
                 words={['Paperwork', 'Routine Tasks', 'Manual Workflows', 'Repetitive Tasks']}
                 loop={true}
                 cursor
@@ -32,7 +32,7 @@ const Hero = () => {
                 typeSpeed={70}
                 deleteSpeed={80}
                 delaySpeed={2000}
-              /> */}
+              />
             </span>
           </h1>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-gray-800 mb-8">
