@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Fine-Tuning - Synoptix.ai",
-  description: "AI model fine-tuning services from Synoptix.ai",
+  title: "AI Fine Tuning and Optimisation Services | Synoptix.AI",
+  description: "Customise and fine-tune AI models for your enterprise needs with expert optimisation services for higher precision and relevance.",
   alternates: {
     canonical: '/fine-tuning',
   },

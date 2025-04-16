@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Syno Guard - Synoptix.ai",
-  description: "Advanced security solutions for AI systems",
+  title: "SynoGuard – AI Security Tool for Enterprises | Synoptix.AI",
+  description: "Protect your enterprise AI with SynoGuard. Monitor usage, enforce policies, and prevent data exposure in real time.",
   alternates: {
     canonical: '/syno-guard',
   },

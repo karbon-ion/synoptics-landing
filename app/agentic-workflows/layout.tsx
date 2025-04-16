@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Workflow - Synoptix.ai",
-  description: "Streamlined AI workflow solutions for enterprises",
+  title: "AI Agentic Workflows for Business Automation | Synoptix.AI",
+  description: "Automate tasks and decisions with no-code AI agents that streamline workflows and adapt to enterprise logic and security needs.",
   alternates: {
     canonical: '/workflow',
   },
