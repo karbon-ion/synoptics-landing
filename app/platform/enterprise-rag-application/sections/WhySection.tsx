@@ -7,7 +7,7 @@ import { StickyScroll } from '@/components/ui/sticky-scroll-reveal';
 const features = [
     {
         title: "Instant Answers",
-        description: "Leverage Enterprise RAG-powered AI to surface the most relevant insights in seconds—eliminating hours of manual searching.",
+        description: "Leverage Enterprise RAG-powered AI to surface the most relevant insights in seconds—eliminating hours of manual searching. Empower your team to act faster, backed by information that’s always accurate and context-aware.",
         content: (
             <div className="w-full h-full flex items-center justify-center">
                 <div className="p-6 flex flex-col items-center">
@@ -25,7 +25,7 @@ const features = [
     },
     {
         title: 'Improved Accuracy ',
-        description: 'Make confident decisions with precise answers drawn from verified, up-to-date data sources. ',
+        description: 'Make confident decisions with precise answers drawn from verified, up-to-date data sources. Reduce risk and eliminate guesswork with validated, real-time responses tailored to your business.',
         content: (
             <div className="w-full h-full flex items-center justify-center">
                 <div className="p-6 flex flex-col items-center">
@@ -43,7 +43,7 @@ const features = [
     },
     {
         title: 'Scalable AI ',
-        description: 'Enterprise RAG is built for enterprise scale—delivering instant insights with zero lag, minimum downtime, and zero frustration.',
+        description: 'Enterprise RAG Application is built for enterprise scale—delivering instant insights with zero lag, minimum downtime, and zero frustration. Whether you’re a team of 10 or 10,000, your AI performance remains fast and reliable.',
         content: (
             <div className="w-full h-full flex items-center justify-center">
                 <div className="p-6 flex flex-col items-center">
@@ -61,7 +61,7 @@ const features = [
     },
     {
         title: 'Seamless Integration',
-        description: 'Integrates with your existing tools and systems, so you can get started with zero disruption. ',
+        description: 'Integrates with your existing tools and systems, so you can get started with zero disruption. From CRMs to document hubs, Synoptix.AI connects across your tech stack without requiring major changes.',
         content: (
             <div className="w-full h-full flex items-center justify-center">
                 <div className="p-6 flex flex-col items-center">
