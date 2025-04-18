@@ -7,7 +7,7 @@ import { StickyScroll } from '@/components/ui/sticky-scroll-reveal';
 const features = [
     {
         title: 'Strategic Alignment',
-        description: 'We fine-tune your AI to sync perfectly with your business goals—constantly refining for peak performance.',
+        description: 'We fine-tune your AI to sync perfectly with your business goals—constantly refining for peak performance. Your AI becomes an extension of your strategy—focused, relevant, and results-driven.',
         content: (
              <div className="w-full h-full flex items-center justify-center">
                         <Image
@@ -22,7 +22,7 @@ const features = [
     },
     {
         title: 'Reliable, High-Speed Performance',
-        description: 'Get improved accuracy, minimal downtime, and accelerated deployments—delivering measurable ROI.',
+        description: 'Get improved accuracy, minimal downtime, and accelerated deployments—delivering measurable ROI. Stay ahead of the curve with AI that’s always on, always optimised. Built for enterprise environments, with safeguards that scale with your business.',
         content: (
             <div className="w-full h-full flex items-center justify-center">
             <Image
