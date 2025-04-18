@@ -24,12 +24,12 @@ const DEFAULT_IMAGES = [
   'https://images.unsplash.com/photo-1507146153580-69a1fe6d8aa1?q=80&w=1000'
 ];
 
-// ✅ Correct type signature
+// ✅ THIS is what Next.js expects for the signature
 export async function GET(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  context: { params: { id: string } }
 ) {
-  const { id } = params;
+  const { id } = context.params;
 
   try {
     if (!fs.existsSync(UPLOADS_DIR)) {
@@ -45,7 +45,6 @@ export async function GET(
     const index = parseInt(id, 10);
 
     if (isNaN(index) || index < 0 || index >= docxFiles.length) {
-      console.error('Invalid blog ID or no file at that index');
       return NextResponse.json(
         { error: 'Blog post not found' },
         { status: 404 }
