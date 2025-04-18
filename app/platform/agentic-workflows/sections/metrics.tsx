@@ -42,7 +42,7 @@ const data: MetricsGroup[] = [
             },
             {
                 title: "",
-                description: "Data without structure slows everything down. The Consolidator Workflow pulls key retrieved information from multiple agents, consolidates it, and delivers a single, refined output. No scattered details, no missing insights—just the complete picture for better decision-making. By unifying responses across agents, the Consolidator ensures higher accuracy, consistency, and context in every output.",
+                description: "Data without structure slows everything down. The Consolidator Workflow pulls key retrieved information from multiple agents, consolidates it, and delivers a single, refined output. No scattered details, no missing insights—just the complete picture for better decision-making. By unifying responses across agents, the Consolidator ensures higher accuracy, consistency, and context in every output—delivered efficiently through AI Agentic Workflows.",
                 src: "/images/metrics/response-time.png"
             },
             {

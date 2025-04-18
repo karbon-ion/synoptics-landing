@@ -39,13 +39,15 @@ export default function Features() {
                         </h2>
                         
                         <p className="text-gray-700 text-center md:text-left">
-                        Advanced automation isn’t built for complex operations. Synoptix AI goes further—breaking down intricate tasks, distributing work intelligently, and executing every step with precision—eliminating delays and inefficiencies. <br/><br/>
+                        Advanced automation isn’t built for complex operations. Synoptix AI goes further—breaking down intricate tasks, distributing work intelligently, and executing every step with precision—eliminating delays and inefficiencies through AI Agentic Workflows.<br/><br/>
 
-In real time, specialized agents analyze data, structure insights, and refine outputs, ensuring accuracy at every stage. Whether managing multi-step operations or high-stakes decisions, Synoptix AI adapts dynamically to keep everything on track. <br/><br/>
+                        In real time, specialized agents analyse data, structure insights, and refine outputs, ensuring accuracy at every stage. Whether managing multi-step operations or high-stakes decisions, Synoptix AI adapts dynamically to keep everything on track using scalable Agentic Workflows.
+                        <br/><br/>
 
-This isn’t just automation—it’s intelligent workflow at its best. Tasks move forward seamlessly, approvals happen without hold-ups, and systems stay perfectly in sync. <br/><br/>
+                        This isn’t just automation—it’s intelligent workflow at its best. Tasks move forward seamlessly, approvals happen without hold-ups, and systems stay perfectly in sync.
+                        <br/><br/>
 
-Stop waiting. Start executing—with Synoptix AI.
+                        Stop waiting. Start executing—with Synoptix AI.
                         </p>
                         
                         {/* <p className="text-gray-700 text-center md:text-left">
@@ -69,7 +71,7 @@ Stop waiting. Start executing—with Synoptix AI.
                                 className="inline-flex items-center px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-blue-400 to-blue-600 
                                     text-white rounded-full font-semibold hover:shadow-lg transition-all"
                             >
-                            Start Your Free Trial
+                            Start Automating Today
                             </a>
                         </div>
                     </div>
