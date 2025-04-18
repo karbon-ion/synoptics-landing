@@ -119,7 +119,7 @@ const TechniquesSection = () => {
   const techniqueData = [
     {
       name: "Connect & Unify All Your Data",
-      description: "Gather knowledge from every corner of your business on one centralised platform. Synoptix AI ensures that all your data—whether structured or unstructured—is integrated, indexed, and instantly retrievable.",
+      description: "With Synoptix.AI, your Enterprise RAG application can access and process all your data in one central location:",
       benefits: [
         "Unstructured Data – Documents, emails, reports, PDFs, and raw text.",
         "Structured Data – Databases, spreadsheets, and enterprise records.",

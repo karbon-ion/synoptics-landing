@@ -127,7 +127,7 @@ const TechniquesSection = () => {
     },
     {
       name: "Generative agents",
-      description: " From content generation to complex creative outputs, Synoptix Generative Agents convert ideas into actionable deliverables. Generate text, visuals, and code at scale—adapting instantly to your needs and enhancing productivity across teams.",
+      description: " On-Demand Creation for Enterprise Agility. From content generation to complex creative outputs, Synoptix AI Agents for Enterprise convert ideas into actionable deliverables. Generate text, visuals, and code at scale—adapting instantly to your needs and enhancing productivity across teams.",
       benefits: [
 
       ]

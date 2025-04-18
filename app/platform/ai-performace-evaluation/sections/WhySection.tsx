@@ -7,7 +7,7 @@ import { StickyScroll } from '@/components/ui/sticky-scroll-reveal';
 const features = [
     {
         title: "Higher AI Accuracy",
-        description: "Identify errors and inconsistencies before they impact results. Ensure precise, fact-driven responses across all workflows.",
+        description: "Identify errors and inconsistencies before they impact results. Ensure precise, fact-driven responses across all workflows. Maintain trust in AI by delivering answers that are grounded, relevant, and consistently reliable.",
         content: (
             <div className="w-full h-full flex items-center justify-center">
                 <div className="p-6 flex flex-col items-center">
@@ -25,7 +25,7 @@ const features = [
     },
     {
         title: 'Faster Execution',
-        description: 'Detect and eliminate inefficiencies that slow down processes. Keep workflows running smoothly without unnecessary delays.',
+        description: 'Detect and eliminate inefficiencies that slow down processes. Keep workflows running smoothly without unnecessary delays. Accelerate decision-making with real-time responsiveness that matches your business pace.',
         content: (
             <div className="w-full h-full flex items-center justify-center">
                 <div className="p-6 flex flex-col items-center">
@@ -43,7 +43,7 @@ const features = [
     },
     {
         title: 'Improved Decision-Making',
-        description: 'Gain structured insights that enhance AI-driven outcomes. Make informed, data-backed decisions with confidence.',
+        description: 'Gain structured insights that enhance AI-driven outcomes. Make informed, data-backed decisions with confidence. Empower teams with transparent, explainable outputs they can trust and act on.',
         content: (
             <div className="w-full h-full flex items-center justify-center">
                 <div className="p-6 flex flex-col items-center">
@@ -61,7 +61,7 @@ const features = [
     },
     {
         title: 'Cost Optimisation',
-        description: 'Track AI resource usage to prevent waste and reduce costs. Optimise token efficiency without compromising performance.',
+        description: 'Track AI resource usage to prevent waste and reduce costs. Optimise token efficiency without compromising performance. Maximise ROI from every interaction while scaling AI across the enterprise.',
         content: (
             <div className="w-full h-full flex items-center justify-center">
                 <div className="p-6 flex flex-col items-center">

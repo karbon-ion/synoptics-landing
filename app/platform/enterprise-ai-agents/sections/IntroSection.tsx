@@ -18,8 +18,8 @@ const IntroSection = () => {
             <p className="text-lg text-gray-600">
             Your team wasn’t built for busy work—so why let it steal their focus?  <br/><br/>
 
-Synoptix AI Agents can handle the repetitive, executing with precision—on demand or autonomously—so your people can focus on strategy, creativity, and growth.
-Work smarter. Scale faster. Dominate effortlessly. With automation that evolves with your business, you’re not just keeping up—you’re setting the pace. <br/><br/>
+            Synoptix AI Agents for Enterprise can handle the repetitive, executing with precision—on demand or autonomously—so your people can focus on strategy, creativity, and growth. <br/><br/>
+            Work smarter. Scale faster. Dominate effortlessly. With automation that evolves with your business, you’re not just keeping up—you’re setting the pace.<br/><br/>
 
 The future won’t wait—with Synoptix AI, you don’t have to.
 
@@ -41,7 +41,7 @@ The future won’t wait—with Synoptix AI, you don’t have to.
                     size="lg"
                     className="mb-10 sm:mb-16"
                 >
-                Start a free trial
+                Start a Free Trial
               </Button>
             </div>
           </div>

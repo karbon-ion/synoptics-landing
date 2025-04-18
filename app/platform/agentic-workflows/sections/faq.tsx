@@ -4,7 +4,7 @@ import { useState } from 'react';
 const faqs = [
     {
         question: "How does Synoptix AI improve workflow efficiency?",
-        answer: "Synoptix AI intelligently routes tasks, consolidates insights, and refines outputs—eliminating delays, reducing manual effort, and keeping operations seamless."
+        answer: "Synoptix AI intelligently routes tasks, consolidates insights, and refines outputs—eliminating delays, reducing manual effort, and keeping operations seamless through intelligent AI Agentic Workflows."
     },
     {
         question: "Can it integrate with our existing systems?",
@@ -12,7 +12,7 @@ const faqs = [
     },
     {
         question: "Does AI replace human decision-making?",
-        answer: "No. AI handles the execution, your team stays in control. Routine tasks are automated, while critical decisions always have human oversight."
+        answer: "No. AI handles the execution, your team stays in control. Routine tasks are automated, while critical decisions always have human oversight—supported by smart Agentic Workflows."
     },
     {
         question: "Is it scalable for enterprise growth?",

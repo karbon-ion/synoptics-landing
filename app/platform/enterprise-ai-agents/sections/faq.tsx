@@ -4,15 +4,15 @@ import { useState } from 'react';
 const faqs = [
     {
         question: "What Are AI Agents? ",
-        answer: "AI agents use advanced reasoning to process requests, make decisions, and execute tasks—driving business outcomes. "
+        answer: "AI agents use advanced reasoning to process requests, make decisions, and execute tasks—driving business outcomes. Enterprise AI Agents are tailored to deliver scalable, secure automation across departments."
     },
     {
         question: "How Much Do AI Agents Cost? ",
-        answer: "Pricing for AI agents depends on selected features, usage limits, and required support levels, with flexible subscription models to fit organizational needs. "
+        answer: "Pricing for AI Agents for Enterprise depends on selected features, usage limits, and required support levels, with flexible subscription models to fit organizational needs."
     },
     {
         question: "What Are the Benefits of AI Agents in an Enterprise? ",
-        answer: "AI agents automate tasks to boost productivity, optimize resources, and scale support—cutting costs while enabling teams to focus on strategy. "
+        answer: "Enterprise AI Agents automate tasks to boost productivity, optimize resources, and scale support—cutting costs while enabling teams to focus on strategy."
     }
 ];
 

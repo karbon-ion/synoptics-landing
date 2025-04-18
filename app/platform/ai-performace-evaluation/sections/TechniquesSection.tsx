@@ -139,17 +139,16 @@ const techniqueData = [
   },
   {
     name: "Usage & Cost Management ",
-    description: "AI processing comes at a cost—ensure every token is used efficiently. Monitor usage in real time to reduce waste and maximise value.",
+    description: "Understand how your AI consumes resources. Use Synoptix’s AI Performance Evaluation system to optimize every token, save costs, and boost ROI.",
     benefits: [
-      "Incoming Tokens: Track how much input data AI is processing. Optimise requests to avoid unnecessary consumption.",
-      "Outgoing Tokens: Measure the size of AI-generated responses. Streamline outputs without sacrificing accuracy.",
-      "Caching: Help reduce token consumption by storing and reusing recent response and improved response time."
+      "Incoming/Outgoing Tokens: Monitor processing efficiency.",
+      "Caching: Reuse recent responses to reduce consumption and speed up output."
 
     ]
   },
   {
     name: "AI Performance Benchmarks",
-    description: "AI performance goes beyond speed—it's about precision, consistency, and usability. Synoptix AI evaluates critical metrics to ensure every response meets high-quality standards.",
+    description: "Synoptix.AI tracks essential enterprise metrics to deliver next-level AI Performance Evaluation for Enterprises:",
     benefits: [
       "Groundedness: Ensure AI responses are factually accurate and backed by reliable data. Prevent misinformation and maintain trust in AI-driven decisions.",
       "Relevance: Verify that AI delivers meaningful, useful answers tailored to user needs. Eliminate off-topic or low-value responses.",

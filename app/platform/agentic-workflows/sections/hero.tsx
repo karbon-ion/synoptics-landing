@@ -7,7 +7,7 @@ export default function RagHero() {
                 Agentic Workflows
             </h1>
             <p className="text-xl md:text-2xl text-gray-700 max-w-4xl mb-6">
-            Discard manual slowdowns—let AI take the control. Synoptix AI routes tasks, consolidates insights, and refines outputs response with precision.</p>
+            Discard manual slowdowns—let AI take control. Synoptix AI routes tasks, consolidates insights, and refines outputs with precision through intelligent Agentic Workflows.</p>
             {/* <p className="text-2xl md:text-3xl font-semibold text-gray-800 max-w-3xl mb-12">
                 Optimize Smarter. Perform Better.
             </p> */}

@@ -7,7 +7,7 @@ import { StickyScroll } from '@/components/ui/sticky-scroll-reveal';
 const features = [
     {
         title: "Real-Time Threat Protection",
-        description: "Synoptix automatically detects and blocks security risks, harmful content, and compliance violations before they become a problem.",
+        description: "SynoGuard automatically detects and blocks security risks, harmful content, and compliance violations before they become a problem—making it an essential AI Security Tool for modern enterprises.",
         content: (
             <div className="w-full h-full flex items-center justify-center">
                 <div className="p-6 flex flex-col items-center">
@@ -25,7 +25,7 @@ const features = [
     },
     {
         title: 'Seamless Integration',
-        description: 'Built to work within your CI/CD pipeline, AI models, and cloud systems, keeping security tight without slowing innovation.',
+        description: 'Built to work within your CI/CD pipeline, AI models, and cloud systems, Synoptix AI keeps security tight without slowing innovation.',
         content: (
             <div className="w-full h-full flex items-center justify-center">
                 <div className="p-6 flex flex-col items-center">
@@ -43,7 +43,7 @@ const features = [
     },
     {
         title: 'Context-aware Security',
-        description: 'Say goodbye to misinformation and data leaks. Synoptix keeps your business decisions based on facts, not AI hallucinations.',
+        description: 'Say goodbye to misinformation and data leaks. SynoGuard ensures your business decisions are based on facts—not hallucinations—by providing context-aware protection.',
         content: (
             <div className="w-full h-full flex items-center justify-center">
                 <div className="p-6 flex flex-col items-center">
@@ -61,7 +61,7 @@ const features = [
     },
     {
         title: 'Custom Security Controls',
-        description: 'Define how content is filtered, privacy is enforced, and risks are managed—so security works the way your business needs.',
+        description: 'Define how content is filtered, privacy is enforced, and risks are managed. SynoGuard, the most flexible AI Security Tool for Enterprises, adapts to your policies, not the other way around.',
         content: (
             <div className="w-full h-full flex items-center justify-center">
                 <div className="p-6 flex flex-col items-center">
@@ -88,7 +88,8 @@ const WhySection = () => {
                     Why Choose SynoGuard?
                     </h2>
                     <div className="w-16 h-1 bg-blue-500"></div>
-
+                    <p className="mt-4 text-lg text-gray-600">
+                    Your Business Can’t Afford Security Gaps.</p>
                 </div>
                 
                 <StickyScroll 

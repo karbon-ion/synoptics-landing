@@ -100,7 +100,7 @@ const StatsSection = () => {
         </h2>
         
         <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-16">
-        AI isn’t the future—it’s the now. Igniting efficiency, sustaining innovation, and turning insights into strategic business growth. 
+        AI isn’t just the future—it’s your present advantage. Our Enterprise AI Platform fuels productivity, innovation, and data-driven growth. 
         </p>
         
         {/* Stats grid */}

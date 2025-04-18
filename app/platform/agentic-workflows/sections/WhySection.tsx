@@ -7,7 +7,7 @@ import { StickyScroll } from '@/components/ui/sticky-scroll-reveal';
 const features = [
     {
         title: "Precision at Scale",
-        description: "Complex tasks demand accuracy. Our multi-agent model ensures every step is executed with intelligence—no missed details, no inefficiencies. ",
+        description: "Tackle complex workflows with confidence. Synoptix AI’s multi-agent model executes every step with intelligence—no missed details, no inefficiencies. Accelerate operations without compromising accuracy—across teams, tools, and scale.",
         content: (
             <div className="w-full h-full flex items-center justify-center">
                 <div className="p-6 flex flex-col items-center">
@@ -25,7 +25,7 @@ const features = [
     },
     {
         title: 'Seamless Coordination',
-        description: 'Tasks don’t sit idle. AI-driven workflows dynamically route, consolidate, and refine information, keeping processes in motion without delays. ',
+        description: 'Keep everything moving—no bottlenecks, no lag. AI Agentic Workflows route tasks, consolidate insights, and refine outputs in real time. Everything flows, nothing stalls—your business stays in motion.',
         content: (
             <div className="w-full h-full flex items-center justify-center">
                 <div className="p-6 flex flex-col items-center">
@@ -43,7 +43,7 @@ const features = [
     },
     {
         title: 'Human-Guided AI',
-        description: 'Automation with oversight—AI handles execution, while your team stays in control, making final decisions where it matters.',
+        description: 'Let automation do the heavy lifting, while your team stays in control. AI executes the routine—humans make the final call. Balance efficiency with oversight, and scale without losing control.',
         content: (
             <div className="w-full h-full flex items-center justify-center">
                 <div className="p-6 flex flex-col items-center">
@@ -61,7 +61,7 @@ const features = [
     },
     {
         title: 'Enterprise-Ready Efficiency',
-        description: 'From approvals to data processing, Synoptix AI adapts to your operations, optimising workflows for speed, accuracy, and business impact.',
+        description: 'From approvals to analytics, Synoptix adapts to your business logic. Intelligent Agentic Workflows drive performance without disrupting existing systems. Smarter execution. Faster outcomes. Built for enterprise impact.',
         content: (
             <div className="w-full h-full flex items-center justify-center">
                 <div className="p-6 flex flex-col items-center">
