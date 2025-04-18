@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { NextResponse } from 'next/server';
 import fs from 'fs';
 import path from 'path';
 import mammoth from 'mammoth';
@@ -24,16 +24,15 @@ const DEFAULT_IMAGES = [
   'https://images.unsplash.com/photo-1507146153580-69a1fe6d8aa1?q=80&w=1000'
 ];
 
-// ✅ Correct type signature from Next.js documentation
-export async function GET(
-  request: NextRequest,
-  { params }: { params: { id: string } }
-) {
-  const { id } = params;
-
+// Using a simpler approach with Request instead of NextRequest
+export async function GET(request: Request) {
+  // Extract the id from the URL path
+  const url = new URL(request.url);
+  const pathParts = url.pathname.split('/');
+  const id = pathParts[pathParts.length - 1];
+  
   try {
     if (!fs.existsSync(UPLOADS_DIR)) {
-      console.error('Uploads directory does not exist:', UPLOADS_DIR);
       return NextResponse.json(
         { error: 'Uploads directory not found' },
         { status: 500 }
