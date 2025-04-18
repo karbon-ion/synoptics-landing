@@ -7,7 +7,7 @@ export default function RagHero() {
             Launch Your Enterprise AI Agent in a Few Clicks
             </h1>
             <p className="text-xl md:text-2xl text-gray-700 max-w-4xl mb-6">
-            Build, deploy, and scale custom AI agents for your enterprise in just clicks. Automate tasks, boost productivity, and ignite innovation—effortlessly.
+            Build, deploy, and scale custom Enterprise AI Agent solutions for your enterprise in just clicks. Automate tasks, boost productivity, and ignite innovation—effortlessly.
             </p>
             <p className="text-2xl md:text-3xl font-semibold text-gray-800 max-w-3xl mb-12">
             The future of AI isn’t coming—it’s here.

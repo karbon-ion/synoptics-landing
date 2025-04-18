@@ -54,7 +54,7 @@ Empower cross-functional teams with AI agents that work securely, reliably, and 
                         Operationalise Your Business Knowledge 
                         </h3>
                         <p className="text-gray-600 text-sm leading-relaxed">
-                        Your business processes are to your competitive advantage. Synoptix AI translates them into structured, repeatable AI instructions—ensuring consistent execution across customer engagement, finance, HR, and operations. Our agents continuously learn and adapt to maximise performance on a scale.
+                        Your business processes are your competitive advantage. Synoptix AI translates them into structured, repeatable instructions through your Enterprise AI Agent—ensuring consistent execution across customer engagement, finance, HR, and operations. Our agents continuously learn and adapt to maximize performance at scale.
                         </p>
                     </div>
 
