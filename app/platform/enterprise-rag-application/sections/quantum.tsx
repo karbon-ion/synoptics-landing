@@ -31,7 +31,7 @@ const advantages = [
   {
     id: 'customer',
     title: 'System Integrations ',
-    description: 'Connect with your existing business tools, platforms, and workflows. Synoptix.AI adapts to your ecosystem, not the other way around.'
+    description: 'Connect with your existing business tools, platforms, and workflows. Synoptix AI adapts to your ecosystem, not the other way around.'
   },
   {
     id: 'employees',

@@ -60,7 +60,7 @@ const features = [
     },
     {
         title: 'Zero Data Retention',
-        description: 'Ensure complete data confidentiality with an in-memory processing architecture. Synoptix is the AI Platform for Enterprise that respects your privacy and compliance needs.',
+        description: 'Ensure complete data confidentiality with an in-memory processing architecture. Synoptix AI is the AI Platform for Enterprise that respects your privacy and compliance needs.',
         content: (
             <div className="w-full h-full flex items-center justify-center">
                 <div className="p-6 flex flex-col items-center">
