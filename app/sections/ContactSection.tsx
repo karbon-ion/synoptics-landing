@@ -108,17 +108,13 @@ const ContactSection = () => {
             <h2 className="text-sm font-medium uppercase mb-4">CONTACT US</h2>
             <h3 className="text-[40px] font-bold mb-4">Book a Demo</h3>
             <p className="text-gray-600 mb-12">
-              We're here to help. Whether you have questions,
-              need guidance, or just want to learn more, reach out
-              —we'd love to hear from you
+            Have questions or want to see how our Enterprise AI Platform works in action? Let’s connect.
             </p>
 
             <div className="mb-12">
               <h3 className="text-[32px] font-bold mb-4">Talk to an AI Expert</h3>
               <p className="text-gray-600 mb-6">
-                Need advice on the right solution for your business?
-                Schedule a call with one of our AI specialists and get
-                the answers you need.
+              Need tailored advice? Speak with a Synoptix specialist to find the right AI Platform for Enterprise success.
               </p>
               {/* <button className="inline-flex items-center px-8 py-3 text-lg font-medium text-white bg-gradient-to-r from-blue-400 to-blue-600 rounded-full hover:from-blue-500 hover:to-blue-700 transition-all duration-200 shadow-md hover:shadow-lg">
               Schedule a Call

@@ -27,7 +27,7 @@ const CtaBanner = () => {
             </h2>
             
             <p className="text-gray-600 text-lg mb-6">
-              Protect AI interactions with SynoGuard—prevent harmful content, secure sensitive data, and block unauthorized access for complete control. 
+            Prevent harmful content, block unauthorised access, and protect your business data with Synoptix’s enterprise-ready security layer. 
             </p>
             
             {/* <div className="flex flex-wrap mb-6">

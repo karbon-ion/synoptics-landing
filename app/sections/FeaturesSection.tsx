@@ -11,7 +11,7 @@ const features = [
   {
     title: "Design & Deploy Intelligent AI Agents",
     subtitle: "AI AGENTS",
-    description: "No-code AI Agents! From simple to advanced tasks, Synoptix’s AI platform lets you design, deploy, and scale intelligent agents. Build custom AI agents that works exactly the way your business need.",
+    description: "No-code AI agents—from simple queries to complex operations. Synoptix’s AI Platform for Enterprise lets you design, deploy, and scale intelligent agents that work exactly the way your business needs.",
     image: agentGif,
 
     ctaText: "Learn More",
@@ -20,7 +20,7 @@ const features = [
   {
     title: "Orchestrate Tasks with Precision",
     subtitle: "Workflows",
-    description: "Execute multiple AI agents at once to optimise task management and efficiency. Enhance automation through seamless collaboration, ensuring smarter workflows and maximised productivity.",
+    description: "Run multiple AI agents in sync, automate cross-functional tasks, and eliminate manual follow-ups. Our Enterprise AI Platform helps your teams move faster—with smarter workflows and seamless execution.",
     image: workflowGif,
 
     ctaText: "Learn More",

@@ -6,7 +6,7 @@ import { StickyScroll } from '@/components/ui/sticky-scroll-reveal';
 const features = [
     {
         title: "Accelerate Task Execution",
-        description: "Minimise downtime and enhance efficiency through AI-driven automation that delivers faster, smarter results, enabling your team to focus on strategic initiatives.",
+        description: "Minimise downtime with fast, intelligent automation. Our Enterprise AI Platform enables teams to shift focus from repetitive tasks to strategic initiatives.",
         content: (
             <div className="w-full h-full flex items-center justify-center">
                 <div className="p-6 flex flex-col items-center">
@@ -60,7 +60,7 @@ const features = [
     },
     {
         title: 'Zero Data Retention',
-        description: 'Maintain complete data privacy with a closed-source AI system that processes information in-memory without storing it, ensuring full confidentiality and compliance with data protection standards.',
+        description: 'Ensure complete data confidentiality with an in-memory processing architecture. Synoptix is the AI Platform for Enterprise that respects your privacy and compliance needs.',
         content: (
             <div className="w-full h-full flex items-center justify-center">
                 <div className="p-6 flex flex-col items-center">
