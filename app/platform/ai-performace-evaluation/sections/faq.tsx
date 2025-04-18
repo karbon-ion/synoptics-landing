@@ -4,7 +4,7 @@ import { useState } from 'react';
 const faqs = [
     {
         question: "What is Synoptix AI Evaluations?",
-        answer: "A real-time AI performance tracker that measures accuracy, efficiency, and user sentiment to optimise workflows."
+        answer: "A real-time AI Performance Evaluation tool that measures accuracy, efficiency, and sentiment to optimise business workflows."
     },
     {
         question: "How does it improve AI performance?",
@@ -12,15 +12,15 @@ const faqs = [
     },
     {
         question: "Why is AI evaluation important?",
-        answer: "Ensures AI-driven decisions are accurate, relevant, and optimized, reducing errors and workflow inefficiencies."
+        answer: "It ensures AI-driven outcomes are accurate, reliable, and business-aligned—making AI Performance Evaluation for Enterprises critical for success."
     },
     {
         question: "What are AI hallucinations, and how does Synoptix detect them?",
-        answer: "Hallucinations are misleading AI responses. Synoptix identifies them by analysing factual accuracy and consistency."
+        answer: "Hallucinations are false outputs. Synoptix uses benchmarking and real-time analysis to detect and eliminate them."
     },
     {
         question: "Can Synoptix AI help reduce costs?",
-        answer: "Yes! Monitors token usage to prevent waste, optimise resource allocation, and cut AI processing costs."
+        answer: "Absolutely. Its AI Performance Evaluation engine tracks token usage and helps prevent unnecessary spend."
     }
 ];
 

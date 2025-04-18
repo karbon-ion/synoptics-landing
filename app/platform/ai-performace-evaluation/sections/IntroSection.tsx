@@ -15,10 +15,10 @@ const IntroSection = () => {
             </h2>
             
             <p className="text-lg text-gray-600">
-            AI is only as good as its performance—but without real-time tracking, you’re operating blind. <br/><br/>
-Slow responses, inaccuracies, and inefficiencies creep in, bottlenecking workflows and weakening decision-making. Over time, these flaws cost businesses time, money, and missed opportunities.<br/><br/>
-Synoptix AI Evaluations puts you in control. It continuously tracks performance, fine-tunes execution, and eliminates inefficiencies—so AI stays sharp, fast, and on point. Every response is precise, fact-driven, and aligned with business goals, keeping workflows smooth and decisions reliable.<br/><br/>
-Optimise with Confidence. 
+            AI is only as good as its performance—but without real-time tracking, you’re operating blind.<br/><br/>
+            Slow responses, inaccuracies, and inefficiencies creep in, bottlenecking workflows and weakening decision-making. Over time, these flaws cost businesses time, money, and missed opportunities.<br/><br/>
+            Synoptix AI Performance Evaluation for Enterprises puts you in control. It continuously tracks performance, fine-tunes execution, and eliminates inefficiencies—so AI stays sharp, fast, and on point. Every response is precise, fact-driven, and aligned with business goals, keeping workflows smooth and decisions reliable.<br/><br/>
+            Optimise with Confidence. 
 
             </p>
             
