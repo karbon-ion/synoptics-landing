@@ -7,7 +7,8 @@ export default function RagHero() {
           Fine Tuning & Optimisation Services
           </h1>
           <p className="text-xl md:text-2xl text-gray-700 max-w-4xl mb-6">
-          Stop settling for generic AI that doesn't get your business. Synoptix fine-tunes open-source models into domain-specific AI that aligns with your industry, goals, and workflow.
+          Stop settling for generic AI that doesn’t get your business. Synoptix AI Fine Tuning & Optimisation Services transform open-source models into domain-specific AI aligned with your industry, goals, and workflows.<br/><br/>
+          Experience AI that’s sharp, focused, and built for impact.
           </p>
           {/* <p className="text-2xl md:text-3xl font-semibold text-gray-800 max-w-3xl mb-12">
           Experience AI that's sharp, focused, and built for impact.
@@ -18,7 +19,7 @@ export default function RagHero() {
                     size="lg"
                     className="mb-10 sm:mb-16"
                 >
-              Book a Meeting
+              Book a demo today
           </Button>
       </section>
   );

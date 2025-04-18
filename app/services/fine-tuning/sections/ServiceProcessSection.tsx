@@ -33,7 +33,7 @@ const ServiceProcessSection = () => {
   const processSteps = [
     {
       title: "Custom Model Selection",
-      description: "We fine-tune the perfect AI model for your lexical analysis—sharper insights, faster results with minimal computational overhead."
+      description: "We fine-tune the perfect AI model for your lexical analysis—sharper insights, faster results with minimal computational overhead. Our Fine Tuning Services ensure model precision with optimised performance."
     },
     {
       title: "Data Labeling & Annotation",

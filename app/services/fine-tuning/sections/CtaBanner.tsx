@@ -24,7 +24,7 @@ const CtaBanner = () => {
         </h2>
         
         <p className="text-gray-600 text-lg mb-4">
-          From standard to standout—discover how expert fine-tuning can level up your business operations.
+        From standard to standout—discover how expert Fine Tuning Services can level up your business operations.
         </p>
         
         <div className="flex justify-center mb-6">

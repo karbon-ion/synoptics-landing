@@ -121,7 +121,7 @@ const TechniquesSection = () => {
   const techniqueData = [
     {
       name: "Parameter Fine-Tuning",
-      description: "We adjust model parameters to sharpen accuracy, reduce errors, and ensure smooth performance:",
+      description: "We adjust model parameters to sharpen accuracy, reduce errors, and ensure smooth performance. Our parameter fine tuning services include:",
       benefits: [
         "Update weights for better predictions",
         "Optimise layers for faster, more efficient processing",
@@ -141,7 +141,7 @@ const TechniquesSection = () => {
       name: "Transfer Learning",
       description: "We adapt pre-trained models to your specific domain:",
       benefits: [
-        "Leverage existing knowledge for specialized tasks",
+        "Leverage existing knowledge for specialised tasks",
         "Drastically reduce training data requirements",
         "Accelerate time-to-production for new applications"
       ]
@@ -161,7 +161,7 @@ const TechniquesSection = () => {
       benefits: [
         "Create versatile AI solutions that solve diverse problems",
         "Improve generalisation across related domains",
-        "Reduce the need for multiple specialized models"
+        "Reduce the need for multiple specialised models"
       ]
     },
     {
@@ -203,8 +203,7 @@ const TechniquesSection = () => {
         </h2>
           
           <p className="text-gray-600 text-sm max-w-2xl mx-auto mb-6">
-            At Synoptix.ai, we don't just fine-tune AI—we make it smarter, faster, and tailored 
-            exactly to your needs. The practical benefits? More accuracy, lower costs, and quicker results.
+          At Synoptix AI, we don’t just fine-tune AI—we make it smarter, faster, and tailored exactly to your needs.
           </p>
           
           <div className="flex justify-center">

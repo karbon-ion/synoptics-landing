@@ -8,7 +8,7 @@ const faqs = [
     },
     {
         question: "Why fine-tune a model?",
-        answer: "Fine-tuning enhances a model's performance on specialized tasks, making it more accurate and relevant to applications."
+        answer: "Fine-tuning enhances a model's performance on specialised tasks, making it more accurate and relevant to applications."
     },
     {
         question: "What are the benefits of fine-tuning an AI model?",
@@ -23,8 +23,8 @@ const faqs = [
         answer: "Implementing strict data handling protocols, encryption, and access controls ensures data security and confidentiality during the fine-tuning process."
     },
     {
-        question: "Does Synoptix offer post-deployment & maintenance support for fine-tuning & optimisation services?",
-        answer: "Yes, Synoptix offers ongoing post-deployment and maintenance to ensure your system remains efficient and up to date."
+        question: "Does Synoptix AI offer post-deployment support for fine-tuning?",
+        answer: "Yes. Synoptix AI includes ongoing updates, monitoring, and performance enhancement."
     }
 ];
 
