@@ -84,7 +84,7 @@ async function getBlogPostById(id: string): Promise<BlogPost | null> {
   }
 }
 
-export async function GET(request: Request, { params }: { params: { id: string } }) {
+export async function GET(request: Request, context: { params: { id: string } }) {
   try {
     // Check if uploads directory exists
     if (!fs.existsSync(UPLOADS_DIR)) {
@@ -102,7 +102,7 @@ export async function GET(request: Request, { params }: { params: { id: string }
     const docxFiles = files.filter(file => file.endsWith('.docx'));
     console.log('DOCX files:', docxFiles);
     
-    const index = parseInt(params.id, 10);
+    const index = parseInt(context.params.id, 10);
     console.log('Looking for file at index:', index);
     
     if (isNaN(index) || index < 0 || index >= docxFiles.length) {
@@ -142,7 +142,7 @@ export async function GET(request: Request, { params }: { params: { id: string }
     const image = DEFAULT_IMAGES[Math.floor(Math.random() * DEFAULT_IMAGES.length)];
     
     const post = {
-      id: params.id,
+      id: context.params.id,
       title,
       description,
       image,
