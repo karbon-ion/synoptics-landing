@@ -87,8 +87,9 @@ async function getBlogPostById(id: string): Promise<BlogPost | null> {
 // GET single blog post by ID
 export async function GET(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  context: { params: { id: string } }
 ) {
+  const { params } = context;
   // Debug log all request parameters
   console.log('API Route [id] - Received request for blog post with ID:', params?.id);
   console.log('Request URL:', request.url);
