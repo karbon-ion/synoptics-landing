@@ -2,65 +2,59 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
+import type { BlogPost } from '../../utils/blog-utils';
 
-const blogPosts = [
+// Fallback blog posts in case fetching fails
+const fallbackBlogPosts = [
   {
-    id: 1,
+    id: "1",
     title: 'AI-Driven Workflow Automation',
     description: 'Discover how our AI solutions are helping companies reduce manual processes by 70% and increase operational efficiency across departments.',
     image: 'https://images.unsplash.com/photo-1581090700227-1e37b190418e?q=80&w=1000',
     date: 'April 2, 2025',
     category: 'Technology',
-    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
-  },
-  {
-    id: 2,
-    title: 'Machine Learning for Supply Chain',
-    description: 'Learn how predictive analytics and ML models are transforming inventory management and logistics for enterprise clients worldwide.',
-    image: 'https://images.unsplash.com/photo-1579403124614-197f69d8187b?q=80&w=1000',
-    date: 'March 28, 2025',
-    category: 'Industry',
-    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
-  },
-  {
-    id: 3,
-    title: 'The Future of LLM Applications',
-    description: 'Explore how large language models are creating new opportunities for businesses to enhance customer service and operational intelligence.',
-    image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1000',
-    date: 'March 15, 2025',
-    category: 'Research',
-    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
-  },
-  {
-    id: 4,
-    title: 'Implementing RAG Systems for Enterprise',
-    description: 'A comprehensive guide to designing and deploying Retrieval Augmented Generation systems that scale with your business needs.',
-    image: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=1000',
-    date: 'March 10, 2025',
-    category: 'Technology',
-    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
-  },
-  {
-    id: 5,
-    title: 'AI Ethics in Business Applications',
-    description: 'Exploring the ethical considerations and best practices for implementing AI solutions in enterprise environments.',
-    image: 'https://images.unsplash.com/photo-1507146153580-69a1fe6d8aa1?q=80&w=1000',
-    date: 'February 25, 2025',
-    category: 'Ethics',
-    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
-  },
-  {
-    id: 6,
-    title: 'Fine-Tuning LLMs for Domain-Specific Tasks',
-    description: 'A technical deep dive into the process of customizing large language models for specialized industry applications.',
-    image: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=1000',
-    date: 'February 18, 2025',
-    category: 'Research',
-    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+    fileName: ''
   }
 ];
 
 const BlogsPage = () => {
+  const [blogPosts, setBlogPosts] = useState<BlogPost[]>(fallbackBlogPosts);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    async function loadBlogs() {
+      try {
+        console.log('Fetching blog posts from API');
+        const response = await fetch('/api/blogs', {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          cache: 'no-store'
+        });
+
+        if (!response.ok) {
+          throw new Error(`Failed to fetch blog posts: ${response.status}`);
+        }
+
+        const data = await response.json();
+        console.log('Received blog data:', data);
+        
+        if (data.posts && data.posts.length > 0) {
+          setBlogPosts(data.posts);
+        }
+      } catch (error) {
+        console.error('Error loading blog posts:', error);
+      } finally {
+        setIsLoading(false);
+      }
+    }
+
+    loadBlogs();
+  }, []);
+
   return (
     <div className="bg-white">
       {/* Hero Section */}
@@ -82,48 +76,69 @@ const BlogsPage = () => {
       {/* Blogs Grid Section */}
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Loading State */}
+          {isLoading && (
+            <div className="text-center py-12">
+              <div className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-blue-500 border-r-transparent"></div>
+              <p className="mt-4 text-gray-600">Loading blog posts...</p>
+            </div>
+          )}
+
           {/* Blogs Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            {blogPosts.map((post) => (
-              <div 
-                key={post.id}
-                className="group bg-white rounded-[32px] border border-[rgba(66,153,225,0.2)] overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col h-full"
-              >
-                <div className="relative h-56 w-full overflow-hidden">
-                  <div className="absolute top-4 right-4 z-10 bg-blue-500 text-white text-xs font-semibold py-1 px-3 rounded-full">
-                    {post.category}
+          {!isLoading && (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+              {blogPosts.map((post) => (
+                <div 
+                  key={post.id}
+                  className="group bg-white rounded-[32px] border border-[rgba(66,153,225,0.2)] overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col h-full"
+                >
+                  <div className="relative h-56 w-full overflow-hidden">
+                    <div className="absolute top-4 right-4 z-10 bg-blue-500 text-white text-xs font-semibold py-1 px-3 rounded-full">
+                      {post.category}
+                    </div>
+                    <Image
+                      src={post.image}
+                      alt={post.title}
+                      fill
+                      unoptimized
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
                   </div>
-                  <Image
-                    src={post.image}
-                    alt={post.title}
-                    fill
-                    unoptimized
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
-                <div className="p-8 flex-grow flex flex-col">
-                  <div className="text-blue-400 text-sm mb-2">{post.date}</div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors duration-300">
-                    {post.title}
-                  </h3>
-                  <p className="text-gray-600 text-base leading-relaxed mb-6">
-                    {post.description}
-                  </p>
-                  <div className="mt-auto">
-                    <Link 
-                      href={`/blogs/${post.id}`}
-                      className="inline-flex items-center text-blue-500 font-medium group-hover:text-blue-700 transition-colors duration-300"
-                    >
-                      Read More
-                      <svg className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                      </svg>
-                    </Link>
+                  <div className="p-8 flex-grow flex flex-col">
+                    <div className="text-blue-400 text-sm mb-2">{post.date}</div>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors duration-300">
+                      {post.title}
+                    </h3>
+                    <p className="text-gray-600 text-base leading-relaxed mb-6">
+                      {post.description}
+                    </p>
+                    <div className="mt-auto">
+                      <Link 
+                        href={`/blog/${post.id}`}
+                        className="inline-flex items-center text-blue-500 font-medium group-hover:text-blue-700 transition-colors duration-300"
+                        onClick={() => console.log(`Navigating to blog ${post.id}`, `/blog/${post.id}`)}
+                      >
+                        Read More
+                        <svg className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                      </Link>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          )}
+
+          {/* No posts message */}
+          {!isLoading && blogPosts.length === 0 && (
+            <div className="text-center py-12">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">No blog posts found</h3>
+              <p className="text-gray-600">
+                Add .docx files to the uploads folder to see them appear here.
+              </p>
+            </div>
+          )}
 
           {/* Newsletter Subscription */}
           <div className="bg-blue-50 rounded-[32px] p-12 text-center max-w-4xl mx-auto">
