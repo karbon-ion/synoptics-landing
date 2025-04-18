@@ -61,7 +61,7 @@ const features = [
     },
     {
         title: 'Enterprise-Ready Efficiency',
-        description: 'From approvals to analytics, Synoptix adapts to your business logic. Intelligent Agentic Workflows drive performance without disrupting existing systems. Smarter execution. Faster outcomes. Built for enterprise impact.',
+        description: 'From approvals to analytics, Synoptix AI adapts to your business logic. Intelligent Agentic Workflows drive performance without disrupting existing systems. Smarter execution. Faster outcomes. Built for enterprise impact.',
         content: (
             <div className="w-full h-full flex items-center justify-center">
                 <div className="p-6 flex flex-col items-center">
