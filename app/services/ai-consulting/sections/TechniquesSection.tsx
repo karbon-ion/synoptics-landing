@@ -138,7 +138,7 @@ const TechniquesSection = () => {
     },
     {
       name: "AI Governance Consulting",
-      description: "Develop a responsible and transparent AI framework with automated governance tools to ensure long-term success.",
+      description: "Develop a responsible and transparent AI framework with automated governance tools—ensuring long-term success via trustworthy AI consulting.",
       image: "/images/New/AI Governance Consulting.png",
       benefits: [
 
@@ -170,7 +170,7 @@ const TechniquesSection = () => {
     },
     {
       name: "AI Training & Capacity Building",
-      description: "Empower your workforce with AI expertise through customized training, learning paths, and leadership workshops.",
+      description: "Empower your workforce with AI expertise through customised training, learning paths, and leadership workshops.",
       image: "/images/New/AI Training and Capacity Building.png",
       benefits: [
 
@@ -178,7 +178,7 @@ const TechniquesSection = () => {
     },
     {
       name: "Data & Analytics Consulting",
-      description: "Transform enterprise data into actionable insights with AI-driven models that enhance decision-making and automate workflows.",
+      description: "Transform enterprise data into valuable insights with AI-powered models that enhance decision-making and automate tasks—part of our comprehensive AI consulting services.",
       image: "/images/New/Data.png",
       benefits: [
 
@@ -186,7 +186,7 @@ const TechniquesSection = () => {
     },
     {
       name: "Proof of Concept (PoC)",
-      description: "Validate AI solutions with rapid prototyping and real-world testing—minimizing risk and maximising feasibility before full-scale implementation.",
+      description: "Validate AI solutions with rapid prototyping and real-world testing—minimising risk and maximising feasibility before full-scale implementation.",
       image: "/images/New/Proof of Concept (PoC).png",
       benefits: [
 

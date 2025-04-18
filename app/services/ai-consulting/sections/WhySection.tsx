@@ -7,7 +7,7 @@ import { StickyScroll } from '@/components/ui/sticky-scroll-reveal';
 const features = [
     {
         title: "Maximised Platform Usage",
-        description: "Ensure seamless adoption and utilisation across your organisation, enhancing overall performance.",
+        description: "Drive seamless adoption across your organisation and unlock full platform potential with expert AI consulting services. Empower every team to get the most value from your AI investments—without the learning curve.",
         content: (
             <div className="w-full h-full flex items-center justify-center">
                 <Image
@@ -22,7 +22,7 @@ const features = [
     },
     {
         title: 'Dedicated Expert Support',
-        description: 'Receive personalised, ongoing assistance to resolve complex challenges and optimize workflows.',
+        description: 'Access ongoing, personalised support to resolve technical challenges and continuously optimise performance. Our consultants stay with you post-deployment, ensuring AI success at every step.',
         content: (
             <div className="w-full h-full flex items-center justify-center">
                 <Image
@@ -37,7 +37,7 @@ const features = [
     },
     {
         title: 'Enhanced Data Quality',
-        description: 'Improve the accuracy and relevance of retrieved information for better insights and decision-making.',
+        description: 'Boost the accuracy and relevance of AI-generated insights with better-quality data and model alignment—driven. We help you transform raw data into powerful, actionable intelligence.',
         content: (
             <div className="w-full h-full flex items-center justify-center">
             <Image
@@ -52,7 +52,7 @@ const features = [
     },
     {
         title: 'Proactive Security & Performance Monitoring ',
-        description: 'Maintain system integrity with continuous security and performance oversight.',
+        description: 'Keep systems secure and optimised with constant monitoring—an essential part of Synoptix’s enterprise-grade AI consulting approach. Identify risks early and maintain high performance without compromising compliance.',
         content: (
             <div className="w-full h-full flex items-center justify-center">
             <Image
@@ -66,8 +66,8 @@ const features = [
         )
     },
     {
-        title: 'AI-Driven Competitive Edge',
-        description: 'Stay ahead of the competition with advanced AI strategies tailored to your business needs.',
+        title: 'AI-Driven Competitive Advantage',
+        description: 'Stay ahead of the market with advanced AI strategies tailored specifically to your business goals—delivered. Leverage AI not just for automation—but to lead your industry forward.',
         content: (
             <div className="w-full h-full flex items-center justify-center">
             <Image

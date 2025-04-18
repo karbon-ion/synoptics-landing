@@ -3,24 +3,24 @@ import { useState } from 'react';
 
 const faqs = [
     {
-        question: "Who is Synoptix AI Consulting for?",
-        answer: "Our services are built for enterprises across industries seeking to integrate AI, automate workflows, and make smarter, data-driven decisions. "
+        question: "Who should choose Synoptix AI Consulting?",
+        answer: "Our AI consulting services are designed for enterprises across all industries looking to integrate AI, streamline operations, and make data-led decisions."
     },
     {
         question: "How long does implementation take? ",
-        answer: "We move fast. With quick assessments, pilot programs, and phased rollouts, you start seeing results without the wait. "
+        answer: "We move quickly. With early assessments, pilot phases, and staged rollouts, you’ll start seeing benefits sooner rather than later—guided by agile AI consulting."
     },
     {
         question: "Do I need existing AI tools or infrastructure? ",
-        answer: "Not at all. Whether you're starting from zero or scaling existing tools, we tailor our approach to your current environment. "
+        answer: "Not at all. Whether you're just getting started or expanding current tools, we adapt to suit your environment."
     },
     {
         question: "Is my data secure with Synoptix? ",
-        answer: "Yes—your data stays within your enterprise. Our platform is built with robust security and compliance at its core. "
+        answer: "Yes. Your data remains within your enterprise. Our platform follows rigorous security and compliance protocols, including GDPR, HIPAA, and SOC 2 standards."
     },
     {
         question: "What makes Synoptix AI Consulting different? ",
-        answer: "We combine expert consulting with our no-code AI platform to deliver faster deployments, smarter automation, and long-term strategic value. "
+        answer: "We combine expert AI consulting services with a no-code AI platform to deliver faster implementations, smarter automation, and real business outcomes."
     }
 ];
 

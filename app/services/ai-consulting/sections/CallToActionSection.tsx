@@ -16,7 +16,7 @@ const CallToActionSection = () => {
       </h2>
         
         <p className="text-[#4B5563] text-lg mb-10 max-w-2xl mx-auto leading-relaxed">
-        Smarter systems. Faster decisions. Real results. Let’s build your AI-powered future.
+        Smarter systems. Faster decisions. Tangible results. Let’s build your AI-powered future with expert AI consulting services.
         </p>
         
         <div className="flex flex-col sm:flex-row gap-5 justify-center items-center">
