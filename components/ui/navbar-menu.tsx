@@ -397,7 +397,7 @@ export const NavbarMenu = () => {
 
                 <div className="animate-fadeIn" style={{ animationDelay: '250ms' }}>
                   <Link 
-                    href="/syno-guard" 
+                    href="/ai-security-tool/syno-guard" 
                     className={`text-lg font-medium py-3 px-4 rounded-lg transition-colors ${pathname === '/syno-guard' ? 'text-blue-600 bg-blue-50/50' : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50/50'}`}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
@@ -425,8 +425,8 @@ export const NavbarMenu = () => {
 
                 <div className="animate-fadeIn" style={{ animationDelay: '350ms' }}>
                   <Link 
-                    href="/about" 
-                    className={`text-lg font-medium py-3 px-4 rounded-lg transition-colors ${pathname === '/about' ? 'text-blue-600 bg-blue-50/50' : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50/50'}`}
+                    href="/about-us" 
+                    className={`text-lg font-medium py-3 px-4 rounded-lg transition-colors ${pathname === '/about-us' ? 'text-blue-600 bg-blue-50/50' : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50/50'}`}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     About Us
