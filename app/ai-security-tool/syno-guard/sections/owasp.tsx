@@ -7,61 +7,61 @@ const features = [
   {
     id: 'llm01',
     title: 'Prompt Injections',
-    description: 'Smart hackers can feed your AI harmful inputs to steal data or trigger unauthorised actions. With Synoptix, we intercept these attacks before they even start.',
+    description: 'Smart hackers can feed your AI harmful inputs to steal data or trigger unauthorised actions. With Synoptix AI, we intercept these attacks before they even start.',
     code: 'LLM01',
   },
   {
     id: 'llm02',
     title: 'Insecure Output Handling',
-    description: 'Unchecked AI responses can be a prospect for malicious actors. Synoptix makes sure every output gets the green light before it ever leaves your system.',
+    description: 'Unchecked AI responses can be a prospect for malicious actors. Synoptix AI makes sure every output gets the green light before it ever leaves your system.',
     code: 'LLM02',
   },
   {
     id: 'llm03',
     title: 'Training Data Poisoning',
-    description: 'If your AI learns from the wrong data, it could mislead users and spread misinformation. Synoptix filters out toxic data, ensuring your AI stays sharp, focused, and trustworthy.',
+    description: 'If your AI learns from the wrong data, it could mislead users and spread misinformation. Synoptix AI filters out toxic data, ensuring your AI stays sharp, focused, and trustworthy.',
     code: 'LLM03',
   },
   {
     id: 'llm04',
     title: 'Denial of Service',
-    description: 'Some attacks aim to slow your AI down or rack up costs. Synoptix keeps a real-time eye on usage, spotting any spikes before they become a problem.',
+    description: 'Some attacks aim to slow your AI down or rack up costs. Synoptix AI keeps a real-time eye on usage, spotting any spikes before they become a problem.',
     code: 'LLM04',
   },
   {
     id: 'llm05',
     title: 'Supply Chain',
-    description: 'Vulnerabilities in the AI supply chain are a hidden risk. Synoptix evaluates your models for biases, weaknesses, and performance gaps, so you can spot and fix them before they harm your system.',
+    description: 'Vulnerabilities in the AI supply chain are a hidden risk. Synoptix AI evaluates your models for biases, weaknesses, and performance gaps, so you can spot and fix them before they harm your system.',
     code: 'LLM05',
   },
   {
     id: 'llm06',
     title: 'Permission Issues',
-    description: 'Weak permissions can leave the door open for unwanted access. Synoptix tracks everything—no one gets in without permission, and no actions go unchecked.',
+    description: 'Weak permissions can leave the door open for unwanted access. Synoptix AI tracks everything—no one gets in without permission, and no actions go unchecked.',
     code: 'LLM06',
   },
   {
     id: 'llm07',
     title: 'Data Leakage',
-    description: 'Sensitive data slipping through the cracks? Not with Synoptix. We scan your inputs and outputs to stop leaks in their tracks, protecting your privacy and user data.',
+    description: 'Sensitive data slipping through the cracks? Not with Synoptix AI. We scan your inputs and outputs to stop leaks in their tracks, protecting your privacy and user data.',
     code: 'LLM07',
   },
   {
     id: 'llm08',
     title: 'Excessive Agency',
-    description: 'LLMs shouldn\'t be making decisions on their own. Synoptix ensures your system only does what it\'s supposed to, with strict controls embedded into every action.',
+    description: 'LLMs shouldn’t be making decisions on their own. Synoptix AI ensures your system only does what it\'s supposed to, with strict controls embedded into every action.',
     code: 'LLM08',
   },
   {
     id: 'llm09',
     title: 'Overreliance',
-    description: 'AI mistakes can lead to chaos, misleading responses and faulty data. Synoptix makes it easy to identify and correct these errors, keeping your AI on track and accurate every time.',
+    description: 'AI mistakes can lead to chaos—misleading responses and faulty data. Synoptix AI makes it easy to identify and correct these errors, keeping your AI on track and accurate every time.',
     code: 'LLM09',
   },
   {
     id: 'llm10',
     title: 'Insecure Plugins',
-    description: 'Plugins can be a weak spot for your AI. Synoptix continuously monitors these connections, ensuring malicious requests don\'t slip through the cracks and compromise your system.',
+    description: 'Plugins can be a weak spot for your AI. Synoptix AI continuously monitors these connections, ensuring malicious requests don’t slip through the cracks and compromise your system.',
     code: 'LLM10',
   }
 ];
@@ -85,9 +85,7 @@ const OWASP = () => {
             OWASP Top 10 for LLMs
           </h2>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-16">
-            Ensure your AI stays secure and compliant with Synoptix Guard. We continuously update 
-            your guardrails to align with the latest security standards, including the OWASP 
-            Top 10 for LLMs, so you're always protected against emerging threats.
+          Ensure your AI stays secure and compliant with SynoGuard. We continuously update your guardrails to align with the latest security standards, including the OWASP Top 10 for LLMs, so you’re always protected against emerging threats. 
           </p>
           
           <div className="flex justify-center">
@@ -97,7 +95,7 @@ const OWASP = () => {
                     size="lg"
                     className="mb-10 sm:mb-16"
                 >
-              Contact Us For More Information
+              Contact us for more information
             </Button>
           </div>
         </div>
