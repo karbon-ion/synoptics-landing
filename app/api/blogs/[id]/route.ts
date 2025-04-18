@@ -1,4 +1,5 @@
-import { NextResponse } from 'next/server';
+import { NextResponse, NextRequest } from 'next/server';
+
 import fs from 'fs';
 import path from 'path';
 import mammoth from 'mammoth';
@@ -16,7 +17,6 @@ export interface BlogPost {
   fileName: string;
 }
 
-// Default images to use when no specific image is available
 const DEFAULT_IMAGES = [
   'https://images.unsplash.com/photo-1581090700227-1e37b190418e?q=80&w=1000',
   'https://images.unsplash.com/photo-1579403124614-197f69d8187b?q=80&w=1000',
@@ -25,14 +25,14 @@ const DEFAULT_IMAGES = [
   'https://images.unsplash.com/photo-1507146153580-69a1fe6d8aa1?q=80&w=1000'
 ];
 
+// ✅ Correct type signature
 export async function GET(
-  _request: Request,
-  context: { params: { id: string } }
+  request: NextRequest,
+  { params }: { params: { id: string } }
 ) {
-  const { id } = context.params;
-  
+  const { id } = params;
+
   try {
-    // Check if uploads directory exists
     if (!fs.existsSync(UPLOADS_DIR)) {
       console.error('Uploads directory does not exist:', UPLOADS_DIR);
       return NextResponse.json(
@@ -41,13 +41,10 @@ export async function GET(
       );
     }
 
-    // List all files in the directory
     const files = fs.readdirSync(UPLOADS_DIR);
-    
     const docxFiles = files.filter(file => file.endsWith('.docx'));
-    
     const index = parseInt(id, 10);
-    
+
     if (isNaN(index) || index < 0 || index >= docxFiles.length) {
       console.error('Invalid blog ID or no file at that index');
       return NextResponse.json(
@@ -55,35 +52,26 @@ export async function GET(
         { status: 404 }
       );
     }
-    
+
     const file = docxFiles[index];
     const filePath = path.join(UPLOADS_DIR, file);
-    
-    // Read the file buffer
     const buffer = fs.readFileSync(filePath);
-    
-    // Convert docx to html
     const result = await mammoth.extractRawText({ buffer });
     const content = result.value;
-    
-    // Extract title from filename
+
     const fileName = file.replace('.docx', '');
     const title = fileName.split(' - ')[1] || fileName;
-    
-    // Generate a simple description from the first 150 characters
     const description = content.substring(0, 150) + '...';
-    
-    // Use current date for the blog post
+
     const date = new Date().toLocaleDateString('en-US', {
       year: 'numeric',
       month: 'long',
       day: 'numeric'
     });
-    
-    // Select a random image from defaults
+
     const image = DEFAULT_IMAGES[Math.floor(Math.random() * DEFAULT_IMAGES.length)];
-    
-    const post = {
+
+    const post: BlogPost = {
       id,
       title,
       description,
@@ -93,14 +81,16 @@ export async function GET(
       content,
       fileName: file
     };
-    
+
     return NextResponse.json({ post });
   } catch (error) {
     console.error('Error getting blog post:', error);
     return NextResponse.json(
-      { error: 'Failed to fetch blog post', details: error instanceof Error ? error.message : String(error) },
+      {
+        error: 'Failed to fetch blog post',
+        details: error instanceof Error ? error.message : String(error)
+      },
       { status: 500 }
     );
   }
 }
-  
