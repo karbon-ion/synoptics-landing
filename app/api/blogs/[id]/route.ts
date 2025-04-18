@@ -1,6 +1,6 @@
-import { NextRequest, NextResponse } from 'next/server';
-import * as fs from 'fs';
-import * as path from 'path';
+import { NextResponse } from 'next/server';
+import fs from 'fs';
+import path from 'path';
 import mammoth from 'mammoth';
 
 const UPLOADS_DIR = path.join(process.cwd(), 'app/resources/blogs/uploads');
@@ -84,26 +84,7 @@ async function getBlogPostById(id: string): Promise<BlogPost | null> {
   }
 }
 
-// GET single blog post by ID
-export async function GET(
-  request: NextRequest,
-  context: { params: { id: string } }
-) {
-  const { params } = context;
-  // Debug log all request parameters
-  console.log('API Route [id] - Received request for blog post with ID:', params?.id);
-  console.log('Request URL:', request.url);
-  console.log('Request headers:', Object.fromEntries(request.headers));
-  
-  if (!params?.id) {
-    console.error('No ID parameter provided');
-    return NextResponse.json(
-      { error: 'Blog post ID is required' },
-      { status: 400 }
-    );
-  }
-  console.log('API Route - Getting blog post with ID:', params.id);
-  
+export async function GET(request: Request, { params }: { params: { id: string } }) {
   try {
     // Check if uploads directory exists
     if (!fs.existsSync(UPLOADS_DIR)) {

@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
-import * as fs from 'fs';
-import * as path from 'path';
+import fs from 'fs';
+import path from 'path';
 import mammoth from 'mammoth';
 
 const UPLOADS_DIR = path.join(process.cwd(), 'app/resources/blogs/uploads');
