@@ -24,12 +24,12 @@ const DEFAULT_IMAGES = [
   'https://images.unsplash.com/photo-1507146153580-69a1fe6d8aa1?q=80&w=1000'
 ];
 
-// ✅ THIS is what Next.js expects for the signature
+// ✅ Correct type signature from Next.js documentation
 export async function GET(
   request: NextRequest,
-  context: { params: { id: string } }
+  { params }: { params: { id: string } }
 ) {
-  const { id } = context.params;
+  const { id } = params;
 
   try {
     if (!fs.existsSync(UPLOADS_DIR)) {
