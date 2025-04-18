@@ -120,7 +120,7 @@ const TechniquesSection = () => {
   const techniqueData = [
     {
       name: "Code Gen agents",
-      description: "Eliminate redundant tasks and empower developers to focus on innovation. Synoptix Code Gen Agents generate clean, efficient code and optimise logic in real time—reducing development cycles and minimizing human error across your engineering workflows.",
+      description: "Eliminate redundant tasks and empower developers to focus on innovation. Synoptix AI Code Gen Agents generate clean, efficient code and optimise logic in real time—reducing development cycles and minimising human error across your engineering workflows.",
       benefits: [
 
       ]
@@ -134,21 +134,21 @@ const TechniquesSection = () => {
     },
     {
       name: "Assurance agents",
-      description: "Maintain operational excellence with Synoptix Assurance Agents. These AI agents proactively monitor for inconsistencies, enforce enterprise standards, and ensure every output aligns with regulatory and organizational benchmarks.",
+      description: "Maintain operational excellence with Synoptix AI Assurance Agents. These AI agents proactively monitor for inconsistencies, enforce enterprise standards, and ensure every output aligns with regulatory and organisational benchmarks.",
       benefits: [
 
       ]
     },
     {
       name: "Decision Support & Analytical Agents",
-      description: "Empower your teams with real-time insights. Synoptix Analytical Agents analyse complex datasets, identify trends, and deliver actionable recommendations—enabling smarter, faster decision-making across the enterprise.",
+      description: "Empower your teams with real-time insights. Synoptix AI Analytical Agents analyse complex datasets, identify trends, and deliver actionable recommendations—enabling smarter, faster decision-making across the enterprise.",
       benefits: [
 
       ]
     },
     {
       name: "Anomalies Detection Agents",
-      description: "Synoptix Anomaly Detection Agents provide continuous monitoring to detect irregularities and potential threats before they impact your business. Ensure operational integrity and security with real-time intelligence that pre-empts disruptions.",
+      description: "Synoptix AI Anomaly Detection Agents provide continuous monitoring to detect irregularities and potential threats before they impact your business. Ensure operational integrity and security with real-time intelligence that pre-empts disruptions.",
       benefits: [
 
       ]

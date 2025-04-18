@@ -114,7 +114,7 @@ const ContactSection = () => {
             <div className="mb-12">
               <h3 className="text-[32px] font-bold mb-4">Talk to an AI Expert</h3>
               <p className="text-gray-600 mb-6">
-              Need tailored advice? Speak with a Synoptix specialist to find the right AI Platform for Enterprise success.
+              Need tailored advice? Speak with a Synoptix AI specialist to find the right AI Platform for Enterprise success.
               </p>
               {/* <button className="inline-flex items-center px-8 py-3 text-lg font-medium text-white bg-gradient-to-r from-blue-400 to-blue-600 rounded-full hover:from-blue-500 hover:to-blue-700 transition-all duration-200 shadow-md hover:shadow-lg">
               Schedule a Call

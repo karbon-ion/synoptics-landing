@@ -61,7 +61,7 @@ const features = [
     },
     {
         title: 'Seamless Integration',
-        description: 'Integrates with your existing tools and systems, so you can get started with zero disruption. From CRMs to document hubs, Synoptix.AI connects across your tech stack without requiring major changes.',
+        description: 'Integrates with your existing tools and systems, so you can get started with zero disruption. From CRMs to document hubs, Synoptix AI connects across your tech stack without requiring major changes.',
         content: (
             <div className="w-full h-full flex items-center justify-center">
                 <div className="p-6 flex flex-col items-center">
@@ -85,7 +85,7 @@ const WhySection = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="mb-12">
                     <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                    Why Choose Synoptix Enterprise RAG for Enterprise?  
+                    Why Choose Synoptix AI Enterprise RAG for Enterprise?  
                     </h2>
                     <div className="w-16 h-1 bg-blue-500"></div>
 

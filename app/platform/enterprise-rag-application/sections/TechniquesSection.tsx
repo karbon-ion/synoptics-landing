@@ -119,7 +119,7 @@ const TechniquesSection = () => {
   const techniqueData = [
     {
       name: "Connect & Unify All Your Data",
-      description: "With Synoptix.AI, your Enterprise RAG application can access and process all your data in one central location:",
+      description: "With Synoptix AI, your Enterprise RAG application can access and process all your data in one central location:",
       benefits: [
         "Unstructured Data – Documents, emails, reports, PDFs, and raw text.",
         "Structured Data – Databases, spreadsheets, and enterprise records.",
@@ -174,7 +174,7 @@ const TechniquesSection = () => {
 
           <div className="flex justify-center mb-6">
             <p className="text-gray-600 text-sm whitespace-nowrap px-4">
-              Get the right information at the right time, every time. Synoptix ensures speed, security, and precision—at enterprise scale
+            Get the right information at the right time, every time. Synoptix AI ensures speed, security, and precision—at enterprise scale.
             </p>
           </div>
         </div>
