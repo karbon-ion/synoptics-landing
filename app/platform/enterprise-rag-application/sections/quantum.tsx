@@ -8,9 +8,9 @@ const modelProviders = [
   { id: 'sharepoint', name: 'Sharepoint', logo: '/images/logos/sharepoint.png' },
   { id: 'SAP', name: 'SAP', logo: '/images/logos/SAP.png' },
   { id: 'Salesforce', name: 'Salesforce', logo: '/images/logos/salesforce.svg' },
-  { id: 'unknown', name: 'Unknown', logo: '/images/logos/03.png' },
-  { id: 'ServiceNow', name: 'ServiceNow', logo: '/images/logos/ServiceNow.png' },
-  { id: 'Oracle', name: 'Oracle', logo: '/images/logos/Oracle.png' },
+  { id: 'box', name: 'Box', logo: '/images/logos/box.png' },
+  { id: 'Slack', name: 'Slack', logo: '/images/logos/slack l.png' },
+  { id: 'Dropbox', name: 'Dropbox', logo: '/images/logos/dropbox logo.png' },
   { id: 'openai', name: 'openai', logo: '/images/logos/openai.svg' },
   { id: 'anthropic', name: 'Anthropic', logo: '/images/logos/anthropic.svg' },
   { id: 'meta', name: 'Meta', logo: '/images/logos/meta.svg' },
@@ -81,9 +81,9 @@ const QuantumSection = () => {
             {modelProviders.slice(0, 6).map((provider) => (
               <div 
                 key={provider.id}
-                className="bg-white rounded-xl border border-blue-100 px-6 py-3 flex items-center justify-center h-16 w-36"
+                className="rounded-xl  px-6 py-3 flex items-center justify-center h-16 w-36"
               >
-                <div className="relative h-8 w-full">
+                <div className="relative h-15 w-full">
                   <Image
                     src={provider.logo}
                     alt={`${provider.name} logo`}
@@ -94,13 +94,13 @@ const QuantumSection = () => {
               </div>
             ))}
           </div>
-          <div className="flex justify-center gap-4 w-full">
+          <div className="flex flex-wrap justify-center gap-4 mb-4 w-full">
             {modelProviders.slice(6).map((provider) => (
               <div 
                 key={provider.id}
-                className="bg-white rounded-xl border border-blue-100 px-6 py-3 flex items-center justify-center h-16 w-36"
+                className=" rounded-xl px-6 py-3 flex items-center justify-center h-16 w-36"
               >
-                <div className="relative h-8 w-full">
+                <div className="relative h-11 w-full">
                   <Image
                     src={provider.logo}
                     alt={`${provider.name} logo`}
