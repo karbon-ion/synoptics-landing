@@ -45,16 +45,55 @@ async function getBlogPosts(): Promise<BlogPost[]> {
       // Read the file buffer
       const buffer = fs.readFileSync(filePath);
       
-      // Convert docx to html
-      const result = await mammoth.extractRawText({ buffer });
-      const content = result.value;
+      // Convert docx to HTML to properly extract headings and formatting
+      const result = await mammoth.convertToHtml({ buffer });
+      const htmlContent = result.value;
       
-      // Extract title from filename
-      const fileName = file.replace('.docx', '');
-      const title = fileName.split(' - ')[1] || fileName;
+      // Extract the first heading (h1) as the title
+      let title = '';
+      const titleMatch = htmlContent.match(/<h1[^>]*>(.*?)<\/h1>/i);
+      if (titleMatch && titleMatch[1]) {
+        // Remove any HTML tags inside the heading
+        title = titleMatch[1].replace(/<[^>]*>/g, '').trim();
+      } else {
+        // Fallback to filename if no h1 found
+        const fileName = file.replace('.docx', '');
+        title = fileName.split(' - ')[1] || fileName;
+      }
       
-      // Generate a simple description from the first 150 characters
-      const description = content.substring(0, 150) + '...';
+      // Extract content after the first heading for the description
+      let description = '';
+      const contentAfterTitle = htmlContent.split(/<\/h1>/i)[1] || '';
+      
+      // Get the first paragraph after the heading
+      const firstParagraphMatch = contentAfterTitle.match(/<p[^>]*>(.*?)<\/p>/i);
+      if (firstParagraphMatch && firstParagraphMatch[1]) {
+        // Remove any italic text from the first paragraph
+        description = firstParagraphMatch[1]
+          .replace(/<em>.*?<\/em>/g, '') // Remove italic text
+          .replace(/<i>.*?<\/i>/g, '')   // Also check for <i> tags
+          .replace(/<[^>]*>/g, '')       // Remove any other HTML tags
+          .trim();
+        
+        // If description is too short after removing italic text, get more content
+        if (description.length < 50) {
+          const secondParagraphMatch = contentAfterTitle.replace(firstParagraphMatch[0], '').match(/<p[^>]*>(.*?)<\/p>/i);
+          if (secondParagraphMatch && secondParagraphMatch[1]) {
+            const additionalText = secondParagraphMatch[1].replace(/<[^>]*>/g, '').trim();
+            description = description ? `${description} ${additionalText}` : additionalText;
+          }
+        }
+        
+        // Limit description length and add ellipsis
+        if (description.length > 150) {
+          description = description.substring(0, 150) + '...';
+        }
+      } else {
+        // Fallback: extract plain text and use first 150 chars
+        const plainTextResult = await mammoth.extractRawText({ buffer });
+        const plainText = plainTextResult.value;
+        description = plainText.substring(0, 150) + '...';
+      }
       
       // Use current date for the blog post
       const date = new Date().toLocaleDateString('en-US', {
@@ -65,6 +104,10 @@ async function getBlogPosts(): Promise<BlogPost[]> {
       
       // Select a random image from defaults
       const image = DEFAULT_IMAGES[Math.floor(Math.random() * DEFAULT_IMAGES.length)];
+      
+      // Extract plain text content for the full blog post
+      const plainTextResult = await mammoth.extractRawText({ buffer });
+      const content = plainTextResult.value;
       
       blogPosts.push({
         id: i.toString(),
