@@ -1,8 +1,28 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+
+// Function to process content and convert URLs to image tags
+function processContentWithImages(content) {
+  if (!content) return content;
+  
+  // Regular expression to find standalone URLs that are likely images
+  const imageUrlRegex = /(<p>|<div>|^|\n|<br\s*\/?>)\s*(https?:\/\/[^\s]+\.(jpg|jpeg|png|gif|webp|svg)(\?[^\s]*)?)\s*(<\/p>|<\/div>|$|\n|<br\s*\/?>)/gi;
+  
+  // Replace standalone URLs with img tags
+  return content.replace(imageUrlRegex, (match, prefix, url, ext, query, suffix) => {
+    return `${prefix}<img src="${url}" alt="Blog image" class="blog-image" />${suffix}`;
+  });
+}
 
 const BlogContent = ({ content }) => {
+  // Process the content when the component mounts
+  const [processedContent, setProcessedContent] = useState('');
+  
+  useEffect(() => {
+    setProcessedContent(processContentWithImages(content));
+  }, [content]);
+  
   return (
     <>
       {/* Add the styles for blog content */}
@@ -28,12 +48,13 @@ const BlogContent = ({ content }) => {
         .blog-content-wrapper th { background-color: #f7fafc; font-weight: 600; }
         .blog-content-wrapper blockquote { border-left: 4px solid #e2e8f0; padding-left: 1rem; margin-left: 0; margin-right: 0; font-style: italic; margin-bottom: 1.5rem; }
         .blog-content-wrapper hr { border: 0; border-top: 1px solid #e2e8f0; margin: 2rem 0; }
-        .blog-content-wrapper img { max-width: 100%; height: auto; margin: 1.5rem 0; }
+        .blog-content-wrapper img { max-width: 100%; height: auto; margin: 1.5rem 0; border-radius: 0.5rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); }
+        .blog-content-wrapper .blog-image { display: block; margin: 2rem auto; max-width: 100%; }
       `}</style>
-
-      {/* Display the HTML content with preserved formatting */}
+      
+      {/* Display the processed HTML content */}
       <div 
-        dangerouslySetInnerHTML={{ __html: content }}
+        dangerouslySetInnerHTML={{ __html: processedContent }}
         className="docx-content blog-content-wrapper"
         style={{
           fontSize: '1.125rem',

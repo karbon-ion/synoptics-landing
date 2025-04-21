@@ -3,6 +3,7 @@ import path from 'path';
 import Image from 'next/image';
 import Link from 'next/link';
 import mammoth from 'mammoth';
+import { processSharePointImages, processImageUrl } from '../../utils/azureStorage';
 import BlogContent from './BlogContent';
 import { Metadata } from 'next';
 
@@ -102,12 +103,12 @@ async function getBlogPost(id) {
       console.log('Error formatting date, using as-is:', error.message);
     }
     
-    // Return the metadata
+    // Return the metadata with processed image URL
     return {
       id,
       title: metadata.title,
       description: metadata.description,
-      image: metadata.image,
+      image: processImageUrl(metadata.image),
       date: displayDate,
       category: metadata.category || 'Technology',
       fileName: file
@@ -191,6 +192,9 @@ async function getBlogContent(id) {
     processedHtml = processedHtml.replace(/<p>\s*<\/p>/gi, '');
     processedHtml = processedHtml.replace(/(<br\s*\/?>\s*>){2,}/gi, '<br />');
     
+    // Process SharePoint image links in the content
+    processedHtml = processSharePointImages(processedHtml);
+    
     return {
       content: processedHtml.trim(),
       fileName: file
@@ -206,7 +210,9 @@ async function getBlogContent(id) {
  */
 export async function generateMetadata({ params }) {
   try {
-    const blog = await getBlogPost(params.id);
+    // Ensure params is resolved before accessing properties
+    const resolvedParams = await params;
+    const blog = await getBlogPost(resolvedParams.id);
     
     if (!blog) {
       return {
@@ -238,8 +244,10 @@ export async function generateMetadata({ params }) {
  */
 export default async function BlogPost({ params }) {
   // Get metadata and content separately
-  const metadata = await getBlogPost(params.id);
-  const contentData = await getBlogContent(params.id);
+  // Ensure params is resolved before accessing properties
+  const resolvedParams = await params;
+  const metadata = await getBlogPost(resolvedParams.id);
+  const contentData = await getBlogContent(resolvedParams.id);
   
   // If either is missing, show error
   if (!metadata || !contentData) {

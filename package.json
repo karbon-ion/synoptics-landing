@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@azure/storage-blob": "^12.27.0",
     "@tabler/icons-react": "^3.31.0",
     "@types/jsdom": "^21.1.7",
     "axios": "^1.8.4",
