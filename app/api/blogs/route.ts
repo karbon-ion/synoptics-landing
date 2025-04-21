@@ -2,8 +2,10 @@ import { NextResponse } from 'next/server';
 import fs from 'fs';
 import path from 'path';
 import mammoth from 'mammoth';
+import { processImageUrl } from '../../utils/azureStorage';
 
 const UPLOADS_DIR = path.join(process.cwd(), 'app/resources/blogs/uploads');
+const METADATA_DIR = path.join(process.cwd(), 'app/resources/blogs/metadata');
 
 export interface BlogPost {
   id: string;
@@ -95,15 +97,57 @@ async function getBlogPosts(): Promise<BlogPost[]> {
         description = plainText.substring(0, 150) + '...';
       }
       
-      // Use current date for the blog post
-      const date = new Date().toLocaleDateString('en-US', {
+      // Check if metadata JSON file exists for this blog post
+      let metadataImage = '';
+      let metadataDate = '';
+      let metadataCategory = 'Technology';
+      
+      const metadataFileName = file.replace('.docx', '.json');
+      const metadataFilePath = path.join(METADATA_DIR, metadataFileName);
+      
+      if (fs.existsSync(metadataFilePath)) {
+        try {
+          const metadataContent = fs.readFileSync(metadataFilePath, 'utf8');
+          const metadata = JSON.parse(metadataContent);
+          
+          // Use image from metadata if available
+          if (metadata.image) {
+            metadataImage = processImageUrl(metadata.image);
+          }
+          
+          // Use date from metadata if available
+          if (metadata.date) {
+            try {
+              const dateObj = new Date(metadata.date);
+              metadataDate = dateObj.toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+              });
+            } catch (error) {
+              console.error('Error parsing date from metadata:', error);
+              metadataDate = metadata.date; // Use as-is if parsing fails
+            }
+          }
+          
+          // Use category from metadata if available
+          if (metadata.category) {
+            metadataCategory = metadata.category;
+          }
+        } catch (error) {
+          console.error(`Error reading metadata file ${metadataFileName}:`, error);
+        }
+      }
+      
+      // Use current date as fallback if no metadata date
+      const date = metadataDate || new Date().toLocaleDateString('en-US', {
         year: 'numeric',
         month: 'long',
         day: 'numeric'
       });
       
-      // Select a random image from defaults
-      const image = DEFAULT_IMAGES[Math.floor(Math.random() * DEFAULT_IMAGES.length)];
+      // Use metadata image or select a random image from defaults
+      const image = metadataImage || DEFAULT_IMAGES[Math.floor(Math.random() * DEFAULT_IMAGES.length)];
       
       // Extract plain text content for the full blog post
       const plainTextResult = await mammoth.extractRawText({ buffer });
@@ -115,7 +159,7 @@ async function getBlogPosts(): Promise<BlogPost[]> {
         description,
         image,
         date,
-        category: 'Technology',
+        category: metadataCategory,
         content,
         fileName: file
       });

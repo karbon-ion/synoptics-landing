@@ -120,6 +120,71 @@ async function getBlogPost(id) {
 }
 
 /**
+ * Get all blog posts for related content
+ */
+async function getAllBlogPosts() {
+  try {
+    const files = await fs.readdir(UPLOADS_DIR);
+    const docxFiles = files.filter(file => file.endsWith('.docx'));
+    
+    const posts = [];
+    
+    for (let i = 0; i < docxFiles.length; i++) {
+      const file = docxFiles[i];
+      const metadataFileName = file.replace('.docx', '.json');
+      const metadataFilePath = path.join(METADATA_DIR, metadataFileName);
+      
+      try {
+        // Try to read metadata file
+        let metadata = null;
+        try {
+          const metadataContent = await fs.readFile(metadataFilePath, 'utf8');
+          metadata = JSON.parse(metadataContent);
+        } catch (error) {
+          // If no metadata file, create basic metadata
+          metadata = {
+            title: file.replace('.docx', '').split(' - ')[1] || file.replace('.docx', ''),
+            description: 'Read our latest blog post',
+            image: DEFAULT_IMAGE,
+            category: 'Technology',
+            date: new Date().toISOString().split('T')[0]
+          };
+        }
+        
+        // Format date for display
+        let displayDate = metadata.date;
+        try {
+          displayDate = new Date(metadata.date).toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+          });
+        } catch (error) {
+          console.log('Error formatting date, using as-is:', error.message);
+        }
+        
+        posts.push({
+          id: i.toString(),
+          title: metadata.title,
+          description: metadata.description,
+          image: processImageUrl(metadata.image),
+          date: displayDate,
+          category: metadata.category || 'Technology',
+          fileName: file
+        });
+      } catch (error) {
+        console.error(`Error processing blog post ${file}:`, error);
+      }
+    }
+    
+    return posts;
+  } catch (error) {
+    console.error('Error getting all blog posts:', error);
+    return [];
+  }
+}
+
+/**
  * Get blog content from DOCX file
  */
 async function getBlogContent(id) {
@@ -268,9 +333,9 @@ export default async function BlogPost({ params }) {
   }
   
   return (
-    <div className="max-w-4xl mx-auto px-4 py-16">
+    <div className="max-w-4xl mx-auto px-4 py-16 pt-28">
       {/* Back to blogs link */}
-      <div className="mb-12">
+      <div className="mb-12 mt-4">
         <Link 
           href="/resources/blogs"
           className="inline-flex items-center text-blue-500 font-medium hover:text-blue-700"
@@ -306,7 +371,11 @@ export default async function BlogPost({ params }) {
       {/* Related blogs section */}
       <div className="mt-20 pt-12 border-t border-gray-200">
         <h2 className="text-2xl font-bold text-gray-900 mb-8">You might also like</h2>
-        <div className="text-center">
+        
+        {/* Fetch and display related blog posts */}
+        <RelatedBlogs currentPostId={resolvedParams.id} />
+        
+        <div className="text-center mt-12">
           <Link
             href="/resources/blogs"
             className="px-6 py-3 text-white bg-gradient-to-r from-blue-400 to-blue-600 rounded-full hover:from-blue-500 hover:to-blue-700 transition-all duration-200 shadow-md hover:shadow-lg"
@@ -315,6 +384,68 @@ export default async function BlogPost({ params }) {
           </Link>
         </div>
       </div>
+    </div>
+  );
+}
+
+/**
+ * Related blogs component
+ */
+async function RelatedBlogs({ currentPostId }) {
+  // Get all blog posts
+  const allPosts = await getAllBlogPosts();
+  
+  // Filter out the current post and limit to 3 related posts
+  const relatedPosts = allPosts
+    .filter(post => post.id !== currentPostId)
+    .slice(0, 3);
+  
+  // If no related posts, don't show anything
+  if (relatedPosts.length === 0) {
+    return null;
+  }
+  
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+      {relatedPosts.map((post) => (
+        <div 
+          key={post.id}
+          className="group bg-white rounded-xl border border-[rgba(66,153,225,0.2)] overflow-hidden hover:shadow-lg transition-all duration-300 flex flex-col h-full"
+        >
+          <div className="relative h-40 w-full overflow-hidden">
+            <div className="absolute top-2 right-2 z-10 bg-blue-500 text-white text-xs font-semibold py-1 px-2 rounded-full">
+              {post.category}
+            </div>
+            <Image
+              src={post.image}
+              alt={post.title}
+              fill
+              unoptimized
+              className="object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+          </div>
+          <div className="p-5 flex-grow flex flex-col">
+            <div className="text-blue-400 text-xs mb-1">{post.date}</div>
+            <h3 className="text-lg font-semibold text-gray-900 mb-2 line-clamp-2 group-hover:text-blue-600 transition-colors duration-300">
+              {post.title}
+            </h3>
+            <p className="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-2">
+              {post.description}
+            </p>
+            <div className="mt-auto">
+              <Link 
+                href={`/blog/${post.id}`}
+                className="inline-flex items-center text-sm text-blue-500 font-medium group-hover:text-blue-700 transition-colors duration-300"
+              >
+                Read More
+                <svg className="ml-1 w-3 h-3 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </Link>
+            </div>
+          </div>
+        </div>
+      ))}
     </div>
   );
 }

@@ -141,7 +141,7 @@ const BlogsPage = () => {
           )}
 
           {/* Newsletter Subscription */}
-          <div className="bg-blue-50 rounded-[32px] p-12 text-center max-w-4xl mx-auto">
+          {/* <div className="bg-blue-50 rounded-[32px] p-12 text-center max-w-4xl mx-auto">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
               Subscribe to Our Newsletter
             </h3>
@@ -158,7 +158,7 @@ const BlogsPage = () => {
                 Subscribe
               </button>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
     </div>
