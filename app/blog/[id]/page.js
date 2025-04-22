@@ -344,24 +344,7 @@ export default async function BlogPost({ params }) {
         </Link>
       </div>
 
-      {/* Featured image */}
-      <div className="relative h-96 w-full mb-12 rounded-2xl overflow-hidden">
-        <Image
-          src={metadata.image}
-          alt={metadata.title}
-          fill
-          unoptimized
-          className="object-cover"
-        />
-        <div className="absolute top-4 right-4 z-10 bg-blue-500 text-white text-xs font-semibold py-1 px-3 rounded-full">
-          {metadata.category}
-        </div>
-      </div>
-
-      {/* Blog header - only showing date, not title/description from metadata */}
-      <div className="mb-12">
-        <div className="text-blue-400 text-sm mb-2">{metadata.date}</div>
-      </div>
+      {/* Blog content starts directly without metadata elements */}
 
       {/* Blog content */}
       <div className="prose prose-lg max-w-none blog-content">
