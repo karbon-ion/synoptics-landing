@@ -193,7 +193,7 @@ export const NavbarMenu = () => {
 
   const resourcesItems = [
     { name: 'Blog', href: '/resources/blogs', description: 'Latest insights and updates' },
-    { name: 'Tutorials', href: '/resources/tutorials', description: 'Step-by-step guides' },
+    // { name: 'Tutorials', href: '/resources/tutorials', description: 'Step-by-step guides' },
   ];
 
   return (
@@ -328,7 +328,7 @@ export const NavbarMenu = () => {
               </div>
             </MenuItem>
 
-            {/* <MenuItem setActive={setActive} active={active} item="Resources">
+            <MenuItem setActive={setActive} active={active} item="Resources">
               <div className="grid gap-4 w-64">
                 {resourcesItems.map((item) => (
                   <div key={item.name} className="w-full">
@@ -346,7 +346,7 @@ export const NavbarMenu = () => {
                   </div>
                 ))}
               </div>
-            </MenuItem> */}
+            </MenuItem>
             <MenuItem setActive={setActive} active={active} item="About Us" href="/about-us" />
             <MenuItem setActive={setActive} active={active} item="Contact Us" href="/#contact" />
           </div>
