@@ -2,6 +2,59 @@
 
 import React, { useEffect, useState } from 'react';
 
+// Function to remove any existing table of contents from the blog content
+function removeExistingTableOfContents(content) {
+  if (!content) return content;
+  
+  // Common patterns for table of contents sections
+  const tocPatterns = [
+    // Match div with 'table of contents' or 'toc' in class or id
+    /<div[^>]*(?:class|id)[^>]*(?:table-of-contents|toc)[^>]*>.*?<\/div>/is,
+    // Match section with 'table of contents' or 'toc' in class or id
+    /<section[^>]*(?:class|id)[^>]*(?:table-of-contents|toc)[^>]*>.*?<\/section>/is,
+    // Match nav with 'table of contents' or 'toc' in class or id
+    /<nav[^>]*(?:class|id)[^>]*(?:table-of-contents|toc)[^>]*>.*?<\/nav>/is,
+    // Match any element containing 'Table of Contents' text with a list after it
+    /<h\d[^>]*>\s*Table\s+of\s+Contents\s*<\/h\d>\s*<ul[^>]*>.*?<\/ul>/is,
+    // Match any div containing 'Table of Contents' heading
+    /<div[^>]*>\s*<h\d[^>]*>\s*Table\s+of\s+Contents\s*<\/h\d>.*?<\/div>/is
+  ];
+  
+  let processedContent = content;
+  
+  // Apply each pattern to remove table of contents sections
+  tocPatterns.forEach(pattern => {
+    processedContent = processedContent.replace(pattern, '');
+  });
+  
+  return processedContent;
+}
+
+// Function to add IDs to headings for table of contents
+function addHeadingIds(content) {
+  if (!content) return content;
+  
+  // Regular expression to find heading tags
+  const headingRegex = /<h([1-6])([^>]*)>(.*?)<\/h\1>/gi;
+  
+  // Replace headings with versions that have IDs
+  return content.replace(headingRegex, (match, level, attrs, text) => {
+    // Generate an ID from the heading text
+    const id = text
+      .replace(/<[^>]+>/g, '') // Remove any HTML tags inside the heading
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, '-') // Replace non-alphanumeric chars with hyphens
+      .replace(/(^-|-$)/g, ''); // Remove leading/trailing hyphens
+    
+    // Check if ID attribute already exists
+    if (attrs.includes('id=')) {
+      return match; // Don't modify if ID already exists
+    }
+    
+    return `<h${level}${attrs} id="${id}">${text}</h${level}>`;
+  });
+}
+
 // Function to process content and convert URLs to image tags
 function processContentWithImages(content) {
   if (!content) return content;
@@ -20,7 +73,11 @@ const BlogContent = ({ content }) => {
   const [processedContent, setProcessedContent] = useState('');
   
   useEffect(() => {
-    setProcessedContent(processContentWithImages(content));
+    // First remove any existing table of contents
+    const contentWithoutToc = removeExistingTableOfContents(content);
+    // Then add IDs to headings and process images
+    const contentWithIds = addHeadingIds(contentWithoutToc);
+    setProcessedContent(processContentWithImages(contentWithIds));
   }, [content]);
   
   return (

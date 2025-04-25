@@ -5,6 +5,7 @@ import Link from 'next/link';
 import mammoth from 'mammoth';
 import { processSharePointImages, processImageUrl } from '../../utils/azureStorage';
 import BlogContent from './BlogContent';
+import TableOfContents from './TableOfContents';
 import { Metadata } from 'next';
 
 // Constants for file paths
@@ -333,22 +334,38 @@ export default async function BlogPost({ params }) {
   }
   
   return (
-    <div className="max-w-4xl mx-auto px-4 py-16 pt-28">
+    <div className="max-w-7xl mx-auto px-4 py-16 pt-28">
       {/* Back to blogs link */}
-      <div className="mb-12 mt-4">
+      <div className="mb-8 mt-4">
         <Link 
           href="/resources/blogs"
-          className="inline-flex items-center text-blue-500 font-medium hover:text-blue-700"
+          className="inline-flex items-center text-blue-500 font-medium hover:text-blue-700 transition-colors duration-200"
         >
-          ← Back to Blogs
+          <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+          </svg>
+          Back to Blogs
         </Link>
       </div>
 
-      {/* Blog content starts directly without metadata elements */}
+      {/* Blog title */}
+      <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 md:mb-10">{metadata.title}</h1>
 
-      {/* Blog content */}
-      <div className="prose prose-lg max-w-none blog-content">
-        <BlogContent content={contentData.content} />
+      {/* Two-column layout for TOC and content */}
+      <div className="flex flex-col md:flex-row gap-8 md:gap-12">
+        {/* Left sidebar with table of contents */}
+        <div className="md:w-1/4 lg:w-1/5 hidden md:block">
+          <div className="sticky top-28">
+            <TableOfContents content={contentData.content} />
+          </div>
+        </div>
+
+        {/* Main content area */}
+        <div className="md:w-3/4 lg:w-4/5">
+          <div className="prose prose-lg max-w-none blog-content bg-white rounded-lg p-6 md:p-8 shadow-sm border border-gray-100">
+            <BlogContent content={contentData.content} />
+          </div>
+        </div>
       </div>
 
       {/* Related blogs section */}
