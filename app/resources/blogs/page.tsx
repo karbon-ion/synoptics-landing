@@ -106,9 +106,14 @@ const BlogsPage = () => {
                   </div>
                   <div className="p-8 flex-grow flex flex-col">
                     <div className="text-blue-400 text-sm mb-2">{post.date}</div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors duration-300">
-                      {post.title}
-                    </h3>
+                    <Link 
+                      href={`/blog/${post.id}`}
+                      className="block"
+                    >
+                      <h3 className="text-xl font-semibold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors duration-300 cursor-pointer">
+                        {post.title}
+                      </h3>
+                    </Link>
                     <p className="text-gray-600 text-base leading-relaxed mb-6">
                       {post.description}
                     </p>

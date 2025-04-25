@@ -217,13 +217,39 @@ async function getBlogContent(id) {
         "p[style-name='Bullet List'] => li:fresh",
         "p[style-name='Normal (Web)'] => p:fresh",
         "u => u",
+        // Add alignment mapping
+        "p[style-name='center'] => p.center:fresh",
+        "p[style-name='Center'] => p.center:fresh",
       ],
       transformDocument: function(document) {
         return mammoth.transforms.paragraph(function(paragraph) {
           const styleName = paragraph.properties && paragraph.properties.styleName;
+          const alignment = paragraph.properties && paragraph.properties.alignment;
+          
+          // Handle list paragraphs
           if (styleName && (styleName.indexOf('List') !== -1 || styleName.indexOf('Bullet') !== -1)) {
             return { ...paragraph, styleId: 'ListParagraph' };
           }
+          
+          // Handle paragraph alignment
+          if (alignment) {
+            let newParagraph = { ...paragraph };
+            
+            // Add alignment as a class
+            if (!newParagraph.properties) newParagraph.properties = {};
+            if (!newParagraph.properties.className) newParagraph.properties.className = [];
+            
+            if (alignment === 'center') {
+              newParagraph.properties.className.push('center-aligned');
+            } else if (alignment === 'right') {
+              newParagraph.properties.className.push('right-aligned');
+            } else if (alignment === 'justify') {
+              newParagraph.properties.className.push('justify-aligned');
+            }
+            
+            return newParagraph;
+          }
+          
           return paragraph;
         })(document);
       },
@@ -233,6 +259,15 @@ async function getBlogContent(id) {
     
     // Process the HTML to fix common issues
     let processedHtml = result.value;
+    
+    // Add inline styles for alignment classes
+    processedHtml = processedHtml.replace(/<([h1-6|p])([^>]*)class="([^"]*center-aligned[^"]*)"([^>]*)>/gi, '<$1$2class="$3"$4 style="text-align: center;">');
+    processedHtml = processedHtml.replace(/<([h1-6|p])([^>]*)class="([^"]*right-aligned[^"]*)"([^>]*)>/gi, '<$1$2class="$3"$4 style="text-align: right;">');
+    processedHtml = processedHtml.replace(/<([h1-6|p])([^>]*)class="([^"]*justify-aligned[^"]*)"([^>]*)>/gi, '<$1$2class="$3"$4 style="text-align: justify;">');
+    
+    // Also handle elements with the center class
+    processedHtml = processedHtml.replace(/<([h1-6|p])([^>]*)class="([^"]*center[^"]*)"([^>]*)>/gi, '<$1$2class="$3"$4 style="text-align: center;">');
+    
     
     // Fix lists
     processedHtml = processedHtml.replace(/<li>([\s\S]*?)(?=<\/li>)<\/li>(?![\s\S]*?<\/[ou]l>)/g, '<ul><li>$1</li></ul>');
@@ -348,9 +383,6 @@ export default async function BlogPost({ params }) {
         </Link>
       </div>
 
-      {/* Blog title */}
-      <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 md:mb-10">{metadata.title}</h1>
-
       {/* Two-column layout for TOC and content */}
       <div className="flex flex-col md:flex-row gap-8 md:gap-12">
         {/* Left sidebar with table of contents */}
@@ -369,21 +401,21 @@ export default async function BlogPost({ params }) {
       </div>
 
       {/* Related blogs section */}
-      <div className="mt-20 pt-12 border-t border-gray-200">
+      {/* <div className="mt-20 pt-12 border-t border-gray-200">
         <h2 className="text-2xl font-bold text-gray-900 mb-8">You might also like</h2>
-        
+         */}
         {/* Fetch and display related blog posts */}
-        <RelatedBlogs currentPostId={resolvedParams.id} />
+        {/* <RelatedBlogs currentPostId={resolvedParams.id} /> */}
         
-        <div className="text-center mt-12">
+        {/* <div className="text-center mt-12">
           <Link
             href="/resources/blogs"
             className="px-6 py-3 text-white bg-gradient-to-r from-blue-400 to-blue-600 rounded-full hover:from-blue-500 hover:to-blue-700 transition-all duration-200 shadow-md hover:shadow-lg"
           >
             View All Blogs
           </Link>
-        </div>
-      </div>
+        </div> */}
+      {/* </div> */}
     </div>
   );
 }
@@ -426,9 +458,14 @@ async function RelatedBlogs({ currentPostId }) {
           </div>
           <div className="p-5 flex-grow flex flex-col">
             <div className="text-blue-400 text-xs mb-1">{post.date}</div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2 line-clamp-2 group-hover:text-blue-600 transition-colors duration-300">
-              {post.title}
-            </h3>
+            <Link 
+              href={`/blog/${post.id}`}
+              className="block"
+            >
+              <h3 className="text-lg font-semibold text-gray-900 mb-2 line-clamp-2 group-hover:text-blue-600 transition-colors duration-300 cursor-pointer">
+                {post.title}
+              </h3>
+            </Link>
             <p className="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-2">
               {post.description}
             </p>
