@@ -59,13 +59,31 @@ function addHeadingIds(content) {
 function processContentWithImages(content) {
   if (!content) return content;
   
-  // Regular expression to find standalone URLs that are likely images
-  const imageUrlRegex = /(<p>|<div>|^|\n|<br\s*\/?>)\s*(https?:\/\/[^\s]+\.(jpg|jpeg|png|gif|webp|svg)(\?[^\s]*)?)\s*(<\/p>|<\/div>|$|\n|<br\s*\/?>)/gi;
+  // Process the content in multiple passes to handle different URL formats
+  let processedContent = content;
   
-  // Replace standalone URLs with img tags
-  return content.replace(imageUrlRegex, (match, prefix, url, ext, query, suffix) => {
+  // 1. First pass: Find standalone URLs that are likely images by extension
+  const standardImageRegex = /(<p>|<div>|^|\n|<br\s*\/?>)\s*(https?:\/\/[^\s]+\.(jpg|jpeg|png|gif|webp|svg)(\?[^\s]*)?)\s*(<\/p>|<\/div>|$|\n|<br\s*\/?>)/gi;
+  processedContent = processedContent.replace(standardImageRegex, (match, prefix, url, ext, query, suffix) => {
     return `${prefix}<img src="${url}" alt="Blog image" class="blog-image" />${suffix}`;
   });
+  
+  // 2. Second pass: Find Azure Blob Storage URLs (which often have different patterns)
+  const azureBlobRegex = /(<p>|<div>|^|\n|<br\s*\/?>)\s*(https?:\/\/[^\s]+\.blob\.core\.windows\.net\/[^\s]+)\s*(<\/p>|<\/div>|$|\n|<br\s*\/?>)/gi;
+  processedContent = processedContent.replace(azureBlobRegex, (match, prefix, url, suffix) => {
+    return `${prefix}<img src="${url}" alt="Blog image" class="blog-image" />${suffix}`;
+  });
+  
+  // 3. Third pass: Look for URLs that contain image-like keywords
+  const keywordImageRegex = /(<p>|<div>|^|\n|<br\s*\/?>)\s*(https?:\/\/[^\s]+(?:image|img|photo|picture)[^\s]*)\s*(<\/p>|<\/div>|$|\n|<br\s*\/?>)/gi;
+  processedContent = processedContent.replace(keywordImageRegex, (match, prefix, url, suffix) => {
+    if (!url.match(/<img[^>]*>/i)) { // Don't replace if it's already an img tag
+      return `${prefix}<img src="${url}" alt="Blog image" class="blog-image" />${suffix}`;
+    }
+    return match;
+  });
+  
+  return processedContent;
 }
 
 const BlogContent = ({ content }) => {
