@@ -322,13 +322,40 @@ export async function generateMetadata({ params }) {
       };
     }
     
+    // Create the canonical URL for this blog post
+    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://synoptix.ai';
+    const canonicalUrl = `${baseUrl}/blog/${resolvedParams.id}`;
+    
     return {
       title: blog.title,
       description: blog.description,
+      metadataBase: new URL(baseUrl),
+      alternates: {
+        canonical: canonicalUrl,
+      },
       openGraph: {
         title: blog.title,
         description: blog.description,
-        images: [blog.image]
+        url: canonicalUrl,
+        siteName: 'Synoptix',
+        locale: 'en_US',
+        type: 'article',
+        publishedTime: blog.date,
+        authors: ['Synoptix'],
+        images: [
+          {
+            url: blog.image,
+            width: 1200,
+            height: 630,
+            alt: blog.title,
+          }
+        ]
+      },
+      twitter: {
+        card: 'summary_large_image',
+        title: blog.title,
+        description: blog.description,
+        images: [blog.image],
       }
     };
   } catch (error) {
