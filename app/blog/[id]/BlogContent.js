@@ -170,12 +170,33 @@ const BlogContent = ({ content }) => {
           text-align: justify !important;
         }
         
-        .blog-content-wrapper h1 { font-size: 2.5rem; font-weight: 800; margin-top: 2rem; margin-bottom: 1rem; color: #1a202c; }
-        .blog-content-wrapper h2 { font-size: 2rem; font-weight: 700; margin-top: 1.75rem; margin-bottom: 0.75rem; color: #2d3748; }
-        .blog-content-wrapper h3 { font-size: 1.5rem; font-weight: 600; margin-top: 1.5rem; margin-bottom: 0.75rem; color: #2d3748; }
-        .blog-content-wrapper h4 { font-size: 1.3rem; font-weight: 600; margin-top: 1.25rem; margin-bottom: 0.5rem; color: #2d3748; }
-        .blog-content-wrapper h5 { font-size: 1.15rem; font-weight: 600; margin-top: 1rem; margin-bottom: 0.5rem; color: #2d3748; }
-        .blog-content-wrapper h6 { font-size: 1rem; font-weight: 600; margin-top: 1rem; margin-bottom: 0.5rem; color: #2d3748; }
+        /* Mobile-friendly responsive headings */
+        .blog-content-wrapper h1 { font-size: 1.875rem; font-weight: 800; margin-top: 1.75rem; margin-bottom: 1rem; color: #1a202c; line-height: 1.2; word-wrap: break-word; overflow-wrap: break-word; hyphens: auto; }
+        .blog-content-wrapper h2 { font-size: 1.5rem; font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.75rem; color: #2d3748; line-height: 1.3; word-wrap: break-word; overflow-wrap: break-word; hyphens: auto; }
+        .blog-content-wrapper h3 { font-size: 1.25rem; font-weight: 600; margin-top: 1.25rem; margin-bottom: 0.75rem; color: #2d3748; line-height: 1.4; word-wrap: break-word; overflow-wrap: break-word; hyphens: auto; }
+        .blog-content-wrapper h4 { font-size: 1.125rem; font-weight: 600; margin-top: 1.25rem; margin-bottom: 0.5rem; color: #2d3748; line-height: 1.4; word-wrap: break-word; overflow-wrap: break-word; hyphens: auto; }
+        .blog-content-wrapper h5 { font-size: 1rem; font-weight: 600; margin-top: 1rem; margin-bottom: 0.5rem; color: #2d3748; line-height: 1.5; word-wrap: break-word; overflow-wrap: break-word; hyphens: auto; }
+        .blog-content-wrapper h6 { font-size: 0.875rem; font-weight: 600; margin-top: 1rem; margin-bottom: 0.5rem; color: #2d3748; line-height: 1.5; word-wrap: break-word; overflow-wrap: break-word; hyphens: auto; }
+        
+        /* Medium screens and larger */
+        @media (min-width: 768px) {
+          .blog-content-wrapper h1 { font-size: 2.25rem; }
+          .blog-content-wrapper h2 { font-size: 1.75rem; }
+          .blog-content-wrapper h3 { font-size: 1.5rem; }
+          .blog-content-wrapper h4 { font-size: 1.25rem; }
+          .blog-content-wrapper h5 { font-size: 1.125rem; }
+          .blog-content-wrapper h6 { font-size: 1rem; }
+        }
+        
+        /* Large screens */
+        @media (min-width: 1024px) {
+          .blog-content-wrapper h1 { font-size: 2.5rem; }
+          .blog-content-wrapper h2 { font-size: 2rem; }
+          .blog-content-wrapper h3 { font-size: 1.5rem; }
+          .blog-content-wrapper h4 { font-size: 1.3rem; }
+          .blog-content-wrapper h5 { font-size: 1.15rem; }
+          .blog-content-wrapper h6 { font-size: 1rem; }
+        }
         .blog-content-wrapper p { margin-bottom: 1rem; line-height: 1.7; }
         .blog-content-wrapper ul { list-style-type: disc; margin-left: 2rem; margin-bottom: 1.5rem; }
         .blog-content-wrapper ol { list-style-type: decimal; margin-left: 2rem; margin-bottom: 1.5rem; }
