@@ -15,7 +15,7 @@ const features = [
     image: agentGif,
 
     ctaText: "Learn More",
-    ctaLink: "/enterprise-ai-agent"
+    ctaLink: "/platform/enterprise-ai-agents"
   },
   {
     title: "Orchestrate Tasks with Precision",
@@ -24,7 +24,7 @@ const features = [
     image: workflowGif,
 
     ctaText: "Learn More",
-    ctaLink: "/workflow"
+    ctaLink: "/platform/agentic-workflows"
   },
   {
     title: "Precision Analytics for Improvement",
@@ -32,7 +32,7 @@ const features = [
     description: "Gain real-time insights into AI performance, efficiency, and accuracy with Synoptix AI. Track usage, measure impact, and continuously refine AI agents to maximise productivity and business value.",
     image: evaluationsGif,
     ctaText: "Learn More",
-    ctaLink: "/enterprise-rag"
+    ctaLink: "/platform/enterprise-rag-application"
   },
   {
     title: "Pre-configured Agents for Instant Deployment",
@@ -40,7 +40,7 @@ const features = [
     description: "Access prebuilt AI agents designed for various business tasks. Customise prompts, upload documents, and configure AI agents to get fast, precise, and context-aware results—hassle-free in seconds.",
     image: prebuiltAgentsGif,
     ctaText: "Learn More",
-    ctaLink: "/enterprise-ai-agent"
+    ctaLink: "/platform/enterprise-ai-agents"
   },
 ];
 

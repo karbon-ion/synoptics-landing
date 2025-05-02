@@ -423,7 +423,25 @@ export const NavbarMenu = () => {
                   </div>
                 </div>
 
-                <div className="animate-fadeIn" style={{ animationDelay: '350ms' }}>
+                <div className="space-y-2 animate-fadeIn" style={{ animationDelay: '350ms' }}>
+                  <div className="text-lg font-medium py-2 px-4 text-gray-700">
+                    Resources
+                  </div>
+                  <div className="pl-4 space-y-2">
+                    {resourcesItems.map((item) => (
+                      <Link
+                        key={item.name}
+                        href={item.href}
+                        className={`flex items-center py-2 px-4 rounded-lg transition-colors ${pathname === item.href ? 'text-blue-600 bg-blue-50/50' : 'text-gray-600 hover:text-blue-600 hover:bg-blue-50/50'}`}
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        <span>{item.name}</span>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="animate-fadeIn" style={{ animationDelay: '400ms' }}>
                   <Link 
                     href="/about-us" 
                     className={`text-lg font-medium py-3 px-4 rounded-lg transition-colors ${pathname === '/about-us' ? 'text-blue-600 bg-blue-50/50' : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50/50'}`}
@@ -433,7 +451,7 @@ export const NavbarMenu = () => {
                   </Link>
                 </div>
 
-                <div className="animate-fadeIn" style={{ animationDelay: '400ms' }}>
+                <div className="animate-fadeIn" style={{ animationDelay: '450ms' }}>
                   <Link 
                     href="/#contact" 
                     className={`text-lg font-medium py-3 px-4 rounded-lg transition-colors ${pathname === '/#contact' ? 'text-blue-600 bg-blue-50/50' : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50/50'}`}
