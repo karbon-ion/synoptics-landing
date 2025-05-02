@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import type { BlogPost } from '../../utils/blog-utils';
 
+
 // Fallback blog posts in case fetching fails
 const fallbackBlogPosts = [
   {
@@ -97,10 +98,11 @@ const BlogsPage = () => {
                       {post.category}
                     </div>
                     <Image
-                      src={post.image}
+                      src={decodeURIComponent(post.image)}
                       alt={post.title}
                       fill
-                      unoptimized
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      quality={85}
                       className="object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>
