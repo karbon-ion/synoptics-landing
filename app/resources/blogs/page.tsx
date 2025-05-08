@@ -109,7 +109,7 @@ const BlogsPage = () => {
                   <div className="p-8 flex-grow flex flex-col">
                     <div className="text-blue-400 text-sm mb-2">{post.date}</div>
                     <Link 
-                      href={`/blog/${post.id}`}
+                      href={`/blog/${post.id}?title=${encodeURIComponent(post.title)}`}
                       className="block"
                     >
                       <h3 className="text-xl font-semibold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors duration-300 cursor-pointer">
@@ -121,9 +121,9 @@ const BlogsPage = () => {
                     </p>
                     <div className="mt-auto">
                       <Link 
-                        href={`/blog/${post.id}`}
+                        href={`/blog/${post.id}?title=${encodeURIComponent(post.title)}`}
                         className="inline-flex items-center text-blue-500 font-medium group-hover:text-blue-700 transition-colors duration-300"
-                        onClick={() => console.log(`Navigating to blog ${post.id}`, `/blog/${post.id}`)}
+                        onClick={() => console.log(`Navigating to blog ${post.id}`, `/blog/${post.id}?title=${encodeURIComponent(post.title)}`)}
                       >
                         Read More
                         <svg className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

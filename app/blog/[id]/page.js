@@ -374,8 +374,13 @@ export default async function BlogPost({ params }) {
   // Get metadata and content separately
   // Ensure params is resolved before accessing properties
   const resolvedParams = await params;
-  const metadata = await getBlogPost(resolvedParams.id);
-  const contentData = await getBlogContent(resolvedParams.id);
+  
+  // Extract the ID from the slug (format: title-id)
+  // The ID is the numeric part at the end of the slug
+  const id = resolvedParams.id.match(/-(\d+)$/)?.[1] || resolvedParams.id;
+  
+  const metadata = await getBlogPost(id);
+  const contentData = await getBlogContent(id);
   
   // If either is missing, show error
   if (!metadata || !contentData) {
