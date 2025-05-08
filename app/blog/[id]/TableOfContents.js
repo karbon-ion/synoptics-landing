@@ -44,15 +44,11 @@ const TableOfContents = ({ content }) => {
 
     setHeadings(headingsArray);
     
-    // Initialize expanded state for H1 and H2 headings
+    // Initialize expanded state for all headings
     const initialExpandedState = {};
     headingsArray.forEach(heading => {
-      // H1 headings are expanded by default, H2 headings are collapsed
-      if (heading.level === 1) {
-        initialExpandedState[heading.id] = true; // H1 expanded by default
-      } else if (heading.level === 2) {
-        initialExpandedState[heading.id] = false; // H2 collapsed by default
-      }
+      // Set all headings to be expanded by default
+      initialExpandedState[heading.id] = true;
     });
     setExpandedSections(initialExpandedState);
   }, [content]);
