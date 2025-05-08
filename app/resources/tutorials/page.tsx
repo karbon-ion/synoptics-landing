@@ -1,5 +1,9 @@
 'use client';
 
+export const metadata = {
+  robots: 'noindex',
+};
+
 import Image from 'next/image';
 import Link from 'next/link';
 
