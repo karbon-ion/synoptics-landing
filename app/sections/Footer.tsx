@@ -6,11 +6,11 @@ import { IconBrandFacebook, IconBrandTwitter, IconBrandLinkedin, IconShieldCheck
 const Footer = () => {
   const navigation = {
     platform: [
-      { name: 'Enterprise RAG', href: '/enterprise-rag' },
-      { name: 'AI Agent', href: '/enterprise-ai-agent' },
-      { name: 'Workflows', href: '/workflow' },
-      { name: 'Evaluations', href: '/enterprise-rag' },
-      { name: 'SynoGuard', href: '/syno-guard' },
+      { name: 'Enterprise RAG', href: '/platform/enterprise-rag-application' },
+      { name: 'AI Agent', href: '/platform/enterprise-ai-agents' },
+      { name: 'Workflows', href: '/platform/agentic-workflows' },
+      { name: 'Evaluations', href: '/platform/ai-performace-evaluation' },
+      { name: 'SynoGuard', href: '/ai-security-tool/syno-guard' },
     ],
     services: [
       { name: 'AI Consulting', href: '/ai-consulting' },
