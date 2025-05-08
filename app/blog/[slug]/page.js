@@ -14,6 +14,93 @@ const METADATA_DIR = path.join(process.cwd(), 'app/resources/blogs/metadata');
 const DEFAULT_IMAGE = 'https://images.unsplash.com/photo-1581090700227-1e37b190418e?q=80&w=1000';
 
 /**
+ * Get blog post by slug
+ */
+async function getBlogPostBySlug(slug) {
+  try {
+    // Get list of all blog posts
+    const allPosts = await getAllBlogPosts();
+    
+    if (!allPosts || allPosts.length === 0) {
+      console.log('No blog posts found');
+      return null;
+    }
+    
+    // Find the post with a matching slug
+    const normalizedSlug = slug.toLowerCase().trim();
+    
+    // Create an array of all posts with their slugs for debugging
+    const postsWithSlugs = allPosts.map(post => {
+      // Normalize the title to create a slug
+      const postSlug = post.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+      return { ...post, slug: postSlug };
+    });
+    
+    console.log('Searching for slug:', normalizedSlug);
+    console.log('Available posts with slugs:', postsWithSlugs.map(p => ({ id: p.id, title: p.title, slug: p.slug })));
+    
+    // 1. Try exact match first
+    const exactMatch = postsWithSlugs.find(p => p.slug === normalizedSlug);
+    if (exactMatch) {
+      console.log('Found exact matching post:', exactMatch);
+      return exactMatch;
+    }
+    
+    // 2. Try matching by keywords (more flexible approach)
+    // Extract keywords from the slug (words that are likely meaningful)
+    const slugKeywords = normalizedSlug.split('-').filter(word => 
+      word.length > 3 && !['what', 'will', 'with', 'this', 'that', 'your', 'from', 'have', 'been'].includes(word)
+    );
+    
+    console.log('Looking for keywords:', slugKeywords);
+    
+    // Find posts that match most keywords
+    let bestMatch = null;
+    let highestMatchScore = 0;
+    
+    postsWithSlugs.forEach(post => {
+      // Count how many keywords match
+      let matchScore = 0;
+      slugKeywords.forEach(keyword => {
+        if (post.slug.includes(keyword)) {
+          matchScore++;
+        }
+      });
+      
+      // If this post matches more keywords than our current best match, update best match
+      if (matchScore > highestMatchScore) {
+        highestMatchScore = matchScore;
+        bestMatch = post;
+      }
+    });
+    
+    // If we found a post that matches at least 2 keywords, use it
+    if (bestMatch && highestMatchScore >= 2) {
+      console.log(`Found best match with ${highestMatchScore} keyword matches:`, bestMatch);
+      return bestMatch;
+    }
+    
+    // 3. Try matching by similarity (if no good keyword match)
+    const closeMatch = postsWithSlugs.find(p => {
+      // Check if either slug contains a significant portion of the other
+      return normalizedSlug.includes(p.slug.substring(0, Math.floor(p.slug.length * 0.6))) || 
+             p.slug.includes(normalizedSlug.substring(0, Math.floor(normalizedSlug.length * 0.6)));
+    });
+    
+    if (closeMatch) {
+      console.log('Found close match by similarity:', closeMatch);
+      return closeMatch;
+    }
+    
+    console.log('No matching post found after all attempts');
+    return null;
+  } catch (error) {
+    console.error('Error finding blog post by slug:', error);
+    return null;
+  }
+}
+
+/**
  * Get blog post metadata from JSON file or generate default metadata
  */
 async function getBlogPost(id) {
@@ -200,104 +287,19 @@ async function getBlogContent(id) {
 
     const file = docxFiles[index];
     const filePath = path.join(UPLOADS_DIR, file);
-
+    
+    // Read the file
     const buffer = await fs.readFile(filePath);
-
-    const result = await mammoth.convertToHtml({
-      buffer,
-      styleMap: [
-        "p[style-name='Heading 1'] => h1:fresh",
-        "p[style-name='Heading 2'] => h2:fresh",
-        "p[style-name='Heading 3'] => h3:fresh",
-        "p[style-name='Heading 4'] => h4:fresh",
-        "p[style-name='Heading 5'] => h5:fresh",
-        "p[style-name='Heading 6'] => h6:fresh",
-        "r[style-name='Emphasis'] => em",
-        "p[style-name='List Paragraph'] => li:fresh",
-        "p[style-name='Bullet List'] => li:fresh",
-        "p[style-name='Normal (Web)'] => p:fresh",
-        "u => u",
-        // Add alignment mapping
-        "p[style-name='center'] => p.center:fresh",
-        "p[style-name='Center'] => p.center:fresh",
-      ],
-      transformDocument: function(document) {
-        return mammoth.transforms.paragraph(function(paragraph) {
-          const styleName = paragraph.properties && paragraph.properties.styleName;
-          const alignment = paragraph.properties && paragraph.properties.alignment;
-          
-          // Handle list paragraphs
-          if (styleName && (styleName.indexOf('List') !== -1 || styleName.indexOf('Bullet') !== -1)) {
-            return { ...paragraph, styleId: 'ListParagraph' };
-          }
-          
-          // Handle paragraph alignment
-          if (alignment) {
-            let newParagraph = { ...paragraph };
-            
-            // Add alignment as a class
-            if (!newParagraph.properties) newParagraph.properties = {};
-            if (!newParagraph.properties.className) newParagraph.properties.className = [];
-            
-            if (alignment === 'center') {
-              newParagraph.properties.className.push('center-aligned');
-            } else if (alignment === 'right') {
-              newParagraph.properties.className.push('right-aligned');
-            } else if (alignment === 'justify') {
-              newParagraph.properties.className.push('justify-aligned');
-            }
-            
-            return newParagraph;
-          }
-          
-          return paragraph;
-        })(document);
-      },
-      ignoreEmptyParagraphs: true,
-      preserveEmptyParagraphs: false,
-    });
     
-    // Process the HTML to fix common issues
-    let processedHtml = result.value;
+    // Convert DOCX to HTML
+    const result = await mammoth.convertToHtml({ buffer });
+    const html = result.value;
     
-    // Add inline styles for alignment classes
-    processedHtml = processedHtml.replace(/<([h1-6|p])([^>]*)class="([^"]*center-aligned[^"]*)"([^>]*)>/gi, '<$1$2class="$3"$4 style="text-align: center;">');
-    processedHtml = processedHtml.replace(/<([h1-6|p])([^>]*)class="([^"]*right-aligned[^"]*)"([^>]*)>/gi, '<$1$2class="$3"$4 style="text-align: right;">');
-    processedHtml = processedHtml.replace(/<([h1-6|p])([^>]*)class="([^"]*justify-aligned[^"]*)"([^>]*)>/gi, '<$1$2class="$3"$4 style="text-align: justify;">');
-    
-    // Also handle elements with the center class
-    processedHtml = processedHtml.replace(/<([h1-6|p])([^>]*)class="([^"]*center[^"]*)"([^>]*)>/gi, '<$1$2class="$3"$4 style="text-align: center;">');
-    
-    
-    // Fix lists
-    processedHtml = processedHtml.replace(/<li>([\s\S]*?)(?=<\/li>)<\/li>(?![\s\S]*?<\/[ou]l>)/g, '<ul><li>$1</li></ul>');
-    processedHtml = processedHtml.replace(/<\/ul>\s*<ul>/g, '');
-    
-    // Remove metadata-related content
-    const metaPatterns = [
-      /<[^>]*>\s*(?:<strong>)?\s*Meta\s*Title\s*(?::|<\/strong>\s*:|<\/strong>\s*:\s*)\s*([^<]+)<\/[^>]*>/gi,
-      /<[^>]*>\s*Meta\s*Title\s*:<\/[^>]*>\s*([^<]+)/gi,
-      /<[^>]*>\s*(?:<strong>)?\s*Meta\s*Description\s*(?::|<\/strong>\s*:|<\/strong>\s*:\s*)\s*([^<]+)<\/[^>]*>/gi,
-      /<[^>]*>\s*Meta\s*Description\s*:<\/[^>]*>\s*([^<]+)/gi,
-      /<[^>]*>[^<]*Meta\s*Title[^<]*<\/[^>]*>/gi,
-      /<[^>]*>[^<]*Meta\s*Description[^<]*<\/[^>]*>/gi,
-      /<p>\s*(?:<strong>)?\s*Automate\s*Repetitive\s*Tasks\s*with\s*AI[^<]*<\/p>/gi
-    ];
-    
-    // Apply all patterns
-    metaPatterns.forEach(pattern => {
-      processedHtml = processedHtml.replace(pattern, '');
-    });
-    
-    // Clean up empty paragraphs and extra breaks
-    processedHtml = processedHtml.replace(/<p>\s*<\/p>/gi, '');
-    processedHtml = processedHtml.replace(/(<br\s*\/?>\s*>){2,}/gi, '<br />');
-    
-    // Process SharePoint image links in the content
-    processedHtml = processSharePointImages(processedHtml);
+    // Process SharePoint images if any
+    const processedHtml = await processSharePointImages(html);
     
     return {
-      content: processedHtml.trim(),
+      content: processedHtml,
       fileName: file
     };
   } catch (error) {
@@ -313,9 +315,9 @@ export async function generateMetadata({ params }) {
   try {
     // Ensure params is resolved before accessing properties
     const resolvedParams = await params;
-    const blog = await getBlogPost(resolvedParams.id);
+    const post = await getBlogPostBySlug(resolvedParams.slug);
     
-    if (!blog) {
+    if (!post) {
       return {
         title: 'Blog Post Not Found',
         description: 'The requested blog post could not be found'
@@ -324,38 +326,38 @@ export async function generateMetadata({ params }) {
     
     // Create the canonical URL for this blog post
     const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://synoptix.ai';
-    const canonicalUrl = `${baseUrl}/blog/${resolvedParams.id}`;
+    const canonicalUrl = `${baseUrl}/blog/${resolvedParams.slug}`;
     
     return {
-      title: blog.title,
-      description: blog.description,
+      title: post.title,
+      description: post.description,
       metadataBase: new URL(baseUrl),
       alternates: {
         canonical: canonicalUrl,
       },
       openGraph: {
-        title: blog.title,
-        description: blog.description,
+        title: post.title,
+        description: post.description,
         url: canonicalUrl,
         siteName: 'Synoptix',
         locale: 'en_US',
         type: 'article',
-        publishedTime: blog.date,
+        publishedTime: post.date,
         authors: ['Synoptix'],
         images: [
           {
-            url: blog.image,
+            url: post.image,
             width: 1200,
             height: 630,
-            alt: blog.title,
+            alt: post.title,
           }
         ]
       },
       twitter: {
         card: 'summary_large_image',
-        title: blog.title,
-        description: blog.description,
-        images: [blog.image],
+        title: post.title,
+        description: post.description,
+        images: [post.image],
       }
     };
   } catch (error) {
@@ -374,22 +376,39 @@ export default async function BlogPost({ params }) {
   // Get metadata and content separately
   // Ensure params is resolved before accessing properties
   const resolvedParams = await params;
+  console.log('Slug param:', resolvedParams.slug);
   
-  // Extract the ID from the slug (format: id-title)
-  // The ID is the numeric part at the beginning of the slug
-  console.log('Raw slug param:', resolvedParams.id);
-  const id = resolvedParams.id.match(/^([0-9]+)/)?.[1] || resolvedParams.id;
-  console.log('Extracted ID:', id);
-  const metadata = await getBlogPost(id);
-  const contentData = await getBlogContent(id);
+  // Find the blog post by slug
+  const post = await getBlogPostBySlug(resolvedParams.slug);
   
-  // If either is missing, show error
-  if (!metadata || !contentData) {
+  // If post not found, show error
+  if (!post) {
     return (
       <div className="max-w-4xl mx-auto px-4 py-16 text-center mt-10">
         <h1 className="text-3xl font-bold text-gray-900 mb-4">Blog Post Not Found</h1>
         <p className="text-gray-600 mb-8">
           Sorry, the blog post you're looking for doesn't exist or has been removed.
+        </p>
+        <Link 
+          href="/resources/blogs"
+          className="inline-flex items-center text-blue-500 font-medium hover:text-blue-700 mt-10"
+        >
+          ← Back to Blogs
+        </Link>
+      </div>
+    );
+  }
+  
+  // Get the content using the post ID
+  const contentData = await getBlogContent(post.id);
+  
+  // If content not found, show error
+  if (!contentData) {
+    return (
+      <div className="max-w-4xl mx-auto px-4 py-16 text-center mt-10">
+        <h1 className="text-3xl font-bold text-gray-900 mb-4">Blog Content Not Found</h1>
+        <p className="text-gray-600 mb-8">
+          Sorry, the content for this blog post couldn't be loaded.
         </p>
         <Link 
           href="/resources/blogs"
@@ -432,23 +451,6 @@ export default async function BlogPost({ params }) {
           </div>
         </div>
       </div>
-
-      {/* Related blogs section */}
-      {/* <div className="mt-20 pt-12 border-t border-gray-200">
-        <h2 className="text-2xl font-bold text-gray-900 mb-8">You might also like</h2>
-         */}
-        {/* Fetch and display related blog posts */}
-        {/* <RelatedBlogs currentPostId={resolvedParams.id} /> */}
-        
-        {/* <div className="text-center mt-12">
-          <Link
-            href="/resources/blogs"
-            className="px-6 py-3 text-white bg-gradient-to-r from-blue-400 to-blue-600 rounded-full hover:from-blue-500 hover:to-blue-700 transition-all duration-200 shadow-md hover:shadow-lg"
-          >
-            View All Blogs
-          </Link>
-        </div> */}
-      {/* </div> */}
     </div>
   );
 }
@@ -492,25 +494,22 @@ async function RelatedBlogs({ currentPostId }) {
           <div className="p-5 flex-grow flex flex-col">
             <div className="text-blue-400 text-xs mb-1">{post.date}</div>
             <Link 
-              href={`/blog/${post.id}`}
+              href={`/blog/${post.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}
               className="block"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2 line-clamp-2 group-hover:text-blue-600 transition-colors duration-300 cursor-pointer">
                 {post.title}
               </h3>
             </Link>
-            <p className="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-2">
+            <p className="text-gray-600 text-sm line-clamp-2 mb-3">
               {post.description}
             </p>
             <div className="mt-auto">
               <Link 
-                href={`/blog/${post.id}`}
-                className="inline-flex items-center text-sm text-blue-500 font-medium group-hover:text-blue-700 transition-colors duration-300"
+                href={`/blog/${post.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}
+                className="text-blue-500 text-sm font-medium hover:text-blue-700 transition-colors duration-200"
               >
-                Read More
-                <svg className="ml-1 w-3 h-3 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
+                Read More →
               </Link>
             </div>
           </div>
