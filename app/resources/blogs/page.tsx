@@ -44,7 +44,12 @@ const BlogsPage = () => {
         console.log('Received blog data:', data);
         
         if (data.posts && data.posts.length > 0) {
-          setBlogPosts(data.posts);
+          const sortedPosts = [...data.posts].sort((a, b) => {
+            const dateA = new Date(a.date);
+            const dateB = new Date(b.date);
+            return dateB.getTime() - dateA.getTime();
+          });
+          setBlogPosts(sortedPosts);
         }
       } catch (error) {
         console.error('Error loading blog posts:', error);
