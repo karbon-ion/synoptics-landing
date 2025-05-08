@@ -375,10 +375,11 @@ export default async function BlogPost({ params }) {
   // Ensure params is resolved before accessing properties
   const resolvedParams = await params;
   
-  // Extract the ID from the slug (format: title-id)
-  // The ID is the numeric part at the end of the slug
-  const id = resolvedParams.id.match(/-(\d+)$/)?.[1] || resolvedParams.id;
-  
+  // Extract the ID from the slug (format: id-title)
+  // The ID is the numeric part at the beginning of the slug
+  console.log('Raw slug param:', resolvedParams.id);
+  const id = resolvedParams.id.match(/^([0-9]+)/)?.[1] || resolvedParams.id;
+  console.log('Extracted ID:', id);
   const metadata = await getBlogPost(id);
   const contentData = await getBlogContent(id);
   
