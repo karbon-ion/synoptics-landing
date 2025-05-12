@@ -89,9 +89,9 @@ export default function TestPage() {
     : "https://www.youtube.com/embed/MgRh-vN9ZBg?si=2cCxYwAaUmSEDIrb&rel=0";
 
   return (
-    <div className="relative w-full overflow-hidden">
+    <div className="relative w-full">
       {/* Hero Section with Gradient Background */}
-      <div className="relative h-screen w-full overflow-hidden bg-gradient-to-br from-blue-50 via-indigo-50 to-blue-100">
+      <div className="relative h-screen w-full bg-gradient-to-br from-blue-50 via-indigo-50 to-blue-100">
         {/* Floating Icons - Positioned exactly as in the reference image */}
         {/* Replaced Google icon with OpenAI */}
         <FloatingIcon 
@@ -191,8 +191,11 @@ export default function TestPage() {
         </div>
       </div>
       
-      {/* Spacer to ensure video extends beyond hero section */}
-      <div className="h-[60rem] bg-white w-full"></div>
+      {/* White section below hero */}
+      <div className="bg-white w-full py-32">
+        {/* Content below video can go here */}
+        <div className="h-[50vh]"></div>
+      </div>
     </div>
   );
 }
