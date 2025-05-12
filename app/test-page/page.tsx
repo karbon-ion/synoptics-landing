@@ -4,6 +4,7 @@ import { useEffect, useState, useRef } from "react";
 import HeroSection from "./sections/HeroSection";
 import EnterpriseSection from "./sections/EnterpriseSection";
 import SynoptixComponent from "./sections/SynoptixSection";
+import TrackSection from "./sections/TrackandOptimizeSection";
 
 export default function TestPage() {
   const [mounted, setMounted] = useState(false);
@@ -38,6 +39,7 @@ export default function TestPage() {
       <HeroSection videoRef={videoRef} isInView={isInView} />
       <EnterpriseSection />
       <SynoptixComponent/>
+      <TrackSection/>
     </div>
   );
 }
