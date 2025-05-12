@@ -78,7 +78,7 @@ export default function HeroSection({ videoRef, isInView }: HeroSectionProps) {
         <FloatingIcon 
           src="/images/logos/dropbox logo.png" 
           size={45}
-          className="top-[18%] right-[5%]" 
+          className="top-[73%] right-[5%]" 
         />
         <FloatingIcon 
           src="/images/logos/microsoft.svg" 
@@ -153,7 +153,7 @@ export default function HeroSection({ videoRef, isInView }: HeroSectionProps) {
         </div>
       </div>
       
-      <div className="bg-white w-full py-32">
+      <div className="bg-white w-full ">
         <div className="h-[50vh]"></div>
       </div>
     </>
