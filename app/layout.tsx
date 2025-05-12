@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { headers } from "next/headers";
-import { Inter } from "next/font/google";
+import { Inter, Syne } from "next/font/google";
 import "./globals.css";
 import { NavbarMenu } from "@/components/ui/navbar-menu";
 import Footer from "./sections/Footer";
@@ -8,6 +8,7 @@ import Script from "next/script";
 import FontAwesome from "@/components/FontAwesome";
 
 const inter = Inter({ subsets: ["latin"] });
+const syne = Syne({ subsets: ["latin"], weight: ["700"] });
 
 export const metadata: Metadata = {
   title: "Enterprise AI Platform for Secure Automation | Synoptix.AI",
