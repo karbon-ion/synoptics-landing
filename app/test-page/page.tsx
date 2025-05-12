@@ -42,7 +42,7 @@ const FloatingIcon = ({ src, size = 40, className }: { src: string; size?: numbe
       animate={{ 
         x: path.map(p => p[0]),
         y: path.map(p => p[1]),
-        rotate: [0, 5, 0, -5, 0]
+        rotate: [0, 3, 0, -3, 0]
       }}
       transition={{ 
         duration: randomDuration,
@@ -115,7 +115,7 @@ export default function TestPage() {
         <FloatingIcon 
           src="/images/logos/microsoft.svg" 
           size={46}
-          className="top-[15%] left-[25%]" 
+          className="top-[13%] left-[25%]" 
         />
         {/* Slack icon */}
         <FloatingIcon 
@@ -146,9 +146,10 @@ export default function TestPage() {
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="relative z-20 mx-auto max-w-6xl px-4 text-center -mt-20">
             <div className="mb-6 flex justify-center">
-              <div className="rounded-full bg-blue-100/80 px-10 py-2.5 flex items-center shadow-sm">
+              <div className="rounded-full bg-blue-100/80 px-10 py-1.5 flex items-center shadow-sm">
                 <span className="text-sm text-gray-800">In Partnership with</span>
                 <img src="/images/logos/microsoft.svg" alt="Microsoft" className="ml-2 h-5 w-auto" />
+                <span className="text-sm text-gray-800">Microsoft</span>
               </div>
             </div>
             <h1 className="text-5xl md:text-6xl mb-4" style={{ fontFamily: 'Syne', fontWeight: 700, fontSize: '48px', lineHeight: '72px', letterSpacing: '0%', textAlign: 'center' }}>
@@ -191,7 +192,7 @@ export default function TestPage() {
       </div>
       
       {/* Spacer to ensure video extends beyond hero section */}
-      <div className="h-60 bg-white w-full"></div>
+      <div className="h-[60rem] bg-white w-full"></div>
     </div>
   );
 }
