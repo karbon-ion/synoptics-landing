@@ -16,16 +16,16 @@ export default function SynoptixComponent() {
     all: {
       title: "Synoptix is for every team",
       features: [
-        "Deliver real-time, AI-driven answers directly within your reps' workflows",
-        "Surface personalized content based on customer context and rep engagement",
-        "Cut down prospecting prep with instant access to current battle cards",
+        "Deliver real-time, AI-driven answers directly within ",
+        "Surface personalized content based on customer context ",
+        "Cut down prospecting prep with instant access to current battle",
         "Use AI to quickly generate and share sales documentation at scale",
-        "Maintain consistent messaging with centralized, approved materials",
-        "Accelerate onboarding and ramp-up with streamlined, AI-powered support"
+        "Maintain consistent messaging with centralized, approved ",
+        "Accelerate onboarding and ramp-up with streamlined, AI-powered "
       ]
     },
     marketing: {
-      title: "Synoptix for Marketing teams",
+      title: "Synoptix is for every team",
       features: [
         "Create and distribute marketing content with AI assistance",
         "Track campaign performance with real-time analytics",
@@ -36,7 +36,7 @@ export default function SynoptixComponent() {
       ]
     },
     sales: {
-      title: "Synoptix for Sales teams",
+      title: "Synoptix is for every team",
       features: [
         "Access customer insights during live sales conversations",
         "Generate personalized proposals in seconds",
@@ -47,7 +47,7 @@ export default function SynoptixComponent() {
       ]
     },
     it: {
-      title: "Synoptix for IT teams",
+      title: "Synoptix is for every team",
       features: [
         "Automate ticket routing and prioritization",
         "Generate technical documentation with AI assistance",
@@ -58,7 +58,7 @@ export default function SynoptixComponent() {
       ]
     },
     finance: {
-      title: "Synoptix for Finance teams",
+      title: "Synoptix is for every team",
       features: [
         "Automate financial reporting and analysis",
         "Streamline approval workflows for expenses",
@@ -69,7 +69,7 @@ export default function SynoptixComponent() {
       ]
     },
     hr: {
-      title: "Synoptix for HR teams",
+      title: "Synoptix is for every team",
       features: [
         "Streamline candidate screening and hiring",
         "Automate employee onboarding processes",
@@ -86,9 +86,9 @@ export default function SynoptixComponent() {
   return (
     <div className="max-w-6xl mx-auto px-4 py-16">
       <div className="text-center mb-12">
-        <h2 className="text-3xl font-semibold text-slate-800">
+        <h2 className="text-3xl font-semibold text-slate-800" style={{ fontFamily: 'Syne, sans-serif' }}>
           {activeTab === "all" ? (
-            <>{currentContent.title.split(" for ")[0]} is for <span className="text-indigo-500">every team</span></>
+            <>{currentContent.title.split(" for ")[0]} for <span className="text-indigo-500">every team</span></>
           ) : (
             <>{currentContent.title.split(" for ")[0]} for <span className="text-indigo-500">{currentContent.title.split(" for ")[1]}</span></>
           )}
@@ -99,42 +99,42 @@ export default function SynoptixComponent() {
       <div className="flex flex-wrap justify-center mb-12">
         <button 
           onClick={() => setActiveTab("all")} 
-          className={`px-4 py-3 font-bold text-sm leading-5 tracking-normal text-center ${activeTab === "all" ? "text-indigo-600 border-b-2 border-indigo-600" : "text-gray-500 hover:text-gray-700 border-b-0"}`}
+          className={`px-10 py-3 font-bold text-sm leading-5 tracking-normal text-center ${activeTab === "all" ? "text-indigo-600 border-b-2 border-indigo-600" : "text-gray-500 hover:text-gray-700 border-b-0"}`}
           style={{ fontFamily: 'Syne' }}
         >
           All Teams
         </button>
         <button 
           onClick={() => setActiveTab("marketing")} 
-          className={`px-4 py-3 font-bold text-sm leading-5 tracking-normal text-center ${activeTab === "marketing" ? "text-indigo-600 border-b-2 border-indigo-600" : "text-gray-500 hover:text-gray-700 border-b-0"}`}
+          className={`px-10 py-3 font-bold text-sm leading-5 tracking-normal text-center ${activeTab === "marketing" ? "text-indigo-600 border-b-2 border-indigo-600" : "text-gray-500 hover:text-gray-700 border-b-0"}`}
           style={{ fontFamily: 'Syne' }}
         >
           I drive Marketing
         </button>
         <button 
           onClick={() => setActiveTab("sales")} 
-          className={`px-4 py-3 font-bold text-sm leading-5 tracking-normal text-center ${activeTab === "sales" ? "text-indigo-600 border-b-2 border-indigo-600" : "text-gray-500 hover:text-gray-700 border-b-0"}`}
+          className={`px-10 py-3 font-bold text-sm leading-5 tracking-normal text-center ${activeTab === "sales" ? "text-indigo-600 border-b-2 border-indigo-600" : "text-gray-500 hover:text-gray-700 border-b-0"}`}
           style={{ fontFamily: 'Syne' }}
         >
           I drive Sales
         </button>
         <button 
           onClick={() => setActiveTab("it")} 
-          className={`px-4 py-3 font-bold text-sm leading-5 tracking-normal text-center ${activeTab === "it" ? "text-indigo-600 border-b-2 border-indigo-600" : "text-gray-500 hover:text-gray-700 border-b-0"}`}
+          className={`px-10 py-3 font-bold text-sm leading-5 tracking-normal text-center ${activeTab === "it" ? "text-indigo-600 border-b-2 border-indigo-600" : "text-gray-500 hover:text-gray-700 border-b-0"}`}
           style={{ fontFamily: 'Syne' }}
         >
           I drive IT
         </button>
         <button 
           onClick={() => setActiveTab("finance")} 
-          className={`px-4 py-3 font-bold text-sm leading-5 tracking-normal text-center ${activeTab === "finance" ? "text-indigo-600 border-b-2 border-indigo-600" : "text-gray-500 hover:text-gray-700 border-b-0"}`}
+          className={`px-10 py-3 font-bold text-sm leading-5 tracking-normal text-center ${activeTab === "finance" ? "text-indigo-600 border-b-2 border-indigo-600" : "text-gray-500 hover:text-gray-700 border-b-0"}`}
           style={{ fontFamily: 'Syne' }}
         >
           I drive Finance
         </button>
         <button 
           onClick={() => setActiveTab("hr")} 
-          className={`px-4 py-3 font-bold text-sm leading-5 tracking-normal text-center ${activeTab === "hr" ? "text-indigo-600 border-b-2 border-indigo-600" : "text-gray-500 hover:text-gray-700 border-b-0"}`}
+          className={`px-10 py-3 font-bold text-sm leading-5 tracking-normal text-center ${activeTab === "hr" ? "text-indigo-600 border-b-2 border-indigo-600" : "text-gray-500 hover:text-gray-700 border-b-0"}`}
           style={{ fontFamily: 'Syne' }}
         >
           I drive HR
@@ -145,59 +145,14 @@ export default function SynoptixComponent() {
       <div className="grid md:grid-cols-2 gap-8 items-center">
         {/* Left side - Product image */}
         <div className="bg-indigo-100 rounded-lg p-4 flex justify-center items-center">
-          <div className="relative w-full max-w-md aspect-square">
-            <div className="absolute inset-0 bg-white rounded-lg shadow-lg overflow-hidden">
-              <div className="relative h-full w-full">
-                {/* Mock UI */}
-                <div className="p-4">
-                  <div className="flex items-center mb-4">
-                    <div className="w-10 h-10 rounded-full bg-yellow-300 overflow-hidden flex-shrink-0">
-                      <Image src="/placeholder.svg?height=40&width=40" alt="Profile" width={40} height={40} />
-                    </div>
-                    <div className="ml-4 flex-1"></div>
-                    <div className="flex space-x-2">
-                      <div className="w-8 h-8 rounded-full bg-indigo-600 flex items-center justify-center">
-                        <span className="text-white text-xs">S</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="mt-4">
-                    <div className="bg-indigo-600 rounded-lg p-3 relative">
-                      <div className="absolute right-3 top-3 flex space-x-1">
-                        <div className="w-5 h-5 rounded-full bg-white/20 flex items-center justify-center">
-                          <span className="text-white text-xs">i</span>
-                        </div>
-                        <div className="w-5 h-5 rounded-full bg-white/20 flex items-center justify-center">
-                          <span className="text-white text-xs">+</span>
-                        </div>
-                      </div>
-                      <div className="bg-white rounded p-2 mt-2 text-xs text-gray-600">
-                        <p>Can you provide some guidance on increasing conversion rates?</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="mt-4">
-                    <div className="flex items-center">
-                      <div className="w-6 h-6 bg-blue-500 rounded flex items-center justify-center mr-2">
-                        <span className="text-white text-xs">S</span>
-                      </div>
-                      <span className="text-xs text-gray-600">Suggested Answer for you</span>
-                    </div>
-                  </div>
-
-                  <div className="absolute bottom-4 left-4 flex space-x-2">
-                    <div className="w-8 h-8 rounded-lg bg-red-500 flex items-center justify-center text-white text-xs">
-                      SF
-                    </div>
-                    <div className="w-8 h-8 rounded-lg bg-blue-500 flex items-center justify-center text-white text-xs">
-                      G
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div className="relative w-full max-w-md">
+            <Image 
+              src="/test-page/synoptix/all teams.svg" 
+              alt="Synoptix for all teams" 
+              width={640} 
+              height={423} 
+              className="w-full h-auto"
+            />
           </div>
         </div>
 
@@ -205,11 +160,17 @@ export default function SynoptixComponent() {
         <div className="space-y-6">
           {currentContent.features.map((feature, index) => (
             <div key={index} className="flex items-start gap-3">
-              <div className="w-6 h-6 rounded-full bg-indigo-600 flex-shrink-0 flex items-center justify-center text-white">
-                <span className="text-xs">{index + 1}</span>
+              <div className="pt-1">
+                <Image 
+                  src="/test-page/synoptix/star.png" 
+                  alt="Star" 
+                  width={24} 
+                  height={24} 
+                  className="flex-shrink-0"
+                />
               </div>
               <div>
-                <p className="font-medium text-gray-800">
+                <p className="font-normal font-size-[14px] text-[#000000] font-poppins">
                   {feature}
                 </p>
               </div>
@@ -217,8 +178,18 @@ export default function SynoptixComponent() {
           ))}
 
           <div className="mt-8">
-            <Link href="#" className="inline-flex items-center text-indigo-600 font-medium hover:text-indigo-700">
-              Learn More <ArrowRight className="ml-1 h-4 w-4" />
+            <Link 
+              href="#" 
+              className="inline-flex items-center text-[#5662F6] text-[18px] font-bold hover:text-indigo-700"
+              style={{ 
+                width: '144px', 
+                height: '24px', 
+                position: 'relative', 
+                gap: '6px',
+                fontFamily: 'Syne, sans-serif'
+              }}
+            >
+              Learn More <ArrowRight className="h-4 w-4 ml-1.5" />
             </Link>
           </div>
         </div>

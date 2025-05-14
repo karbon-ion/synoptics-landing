@@ -4,6 +4,8 @@ import { useEffect, useState, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { Typewriter } from "react-simple-typewriter";
+import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
 
 const FloatingIcon = ({ src, size = 40, className }: { src: string; size?: number; className: string }) => {
   const randomDuration = Math.floor(Math.random() * 5) + 20;
@@ -64,7 +66,23 @@ export default function HeroSection({ videoRef, isInView }: HeroSectionProps) {
 
   return (
     <>
-      <div className="relative h-screen w-full bg-gradient-to-br from-blue-50 via-indigo-50 to-blue-100">
+      <div className="relative h-screen w-full">
+        <div className="absolute inset-0 z-0 overflow-hidden">
+          <BackgroundGradientAnimation
+            gradientBackgroundStart="rgb(240, 245, 255)"
+            gradientBackgroundEnd="rgb(255, 255, 255)" 
+            firstColor="230, 240, 255"
+            secondColor="220, 235, 255"
+            thirdColor="235, 230, 255"
+            fourthColor="210, 230, 255"
+            fifthColor="225, 220, 255"
+            pointerColor="108, 126, 212"
+            size="100%"
+            blendingValue="soft-light"
+            interactive={true}
+            containerClassName="h-screen"
+          />
+        </div>
         <FloatingIcon 
           src="/images/logos/openai.svg" 
           size={42}
@@ -109,7 +127,7 @@ export default function HeroSection({ videoRef, isInView }: HeroSectionProps) {
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="relative z-20 mx-auto max-w-6xl px-4 text-center -mt-20">
             <div className="mb-6 flex justify-center">
-              <div className="rounded-full bg-blue-100/80 px-10 py-1.5 flex items-center shadow-sm">
+              <div className="rounded-full bg-[#ffffff] px-15 py-1.5 flex items-center shadow-sm">
                 <span className="text-sm text-gray-800">In Partnership with</span>
                 <img src="/images/logos/microsoft.svg" alt="Microsoft" className="ml-2 h-5 w-auto" />
                 <span className="text-sm text-gray-800">Microsoft</span>
@@ -117,10 +135,20 @@ export default function HeroSection({ videoRef, isInView }: HeroSectionProps) {
             </div>
             <h1 className="text-5xl md:text-6xl mb-4" style={{ fontFamily: 'Syne', fontWeight: 700, fontSize: '48px', lineHeight: '72px', letterSpacing: '0%', textAlign: 'center' }}>
               <span className="text-gray-900">Let AI Handle Your </span>
-              <span className="text-indigo-600">Paper work</span>
+              <span className="text-indigo-600">
+                <Typewriter
+                  words={['Paperwork', 'Routine Tasks', 'Manual Workflows', 'Repetitive Tasks']}
+                  loop={true}
+                  cursor
+                  cursorStyle="_"
+                  typeSpeed={70}
+                  deleteSpeed={80}
+                  delaySpeed={2000}
+                />
+              </span>
             </h1>
-            <p className="mt-4 text-xl text-gray-700">You Focus on What Matters</p>
-            <Link href="#contact" className="mt-8 rounded-full bg-indigo-600 px-8 py-3 text-white hover:bg-indigo-700 inline-block">
+            <h2 className="mt-4 text-[#323E50] font-medium" style={{ fontFamily: 'Poppins', fontSize: '30px', lineHeight: '48px', letterSpacing: '0%', textAlign: 'center' }}>You Focus on What Matters</h2>
+            <Link href="#contact" className="mt-8 rounded-full bg-[#5662F6] px-8 py-3 text-white hover:bg-indigo-700 inline-block">
               Get a Demo
             </Link>
           </div>

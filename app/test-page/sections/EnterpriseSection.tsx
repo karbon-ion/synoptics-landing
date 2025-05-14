@@ -38,20 +38,20 @@ export default function EnterpriseSection() {
   return (
     <section className="flex items-center justify-center min-h-screen bg-white">
       <div className="w-full max-w-6xl mx-auto px-4 py-12 md:py-20">
-        <h2 className="mb-8 md:mb-12 text-center" style={{ fontFamily: 'Syne', fontWeight: 700, fontSize: '26px', lineHeight: '45px' }}>
+        <h2 className="mb-8 md:mb-12 text-center" style={{ fontFamily: 'Syne', fontWeight: 700, fontSize: '36px', lineHeight: '45px' }}>
           <span className="text-gray-800">Enterprise AI Solution for </span>
-          <span className="text-indigo-600">Improved Productivity</span>
+          <span className="text-[#5662F6]">Improved <br/> Productivity</span>
         </h2>
 
-        <div className="flex flex-col lg:flex-row items-start gap-4 lg:gap-2">
+        <div className="flex flex-col lg:flex-row items-start justify-between">
           {/* Left column - tabs */}
-          <div className="w-full lg:w-[48%]">
+          <div className="w-full lg:w-[45%]">
             {tabData.map((tab) => (
               <div className="mb-2" key={tab.id}>
                 <button 
                   onClick={() => setActiveTab(tab.id)}
                   className={`flex items-center w-full py-4 px-6 justify-between bg-white rounded-lg ${
-                    activeTab === tab.id ? "border-t-2 border-t-[#5662f6]" : "border-t border-gray-100"
+                    activeTab === tab.id ? "border-t-[3.7px] border-t-[#5662f6]" : "border-t border-gray-100"
                   } hover:bg-gray-50 transition-colors`}
                   style={{ minHeight: '80px' }}
                 >
@@ -74,16 +74,15 @@ export default function EnterpriseSection() {
                 </button>
                 
                 {activeTab === tab.id && (
-                  <div className="py-4 px-6 bg-white border-x border-b border-gray-100 shadow-sm rounded-b-lg">
+                  <div className="py-3 px-6 bg-white border-x border-b border-gray-100 shadow-sm rounded-b-lg">
                     <div className="text-gray-700 mb-3" style={{ 
                       fontSize: '16px', 
-                      lineHeight: '24px',
-                      minHeight: '72px' // 3 lines * 24px line height
+                      lineHeight: '24px'
                     }}>
                       {tab.description}
                     </div>
                     {tab.showLearnMore && (
-                      <Link href="#learn-more" className="inline-flex items-center text-blue-600 hover:text-blue-800">
+                      <Link href="#learn-more" className="inline-flex items-center text-[#5662F6] hover:text-blue-800">
                         Learn More
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-1">
                           <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -98,16 +97,48 @@ export default function EnterpriseSection() {
           </div>
           
           {/* Right column - image */}
-          <div className="w-full lg:w-[52%] flex justify-center lg:justify-end">
-            <div className="relative w-full max-w-[600px] h-full">
-              <Image 
-                src="/test-page/image.png" 
-                alt="Synoptix Enterprise Dashboard" 
-                width={600} 
-                height={500}
-                className="rounded-lg shadow-xl w-full h-full object-cover"
-                style={{ minHeight: '500px' }}
-              />
+          <div className="w-full lg:w-[55%] flex items-start justify-center">
+            <div className="relative w-full" style={{ maxWidth: '650px' }}>
+              {activeTab === "search" && (
+                <div className="relative">
+                  <img 
+                    src="/test-page/enterprise/synoptix search.png" 
+                    alt="Synoptix Search" 
+                    className="w-full h-auto mt-[-70px]"
+                    style={{ maxHeight: '500px' }}
+                  />
+                </div>
+              )}
+              {activeTab === "agents" && (
+                <div className="relative">
+                  <img 
+                    src="/test-page/enterprise/synoptix agent.png" 
+                    alt="Synoptix Agents" 
+                    className="w-full h-auto mt-[-15px]"
+                    style={{ maxHeight: '500px' }}
+                  />
+                </div>
+              )}
+              {activeTab === "library" && (
+                <div className="relative">
+                  <img 
+                    src="/test-page/enterprise/synoptix library.png" 
+                    alt="Synoptix Library" 
+                    className="w-full h-auto"
+                    style={{ maxHeight: '500px' }}
+                  />
+                </div>
+              )}
+              {activeTab === "voice" && (
+                <div className="relative">
+                  <img 
+                    src="/test-page/enterprise/synoptix voice agents.png" 
+                    alt="Synoptix Voice Agents" 
+                    className="w-full h-auto"
+                    style={{ maxHeight: '500px' }}
+                  />
+                </div>
+              )}
             </div>
           </div>
         </div>

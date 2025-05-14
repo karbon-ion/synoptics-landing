@@ -6,7 +6,9 @@ const TrackSection = () => {
   return (
     <div className="w-full p-50 relative overflow-hidden" 
          style={{
-           background: 'linear-gradient(180deg, #EFF5FF 0%, rgba(229, 239, 255, 0.262661) 83.7%, rgba(229, 239, 255, 0) 100%)'
+           backgroundImage: 'url("/test-page/backgorund.jpg")',
+           backgroundSize: 'cover',
+           backgroundPosition: 'center'
          }}>
       <div className="container mx-auto  px-4 md:px-6 flex flex-col md:flex-row items-center gap-12">
         <div className="w-full md:w-1/2 space-y-6">
@@ -27,13 +29,15 @@ const TrackSection = () => {
               fontWeight: 400,
             }}
           >
-            Metrics and analytics combine in a tool crafted with a set of sources, 
-            allowing team leads to work with them. Monitor your AI app performance 
-            and agent outcomes with a comprehensive dashboard that's easy to use.
+            Maintain consistent messaging with centralized, approved 
+            materials .Maintain consistent messaging with centralized, approved 
+            materials. Maintain consistent messaging with centralized, approved 
+            materials .Maintain consistent messaging with centralized, approved 
+            materials
           </p>
           <Link href="#" passHref>
             <button 
-              className="px-6 py-3 text-white rounded-full"
+              className="px-10 py-3 text-white rounded-full"
               style={{
                 background: '#5662F6',
                 fontFamily: 'Syne, sans-serif',
@@ -43,7 +47,7 @@ const TrackSection = () => {
                 letterSpacing: '0px',
               }}
             >
-              Get Started
+              Get Started {'->'}
             </button>
           </Link>
         </div>
