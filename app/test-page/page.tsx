@@ -5,6 +5,9 @@ import HeroSection from "./sections/HeroSection";
 import EnterpriseSection from "./sections/EnterpriseSection";
 import SynoptixComponent from "./sections/SynoptixSection";
 import TrackSection from "./sections/TrackandOptimizeSection";
+import SecuritySection from "../sections/SecuritySection";
+import BlogsSection from "./sections/BlogsSection";
+import Testimonials from "./sections/Testimonials";
 
 export default function TestPage() {
   const [mounted, setMounted] = useState(false);
@@ -40,6 +43,10 @@ export default function TestPage() {
       <EnterpriseSection />
       <SynoptixComponent/>
       <TrackSection/>
+      <SecuritySection/>
+      <BlogsSection/>
+      <Testimonials/>
+      
     </div>
   );
 }
