@@ -10,7 +10,7 @@ const TrackSection = () => {
            backgroundSize: 'cover',
            backgroundPosition: 'center'
          }}>
-      <div className="container mx-auto  px-4 md:px-6 flex flex-col md:flex-row items-center gap-12">
+      <div className="w-full max-w-7xl mx-auto px-4 py-16 flex flex-col md:flex-row items-center gap-58">
         <div className="w-full md:w-1/2 space-y-6">
         <h1 
   className="text-[36px] leading-[45px] tracking-normal"

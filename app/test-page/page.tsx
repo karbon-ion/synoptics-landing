@@ -10,6 +10,7 @@ import BlogsSection from "./sections/BlogsSection";
 import Testimonials from "./sections/Testimonials";
 import CertificationSection from "./sections/CertificationSection";
 import EnterpriseSecuritySection from "./sections/SecuritySection";
+import AiServicesSection from "./sections/AIservicesSection";
 
 export default function TestPage() {
   const [mounted, setMounted] = useState(false);
@@ -45,6 +46,7 @@ export default function TestPage() {
       <EnterpriseSection />
       <SynoptixComponent/>
       <TrackSection/>
+      <AiServicesSection/>
       <EnterpriseSecuritySection/>
       <BlogsSection/>
       <Testimonials/>
