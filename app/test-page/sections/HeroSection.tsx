@@ -165,17 +165,7 @@ export default function HeroSection({ videoRef, isInView }: HeroSectionProps) {
                 allowFullScreen
                 className="w-full h-full absolute inset-0"
               />
-              <div className="absolute inset-0 bg-white/10 pointer-events-none">
-                <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-white/80 rounded-full h-24 w-24 flex items-center justify-center shadow-lg z-10">
-                  <span className="text-3xl font-bold text-indigo-600">AI</span>
-                </div>
-                <div className="absolute left-[calc(50%-80px)] bottom-[20px] h-2 w-32 bg-indigo-400"></div>
-                <div className="absolute left-[calc(50%+50px)] bottom-[40px] h-2 w-32 bg-indigo-400"></div>
-                <div className="absolute left-[calc(50%-120px)] bottom-[-80px] h-32 w-8 bg-indigo-500"></div>
-                <div className="absolute left-[calc(50%-60px)] bottom-[-60px] h-24 w-8 bg-indigo-500"></div>
-                <div className="absolute left-[calc(50%+50px)] bottom-[-100px] h-40 w-8 bg-indigo-500"></div>
-                <div className="absolute left-[calc(50%+100px)] bottom-[-40px] h-20 w-8 bg-indigo-500"></div>
-              </div>
+              {/* Clean video player without overlays */}
             </div>
           </div>
         </div>
