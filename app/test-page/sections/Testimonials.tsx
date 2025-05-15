@@ -69,9 +69,18 @@ export default function Testimonials() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {testimonials.map((testimonial) => (
           <div key={testimonial.id} className="relative flex flex-col items-center text-center">
-            <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100 flex flex-col items-center text-center w-full pt-16 pb-12 mb-10">
-              <div className="text-indigo-500 mb-4">
-                <svg width="42" height="36.75" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <div
+            className="bg-white shadow-md border border-gray-100 flex flex-col items-center text-center pt-16 pb-12 mb-10"
+            style={{
+              width: '370px',
+              height: '322px',
+              borderRadius: '5px',
+              padding: '1.5rem', // equivalent to p-6
+            }}
+          >
+        
+              <div className="text-indigo-500">
+                <svg width="50" height="80" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M10 11H6C5.46957 11 4.96086 10.7893 4.58579 10.4142C4.21071 10.0391 4 9.53043 4 9V7C4 6.46957 4.21071 5.96086 4.58579 5.58579C4.96086 5.21071 5.46957 5 6 5H8C8.53043 5 9.03914 5.21071 9.41421 5.58579C9.78929 5.96086 10 6.46957 10 7V17C10 17.5304 9.78929 18.0391 9.41421 18.4142C9.03914 18.7893 8.53043 19 8 19H6C5.46957 19 4.96086 18.7893 4.58579 18.4142C4.21071 18.0391 4 17.5304 4 17V15"
                     stroke="currentColor"
@@ -90,7 +99,19 @@ export default function Testimonials() {
                   />
                 </svg>
               </div>
-              <p className="text-gray-600 text-sm mb-6">{testimonial.text}</p>
+              <p 
+                className="text-gray-600  p-12"
+                style={{
+                  fontFamily: 'Poppins, sans-serif',
+                  fontWeight: 400,
+                  fontSize: '14px',
+                  lineHeight: '100%',
+                  letterSpacing: '0%',
+                  textAlign: 'center'
+                }}
+              >
+                {testimonial.text}
+              </p>
               <div className="flex text-yellow-400 mb-6">
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>

@@ -9,7 +9,7 @@ export default function AiServicesSection() {
             backgroundSize: 'cover',
             backgroundPosition: 'center'
         }}>
-            <div className="w-full max-w-7xl mx-auto px-4">
+            <div className="w-full max-w-7xl mx-auto px-8">
                 {/* Top row: Main banner and Fine Tuning card */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6 justify-center">
                     {/* Main Banner - takes 2/3 of the width */}
