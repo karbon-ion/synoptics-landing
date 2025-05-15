@@ -8,6 +8,8 @@ import TrackSection from "./sections/TrackandOptimizeSection";
 import SecuritySection from "../sections/SecuritySection";
 import BlogsSection from "./sections/BlogsSection";
 import Testimonials from "./sections/Testimonials";
+import CertificationSection from "./sections/CertificationSection";
+import EnterpriseSecuritySection from "./sections/SecuritySection";
 
 export default function TestPage() {
   const [mounted, setMounted] = useState(false);
@@ -43,9 +45,10 @@ export default function TestPage() {
       <EnterpriseSection />
       <SynoptixComponent/>
       <TrackSection/>
-      <SecuritySection/>
+      <EnterpriseSecuritySection/>
       <BlogsSection/>
       <Testimonials/>
+      <CertificationSection/>
       
     </div>
   );
