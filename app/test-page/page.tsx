@@ -46,8 +46,8 @@ export default function TestPage() {
       <EnterpriseSection />
       <SynoptixComponent/>
       <TrackSection/>
-      <AiServicesSection/>
       <EnterpriseSecuritySection/>
+      <AiServicesSection/>
       <BlogsSection/>
       <Testimonials/>
       <CertificationSection/>
