@@ -19,16 +19,24 @@ export default function EnterpriseSecuritySection() {
         </h2>
         <Link
           href="/ai-security"
-          className="mt-4 md:mt-0 bg-indigo-500 hover:bg-indigo-600 text-white px-6 py-2.5 rounded-full flex items-center transition-colors"
+          className="mt-4 md:mt-0 bg-[#5662F6] font-bold hover:bg-indigo-600 text-white px-6 py-2.5 rounded-full flex items-center transition-colors"
+          style={{
+            fontFamily: 'Syne, sans-serif',
+            // fontWeight: 700,
+            fontSize: '18px',
+            lineHeight: '100%',
+            letterSpacing: '0px',
+          }}
         >
           Discover AI Security <ArrowRight className="ml-2 h-4 w-4" />
         </Link>
+
       </div>
 
       <div className="relative z-0">
         <div className="relative flex gap-0">
           {/* Card 1 */}
-          <div className="relative bg-indigo-600 rounded-xl p-6 text-white h-[280px] z-[40] w-72 transition-all duration-300 hover:shadow-lg hover:brightness-110">
+          <div className="relative bg-[#5662F6] rounded-xl p-6 text-white h-[326.15px] z-[40] w-72 transition-all duration-300 hover:shadow-lg hover:brightness-110">
             <div className="absolute top-[80px] left-0 right-0 flex items-center">
               <div className="absolute left-0 w-[calc(100%-56px-16px/2)] h-[1px] bg-white/40"></div>
               <div className="absolute right-[40px] w-16 h-16 rounded-full bg-[#626DFF] border border-white flex items-center justify-center z-40">
@@ -57,7 +65,7 @@ export default function EnterpriseSecuritySection() {
           </div>
 
           {/* Card 2 */}
-          <div className="relative bg-indigo-400 rounded-xl p-6 text-white h-[280px] -ml-8 z-[30] w-84 transition-all duration-300 hover:shadow-lg hover:brightness-110">
+          <div className="relative bg-[#A095FF] rounded-xl p-6 text-white h-[326.15px] -ml-8 z-[30] w-84 transition-all duration-300 hover:shadow-lg hover:brightness-110">
             <div className="absolute top-[80px] left-0 right-0 flex items-center">
               <div className="absolute left-0 w-[calc(100%-56px-16px/2)] h-[1px] bg-white/40"></div>
               <div className="absolute right-[40px] w-16 h-16 rounded-full bg-[#B2A9FF] border border-white flex items-center justify-center z-40">
@@ -85,7 +93,7 @@ export default function EnterpriseSecuritySection() {
           </div>
 
           {/* Card 3 */}
-          <div className="relative bg-indigo-100 p-6 text-slate-800 h-[280px] -ml-8 z-[20] w-86 rounded-xl transition-all duration-300 hover:shadow-lg hover:brightness-105">
+          <div className="relative bg-[#DADCFF] p-6 text-slate-800 h-[326.15px] -ml-8 z-[20] w-86 rounded-xl transition-all duration-300 hover:shadow-lg hover:brightness-105">
             <div className="absolute top-[80px] left-0 right-0 flex items-center">
               <div className="absolute left-0 w-[calc(100%-56px-16px/2)] h-[1px] bg-slate-400/30"></div>
               <div className="absolute right-[40px] w-16 h-16 rounded-full bg-[#E7E9FF] border border-[#858491] flex items-center justify-center z-40">
@@ -113,7 +121,7 @@ export default function EnterpriseSecuritySection() {
           </div>
 
           {/* Card 4 */}
-          <div className="relative bg-white p-6 text-slate-800 h-[280px] -ml-8 z-[10] w-86 rounded-xl border border-slate-200 transition-all duration-300 hover:shadow-lg hover:border-indigo-200">
+          <div className="relative bg-white p-6 text-slate-800 h-[326.15px] -ml-8 z-[10] w-86 rounded-xl border border-slate-200 transition-all duration-300 hover:shadow-lg hover:border-indigo-200">
             <div className="absolute top-[80px] left-0 right-0 flex items-center">
               <div className="absolute left-0 w-[calc(100%-56px-16px/2)] h-[1px] bg-slate-300"></div>
               <div className="absolute right-[40px] w-16 h-16 rounded-full bg-[#F4F4F4] border border-[#979591] flex items-center justify-center z-40">
