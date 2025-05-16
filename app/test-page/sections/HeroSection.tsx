@@ -36,7 +36,13 @@ const FloatingIcon = ({ src, size = 40, className }: { src: string; size?: numbe
   return (
     <motion.div 
       className={`absolute ${className} rounded-full bg-white/90 shadow-lg p-2 flex items-center justify-center z-10`} 
-      style={{ width: size, height: size }}
+      style={{ 
+        width: size, 
+        height: size,
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center'
+      }}
       animate={{ 
         x: path.map(p => p[0]),
         y: path.map(p => p[1]),
@@ -49,10 +55,21 @@ const FloatingIcon = ({ src, size = 40, className }: { src: string; size?: numbe
         times: Array.from({ length: path.length }).map((_, i) => i / (path.length - 1))
       }}
     >
-      <Image src={src} alt="icon" width={size * 0.6} height={size * 0.6} />
+      <Image 
+        src={src} 
+        alt="icon" 
+        width={size * 0.6} 
+        height={size * 0.6} 
+        style={{
+          width: '60%',
+          height: '60%',
+          objectFit: 'contain'
+        }}
+      />
     </motion.div>
   );
 };
+
 
 interface HeroSectionProps {
   videoRef: any;
