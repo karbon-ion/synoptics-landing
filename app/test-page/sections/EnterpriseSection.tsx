@@ -109,7 +109,7 @@ export default function EnterpriseSection() {
 
         <div className="flex flex-col lg:flex-row items-start justify-between">
           {/* Left column - tabs */}
-          <div className="w-full">
+          <div className="w-full pl-20">
             {tabData.map((tab) => (
               <div className="mb-2" key={tab.id}>
                 <button
@@ -159,7 +159,7 @@ export default function EnterpriseSection() {
                     <div
                       className="text-gray-700 mb-3"
                       style={{
-                        fontSize: "16px",
+                        fontSize: "14px",
                         lineHeight: "24px",
                       }}
                     >
