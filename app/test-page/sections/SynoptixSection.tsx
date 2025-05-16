@@ -21,8 +21,8 @@ export default function SynoptixComponent() {
       marketing: "image-2.png",
       sales: "image-3.png",
       it: "image-4.png",
-      finance: "image-1.png", // Using image-1 as fallback for finance
-      hr: "image-2.png", // Using image-2 as fallback for hr
+      finance: "image-1.png",
+      hr: "image-2.png",
     }
     return imageMap[tab]
   }
@@ -99,146 +99,95 @@ export default function SynoptixComponent() {
   const currentContent = tabContent[activeTab]
 
   return (
-    <div className="max-w-7xl mx-auto py-12">
-      <div className="text-center mb-12">
-        <h2 className="text-3xl font-semibold text-slate-800" style={{ fontFamily: "Syne, sans-serif" }}>
-          Synoptix is for <span className="text-indigo-500">every team</span>
-        </h2>
-      </div>
+    <div className="max-w-7xl mx-auto py-20 ">
+      <div className="bg-white rounded-2xl shadow-md p-10">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-semibold text-slate-800" style={{ fontFamily: "Syne, sans-serif" }}>
+            Synoptix is for <span className="text-indigo-500">every team</span>
+          </h2>
+        </div>
 
-      {/* Tabs */}
-      <div className="flex flex-wrap justify-center ">
-  <button
-    onClick={() => setActiveTab("all")}
-    style={{
-      fontFamily: 'Syne',
-      fontWeight: 700,
-      fontSize: '14px',
-      lineHeight: '20px',
-      letterSpacing: '0px',
-      textAlign: 'center',
-    }}
-    className={`px-6 py-3 ${activeTab === "all" ? "text-indigo-600 border-b-2 border-indigo-600" : "text-gray-500 hover:text-gray-700"}`}
-  >
-    All Teams
-  </button>
-  <button
-    onClick={() => setActiveTab("marketing")}
-    style={{
-      fontFamily: 'Syne',
-      fontWeight: 700,
-      fontSize: '14px',
-      lineHeight: '20px',
-      letterSpacing: '0px',
-      textAlign: 'center',
-    }}
-    className={`px-6 py-3 ${activeTab === "marketing" ? "text-indigo-600 border-b-2 border-indigo-600" : "text-gray-500 hover:text-gray-700"}`}
-  >
-    I drive Marketing
-  </button>
-  <button
-    onClick={() => setActiveTab("sales")}
-    style={{
-      fontFamily: 'Syne',
-      fontWeight: 700,
-      fontSize: '14px',
-      lineHeight: '20px',
-      letterSpacing: '0px',
-      textAlign: 'center',
-    }}
-    className={`px-6 py-3 ${activeTab === "sales" ? "text-indigo-600 border-b-2 border-indigo-600" : "text-gray-500 hover:text-gray-700"}`}
-  >
-    I drive Sales
-  </button>
-  <button
-    onClick={() => setActiveTab("it")}
-    style={{
-      fontFamily: 'Syne',
-      fontWeight: 700,
-      fontSize: '14px',
-      lineHeight: '20px',
-      letterSpacing: '0px',
-      textAlign: 'center',
-    }}
-    className={`px-6 py-3 ${activeTab === "it" ? "text-indigo-600 border-b-2 border-indigo-600" : "text-gray-500 hover:text-gray-700"}`}
-  >
-    I drive IT
-  </button>
-  <button
-    onClick={() => setActiveTab("finance")}
-    style={{
-      fontFamily: 'Syne',
-      fontWeight: 700,
-      fontSize: '14px',
-      lineHeight: '20px',
-      letterSpacing: '0px',
-      textAlign: 'center',
-    }}
-    className={`px-6 py-3 ${activeTab === "finance" ? "text-indigo-600 border-b-2 border-indigo-600" : "text-gray-500 hover:text-gray-700"}`}
-  >
-    I drive Finance
-  </button>
-  <button
-    onClick={() => setActiveTab("hr")}
-    style={{
-      fontFamily: 'Syne',
-      fontWeight: 700,
-      fontSize: '14px',
-      lineHeight: '20px',
-      letterSpacing: '0px',
-      textAlign: 'center',
-    }}
-    className={`px-6 py-3 ${activeTab === "hr" ? "text-indigo-600 border-b-2 border-indigo-600" : "text-gray-500 hover:text-gray-700"}`}
-  >
-    I drive HR
-  </button>
-</div>
+        {/* Tabs */}
+        <div className="flex flex-wrap justify-center">
+          {(["all", "marketing", "sales", "it", "finance", "hr"] as TabType[]).map((tab) => (
+            <button
+              key={tab}
+              onClick={() => setActiveTab(tab)}
+              style={{
+                fontFamily: "Syne",
+                fontWeight: 700,
+                fontSize: "14px",
+                lineHeight: "20px",
+                letterSpacing: "0px",
+                textAlign: "center",
+              }}
+              className={`px-6 py-3 ${
+                activeTab === tab
+                  ? "text-indigo-600 border-b-2 border-indigo-600"
+                  : "text-gray-500 hover:text-gray-700"
+              }`}
+            >
+              {tab === "all" && "All Teams"}
+              {tab === "marketing" && "I drive Marketing"}
+              {tab === "sales" && "I drive Sales"}
+              {tab === "it" && "I drive IT"}
+              {tab === "finance" && "I drive Finance"}
+              {tab === "hr" && "I drive HR"}
+            </button>
+          ))}
+        </div>
 
-
-      {/* Content */}
-      <div className="grid md:grid-cols-2 items-center">
-        {/* Left side - Product image */}
-        <div className="flex justify-center items-center">
-          <div className="relative w-full max-w-7xl">
+        {/* Content */}
+        <div className="grid md:grid-cols-2 mt-12">
+          {/* Left - Image */}
+          <div>
             <Image
               src={`/test-page/synoptix/${getImageForTab(activeTab)}`}
               alt={`Synoptix for ${activeTab} teams`}
               width={500}
               height={380}
-              className="w-[640px] h-[423px]"
+              className="w-[640px] h-[423px] object-contain"
             />
           </div>
-        </div>
 
-        {/* Right side - Feature list */}
-        <div className="space-y-4 pr-15 pt-15 pb-15">
-          {currentContent.features.map((feature, index) => (
-            <div key={index} className="flex items-start gap-3">
-              <div className="pt-0.5">
-                <div className="w-6 h-6 rounded-full bg-[#333333] flex items-center justify-center">
-                  <div className="w-2 h-2 rounded-full bg-white"></div>
+          {/* Right - Features */}
+          <div className="pt-10 pr-10">
+            <div className="space-y-4">
+              {currentContent.features.map((feature, index) => (
+                <div key={index} className="flex items-start">
+                  <Image
+                    src="/test-page/synoptix/star.png"
+                    alt="star icon"
+                    width={25}
+                    height={25}
+                    className="mt-1 mr-2"
+                  />
+                  <p className="text-[15px] text-[#333333] font-normal">
+                    {feature}
+                    {index === 0 && " your reps' workflows"}
+                    {index === 1 && " and rep engagement"}
+                    {index === 2 && " cards"}
+                    {index === 4 && " materials"}
+                    {index === 5 && " support"}
+                  </p>
                 </div>
-              </div>
-              <div>
-                <p className="text-[15px] text-[#333333] font-normal">
-                  {feature}
-                  {index === 0 && " your reps' workflows"}
-                  {index === 1 && " and rep engagement"}
-                  {index === 2 && " cards"}
-                  {index === 4 && " materials"}
-                  {index === 5 && " support"}
-                </p>
-              </div>
+              ))}
             </div>
-          ))}
 
-          <div className="mt-8">
-            <Link
-              href="#"
-              className="inline-flex items-center text-[#5662F6] text-lg font-medium hover:text-indigo-700"
-            >
-              Learn More <ArrowRight className="h-5 w-5 ml-2" />
-            </Link>
+            <div className="mt-8">
+              <Link
+                href="#"
+                className="inline-flex items-center text-[#5662F6] hover:text-indigo-700"
+                style={{
+                  fontFamily: "Syne",
+                  fontWeight: 700,
+                  fontSize: "18px",
+                  lineHeight: "100%",
+                }}
+              >
+                Learn More <ArrowRight className="h-5 w-5 ml-2" />
+              </Link>
+            </div>
           </div>
         </div>
       </div>
