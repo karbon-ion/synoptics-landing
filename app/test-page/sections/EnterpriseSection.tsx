@@ -70,7 +70,7 @@ export default function EnterpriseSection() {
     search: {
       src: "/test-page/enterprise/synoptix search.png",
       alt: "Synoptix Search",
-      style: { width: "650.44px", height: "490px", marginBottom: "20%" },
+      style: { width: "650.44px", height: "490px", marginBottom: "20%",marginRight: "10%" },
     },
     agents: {
       src: "/test-page/enterprise/agents.png",
