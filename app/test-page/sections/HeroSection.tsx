@@ -86,42 +86,42 @@ export default function HeroSection({ videoRef, isInView }: HeroSectionProps) {
         <FloatingIcon 
           src="/images/logos/openai.svg" 
           size={42}
-          className="top-[50%] right-[25%]" 
+          className="hidden md:block top-[50%] right-[25%]" 
         />
         <FloatingIcon 
           src="/synoptix-icon.svg" 
           size={48}
-          className="top-[73%] right-[90%]" 
+          className="hidden md:block top-[73%] right-[90%]" 
         />
         <FloatingIcon 
           src="/images/logos/dropbox logo.png" 
           size={45}
-          className="top-[73%] right-[5%]" 
+          className="hidden md:block top-[73%] right-[5%]" 
         />
         <FloatingIcon 
           src="/images/logos/microsoft.svg" 
           size={46}
-          className="top-[13%] left-[25%]" 
+          className="hidden md:block top-[13%] left-[25%]" 
         />
         <FloatingIcon 
           src="/images/logos/slack l.png" 
           size={70}
-          className="top-[35%] left-[15%]" 
+          className="hidden md:block top-[35%] left-[15%]" 
         />
         <FloatingIcon 
           src="/file.svg" 
           size={42}
-          className="top-[50%] left-[25%]" 
+          className="hidden md:block top-[50%] left-[25%]" 
         />
         <FloatingIcon 
           src="/images/logos/meta.svg" 
           size={70}
-          className="top-[35%] right-[15%]" 
+          className="hidden md:block top-[35%] right-[15%]" 
         />
         <FloatingIcon 
           src="/globe.svg" 
           size={46}
-          className="top-[12%] right-[25%]" 
+          className="hidden md:block top-[12%] right-[25%]" 
         />
         
         <div className="absolute inset-0 flex items-center justify-center">
