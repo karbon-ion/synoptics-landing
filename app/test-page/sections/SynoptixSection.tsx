@@ -17,12 +17,12 @@ export default function SynoptixComponent() {
 
   const getImageForTab = (tab: TabType): string => {
     const imageMap = {
-      all: "image.png",
-      marketing: "image-6.png",
-      sales: "image-2.png",
-      it: "image-3.png",
-      finance: "image-4.png",
-      hr: "image-1.png",
+      all: "/test-page/synoptix/image.png",
+      marketing: "/test-page/synoptix/image-6.png",
+      sales: "/test-page/synoptix/image-2.png",
+      it: "/test-page/synoptix/image-3.png",
+      finance: "/test-page/synoptix/image-4.png",
+      hr: "/test-page/synoptix/image-1.png",
     }
     return imageMap[tab]
   }
@@ -142,7 +142,7 @@ export default function SynoptixComponent() {
           {/* Left - Image */}
           <div>
             <Image
-              src={`/test-page/synoptix/${getImageForTab(activeTab)}`}
+              src={getImageForTab(activeTab)}
               alt={`Synoptix for ${activeTab} teams`}
               width={500}
               height={380}
