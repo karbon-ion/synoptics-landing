@@ -17,12 +17,12 @@ export default function SynoptixComponent() {
 
   const getImageForTab = (tab: TabType): string => {
     const imageMap = {
-      all: "/test-page/synoptix/image.png",
-      marketing: "/test-page/synoptix/image-6.png",
-      sales: "/test-page/synoptix/image-2.png",
-      it: "/test-page/synoptix/image-3.png",
-      finance: "/test-page/synoptix/image-4.png",
-      hr: "/test-page/synoptix/image-1.png",
+      all: "/test-page/synoptix/Image.png",
+      marketing: "/test-page/synoptix/Image-6.png",
+      sales: "/test-page/synoptix/Image-2.png",
+      it: "/test-page/synoptix/Image-3.png",
+      finance: "/test-page/synoptix/Image-4.png",
+      hr: "/test-page/synoptix/Image-1.png",
     }
     return imageMap[tab]
   }
@@ -100,7 +100,7 @@ export default function SynoptixComponent() {
 
   return (
     <div className="max-w-7xl mx-auto py-20 ">
-      <div className="bg-white rounded-2xl shadow-md p-10">
+      <div className="bg-white rounded-2xl shadow-md p-6">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-semibold text-slate-800" style={{ fontFamily: "Syne, sans-serif" }}>
             Synoptix is for <span className="text-indigo-500">every team</span>

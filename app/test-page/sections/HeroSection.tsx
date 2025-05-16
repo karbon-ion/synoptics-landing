@@ -125,15 +125,15 @@ export default function HeroSection({ videoRef, isInView }: HeroSectionProps) {
         />
         
         <div className="absolute inset-0 flex items-center justify-center">
-          <div className="relative z-20 mx-auto max-w-6xl px-4 text-center -mt-20">
-            <div className="mb-6 flex justify-center">
-              <div className="rounded-full bg-[#ffffff] px-15 py-1.5 flex items-center shadow-sm">
-                <span className="text-sm text-gray-800">In Partnership with</span>
-                <img src="/images/logos/microsoft.svg" alt="Microsoft" className="ml-2 h-5 w-auto" />
-                <span className="text-sm text-gray-800">Microsoft</span>
+          <div className="relative z-20 mx-auto w-full max-w-6xl px-4 sm:px-6 text-center -mt-10 sm:-mt-20">
+            <div className="mb-4 sm:mb-6 flex justify-center">
+              <div className="rounded-full bg-white px-4 sm:px-6 py-1 flex sm:py-1.5 items-center shadow-sm">
+                <span className="text-xs sm:text-sm text-gray-800">In Partnership with</span>
+                <img src="/images/logos/microsoft.svg" alt="Microsoft" className="ml-2 h-4 sm:h-5 w-auto" />
+                <span className="text-xs sm:text-sm text-gray-800 ml-1">Microsoft</span>
               </div>
             </div>
-            <h1 className="text-5xl md:text-6xl mb-4" style={{ fontFamily: 'Syne', fontWeight: 700, fontSize: '48px', lineHeight: '72px', letterSpacing: '0%', textAlign: 'center' }}>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-3 sm:mb-4 font-bold" style={{ fontFamily: 'Syne', lineHeight: '1.2' }}>
               <span className="text-gray-900">Let AI Handle Your </span>
               <span className="text-indigo-600">
                 <Typewriter
@@ -147,25 +147,23 @@ export default function HeroSection({ videoRef, isInView }: HeroSectionProps) {
                 />
               </span>
             </h1>
-            <h2 className="mt-4 text-[#323E50] font-medium" style={{ fontFamily: 'Poppins', fontSize: '30px', lineHeight: '48px', letterSpacing: '0%', textAlign: 'center' }}>You Focus on What Matters</h2>
-            <Link href="#contact" className="mt-8 rounded-full bg-[#5662F6] px-8 py-3 text-white hover:bg-indigo-700 inline-block">
+            <h2 className="mt-2 sm:mt-4 text-lg sm:text-xl md:text-2xl text-[#323E50] font-medium" style={{ fontFamily: 'Poppins' }}>You Focus on What Matters</h2>
+            <Link href="#contact" className="mt-4 sm:mt-6 md:mt-8 rounded-full bg-[#5662F6] px-6 sm:px-8 py-2 sm:py-3 text-sm sm:text-base text-white hover:bg-indigo-700 inline-block">
               Get a Demo
             </Link>
           </div>
         </div>
-        
-        <div className="absolute bottom-0 left-0 right-0 transform translate-y-1/2">
-          <div className="relative mx-auto max-w-5xl px-4">
-            <div ref={videoRef} className="relative mx-auto rounded-3xl overflow-hidden shadow-2xl aspect-video bg-white">
+
+        <div className="absolute bottom-0 left-0 right-0 transform translate-y-1/2 px-4 sm:px-6">
+          <div className="relative mx-auto max-w-5xl">
+            <div ref={videoRef} className="relative mx-auto rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg sm:shadow-2xl aspect-video bg-white">
               <iframe
                 src={videoUrl}
                 title="Demo Video"
-                frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
                 className="w-full h-full absolute inset-0"
               />
-              {/* Clean video player without overlays */}
             </div>
           </div>
         </div>
