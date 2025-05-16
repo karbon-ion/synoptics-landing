@@ -18,11 +18,11 @@ export default function SynoptixComponent() {
   const getImageForTab = (tab: TabType): string => {
     const imageMap = {
       all: "image.png",
-      marketing: "image-2.png",
-      sales: "image-3.png",
-      it: "image-4.png",
-      finance: "image-1.png",
-      hr: "image-2.png",
+      marketing: "image-6.png",
+      sales: "image-2.png",
+      it: "image-3.png",
+      finance: "image-4.png",
+      hr: "image-1.png",
     }
     return imageMap[tab]
   }
