@@ -11,7 +11,6 @@ export default function EnterpriseSection() {
   const [currentImage, setCurrentImage] = useState<TabKey>("search");
   const [nextImage, setNextImage] = useState<TabKey>("search");
   const [isFadingOut, setIsFadingOut] = useState(false);
-  const [hasMounted, setHasMounted] = useState(false);
 
   const handleTabChange = (tabId: TabKey) => {
     if (tabId === activeTab) return;
@@ -21,47 +20,49 @@ export default function EnterpriseSection() {
   };
 
   useEffect(() => {
-    const timeout = setTimeout(() => {
-      setHasMounted(true);
-    }, 50); // Small delay to allow the initial render before starting transitions
-    return () => clearTimeout(timeout);
-  }, []);
-
-  useEffect(() => {
     if (isFadingOut) {
       const timeout = setTimeout(() => {
         setCurrentImage(nextImage);
         setIsFadingOut(false);
-      }, 300); // Match with the fade-out duration
+      }, 500); // Match fade duration
       return () => clearTimeout(timeout);
     }
   }, [isFadingOut, nextImage]);
 
-  const tabData: { id: TabKey; title: string; icon: string; description: string; showLearnMore?: boolean }[] = [
+  const tabData: {
+    id: TabKey;
+    title: string;
+    icon: string;
+    description: string;
+    showLearnMore?: boolean;
+  }[] = [
     {
       id: "search",
       title: "Synoptix Search",
       icon: "/test-page/logos/search.svg",
-      description: "Your unified brain, connected to everything you work with.",
+      description: "Your unified brain, connected to everything you work with.Your unified brain, connected to everything you work with.",
       showLearnMore: true,
     },
     {
       id: "agents",
       title: "Synoptix Agents",
       icon: "/test-page/logos/agents.svg",
-      description: "AI agents that automate your workflows.",
+      description: "Your unified brain, connected to everything you work with.Your unified brain, connected to everything you work with.",
+      showLearnMore: true,
     },
     {
       id: "library",
       title: "Synoptix Library",
       icon: "/test-page/logos/library.svg",
-      description: "Access to a vast library of resources.",
+      description: "Your unified brain, connected to everything you work with.Your unified brain, connected to everything you work with.",
+      showLearnMore: true,
     },
     {
       id: "voice",
       title: "Synoptix Voice Agents",
       icon: "/test-page/logos/voiceagents.svg",
-      description: "Voice-activated AI assistants.",
+      description: "Your unified brain, connected to everything you work with.Your unified brain, connected to everything you work with.",
+      showLearnMore: true,
     },
   ];
 
@@ -69,7 +70,7 @@ export default function EnterpriseSection() {
     search: {
       src: "/test-page/enterprise/synoptix search.png",
       alt: "Synoptix Search",
-      style: { width: "598.44px", height: "490px", marginBottom: "20%" },
+      style: { width: "650.44px", height: "490px", marginBottom: "20%" },
     },
     agents: {
       src: "/test-page/enterprise/agents.png",
@@ -79,7 +80,7 @@ export default function EnterpriseSection() {
     library: {
       src: "/test-page/enterprise/library.png",
       alt: "Synoptix Library",
-      style: { width: "498.44px", height: "443px", marginBottom: "%" },
+      style: { width: "498.44px", height: "443px", marginBottom: "5%" },
     },
     voice: {
       src: "/test-page/enterprise/voice agents.png",
@@ -90,7 +91,7 @@ export default function EnterpriseSection() {
 
   return (
     <section className="flex items-center justify-center min-h-screen bg-white">
-      <div className="w-full max-w-6xl mx-auto px-4 py-12 md:py-20">
+      <div className="w-full max-w-7xl mx-auto px-4 py-12 md:py-20">
         <h2
           className="mb-8 md:mb-12 text-center"
           style={{
@@ -108,7 +109,7 @@ export default function EnterpriseSection() {
 
         <div className="flex flex-col lg:flex-row items-start justify-between">
           {/* Left column - tabs */}
-          <div className="w-full lg:w-[45%]">
+          <div className="w-full">
             {tabData.map((tab) => (
               <div className="mb-2" key={tab.id}>
                 <button
@@ -194,9 +195,9 @@ export default function EnterpriseSection() {
           </div>
 
           {/* Right column - image */}
-          <div className="w-full lg:w-[55%] flex items-start justify-center">
+          <div className="w-full lg:w-[60%] flex items-start justify-center">
             <div className="relative w-full" style={{ maxWidth: "650px" }}>
-              <div className="relative mt-[-80px] w-[600px] h-[600px] mx-auto">
+              <div className="relative mt-[-90px] w-[650px] h-[650px] mx-auto">
                 {/* Frame Background */}
                 <img
                   src="/test-page/frame.png"
@@ -204,23 +205,35 @@ export default function EnterpriseSection() {
                   className="absolute inset-0 w-full h-full object-contain z-0 pointer-events-none"
                 />
 
-                {/* Foreground Image with fade */}
+                {/* Crossfade Images */}
                 <div className="absolute inset-0 flex items-center justify-center z-10">
+                  {/* Current image */}
                   <img
+                    key={`current-${currentImage}`}
                     src={tabImages[currentImage].src}
                     alt={tabImages[currentImage].alt}
-                    className={`transition-opacity duration-300 ease-in-out ${
-                      !hasMounted
-                        ? "opacity-0"
-                        : isFadingOut
-                        ? "opacity-0"
-                        : "opacity-100"
+                    className={`absolute transition-opacity duration-500 ease-in-out ${
+                      isFadingOut ? "opacity-0" : "opacity-100"
                     }`}
                     style={{
                       objectFit: "contain",
                       ...tabImages[currentImage].style,
                     }}
                   />
+
+                  {/* Next image, only visible during transition */}
+                  {isFadingOut && (
+                    <img
+                      key={`next-${nextImage}`}
+                      src={tabImages[nextImage].src}
+                      alt={tabImages[nextImage].alt}
+                      className="absolute transition-opacity duration-500 ease-in-out opacity-100"
+                      style={{
+                        objectFit: "contain",
+                        ...tabImages[nextImage].style,
+                      }}
+                    />
+                  )}
                 </div>
               </div>
             </div>
