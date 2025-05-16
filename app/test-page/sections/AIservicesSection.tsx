@@ -38,7 +38,7 @@ export default function AiServicesSection() {
             <div className="mt-4 md:mt-6">
               <Link
                 href="#"
-                className="inline-flex items-center justify-center gap-2 bg-[#5662F6] text-white px-4 py-2 md:px-6 md:py-3 rounded-full text-sm md:text-base font-bold transition-all duration-300 hover:shadow-md"
+                className="inline-flex items-center justify-center gap-2 bg-[#5662F6] text-white px-4  py-2 md:px-6 md:py-3 rounded-full text-sm md:text-base font-bold transition-all duration-300 hover:shadow-md"
               >
                 Optimise Your Business with Synoptix AI
                 <ArrowRight className="h-4 w-4 ml-1" />
@@ -47,7 +47,7 @@ export default function AiServicesSection() {
           </div>
 
           {/* Fine Tuning Card */}
-          <div className="bg-white rounded-xl p-5 shadow-sm transition-all duration-300 hover:shadow-md flex flex-col justify-between h-[255px]">
+          <div className="bg-white rounded-xl p-5 shadow-sm transition-all duration-300 hover:shadow-md flex flex-col justify-between h-[267px]">
             <div>
               <div className="bg-[#5662F6] p-2 rounded-full w-10 h-10 flex items-center justify-center mb-4">
                 <IconTerminal2 className="h-5 w-5 text-white" />

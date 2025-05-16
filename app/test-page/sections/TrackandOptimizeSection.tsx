@@ -47,16 +47,16 @@ const TrackSection = () => {
           
         </div>
         <div className="w-full md:w-1/2 mt-8 md:mt-0 flex justify-center">
-          <div className="relative w-full max-w-lg">
+        <div className="w-[800px] h-[450px] relative">
             <Image
-              src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070"
+              src="/test-page/Evaluation.png"
               alt="AI Analytics Dashboard"
-              width={600}
-              height={450}
-              className="rounded-lg shadow-lg object-cover"
+              fill
+              className="rounded-lg object-cover"
               priority
             />
           </div>
+
         </div>
       </div>
     </div>
