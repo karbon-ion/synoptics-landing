@@ -160,9 +160,9 @@ export default function SynoptixComponent() {
                     alt="star icon"
                     width={25}
                     height={25}
-                    className="mt-1 mr-2"
+                    className="flex-shrink-0 mr-2"
                   />
-                  <p className="text-[15px] text-[#333333] font-normal">
+                  <p className="text-[15px] text-[#333333] font-normal flex-grow mt-0.3">
                     {feature}
                     {index === 0 && " your reps' workflows"}
                     {index === 1 && " and rep engagement"}
