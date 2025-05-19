@@ -97,7 +97,7 @@ export default function EnterpriseSection() {
           style={{
             fontFamily: "Syne",
             fontWeight: 700,
-            fontSize: "36px",
+            fontSize: "26px",
             lineHeight: "45px",
           }}
         >
