@@ -8,7 +8,7 @@ import { Typewriter } from "react-simple-typewriter";
 import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
 
 function useIsMobile() {
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState<boolean | undefined>(undefined);
 
   useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth < 768);
@@ -19,6 +19,7 @@ function useIsMobile() {
 
   return isMobile;
 }
+
 
 
 const FloatingIcon = ({ src, size = 40, className }: { src: string; size?: number; className: string }) => {
@@ -92,6 +93,9 @@ interface HeroSectionProps {
 
 export default function HeroSection({ videoRef, isInView }: HeroSectionProps) {
   const isMobile = useIsMobile();
+  if (isMobile === undefined) {
+    return null; // Or a loader/spinner
+  }
   const videoUrl = isInView 
     ? "https://www.youtube.com/embed/MgRh-vN9ZBg?si=2cCxYwAaUmSEDIrb&autoplay=1&mute=1&rel=0"
     : "https://www.youtube.com/embed/MgRh-vN9ZBg?si=2cCxYwAaUmSEDIrb&rel=0";
@@ -198,29 +202,78 @@ export default function HeroSection({ videoRef, isInView }: HeroSectionProps) {
               </span>
             </h1>
             <span className="mt-2 sm:mt-4 text-[#323E50] text-center font-medium" style={{ fontFamily: 'Poppins', fontSize: '30px', lineHeight: '48px', letterSpacing: '0%' }}>You Focus on What Matters</span> <br/>
-            <Link href="#contact" className="mt-4 sm:mt-6 md:mt-8 rounded-full bg-[#5662F6]  sm:px-8 py-2 sm:py-3 text-white hover:bg-indigo-700 inline-block" style={{ fontFamily: 'var(--font-syne)', fontWeight: 500, fontSize: '20px', lineHeight: '28px', letterSpacing: '0%', verticalAlign: 'middle' }}>
+            <Link
+              href="#contact"
+              className="mt-4 sm:mt-6 md:mt-8 rounded-full bg-[#5662F6] px-4 sm:px-8 py-2 sm:py-3 text-white hover:bg-indigo-700 inline-block text-base sm:text-lg md:text-xl leading-6 sm:leading-7"
+              style={{
+                fontFamily: 'var(--font-syne)',
+                fontWeight: 500,
+                letterSpacing: '0%',
+                verticalAlign: 'middle',
+              }}
+            >
               Get a Demo
             </Link>
+
           </div>
         </div>
 
-        <div className="absolute bottom-0 left-0 right-0 transform translate-y-1/2 px-4 sm:px-6">
-          <div className="relative mx-auto max-w-5xl">
-            <div ref={videoRef} className="relative mx-auto rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg sm:shadow-2xl aspect-video bg-white">
-              <iframe
-                src={videoUrl}
-                title="Demo Video"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className="w-full h-full absolute inset-0"
-              />
-            </div>
-          </div>
-        </div>
+        {isMobile ? (
+  <div className="absolute bottom-0 left-0 right-0 translate-y-1/2 px-4 sm:px-6">
+
+    <div className="relative mx-auto w-full max-w-[360px]">
+      <div className="relative w-full pt-[56.25%]"> {/* 16:9 ratio */}
+        <iframe
+          src={videoUrl}
+          title="Demo Video Mobile"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+          className="absolute top-0 left-0 w-full h-full rounded-lg z-10 pt-7 pl-6.5 pr-9 pb-9"
+          style={{ border: 'none' }}
+        />
+        <Image
+          src="/test-page/videoFrame.png"
+          alt="Mobile Video Frame"
+          fill
+          className="absolute top-0 left-0 z-20 pointer-events-none rounded-lg"
+          priority
+        />
+      </div>
+    </div>
+  </div>
+) : (
+  <div className="absolute bottom-0 left-0 right-0 translate-y-1/2 px-4 sm:px-6">
+    <div className="relative mx-auto w-[758.62px] h-[477.28px]">
+      <div ref={videoRef} className="relative w-full h-full">
+        <iframe
+          src={videoUrl}
+          title="Demo Video"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+          width="720"
+          height="450"
+          className="absolute top-[14px] left-[19px] pr-18 pl-12 pt-17.5 pb-13.5 z-10 rounded-lg"
+          style={{ border: 'none' }}
+        />
+        <Image
+          src="/test-page/videoFrame.png"
+          alt="Video Frame"
+          width={758.62}
+          height={477.28}
+          className="absolute top-0 left-0 z-20 pointer-events-none"
+          priority
+        />
+      </div>
+    </div>
+  </div>
+)}
+
+
+
       </div>
       
-      <div className="bg-white w-full ">
-        <div className="h-[50vh]"></div>
+      <div className=" w-full bg-[#F9FBFF]">
+        <div className="h-[20vh]"></div>
       </div>
     </>
   );
