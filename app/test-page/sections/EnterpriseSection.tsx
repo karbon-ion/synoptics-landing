@@ -70,22 +70,22 @@ export default function EnterpriseSection() {
     search: {
       src: "/test-page/enterprise/synoptix search.png",
       alt: "Synoptix Search",
-      style: { width: "650.44px", height: "490px", marginBottom: "20%",marginRight: "10%" },
+      style: { width: "900px", height: "650px", marginBottom: "15%" },
     },
     agents: {
       src: "/test-page/enterprise/agents.png",
       alt: "Synoptix Agents",
-      style: { width: "498.44px", height: "443px", marginTop: "3%" },
+      style: { width: "600px", height: "500px" },
     },
     library: {
       src: "/test-page/enterprise/library.png",
       alt: "Synoptix Library",
-      style: { width: "498.44px", height: "443px", marginBottom: "5%" },
+      style: { width: "600px", height: "500px" },
     },
     voice: {
       src: "/test-page/enterprise/voice agents.png",
       alt: "Synoptix Voice Agents",
-      style: { width: "498.44px", height: "443px", marginTop: "5%" },
+      style: { width: "600px", height: "500px" },
     },
   };
 
@@ -107,34 +107,35 @@ export default function EnterpriseSection() {
           </span>
         </h2>
 
-        <div className="flex flex-col lg:flex-row items-start justify-between">
+        <div className="flex flex-col lg:flex-row items-stretch justify-between min-h-[800px]">
           {/* Left column - tabs */}
-          <div className="w-full pl-20">
+          <div className="w-full lg:w-[40%] flex flex-col justify-center h-full">
+            
+            
             {tabData.map((tab) => (
-              <div className="mb-2" key={tab.id}>
+              <div className="mb-2 border border-gray-100" key={tab.id}>
                 <button
                   onClick={() => handleTabChange(tab.id)}
-                  className={`flex items-center w-full py-4 px-6 justify-between bg-white rounded-lg ${
-                    activeTab === tab.id
-                      ? "border-t-[3.7px] border-t-[#5662f6]"
-                      : "border-t border-gray-100"
-                  } hover:bg-gray-50 transition-colors`}
-                  style={{ minHeight: "80px" }}
+                  className={`flex items-center w-full py-4 px-6 justify-between bg-white rounded-lg ${activeTab === tab.id ? "border-t-[3.7px] border-t-[#5662f6]" : ""} hover:bg-gray-50 transition-colors`}
+                  style={{ height: "100px" }}
                 >
-                  <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-full bg-white shadow-sm flex items-center justify-center">
+                  <div className="relative flex items-center gap-4">
+                    <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center">
                       <img src={tab.icon} alt={tab.title} className="w-7 h-7" />
                     </div>
                     <span
                       style={{
                         fontFamily: "Syne",
-                        fontWeight: 600,
-                        fontSize: "20px",
-                        textAlign: "left",
+                        fontWeight: 700,
+                        fontSize: "26px",
+                        color: "#323E50",
                       }}
                     >
                       {tab.title}
                     </span>
+                    {activeTab === tab.id && (
+                      <div className="absolute left-0 top-full mt-2 w-[450px] h-[1px] bg-gray-300" />
+                    )}
                   </div>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -146,16 +147,14 @@ export default function EnterpriseSection() {
                     strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    className={`${
-                      activeTab === tab.id ? "transform rotate-180" : ""
-                    }`}
+                    className={`${activeTab === tab.id ? "transform rotate-180" : ""}`}
                   >
                     <polyline points="6 9 12 15 18 9"></polyline>
                   </svg>
                 </button>
 
                 {activeTab === tab.id && (
-                  <div className="py-3 px-6 bg-white border-x border-b border-gray-100 shadow-sm rounded-b-lg">
+                  <div className="py-3 px-6 bg-white border-gray-100 rounded-lg">
                     <div
                       className="text-gray-700 mb-3"
                       style={{
@@ -195,9 +194,9 @@ export default function EnterpriseSection() {
           </div>
 
           {/* Right column - image */}
-          <div className="w-full lg:w-[60%] flex items-start justify-center">
-            <div className="relative w-full" style={{ maxWidth: "650px" }}>
-              <div className="relative mt-[-90px] w-[650px] h-[650px] mx-auto">
+          <div className="w-full lg:w-[60%] flex items-center justify-center h-full">
+            <div className="relative w-full h-full">
+              <div className="relative mt-[-45px] w-[800px] h-[650px] mx-auto">
                 {/* Frame Background */}
                 <img
                   src="/test-page/frame.png"
