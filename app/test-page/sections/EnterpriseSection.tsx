@@ -34,37 +34,48 @@ export default function EnterpriseSection() {
     title: string;
     icon: string;
     description: string;
+    iconWidth?: string;
+    iconHeight?: string;
     showLearnMore?: boolean;
   }[] = [
     {
       id: "search",
       title: "Synoptix Search",
       icon: "/test-page/logos/search.svg",
-      description: "Your unified brain, connected to everything you work with.Your unified brain, connected to everything you work with.",
+      description: "Your unified brain, connected to everything you work with.",
+      iconWidth: "32px",
+      iconHeight: "36px",
       showLearnMore: true,
     },
     {
       id: "agents",
       title: "Synoptix Agents",
       icon: "/test-page/logos/agents.svg",
-      description: "Your unified brain, connected to everything you work with.Your unified brain, connected to everything you work with.",
+      description: "Your unified brain, connected to everything you work with.",
+      iconWidth: "45px",
+      iconHeight: "45px",
       showLearnMore: true,
     },
     {
       id: "library",
       title: "Synoptix Library",
       icon: "/test-page/logos/library.svg",
-      description: "Your unified brain, connected to everything you work with.Your unified brain, connected to everything you work with.",
+      description: "Your unified brain, connected to everything you work with.",
+      iconWidth: "27px",
+      iconHeight: "22px",
       showLearnMore: true,
     },
     {
       id: "voice",
       title: "Synoptix Voice Agents",
       icon: "/test-page/logos/voiceagents.svg",
-      description: "Your unified brain, connected to everything you work with.Your unified brain, connected to everything you work with.",
+      description: "Your unified brain, connected to everything you work with.",
+      iconWidth: "35px",
+      iconHeight: "35px",
       showLearnMore: true,
     },
   ];
+
 
   const tabImages: Record<TabKey, { src: string; alt: string; style: React.CSSProperties }> = {
     search: {
@@ -75,17 +86,17 @@ export default function EnterpriseSection() {
     agents: {
       src: "/test-page/enterprise/agents.png",
       alt: "Synoptix Agents",
-      style: { width: "600px", height: "500px" },
+      style: { width: "498px", height: "443px" },
     },
     library: {
       src: "/test-page/enterprise/library.png",
       alt: "Synoptix Library",
-      style: { width: "600px", height: "500px" },
+      style: { width: "498px", height: "443px" },
     },
     voice: {
       src: "/test-page/enterprise/voice agents.png",
       alt: "Synoptix Voice Agents",
-      style: { width: "600px", height: "500px" },
+      style: { width: "498px", height: "443px" },
     },
   };
 
@@ -107,21 +118,29 @@ export default function EnterpriseSection() {
           </span>
         </h2>
 
-        <div className="flex flex-col lg:flex-row items-stretch justify-between min-h-[800px]">
+        <div className="flex flex-col lg:flex-row items-stretch justify-between">
           {/* Left column - tabs */}
-          <div className="w-full lg:w-[40%] flex flex-col justify-center h-full">
+          <div className="w-full  lg:w-[50%] pl-20 pt-3 pb-10 flex rounded-lg flex-col justify-center h-full">
             
             
             {tabData.map((tab) => (
-              <div className="mb-2 border border-gray-100" key={tab.id}>
+              <div className=" rounded-lg mb-1 border border-gray-100" key={tab.id}>
                 <button
                   onClick={() => handleTabChange(tab.id)}
-                  className={`flex items-center w-full py-4 px-6 justify-between bg-white rounded-lg ${activeTab === tab.id ? "border-t-[3.7px] border-t-[#5662f6]" : ""} hover:bg-gray-50 transition-colors`}
+                  className={`flex items-center w-full  px-6 justify-between bg-white rounded-lg ${activeTab === tab.id ? "border-t-[3.7px] border-t-[#5662f6]" : "border-t-transparent"} hover:bg-gray-50 transition-colors`}
                   style={{ height: "100px" }}
                 >
                   <div className="relative flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center">
-                      <img src={tab.icon} alt={tab.title} className="w-7 h-7" />
+                    <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center font-bold">
+                    <img
+                      src={tab.icon}
+                      alt={tab.title}
+                      style={{
+                        width: tab.iconWidth ?? "28px",
+                        height: tab.iconHeight ?? "28px",
+                      }}
+                    />
+
                     </div>
                     <span
                       style={{
@@ -137,24 +156,33 @@ export default function EnterpriseSection() {
                       <div className="absolute left-0 top-full mt-2 w-[450px] h-[1px] bg-gray-300" />
                     )}
                   </div>
-                  <svg
+                  <svg 
+                    className="w-5 h-5" 
+                    fill="none" 
+                    stroke="currentColor" 
+                    viewBox="0 0 24 24" 
                     xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className={`${activeTab === tab.id ? "transform rotate-180" : ""}`}
                   >
-                    <polyline points="6 9 12 15 18 9"></polyline>
+                    {activeTab === tab.id ? (
+                      <path 
+                        strokeLinecap="round" 
+                        strokeLinejoin="round" 
+                        strokeWidth="2" 
+                        d="M19 9l-7 7-7-7" 
+                      />
+                    ) : (
+                      <path 
+                        strokeLinecap="round" 
+                        strokeLinejoin="round" 
+                        strokeWidth="2" 
+                        d="M9 5l7 7-7 7" 
+                      />
+                    )}
                   </svg>
                 </button>
 
                 {activeTab === tab.id && (
-                  <div className="py-3 px-6 bg-white border-gray-100 rounded-lg">
+                  <div className="px-6 bg-white border-gray-100 rounded-lg">
                     <div
                       className="text-gray-700 mb-3"
                       style={{
@@ -168,6 +196,7 @@ export default function EnterpriseSection() {
                       <Link
                         href="#learn-more"
                         className="inline-flex items-center text-[#5662F6] hover:text-blue-800"
+                        style={{ fontFamily: "Syne", fontWeight: 700,fontSize: "16px" }}
                       >
                         Learn More
                         <svg
@@ -194,9 +223,9 @@ export default function EnterpriseSection() {
           </div>
 
           {/* Right column - image */}
-          <div className="w-full lg:w-[60%] flex items-center justify-center h-full">
+          <div className="w-full lg:w-[55%] flex items-center justify-center h-full">
             <div className="relative w-full h-full">
-              <div className="relative mt-[-45px] w-[800px] h-[650px] mx-auto">
+              <div className="relative w-[619px] h-[520px]  mx-auto">
                 {/* Frame Background */}
                 <img
                   src="/test-page/frame.png"
@@ -217,6 +246,7 @@ export default function EnterpriseSection() {
                     style={{
                       objectFit: "contain",
                       ...tabImages[currentImage].style,
+                      
                     }}
                   />
 
