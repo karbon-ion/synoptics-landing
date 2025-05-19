@@ -89,12 +89,12 @@ export default function Testimonials() {
                 </div>
 
               <p 
-                className="text-gray-600  p-12"
+                className="text-gray-600 p-12"
                 style={{
                   fontFamily: 'Poppins, sans-serif',
                   fontWeight: 400,
                   fontSize: '14px',
-                  lineHeight: '100%',
+                  lineHeight: '150%',
                   letterSpacing: '0%',
                   textAlign: 'center'
                 }}
@@ -129,8 +129,8 @@ export default function Testimonials() {
                 className="object-cover w-full h-full"
               />
             </div>
-            <h4 className="font-bold text-sm">{testimonial.name}</h4>
-            <p className="text-xs text-gray-500">{testimonial.position}</p>
+            <h4 className="font-bold text-sm" style={{fontFamily: 'Poppins, sans-serif', fontWeight: 700, fontSize: '16px', lineHeight: '100%', letterSpacing: '0%', textAlign: 'center', marginTop: '0.5rem', color: '#323E50'}}>{testimonial.name}</h4>
+            <p className="text-xs mt-2" style={{fontFamily: 'Poppins, sans-serif', fontWeight: 400, fontSize: '14px', lineHeight: '100%', letterSpacing: '0%', textAlign: 'center', color: '#575757'}}>{testimonial.position}</p>
           </div>
         ))}
       </div>
