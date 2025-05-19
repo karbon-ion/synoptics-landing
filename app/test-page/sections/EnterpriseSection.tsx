@@ -91,7 +91,7 @@ export default function EnterpriseSection() {
 
   return (
     <section className="flex items-center justify-center min-h-screen bg-white">
-      <div className="w-full max-w-7xl mx-auto px-4 py-12 md:py-20">
+      <div className="w-full max-w-7xl mx-auto mt-20 ">
         <h2
           className="mb-8 md:mb-12 text-center"
           style={{

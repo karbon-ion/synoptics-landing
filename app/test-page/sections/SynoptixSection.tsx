@@ -99,94 +99,96 @@ export default function SynoptixComponent() {
   const currentContent = tabContent[activeTab]
 
   return (
-    <div className="max-w-7xl mx-auto py-20 ">
-      <div className="bg-white rounded-2xl shadow-md p-6">
+    <div className="max-w-7xl mx-auto mb-15 ">
+      <div className="bg-white rounded-2xl p-6">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-semibold text-slate-800" style={{ fontFamily: "Syne, sans-serif" }}>
+          <h2 className="text-3xl text-slate-800" style={{ fontFamily: "Syne, sans-serif",fontWeight: 700 }}>
             Synoptix is for <span className="text-indigo-500">every team</span>
           </h2>
         </div>
 
         {/* Tabs */}
-        <div className="flex flex-wrap justify-center">
-          {(["all", "marketing", "sales", "it", "finance", "hr"] as TabType[]).map((tab) => (
-            <button
-              key={tab}
-              onClick={() => setActiveTab(tab)}
-              style={{
-                fontFamily: "Syne",
-                fontWeight: 700,
-                fontSize: "14px",
-                lineHeight: "20px",
-                letterSpacing: "0px",
-                textAlign: "center",
-              }}
-              className={`px-6 py-3 ${
-                activeTab === tab
-                  ? "text-indigo-600 border-b-2 border-indigo-600"
-                  : "text-gray-500 hover:text-gray-700"
-              }`}
-            >
-              {tab === "all" && "All Teams"}
-              {tab === "marketing" && "I drive Marketing"}
-              {tab === "sales" && "I drive Sales"}
-              {tab === "it" && "I drive IT"}
-              {tab === "finance" && "I drive Finance"}
-              {tab === "hr" && "I drive HR"}
-            </button>
-          ))}
-        </div>
-
-        {/* Content */}
-        <div className="grid md:grid-cols-2 mt-12">
-          {/* Left - Image */}
-          <div>
-            <Image
-              src={getImageForTab(activeTab)}
-              alt={`Synoptix for ${activeTab} teams`}
-              width={500}
-              height={380}
-              className="w-[640px] h-[423px] object-contain"
-            />
-          </div>
-
-          {/* Right - Features */}
-          <div className="pt-10 pr-10">
-            <div className="space-y-4">
-              {currentContent.features.map((feature, index) => (
-                <div key={index} className="flex items-start">
-                  <Image
-                    src="/test-page/synoptix/star.png"
-                    alt="star icon"
-                    width={25}
-                    height={25}
-                    className="flex-shrink-0 mr-2"
-                  />
-                  <p className="text-[15px] text-[#333333] font-normal flex-grow mt-0.3">
-                    {feature}
-                    {index === 0 && " your reps' workflows"}
-                    {index === 1 && " and rep engagement"}
-                    {index === 2 && " cards"}
-                    {index === 4 && " materials"}
-                    {index === 5 && " support"}
-                  </p>
-                </div>
-              ))}
-            </div>
-
-            <div className="mt-8">
-              <Link
-                href="#"
-                className="inline-flex items-center text-[#5662F6] hover:text-indigo-700"
+        <div className="shadow-lg">
+          <div className="flex flex-wrap justify-center">
+            {(["all", "marketing", "sales", "it", "finance", "hr"] as TabType[]).map((tab) => (
+              <button
+                key={tab}
+                onClick={() => setActiveTab(tab)}
                 style={{
                   fontFamily: "Syne",
                   fontWeight: 700,
-                  fontSize: "18px",
-                  lineHeight: "100%",
+                  fontSize: "14px",
+                  lineHeight: "20px",
+                  letterSpacing: "0px",
+                  textAlign: "center",
                 }}
+                className={`px-6 py-3 ${
+                  activeTab === tab
+                    ? "text-[#232F30] border-b-2 border-indigo-600"
+                    : "text-[#ACB6BE] hover:text-gray-700"
+                }`}
               >
-                Learn More <ArrowRight className="h-5 w-5 ml-2" />
-              </Link>
+                {tab === "all" && "All Teams"}
+                {tab === "marketing" && "I drive Marketing"}
+                {tab === "sales" && "I drive Sales"}
+                {tab === "it" && "I drive IT"}
+                {tab === "finance" && "I drive Finance"}
+                {tab === "hr" && "I drive HR"}
+              </button>
+            ))}
+          </div>
+        
+          {/* Content - Flex container */}
+          <div className="flex flex-col md:flex-row">
+            {/* Left - Image */}
+            <div className="flex-1">
+              <Image
+                src={getImageForTab(activeTab)}
+                alt={`Synoptix for ${activeTab} teams`}
+                width={500}
+                height={380}
+                className="min-w-[640px] h-[423px] object-contain"
+              />
+            </div>
+
+            {/* Right - Features */}
+            <div className="flex-1 mt-10 mr-10">
+              <div className="space-y-4">
+                {currentContent.features.map((feature, index) => (
+                  <div key={index} className="flex items-start">
+                    <Image
+                      src="/test-page/synoptix/star.png"
+                      alt="star icon"
+                      width={25}
+                      height={25}
+                      className="flex-shrink-0 mr-2"
+                    />
+                    <p className="text-[14px] text-[#000000] font-normal flex-grow mt-0.3 pr-15">
+                      {feature}
+                      {index === 0 && " your reps' workflows"}
+                      {index === 1 && " and rep engagement"}
+                      {index === 2 && " cards"}
+                      {index === 4 && " materials"}
+                      {index === 5 && " support"}
+                    </p>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-4">
+                <Link
+                  href="#"
+                  className="inline-flex items-center text-[#5662F6] hover:text-indigo-700"
+                  style={{
+                    fontFamily: "Syne",
+                    fontWeight: 700,
+                    fontSize: "18px",
+                    lineHeight: "100%",
+                  }}
+                >
+                  Learn More <ArrowRight className="h-5 w-5 ml-2" />
+                </Link>
+              </div>
             </div>
           </div>
         </div>
