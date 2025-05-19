@@ -20,7 +20,7 @@ export default function EnterpriseSecuritySection() {
       <div className="relative z-0">
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-0">
           {/* Card 1 */}
-          <div className="relative bg-[#5662F6] rounded-xl p-1 text-white min-h-[280px] z-[200] w-full sm:w-64 md:w-72 transition-all duration-300 hover:shadow-lg hover:brightness-110 hover:z-[250]">
+          <div className="relative bg-[#5662F6] rounded-xl p-1 text-white min-h-[300px] z-[200] w-full sm:w-64 md:w-72 transition-all duration-300 hover:shadow-lg hover:brightness-110 hover:z-[250]">
             <div className="absolute top-12 sm:top-16 left-0 right-0 flex items-center">
               <div className="absolute left-0 w-[calc(100%-56px-16px/2)] h-[1px] bg-white/40"></div>
               <div className="absolute right-[40px] w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-[#626DFF] border border-white flex items-center justify-center z-40">
@@ -35,14 +35,14 @@ export default function EnterpriseSecuritySection() {
               >
                 Content Safety <ArrowRight className="ml-2 h-4 w-4" />
               </h3>
-              <p className="text-xs ml-4 text-white/80 leading-relaxed">
+              <p className="text-xs ml-4 pb-5 text-white/80 leading-relaxed">
                 Weave evaluations combine a test dataset with a set of scorers
               </p>
             </div>
           </div>
 
           {/* Card 2 */}
-          <div className="relative bg-[#A095FF] rounded-xl p-6 text-white min-h-[280px] sm:-ml-8 md:-ml-12 z-[150] w-full sm:w-74 md:w-86 transition-all duration-300 hover:shadow-lg hover:brightness-110 hover:z-[175]">
+          <div className="relative bg-[#A095FF] rounded-xl p-6 text-white min-h-[300px] sm:-ml-8 md:-ml-12 z-[150] w-full sm:w-74 md:w-86 transition-all duration-300 hover:shadow-lg hover:brightness-110 hover:z-[175]">
             <div className="absolute top-12 sm:top-16 left-0 right-0 flex items-center">
               <div className="absolute left-0 w-[calc(100%-56px-16px/2)] h-[1px] bg-white/40"></div>
               <div className="absolute right-[40px] w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-[#B2A9FF] border border-white flex items-center justify-center z-40">
@@ -57,14 +57,14 @@ export default function EnterpriseSecuritySection() {
               >
                 Anti Hallucination <ArrowRight className="ml-2 h-4 w-4" />
               </h3>
-              <p className="text-xs ml-8 text-white/80 leading-relaxed">
+              <p className="text-xs ml-8 pb-5 text-white/80 leading-relaxed">
                 Weave evaluations combine a dataset with a set of scorers
               </p>
             </div>
           </div>
 
           {/* Card 3 */}
-          <div className="relative bg-[#DADCFF]  text-slate-800 min-h-[280px] sm:-ml-8 md:-ml-12 z-[100] w-full sm:w-74 md:w-86 rounded-xl transition-all duration-300 hover:shadow-lg hover:brightness-105 hover:z-[125]">
+          <div className="relative bg-[#DADCFF]  text-slate-800 min-h-[300px] sm:-ml-8 md:-ml-12 z-[100] w-full sm:w-74 md:w-86 rounded-xl transition-all duration-300 hover:shadow-lg hover:brightness-105 hover:z-[125]">
             <div className="absolute top-12 sm:top-16 left-0 right-0 flex items-center">
               <div className="absolute left-0 w-[calc(100%-56px-16px/2)] h-[1px] bg-slate-400/30"></div>
               <div className="absolute right-[40px] w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-[#E7E9FF] border border-[#858491] flex items-center justify-center z-40">
@@ -79,14 +79,14 @@ export default function EnterpriseSecuritySection() {
               >
                 Toxicity Detection <ArrowRight className="ml-2 h-4 w-4" />
               </h3>
-              <p className="text-xs ml-6 text-slate-600 leading-relaxed">
+              <p className="text-xs ml-6 pb-5 text-slate-600 leading-relaxed">
                 Weave evaluations combine a dataset with a set of scorers
               </p>
             </div>
           </div>
 
           {/* Card 4 */}
-          <div className="relative bg-white p-6 text-slate-800 min-h-[280px] sm:-ml-8 md:-ml-12 z-[50] w-full sm:w-74 md:w-80 rounded-xl border border-slate-200 transition-all duration-300 hover:shadow-lg hover:border-indigo-200 hover:z-[75]">
+          <div className="relative bg-white p-6 text-slate-800 min-h-[300px] sm:-ml-8 md:-ml-12 z-[50] w-full sm:w-74 md:w-80 rounded-xl border border-slate-200 transition-all duration-300 hover:shadow-lg hover:border-indigo-200 hover:z-[75]">
             <div className="absolute top-12 sm:top-16 left-0 right-0 flex items-center">
               <div className="absolute left-0 w-[calc(100%-56px-16px/2)] h-[1px] bg-slate-300"></div>
               <div className="absolute right-[40px] w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-[#F4F4F4] border border-[#979591] flex items-center justify-center z-40">
@@ -101,7 +101,7 @@ export default function EnterpriseSecuritySection() {
               >
                 PII Extraction <ArrowRight className="ml-2 h-4 w-4" />
               </h3>
-              <p className="text-xs ml-8 text-slate-600 leading-relaxed">
+              <p className="text-xs ml-8 pb-5 text-slate-600 leading-relaxed">
                 Weave evaluations combine a dataset with a set of scorers
               </p>
             </div>
