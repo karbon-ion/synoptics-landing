@@ -28,6 +28,7 @@ export default function AiServicesSection() {
               backgroundPosition: "center",
             }}
           >
+            
             <h2
               className="text-2xl sm:text-3xl md:text-[36px] leading-tight md:leading-[45px] text-gray-800"
               style={{ fontFamily: "Syne, sans-serif", fontWeight: 700 }}

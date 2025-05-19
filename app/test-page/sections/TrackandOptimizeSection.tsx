@@ -49,7 +49,7 @@ const TrackSection = () => {
           
         </div>
         <div className="relative w-full flex justify-center items-start overflow-visible">
-            <div className="relative md:absolute md:right-0 md:top-1/2 md:-translate-y-1/2 w-[780px] h-[600px] ">
+            <div className="relative md:absolute md:right-0 md:top-1/2 md:-translate-y-1/2 w-[780px] h-[550px] mr-10 ">
               <Image
                 src="/test-page/Evaluation.png"
                 alt="AI Analytics Dashboard"
