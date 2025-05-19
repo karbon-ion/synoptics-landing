@@ -43,7 +43,7 @@ export default function EnterpriseSection() {
       title: "Synoptix Search",
       icon: "/test-page/logos/search.svg",
       description: "Your unified brain, connected to everything you work with.Your unified brain, connected to everything you work with.",
-      iconWidth: "32px",
+      iconWidth: "42px",
       iconHeight: "36px",
       showLearnMore: true,
     },
@@ -108,12 +108,12 @@ export default function EnterpriseSection() {
           style={{
             fontFamily: "Syne",
             fontWeight: 700,
-            fontSize: "26px",
+            fontSize: "36px",
             lineHeight: "45px",
           }}
         >
           <span className="text-gray-800">Enterprise AI Solution for </span>
-          <span className="text-[#5662F6]">
+          <span className="text-[#323E50]">
             Improved <br /> Productivity
           </span>
         </h2>

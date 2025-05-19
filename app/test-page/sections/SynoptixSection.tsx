@@ -102,7 +102,7 @@ export default function SynoptixComponent() {
     <div className="max-w-7xl mx-auto mb-15 ">
       <div className="bg-white rounded-2xl p-6">
         <div className="text-center mb-12">
-          <h2 className="text-3xl text-slate-800" style={{ fontFamily: "Syne, sans-serif",fontWeight: 700 }}>
+          <h2 className="text-3xl text-slate-800" style={{ fontFamily: "Syne, sans-serif",fontWeight: 700, fontSize: "36px", lineHeight: "45px" }}>
             Synoptix is for <span className="text-indigo-500">every team</span>
           </h2>
         </div>
@@ -159,11 +159,11 @@ export default function SynoptixComponent() {
                     <Image
                       src="/test-page/synoptix/star.png"
                       alt="star icon"
-                      width={25}
-                      height={25}
+                      width={19}
+                      height={19}
                       className="flex-shrink-0 mr-2"
                     />
-                    <p className="text-[14px] text-[#000000] font-normal flex-grow mt-0.3 pr-15">
+                    <p className="text-[14px] text-[#000000] flex-grow mt-0.3 pr-15" style={{fontFamily: 'Poppins', fontWeight: 400, fontSize: '14px', lineHeight: '17px', letterSpacing: '0%', color: '#000000'}}>
                       {feature}
                       {index === 0 && " your reps' workflows"}
                       {index === 1 && " and rep engagement"}

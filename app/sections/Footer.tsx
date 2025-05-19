@@ -32,7 +32,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-[#2A3342] text-white py-16">
+    <footer className="bg-[#323e50] text-white py-16">
       <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row justify-between mb-12">
           {/* Logo and Enterprise RAG */}
@@ -57,13 +57,13 @@ hello@synoptix.ai
           <div className="mb-8 md:mb-0">
             <h3 style={{
               fontFamily: 'Poppins, sans-serif',
-              fontWeight: 600,
+              fontWeight: 500,
               fontSize: '14px',
               lineHeight: '20px',
               letterSpacing: '0%',
               textTransform: 'uppercase',
               color: '#626DFF'
-            }}>PLATFORM</h3>
+            }} className="mb-4">PLATFORM</h3>
             <ul className="space-y-2">
               {platformLinks.map((link) => (
                 <li key={link.name}>
@@ -77,15 +77,14 @@ hello@synoptix.ai
 
           {/* Solutions Links */}
           <div className="mb-8 md:mb-0">
-            <h3 style={{
+          <h3 style={{
               fontFamily: 'Poppins, sans-serif',
-              fontWeight: 600,
+              fontWeight: 500,
               fontSize: '14px',
               lineHeight: '20px',
               letterSpacing: '0%',
               textTransform: 'uppercase',
-              color: '#626DFF'
-            }} className="mb-4">SOLUTIONS</h3>
+              color: '#626DFF' }} className="mb-4">SOLUTIONS</h3>
             <ul className="space-y-2">
               {solutionsLinks.map((link) => (
                 <li key={link.name}>
@@ -99,9 +98,9 @@ hello@synoptix.ai
 
           {/* Services Links */}
           <div className="mb-8 md:mb-0">
-            <h3 style={{
+          <h3 style={{
               fontFamily: 'Poppins, sans-serif',
-              fontWeight: 600,
+              fontWeight: 500,
               fontSize: '14px',
               lineHeight: '20px',
               letterSpacing: '0%',
@@ -121,9 +120,9 @@ hello@synoptix.ai
 
           {/* Social Links */}
           <div>
-            <h3 style={{
+          <h3 style={{
               fontFamily: 'Poppins, sans-serif',
-              fontWeight: 600,
+              fontWeight: 500,
               fontSize: '14px',
               lineHeight: '20px',
               letterSpacing: '0%',
@@ -184,14 +183,14 @@ hello@synoptix.ai
 
         {/* Bottom Bar */}
         <div className="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-sm text-gray-400 mb-4 md:mb-0">
+          <p className="text-sm text-white mb-4 md:mb-0" style={{fontFamily: 'Inter', fontWeight: 400, fontSize: '14px', lineHeight: '100%', letterSpacing: '0%', textAlign: 'center', color: '#ffffff'}}>
             2025 Synoptix.AI All Rights Reserved.
           </p>
           <div className="flex space-x-6">
-            <Link href="/privacy-policy" className="text-sm text-gray-400 hover:text-white transition-colors">
+            <Link href="/privacy-policy" className="text-sm text-white hover:text-white transition-colors"style={{fontFamily: 'Inter', fontWeight: 400, fontSize: '14px', lineHeight: '100%', letterSpacing: '0%', textAlign: 'center', color: '#ffffff'}}>
               Privacy Policy
             </Link>
-            <Link href="/terms" className="text-sm text-gray-400 hover:text-white transition-colors">
+            <Link href="/terms" className="text-sm text-white hover:text-white transition-colors"style={{fontFamily: 'Inter', fontWeight: 400, fontSize: '14px', lineHeight: '100%', letterSpacing: '0%', textAlign: 'center', color: '#ffffff'}}>
               Terms & Conditions
             </Link>
           </div>
