@@ -138,7 +138,11 @@ export default function EnterpriseSection() {
                       style={{
                         width: tab.iconWidth ?? "28px",
                         height: tab.iconHeight ?? "28px",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center"
                       }}
+                      className="mx-auto"
                     />
 
                     </div>

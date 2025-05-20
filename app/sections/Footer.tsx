@@ -182,7 +182,7 @@ hello@synoptix.ai
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <div className="border-t border-[#c3bbbb] pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm text-white mb-4 md:mb-0" style={{fontFamily: 'Inter', fontWeight: 400, fontSize: '14px', lineHeight: '100%', letterSpacing: '0%', textAlign: 'center', color: '#ffffff'}}>
             2025 Synoptix.AI All Rights Reserved.
           </p>
