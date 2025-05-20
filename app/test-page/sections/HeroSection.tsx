@@ -243,23 +243,23 @@ export default function HeroSection({ videoRef, isInView }: HeroSectionProps) {
   </div>
 ) : (
   <div className="absolute bottom-0 left-0 right-0 translate-y-1/2 px-4 sm:px-6">
-    <div className="relative mx-auto w-[758.62px] h-[477.28px]">
+    <div className="relative mx-auto w-[1200px] h-[750px]">
       <div ref={videoRef} className="relative w-full h-full">
         <iframe
           src={videoUrl}
           title="Demo Video"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
-          width="720"
-          height="450"
-          className="absolute top-[14px] left-[19px] pr-18 pl-12 pt-17.5 pb-13.5 z-10 rounded-lg"
+          width="1030"
+          height="633"
+          className="absolute top-[14px] left-[19px]  pl-23 pt-28 z-10 rounded-lg"
           style={{ border: 'none' }}
         />
         <Image
           src="/test-page/videoFrame.png"
           alt="Video Frame"
-          width={758.62}
-          height={477.28}
+          width={1200}
+          height={750}
           className="absolute top-0 left-0 z-20 pointer-events-none"
           priority
         />
@@ -273,7 +273,7 @@ export default function HeroSection({ videoRef, isInView }: HeroSectionProps) {
       </div>
       
       <div className=" w-full bg-[#F9FBFF]">
-        <div className="h-[20vh]"></div>
+        <div className="h-[40vh]"></div>
       </div>
     </>
   );
