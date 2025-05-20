@@ -121,6 +121,9 @@ export default function SynoptixComponent() {
                   lineHeight: "20px",
                   letterSpacing: "0px",
                   textAlign: "center",
+                  width: "165px",
+                  height: "48px",
+                  whiteSpace: "nowrap"
                 }}
                 className={`px-6 py-3 ${
                   activeTab === tab
