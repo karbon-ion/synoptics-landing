@@ -4,6 +4,7 @@ import {
   IconEaseInOut,
 } from "@tabler/icons-react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function AiServicesSection() {
   return (
@@ -28,15 +29,21 @@ export default function AiServicesSection() {
               backgroundPosition: "center",
             }}
           >
-            
+            <Image 
+              src="/test-page/lines.svg" 
+              alt="Decorative lines"
+              width={30}
+              height={30}
+              className="absolute left-10 top-8"
+            />
             <h2
-              className="text-2xl sm:text-3xl md:text-[36px] leading-tight md:leading-[45px] text-gray-800"
+              className="text-2xl sm:text-3xl pl-10 md:text-[36px] leading-tight md:leading-[45px] text-gray-800"
               style={{ fontFamily: "Syne, sans-serif", fontWeight: 700 }}
             >
               AI Expertise That Gets <br className="hidden sm:block" />
               Enterprises from <span className="text-indigo-500">Idea to Impact</span>
             </h2>
-            <div className="mt-4 md:mt-6">
+            <div className="mt-4 pl-10 md:mt-6">
               <Link
                 href="#"
                 className="inline-flex items-center justify-center gap-2 bg-[#5662F6] text-white px-4  py-2 md:px-6 md:py-3 rounded-full text-sm md:text-base font-bold transition-all duration-300 hover:shadow-md"
