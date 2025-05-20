@@ -6,14 +6,14 @@ export default function EnterpriseSecuritySection() {
     <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-34">
       <div className="flex flex-col md:flex-row justify-between items-center mb-8 md:mb-12 gap-4">
         <h2 className="text-2xl sm:text-3xl md:text-[36px] text-center md:text-left text-gray-800" style={{ fontFamily: 'Syne, sans-serif', lineHeight: '45px',fontWeight: 700 }}>
-          Secure and Built for <span className="text-indigo-500">Enterprise</span>
+          Responsible AI Built for  <span className="text-indigo-500">Enterprise</span>
         </h2>
         <Link
           href="/ai-security"
           className="bg-[#5662F6] hover:bg-indigo-600 text-white px-5 py-2.5 sm:px-6 sm:py-2.5 rounded-full flex items-center transition-colors whitespace-nowrap text-sm sm:text-[18px]"
           style={{ fontFamily: 'Syne', fontWeight: 500 }}
         >
-          Discover AI Security <ArrowRight className="ml-2 h-4 w-4" />
+          Explore SynoGuard  <ArrowRight className="ml-2 h-4 w-4" />
         </Link>
       </div>
 
@@ -36,7 +36,7 @@ export default function EnterpriseSecuritySection() {
                 Content Safety <ArrowRight className="ml-2 h-4 w-4" />
               </h3>
               <p className="text-xs ml-4 pb-5 text-white/80 leading-relaxed">
-                Weave evaluations combine a test dataset with a set of scorers
+                Block unsafe or non-compliant content before it reaches users
               </p>
             </div>
           </div>
@@ -58,7 +58,7 @@ export default function EnterpriseSecuritySection() {
                 Anti Hallucination <ArrowRight className="ml-2 h-4 w-4" />
               </h3>
               <p className="text-xs ml-8 pb-5 text-white/80 leading-relaxed">
-                Weave evaluations combine a dataset with a set of scorers
+                Reduce AI errors with real-world data and scoring benchmarks
               </p>
             </div>
           </div>
@@ -80,7 +80,7 @@ export default function EnterpriseSecuritySection() {
                 Toxicity Detection <ArrowRight className="ml-2 h-4 w-4" />
               </h3>
               <p className="text-xs ml-6 pb-5 text-slate-600 leading-relaxed">
-                Weave evaluations combine a dataset with a set of scorers
+                Detect and minimise harmful language using enterprise-grade filters
               </p>
             </div>
           </div>
@@ -102,7 +102,7 @@ export default function EnterpriseSecuritySection() {
                 PII Extraction <ArrowRight className="ml-2 h-4 w-4" />
               </h3>
               <p className="text-xs ml-8 pb-5 text-slate-600 leading-relaxed">
-                Weave evaluations combine a dataset with a set of scorers
+                Identify and extract personal data to support compliance standards
               </p>
             </div>
           </div>

@@ -45,7 +45,7 @@ export default function AiServicesSection() {
               className="text-2xl sm:text-3xl pl-10 pt-3 md:text-[36px] leading-tight md:leading-[45px] text-gray-800"
               style={{ fontFamily: "Syne, sans-serif", fontWeight: 700 }}
             >
-              AI Expertise That Gets <br className="hidden sm:block" />
+              AI Services That Gets <br className="hidden sm:block" />
               Enterprises from <span className="text-indigo-500">Idea to Impact</span>
             </h2>
             <div className="mt-4 pl-10 md:mt-6">
@@ -92,7 +92,7 @@ export default function AiServicesSection() {
                   lineHeight: "20px",
                 }}
               >
-                Get higher accuracy and efficiency with AI models fine-tuned to your specific requirements and objectives.
+                Our enterprise AI platform fine- tunes large language models using your business-specific datasets to boost accuracy, efficiency, and relevance across every use case.
               </p>
             </div>
             <Link
@@ -128,8 +128,7 @@ export default function AiServicesSection() {
                   color: "#323E50",
                 }}
               >
-                Fine Tuning &<br />
-                Optimisation
+                AI Consulting
               </h3>
               <p
                 className="mt-2 text-slate-600 text-sm leading-5"
@@ -140,7 +139,7 @@ export default function AiServicesSection() {
                   lineHeight: "20px",
                 }}
               >
-                Get higher accuracy and efficiency with AI models fine-tuned to your specific requirements and objectives.
+                Our enterprise AI consultants' partner with your teams to design, implement, and scale AI strategies that align with your goals, ensure compliance, and deliver measurable ROI.
               </p>
             </div>
             <Link
@@ -174,8 +173,7 @@ export default function AiServicesSection() {
                   color: "#323E50",
                 }}
               >
-                Fine Tuning &<br />
-                Optimisation
+                AI Strategy Development
               </h3>
               <p
                 className="mt-2 text-slate-600 text-sm leading-5"
@@ -186,7 +184,7 @@ export default function AiServicesSection() {
                   lineHeight: "20px",
                 }}
               >
-                Get higher accuracy and efficiency with AI models fine-tuned to your specific requirements and objectives.
+                Our enterprise AI platform helps you identify the highest-impact AI opportunities, align initiatives with your business roadmap, and create a sustainable strategy to scale intelligently.
               </p>
             </div>
             <Link
@@ -220,8 +218,7 @@ export default function AiServicesSection() {
                   color: "#323E50",
                 }}
               >
-                Fine Tuning &<br />
-                Optimisation
+                Training & Education
               </h3>
               <p
                 className="mt-2 text-slate-600 text-sm leading-5"
@@ -232,7 +229,7 @@ export default function AiServicesSection() {
                   lineHeight: "20px",
                 }}
               >
-                Get higher accuracy and efficiency with AI models fine-tuned to your specific requirements and objectives.
+                From custom learning paths to leadership workshops, we train your teams on how to use, manage, and scale AI responsibly — no technical background required.
               </p>
             </div>
             <Link

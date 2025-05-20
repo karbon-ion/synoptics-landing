@@ -29,69 +29,64 @@ export default function SynoptixComponent() {
 
   const tabContent: Record<TabType, TabContent> = {
     all: {
-      title: "Synoptix is for every team",
+      title: "Synoptix is for Every Team",
       features: [
-        "Deliver real-time, AI-driven answers directly within",
-        "Surface personalized content based on customer context",
-        "Cut down prospecting prep with instant access to current battle",
-        "Use AI to quickly generate and share sales documentation at scale",
-        "Maintain consistent messaging with centralized, approved",
-        "Accelerate onboarding and ramp-up with streamlined, AI-powered",
+        "Faster Prospecting - Equip sales teams with real-time battle cards, lead insights, and AI-generated follow-up",
+        "Document & Email Drafting Generate proposals, reports, follow-ups, and emails in second.",
+        "Instant Answers - Use natural language search to find the right file, policy, or client detail—across systems.",
+        "Consistent Messaging- Maintain brand and message alignment with centralised, approved content accessible to all teams.",
+        "Scheduling & Admin Tasks Automate calendar bookings, reminders, and meeting prep"
       ],
     },
     marketing: {
-      title: "Synoptix is for every team",
+      title: "Synoptix is for Every Team",
       features: [
-        "Create and distribute marketing content with AI assistance",
-        "Track campaign performance with real-time analytics",
-        "Personalize customer communications at scale",
-        "Streamline approval workflows for marketing assets",
-        "Integrate with existing marketing technology stack",
-        "Generate SEO-optimized content with AI suggestions",
+        "Ensure brand consistency – Distribute approved content seamlessly across all campaigns and channels",
+        "Unlock content performance insights – Use AI to identify and amplify high-impact assets",
+        "Automate creative generation – Quickly produce drafts, taglines, and messaging variations with AI",
+        "Enhance team collaboration – Centralised content access streamlines workflows and approvals",
+        "Enterprise-ready AI for Marketers – Scalable, efficient AI platform for enterprise marketing teams"
       ],
     },
     sales: {
-      title: "Synoptix is for every team",
+      title: "Synoptix is for Every Team",
       features: [
-        "Access customer insights during live sales conversations",
-        "Generate personalized proposals in seconds",
-        "Track deal progress with intelligent forecasting",
-        "Automate follow-ups with AI-powered scheduling",
-        "Analyze call recordings for coaching opportunities",
-        "Synchronize data across CRM and sales tools",
+        "Access insights instantly – Get customer data, battle cards, and documents directly within your sales tools",
+        "Personalize every interaction – Use AI-generated messaging based on live context and buyer intent",
+        "Automate proposals and follow-ups – Create polished, on-brand content with minimal manual effort",
+        "Close faster, convert more – Reduce cycle times with consistent, high-quality communication at scale",
+        "Enterprise-grade and sales-ready – Built to empower your team with speed, accuracy, and confidence",
       ],
     },
     it: {
-      title: "Synoptix is for every team",
+      title: "Synoptix is for Every Team",
       features: [
-        "Automate ticket routing and prioritization",
-        "Generate technical documentation with AI assistance",
-        "Monitor system performance with predictive analytics",
-        "Streamline onboarding and access management",
-        "Detect and respond to security threats faster",
-        "Integrate with existing IT infrastructure tools",
+        "Resolve issues instantly—AI answers for routine IT support questions.",
+        "Access quick fixes—Find device setups, system FAQs, and internal docs fast.",
+        "Simplify record keeping—Log updates, tickets, and change history automatically.",
+        "Standardise troubleshooting—Provide consistent resolutions using AI internal documentation.",
+        "Reduce response time—Empower teams to self-serve with support powered by your existing knowledge base.",
+        "Optimise IT workflows—Automate password resets, access requests, and repetitive admin tasks—securely.",
       ],
     },
     finance: {
-      title: "Synoptix is for every team",
+      title: "Synoptix is for Every Team",
       features: [
-        "Automate financial reporting and analysis",
-        "Streamline approval workflows for expenses",
-        "Generate forecasts with AI-powered modeling",
-        "Detect anomalies in financial transactions",
-        "Simplify compliance and audit preparation",
-        "Integrate with existing accounting systems",
+        "Instant insights extraction—Quickly analyse financial reports, contracts, and compliance docs",
+        "Task automation—Streamline repetitive work from data validation to audit prep",
+        "Full output traceability – Ensure accuracy and accountability across AI-generated results",
+        "Risk reduction – Minimize operational risks while improving reporting speed and quality",
+        "Compliant, efficient platform – Engineered for enterprise AI finance leaders focused on governance",
       ],
     },
     hr: {
-      title: "Synoptix is for every team",
+      title: "Synoptix is for Every Team",
       features: [
-        "Streamline candidate screening and hiring",
-        "Automate employee onboarding processes",
-        "Generate personalized training materials",
-        "Track employee engagement with analytics",
-        "Simplify performance review management",
-        "Create and manage HR documentation efficiently",
+        "AI-powered employee support – Answer queries with agents trained on your policies and docs",
+        "Automated onboarding – Deliver training materials and policy updates effortlessly",
+        "Consistent communication – Maintain aligned messaging across teams and locations",
+        "Robust data protection – Secure sensitive employee information with strict access controls",
+        "People-first AI platform – Designed for modern HR teams to streamline operations",
       ],
     },
   }
@@ -103,7 +98,7 @@ export default function SynoptixComponent() {
       <div className="bg-white rounded-2xl p-6">
         <div className="text-center mb-12">
           <h2 className="text-3xl text-slate-800" style={{ fontFamily: "Syne, sans-serif",fontWeight: 700, fontSize: "36px", lineHeight: "45px" }}>
-            Synoptix is for <span className="text-indigo-500">every team</span>
+            Synoptix is for <span className="text-indigo-500">Every Team</span>
           </h2>
         </div>
 

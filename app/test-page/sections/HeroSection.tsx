@@ -212,7 +212,7 @@ export default function HeroSection({ videoRef, isInView }: HeroSectionProps) {
                 verticalAlign: 'middle',
               }}
             >
-              Get a Demo
+              Request a Demo
             </Link>
 
           </div>

@@ -20,7 +20,7 @@ const TrackSection = () => {
               fontWeight: 700,
             }}
           >
-            <span className="text-[#5662F6] ">Track and Optimize</span> AI app and agent outcomes
+            <span className="text-[#5662F6] ">Track and Optimise</span> Performance at Scale
           </h1>
 
           <p 
@@ -32,11 +32,8 @@ const TrackSection = () => {
               color: '#000000'
             }}
           >
-            Maintain consistent messaging with centralized, approved 
-            materials. Maintain consistent messaging with centralized, approved 
-            materials. Maintain consistent messaging with centralized, approved 
-            materials. Maintain consistent messaging with centralized, approved 
-            materials
+            Monitor usage, efficiency, and accuracy in real time with enterprise-grade analytics. 
+            Measure impact across teams, identify optimisation opportunities, and continuously refine your AI agents to maximise productivity, ROI, and business outcomes with enterprise AI platform.
           </p>
           <Link
             href="#contact"
