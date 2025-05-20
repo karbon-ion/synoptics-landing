@@ -20,7 +20,7 @@ export default function EnterpriseSecuritySection() {
       <div className="relative z-0">
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-0">
           {/* Card 1 */}
-          <div className="relative bg-[#5662F6] rounded-xl p-1 text-white min-h-[300px] z-[200] w-full sm:w-64 md:w-72 transition-all duration-300 hover:shadow-lg hover:brightness-110 hover:z-[250]">
+          <div className="relative bg-[#5662F6] rounded-xl p-1 text-white min-h-[300px] z-[200] w-full sm:w-64 md:w-76 transition-all duration-300 hover:shadow-lg hover:brightness-110 hover:z-[250]">
             <div className="absolute top-12 sm:top-16 left-0 right-0 flex items-center">
               <div className="absolute left-0 w-[calc(100%-56px-16px/2)] h-[1px] bg-white/40"></div>
               <div className="absolute right-[40px] w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-[#626DFF] border border-white flex items-center justify-center z-40">
