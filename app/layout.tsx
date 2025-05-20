@@ -1,20 +1,31 @@
 import type { Metadata } from "next";
-import { headers } from "next/headers";
-import { Inter } from "next/font/google";
+import { Inter, Syne, Poppins } from "next/font/google";
 import "./globals.css";
 import { NavbarMenu } from "@/components/ui/navbar-menu";
 import Footer from "./sections/Footer";
 import Script from "next/script";
 import FontAwesome from "@/components/FontAwesome";
 
+// Font configurations
 const inter = Inter({ subsets: ["latin"] });
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-poppins",
+});
+const syne = Syne({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-syne",
+});
 
 export const metadata: Metadata = {
   title: "Enterprise AI Platform for Secure Automation | Synoptix.AI",
-  description: "Explore Synoptix.AI – an enterprise AI platform to automate workflows, boost productivity, and keep your business data fully secure.",
-  metadataBase: new URL('https://synoptix.ai'),
+  description:
+    "Explore Synoptix.AI – an enterprise AI platform to automate workflows, boost productivity, and keep your business data fully secure.",
+  metadataBase: new URL("https://synoptix.ai"),
   alternates: {
-    canonical: '/',
+    canonical: "/",
   },
 };
 
@@ -24,7 +35,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className={`scroll-smooth ${poppins.variable} ${syne.variable}`}>
       <head>
         {/* Microsoft Clarity Analytics */}
         <Script id="microsoft-clarity-script" strategy="afterInteractive">
@@ -36,8 +47,8 @@ export default function RootLayout({
             })(window, document, "clarity", "script", "p7iqk6lcdy");
           `}
         </Script>
-        
-        {/* LinkedIn Insight Tag */}
+
+        {/* LinkedIn Insight Tags */}
         <Script id="linkedin-insight-tag" strategy="afterInteractive">
           {`
             _linkedin_partner_id = "7172076";
@@ -54,10 +65,9 @@ export default function RootLayout({
           `}
         </Script>
         <noscript>
-          <img height="1" width="1" style={{display: "none"}} alt="" src="https://px.ads.linkedin.com/collect/?pid=7172076&fmt=gif" />
+          <img height="1" width="1" style={{ display: "none" }} alt="" src="https://px.ads.linkedin.com/collect/?pid=7172076&fmt=gif" />
         </noscript>
-        
-        {/* Additional LinkedIn Insight Tag */}
+
         <Script id="linkedin-insight-tag-2" strategy="afterInteractive">
           {`
             _linkedin_partner_id = "7229228";
@@ -74,10 +84,10 @@ export default function RootLayout({
           `}
         </Script>
         <noscript>
-          <img height="1" width="1" style={{display: "none"}} alt="" src="https://px.ads.linkedin.com/collect/?pid=7229228&fmt=gif" />
+          <img height="1" width="1" style={{ display: "none" }} alt="" src="https://px.ads.linkedin.com/collect/?pid=7229228&fmt=gif" />
         </noscript>
-        
-        {/* Microsoft Bing UET (Universal Event Tracking) */}
+
+        {/* Microsoft Bing UET */}
         <Script id="microsoft-bing-uet" strategy="afterInteractive">
           {`
             (function(w,d,t,r,u) {
