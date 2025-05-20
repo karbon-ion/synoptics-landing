@@ -140,10 +140,11 @@ export default function EnterpriseSection() {
                         height: tab.iconHeight ?? "28px",
                         display: "flex",
                         alignItems: "center",
-                        justifyContent: "center"
+                        justifyContent: "center",
                       }}
-                      className="mx-auto"
+                      className={`mx-auto ${tab.id === "search" || tab.id === "voice" ? "ml-2" : ""}`}
                     />
+
 
                     </div>
                     <span

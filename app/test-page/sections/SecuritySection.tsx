@@ -1,4 +1,4 @@
-import { ArrowRight, Lock, Brain, Sun, LayoutGrid } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 export default function EnterpriseSecuritySection() {
@@ -23,8 +23,8 @@ export default function EnterpriseSecuritySection() {
           <div className="relative bg-[#5662F6] rounded-xl p-1 text-white min-h-[300px] z-[200] w-full sm:w-64 md:w-76 transition-all duration-300 hover:shadow-lg hover:brightness-110 hover:z-[250]">
             <div className="absolute top-12 sm:top-16 left-0 right-0 flex items-center">
               <div className="absolute left-0 w-[calc(100%-56px-16px/2)] h-[1px] bg-white/40"></div>
-              <div className="absolute right-[40px] w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-[#626DFF] border border-white flex items-center justify-center z-40">
-                <Lock className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
+              <div className="absolute right-[40px] w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-[#626DFF] flex items-center justify-center z-40">
+                <img src="/test-page/security/Lock.svg" className="min-h-[120%] min-w-[120%] p-0" />
               </div>
               <div className="absolute right-0 w-[40px] h-[1px] bg-white/40"></div>
             </div>
@@ -45,8 +45,8 @@ export default function EnterpriseSecuritySection() {
           <div className="relative bg-[#A095FF] rounded-xl p-6 text-white min-h-[300px] sm:-ml-8 md:-ml-12 z-[150] w-full sm:w-74 md:w-88 transition-all duration-300 hover:shadow-lg hover:brightness-110 hover:z-[175]">
             <div className="absolute top-12 sm:top-16 left-0 right-0 flex items-center">
               <div className="absolute left-0 w-[calc(100%-56px-16px/2)] h-[1px] bg-white/40"></div>
-              <div className="absolute right-[40px] w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-[#B2A9FF] border border-white flex items-center justify-center z-40">
-                <Brain className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
+              <div className="absolute right-[40px] w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-[#B2A9FF] flex items-center justify-center z-40">
+              <img src="/test-page/security/Brain.svg" className="min-h-[120%] min-w-[120%] p-0" />
               </div>
               <div className="absolute right-0 w-[40px] h-[1px] bg-white/40"></div>
             </div>
@@ -67,8 +67,8 @@ export default function EnterpriseSecuritySection() {
           <div className="relative bg-[#DADCFF]  text-slate-800 min-h-[300px] sm:-ml-8 md:-ml-12 z-[100] w-full sm:w-74 md:w-88 rounded-xl transition-all duration-300 hover:shadow-lg hover:brightness-105 hover:z-[125]">
             <div className="absolute top-12 sm:top-16 left-0 right-0 flex items-center">
               <div className="absolute left-0 w-[calc(100%-56px-16px/2)] h-[1px] bg-slate-400/30"></div>
-              <div className="absolute right-[40px] w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-[#E7E9FF] border border-[#858491] flex items-center justify-center z-40">
-                <Sun className="h-5 w-5 sm:h-6 sm:w-6 text-slate-600" />
+              <div className="absolute right-[40px] w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-[#E7E9FF] flex items-center justify-center z-40">
+              <img src="/test-page/security/third.svg" className="min-h-[120%] min-w-[120%] p-0" />
               </div>
               <div className="absolute right-0 w-[40px] h-[1px] bg-slate-400/30"></div>
             </div>
@@ -86,11 +86,11 @@ export default function EnterpriseSecuritySection() {
           </div>
 
           {/* Card 4 */}
-          <div className="relative bg-white p-6 text-slate-800 min-h-[300px] sm:-ml-8 md:-ml-12 z-[50] w-full sm:w-74 md:w-88 rounded-xl border border-slate-200 transition-all duration-300 hover:shadow-lg hover:border-indigo-200 hover:z-[75]">
+          <div className="relative bg-white p-6 text-slate-800 min-h-[300px] sm:-ml-8 md:-ml-12 z-[50] w-full sm:w-74 md:w-88 rounded-xl transition-all duration-300 hover:shadow-lg hover:border-indigo-200 hover:z-[75]">
             <div className="absolute top-12 sm:top-16 left-0 right-0 flex items-center">
               <div className="absolute left-0 w-[calc(100%-56px-16px/2)] h-[1px] bg-slate-300"></div>
-              <div className="absolute right-[40px] w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-[#F4F4F4] border border-[#979591] flex items-center justify-center z-40">
-                <LayoutGrid className="h-5 w-5 sm:h-6 sm:w-6 text-slate-600" />
+              <div className="absolute right-[40px] w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-[#F4F4F4] flex items-center justify-center z-40">
+              <img src="/test-page/security/fourth.svg" className="min-h-[120%] min-w-[120%] p-0" />
               </div>
               <div className="absolute right-0 w-[40px] h-[1px] bg-slate-300"></div>
             </div>
