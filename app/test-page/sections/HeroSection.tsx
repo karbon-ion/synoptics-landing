@@ -76,8 +76,8 @@ const FloatingIcon = ({ src, size = 40, className }: { src: string; size?: numbe
         width={size * 0.6} 
         height={size * 0.6} 
         style={{
-          width: '60%',
-          height: '60%',
+          width: '80%',
+          height: '80%',
           objectFit: 'contain'
         }}
       />
@@ -123,7 +123,7 @@ export default function HeroSection({ videoRef, isInView }: HeroSectionProps) {
 
         <FloatingIcon 
           src="/images/logos/openai.svg" 
-          size={42}
+          size={60}
           className="hidden md:block top-[50%] right-[25%]" 
         />
         )}
@@ -131,21 +131,21 @@ export default function HeroSection({ videoRef, isInView }: HeroSectionProps) {
 
         <FloatingIcon 
           src="/synoptix-icon.svg" 
-          size={48}
+          size={60}
           className="hidden md:block top-[73%] right-[90%]" 
         />
         )}
         {!isMobile && (
         <FloatingIcon 
           src="/images/logos/dropbox logo.png" 
-          size={45}
+          size={60}
           className="hidden md:block top-[73%] right-[5%]" 
         />
         )}
         {!isMobile && (
         <FloatingIcon 
           src="/images/logos/microsoft.svg" 
-          size={46}
+          size={60}
           className="hidden md:block top-[13%] left-[25%]" 
         />
         )}
@@ -159,7 +159,7 @@ export default function HeroSection({ videoRef, isInView }: HeroSectionProps) {
         {!isMobile && (
         <FloatingIcon 
           src="/file.svg" 
-          size={42}
+          size={60}
           className="hidden md:block top-[50%] left-[25%]" 
         />
         )}
@@ -173,7 +173,7 @@ export default function HeroSection({ videoRef, isInView }: HeroSectionProps) {
         {!isMobile && (
         <FloatingIcon 
           src="/globe.svg" 
-          size={46}
+          size={60}
           className="hidden md:block top-[12%] right-[25%]" 
         />
         )}

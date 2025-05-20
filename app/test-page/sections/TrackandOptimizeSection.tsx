@@ -5,14 +5,13 @@ import { ArrowRight } from 'lucide-react';
 
 const TrackSection = () => {
   return (
-    <div className="w-full relative overflow-hidden min-h-[500px] md:min-h-[600px]" 
+    <div className="w-full relative overflow-hidden min-h-[800px] md:min-h-[700px]" 
         style={{
           backgroundImage: 'url("/test-page/backgorund.jpg")',
           backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundAttachment: 'fixed'
+          backgroundPosition: 'center'
         }}>
-      <div className="w-full max-w-7xl mx-auto sm:px-6 py-12 md:py-16 relative flex flex-col md:flex-row items-center gap-8 md:gap-16 lg:gap-24">
+      <div className="w-full max-w-7xl mx-auto sm:px-6 py-18 md:py-16 relative flex flex-col md:flex-row items-center gap-8 md:gap-16 lg:gap-24">
         <div className="w-full mt-20 space-y-4 sm:space-y-6 flex-shrink-0 max-w-[600px]">
           <h1 
             className="text-3xl sm:text-4xl md:text-[36px] leading-tight sm:leading-[45px]"
