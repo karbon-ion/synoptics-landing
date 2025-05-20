@@ -24,7 +24,7 @@ export default function AiServicesSection() {
           <div
             className="md:col-span-2 flex flex-col justify-center relative overflow-hidden"
             style={{
-              width: '810px',
+              width: '800px',
               height: '250px',
               borderRadius: '22px',
               border: '10px solid white',
@@ -66,7 +66,7 @@ export default function AiServicesSection() {
           </div>
 
           {/* Fine Tuning Card */}
-          <div className="bg-white rounded-xl  pl-8 pt-7 pr-5 pb-10 shadow-sm transition-all duration-300 hover:shadow-md flex flex-col justify-between h-[250px] w-[395px]">
+          <div className="bg-white rounded-xl  pl-8 pt-7 pr-5 pb-10 shadow-sm transition-all duration-300 hover:shadow-md flex flex-col justify-between h-[250px] w-[385px]">
             <div>
               <div className="bg-[#5662F6] p-2 rounded-full w-10 h-10 flex items-center justify-center mb-4">
                 <IconTerminal2 className="h-5 w-5 text-white" />
@@ -114,7 +114,7 @@ export default function AiServicesSection() {
         {/* Bottom row: Three equal cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 ">
           {/* AI Consulting Card */}
-          <div className="bg-white rounded-xl  pl-8 pt-7 pr-5 pb-10 shadow-sm transition-all duration-300 hover:shadow-md flex flex-col justify-between h-[250px] w-[395px]">
+          <div className="bg-white rounded-xl  pl-8 pt-7 pr-5 pb-10 shadow-sm transition-all duration-300 hover:shadow-md flex flex-col justify-between h-[250px] w-[385px]">
             <div>
               <div className="bg-[#5662F6] p-2 rounded-full w-10 h-10 flex items-center justify-center mb-4">
                 <IconTerminal2 className="h-5 w-5 text-white" />
@@ -160,7 +160,7 @@ export default function AiServicesSection() {
         
 
           {/* AI Strategy Card */}
-          <div className="bg-white rounded-xl  pl-8 pt-7 pr-5 pb-10 shadow-sm transition-all duration-300 hover:shadow-md flex flex-col justify-between h-[250px] w-[395px]">
+          <div className="bg-white rounded-xl  pl-8 pt-7 pr-5 pb-10 shadow-sm transition-all duration-300 hover:shadow-md flex flex-col justify-between h-[250px] w-[385px]">
             <div>
               <div className="bg-[#5662F6] p-2 rounded-full w-10 h-10 flex items-center justify-center mb-4">
                 <IconTerminal2 className="h-5 w-5 text-white" />
@@ -206,7 +206,7 @@ export default function AiServicesSection() {
         
 
           {/* Training & Education Card */}
-          <div className="bg-white rounded-xl  pl-8 pt-7 pr-5 pb-10 shadow-sm transition-all duration-300 hover:shadow-md flex flex-col justify-between h-[250px] w-[395px]">
+          <div className="bg-white rounded-xl  pl-8 pt-7 pr-5 pb-10 shadow-sm transition-all duration-300 hover:shadow-md flex flex-col justify-between h-[250px] w-[385px]">
             <div>
               <div className="bg-[#5662F6] p-2 rounded-full w-10 h-10 flex items-center justify-center mb-4">
                 <IconTerminal2 className="h-5 w-5 text-white" />

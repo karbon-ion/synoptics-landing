@@ -204,7 +204,7 @@ export default function HeroSection({ videoRef, isInView }: HeroSectionProps) {
             <span className="mt-2 sm:mt-4 text-[#323E50] text-center font-medium" style={{ fontFamily: 'Poppins', fontSize: '30px', lineHeight: '48px', letterSpacing: '0%' }}>You Focus on What Matters</span> <br/>
             <Link
               href="#contact"
-              className="mt-4 sm:mt-6 md:mt-8 rounded-full bg-[#5662F6] px-4 sm:px-8 py-2 sm:py-3 text-white hover:bg-indigo-700 inline-block text-base sm:text-lg md:text-xl leading-6 sm:leading-7"
+              className="mt-4 mb-4 sm:mt-6 md:mt-8 rounded-full bg-[#5662F6] px-4 sm:px-8 py-2 sm:py-3 text-white hover:bg-indigo-700 inline-block text-base sm:text-lg md:text-xl leading-6 sm:leading-7"
               style={{
                 fontFamily: 'var(--font-syne)',
                 fontWeight: 500,

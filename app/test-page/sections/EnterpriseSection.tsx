@@ -113,7 +113,7 @@ export default function EnterpriseSection() {
           }}
         >
           <span className="text-gray-800">Enterprise AI Solution for </span>
-          <span className="text-[#323E50]">
+          <span className="text-[#5662F6]">
             Improved <br /> Productivity
           </span>
         </h2>
