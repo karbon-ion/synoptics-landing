@@ -9,24 +9,29 @@ import Image from "next/image";
 export default function AiServicesSection() {
   return (
     <div
-      className="w-full py-8 md:py-10"
+      className="w-full py-16 md:py-20"
       style={{
         background:
-          "linear-gradient(180deg, #EFF5FF 0%, rgba(229, 239, 255, 0.262661) 83.7%, rgba(229, 239, 255, 0) 100%)",
+          "linear-gradient(0deg, #EFF5FF 0%, rgba(229, 239, 255, 0.262661) 83.7%, rgba(229, 239, 255, 0) 100%)",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
     >
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6">
         {/* Top row: Main banner and Fine Tuning card */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-6">
+        <div className="grid grid-cols-1 md:grid-cols-3  mb-6">
           {/* Main Banner */}
           <div
-            className="md:col-span-2 rounded-xl p-6 md:p-8 flex flex-col justify-center relative overflow-hidden border-4 md:border-8 border-white h-auto md:h-[276px]"
+            className="md:col-span-2 flex flex-col justify-center relative overflow-hidden"
             style={{
+              width: '805px',
+              height: '250px',
+              borderRadius: '22px',
+              border: '10px solid white',
               backgroundImage: "url('/ai-services-card-background.png')",
               backgroundSize: "cover",
               backgroundPosition: "center",
+              padding: '32px'
             }}
           >
             <Image 
@@ -37,7 +42,7 @@ export default function AiServicesSection() {
               className="absolute left-10 top-8"
             />
             <h2
-              className="text-2xl sm:text-3xl pl-10 md:text-[36px] leading-tight md:leading-[45px] text-gray-800"
+              className="text-2xl sm:text-3xl pl-10 pt-3 md:text-[36px] leading-tight md:leading-[45px] text-gray-800"
               style={{ fontFamily: "Syne, sans-serif", fontWeight: 700 }}
             >
               AI Expertise That Gets <br className="hidden sm:block" />
@@ -55,7 +60,7 @@ export default function AiServicesSection() {
           </div>
 
           {/* Fine Tuning Card */}
-          <div className="bg-white rounded-xl p-5 shadow-sm transition-all duration-300 hover:shadow-md flex flex-col justify-between h-[267px]">
+          <div className="bg-white rounded-xl  pl-8 pt-7 pr-5 pb-10 shadow-sm transition-all duration-300 hover:shadow-md flex flex-col justify-between h-[250px] w-[385px]">
             <div>
               <div className="bg-[#5662F6] p-2 rounded-full w-10 h-10 flex items-center justify-center mb-4">
                 <IconTerminal2 className="h-5 w-5 text-white" />
@@ -63,10 +68,10 @@ export default function AiServicesSection() {
               <h3
                 style={{
                   fontFamily: "Syne, sans-serif",
-                  fontWeight: 600,
-                  fontSize: "20px",
+                  fontWeight: 700,
+                  fontSize: "26px",
                   lineHeight: "28px",
-                  color: "#1F2937",
+                  color: "#323E50",
                 }}
               >
                 Fine Tuning &<br />
@@ -76,6 +81,9 @@ export default function AiServicesSection() {
                 className="mt-2 text-slate-600 text-sm leading-5"
                 style={{
                   fontFamily: "Poppins, sans-serif",
+                  fontSize: "12px",
+                  fontWeight: 400,
+                  lineHeight: "20px",
                 }}
               >
                 Get higher accuracy and efficiency with AI models fine-tuned to your specific requirements and objectives.
@@ -98,31 +106,35 @@ export default function AiServicesSection() {
         </div>
 
         {/* Bottom row: Three equal cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 ">
           {/* AI Consulting Card */}
-          <div className="bg-white rounded-xl p-5 shadow-sm transition-all duration-300 hover:shadow-md flex flex-col justify-between h-[255px]">
+          <div className="bg-white rounded-xl  pl-8 pt-7 pr-5 pb-10 shadow-sm transition-all duration-300 hover:shadow-md flex flex-col justify-between h-[250px] w-[385px]">
             <div>
               <div className="bg-[#5662F6] p-2 rounded-full w-10 h-10 flex items-center justify-center mb-4">
-                <IconEaseInOut className="h-5 w-5 text-white" />
+                <IconTerminal2 className="h-5 w-5 text-white" />
               </div>
               <h3
                 style={{
                   fontFamily: "Syne, sans-serif",
-                  fontWeight: 600,
-                  fontSize: "20px",
+                  fontWeight: 700,
+                  fontSize: "26px",
                   lineHeight: "28px",
-                  color: "#1F2937",
+                  color: "#323E50",
                 }}
               >
-                AI Consulting
+                Fine Tuning &<br />
+                Optimisation
               </h3>
               <p
                 className="mt-2 text-slate-600 text-sm leading-5"
                 style={{
                   fontFamily: "Poppins, sans-serif",
+                  fontSize: "12px",
+                  fontWeight: 400,
+                  lineHeight: "20px",
                 }}
               >
-                Partner with our AI consulting experts to develop and execute strategies that maximize & ensure compliance and optimize your business objectives.
+                Get higher accuracy and efficiency with AI models fine-tuned to your specific requirements and objectives.
               </p>
             </div>
             <Link
@@ -139,32 +151,36 @@ export default function AiServicesSection() {
               <ArrowRight className="h-3 w-3 ml-1" />
             </Link>
           </div>
+        
 
           {/* AI Strategy Card */}
-          <div className="bg-white rounded-xl p-5 shadow-sm transition-all duration-300 hover:shadow-md flex flex-col justify-between h-[255px]">
+          <div className="bg-white rounded-xl  pl-8 pt-7 pr-5 pb-10 shadow-sm transition-all duration-300 hover:shadow-md flex flex-col justify-between h-[250px] w-[385px]">
             <div>
               <div className="bg-[#5662F6] p-2 rounded-full w-10 h-10 flex items-center justify-center mb-4">
-                <i className="fa-sharp fa-solid fa-chess-queen text-white text-[20px]"></i>
+                <IconTerminal2 className="h-5 w-5 text-white" />
               </div>
               <h3
                 style={{
                   fontFamily: "Syne, sans-serif",
-                  fontWeight: 600,
-                  fontSize: "20px",
+                  fontWeight: 700,
+                  fontSize: "26px",
                   lineHeight: "28px",
-                  color: "#1F2937",
+                  color: "#323E50",
                 }}
               >
-                AI Strategy<br />
-                Development
+                Fine Tuning &<br />
+                Optimisation
               </h3>
               <p
                 className="mt-2 text-slate-600 text-sm leading-5"
                 style={{
                   fontFamily: "Poppins, sans-serif",
+                  fontSize: "12px",
+                  fontWeight: 400,
+                  lineHeight: "20px",
                 }}
               >
-                Align AI investments with your business objectives, identify opportunities, and create a roadmap.
+                Get higher accuracy and efficiency with AI models fine-tuned to your specific requirements and objectives.
               </p>
             </div>
             <Link
@@ -181,33 +197,36 @@ export default function AiServicesSection() {
               <ArrowRight className="h-3 w-3 ml-1" />
             </Link>
           </div>
+        
 
           {/* Training & Education Card */}
-          <div className="bg-white rounded-xl p-5 shadow-sm transition-all duration-300 hover:shadow-md flex flex-col justify-between h-[255px]">
+          <div className="bg-white rounded-xl  pl-8 pt-7 pr-5 pb-10 shadow-sm transition-all duration-300 hover:shadow-md flex flex-col justify-between h-[250px] w-[385px]">
             <div>
               <div className="bg-[#5662F6] p-2 rounded-full w-10 h-10 flex items-center justify-center mb-4">
-                <i className="fa-sharp fa-solid fa-graduation-cap text-white text-[20px]"></i>
+                <IconTerminal2 className="h-5 w-5 text-white" />
               </div>
               <h3
                 style={{
                   fontFamily: "Syne, sans-serif",
-                  fontWeight: 600,
-                  fontSize: "20px",
+                  fontWeight: 700,
+                  fontSize: "26px",
                   lineHeight: "28px",
-                  color: "#1F2937",
+                  color: "#323E50",
                 }}
               >
-                Training &<br />
-                Education
+                Fine Tuning &<br />
+                Optimisation
               </h3>
               <p
                 className="mt-2 text-slate-600 text-sm leading-5"
                 style={{
                   fontFamily: "Poppins, sans-serif",
+                  fontSize: "12px",
+                  fontWeight: 400,
+                  lineHeight: "20px",
                 }}
               >
-                Boost your workforce’s AI skills with tailored training programs,
-                learning paths, and leadership workshops.
+                Get higher accuracy and efficiency with AI models fine-tuned to your specific requirements and objectives.
               </p>
             </div>
             <Link
