@@ -25,7 +25,7 @@ export default function AiServicesSection() {
             className="md:col-span-2 flex flex-col justify-center relative overflow-hidden"
             style={{
               width: '800px',
-              height: '250px',
+              height: '280px',
               borderRadius: '22px',
               border: '10px solid white',
               backgroundImage: "url('/ai-services-card-background.png')",
@@ -66,7 +66,7 @@ export default function AiServicesSection() {
           </div>
 
           {/* Fine Tuning Card */}
-          <div className="bg-white rounded-xl  pl-8 pt-7 pr-5 pb-10 shadow-sm transition-all duration-300 hover:shadow-md flex flex-col justify-between h-[250px] w-[385px]">
+          <div className="bg-white rounded-xl  pl-8 pt-7 pr-5 pb-10 shadow-sm transition-all duration-300 hover:shadow-md flex flex-col justify-between h-[280px] w-[385px]">
             <div>
               <div className="bg-[#5662F6] p-2 rounded-full w-10 h-10 flex items-center justify-center mb-4">
                 <IconTerminal2 className="h-5 w-5 text-white" />
@@ -84,7 +84,7 @@ export default function AiServicesSection() {
                 Optimisation
               </h3>
               <p
-                className="mt-2 text-slate-600 text-sm leading-5"
+                className="mt-2 pb-5 text-slate-600 text-sm leading-5"
                 style={{
                   fontFamily: "Poppins, sans-serif",
                   fontSize: "12px",
@@ -114,7 +114,7 @@ export default function AiServicesSection() {
         {/* Bottom row: Three equal cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 ">
           {/* AI Consulting Card */}
-          <div className="bg-white rounded-xl  pl-8 pt-7 pr-5 pb-10 shadow-sm transition-all duration-300 hover:shadow-md flex flex-col justify-between h-[250px] w-[385px]">
+          <div className="bg-white rounded-xl  pl-8 pt-7 pr-5 pb-10 shadow-sm transition-all duration-300 hover:shadow-md flex flex-col justify-between h-[280px] w-[385px]">
             <div>
               <div className="bg-[#5662F6] p-2 rounded-full w-10 h-10 flex items-center justify-center mb-4">
                 <IconTerminal2 className="h-5 w-5 text-white" />
@@ -131,7 +131,7 @@ export default function AiServicesSection() {
                 AI Consulting
               </h3>
               <p
-                className="mt-2 text-slate-600 text-sm leading-5"
+                className="mt-2 pb-9 text-slate-600 text-sm leading-5"
                 style={{
                   fontFamily: "Poppins, sans-serif",
                   fontSize: "12px",
@@ -159,7 +159,7 @@ export default function AiServicesSection() {
         
 
           {/* AI Strategy Card */}
-          <div className="bg-white rounded-xl  pl-8 pt-7 pr-5 pb-10 shadow-sm transition-all duration-300 hover:shadow-md flex flex-col justify-between h-[250px] w-[385px]">
+          <div className="bg-white rounded-xl  pl-8 pt-7 pr-5 pb-10 shadow-sm transition-all duration-300 hover:shadow-md flex flex-col justify-between h-[280px] w-[385px]">
             <div>
               <div className="bg-[#5662F6] p-2 rounded-full w-10 h-10 flex items-center justify-center mb-4">
                 <IconTerminal2 className="h-5 w-5 text-white" />
@@ -176,7 +176,7 @@ export default function AiServicesSection() {
                 AI Strategy Development
               </h3>
               <p
-                className="mt-2 text-slate-600 text-sm leading-5"
+                className="mt-2 pb-2 text-slate-600 text-sm leading-5"
                 style={{
                   fontFamily: "Poppins, sans-serif",
                   fontSize: "12px",
@@ -204,7 +204,7 @@ export default function AiServicesSection() {
         
 
           {/* Training & Education Card */}
-          <div className="bg-white rounded-xl  pl-8 pt-7 pr-5 pb-10 shadow-sm transition-all duration-300 hover:shadow-md flex flex-col justify-between h-[250px] w-[385px]">
+          <div className="bg-white rounded-xl  pl-8 pt-7 pr-5 pb-10 shadow-sm transition-all duration-300 hover:shadow-md flex flex-col justify-between h-[280px] w-[385px]">
             <div>
               <div className="bg-[#5662F6] p-2 rounded-full w-10 h-10 flex items-center justify-center mb-4">
                 <IconTerminal2 className="h-5 w-5 text-white" />
@@ -221,7 +221,7 @@ export default function AiServicesSection() {
                 Training & Education
               </h3>
               <p
-                className="mt-2 text-slate-600 text-sm leading-5"
+                className="mt-2 pb-14 text-slate-600 text-sm leading-5"
                 style={{
                   fontFamily: "Poppins, sans-serif",
                   fontSize: "12px",
