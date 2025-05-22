@@ -1,8 +1,4 @@
 import { ArrowRight } from "lucide-react";
-import {
-  IconTerminal2,
-  IconEaseInOut,
-} from "@tabler/icons-react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -69,7 +65,13 @@ export default function AiServicesSection() {
           <div className="bg-white rounded-xl  pl-8 pt-7 pr-5 pb-10 shadow-sm transition-all duration-300 hover:shadow-md flex flex-col justify-between h-[280px] w-[385px]">
             <div>
               <div className="bg-[#5662F6] p-2 rounded-full w-10 h-10 flex items-center justify-center mb-4">
-                <IconTerminal2 className="h-5 w-5 text-white" />
+                <Image 
+                  src="/test-page/ai-services-section/fine tuning.svg" 
+                  alt="Fine Tuning"
+                  width={30}
+                  height={30}
+                  className="h-30 w-30"
+                />
               </div>
               <h3
                 style={{
@@ -117,7 +119,13 @@ export default function AiServicesSection() {
           <div className="bg-white rounded-xl  pl-8 pt-7 pr-5 pb-10 shadow-sm transition-all duration-300 hover:shadow-md flex flex-col justify-between h-[280px] w-[385px]">
             <div>
               <div className="bg-[#5662F6] p-2 rounded-full w-10 h-10 flex items-center justify-center mb-4">
-                <IconTerminal2 className="h-5 w-5 text-white" />
+                <Image 
+                  src="/test-page/ai-services-section/ai consulting.svg" 
+                  alt="AI Consulting"
+                  width={25}
+                  height={22}
+                  className="h-22 w-25"
+                />
               </div>
               <h3
                 style={{
@@ -162,7 +170,13 @@ export default function AiServicesSection() {
           <div className="bg-white rounded-xl  pl-8 pt-7 pr-5 pb-10 shadow-sm transition-all duration-300 hover:shadow-md flex flex-col justify-between h-[280px] w-[385px]">
             <div>
               <div className="bg-[#5662F6] p-2 rounded-full w-10 h-10 flex items-center justify-center mb-4">
-                <IconTerminal2 className="h-5 w-5 text-white" />
+                <Image 
+                  src="/test-page/ai-services-section/ai strategy.svg" 
+                  alt="AI Strategy"
+                  width={30}
+                  height={30}
+                  className="h-30 w-30"
+                />
               </div>
               <h3
                 style={{
@@ -207,7 +221,13 @@ export default function AiServicesSection() {
           <div className="bg-white rounded-xl  pl-8 pt-7 pr-5 pb-10 shadow-sm transition-all duration-300 hover:shadow-md flex flex-col justify-between h-[280px] w-[385px]">
             <div>
               <div className="bg-[#5662F6] p-2 rounded-full w-10 h-10 flex items-center justify-center mb-4">
-                <IconTerminal2 className="h-5 w-5 text-white" />
+                <Image 
+                  src="/test-page/ai-services-section/training logo.svg" 
+                  alt="Training & Education"
+                  width={33}
+                  height={33}
+                  className="h-33 w-33"
+                />
               </div>
               <h3
                 style={{

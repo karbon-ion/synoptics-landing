@@ -54,16 +54,26 @@ hello@synoptix.ai
           </div>
 
           {/* Platform Links */}
-          <div className="mb-8 md:mb-0">
-            <h3 style={{
+          <div className="mb-8 md:mb-0 ">
+            <span style={{
               fontFamily: 'Poppins, sans-serif',
-              fontWeight: 500,
+              fontWeight: 600,
               fontSize: '14px',
               lineHeight: '20px',
               letterSpacing: '0%',
               textTransform: 'uppercase',
               color: '#626DFF'
-            }} className="mb-4">PLATFORM</h3>
+            }}>
+            <p  className="mb-4">PLATFORM</p>
+            </span>
+            <span style={{
+              fontFamily: 'Poppins, sans-serif',
+              fontWeight: 400,
+              fontSize: '16px',
+              lineHeight: '24px',
+              letterSpacing: '0%',
+              color: '#626DFF'
+            }}>
             <ul className="space-y-2">
               {platformLinks.map((link) => (
                 <li key={link.name}>
@@ -73,6 +83,7 @@ hello@synoptix.ai
                 </li>
               ))}
             </ul>
+            </span>
           </div>
 
           {/* Solutions Links */}
@@ -85,6 +96,14 @@ hello@synoptix.ai
               letterSpacing: '0%',
               textTransform: 'uppercase',
               color: '#626DFF' }} className="mb-4">SOLUTIONS</h3>
+               <span style={{
+              fontFamily: 'Poppins, sans-serif',
+              fontWeight: 400,
+              fontSize: '16px',
+              lineHeight: '24px',
+              letterSpacing: '0%',
+              color: '#626DFF'
+            }}>
             <ul className="space-y-2">
               {solutionsLinks.map((link) => (
                 <li key={link.name}>
@@ -94,6 +113,7 @@ hello@synoptix.ai
                 </li>
               ))}
             </ul>
+            </span>
           </div>
 
           {/* Services Links */}
@@ -107,6 +127,14 @@ hello@synoptix.ai
               textTransform: 'uppercase',
               color: '#626DFF'
             }} className="mb-4">SERVICES</h3>
+            <span style={{
+              fontFamily: 'Poppins, sans-serif',
+              fontWeight: 400,
+              fontSize: '16px',
+              lineHeight: '24px',
+              letterSpacing: '0%',
+              color: '#626DFF'
+            }}>
             <ul className="space-y-2">
               {servicesLinks.map((link) => (
                 <li key={link.name}>
@@ -116,6 +144,7 @@ hello@synoptix.ai
                 </li>
               ))}
             </ul>
+            </span>
           </div>
 
           {/* Social Links */}
@@ -137,9 +166,11 @@ hello@synoptix.ai
                 className="border border-white rounded-full flex items-center justify-center w-10 h-10 hover:opacity-80 transition-opacity"
               >
                 <span className="sr-only">Facebook</span>
-                <svg className="w-5 h-5" fill="white" viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M12.5 2C6.977 2 2.5 6.477 2.5 12C2.5 16.991 6.157 21.128 10.938 21.878V14.891H8.398V12H10.938V9.797C10.938 7.291 12.43 5.907 14.715 5.907C15.809 5.907 16.953 6.102 16.953 6.102V8.562H15.693C14.45 8.562 14.063 9.333 14.063 10.124V12H16.836L16.393 14.89H14.063V21.878C18.843 21.128 22.5 16.991 22.5 12C22.5 6.477 18.023 2 12.5 2Z" />
+                <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                  {/* <circle cx="24" cy="24" r="23" fill="#2C3E50" stroke="white" stroke-width="2"/> */}
+                  <path fill="white" d="M26.25 14h2.25V10.125C28.062 10.086 26.777 10 25.312 10c-2.938 0-4.937 1.793-4.937 5.09V18H17v4.125h3.375V34h4.125V22.125h3.562L28.5 18h-4.125v-2.656c0-1.188.321-1.844 1.875-1.844z"/>
                 </svg>
+
               </Link>
               
               <Link 
@@ -161,9 +192,13 @@ hello@synoptix.ai
                 className="border border-white rounded-full flex items-center justify-center w-10 h-10 hover:opacity-80 transition-opacity"
               >
                 <span className="sr-only">LinkedIn</span>
-                <svg className="w-5 h-5" fill="white" viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-                </svg>
+                <Image 
+                  src="/linkedin.svg" 
+                  alt="" 
+                  width={20} 
+                  height={20} 
+                  className="w-5 h-5"
+                />
               </Link>
               
               <Link 
@@ -183,9 +218,11 @@ hello@synoptix.ai
 
         {/* Bottom Bar */}
         <div className="border-t border-[#c3bbbb] pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-sm text-white mb-4 md:mb-0" style={{fontFamily: 'Inter', fontWeight: 400, fontSize: '14px', lineHeight: '100%', letterSpacing: '0%', textAlign: 'center', color: '#ffffff'}}>
+         <span style={{fontFamily: 'Inter', fontWeight: 400, fontSize: '14px', lineHeight: '100%', letterSpacing: '0%', textAlign: 'center', color: '#ffffff'}}>
+          <p className=" mb-4 md:mb-0" >
             2025 Synoptix.AI All Rights Reserved.
           </p>
+          </span>
           <div className="flex space-x-6">
             <Link href="/privacy-policy" className="text-sm text-white hover:text-white transition-colors"style={{fontFamily: 'Inter', fontWeight: 400, fontSize: '14px', lineHeight: '100%', letterSpacing: '0%', textAlign: 'center', color: '#ffffff'}}>
               Privacy Policy
