@@ -3,23 +3,23 @@ import Image from "next/image"
 export default function DeploymentSection() {
   return (
     <section className="w-full py-10 bg-white ">
-      <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row gap-12 justify-center">
+      <div className="max-w-6xl mx-auto">
+        <div className="flex flex-col md:flex-row gap-16 justify-center">
           {/* Cloud-Native Deployment */}
-          <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 w-[584px]">
-            <div className="h-[400px] relative mb-6 flex items-center justify-center bg-white rounded-xl overflow-hidden">
-              <Image
-                src="/platform/cloud native development.svg"
-                alt="Cloud-Native Deployment illustration"
-                width={300}
-                height={300}
+          <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 w-[600px]">
+            <div className="h-[400px] relative flex items-center justify-center bg-white rounded-xl overflow-hidden">
+            <Image
+                src="/platform/fully online development.svg"
+                alt="Fully-Offline Deployment illustration"
+                width={350}
+                height={350}
                 className="object-contain"
               />
             </div>
             <div className="text-center md:text-left px-4">
               <h2 className="text-[#5662F6] font-bold text-2xl mb-1" style={{ fontFamily: "Syne, sans-serif" }}>Cloud-Native Deployment</h2>
               <p className="text-gray-600 text-sm mb-6" style={{ fontFamily: "Poppins, sans-serif" }}>(Client's Environment)</p>
-              <ul className="space-y-4 mt-8">
+              <ul className="space-y-1">
                 <FeatureItem text="Fully managed LLM inference" />
                 <FeatureItem text="Integrated vector search" />
                 <FeatureItem text="Secure, resilient storage" />
@@ -32,20 +32,20 @@ export default function DeploymentSection() {
           </div>
 
           {/* Fully-Offline Deployment */}
-          <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 w-[500px]">
-            <div className="h-[400px] relative mb-6 flex items-center justify-center bg-white rounded-xl overflow-hidden">
+          <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 w-[600px]">
+            <div className="h-[400px] relative  flex items-center justify-center bg-white rounded-xl overflow-hidden">
               <Image
                 src="/platform/fully online development.svg"
                 alt="Fully-Offline Deployment illustration"
-                width={300}
-                height={300}
+                width={350}
+                height={350}
                 className="object-contain"
               />
             </div>
             <div className="text-center md:text-left px-4">
               <h2 className="text-[#5662F6] font-bold text-2xl mb-1" style={{ fontFamily: "Syne, sans-serif" }}>Fully-Offline Deployment</h2>
-              <p className="text-gray-600 text-sm mb-6" style={{ fontFamily: "Poppins, sans-serif" }}>&nbsp;</p>
-              <ul className="space-y-4 mt-8">
+              <p className="text-gray-600 text-sm " style={{ fontFamily: "Poppins, sans-serif" }}>&nbsp;</p>
+              <ul className="space-y-1 mt-6">
                 <FeatureItem text="Fully managed LLM inference" />
                 <FeatureItem text="Integrated vector search" />
                 <FeatureItem text="Secure, resilient storage" />
