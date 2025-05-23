@@ -140,11 +140,13 @@ export default function Testimonials() {
           <button
             key={index}
             onClick={() => setActiveIndex(index)}
-            className={`w-3 h-3 rounded-full ${index === 1 ? "bg-indigo-600" : "bg-indigo-200"}`}
+            className={`rounded-full transition-all duration-300
+              ${index === activeIndex ? "w-7 h-7 bg-[#5662F6]" : "w-4 h-4 mt-2 bg-[#9483FF]"}`}
             aria-label={`Go to slide ${index + 1}`}
           />
         ))}
       </div>
+
     </div>
   )
 }

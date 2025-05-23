@@ -7,7 +7,7 @@ import Script from "next/script";
 import FontAwesome from "@/components/FontAwesome";
 
 // Font configurations
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], weight: ["400", "500", "600", "700"], variable: "--font-inter" });
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],

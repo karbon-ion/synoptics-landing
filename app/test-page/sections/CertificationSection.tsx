@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const CertificationSection = () => {
   return (
-    <div className="bg-gray-50 py-8 sm:py-12">
+    <div className="bg-gray-50 py-12 sm:py-16">
       <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-8">
           <div className="md:mb-0 max-w-3xl">

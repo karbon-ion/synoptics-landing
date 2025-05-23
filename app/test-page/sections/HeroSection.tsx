@@ -250,17 +250,17 @@ export default function HeroSection({ videoRef, isInView }: HeroSectionProps) {
           title="Demo Video"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
-          width="1030"
-          height="633"
-          className="absolute top-[14px] left-[19px]  pl-23 pt-28 z-10 rounded-lg"
+          width="950"
+          height="590"
+          className="absolute top-[8px] left-[50px]  pl-23 pt-28 z-10 rounded-lg"
           style={{ border: 'none' }}
         />
         <Image
           src="/test-page/videoFrame.png"
           alt="Video Frame"
-          width={1200}
-          height={750}
-          className="absolute top-0 left-0 z-20 pointer-events-none"
+          width={1100}
+          height={600}
+          className="absolute top-0 left-10 z-20 pointer-events-none"
           priority
         />
       </div>

@@ -4,7 +4,7 @@ import React from 'react';
 
 const IntegrationSection = () => {
   return (
-    <section className="bg-[#f0f6ff] py-40 px-8">
+    <section className="bg-[#f0f6ff] py-30 px-8">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
         {/* Left Side */}
         <div className="md:w-1/2 text- mb-5 md:text-left">
@@ -28,13 +28,17 @@ const IntegrationSection = () => {
         </div>
 
         {/* Right Side */}
-        <div className="md:w-1/2">
-          {/* <img
-            src="/path/to/your/dummy-image.png"
-            alt="Integration icons"
-            className="w-full max-w-md mx-auto"
-          /> */}
-        </div>
+        <div className="w-full md:w-1/2 relative">
+  <div className="absolute top-1/2 right-0 left-80 transform -translate-y-1/2">
+    <img
+      src="/platform/background.png"
+      alt="Integration illustration"
+      className="h-auto w-[600px] max-w-none object-contain"
+    />
+  </div>
+</div>
+
+
       </div>
     </section>
   );

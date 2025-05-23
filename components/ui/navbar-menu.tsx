@@ -89,7 +89,7 @@ export const Menu = ({
   return (
     <nav
       onMouseLeave={() => setActive(null)}
-      className={`relative rounded-full border border-transparent hidden md:flex items-center justify-center space-x-6 px-8 py-4 transition-all duration-300 ${isScrolled ? 'bg-white/80 backdrop-blur-sm shadow-md' : 'bg-transparent'
+      className={`relative rounded-full border border-transparent hidden md:flex items-center justify-center space-x-6 px-30 py-4 transition-all duration-300 ${isScrolled ? 'bg-white/80 backdrop-blur-sm shadow-md' : 'bg-transparent'
         }`}
     >
       {children}
@@ -256,24 +256,25 @@ export const NavbarMenu = () => {
       
 
       <div className="max-w-7xl w-full flex justify-center">
-        <Menu setActive={setActive} isScrolled={scrolled}>
-          <div className="flex items-center mr-8">
-            <Link href="/" className="flex items-center gap-2 group">
-              <div className="relative w-8 h-8 transition-transform duration-300 group-hover:scale-110">
-                <Image
-                  src="/synoptix_logo.png"
-                  alt="Synoptix Logo"
-                  fill
-                  className="object-contain"
-                />
-              </div>
-              <span className="text-[28px] font-bold tracking-tight">
-                Synoptix<span className="text-blue-500">.</span>AI
-              </span>
-            </Link>
-          </div>
+      <Menu setActive={setActive} isScrolled={scrolled}>
+  <div className="flex items-center pr-30">
+    {/* Logo */}
+    <Link href="/" className="flex items-center gap-2 group">
+      <div className="relative w-8 h-8 transition-transform duration-300 group-hover:scale-110">
+        <Image
+          src="/synoptix_logo.png"
+          alt="Synoptix Logo"
+          fill
+          className="object-contain"
+        />
+      </div>
+      <span className="text-[28px] font-bold tracking-tight">
+        Synoptix<span className="text-blue-500">.</span>AI
+      </span>
+    </Link>
+  </div>
 
-          <div className="flex items-center space-x-8">
+  <div className="ml-10 flex items-center space-x-8">
             <MenuItem setActive={setActive} active={active} item="Home" href="/" />
 
             <MenuItem setActive={setActive} active={active} item="Platform">
