@@ -1,11 +1,21 @@
 import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 import React from 'react';
 
 const IntegrationSection = () => {
   return (
-    <section className="bg-[#f0f6ff] py-30 px-8">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
+    <section className="relative py-30 px-8 overflow-hidden">
+      <div className="absolute inset-0 w-full h-full z-0">
+        <Image 
+          src="/platform/seamless background.svg" 
+          alt="Seamless integration background" 
+          fill 
+          style={{ objectFit: 'cover' }} 
+          priority 
+        />
+      </div>
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12 relative z-10">
         {/* Left Side */}
         <div className="md:w-1/2 text- mb-5 md:text-left">
         <span style={{ fontFamily: "Syne, sans-serif", fontWeight: 700, fontSize: "36px", lineHeight: "72px", letterSpacing: "0%" }}>
@@ -29,14 +39,10 @@ const IntegrationSection = () => {
 
         {/* Right Side */}
         <div className="w-full md:w-1/2 relative">
-  <div className="absolute top-1/2 right-0 left-80 transform -translate-y-1/2">
-    <img
-      src="/platform/background.png"
-      alt="Integration illustration"
-      className="h-auto w-[600px] max-w-none object-contain"
-    />
-  </div>
-</div>
+          <div className="relative h-80 w-full">
+            {/* Content for the right side if needed */}
+          </div>
+        </div>
 
 
       </div>

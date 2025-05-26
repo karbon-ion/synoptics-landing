@@ -79,22 +79,22 @@ export default function EnterpriseSection() {
 
   const tabImages: Record<TabKey, { src: string; alt: string; style: React.CSSProperties }> = {
     search: {
-      src: "/test-page/enterprise/synoptix search.png",
+      src: "/test-page/enterprise/gifs/GIF-1.gif",
       alt: "Synoptix Search",
-      style: { width: "900px", height: "650px", marginBottom: "15%" },
+      style: { width: "498px", height: "443px", },
     },
     agents: {
-      src: "/test-page/enterprise/agents.png",
+      src: "/test-page/enterprise/gifs/GIF-2.gif",
       alt: "Synoptix Agents",
       style: { width: "498px", height: "443px" },
     },
     library: {
-      src: "/test-page/enterprise/library.png",
+      src: "/test-page/enterprise/gifs/GIF-3.gif",
       alt: "Synoptix Library",
       style: { width: "498px", height: "443px" },
     },
     voice: {
-      src: "/test-page/enterprise/voice agents.png",
+      src: "/test-page/enterprise/gifs/GIF-4.gif",
       alt: "Synoptix Voice Agents",
       style: { width: "498px", height: "443px" },
     },
@@ -228,15 +228,11 @@ export default function EnterpriseSection() {
           </div>
 
           {/* Right column - image */}
-          <div className="w-full lg:w-[55%] flex items-center justify-center h-full">
+          <div className="w-full lg:w-[55%] flex items-center justify-center min-h-[1200px]">
             <div className="relative w-full h-full">
-              <div className="relative w-[619px] h-[520px]  mx-auto">
+<div className="relative w-[619px] h-[520px]  mx-auto">
                 {/* Frame Background */}
-                <img
-                  src="/test-page/frame.png"
-                  alt="Frame"
-                  className="absolute inset-0 w-full h-full object-contain z-0 pointer-events-none"
-                />
+                
 
                 {/* Crossfade Images */}
                 <div className="absolute inset-0 flex items-center justify-center z-10">
