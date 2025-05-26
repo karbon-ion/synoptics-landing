@@ -4,80 +4,57 @@ import Link from "next/link"
 
 export default function ContactForm() {
   return (
-    <div className="container mx-auto py-50 px-4 sm:px-6 lg:px-8 max-w-7xl">
+    <div className="container mx-auto py-50 px-4 sm:px-6 lg:px-8 max-w-6xl">
       <div className="grid md:grid-cols-2 gap-0 rounded-xl overflow-hidden bg-white shadow-lg h-[650px] rounded-[12px]">
-        {/* Left side - Image */}
-        <div className="relative h-[300px] md:h-full min-h-[400px]">
+        {/* Left side - SVG Background */}
+        <div className="relative h-[500px] md:h-full min-h-[500px]">
           <Image
-            src="https://images.unsplash.com/photo-1633613286991-611fe299c4be?q=80&w=1000"
-            alt="Colorful stars background"
+            src="/contact-us/contact-us.svg"
+            alt="Contact us background"
             fill
             className="object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#6366f1]/10 to-transparent"></div>
-
+          
           {/* Content overlay on the image */}
-          <div className="absolute inset-0 p-8 md:p-12 flex flex-col justify-center">
-            <h2 className="text-3xl font-semibold tracking-tight">
-              See <span className="text-[#6366f1]">Synoptix</span> in action
-            </h2>
+          <div className="absolute inset-0 flex flex-col ml-3">
+            <div className="md:pt-12 md:px-12 mb-4">
+              <span style={{ fontFamily: "Syne, sans-serif", fontWeight: 700, fontSize: "36px", lineHeight: "45px", letterSpacing: "0%" }}>
+              <h2 className="text-3xl tracking-tight">
+                See <span className="text-[#6366f1]">Synoptix</span> in action
+              </h2>
+              </span>
+            </div>
 
-            <div className="space-y-4 mt-6">
+            <div className="px-8 md:px-12 space-y-4 ">
               <div className="flex items-start gap-3">
-                <div className="h-5 w-5 mt-0.5 rounded-full bg-[#6366f1]"></div>
+                
+                <Image src="/test-page/synoptix/star.png" alt="Star bullet point" width={20} height={20} className="mt-0.5" />
+                <span style={{ fontFamily: "Poppins, sans-serif", fontWeight: 400, fontSize: "14px", lineHeight: "17px", letterSpacing: "0.4%", color: "#000000" }}>
                 <p className="text-sm">Deliver real-time, AI-driven answers directly within your reps' workflows</p>
+                </span>
               </div>
 
               <div className="flex items-start gap-3">
-                <div className="h-5 w-5 mt-0.5 rounded-full bg-[#6366f1]"></div>
+                <Image src="/test-page/synoptix/star.png" alt="Star bullet point" width={20} height={20} className="mt-0.5" />
+                <span style={{ fontFamily: "Poppins, sans-serif", fontWeight: 400, fontSize: "14px", lineHeight: "17px", letterSpacing: "0.4%", color: "#000000" }}>
                 <p className="text-sm">Surface personalized content based on customer context and rep engagement</p>
+                </span>
               </div>
 
               <div className="flex items-start gap-3">
-                <div className="h-5 w-5 mt-0.5 rounded-full bg-[#6366f1]"></div>
+                <Image src="/test-page/synoptix/star.png" alt="Star bullet point" width={20} height={20} className="mt-0.5" />
+                <span style={{ fontFamily: "Poppins, sans-serif", fontWeight: 400, fontSize: "14px", lineHeight: "17px", letterSpacing: "0.4%", color: "#000000" }}>
                 <p className="text-sm">Cut down prospecting prep with instant access to current battle cards</p>
+                </span>
               </div>
             </div>
 
-            {/* Product demo visualization */}
-            <div className="mt-8 bg-white/80 backdrop-blur-sm rounded-lg p-4 shadow-sm">
-              <div className="grid grid-cols-1 gap-1">
-                {["Preferred Time", "Current Tools", "Goals", "Teams", "Use Cases"].map((item, index) => (
-                  <div
-                    key={index}
-                    className={`px-4 py-2 text-sm rounded-md ${index === 4 ? "bg-[#e0e7ff] shadow-sm" : ""}`}
-                  >
-                    {item}
-                  </div>
-                ))}
-              </div>
-
-              <div className="mt-4 bg-gray-100 rounded-md p-4">
-                <div className="flex items-start gap-2">
-                  <div className="h-6 w-6 rounded-full bg-[#6366f1] flex-shrink-0"></div>
-                  <p className="text-xs text-gray-600">Let us know what you're exploring Synoptix for:</p>
-                </div>
-
-                <div className="mt-4 grid grid-cols-2 gap-2">
-                  {[
-                    "AI-powered Search",
-                    "Knowledge Management",
-                    "Compliance Automation",
-                    "Workflow Integration",
-                    "Other",
-                  ].map((item, index) => (
-                    <div key={index} className="px-2 py-1 text-xs bg-white rounded border border-gray-200">
-                      {item}
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
+           
           </div>
         </div>
 
         {/* Right side - Form */}
-        <div className="p-8 md:p-12">
+        <div className="p-8 md:p-12 mt-20">
           <form className="space-y-6" style={{ fontFamily: 'Poppins, sans-serif', color: '#666666', fontWeight: 400, fontSize: '16px', lineHeight: '100%', letterSpacing: '0%' }}>
             <div>
               <label htmlFor="email" className="block text-sm font-medium mb-1">
