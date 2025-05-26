@@ -12,13 +12,22 @@ export default function PlatformFeatures() {
         </div>
         <div className="bg-white p-0 rounded-b-lg">
           <div className="grid grid-cols-3 divide-x divide-gray-100">
-            <div className="p-6 text-center">
+            <div className="p-6 text-center flex flex-col items-center">
+              <div className="mb-3">
+                <Image src="/platform/platform-features/fine-tuning.svg" alt="Fine Tuning" width={32} height={32} />
+              </div>
               <p className="text-[#323E50] font-medium">Reasoning & Decision Marking</p>
             </div>
-            <div className="p-6 text-center">
+            <div className="p-6 text-center flex flex-col items-center">
+              <div className="mb-3">
+                <Image src="/platform/platform-features/universal-knowledge.svg" alt="Universal Knowledge" width={32} height={32} />
+              </div>
               <p className="text-[#323E50] font-medium">Agent Collaboration & APIs</p>
             </div>
-            <div className="p-6 text-center">
+            <div className="p-6 text-center flex flex-col items-center">
+              <div className="mb-3">
+                <Image src="/platform/platform-features/data-insights.svg" alt="Data Insights" width={32} height={32} />
+              </div>
               <p className="text-[#323E50] font-medium">Knowledge Access</p>
             </div>
           </div>
@@ -32,13 +41,22 @@ export default function PlatformFeatures() {
         </div>
         <div className="bg-white p-0 rounded-b-lg">
           <div className="grid grid-cols-3 divide-x divide-gray-100">
-            <div className="p-6 text-center">
+            <div className="p-6 text-center flex flex-col items-center">
+              <div className="mb-3">
+                <Image src="/platform/platform-features/enterprise-data-search.svg" alt="Enterprise Data Search" width={32} height={32} />
+              </div>
               <p className="text-[#323E50] font-medium">Query Understanding</p>
             </div>
-            <div className="p-6 text-center">
+            <div className="p-6 text-center flex flex-col items-center">
+              <div className="mb-3">
+                <Image src="/platform/platform-features/data-insights.svg" alt="Data Insights" width={32} height={32} />
+              </div>
               <p className="text-[#323E50] font-medium">Content Understanding</p>
             </div>
-            <div className="p-6 text-center">
+            <div className="p-6 text-center flex flex-col items-center">
+              <div className="mb-3">
+                <Image src="/platform/platform-features/fine-tuning.svg" alt="Fine Tuning" width={32} height={32} />
+              </div>
               <p className="text-[#323E50] font-medium">Orchestration & Self Learning</p>
             </div>
           </div>
@@ -46,8 +64,18 @@ export default function PlatformFeatures() {
       </div>
 
       <div className="grid grid-cols-12 gap-4 mb-4">
-        <div className="col-span-3 bg-[#5662F6] bg-opacity-20 rounded-lg p-6 flex flex-col justify-center">
-          <p className="text-[#323E50] font-medium text-center">Monitoring & Performance</p>
+        <div className="col-span-3 rounded-lg p-6 flex flex-col justify-center relative overflow-hidden" 
+          style={{ 
+            background: '#94ADFF',
+            position: 'relative',
+            boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)'
+          }}>
+          <div className="absolute top-0 right-0 w-full h-full" 
+            style={{
+              background: 'linear-gradient(125.97deg, transparent 30%, rgba(255, 255, 255, 0.2) 70%, rgba(255, 255, 255, 0.1) 100%)',
+            }}>
+          </div>
+          <p className="text-[#ffffff] font-medium text-center relative z-10" style={{ fontFamily: 'Syne, sans-serif',fontWeight:700,fontSize:'24px',lineHeight:'24px' }}>Monitoring & Performance</p>
         </div>
         <div className="col-span-3 bg-white rounded-lg p-6 shadow-sm flex flex-col items-center justify-center">
           <div className="mb-3">
