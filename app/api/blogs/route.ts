@@ -101,6 +101,7 @@ async function getBlogPosts(): Promise<BlogPost[]> {
       let metadataImage = '';
       let metadataDate = '';
       let metadataCategory = 'Technology';
+      let metadataTitle = '';
       
       const metadataFileName = file.replace('.docx', '.json');
       const metadataFilePath = path.join(METADATA_DIR, metadataFileName);
@@ -109,6 +110,11 @@ async function getBlogPosts(): Promise<BlogPost[]> {
         try {
           const metadataContent = fs.readFileSync(metadataFilePath, 'utf8');
           const metadata = JSON.parse(metadataContent);
+          
+          // Use title from metadata if available
+          if (metadata.title) {
+            metadataTitle = metadata.title;
+          }
           
           // Use image from metadata if available
           if (metadata.image) {
@@ -153,9 +159,12 @@ async function getBlogPosts(): Promise<BlogPost[]> {
       const plainTextResult = await mammoth.extractRawText({ buffer });
       const content = plainTextResult.value;
       
+      // Use metadata title if available, otherwise use the extracted title
+      const finalTitle = metadataTitle || title;
+      
       blogPosts.push({
         id: i.toString(),
-        title,
+        title: finalTitle,
         description,
         image,
         date,
