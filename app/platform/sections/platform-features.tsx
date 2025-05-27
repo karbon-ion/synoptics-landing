@@ -4,30 +4,24 @@ import Image from 'next/image';
 
 export default function PlatformFeatures() {
   return (
-    <section className="py-8 px-4 max-w-7xl mt-15 mx-auto">
-      <div className="bg-[#5662F6] bg-opacity-80 rounded-lg mb-4 overflow-hidden">
-        <div className="py-3 px-6 flex items-center">
+    <section className="py-8 px-20  shadow-lg max-w-7xl mt-15 mx-auto">
+      <div className="bg-[#5662F6] bg-opacity-80 rounded-lg  mb-4 overflow-hidden">
+        <div className="py-3 px-6 flex items-center justify-center">
           <span className="text-white mr-2">👤</span>
           <span className="text-white font-medium">Agents</span>
         </div>
         <div className="bg-white p-0 rounded-b-lg">
           <div className="grid grid-cols-3 divide-x divide-gray-100">
             <div className="p-6 text-center flex flex-col items-center">
-              <div className="mb-3">
-                <Image src="/platform/platform-features/fine-tuning.svg" alt="Fine Tuning" width={32} height={32} />
-              </div>
+              
               <p className="text-[#323E50] font-medium">Reasoning & Decision Marking</p>
             </div>
             <div className="p-6 text-center flex flex-col items-center">
-              <div className="mb-3">
-                <Image src="/platform/platform-features/universal-knowledge.svg" alt="Universal Knowledge" width={32} height={32} />
-              </div>
+              
               <p className="text-[#323E50] font-medium">Agent Collaboration & APIs</p>
             </div>
             <div className="p-6 text-center flex flex-col items-center">
-              <div className="mb-3">
-                <Image src="/platform/platform-features/data-insights.svg" alt="Data Insights" width={32} height={32} />
-              </div>
+              
               <p className="text-[#323E50] font-medium">Knowledge Access</p>
             </div>
           </div>
@@ -35,28 +29,21 @@ export default function PlatformFeatures() {
       </div>
 
       <div className="bg-[#5662F6] bg-opacity-80 rounded-lg mb-4 overflow-hidden">
-        <div className="py-3 px-6 flex items-center">
+        <div className="py-3 px-6 flex items-center justify-center">
           <span className="text-white mr-2">🔍</span>
           <span className="text-white font-medium">Enterprise Search</span>
         </div>
         <div className="bg-white p-0 rounded-b-lg">
           <div className="grid grid-cols-3 divide-x divide-gray-100">
             <div className="p-6 text-center flex flex-col items-center">
-              <div className="mb-3">
-                <Image src="/platform/platform-features/enterprise-data-search.svg" alt="Enterprise Data Search" width={32} height={32} />
-              </div>
+              
               <p className="text-[#323E50] font-medium">Query Understanding</p>
             </div>
             <div className="p-6 text-center flex flex-col items-center">
-              <div className="mb-3">
-                <Image src="/platform/platform-features/data-insights.svg" alt="Data Insights" width={32} height={32} />
-              </div>
+              
               <p className="text-[#323E50] font-medium">Content Understanding</p>
             </div>
             <div className="p-6 text-center flex flex-col items-center">
-              <div className="mb-3">
-                <Image src="/platform/platform-features/fine-tuning.svg" alt="Fine Tuning" width={32} height={32} />
-              </div>
               <p className="text-[#323E50] font-medium">Orchestration & Self Learning</p>
             </div>
           </div>
@@ -64,62 +51,89 @@ export default function PlatformFeatures() {
       </div>
 
       <div className="grid grid-cols-12 gap-4 mb-4">
-        <div className="col-span-3 rounded-lg p-6 flex flex-col justify-center relative overflow-hidden" 
-          style={{ 
-            background: '#94ADFF',
-            position: 'relative',
-            boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)'
-          }}>
-          <div className="absolute top-0 right-0 w-full h-full" 
-            style={{
-              background: 'linear-gradient(125.97deg, transparent 30%, rgba(255, 255, 255, 0.2) 70%, rgba(255, 255, 255, 0.1) 100%)',
-            }}>
-          </div>
-          <p className="text-[#ffffff] font-medium text-center relative z-10" style={{ fontFamily: 'Syne, sans-serif',fontWeight:700,fontSize:'24px',lineHeight:'24px' }}>Monitoring & Performance</p>
-        </div>
-        <div className="col-span-3 bg-white rounded-lg p-6 shadow-sm flex flex-col items-center justify-center">
-          <div className="mb-3">
-            <Image src="/platform/ai-agents/observability.svg" alt="Observability" width={32} height={32} />
-          </div>
-          <p className="text-[#323E50] font-medium">Observability</p>
-        </div>
-        <div className="col-span-3 bg-white rounded-lg p-6 shadow-sm flex flex-col items-center justify-center">
-          <div className="mb-3">
-            <Image src="/platform/ai-agents/evaluations.svg" alt="Evaluations" width={32} height={32} />
-          </div>
-          <p className="text-[#323E50] font-medium">Evaluations</p>
-        </div>
-        <div className="col-span-3 bg-white rounded-lg p-6 shadow-sm flex flex-col items-center justify-center">
-          <div className="mb-3">
-            <Image src="/platform/ai-agents/llm.svg" alt="LLM Ops" width={32} height={32} />
-          </div>
-          <p className="text-[#323E50] font-medium">LLM Ops</p>
-        </div>
-      </div>
+  {/* Title Block */}
+  <div className="col-span-3 h-[132px] w-[255px] flex flex-col justify-center relative overflow-hidden rounded-l-[20px]" 
+    style={{ 
+      background: '#94ADFF',
+      boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)'
+    }}>
+    <div className="absolute top-0 right-0 w-full h-full" 
+      style={{
+        background: 'linear-gradient(125.97deg, transparent 30%, rgba(255, 255, 255, 0.2) 70%, rgba(255, 255, 255, 0.1) 100%)'
+      }}>
+    </div>
+    <p className="text-white font-bold text-center relative z-10 text-xl" style={{ fontFamily: 'Syne, sans-serif' }}>
+      Monitoring & Performance
+    </p>
+  </div>
 
-      <div className="grid grid-cols-12 gap-4 mb-6">
-        <div className="col-span-3 bg-[#5662F6] bg-opacity-20 rounded-lg p-6 flex flex-col justify-center">
-          <p className="text-[#323E50] font-medium text-center">Responsible AI</p>
-        </div>
-        <div className="col-span-3 bg-white rounded-lg p-6 shadow-sm flex flex-col items-center justify-center">
-          <div className="mb-3">
-            <Image src="/platform/ai-agents/security.svg" alt="Security" width={32} height={32} />
-          </div>
-          <p className="text-[#323E50] font-medium">Security</p>
-        </div>
-        <div className="col-span-3 bg-white rounded-lg p-6 shadow-sm flex flex-col items-center justify-center">
-          <div className="mb-3">
-            <Image src="/platform/ai-agents/compliance.svg" alt="Compliance" width={32} height={32} />
-          </div>
-          <p className="text-[#323E50] font-medium">Compliance</p>
-        </div>
-        <div className="col-span-3 bg-white rounded-lg p-6 shadow-sm flex flex-col items-center justify-center">
-          <div className="mb-3">
-            <Image src="/platform/ai-agents/governance.svg" alt="Governance" width={32} height={32} />
-          </div>
-          <p className="text-[#323E50] font-medium">Governance</p>
-        </div>
-      </div>
+  {/* Observability */}
+  <div className="col-span-3 bg-white h-[132px] rounded-lg shadow-sm flex flex-col items-center justify-center">
+    <div className="mb-3">
+      <Image src="/platform/ai-agents/observability.svg" alt="Observability" width={32} height={32} />
+    </div>
+    <p className="text-[#323E50] font-medium">Observability</p>
+  </div>
+
+  {/* Evaluations */}
+  <div className="col-span-3 bg-white h-[132px] rounded-lg shadow-sm flex flex-col items-center justify-center">
+    <div className="mb-3">
+      <Image src="/platform/ai-agents/evaluations.svg" alt="Evaluations" width={32} height={32} />
+    </div>
+    <p className="text-[#323E50] font-medium">Evaluations</p>
+  </div>
+
+  {/* LLM Ops */}
+  <div className="col-span-3 bg-white h-[132px] rounded-lg shadow-sm flex flex-col items-center justify-center">
+    <div className="mb-3">
+      <Image src="/platform/ai-agents/llm.svg" alt="LLM Ops" width={32} height={32} />
+    </div>
+    <p className="text-[#323E50] font-medium">LLM Ops</p>
+  </div>
+</div>
+
+
+<div className="grid grid-cols-12 gap-4 mb-4">
+  {/* Title Block */}
+  <div className="col-span-3 h-[132px] flex flex-col justify-center relative overflow-hidden rounded-l-[20px]" 
+    style={{ 
+      background: '#94ADFF',
+      boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)'
+    }}>
+    <div className="absolute top-0 right-0 w-full h-full" 
+      style={{
+        background: 'linear-gradient(125.97deg, transparent 30%, rgba(255, 255, 255, 0.2) 70%, rgba(255, 255, 255, 0.1) 100%)'
+      }}>
+    </div>
+    <p className="text-white font-bold text-center relative z-10 text-xl" style={{ fontFamily: 'Syne, sans-serif' }}>
+      Monitoring & Performance
+    </p>
+  </div>
+
+  {/* Observability */}
+  <div className="col-span-3 bg-white h-[132px] rounded-lg shadow-sm flex flex-col items-center justify-center">
+    <div className="mb-3">
+      <Image src="/platform/ai-agents/observability.svg" alt="Observability" width={32} height={32} />
+    </div>
+    <p className="text-[#323E50] font-medium">Observability</p>
+  </div>
+
+  {/* Evaluations */}
+  <div className="col-span-3 bg-white h-[132px] rounded-lg shadow-sm flex flex-col items-center justify-center">
+    <div className="mb-3">
+      <Image src="/platform/ai-agents/evaluations.svg" alt="Evaluations" width={32} height={32} />
+    </div>
+    <p className="text-[#323E50] font-medium">Evaluations</p>
+  </div>
+
+  {/* LLM Ops */}
+  <div className="col-span-3 bg-white h-[132px] rounded-lg shadow-sm flex flex-col items-center justify-center">
+    <div className="mb-3">
+      <Image src="/platform/ai-agents/llm.svg" alt="LLM Ops" width={32} height={32} />
+    </div>
+    <p className="text-[#323E50] font-medium">LLM Ops</p>
+  </div>
+</div>
 
       <div className="grid grid-cols-12 gap-4">
         {/* Integration Section - Spans from Responsible AI to Security (col-span-6) */}
