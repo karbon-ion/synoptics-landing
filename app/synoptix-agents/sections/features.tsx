@@ -37,52 +37,40 @@ const featuresData = [
 
 export default function FeaturesSection() {
   return (
-    <section className="py-20 bg-white max-w-7xl mx-auto">
-      <div className="container mx-auto px-4">
+    <section className="relative py-16 bg-white overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4">
         {featuresData.map((feature, index) => (
-          <div 
+          <div
             key={feature.id}
-            className={`flex flex-col ${index !== featuresData.length - 1 ? 'mb-20' : ''} ${
+            className={`relative flex flex-col lg:flex-row ${
               feature.imagePosition === 'right' ? 'lg:flex-row' : 'lg:flex-row-reverse'
-            } items-center`}
+            } items-center justify-between ${index !== featuresData.length - 1 ? 'mb-48' : ''} ${index > 0 ? '-mt-32' : ''}`}
           >
             {/* Text Content */}
-            <div className={`lg:w-2/5 ${feature.imagePosition === 'left' ? 'lg: mb-6 lg:mb-0' : 'mb-6 lg:mb-0'}`}>
-
-              <div className="max-w-4xl">
-                <h2 
-                  style={{
-                    fontFamily: "Syne",
-                    fontWeight: 700,
-                    fontSize: "36px",
-                    lineHeight: "45px",
-                    letterSpacing: "0%"
-                  }}
-                  className="mb-4 text-gray-900"
-                >
+            <div className="w-full lg:w-2/5 z-10">
+              <div className="max-w-lg">
+                <h2 className="mb-4 text-3xl md:text-4xl font-bold text-gray-900" style={{
+                  fontFamily: 'Syne',
+                  lineHeight: '1.2',
+                  letterSpacing: '0%'
+                }}>
                   {feature.title}
                 </h2>
-                <p 
-                  style={{
-                    fontFamily: "Poppins",
-                    fontWeight: 400,
-                    fontSize: "16px",
-                    lineHeight: "27px",
-                    letterSpacing: "0.4px",
-                    verticalAlign: "middle"
-                  }}
-                  className="text-gray-600 mb-6"
-                >
+                <p className="text-gray-600 mb-6 text-base md:text-lg" style={{
+                  fontFamily: 'Poppins',
+                  lineHeight: '1.7',
+                  letterSpacing: '0.4px'
+                }}>
                   {feature.description}
                 </p>
                 <Link
                   href="#"
-                  className="inline-flex items-center text-[#6B7BF7]"
+                  className="inline-flex items-center text-[#6B7BF7] hover:opacity-80 transition-opacity"
                   style={{
-                    fontFamily: "Syne",
+                    fontFamily: 'Syne',
                     fontWeight: 700,
-                    fontSize: "14px",
-                    lineHeight: "100%",
+                    fontSize: '14px',
+                    lineHeight: '100%'
                   }}
                 >
                   Learn more about {feature.id.split('-').join(' ')}
@@ -90,16 +78,17 @@ export default function FeaturesSection() {
                 </Link>
               </div>
             </div>
-            
+
             {/* Image */}
-            <div className="lg:w-3/5">
-              <div className={`relative ${feature.imagePosition === 'left' ? 'lg:-ml-6' : 'lg:ml-12'}`}>
+            <div className={`w-full lg:w-3/5 pr-10  ${feature.imagePosition === 'right' ? 'lg:-mr-12 pl-20' : 'lg:-ml-12 pr-15  '}`}>
+              <div className="relative rounded-lg overflow-hidden shadow-lg">
                 <Image
                   src={feature.imageUrl}
                   alt={feature.title}
-                  width={615}
-                  height={444}
-                  className="rounded-lg shadow-lg"
+                  width={800}
+                  height={579}
+                  className="w-full h-auto object-cover"
+                  priority={index === 0}
                 />
               </div>
             </div>
