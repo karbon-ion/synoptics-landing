@@ -63,10 +63,10 @@ export default function AgentTypesSection() {
   const activeAgent = agentTypesData.find(agent => agent.id === activeAgentId) || agentTypesData[0];
   
   return (
-    <section className="py-16 md:py-24 w-full max-w-8xl mx-auto">
-      <div className="container mx-auto px-4">
+    <section className="py-16 w-full mx-auto">
+      <div className="container mx-auto ">
         <h2 
-          className="text-3xl md:text-4xl font-bold text-gray-800 mb-12 text-center"
+          className="text-3xl md:text-4xl font-bold text-gray-800  text-center"
           style={{
             fontFamily: "Syne",
             fontWeight: 700
@@ -75,14 +75,14 @@ export default function AgentTypesSection() {
           Discover the AI Agents Designed for <span className="text-indigo-500">Enterprise</span>
         </h2>
         
-        <div className="relative overflow-hidden rounded-xl w-full">
+        <div className="relative overflow-hidden rounded-xl pt-20 w-full">
           <div className="absolute inset-0 z-0 h-full w-full">
             <Image 
               src="/synoptix-agents/features/background.png"
               alt="Background"
               fill
               priority
-              className="object-cover"
+              className="object-contain"
             />
           </div>
           

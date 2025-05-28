@@ -9,28 +9,28 @@ const featuresData = [
     id: 'create-agents',
     title: 'Create AI agents effortlessly with natural language',
     description: "Turn ideas into structured workflows using simple natural language prompts. Our intuitive interface helps you specify your agent's purpose and makes it easy to build with your data right away.",
-    imageUrl: 'https://dummyimage.com/615x444/e6e7ff/6B7BF7.png',
+    imageUrl: '/synoptix-agents/features/image-1.png',
     imagePosition: 'left'
   },
   {
     id: 'customize-agent',
     title: 'Create AI agents effortlessly with natural language',
     description: "Turn ideas into structured workflows using simple natural language prompts. Our intuitive interface helps you specify your agent's purpose and makes it easy to build with your data right away.",
-    imageUrl: 'https://images.unsplash.com/photo-1593720213428-28a5b9e94613?q=80&w=615&h=444&auto=format&fit=crop',
+    imageUrl: '/synoptix-agents/features/image-2.png',
     imagePosition: 'right'
   },
   {
     id: 'deploy-agent',
     title: 'Create AI agents effortlessly with natural language',
     description: "Turn ideas into structured workflows using simple natural language prompts. Our intuitive interface helps you specify your agent's purpose and makes it easy to build with your data right away.",
-    imageUrl: 'https://dummyimage.com/615x444/6B7BF7/ffffff',
+    imageUrl: '/synoptix-agents/features/image-3.png',
     imagePosition: 'left'
   },
   {
     id: 'manage-agent',
     title: 'Create AI agents effortlessly with natural language',
     description: "Turn ideas into structured workflows using simple natural language prompts. Our intuitive interface helps you specify your agent's purpose and makes it easy to build with your data right away.",
-    imageUrl: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=615&h=444&auto=format&fit=crop',
+    imageUrl: '/synoptix-agents/features/image-4.png',
     imagePosition: 'right'
   }
 ];

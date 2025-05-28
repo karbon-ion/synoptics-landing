@@ -159,6 +159,87 @@ export const NavbarMenu = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [scrolled]);
 
+  // Platform dropdown configuration that matches the image layout
+  const platformDropdownConfig = {
+    overview: {
+      title: 'Platform Overview →',
+      description: 'Turn ideas into structured workflows using simple, natural language prompts or our visual builder.',
+      href: '/platform'
+    },
+    columns: [
+      {
+        icon: '🔍',
+        title: 'Synoptix Search',
+        items: [
+          { name: 'Universal Knowledge', href: '/platform/search/universal' },
+          { name: 'Data Insights', href: '/platform/search/insights' },
+          { name: 'Enterprise Data Search', href: '/platform/search/enterprise' },
+          { name: 'Fine-Tuning/Industry Specific', href: '/platform/search/industry' }
+        ]
+      },
+      {
+        icon: '👤',
+        title: 'Synoptix Agents',
+        items: [
+          { name: 'Custom Agents', href: '/synoptix-agents/custom' },
+          { name: 'Reasoning Agent', href: '/synoptix-agents/reasoning' },
+          { name: 'Knowledge Access', href: '/synoptix-agents/knowledge' },
+          { name: 'Agent Library', href: '/synoptix-agents/library' }
+        ]
+      },
+      {
+        icon: '📚',
+        title: 'Synoptix Library',
+        items: [
+          { name: 'Prompt Library', href: '/platform/library/prompts' },
+          { name: 'Agent Library', href: '/platform/library/agents' }
+        ]
+      }
+    ],
+    bottom: [
+      {
+        icon: '📊',
+        title: 'Evaluation',
+        items: [
+          { name: 'Prompt Library', href: '/platform/evaluation/prompts' },
+          { name: 'Agent Library', href: '/platform/evaluation/agents' }
+        ]
+      },
+      {
+        icon: '🛡️',
+        title: 'Synoguard',
+        items: [
+          { name: 'Prompt Library', href: '/platform/synoguard/prompts' },
+          { name: 'Agent Library', href: '/platform/synoguard/agents' }
+        ]
+      },
+      {
+        icon: '🔊',
+        title: 'Synoptix Voice Agent',
+        description: '(Coming Soon)',
+        href: '/platform/voice'
+      }
+    ],
+    footer: [
+      {
+        icon: '🔄',
+        title: 'Integration',
+        href: '/platform/integration'
+      },
+      {
+        icon: '📦',
+        title: 'Model Hub',
+        href: '/platform/model-hub'
+      },
+      {
+        icon: '🔌',
+        title: 'APIs',
+        href: '/platform/apis'
+      }
+    ]
+  };
+
+  // Keeping the original platformItems for backward compatibility with mobile view
   const platformItems = [
     { 
       name: 'RAG', 
@@ -278,32 +359,178 @@ export const NavbarMenu = () => {
             <MenuItem setActive={setActive} active={active} item="Home" href="/" />
 
             <MenuItem setActive={setActive} active={active} item="Platform">
-              <div className="grid grid-cols-2 gap-4 p-4 w-[650px]">
-                {platformItems.map((item) => (
-                  <Link 
-                    key={item.name}
-                    href={item.href}
-                    className="group flex hover:bg-gray-50 transition-colors overflow-hidden"
-                  >
-                    <div className="w-[140px] h-full relative bg-gray-100 overflow-hidden rounded-xl">
-                      <Image 
-                        src={item.image} 
-                        alt={item.name}
-                        fill
-                        className="object-cover group-hover:scale-105 transition-transform duration-300"
-                        unoptimized
-                      />
-                    </div>
-                    <div className="p-3 flex h-full flex-col text-start justify-start flex-1">
-                      <h3 className="text-xl font-bold text-gray-900 group-hover:text-blue-600 mb-2">
-                        {item.name}
+              <div className="w-[1419px] bg-white p-10" style={{ height: '541px' }}>
+                {/* Main Container - Two Column Layout */}
+                <div className="flex w-full">
+                  {/* Left Column - Platform Overview */}
+                  <div className="w-[350px] pr-12">
+                    <Link href={platformDropdownConfig.overview.href} className="block">
+                      <h3 
+                        className="text-blue-600" 
+                        style={{ 
+                          fontFamily: 'Syne', 
+                          fontWeight: 700, 
+                          fontSize: '20px', 
+                          lineHeight: '100%', 
+                          letterSpacing: '0px' 
+                        }}
+                      >
+                        {platformDropdownConfig.overview.title}
                       </h3>
-                      <p className="text-sm text-gray-600 group-hover:text-blue-500">
-                        {item.description}
+                      <p 
+                        className="text-gray-600 mt-2 mb-4" 
+                        style={{ 
+                          fontFamily: 'Poppins', 
+                          fontWeight: 400, 
+                          fontSize: '12px', 
+                          lineHeight: '20px', 
+                          letterSpacing: '0%' 
+                        }}
+                      >
+                        {platformDropdownConfig.overview.description}
                       </p>
+                      
+                      <div className="rounded-lg overflow-hidden">
+                        <Image 
+                          src="/platform-overview-placeholder.png" 
+                          alt="Platform Overview" 
+                          width={300} 
+                          height={200}
+                          className="w-full h-auto object-contain"
+                          onError={(e) => {
+                            const target = e.target as HTMLImageElement;
+                            target.src = 'https://dummyimage.com/180x140/e6e7ff/6B7BF7.png&text=Platform+Overview';
+                          }}
+                        />
+                      </div>
+                    </Link>
+                  </div>
+                  
+                  {/* Right Column - Menu Grid */}
+                  <div className="flex-1">
+                    {/* Top Row - Main Sections */}
+                    <div className="grid grid-cols-3 gap-12 mb-12">
+                      {platformDropdownConfig.columns.map((column, idx) => (
+                        <div key={`col-${idx}`}>
+                          <div className="flex items-center mb-3">
+                            <span className="mr-3 text-xl">{column.icon}</span>
+                            <h3 
+                              className="text-blue-600" 
+                              style={{ 
+                                fontFamily: 'Syne', 
+                                fontWeight: 700, 
+                                fontSize: '20px', 
+                                lineHeight: '100%', 
+                                letterSpacing: '0px' 
+                              }}
+                            >
+                              {column.title}
+                            </h3>
+                          </div>
+                          <ul className="space-y-2">
+                            {column.items.map((item, itemIdx) => (
+                              <li key={`item-${idx}-${itemIdx}`}>
+                                <Link 
+                                  href={item.href} 
+                                  className="text-gray-600 hover:text-blue-600 block" 
+                                  style={{ 
+                                    fontFamily: 'Poppins', 
+                                    fontWeight: 400, 
+                                    fontSize: '12px', 
+                                    lineHeight: '20px', 
+                                    letterSpacing: '0%' 
+                                  }}
+                                >
+                                  {item.name}
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
                     </div>
-                  </Link>
-                ))}
+                    
+                    {/* Middle Row */}
+                    <div className="grid grid-cols-3 gap-12 mb-12">
+                      {platformDropdownConfig.bottom.map((section, idx) => (
+                        <div key={`bottom-${idx}`}>
+                          <div className="flex items-center mb-3">
+                            <span className="mr-3 text-xl">{section.icon}</span>
+                            <h3 
+                              className="text-blue-600" 
+                              style={{ 
+                                fontFamily: 'Syne', 
+                                fontWeight: 700, 
+                                fontSize: '20px', 
+                                lineHeight: '100%', 
+                                letterSpacing: '0px' 
+                              }}
+                            >
+                              {section.title}
+                            </h3>
+                            {section.description && (
+                              <span 
+                                className="text-gray-500 ml-2 bg-gray-100 px-2 py-0.5 rounded-md" 
+                                style={{ 
+                                  fontFamily: 'Poppins', 
+                                  fontWeight: 400, 
+                                  fontSize: '12px', 
+                                  lineHeight: '20px' 
+                                }}
+                              >
+                                {section.description}
+                              </span>
+                            )}
+                          </div>
+                          {section.items && (
+                            <ul className="space-y-2">
+                              {section.items.map((item, itemIdx) => (
+                                <li key={`bottom-item-${idx}-${itemIdx}`}>
+                                  <Link 
+                                    href={item.href} 
+                                    className="text-gray-600 hover:text-blue-600 block" 
+                                    style={{ 
+                                      fontFamily: 'Poppins', 
+                                      fontWeight: 400, 
+                                      fontSize: '12px', 
+                                      lineHeight: '20px', 
+                                      letterSpacing: '0%' 
+                                    }}
+                                  >
+                                    {item.name}
+                                  </Link>
+                                </li>
+                              ))}
+                            </ul>
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                    
+                    {/* Bottom Row - Footer */}
+                    <div className="grid grid-cols-3 gap-12 pt-6 border-t border-gray-200">
+                      {platformDropdownConfig.footer.map((item, idx) => (
+                        <div key={`footer-${idx}`}>
+                          <Link 
+                            href={item.href} 
+                            className="flex items-center text-gray-600 hover:text-blue-600"
+                          >
+                            <span className="mr-3 text-xl">{item.icon}</span>
+                            <span style={{ 
+                              fontFamily: 'Syne', 
+                              fontWeight: 700, 
+                              fontSize: '20px', 
+                              lineHeight: '100%', 
+                              letterSpacing: '0px' 
+                            }}>
+                              {item.title}
+                            </span>
+                          </Link>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
               </div>
             </MenuItem>
 

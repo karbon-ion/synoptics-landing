@@ -63,6 +63,85 @@ const Navbar = () => {
     }
   }, [servicesDropdownOpen, scrolled]);
 
+  const platformDropdownConfig = {
+    overview: {
+      title: 'Platform Overview →',
+      description: 'Turn ideas into structured workflows using simple, natural language prompts or our visual builder.',
+      href: '/platform'
+    },
+    columns: [
+      {
+        icon: '🔍',
+        title: 'Synoptix Search',
+        items: [
+          { name: 'Universal Knowledge', href: '/platform/search/universal' },
+          { name: 'Data Insights', href: '/platform/search/insights' },
+          { name: 'Enterprise Data Search', href: '/platform/search/enterprise' },
+          { name: 'Fine-Tuning/Industry Specific', href: '/platform/search/industry' }
+        ]
+      },
+      {
+        icon: '👤',
+        title: 'Synoptix Agents',
+        items: [
+          { name: 'Custom Agents', href: '/synoptix-agents/custom' },
+          { name: 'Reasoning Agent', href: '/synoptix-agents/reasoning' },
+          { name: 'Knowledge Access', href: '/synoptix-agents/knowledge' },
+          { name: 'Agent Library', href: '/synoptix-agents/library' }
+        ]
+      },
+      {
+        icon: '📚',
+        title: 'Synoptix Library',
+        items: [
+          { name: 'Prompt Library', href: '/platform/library/prompts' },
+          { name: 'Agent Library', href: '/platform/library/agents' }
+        ]
+      }
+    ],
+    bottom: [
+      {
+        icon: '📊',
+        title: 'Evaluation',
+        items: [
+          { name: 'Prompt Library', href: '/platform/evaluation/prompts' },
+          { name: 'Agent Library', href: '/platform/evaluation/agents' }
+        ]
+      },
+      {
+        icon: '🛡️',
+        title: 'Synoguard',
+        items: [
+          { name: 'Prompt Library', href: '/platform/synoguard/prompts' },
+          { name: 'Agent Library', href: '/platform/synoguard/agents' }
+        ]
+      },
+      {
+        icon: '🔊',
+        title: 'Synoptix Voice Agent',
+        description: '(Coming Soon)',
+        href: '/platform/voice'
+      }
+    ],
+    footer: [
+      {
+        icon: '🔄',
+        title: 'Integration',
+        href: '/platform/integration'
+      },
+      {
+        icon: '📦',
+        title: 'Model Hub',
+        href: '/platform/model-hub'
+      },
+      {
+        icon: '🔌',
+        title: 'APIs',
+        href: '/platform/apis'
+      }
+    ]
+  };
+
   const platformDropdownItems = [
     { name: 'RAG', href: '/rag-application', description: 'Enterprise RAG Solutions' },
     { name: 'Agent', href: '/enterprise-ai-agent', description: 'AI Agent Platform' },
@@ -280,7 +359,7 @@ const Navbar = () => {
       {platformDropdownOpen && (
         <div
           ref={dropdownRef}
-          className="fixed w-64 rounded-xl bg-white shadow-lg ring-1 ring-black ring-opacity-5 z-[60] overflow-hidden"
+          className="fixed w-[800px] rounded-xl bg-white shadow-lg ring-1 ring-black ring-opacity-5 z-[60] overflow-hidden"
           style={{
             top: `${dropdownPosition.y}px`,
             left: `${dropdownPosition.x}px`,
@@ -288,23 +367,99 @@ const Navbar = () => {
           }}
           onMouseLeave={() => setPlatformDropdownOpen(false)}
         >
-          <div className="py-1">
-            {platformDropdownItems.map((dropdownItem) => (
-              <Link
-                key={dropdownItem.name}
-                href={dropdownItem.href}
-                className="group flex items-center px-4 py-3 hover:bg-gray-50 transition-colors"
-                onClick={handleDropdownItemClick}
-              >
-                <div className="w-full">
-                  <p className="text-sm font-medium text-gray-900 group-hover:text-blue-600">
-                    {dropdownItem.name}
-                  </p>
-                  <p className="text-xs text-gray-500 group-hover:text-blue-500">
-                    {dropdownItem.description}
-                  </p>
+          {/* Platform Overview Section */}
+          <div className="p-4 border-b">
+            <Link href={platformDropdownConfig.overview.href} className="flex" onClick={handleDropdownItemClick}>
+              <div className="w-1/3">
+                <h3 className="text-lg font-semibold text-blue-600">{platformDropdownConfig.overview.title}</h3>
+                <p className="text-xs text-gray-500 mt-1 pr-4">{platformDropdownConfig.overview.description}</p>
+              </div>
+              <div className="w-2/3">
+                <div className="bg-gray-100 rounded-lg w-full h-28 flex items-center justify-center">
+                  {/* Placeholder for the image */}
+                  <Image 
+                    src="/platform-overview-placeholder.png" 
+                    alt="Platform Overview" 
+                    width={240} 
+                    height={100}
+                    className="object-cover rounded"
+                    onError={(e) => {
+                      e.currentTarget.src = 'https://dummyimage.com/240x100/e6e7ff/6B7BF7.png&text=Platform+Overview';
+                    }}
+                  />
                 </div>
-              </Link>
+              </div>
+            </Link>
+          </div>
+          
+          {/* Main Columns */}
+          <div className="flex p-4 border-b">
+            {platformDropdownConfig.columns.map((column, idx) => (
+              <div key={`col-${idx}`} className="flex-1 px-3">
+                <div className="flex items-center mb-2">
+                  <span className="mr-2">{column.icon}</span>
+                  <h3 className="text-sm font-semibold text-blue-600">{column.title}</h3>
+                </div>
+                <ul className="space-y-1">
+                  {column.items.map((item, itemIdx) => (
+                    <li key={`item-${idx}-${itemIdx}`}>
+                      <Link 
+                        href={item.href} 
+                        className="text-xs text-gray-700 hover:text-blue-600 block py-1"
+                        onClick={handleDropdownItemClick}
+                      >
+                        {item.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+          
+          {/* Bottom Row */}
+          <div className="flex p-4 border-b">
+            {platformDropdownConfig.bottom.map((section, idx) => (
+              <div key={`bottom-${idx}`} className="flex-1 px-3">
+                <div className="flex items-center mb-2">
+                  <span className="mr-2">{section.icon}</span>
+                  <h3 className="text-sm font-semibold text-blue-600">{section.title}</h3>
+                  {section.description && (
+                    <span className="text-xs text-gray-500 ml-1">{section.description}</span>
+                  )}
+                </div>
+                {section.items && (
+                  <ul className="space-y-1">
+                    {section.items.map((item, itemIdx) => (
+                      <li key={`bottom-item-${idx}-${itemIdx}`}>
+                        <Link 
+                          href={item.href} 
+                          className="text-xs text-gray-700 hover:text-blue-600 block py-1"
+                          onClick={handleDropdownItemClick}
+                        >
+                          {item.name}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            ))}
+          </div>
+          
+          {/* Footer */}
+          <div className="flex p-4 bg-gray-50">
+            {platformDropdownConfig.footer.map((item, idx) => (
+              <div key={`footer-${idx}`} className="flex-1 px-3">
+                <Link 
+                  href={item.href} 
+                  className="flex items-center text-sm font-medium text-gray-700 hover:text-blue-600"
+                  onClick={handleDropdownItemClick}
+                >
+                  <span className="mr-2">{item.icon}</span>
+                  {item.title}
+                </Link>
+              </div>
             ))}
           </div>
         </div>
