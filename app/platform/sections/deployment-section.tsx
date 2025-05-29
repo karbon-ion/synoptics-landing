@@ -8,9 +8,9 @@ export default function DeploymentSection() {
           {/* Cloud-Native Deployment */}
           <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 w-[600px]">
             <div className="h-[400px] relative flex items-center justify-center bg-white rounded-xl overflow-hidden">
-            <Image
-                src="/platform/fully online development.svg"
-                alt="Fully-Offline Deployment illustration"
+              <Image
+                src="/platform/cloud-native-development.svg"
+                alt="Cloud-Native Deployment illustration"
                 width={350}
                 height={350}
                 className="object-contain"
@@ -33,13 +33,13 @@ export default function DeploymentSection() {
 
           {/* Fully-Offline Deployment */}
           <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 w-[600px]">
-            <div className="h-[400px] relative  flex items-center justify-center bg-white rounded-xl overflow-hidden">
+            <div className="h-[380px] relative flex items-center justify-center bg-white rounded-xl overflow-hidden">
               <Image
-                src="/platform/fully online development.svg"
+                src="/platform/fully-offline-development.svg"
                 alt="Fully-Offline Deployment illustration"
                 width={350}
-                height={350}
-                className="object-contain"
+                height={330}
+                className="object-contain pt-8 pb-6"
               />
             </div>
             <div className="text-center md:text-left px-4">

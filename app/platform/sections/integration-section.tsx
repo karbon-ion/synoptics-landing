@@ -11,7 +11,7 @@ const IntegrationSection = () => {
           src="/platform/seamless background.svg" 
           alt="Seamless integration background" 
           fill 
-          style={{ objectFit: 'cover' }} 
+          style={{ objectFit: 'contain' }} 
           priority 
         />
       </div>
