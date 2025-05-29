@@ -168,7 +168,7 @@ export const NavbarMenu = () => {
     },
     columns: [
       {
-        icon: '🔍',
+        icon: '/navbar-platform/synoptix-search-icon.svg',
         title: 'Synoptix Search',
         items: [
           { name: 'Universal Knowledge', href: '/platform/search/universal' },
@@ -178,7 +178,7 @@ export const NavbarMenu = () => {
         ]
       },
       {
-        icon: '👤',
+        icon: '/navbar-platform/synoptix-agent-icon.svg',
         title: 'Synoptix Agents',
         items: [
           { name: 'Custom Agents', href: '/synoptix-agents/custom' },
@@ -188,7 +188,7 @@ export const NavbarMenu = () => {
         ]
       },
       {
-        icon: '📚',
+        icon: '/navbar-platform/synoptix-library-icon.svg',
         title: 'Synoptix Library',
         items: [
           { name: 'Prompt Library', href: '/platform/library/prompts' },
@@ -198,7 +198,7 @@ export const NavbarMenu = () => {
     ],
     bottom: [
       {
-        icon: '📊',
+        icon: '/navbar-platform/evaluatiom-icon.svg',
         title: 'Evaluation',
         items: [
           { name: 'Prompt Library', href: '/platform/evaluation/prompts' },
@@ -206,7 +206,7 @@ export const NavbarMenu = () => {
         ]
       },
       {
-        icon: '🛡️',
+        icon: '/navbar-platform/synoguard-icon.svg',
         title: 'Synoguard',
         items: [
           { name: 'Prompt Library', href: '/platform/synoguard/prompts' },
@@ -214,7 +214,7 @@ export const NavbarMenu = () => {
         ]
       },
       {
-        icon: '🔊',
+        icon: '/navbar-platform/synoptix-voice-agents.svg',
         title: 'Synoptix Voice Agent',
         description: '(Coming Soon)',
         href: '/platform/voice'
@@ -222,17 +222,17 @@ export const NavbarMenu = () => {
     ],
     footer: [
       {
-        icon: '🔄',
+        icon: '/navbar-platform/integration-icon.svg',
         title: 'Integration',
         href: '/platform/integration'
       },
       {
-        icon: '📦',
+        icon: '/navbar-platform/model-hub.svg',
         title: 'Model Hub',
         href: '/platform/model-hub'
       },
       {
-        icon: '🔌',
+        icon: '/navbar-platform/apis-icon.svg',
         title: 'APIs',
         href: '/platform/apis'
       }
@@ -409,7 +409,7 @@ export const NavbarMenu = () => {
                       {platformDropdownConfig.columns.map((column, idx) => (
                         <div key={`col-${idx}`}>
                           <div className="flex items-center mb-3">
-                            <span className="mr-3 text-xl">{column.icon}</span>
+                            <Image src={column.icon} width={24} height={24} alt={`${column.title} icon`} className="mr-3" />
                             <h3 
                               className="text-[#5662F6]" 
                               style={{ 
@@ -451,7 +451,7 @@ export const NavbarMenu = () => {
                       {platformDropdownConfig.bottom.map((section, idx) => (
                         <div key={`bottom-${idx}`}>
                           <div className="flex items-center mb-3">
-                            <span className="mr-3 text-xl">{section.icon}</span>
+                            <Image src={section.icon} width={24} height={24} alt={`${section.title} icon`} className="mr-3" />
                             <h3 
                               className="text-[#5662F6]" 
                               style={{ 
@@ -511,7 +511,7 @@ export const NavbarMenu = () => {
                             href={item.href} 
                             className="flex items-center text-gray-600 hover:text-blue-600"
                           >
-                            <span className="mr-3 text-xl">{item.icon}</span>
+                            <Image src={item.icon} width={24} height={24} alt={`${item.title} icon`} className="mr-3" />
                             <span style={{ 
                               fontFamily: 'Syne', 
                               fontWeight: 700, 
