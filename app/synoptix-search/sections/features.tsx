@@ -61,13 +61,13 @@ const featuresData = [
 
 export default function FeaturesSection() {
   return (
-    <section className="bg-white py-16">
+    <section className="bg-white py-16 mb-25">
       <div className="container mx-auto max-w-7xl rounded-xl">
         <h2 className="text-center text-3xl font-bold mb-8" style={{fontFamily: "Syne",fontWeight:700,fontSize:"36px",lineHeight:"45px"}}>
           High Level <span className="text-blue-600">Search Functions</span>
         </h2>
         
-        <div className="border border-gray-200 rounded-xl">
+        <div className=" rounded-xl">
           {featuresData.map((feature, index) => (
             <div key={feature.id} className="rounded-xl">
               <div className="grid grid-cols-1 lg:grid-cols-2">

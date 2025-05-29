@@ -80,7 +80,7 @@ const BlogsSection = () => {
   }, []);
 
   return (
-    <section className="py-24 bg-white">
+    <section className="py-8 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* <div className="text-center mb-16">
           <span className="text-blue-500 text-sm font-medium tracking-wider uppercase">
