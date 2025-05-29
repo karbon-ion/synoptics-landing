@@ -7,6 +7,7 @@ import { ArrowRight } from 'lucide-react';
 const featuresData = [
   {
     id: 'create-agents',
+    subtitle: 'REASONING AGENT',
     title: 'Create AI agents effortlessly with natural language',
     description: "Turn ideas into structured workflows using simple natural language prompts. Our intuitive interface helps you specify your agent's purpose and makes it easy to build with your data right away.",
     imageUrl: '/synoptix-agents/features/image-1.png',
@@ -14,6 +15,7 @@ const featuresData = [
   },
   {
     id: 'customize-agent',
+    subtitle: 'CUSTOM AGENT',
     title: 'Create AI agents effortlessly with natural language',
     description: "Turn ideas into structured workflows using simple natural language prompts. Our intuitive interface helps you specify your agent's purpose and makes it easy to build with your data right away.",
     imageUrl: '/synoptix-agents/features/image-2.png',
@@ -21,6 +23,7 @@ const featuresData = [
   },
   {
     id: 'deploy-agent',
+    subtitle: 'KNOWLEDGE ACCESS',
     title: 'Create AI agents effortlessly with natural language',
     description: "Turn ideas into structured workflows using simple natural language prompts. Our intuitive interface helps you specify your agent's purpose and makes it easy to build with your data right away.",
     imageUrl: '/synoptix-agents/features/image-3.png',
@@ -28,6 +31,7 @@ const featuresData = [
   },
   {
     id: 'manage-agent',
+    subtitle: 'AGENT LIBRARY',
     title: 'Create AI agents effortlessly with natural language',
     description: "Turn ideas into structured workflows using simple natural language prompts. Our intuitive interface helps you specify your agent's purpose and makes it easy to build with your data right away.",
     imageUrl: '/synoptix-agents/features/image-4.png',
@@ -37,7 +41,7 @@ const featuresData = [
 
 export default function FeaturesSection() {
   return (
-    <section className="relative py-16 bg-white overflow-hidden">
+    <section className="relative py-16  bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4">
         {featuresData.map((feature, index) => (
           <div
@@ -49,6 +53,16 @@ export default function FeaturesSection() {
             {/* Text Content */}
             <div className="w-full lg:w-2/5 z-10">
               <div className="max-w-lg">
+                <p className="text-[#323E50] mb-2" style={{
+                  fontFamily: 'Poppins',
+                  fontSize: '14px',
+                  lineHeight: '1',
+                  letterSpacing: '0.5px',
+                  textTransform: 'uppercase',
+                  fontWeight: 500
+                }}>
+                  {feature.subtitle}
+                </p>
                 <h2 className="mb-4 text-3xl md:text-4xl font-bold text-gray-900" style={{
                   fontFamily: 'Syne',
                   lineHeight: '1.2',

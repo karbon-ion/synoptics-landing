@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export default function HeroSection() {
   return (
-    <section className="relative h-[700px] flex items-center overflow-hidden">
+    <section className="relative py-70 flex items-center overflow-hidden">
       <div className="absolute inset-0 z-0">
         <Image
           src="/synoptix-agents/background.png"
