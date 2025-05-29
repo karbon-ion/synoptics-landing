@@ -7,6 +7,15 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        sm: '640px',
+        md: '768px',
+        lg: '1000px',
+        xl: '1720px',
+        '2xl': '2100px',
+        'qhd': '2560px',
+        '4k': '3840px',
+      },
       keyframes: {
         marquee: {
           '0%': { transform: 'translateX(0)' },

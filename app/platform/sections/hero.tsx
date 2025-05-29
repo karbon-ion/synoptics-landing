@@ -3,7 +3,7 @@
 export default function RagHero() {
     return (
         <section
-            className="min-h-[80vh] flex flex-col items-center justify-center text-center px-4 relative overflow-hidden"
+            className="py-50  flex flex-col items-center justify-center text-center px-4 relative overflow-hidden"
             style={{
                 backgroundImage: "url('/platform/herobackground.png')",
                 backgroundSize: "cover",
