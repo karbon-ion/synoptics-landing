@@ -359,14 +359,14 @@ export const NavbarMenu = () => {
             <MenuItem setActive={setActive} active={active} item="Home" href="/" />
 
             <MenuItem setActive={setActive} active={active} item="Platform">
-              <div className="w-[1419px] bg-white p-10" style={{ height: '541px' }}>
+              <div className="w-[1419px] bg-white p-10" style={{ height: '' }}>
                 {/* Main Container - Two Column Layout */}
                 <div className="flex w-full">
                   {/* Left Column - Platform Overview */}
-                  <div className="w-[350px] pr-12">
+                  <div className="w-[350px] pr-8 border-r border-gray-200">
                     <Link href={platformDropdownConfig.overview.href} className="block">
                       <h3 
-                        className="text-blue-600" 
+                        className="text-[#5662F6]" 
                         style={{ 
                           fontFamily: 'Syne', 
                           fontWeight: 700, 
@@ -392,30 +392,26 @@ export const NavbarMenu = () => {
                       
                       <div className="rounded-lg overflow-hidden">
                         <Image 
-                          src="/platform-overview-placeholder.png" 
+                          src="/platform/image.png" 
                           alt="Platform Overview" 
                           width={300} 
                           height={200}
                           className="w-full h-auto object-contain"
-                          onError={(e) => {
-                            const target = e.target as HTMLImageElement;
-                            target.src = 'https://dummyimage.com/180x140/e6e7ff/6B7BF7.png&text=Platform+Overview';
-                          }}
                         />
                       </div>
                     </Link>
                   </div>
                   
                   {/* Right Column - Menu Grid */}
-                  <div className="flex-1">
+                  <div className="flex-1 pl-8">
                     {/* Top Row - Main Sections */}
-                    <div className="grid grid-cols-3 gap-12 mb-12">
+                    <div className="grid grid-cols-3 mb-8">
                       {platformDropdownConfig.columns.map((column, idx) => (
                         <div key={`col-${idx}`}>
                           <div className="flex items-center mb-3">
                             <span className="mr-3 text-xl">{column.icon}</span>
                             <h3 
-                              className="text-blue-600" 
+                              className="text-[#5662F6]" 
                               style={{ 
                                 fontFamily: 'Syne', 
                                 fontWeight: 700, 
@@ -451,13 +447,13 @@ export const NavbarMenu = () => {
                     </div>
                     
                     {/* Middle Row */}
-                    <div className="grid grid-cols-3 gap-12 mb-12">
+                    <div className="grid grid-cols-3 gap-6 mb-8">
                       {platformDropdownConfig.bottom.map((section, idx) => (
                         <div key={`bottom-${idx}`}>
                           <div className="flex items-center mb-3">
                             <span className="mr-3 text-xl">{section.icon}</span>
                             <h3 
-                              className="text-blue-600" 
+                              className="text-[#5662F6]" 
                               style={{ 
                                 fontFamily: 'Syne', 
                                 fontWeight: 700, 
@@ -508,7 +504,7 @@ export const NavbarMenu = () => {
                     </div>
                     
                     {/* Bottom Row - Footer */}
-                    <div className="grid grid-cols-3 gap-12 pt-6 border-t border-gray-200">
+                    <div className="grid grid-cols-3 gap-6 pt-6 border-t border-gray-200">
                       {platformDropdownConfig.footer.map((item, idx) => (
                         <div key={`footer-${idx}`}>
                           <Link 

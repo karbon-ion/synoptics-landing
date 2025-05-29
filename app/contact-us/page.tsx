@@ -54,7 +54,7 @@ export default function ContactForm() {
         </div>
 
         {/* Right side - Form */}
-        <div className="p-8 md:p-12 mt-20">
+        <div className="p-8 md:p-12 ">
           <form className="space-y-6" style={{ fontFamily: 'Poppins, sans-serif', color: '#666666', fontWeight: 400, fontSize: '16px', lineHeight: '100%', letterSpacing: '0%' }}>
             <div>
               <label htmlFor="email" className="block text-sm font-medium mb-1">
@@ -93,6 +93,18 @@ export default function ContactForm() {
               <input id="title" type="text" placeholder="" className="w-full px-3 py-2 border border-[#66666659] rounded-[12px] shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" />
             </div>
 
+            <div>
+              <label htmlFor="comments" className="block text-sm font-medium mb-1">
+                Comments
+              </label>
+              <textarea 
+                id="comments" 
+                placeholder="" 
+                rows={3} 
+                className="w-full px-3 py-2 border border-[#66666659] rounded-[12px] shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 min-h-[75px]" 
+              />
+            </div>
+
             <div className="pt-4">
             <Link
                 href="#"
@@ -104,8 +116,8 @@ export default function ContactForm() {
                   lineHeight: "100%",
                 }}
               >
-                Get Started
-                <ArrowRight className="h-4 w-4 ml-1" />
+                Submit
+                {/* <ArrowRight className="h-4 w-4 ml-1" /> */}
               </Link>
             </div>
           </form>
