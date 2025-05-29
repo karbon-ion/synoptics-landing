@@ -94,7 +94,7 @@ export default function SynoptixComponent() {
   const currentContent = tabContent[activeTab]
 
   return (
-    <div className="max-w-7xl py-20 mx-auto mb-15 ">
+    <div className="max-w-7xl mx-auto mb-15 mt-[-150px]">
       <div className="bg-white rounded-2xl p-6">
         <div className="text-center mb-12">
           <h2 className="text-3xl text-slate-800" style={{ fontFamily: "Syne, sans-serif",fontWeight: 700, fontSize: "36px", lineHeight: "45px" }}>

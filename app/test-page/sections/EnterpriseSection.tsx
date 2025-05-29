@@ -101,7 +101,7 @@ export default function EnterpriseSection() {
   };
 
   return (
-    <section className="flex items-center justify-center min-h-screen bg-white">
+    <section className="flex items-center justify-center bg-white mb-[-100px]">
       <div className="w-full max-w-7xl mx-auto mt-20 ">
         <h2
           className="mb-8 md:mb-12 text-center"
@@ -228,7 +228,7 @@ export default function EnterpriseSection() {
           </div>
 
           {/* Right column - image */}
-          <div className="w-full lg:w-[55%] flex items-center justify-center min-h-[1200px]">
+          <div className="w-full lg:w-[55%] flex items-center justify-center min-h-[800px]">
             <div className="relative w-full h-full">
 <div className="relative w-[619px] h-[520px]  mx-auto">
                 {/* Frame Background */}
