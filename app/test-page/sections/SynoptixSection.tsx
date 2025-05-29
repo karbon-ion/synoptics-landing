@@ -7,9 +7,14 @@ import { useState } from "react"
 
 type TabType = "all" | "marketing" | "sales" | "it" | "finance" | "hr"
 
+interface FeatureText {
+  bold: string
+  regular: string
+}
+
 interface TabContent {
   title: string
-  features: string[]
+  features: FeatureText[]
 }
 
 export default function SynoptixComponent() {
@@ -31,62 +36,62 @@ export default function SynoptixComponent() {
     all: {
       title: "Synoptix is for Every Team",
       features: [
-        "Faster Prospecting - Equip sales teams with real-time battle cards, lead insights, and AI-generated follow-up",
-        "Document & Email Drafting Generate proposals, reports, follow-ups, and emails in second.",
-        "Instant Answers - Use natural language search to find the right file, policy, or client detail—across systems.",
-        "Consistent Messaging- Maintain brand and message alignment with centralised, approved content accessible to all teams.",
-        "Scheduling & Admin Tasks Automate calendar bookings, reminders, and meeting prep"
+        { bold: "Faster Prospecting", regular: " - Equip sales teams with real-time battle cards, lead insights, and AI-generated follow-up" },
+        { bold: "Document & Email Drafting", regular: " Generate proposals, reports, follow-ups, and emails in second." },
+        { bold: "Instant Answers", regular: " - Use natural language search to find the right file, policy, or client detail—across systems." },
+        { bold: "Consistent Messaging", regular: "- Maintain brand and message alignment with centralised, approved content accessible to all teams." },
+        { bold: "Scheduling & Admin Tasks", regular: " Automate calendar bookings, reminders, and meeting prep" }
       ],
     },
     marketing: {
       title: "Synoptix is for Every Team",
       features: [
-        "Ensure brand consistency – Distribute approved content seamlessly across all campaigns and channels",
-        "Unlock content performance insights – Use AI to identify and amplify high-impact assets",
-        "Automate creative generation – Quickly produce drafts, taglines, and messaging variations with AI",
-        "Enhance team collaboration – Centralised content access streamlines workflows and approvals",
-        "Enterprise-ready AI for Marketers – Scalable, efficient AI platform for enterprise marketing teams"
+        { bold: "Ensure brand consistency", regular: " – Distribute approved content seamlessly across all campaigns and channels" },
+        { bold: "Unlock content performance insights", regular: " – Use AI to identify and amplify high-impact assets" },
+        { bold: "Automate creative generation", regular: " – Quickly produce drafts, taglines, and messaging variations with AI" },
+        { bold: "Enhance team collaboration", regular: " – Centralised content access streamlines workflows and approvals" },
+        { bold: "Enterprise-ready AI for Marketers", regular: " – Scalable, efficient AI platform for enterprise marketing teams" }
       ],
     },
     sales: {
       title: "Synoptix is for Every Team",
       features: [
-        "Access insights instantly – Get customer data, battle cards, and documents directly within your sales tools",
-        "Personalize every interaction – Use AI-generated messaging based on live context and buyer intent",
-        "Automate proposals and follow-ups – Create polished, on-brand content with minimal manual effort",
-        "Close faster, convert more – Reduce cycle times with consistent, high-quality communication at scale",
-        "Enterprise-grade and sales-ready – Built to empower your team with speed, accuracy, and confidence",
+        { bold: "Access insights instantly", regular: " – Get customer data, battle cards, and documents directly within your sales tools" },
+        { bold: "Personalize every interaction", regular: " – Use AI-generated messaging based on live context and buyer intent" },
+        { bold: "Automate proposals and follow-ups", regular: " – Create polished, on-brand content with minimal manual effort" },
+        { bold: "Close faster, convert more", regular: " – Reduce cycle times with consistent, high-quality communication at scale" },
+        { bold: "Enterprise-grade and sales-ready", regular: " – Built to empower your team with speed, accuracy, and confidence" },
       ],
     },
     it: {
       title: "Synoptix is for Every Team",
       features: [
-        "Resolve issues instantly—AI answers for routine IT support questions.",
-        "Access quick fixes—Find device setups, system FAQs, and internal docs fast.",
-        "Simplify record keeping—Log updates, tickets, and change history automatically.",
-        "Standardise troubleshooting—Provide consistent resolutions using AI internal documentation.",
-        "Reduce response time—Empower teams to self-serve with support powered by your existing knowledge base.",
-        "Optimise IT workflows—Automate password resets, access requests, and repetitive admin tasks—securely.",
+        { bold: "Resolve issues instantly", regular: "—AI answers for routine IT support questions." },
+        { bold: "Access quick fixes", regular: "—Find device setups, system FAQs, and internal docs fast." },
+        { bold: "Simplify record keeping", regular: "—Log updates, tickets, and change history automatically." },
+        { bold: "Standardise troubleshooting", regular: "—Provide consistent resolutions using AI internal documentation." },
+        { bold: "Reduce response time", regular: "—Empower teams to self-serve with support powered by your existing knowledge base." },
+        { bold: "Optimise IT workflows", regular: "—Automate password resets, access requests, and repetitive admin tasks—securely." },
       ],
     },
     finance: {
       title: "Synoptix is for Every Team",
       features: [
-        "Instant insights extraction—Quickly analyse financial reports, contracts, and compliance docs",
-        "Task automation—Streamline repetitive work from data validation to audit prep",
-        "Full output traceability – Ensure accuracy and accountability across AI-generated results",
-        "Risk reduction – Minimize operational risks while improving reporting speed and quality",
-        "Compliant, efficient platform – Engineered for enterprise AI finance leaders focused on governance",
+        { bold: "Instant insights extraction", regular: "—Quickly analyse financial reports, contracts, and compliance docs" },
+        { bold: "Task automation", regular: "—Streamline repetitive work from data validation to audit prep" },
+        { bold: "Full output traceability", regular: " – Ensure accuracy and accountability across AI-generated results" },
+        { bold: "Risk reduction", regular: " – Minimize operational risks while improving reporting speed and quality" },
+        { bold: "Compliant, efficient platform", regular: " – Engineered for enterprise AI finance leaders focused on governance" },
       ],
     },
     hr: {
       title: "Synoptix is for Every Team",
       features: [
-        "AI-powered employee support – Answer queries with agents trained on your policies and docs",
-        "Automated onboarding – Deliver training materials and policy updates effortlessly",
-        "Consistent communication – Maintain aligned messaging across teams and locations",
-        "Robust data protection – Secure sensitive employee information with strict access controls",
-        "People-first AI platform – Designed for modern HR teams to streamline operations",
+        { bold: "AI-powered employee support", regular: " – Answer queries with agents trained on your policies and docs" },
+        { bold: "Automated onboarding", regular: " – Deliver training materials and policy updates effortlessly" },
+        { bold: "Consistent communication", regular: " – Maintain aligned messaging across teams and locations" },
+        { bold: "Robust data protection", regular: " – Secure sensitive employee information with strict access controls" },
+        { bold: "People-first AI platform", regular: " – Designed for modern HR teams to streamline operations" },
       ],
     },
   }
@@ -104,35 +109,40 @@ export default function SynoptixComponent() {
 
         {/* Tabs */}
         <div className="shadow-lg">
-          <div className="flex flex-wrap justify-center">
+          <div className="grid grid-cols-3 sm:grid-cols-6 gap-0 w-full">
             {(["all", "marketing", "sales", "it", "finance", "hr"] as TabType[]).map((tab) => (
-              <button
-                key={tab}
+              <div 
+                key={tab} 
+                className="w-full"
                 onClick={() => setActiveTab(tab)}
                 style={{
-                  fontFamily: "Syne",
-                  fontWeight: 700,
-                  fontSize: "14px",
-                  lineHeight: "20px",
-                  letterSpacing: "0px",
-                  textAlign: "center",
-                  width: "165px",
-                  height: "48px",
-                  whiteSpace: "nowrap"
+                  cursor: "pointer"
                 }}
-                className={`px-6 py-3 ${
-                  activeTab === tab
-                    ? "text-[#232F30] border-b-2 border-indigo-600"
-                    : "text-[#ACB6BE] hover:text-gray-700"
-                }`}
               >
-                {tab === "all" && "All Teams"}
-                {tab === "marketing" && "I drive Marketing"}
-                {tab === "sales" && "I drive Sales"}
-                {tab === "it" && "I drive IT"}
-                {tab === "finance" && "I drive Finance"}
-                {tab === "hr" && "I drive HR"}
-              </button>
+                <div
+                  style={{
+                    fontFamily: "Syne",
+                    fontWeight: 700,
+                    fontSize: "14px",
+                    lineHeight: "20px",
+                    letterSpacing: "0px",
+                    textAlign: "center",
+                    height: "48px",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    width: "100%"
+                  }}
+                  className={`${activeTab === tab ? "text-[#232F30] border-b-2 border-indigo-600" : "text-[#ACB6BE] hover:text-gray-700"}`}
+                >
+                  {tab === "all" && "All Teams"}
+                  {tab === "marketing" && "I drive Marketing"}
+                  {tab === "sales" && "I drive Sales"}
+                  {tab === "it" && "I drive IT"}
+                  {tab === "finance" && "I drive Finance"}
+                  {tab === "hr" && "I drive HR"}
+                </div>
+              </div>
             ))}
           </div>
         
@@ -162,7 +172,8 @@ export default function SynoptixComponent() {
                       className="flex-shrink-0 mr-2"
                     />
                     <p className="text-[14px] text-[#000000] flex-grow mt-0.3 pr-15" style={{fontFamily: 'Poppins', fontWeight: 400, fontSize: '14px', lineHeight: '17px', letterSpacing: '0%', color: '#000000'}}>
-                      {feature}
+                      <span style={{ fontWeight: 700 }}>{feature.bold}</span>
+                      {feature.regular}
                       {index === 0 && " your reps' workflows"}
                       {index === 1 && " and rep engagement"}
                       {index === 2 && " cards"}
