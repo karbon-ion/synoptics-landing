@@ -7,7 +7,6 @@ import { ArrowRight } from 'lucide-react';
 const featuresData = [
   {
     id: 'create-agents',
-    subtitle: 'REASONING AGENT',
     title: 'Create AI agents effortlessly with natural language',
     description: "Turn ideas into structured workflows using simple natural language prompts. Our intuitive interface helps you specify your agent's purpose and makes it easy to build with your data right away.",
     imageUrl: '/synoptix-agents/features/image-1.png',
@@ -15,7 +14,6 @@ const featuresData = [
   },
   {
     id: 'customize-agent',
-    subtitle: 'CUSTOM AGENT',
     title: 'Create AI agents effortlessly with natural language',
     description: "Turn ideas into structured workflows using simple natural language prompts. Our intuitive interface helps you specify your agent's purpose and makes it easy to build with your data right away.",
     imageUrl: '/synoptix-agents/features/image-2.png',
@@ -23,7 +21,6 @@ const featuresData = [
   },
   {
     id: 'deploy-agent',
-    subtitle: 'KNOWLEDGE ACCESS',
     title: 'Create AI agents effortlessly with natural language',
     description: "Turn ideas into structured workflows using simple natural language prompts. Our intuitive interface helps you specify your agent's purpose and makes it easy to build with your data right away.",
     imageUrl: '/synoptix-agents/features/image-3.png',
@@ -31,7 +28,6 @@ const featuresData = [
   },
   {
     id: 'manage-agent',
-    subtitle: 'AGENT LIBRARY',
     title: 'Create AI agents effortlessly with natural language',
     description: "Turn ideas into structured workflows using simple natural language prompts. Our intuitive interface helps you specify your agent's purpose and makes it easy to build with your data right away.",
     imageUrl: '/synoptix-agents/features/image-4.png',
@@ -53,16 +49,6 @@ export default function FeaturesSection() {
             {/* Text Content */}
             <div className="w-full lg:w-2/5 z-10">
               <div className="max-w-lg">
-                <p className="text-[#323E50] mb-2" style={{
-                  fontFamily: 'Poppins',
-                  fontSize: '14px',
-                  lineHeight: '1',
-                  letterSpacing: '0.5px',
-                  textTransform: 'uppercase',
-                  fontWeight: 500
-                }}>
-                  {feature.subtitle}
-                </p>
                 <h2 className="mb-4 text-3xl md:text-4xl font-bold text-gray-900" style={{
                   fontFamily: 'Syne',
                   lineHeight: '1.2',
@@ -94,13 +80,13 @@ export default function FeaturesSection() {
             </div>
 
             {/* Image */}
-            <div className={`w-full lg:w-3/5 pr-10  ${feature.imagePosition === 'right' ? 'lg:-mr-12 pl-20' : 'lg:-ml-12 pr-15  '}`}>
+            <div className={`w-full lg:w-[65%] pr-10 ${feature.imagePosition === 'right' ? 'lg:-mr-14 pl-20' : 'lg:-ml-14 pr-15'}`}>
               <div className="relative rounded-lg overflow-hidden shadow-lg">
                 <Image
                   src={feature.imageUrl}
                   alt={feature.title}
-                  width={800}
-                  height={579}
+                  width={900}
+                  height={650}
                   className="w-full h-auto object-cover"
                   priority={index === 0}
                 />
