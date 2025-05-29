@@ -215,8 +215,8 @@ export const NavbarMenu = () => {
       },
       {
         icon: '/navbar-platform/synoptix-voice-agents.svg',
-        title: 'Synoptix Voice Agent',
-        description: '(Coming Soon)',
+        title: 'Synoptix Voice Agents',
+        description: 'Coming Soon ...',
         href: '/platform/voice'
       }
     ],
@@ -268,7 +268,7 @@ export const NavbarMenu = () => {
   ];
 
   const servicesItems = [
-    { name: 'Fine-Tuning', href: '/services/fine-tuning', description: 'Custom Model Fine-Tuning' },
+    // { name: 'Fine-Tuning', href: '/services/fine-tuning', description: 'Custom Model Fine-Tuning' },
     { name: 'AI Consulting', href: '/services/ai-consulting', description: 'Enterprise AI Solutions' },
   ];
 
@@ -450,32 +450,36 @@ export const NavbarMenu = () => {
                     <div className="grid grid-cols-3 gap-6 mb-8">
                       {platformDropdownConfig.bottom.map((section, idx) => (
                         <div key={`bottom-${idx}`}>
-                          <div className="flex items-center mb-3">
-                            <Image src={section.icon} width={24} height={24} alt={`${section.title} icon`} className="mr-3" />
-                            <h3 
-                              className="text-[#5662F6]" 
-                              style={{ 
-                                fontFamily: 'Syne', 
-                                fontWeight: 700, 
-                                fontSize: '20px', 
-                                lineHeight: '100%', 
-                                letterSpacing: '0px' 
-                              }}
-                            >
-                              {section.title}
-                            </h3>
-                            {section.description && (
-                              <span 
-                                className="text-gray-500 ml-2 bg-gray-100 px-2 py-0.5 rounded-md" 
+                          <div className="flex flex-col mb-3">
+                            <div className="flex items-center">
+                              <Image src={section.icon} width={24} height={24} alt={`${section.title} icon`} className="mr-3" />
+                              <h3 
+                                className="text-[#5662F6]" 
                                 style={{ 
-                                  fontFamily: 'Poppins', 
-                                  fontWeight: 400, 
-                                  fontSize: '12px', 
-                                  lineHeight: '20px' 
+                                  fontFamily: 'Syne', 
+                                  fontWeight: 700, 
+                                  fontSize: '20px', 
+                                  lineHeight: '100%', 
+                                  letterSpacing: '0px' 
                                 }}
                               >
-                                {section.description}
-                              </span>
+                                {section.title}
+                              </h3>
+                            </div>
+                            {section.description && (
+                              <div className="ml-9 mt-1">
+                                <span 
+                                  className="text-gray-500 bg-gray-100 px-2 py-0.5 rounded-md" 
+                                  style={{ 
+                                    fontFamily: 'Poppins', 
+                                    fontWeight: 400, 
+                                    fontSize: '12px', 
+                                    lineHeight: '20px' 
+                                  }}
+                                >
+                                  {section.description}
+                                </span>
+                              </div>
                             )}
                           </div>
                           {section.items && (
