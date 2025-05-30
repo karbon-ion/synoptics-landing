@@ -9,7 +9,7 @@ export default function EnterpriseSecuritySection() {
           Responsible AI Built for  <span className="text-indigo-500">Enterprise</span>
         </h2>
         <Link
-          href="/ai-security"
+          href="/ai-security-tool/syno-guard"
           className="bg-[#5662F6] hover:bg-indigo-600 text-white px-5 py-2.5 sm:px-6 sm:py-2.5 rounded-full flex items-center transition-colors whitespace-nowrap text-sm sm:text-[18px]"
           style={{ fontFamily: 'Syne', fontWeight: 500 }}
         >

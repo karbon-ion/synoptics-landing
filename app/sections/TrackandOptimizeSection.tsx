@@ -36,7 +36,7 @@ const TrackSection = () => {
             Measure impact across teams, identify optimisation opportunities, and continuously refine your AI agents to maximise productivity, ROI, and business outcomes with enterprise AI platform.
           </p>
           <Link
-            href="#contact"
+            href="contact-us"
             className="bg-[#5662F6] hover:bg-indigo-600 text-white py-3 px-8 rounded-full inline-flex items-center transition-colors whitespace-nowrap"
             style={{ fontFamily: 'Syne', fontWeight: 500, fontSize: '18px' }}
           >
