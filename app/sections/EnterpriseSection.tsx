@@ -101,7 +101,7 @@ export default function EnterpriseSection() {
   };
 
   return (
-    <section className="flex items-center justify-center bg-white mb-[-100px]">
+    <section className="flex items-center justify-center bg-white mb-30 lg:mb-[-100px]">
       <div className="w-full max-w-7xl mx-auto mt-20 ">
         <h2
           className="mb-8 md:mb-12 text-center"
@@ -120,7 +120,7 @@ export default function EnterpriseSection() {
 
         <div className="flex flex-col lg:flex-row items-stretch justify-between">
           {/* Left column - tabs */}
-          <div className="w-full  lg:w-[50%] pl-20 pt-3 pb-10 flex rounded-lg flex-col justify-center h-full">
+          <div className="w-full lg:w-[50%] px-4 lg:pl-20 pt-3 pb-10 flex rounded-lg flex-col justify-center h-full">
             
             
             {tabData.map((tab) => (
@@ -158,7 +158,7 @@ export default function EnterpriseSection() {
                       {tab.title}
                     </span>
                     {activeTab === tab.id && (
-                      <div className="absolute left-0 top-full mt-2 w-[450px] h-[1px] bg-gray-300" />
+                      <div className="absolute left-0 top-full mt-2 w-full lg:w-[450px] h-[1px] bg-gray-300" />
                     )}
                   </div>
                   <svg 
@@ -197,6 +197,17 @@ export default function EnterpriseSection() {
                     >
                       {tab.description}
                     </div>
+                    
+                    {/* Mobile-only image */}
+                    <div className="block lg:hidden mb-5">
+                      <div className="relative w-full h-[300px]">
+                        <img
+                          src={tabImages[tab.id].src}
+                          alt={tabImages[tab.id].alt}
+                          className="w-full h-full object-contain"
+                        />
+                      </div>
+                    </div>
                     {tab.showLearnMore && (
                       <Link
                         href={tab.id === "agents" ? "/synoptix-agents" : 
@@ -230,7 +241,7 @@ export default function EnterpriseSection() {
           </div>
 
           {/* Right column - image */}
-          <div className="w-full lg:w-[55%] flex items-center justify-center min-h-[800px]">
+          <div className="hidden lg:flex w-full lg:w-[55%] items-center justify-center min-h-[800px]">
             <div className="relative w-full h-full">
 <div className="relative w-[619px] h-[520px]  mx-auto">
                 {/* Frame Background */}
