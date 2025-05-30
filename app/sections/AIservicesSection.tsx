@@ -45,7 +45,7 @@ export default function AiServicesSection() {
             <div className="mt-4 md:mt-6 flex justify-center md:justify-start md:pl-10 px-4 md:px-0">
               <Link
                 href="/services/ai-consulting"
-                className="inline-flex items-center whitespace-nowrap justify-center gap-3 bg-[#5662F6] text-white px-6 py-3 rounded-full text-[13px] sm:text-sm md:text-base font-bold transition-all duration-300 hover:shadow-md"
+                className="inline-flex items-center whitespace-nowrap justify-center gap-3 bg-[#5662F6] text-white px-8 py-3 rounded-full text-[13px] sm:text-sm md:text-base font-bold transition-all duration-300 hover:shadow-md"
                 style={{
                   fontFamily: "Syne, sans-serif",
                   fontWeight: 600,

@@ -99,17 +99,17 @@ export default function SynoptixComponent() {
   const currentContent = tabContent[activeTab]
 
   return (
-    <div className="max-w-7xl mx-auto mb-15 mt-[-150px]">
+    <div className="max-w-7xl mx-auto mb-15 mt-[-150px] px-4 sm:px-6">
       <div className="bg-white rounded-2xl p-6">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl text-slate-800" style={{ fontFamily: "Syne, sans-serif",fontWeight: 700, fontSize: "36px", lineHeight: "45px" }}>
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="text-2xl sm:text-3xl text-slate-800" style={{ fontFamily: "Syne, sans-serif",fontWeight: 700, fontSize: "36px", lineHeight: "45px" }}>
             Synoptix is for <span className="text-indigo-500">Every Team</span>
           </h2>
         </div>
 
         {/* Tabs */}
         <div className="shadow-lg">
-          <div className="grid grid-cols-3 sm:grid-cols-6 gap-0 w-full">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-0 w-full">
             {(["all", "marketing", "sales", "it", "finance", "hr"] as TabType[]).map((tab) => (
               <div 
                 key={tab} 
@@ -147,7 +147,7 @@ export default function SynoptixComponent() {
           </div>
         
           {/* Content - Flex container */}
-          <div className="flex flex-col md:flex-row">
+          <div className="flex flex-col md:flex-row gap-6 md:gap-10 p-4 sm:p-6">
             {/* Left - Image */}
             <div className="flex-1">
               <Image
@@ -155,12 +155,12 @@ export default function SynoptixComponent() {
                 alt={`Synoptix for ${activeTab} teams`}
                 width={500}
                 height={380}
-                className="min-w-[640px] h-[423px] object-contain"
+                className="w-full max-w-[640px] h-auto md:h-[423px] object-contain mx-auto"
               />
             </div>
 
             {/* Right - Features */}
-            <div className="flex-1 mt-10 mr-10">
+            <div className="flex-1 md:mt-0 md:mr-10">
               <div className="space-y-4">
                 {currentContent.features.map((feature, index) => (
                   <div key={index} className="flex items-start">
