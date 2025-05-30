@@ -102,58 +102,74 @@ export default function ContactForm() {
     }
   };
   return (
-    <div className="container mx-auto py-50 px-4 sm:px-6 lg:px-8 max-w-6xl">
-      <div className="grid md:grid-cols-2 gap-0 rounded-xl overflow-hidden bg-white shadow-lg h-[650px] rounded-[12px]">
+    <div className="container mx-auto mt-16 sm:mt-24 py-8 sm:py-12 px-4 sm:px-6 lg:px-8 max-w-6xl">
+      <div className="grid md:grid-cols-2 gap-0 rounded-xl overflow-hidden bg-white shadow-lg md:min-h-[650px] rounded-[12px]">
         {/* Left side - SVG Background */}
-        <div className="relative h-[500px] md:h-full min-h-[500px]">
+        <div className="relative h-[400px] sm:h-[450px] md:h-auto">
           <Image
             src="/contact-us/contact-us.svg"
             alt="Contact us background"
             fill
             className="object-cover"
+            priority
           />
           
           {/* Content overlay on the image */}
-          <div className="absolute inset-0 flex flex-col ml-3">
-            <div className="md:pt-12 md:px-12 mb-4">
-              <span style={{ fontFamily: "Syne, sans-serif", fontWeight: 700, fontSize: "36px", lineHeight: "45px", letterSpacing: "0%" }}>
-              <h2 className="text-3xl tracking-tight">
+          <div className="absolute inset-0 flex flex-col p-6 sm:p-8 md:p-12">
+            <div className="mb-6 md:mb-8">
+              <span style={{ fontFamily: "Syne, sans-serif", fontWeight: 700, fontSize: "clamp(28px, 5vw, 36px)", lineHeight: 1.2, letterSpacing: "0%" }}>
+              <h2 className="tracking-tight">
                 See <span className="text-[#6366f1]">Synoptix</span> in action
               </h2>
               </span>
             </div>
 
-            <div className="px-8 md:px-12 space-y-4 ">
+            <div className="space-y-6 md:space-y-8">
               <div className="flex items-start gap-3">
-                
-                <Image src="/test-page/synoptix/star.png" alt="Star bullet point" width={20} height={20} className="mt-0.5" />
-                <span style={{ fontFamily: "Poppins, sans-serif", fontWeight: 400, fontSize: "14px", lineHeight: "17px", letterSpacing: "0.4%", color: "#000000" }}>
-                <p className="text-sm">Deliver real-time, AI-driven answers directly within your reps' workflows</p>
+                <Image 
+                  src="/test-page/synoptix/star.png" 
+                  alt="Star bullet point" 
+                  width={20} 
+                  height={20} 
+                  className="mt-1 flex-shrink-0" 
+                />
+                <span style={{ fontFamily: "Poppins, sans-serif", fontWeight: 400, fontSize: "clamp(13px, 2vw, 14px)", lineHeight: 1.4, letterSpacing: "0.4%", color: "#000000" }}>
+                <p>Deliver real-time, AI-driven answers directly within your reps' workflows</p>
                 </span>
               </div>
 
               <div className="flex items-start gap-3">
-                <Image src="/test-page/synoptix/star.png" alt="Star bullet point" width={20} height={20} className="mt-0.5" />
-                <span style={{ fontFamily: "Poppins, sans-serif", fontWeight: 400, fontSize: "14px", lineHeight: "17px", letterSpacing: "0.4%", color: "#000000" }}>
-                <p className="text-sm">Surface personalized content based on customer context and rep engagement</p>
+                <Image 
+                  src="/test-page/synoptix/star.png" 
+                  alt="Star bullet point" 
+                  width={20} 
+                  height={20} 
+                  className="mt-1 flex-shrink-0" 
+                />
+                <span style={{ fontFamily: "Poppins, sans-serif", fontWeight: 400, fontSize: "clamp(13px, 2vw, 14px)", lineHeight: 1.4, letterSpacing: "0.4%", color: "#000000" }}>
+                <p>Surface personalized content based on customer context and rep engagement</p>
                 </span>
               </div>
 
               <div className="flex items-start gap-3">
-                <Image src="/test-page/synoptix/star.png" alt="Star bullet point" width={20} height={20} className="mt-0.5" />
-                <span style={{ fontFamily: "Poppins, sans-serif", fontWeight: 400, fontSize: "14px", lineHeight: "17px", letterSpacing: "0.4%", color: "#000000" }}>
-                <p className="text-sm">Cut down prospecting prep with instant access to current battle cards</p>
+                <Image 
+                  src="/test-page/synoptix/star.png" 
+                  alt="Star bullet point" 
+                  width={20} 
+                  height={20} 
+                  className="mt-1 flex-shrink-0" 
+                />
+                <span style={{ fontFamily: "Poppins, sans-serif", fontWeight: 400, fontSize: "clamp(13px, 2vw, 14px)", lineHeight: 1.4, letterSpacing: "0.4%", color: "#000000" }}>
+                <p>Cut down prospecting prep with instant access to current battle cards</p>
                 </span>
               </div>
             </div>
-
-           
           </div>
         </div>
 
         {/* Right side - Form */}
-        <div className="p-8 md:p-12 ">
-          <form onSubmit={handleSubmit} className="space-y-6" style={{ fontFamily: 'Poppins, sans-serif', color: '#666666', fontWeight: 400, fontSize: '16px', lineHeight: '100%', letterSpacing: '0%' }}>
+        <div className="p-6 sm:p-8 md:p-12">
+          <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6" style={{ fontFamily: 'Poppins, sans-serif', color: '#666666', fontWeight: 400, fontSize: 'clamp(14px, 2vw, 16px)', lineHeight: '100%', letterSpacing: '0%' }}>
             {formStatus.isSuccess && (
               <div className="p-4 bg-green-50 text-green-700 rounded-xl">
                 Thank you for your message! We'll get back to you soon.
@@ -180,7 +196,7 @@ export default function ContactForm() {
               />
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
                 <label htmlFor="firstName" className="block text-sm font-medium mb-1">
                   First name
@@ -257,7 +273,7 @@ export default function ContactForm() {
             <div className="pt-4">
             <button
                 type="submit"
-                className="inline-flex items-center justify-center gap-2 bg-[#5662F6] text-white px-4 py-2 md:px-6 md:py-3 rounded-full text-sm md:text-base font-bold transition-all duration-300 hover:shadow-md disabled:bg-gray-400 disabled:cursor-not-allowed"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#5662F6] text-white px-6 py-3 rounded-full font-bold transition-all duration-300 hover:shadow-md disabled:bg-gray-400 disabled:cursor-not-allowed"
                 style={{
                   fontFamily: "Syne, sans-serif",
                   fontWeight: 600,

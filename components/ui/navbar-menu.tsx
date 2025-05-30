@@ -195,11 +195,8 @@ export const NavbarMenu = () => {
         icon: '/navbar-platform/synoptix-library-icon.svg',
         title: 'Synoptix Library',
         href: '/',
-        description: '',
-        items: [
-          { name: 'Prompt Library', href: '/platform/library/prompts' },
-          { name: 'Agent Library', href: '/platform/library/agents' }
-        ]
+        description: 'Coming Soon...',
+        items: []
       }
     ],
     bottom: [
@@ -420,23 +417,39 @@ export const NavbarMenu = () => {
                     <div className="grid grid-cols-3 mb-8">
                       {platformDropdownConfig.columns.map((column, idx) => (
                         <div key={`col-${idx}`} className={column.title === 'Synoptix Library' ? 'ml-4' : ''}>
-                          <div className="flex items-center mb-3">
-                            <Image src={column.icon} width={24} height={24} alt={`${column.title} icon`} className="mr-3" />
-                            <Link href={column.href || column.items[0]?.href || '/platform'} className="hover:opacity-80" onClick={() => setActive(null)}>
-                              <h3 
-                                className="text-[#5662F6]" 
-                                style={{ 
-                                  fontFamily: 'Syne', 
-                                  fontWeight: 700, 
-                                  fontSize: '20px', 
-                                  lineHeight: '100%', 
-                                  letterSpacing: '0px' 
-                                }}
-                              >
-                                {column.title}
-                              </h3>
-                            </Link>
-                            
+                          <div className="mb-3">
+                            <div className="flex items-center">
+                              <Image src={column.icon} width={24} height={24} alt={`${column.title} icon`} className="mr-3" />
+                              <Link href={column.href || column.items[0]?.href || '/platform'} className="hover:opacity-80" onClick={() => setActive(null)}>
+                                <h3 
+                                  className="text-[#5662F6]" 
+                                  style={{ 
+                                    fontFamily: 'Syne', 
+                                    fontWeight: 700, 
+                                    fontSize: '20px', 
+                                    lineHeight: '100%', 
+                                    letterSpacing: '0px' 
+                                  }}
+                                >
+                                  {column.title}
+                                </h3>
+                              </Link>
+                            </div>
+                            {column.description && (
+                              <div className="ml-9 mt-2">
+                                <span 
+                                  className="text-gray-500 bg-gray-100 px-2 py-0.5 rounded-md" 
+                                  style={{ 
+                                    fontFamily: 'Poppins', 
+                                    fontWeight: 400, 
+                                    fontSize: '12px', 
+                                    lineHeight: '20px' 
+                                  }}
+                                >
+                                  {column.description}
+                                </span>
+                              </div>
+                            )}
                           </div>
                           <ul className="space-y-2 ml-9">
                             {column.items.map((item, itemIdx) => (

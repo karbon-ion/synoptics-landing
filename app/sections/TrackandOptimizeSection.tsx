@@ -37,7 +37,7 @@ const TrackSection = () => {
           </p>
           <div className="flex justify-center md:justify-start">
             <Link
-              href="contact-us"
+              href="/platform/ai-performace-evaluation"
               className="bg-[#5662F6] hover:bg-indigo-600 text-white py-2.5 sm:py-3 px-6 sm:px-8 rounded-full inline-flex items-center justify-center transition-colors whitespace-nowrap max-w-[200px] sm:max-w-none"
               style={{ fontFamily: 'Syne', fontWeight: 500, fontSize: '16px', lineHeight: '24px' }}
             >
