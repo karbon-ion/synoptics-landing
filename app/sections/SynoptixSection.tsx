@@ -154,13 +154,13 @@ export default function SynoptixComponent() {
                 src={getImageForTab(activeTab)}
                 alt={`Synoptix for ${activeTab} teams`}
                 width={500}
-                height={380}
-                className="w-full max-w-[640px] h-auto md:h-[423px] object-contain mx-auto"
+                height={450}
+                className="w-full max-w-[640px] h-auto md:h-[400px] object-contain mx-auto"
               />
             </div>
 
             {/* Right - Features */}
-            <div className="flex-1 md:mt-0 md:mr-10">
+            <div className="flex-1 md:mr-10 flex flex-col justify-center">
               <div className="space-y-4">
                 {currentContent.features.map((feature, index) => (
                   <div key={index} className="flex items-start">
