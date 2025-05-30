@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export default function PlatformFeatures() {
   return (
-    <section className="py-16 px-20 mb-15  shadow-lg max-w-7xl mt-15 mx-auto">
+    <section className="py-16 px-20 mb-15 max-w-7xl mt-15 mx-auto rounded-lg" style={{ boxShadow: '0 -1px  rgba(0, 0, 0, 0.1), 0 1px 5px rgba(0, 0, 0, 0.1)' }}>
       <div className="bg-[#5662F6] bg-opacity-80 rounded-lg  mb-4 overflow-hidden">
         <div className="py-2 px-6 flex items-center justify-center">
           <span className="text-white mr-2">👤</span>
