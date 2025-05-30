@@ -71,107 +71,56 @@ export default function FeaturesSection() {
           {featuresData.map((feature, index) => (
             <div key={feature.id} id={feature.id} className="rounded-xl pt-16 -mt-16">
               <div className="grid grid-cols-1 lg:grid-cols-2">
-                {feature.imageFirst ? (
-                  <>
-                    <div className="flex justify-center items-center">
-                      <div className="relative w-full h-auto">
-                        <Image 
-                          src={feature.image}
-                          alt={feature.imageAlt}
-                          width={400}
-                          height={300}
-                          className="w-full h-auto"
-                        />
-                      </div>
+                {/* Text Content - Always first on mobile */}
+                <div className={`p-15 ${feature.imageFirst ? 'lg:order-2' : 'lg:order-1'} order-1`}>
+                  <div className="flex flex-col items-start mb-4">
+                    <Image src={feature.icon} alt={`${feature.title} Icon`} width={44} height={44} className="mb-2" />
+                    <h3 className="text-xl font-semibold" style={{fontFamily: "Syne",fontWeight:700,fontSize:"26px",lineHeight:"45px"}}>
+                      {feature.title}
+                    </h3>
+                  </div>
+                  <span style={{fontFamily: "Syne",fontWeight:400,fontSize:"14px",lineHeight:"17px",letterSpacing:"0.4px"}}>
+                    <ul className="space-y-4">
+                      {feature.points.map((point, i) => (
+                        <li key={i} className="flex items-start">
+                          <div className="min-w-5 mt-1 mr-2">
+                            <Image src="/test-page/synoptix/star.png" alt="Star bullet" width={16} height={16} />
+                          </div>
+                          <p className="text-sm">{point}</p>
+                        </li>
+                      ))}
+                    </ul>
+                    <div className="mt-6">
+                      <Link
+                        href="#"
+                        className="inline-flex items-center gap-1 text-indigo-500"
+                        style={{
+                          fontFamily: "Syne, sans-serif",
+                          fontWeight: 700,
+                          fontSize: "14px",
+                          lineHeight: "100%",
+                        }}
+                      >
+                        Learn More
+                        <ArrowRight className="h-3 w-3 ml-1" />
+                      </Link>
                     </div>
-                    
-                    <div className="p-15">
-                      <div className="flex flex-col items-start mb-4">
-                        <Image src={feature.icon} alt={`${feature.title} Icon`} width={44} height={44} className="mb-2" />
-                        <h3 className="text-xl font-semibold" style={{fontFamily: "Syne",fontWeight:700,fontSize:"26px",lineHeight:"45px"}}>
-                          {feature.title}
-                        </h3>
-                      </div>
-                      <span style={{fontFamily: "Syne",fontWeight:400,fontSize:"14px",lineHeight:"17px",letterSpacing:"0.4px"}}>
-                        <ul className="space-y-4">
-                          {feature.points.map((point, i) => (
-                            <li key={i} className="flex items-start">
-                              <div className="min-w-5 mt-1 mr-2">
-                                <Image src="/test-page/synoptix/star.png" alt="Star bullet" width={16} height={16} />
-                              </div>
-                              <p className="text-sm">{point}</p>
-                            </li>
-                          ))}
-                        </ul>
-                        <div className="mt-6">
-                          <Link
-                            href="#"
-                            className="inline-flex items-center gap-1 text-indigo-500"
-                            style={{
-                              fontFamily: "Syne, sans-serif",
-                              fontWeight: 700,
-                              fontSize: "14px",
-                              lineHeight: "100%",
-                            }}
-                          >
-                            Learn More
-                            <ArrowRight className="h-3 w-3 ml-1" />
-                          </Link>
-                        </div>
-                      </span>
-                    </div>
-                  </>
-                ) : (
-                  <>
-                    <div className="p-15">
-                      <div className="flex flex-col items-start mb-4">
-                        <Image src={feature.icon} alt={`${feature.title} Icon`} width={44} height={44} className="mb-2" />
-                        <h3 className="text-xl font-semibold" style={{fontFamily: "Syne",fontWeight:700,fontSize:"26px",lineHeight:"45px"}}>
-                          {feature.title}
-                        </h3>
-                      </div>
-                      <span style={{fontFamily: "Syne",fontWeight:400,fontSize:"14px",lineHeight:"17px",letterSpacing:"0.4px"}}>
-                        <ul className="space-y-4">
-                          {feature.points.map((point, i) => (
-                            <li key={i} className="flex items-start">
-                              <div className="min-w-5 mt-1 mr-2">
-                                <Image src="/test-page/synoptix/star.png" alt="Star bullet" width={16} height={16} />
-                              </div>
-                              <p className="text-sm">{point}</p>
-                            </li>
-                          ))}
-                        </ul>
-                        <div className="mt-6">
-                          <Link
-                            href="#"
-                            className="inline-flex items-center gap-1 text-indigo-500"
-                            style={{
-                              fontFamily: "Syne, sans-serif",
-                              fontWeight: 700,
-                              fontSize: "14px",
-                              lineHeight: "100%",
-                            }}
-                          >
-                            Learn More
-                            <ArrowRight className="h-3 w-3 ml-1" />
-                          </Link>
-                        </div>
-                      </span>
-                    </div>
-                    
-                    <div className="flex justify-center items-center">
-                      <div className="relative w-full h-auto">
-                        <Image 
-                          src={feature.image}
-                          alt={feature.imageAlt}
-                          width={400}
-                          height={300}
-                          className="w-full h-auto"
-                        />
-                      </div>
-                    </div>
-                  </>
-                )}
+                  </span>
+                </div>
+                
+                {/* Image - Second on mobile, but can be first on desktop */}
+                <div className={`flex justify-center items-center ${feature.imageFirst ? 'lg:order-1' : 'lg:order-2'} order-2 px-4 lg:px-0`}>
+                  <div className="relative w-full h-auto max-w-[85%] sm:max-w-[75%] md:max-w-[65%] lg:max-w-full mx-auto">
+                    <Image 
+                      src={feature.image}
+                      alt={feature.imageAlt}
+                      width={400}
+                      height={300}
+                      className="w-full h-auto object-contain"
+                      sizes="(max-width: 640px) 85vw, (max-width: 768px) 75vw, (max-width: 1024px) 65vw, 400px"
+                    />
+                  </div>
+                </div>
               </div>
             </div>
           ))}

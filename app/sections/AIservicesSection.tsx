@@ -46,7 +46,7 @@ export default function AiServicesSection() {
             </h2>
             <div className="mt-4 pl-10 md:mt-6">
               <Link
-                href="#"
+                href="/services/ai-consulting"
                 className="inline-flex items-center justify-center gap-2 bg-[#5662F6] text-white px-4  py-2 md:px-6 md:py-3 rounded-full text-sm md:text-base font-bold transition-all duration-300 hover:shadow-md"
                 style={{
                   fontFamily: "Syne, sans-serif",
@@ -98,7 +98,7 @@ export default function AiServicesSection() {
               </p>
             </div>
             <Link
-              href="#"
+              href="/services/ai-consulting#techniques"
               className="inline-flex items-center gap-1 text-indigo-500"
               style={{
                 fontFamily: "Syne, sans-serif",
@@ -151,7 +151,7 @@ export default function AiServicesSection() {
               </p>
             </div>
             <Link
-              href="#"
+              href="/services/ai-consulting#techniques"
               className="inline-flex items-center gap-1 text-indigo-500"
               style={{
                 fontFamily: "Syne, sans-serif",
@@ -202,7 +202,7 @@ export default function AiServicesSection() {
               </p>
             </div>
             <Link
-              href="#"
+              href="/services/ai-consulting#techniques"
               className="inline-flex items-center gap-1 text-indigo-500"
               style={{
                 fontFamily: "Syne, sans-serif",
@@ -253,7 +253,7 @@ export default function AiServicesSection() {
               </p>
             </div>
             <Link
-              href="#"
+              href="/services/ai-consulting#techniques"
               className="inline-flex items-center gap-1 text-indigo-500"
               style={{
                 fontFamily: "Syne, sans-serif",

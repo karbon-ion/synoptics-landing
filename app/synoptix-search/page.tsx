@@ -14,12 +14,12 @@ export default function SynoptixSearch() {
             <ResponsibleAI/>
             <IntegrationSection/>
 
-            <div className="container mx-auto mt-16">
+            <div className="container mx-auto mt-8 sm:mt-12 md:mt-16 px-4 sm:px-6">
                 <h2 style={{
                     fontFamily: "Syne",
                     fontWeight: 700,
-                    fontSize: "36px",
-                    lineHeight: "45px",
+                    fontSize: "clamp(28px, 5vw, 36px)",
+                    lineHeight: "clamp(36px, 5vw, 45px)",
                     letterSpacing: "0%",
                     textAlign: "center"
                 }}>
