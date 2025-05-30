@@ -577,8 +577,10 @@ export const NavbarMenu = () => {
                 ))}
               </div>
             </MenuItem>
-            <MenuItem setActive={setActive} active={active} item="About Us" href="/about-us" />
-            <MenuItem setActive={setActive} active={active} item="Contact Us" href="/#contact" />
+            <div className="flex space-x-4">
+              <MenuItem setActive={setActive} active={active} item="About Us" href="/about-us" />
+              <MenuItem setActive={setActive} active={active} item="Contact Us" href="/#contact" />
+            </div>
           </div>
         </Menu>
 
