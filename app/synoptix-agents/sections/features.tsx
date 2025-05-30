@@ -95,14 +95,14 @@ export default function FeaturesSection() {
             </div>
 
             {/* Image */}
-            <div className={`w-full lg:w-[65%] pr-10 ${feature.imagePosition === 'right' ? 'lg:-mr-14 pl-20' : 'lg:-ml-14 pr-15'}`}>
-              <div className="relative rounded-lg overflow-hidden shadow-lg">
+            <div className={`w-full lg:w-[65%] px-4 sm:px-6 lg:pr-10 ${feature.imagePosition === 'right' ? 'lg:-mr-14 lg:pl-20' : 'lg:-ml-14 lg:pr-15'}`}>
+              <div className="relative rounded-lg overflow-hidden shadow-lg mx-auto max-w-[400px] lg:max-w-none">
                 <Image
                   src={feature.imageUrl}
                   alt={feature.title}
                   width={900}
                   height={650}
-                  className="w-full h-auto object-cover"
+                  className="w-full h-[300px] sm:h-[400px] lg:h-auto object-cover"
                   priority={index === 0}
                 />
               </div>

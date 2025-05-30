@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
 import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const agentTypesData = [
   {
@@ -72,14 +73,81 @@ const agentTypesData = [
   }
 ];
 
+const AccordionItem = ({
+  title,
+  heading,
+  description,
+  isOpen,
+  toggleAccordion,
+  index
+}: {
+  title: string;
+  heading: string;
+  description: string[];
+  isOpen: boolean;
+  toggleAccordion: (index: number) => void;
+  index: number;
+}) => {
+  return (
+    <div className="border border-indigo-100 rounded-lg mb-3 overflow-hidden">
+      <button
+        onClick={() => toggleAccordion(index)}
+        className={`w-full px-4 py-3 flex items-center justify-between ${isOpen ? 'bg-indigo-500 text-white' : 'bg-white text-gray-800'}`}
+      >
+        <span className="font-medium text-sm">{title}</span>
+        <svg
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className={`transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
+        >
+          <path
+            d="M7 10L12 15L17 10"
+            stroke={isOpen ? 'white' : '#6366F1'}
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      </button>
+
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: 'auto', opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="overflow-hidden"
+          >
+            <div className="p-4 bg-white">
+              <h3 className="text-lg font-semibold mb-3 text-gray-800">{heading}</h3>
+              {description.map((item, i) => (
+                <p key={i} className="text-gray-700 text-sm mb-2">{item}</p>
+              ))}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+};
+
 export default function AgentTypesSection() {
   const [activeAgentId, setActiveAgentId] = useState('code-gen');
+  const [openAccordion, setOpenAccordion] = useState<number | null>(0);
   
   const activeAgent = agentTypesData.find(agent => agent.id === activeAgentId) || agentTypesData[0];
+
+  const toggleAccordion = (index: number) => {
+    setOpenAccordion(openAccordion === index ? null : index);
+  };
   
   return (
     <section className="py-16 w-full mx-auto">
-      <div className="container mx-auto ">
+      <div className="container mx-auto px-4">
         <h2 
           className="text-3xl md:text-4xl font-bold text-gray-800  text-center"
           style={{
@@ -90,7 +158,7 @@ export default function AgentTypesSection() {
           Discover the AI Agents Built for <span className="text-indigo-500">Enterprise Performance</span>
         </h2>
         
-        <div className="relative overflow-hidden rounded-xl pt-20 w-full">
+        <div className="relative overflow-hidden rounded-xl pt-20 w-full hidden lg:block">
           <div className="absolute inset-0 z-0 h-full w-full">
             <Image 
               src="/synoptix-agents/features/background.png"
@@ -169,6 +237,21 @@ export default function AgentTypesSection() {
             </div>
           </div>
         </div>
+
+          {/* Mobile view - Accordion */}
+          <div className="lg:hidden mt-10 px-4">
+            {agentTypesData.map((agent, index) => (
+              <AccordionItem
+                key={agent.id}
+                title={agent.title}
+                heading={agent.heading}
+                description={agent.description}
+                isOpen={openAccordion === index}
+                toggleAccordion={toggleAccordion}
+                index={index}
+              />
+            ))}
+          </div>
       </div>
     </section>
   );
