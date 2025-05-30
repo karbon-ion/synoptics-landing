@@ -226,17 +226,20 @@ export const NavbarMenu = () => {
       {
         icon: '/navbar-platform/integration-icon.svg',
         title: 'Integration',
-        href: '/platform/integration'
+        href: '/',
+        description: 'Coming Soon...'
       },
       {
         icon: '/navbar-platform/model-hub.svg',
         title: 'Model Hub',
-        href: '/platform/model-hub'
+        href: '/',
+        description: 'Coming Soon...'
       },
       {
         icon: '/navbar-platform/apis-icon.svg',
         title: 'APIs',
-        href: '/platform/apis'
+        href: '/',
+        description: 'Coming Soon...'
       }
     ]
   };
@@ -425,7 +428,7 @@ export const NavbarMenu = () => {
                               {column.title}
                             </h3>
                           </div>
-                          <ul className="space-y-2">
+                          <ul className="space-y-2 ml-9">
                             {column.items.map((item, itemIdx) => (
                               <li key={`item-${idx}-${itemIdx}`}>
                                 <Link 
@@ -485,7 +488,7 @@ export const NavbarMenu = () => {
                             )}
                           </div>
                           {section.items && (
-                            <ul className="space-y-2">
+                            <ul className="space-y-2 ml-9">
                               {section.items.map((item, itemIdx) => (
                                 <li key={`bottom-item-${idx}-${itemIdx}`}>
                                   <Link 
@@ -515,18 +518,33 @@ export const NavbarMenu = () => {
                         <div key={`footer-${idx}`}>
                           <Link 
                             href={item.href} 
-                            className="flex items-center text-gray-600 hover:text-blue-600"
+                            className="flex flex-col text-gray-600 hover:text-blue-600"
                           >
-                            <Image src={item.icon} width={24} height={24} alt={`${item.title} icon`} className="mr-3" />
-                            <span style={{ 
-                              fontFamily: 'Syne', 
-                              fontWeight: 700, 
-                              fontSize: '20px', 
-                              lineHeight: '100%', 
-                              letterSpacing: '0px' 
-                            }}>
-                              {item.title}
-                            </span>
+                            <div className="flex items-center">
+                              <Image src={item.icon} width={24} height={24} alt={`${item.title} icon`} className="mr-3" />
+                              <span style={{ 
+                                fontFamily: 'Syne', 
+                                fontWeight: 700, 
+                                fontSize: '20px', 
+                                lineHeight: '100%', 
+                                letterSpacing: '0px' 
+                              }}>
+                                {item.title}
+                              </span>
+                            </div>
+                            <div className="ml-9 mt-1">
+                              <span 
+                                className="text-gray-500 bg-gray-100 px-2 py-0.5 rounded-md" 
+                                style={{ 
+                                  fontFamily: 'Poppins', 
+                                  fontWeight: 400, 
+                                  fontSize: '12px', 
+                                  lineHeight: '20px' 
+                                }}
+                              >
+                                Coming Soon...
+                              </span>
+                            </div>
                           </Link>
                         </div>
                       ))}
@@ -536,27 +554,9 @@ export const NavbarMenu = () => {
               </div>
             </MenuItem>
 
-            <MenuItem setActive={setActive} active={active} item="SynoGuard" href="/ai-security-tool/syno-guard" />
+            {/* <MenuItem setActive={setActive} active={active} item="SynoGuard" href="/ai-security-tool/syno-guard" /> */}
 
-            <MenuItem setActive={setActive} active={active} item="Services">
-              <div className="grid gap-4 w-64">
-                {servicesItems.map((item) => (
-                  <div key={item.name} className="w-full">
-                    <Link 
-                      href={item.href}
-                      className="group flex flex-col py-2 px-2 hover:bg-gray-50 rounded-lg transition-colors"
-                    >
-                      <p className="text-sm font-medium text-gray-900 group-hover:text-blue-600">
-                        {item.name}
-                      </p>
-                      <p className="text-xs text-gray-500 group-hover:text-blue-500">
-                        {item.description}
-                      </p>
-                    </Link>
-                  </div>
-                ))}
-              </div>
-            </MenuItem>
+            <MenuItem setActive={setActive} active={active} item="Services" href="/services/ai-consulting" />
 
             <MenuItem setActive={setActive} active={active} item="Resources">
               <div className="grid gap-4 w-64">
@@ -627,7 +627,7 @@ export const NavbarMenu = () => {
                   </div>
                 </div>
 
-                <div className="animate-fadeIn" style={{ animationDelay: '250ms' }}>
+                {/* <div className="animate-fadeIn" style={{ animationDelay: '250ms' }}>
                   <Link 
                     href="/ai-security-tool/syno-guard" 
                     className={`text-lg font-medium py-3 px-4 rounded-lg transition-colors ${pathname === '/syno-guard' ? 'text-blue-600 bg-blue-50/50' : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50/50'}`}
@@ -635,24 +635,16 @@ export const NavbarMenu = () => {
                   >
                     SynoGuard
                   </Link>
-                </div>
+                </div> */}
 
-                <div className="space-y-2 animate-fadeIn" style={{ animationDelay: '300ms' }}>
-                  <div className="text-lg font-medium py-2 px-4 text-gray-700">
+                <div className="animate-fadeIn" style={{ animationDelay: '300ms' }}>
+                  <Link 
+                    href="/services/ai-consulting" 
+                    className={`text-lg font-medium py-3 px-4 rounded-lg transition-colors ${pathname === '/services/ai-consulting' ? 'text-blue-600 bg-blue-50/50' : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50/50'}`}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
                     Services
-                  </div>
-                  <div className="pl-4 space-y-2">
-                    {servicesItems.map((item) => (
-                      <Link
-                        key={item.name}
-                        href={item.href}
-                        className={`flex items-center py-2 px-4 rounded-lg transition-colors ${pathname === item.href ? 'text-blue-600 bg-blue-50/50' : 'text-gray-600 hover:text-blue-600 hover:bg-blue-50/50'}`}
-                        onClick={() => setIsMobileMenuOpen(false)}
-                      >
-                        <span>{item.name}</span>
-                      </Link>
-                    ))}
-                  </div>
+                  </Link>
                 </div>
 
                 <div className="space-y-2 animate-fadeIn" style={{ animationDelay: '350ms' }}>
