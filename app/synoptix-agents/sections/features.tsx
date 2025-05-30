@@ -46,9 +46,10 @@ export default function FeaturesSection() {
         {featuresData.map((feature, index) => (
           <div
             key={feature.id}
+            id={feature.id}
             className={`relative flex flex-col lg:flex-row ${
               feature.imagePosition === 'right' ? 'lg:flex-row' : 'lg:flex-row-reverse'
-            } items-center justify-between ${index !== featuresData.length - 1 ? 'mb-48' : ''} ${index > 0 ? '-mt-32' : ''}`}
+            } items-center justify-between ${index !== featuresData.length - 1 ? 'mb-48' : ''} ${index > 0 ? '-mt-32' : ''} pt-16 -mt-16`}
           >
             {/* Text Content */}
             <div className="w-full lg:w-2/5 z-10">

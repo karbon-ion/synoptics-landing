@@ -69,7 +69,7 @@ export default function FeaturesSection() {
         
         <div className=" rounded-xl">
           {featuresData.map((feature, index) => (
-            <div key={feature.id} className="rounded-xl">
+            <div key={feature.id} id={feature.id} className="rounded-xl pt-16 -mt-16">
               <div className="grid grid-cols-1 lg:grid-cols-2">
                 {feature.imageFirst ? (
                   <>

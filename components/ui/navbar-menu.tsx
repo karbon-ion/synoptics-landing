@@ -172,26 +172,30 @@ export const NavbarMenu = () => {
       {
         icon: '/navbar-platform/synoptix-search-icon.svg',
         title: 'Synoptix Search',
+        href: '/synoptix-search',
         items: [
-          { name: 'Universal Knowledge', href: '/platform/search/universal' },
-          { name: 'Data Insights', href: '/platform/search/insights' },
-          { name: 'Enterprise Data Search', href: '/platform/search/enterprise' },
-          { name: 'Fine-Tuning/Industry Specific', href: '/platform/search/industry' }
+          { name: 'Universal Knowledge', href: '/synoptix-search#universal-knowledge' },
+          { name: 'Data Insights', href: '/synoptix-search#data-insights' },
+          { name: 'Enterprise Data Search', href: '/synoptix-search#enterprise-data-search' },
+          { name: 'Fine-Tuning/Industry Specific', href: '/synoptix-search#fine-tuning' }
         ]
       },
       {
         icon: '/navbar-platform/synoptix-agent-icon.svg',
         title: 'Synoptix Agents',
+        href: '/synoptix-agents',
         items: [
-          { name: 'Custom Agents', href: '/synoptix-agents/custom' },
-          { name: 'Reasoning Agent', href: '/synoptix-agents/reasoning' },
-          { name: 'Knowledge Access', href: '/synoptix-agents/knowledge' },
-          { name: 'Agent Library', href: '/synoptix-agents/library' }
+          { name: 'Custom Agents', href: '/synoptix-agents#customize-agent' },
+          { name: 'Reasoning Agent', href: '/synoptix-agents#create-agents' },
+          { name: 'Knowledge Access', href: '/synoptix-agents#deploy-agent' },
+          { name: 'Agent Library', href: '/synoptix-agents#manage-agent' }
         ]
       },
       {
         icon: '/navbar-platform/synoptix-library-icon.svg',
         title: 'Synoptix Library',
+        href: '/',
+        description: '',
         items: [
           { name: 'Prompt Library', href: '/platform/library/prompts' },
           { name: 'Agent Library', href: '/platform/library/agents' }
@@ -202,6 +206,7 @@ export const NavbarMenu = () => {
       {
         icon: '/navbar-platform/evaluatiom-icon.svg',
         title: 'Evaluation',
+        href: '/platform/ai-performace-evaluation',
         items: [
           { name: 'Prompt Library', href: '/platform/evaluation/prompts' },
           { name: 'Agent Library', href: '/platform/evaluation/agents' }
@@ -210,6 +215,7 @@ export const NavbarMenu = () => {
       {
         icon: '/navbar-platform/synoguard-icon.svg',
         title: 'Synoguard',
+        href: '/ai-security-tool/syno-guard',
         items: [
           { name: 'Prompt Library', href: '/platform/synoguard/prompts' },
           { name: 'Agent Library', href: '/platform/synoguard/agents' }
@@ -219,7 +225,8 @@ export const NavbarMenu = () => {
         icon: '/navbar-platform/synoptix-voice-agents.svg',
         title: 'Synoptix Voice Agents',
         description: 'Coming Soon ...',
-        href: '/platform/voice'
+        href: '/platform/voice',
+        items: []
       }
     ],
     footer: [
@@ -369,7 +376,7 @@ export const NavbarMenu = () => {
                 <div className="flex w-full">
                   {/* Left Column - Platform Overview */}
                   <div className="w-[350px] pr-8 border-r border-gray-200">
-                    <Link href={platformDropdownConfig.overview.href} className="block">
+                    <Link href={platformDropdownConfig.overview.href} className="block" onClick={() => setActive(null)}>
                       <h3 
                         className="text-[#5662F6]" 
                         style={{ 
@@ -412,21 +419,24 @@ export const NavbarMenu = () => {
                     {/* Top Row - Main Sections */}
                     <div className="grid grid-cols-3 mb-8">
                       {platformDropdownConfig.columns.map((column, idx) => (
-                        <div key={`col-${idx}`}>
+                        <div key={`col-${idx}`} className={column.title === 'Synoptix Library' ? 'ml-4' : ''}>
                           <div className="flex items-center mb-3">
                             <Image src={column.icon} width={24} height={24} alt={`${column.title} icon`} className="mr-3" />
-                            <h3 
-                              className="text-[#5662F6]" 
-                              style={{ 
-                                fontFamily: 'Syne', 
-                                fontWeight: 700, 
-                                fontSize: '20px', 
-                                lineHeight: '100%', 
-                                letterSpacing: '0px' 
-                              }}
-                            >
-                              {column.title}
-                            </h3>
+                            <Link href={column.href || column.items[0]?.href || '/platform'} className="hover:opacity-80" onClick={() => setActive(null)}>
+                              <h3 
+                                className="text-[#5662F6]" 
+                                style={{ 
+                                  fontFamily: 'Syne', 
+                                  fontWeight: 700, 
+                                  fontSize: '20px', 
+                                  lineHeight: '100%', 
+                                  letterSpacing: '0px' 
+                                }}
+                              >
+                                {column.title}
+                              </h3>
+                            </Link>
+                            
                           </div>
                           <ul className="space-y-2 ml-9">
                             {column.items.map((item, itemIdx) => (
@@ -434,6 +444,7 @@ export const NavbarMenu = () => {
                                 <Link 
                                   href={item.href} 
                                   className="text-gray-600 hover:text-blue-600 block" 
+                                  onClick={() => setActive(null)}
                                   style={{ 
                                     fontFamily: 'Poppins', 
                                     fontWeight: 400, 
@@ -458,18 +469,20 @@ export const NavbarMenu = () => {
                           <div className="flex flex-col mb-3">
                             <div className="flex items-center">
                               <Image src={section.icon} width={24} height={24} alt={`${section.title} icon`} className="mr-3" />
-                              <h3 
-                                className="text-[#5662F6]" 
-                                style={{ 
-                                  fontFamily: 'Syne', 
-                                  fontWeight: 700, 
-                                  fontSize: '20px', 
-                                  lineHeight: '100%', 
-                                  letterSpacing: '0px' 
-                                }}
-                              >
-                                {section.title}
-                              </h3>
+                              <Link href={section.href || (section.items && section.items[0]?.href) || '/platform'} className="hover:opacity-80" onClick={() => setActive(null)}>
+                                <h3 
+                                  className="text-[#5662F6]" 
+                                  style={{ 
+                                    fontFamily: 'Syne', 
+                                    fontWeight: 700, 
+                                    fontSize: '20px', 
+                                    lineHeight: '100%', 
+                                    letterSpacing: '0px' 
+                                  }}
+                                >
+                                  {section.title}
+                                </h3>
+                              </Link>
                             </div>
                             {section.description && (
                               <div className="ml-9 mt-1">
@@ -487,13 +500,14 @@ export const NavbarMenu = () => {
                               </div>
                             )}
                           </div>
-                          {section.items && (
+                          {section.items && section.items.length > 0 ? (
                             <ul className="space-y-2 ml-9">
                               {section.items.map((item, itemIdx) => (
                                 <li key={`bottom-item-${idx}-${itemIdx}`}>
                                   <Link 
                                     href={item.href} 
-                                    className="text-gray-600 hover:text-blue-600 block" 
+                                    className="text-gray-600 hover:text-blue-600 block"
+                                    onClick={() => setActive(null)} 
                                     style={{ 
                                       fontFamily: 'Poppins', 
                                       fontWeight: 400, 
@@ -507,6 +521,8 @@ export const NavbarMenu = () => {
                                 </li>
                               ))}
                             </ul>
+                          ) : (
+                            <div className="ml-9" style={{ height: '40px' }}></div>
                           )}
                         </div>
                       ))}
@@ -519,6 +535,7 @@ export const NavbarMenu = () => {
                           <Link 
                             href={item.href} 
                             className="flex flex-col text-gray-600 hover:text-blue-600"
+                            onClick={() => setActive(null)}
                           >
                             <div className="flex items-center">
                               <Image src={item.icon} width={24} height={24} alt={`${item.title} icon`} className="mr-3" />
@@ -579,7 +596,7 @@ export const NavbarMenu = () => {
             </MenuItem>
             <div className="flex space-x-4">
               <MenuItem setActive={setActive} active={active} item="About Us" href="/about-us" />
-              <MenuItem setActive={setActive} active={active} item="Contact Us" href="/#contact" />
+              <MenuItem setActive={setActive} active={active} item="Contact Us" href="/contact-us" />
             </div>
           </div>
         </Menu>
@@ -677,7 +694,7 @@ export const NavbarMenu = () => {
 
                 <div className="animate-fadeIn" style={{ animationDelay: '450ms' }}>
                   <Link 
-                    href="/#contact" 
+                    href="/contact-us" 
                     className={`text-lg font-medium py-3 px-4 rounded-lg transition-colors ${pathname === '/#contact' ? 'text-blue-600 bg-blue-50/50' : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50/50'}`}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
