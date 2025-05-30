@@ -36,7 +36,8 @@ export const MenuItem = ({
         <Link href={href}>
           <motion.p
             transition={{ duration: 0.3 }}
-            className={`cursor-pointer hover:opacity-[0.9] text-sm font-medium ${pathname === href ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'}`}
+            className={`cursor-pointer hover:opacity-[0.9] uppercase ${pathname === href ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'}`}
+            style={{ fontFamily: 'Poppins', fontWeight: 500, fontSize: '14px', lineHeight: '20px', letterSpacing: '0%', whiteSpace: 'nowrap' }}
           >
             {item}
           </motion.p>
@@ -44,7 +45,8 @@ export const MenuItem = ({
       ) : (
         <motion.p
           transition={{ duration: 0.3 }}
-          className="cursor-pointer text-sm font-medium text-gray-700 hover:text-blue-600"
+          className="cursor-pointer text-gray-700 hover:text-blue-600 uppercase"
+          style={{ fontFamily: 'Poppins', fontWeight: 500, fontSize: '14px', lineHeight: '20px', letterSpacing: '0%', whiteSpace: 'nowrap' }}
         >
           {item}
         </motion.p>
