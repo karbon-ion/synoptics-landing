@@ -4,10 +4,16 @@ import Image from 'next/image';
 
 export default function PlatformFeatures() {
   return (
-    <section className="py-16 px-20 mb-15 max-w-7xl mt-15 mx-auto rounded-lg" style={{ boxShadow: '0 -1px  rgba(0, 0, 0, 0.1), 0 1px 5px rgba(0, 0, 0, 0.1)' }}>
-      <div className="bg-[#5662F6] bg-opacity-80 rounded-lg  mb-4 overflow-hidden">
+    <section
+      className="py-16 px-20 mb-15 max-w-7xl mt-15 mx-auto rounded-lg"
+      style={{
+        boxShadow: '0 -1px rgba(0, 0, 0, 0.1), 0 1px 5px rgba(0, 0, 0, 0.1)',
+        background: 'linear-gradient(196.25deg, rgba(255, 255, 255, 0.4) 9.13%, rgba(219, 234, 254, 0.28) 92.56%)'
+      }}
+    >
+    <div className="bg-[#5662F6] bg-opacity-80 rounded-lg  mb-4 overflow-hidden">
         <div className="py-2 px-6 flex items-center justify-center">
-          <span className="text-white mr-2">👤</span>
+          <Image src="/platform/agents-icon.svg" alt="Agents Icon" width={20} height={20} className="mr-2" />
           <span className="text-white font-medium" style={{ fontFamily: 'Syne, sans-serif',fontWeight: '700',fontSize: '20px',lineHeight:'' }}>Agents</span>
         </div>
         <div className="bg-white p-0 rounded-b-lg">
@@ -30,7 +36,7 @@ export default function PlatformFeatures() {
 
       <div className="bg-[#6A99FF] bg-opacity-80 rounded-lg mb-4 overflow-hidden">
         <div className="py-2 px-6 flex items-center justify-center">
-          <span className="text-white mr-2">🔍</span>
+          <Image src="/platform/enterprise-search-icon.svg" alt="Enterprise Search Icon" width={20} height={20} className="mr-2" />
           <span className="text-white font-medium" style={{ fontFamily: 'Syne, sans-serif',fontWeight: '600',fontSize: '20px',lineHeight:'' }}>Enterprise Search</span>
         </div>
         <div className="bg-white p-0 rounded-b-lg">
