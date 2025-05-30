@@ -7,7 +7,7 @@ export default function TechStackCard() {
       <div className="w-[90%] md:w-full md:max-w-md mb-4 md:mb-0 p-3 md:p-10 z-10">
         <h2 className="font-semibold leading-tight md:leading-snug">
           <span className="block" style={{ fontFamily: "Syne, sans-serif", fontWeight: 700, fontSize: "24px", lineHeight: "32px", letterSpacing: "0%", whiteSpace: "normal", marginBottom: "4px" }}>SynoGuard</span>
-          <span className="block" style={{ fontFamily: "Syne, sans-serif", fontWeight: 700, fontSize: "24px", lineHeight: "32px", letterSpacing: "0%", whiteSpace: "normal" }}>Secure and Built for Enterprise </span>
+          <span className="block" style={{ fontFamily: "Syne, sans-serif", fontWeight: 700, fontSize: "24px", lineHeight: "normal", letterSpacing: "0%", whiteSpace: "nowrap" }}>Secure and Built for Enterprise </span>
         </h2>
         <p className="text-xs md:text-sm mt-3 md:mt-4 mb-4 text-white/90" style={{ fontFamily: "Poppins, sans-serif", fontWeight: 400, lineHeight: "20px", letterSpacing: "0%" }}>
         Prevent harmful content, block unauthorised access, and protect your business data with Synoptix AI enterprise-ready security layer. 
