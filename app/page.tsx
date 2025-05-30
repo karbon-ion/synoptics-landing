@@ -1,38 +1,63 @@
-import Hero from './sections/Hero';
-import VideoSection from './sections/VideoSection';
-import FeaturesSection from './sections/FeaturesSection';
-import ApiSection from './sections/ApiSection';
-import WhySection from './sections/WhySection';
-import ModelProvidersSection from './sections/ModelProvidersSection';
-import StatsSection from './sections/StatsSection';
-import SecuritySection from './sections/SecuritySection';
-import PricingSection from './sections/PricingSection';
-import BlogsSection from './sections/BlogsSection';
-import TestimonialsSection from './sections/TestimonialsSection';
-import ContactSection from './sections/ContactSection';
-import ProvidersMarquee from "./sections/ProvidersMarquee";
-import CtaBanner from './sections/CtaBanner';
-export default function Home() {
+"use client";
+
+import { useEffect, useState, useRef } from "react";
+import HeroSection from "./sections/HeroSection";
+import EnterpriseSection from "./sections/EnterpriseSection";
+import SynoptixComponent from "./sections/SynoptixSection";
+import TrackSection from "./sections/TrackandOptimizeSection";
+import SecuritySection from "./sections/SecuritySection";
+import BlogsSection from "./sections/BlogsSection";
+import Testimonials from "./sections/Testimonials";
+import CertificationSection from "./sections/CertificationSection";
+import EnterpriseSecuritySection from "./sections/SecuritySection";
+import AiServicesSection from "./sections/AIservicesSection";
+
+export default function TestPage() {
+  const [mounted, setMounted] = useState(false);
+  const videoRef = useRef<HTMLDivElement>(null);
+  const [isInView, setIsInView] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+    
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsInView(entry.isIntersecting);
+      },
+      { threshold: 0.1 }
+    );
+
+    if (videoRef.current) {
+      observer.observe(videoRef.current);
+    }
+
+    return () => {
+      if (videoRef.current) {
+        observer.unobserve(videoRef.current);
+      }
+    };
+  }, []);
+  
+  useEffect(() => {
+    if (mounted) {
+      setIsInView(true);
+    }
+  }, [mounted]);
+
+  if (!mounted) return null;
+
   return (
-    <>
-      <Hero />
-      {/* <ProvidersMarquee /> */}
-      <VideoSection />
-      <FeaturesSection />
-      <ApiSection />
-      <WhySection />
-      <CtaBanner/>
-      <StatsSection />
-      <SecuritySection />
-
-      {/* <ModelProvidersSection /> */}
-      {/* <PricingSection /> */}
-      {/* <PngSection /> */}
-
-      {/* <BlogsSection /> */}
-      {/* <TestimonialsSection /> */}
-      <ContactSection />
-
-    </>
+    <div className="relative w-full">
+      <HeroSection videoRef={videoRef} isInView={isInView} />
+      <EnterpriseSection />
+      <SynoptixComponent/>
+      <TrackSection/>
+      <EnterpriseSecuritySection/>
+      <AiServicesSection/>
+      <BlogsSection/>
+      <Testimonials/>
+      <CertificationSection/>
+      
+    </div>
   );
 }

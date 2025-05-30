@@ -36,7 +36,8 @@ export const MenuItem = ({
         <Link href={href}>
           <motion.p
             transition={{ duration: 0.3 }}
-            className={`cursor-pointer hover:opacity-[0.9] text-sm font-medium ${pathname === href ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'}`}
+            className={`cursor-pointer hover:opacity-[0.9] uppercase ${pathname === href ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'}`}
+            style={{ fontFamily: 'Poppins', fontWeight: 500, fontSize: '14px', lineHeight: '20px', letterSpacing: '0%', whiteSpace: 'nowrap' }}
           >
             {item}
           </motion.p>
@@ -44,7 +45,8 @@ export const MenuItem = ({
       ) : (
         <motion.p
           transition={{ duration: 0.3 }}
-          className="cursor-pointer text-sm font-medium text-gray-700 hover:text-blue-600"
+          className="cursor-pointer text-gray-700 hover:text-blue-600 uppercase"
+          style={{ fontFamily: 'Poppins', fontWeight: 500, fontSize: '14px', lineHeight: '20px', letterSpacing: '0%', whiteSpace: 'nowrap' }}
         >
           {item}
         </motion.p>
@@ -159,6 +161,94 @@ export const NavbarMenu = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [scrolled]);
 
+  // Platform dropdown configuration that matches the image layout
+  const platformDropdownConfig = {
+    overview: {
+      title: 'Platform Overview →',
+      description: 'Turn ideas into structured workflows using simple, natural language prompts or our visual builder.',
+      href: '/platform'
+    },
+    columns: [
+      {
+        icon: '/navbar-platform/synoptix-search-icon.svg',
+        title: 'Synoptix Search',
+        href: '/synoptix-search',
+        items: [
+          { name: 'Universal Knowledge', href: '/synoptix-search#universal-knowledge' },
+          { name: 'Data Insights', href: '/synoptix-search#data-insights' },
+          { name: 'Enterprise Data Search', href: '/synoptix-search#enterprise-data-search' },
+          { name: 'Fine-Tuning/Industry Specific', href: '/synoptix-search#fine-tuning' }
+        ]
+      },
+      {
+        icon: '/navbar-platform/synoptix-agent-icon.svg',
+        title: 'Synoptix Agents',
+        href: '/synoptix-agents',
+        items: [
+          { name: 'Custom Agents', href: '/synoptix-agents#customize-agent' },
+          { name: 'Reasoning Agent', href: '/synoptix-agents#create-agents' },
+          { name: 'Knowledge Access', href: '/synoptix-agents#deploy-agent' },
+          { name: 'Agent Library', href: '/synoptix-agents#manage-agent' }
+        ]
+      },
+      {
+        icon: '/navbar-platform/synoptix-library-icon.svg',
+        title: 'Synoptix Library',
+        href: '/',
+        description: 'Coming Soon...',
+        items: []
+      }
+    ],
+    bottom: [
+      {
+        icon: '/navbar-platform/evaluatiom-icon.svg',
+        title: 'Evaluation',
+        href: '/platform/ai-performace-evaluation',
+        items: [
+          { name: 'Prompt Library', href: '/platform/evaluation/prompts' },
+          { name: 'Agent Library', href: '/platform/evaluation/agents' }
+        ]
+      },
+      {
+        icon: '/navbar-platform/synoguard-icon.svg',
+        title: 'Synoguard',
+        href: '/ai-security-tool/syno-guard',
+        items: [
+          { name: 'Prompt Library', href: '/platform/synoguard/prompts' },
+          { name: 'Agent Library', href: '/platform/synoguard/agents' }
+        ]
+      },
+      {
+        icon: '/navbar-platform/synoptix-voice-agents.svg',
+        title: 'Synoptix Voice Agents',
+        description: 'Coming Soon ...',
+        href: '/platform/voice',
+        items: []
+      }
+    ],
+    footer: [
+      {
+        icon: '/navbar-platform/integration-icon.svg',
+        title: 'Integration',
+        href: '/',
+        description: 'Coming Soon...'
+      },
+      {
+        icon: '/navbar-platform/model-hub.svg',
+        title: 'Model Hub',
+        href: '/',
+        description: 'Coming Soon...'
+      },
+      {
+        icon: '/navbar-platform/apis-icon.svg',
+        title: 'APIs',
+        href: '/',
+        description: 'Coming Soon...'
+      }
+    ]
+  };
+
+  // Keeping the original platformItems for backward compatibility with mobile view
   const platformItems = [
     { 
       name: 'RAG', 
@@ -187,7 +277,7 @@ export const NavbarMenu = () => {
   ];
 
   const servicesItems = [
-    { name: 'Fine-Tuning', href: '/services/fine-tuning', description: 'Custom Model Fine-Tuning' },
+    // { name: 'Fine-Tuning', href: '/services/fine-tuning', description: 'Custom Model Fine-Tuning' },
     { name: 'AI Consulting', href: '/services/ai-consulting', description: 'Enterprise AI Solutions' },
   ];
 
@@ -278,56 +368,225 @@ export const NavbarMenu = () => {
             <MenuItem setActive={setActive} active={active} item="Home" href="/" />
 
             <MenuItem setActive={setActive} active={active} item="Platform">
-              <div className="grid grid-cols-2 gap-4 p-4 w-[650px]">
-                {platformItems.map((item) => (
-                  <Link 
-                    key={item.name}
-                    href={item.href}
-                    className="group flex hover:bg-gray-50 transition-colors overflow-hidden"
-                  >
-                    <div className="w-[140px] h-full relative bg-gray-100 overflow-hidden rounded-xl">
-                      <Image 
-                        src={item.image} 
-                        alt={item.name}
-                        fill
-                        className="object-cover group-hover:scale-105 transition-transform duration-300"
-                        unoptimized
-                      />
-                    </div>
-                    <div className="p-3 flex h-full flex-col text-start justify-start flex-1">
-                      <h3 className="text-xl font-bold text-gray-900 group-hover:text-blue-600 mb-2">
-                        {item.name}
+              <div className="w-[1419px] bg-white p-10" style={{ height: '' }}>
+                {/* Main Container - Two Column Layout */}
+                <div className="flex w-full">
+                  {/* Left Column - Platform Overview */}
+                  <div className="w-[350px] pr-8 border-r border-gray-200">
+                    <Link href={platformDropdownConfig.overview.href} className="block" onClick={() => setActive(null)}>
+                      <h3 
+                        className="text-[#5662F6]" 
+                        style={{ 
+                          fontFamily: 'Syne', 
+                          fontWeight: 700, 
+                          fontSize: '20px', 
+                          lineHeight: '100%', 
+                          letterSpacing: '0px' 
+                        }}
+                      >
+                        {platformDropdownConfig.overview.title}
                       </h3>
-                      <p className="text-sm text-gray-600 group-hover:text-blue-500">
-                        {item.description}
+                      <p 
+                        className="text-gray-600 mt-2 mb-4" 
+                        style={{ 
+                          fontFamily: 'Poppins', 
+                          fontWeight: 400, 
+                          fontSize: '12px', 
+                          lineHeight: '20px', 
+                          letterSpacing: '0%' 
+                        }}
+                      >
+                        {platformDropdownConfig.overview.description}
                       </p>
-                    </div>
-                  </Link>
-                ))}
-              </div>
-            </MenuItem>
-
-            <MenuItem setActive={setActive} active={active} item="SynoGuard" href="/ai-security-tool/syno-guard" />
-
-            <MenuItem setActive={setActive} active={active} item="Services">
-              <div className="grid gap-4 w-64">
-                {servicesItems.map((item) => (
-                  <div key={item.name} className="w-full">
-                    <Link 
-                      href={item.href}
-                      className="group flex flex-col py-2 px-2 hover:bg-gray-50 rounded-lg transition-colors"
-                    >
-                      <p className="text-sm font-medium text-gray-900 group-hover:text-blue-600">
-                        {item.name}
-                      </p>
-                      <p className="text-xs text-gray-500 group-hover:text-blue-500">
-                        {item.description}
-                      </p>
+                      
+                      <div className="rounded-lg overflow-hidden">
+                        <Image 
+                          src="/platform/image.png" 
+                          alt="Platform Overview" 
+                          width={300} 
+                          height={200}
+                          className="w-full h-auto object-contain"
+                        />
+                      </div>
                     </Link>
                   </div>
-                ))}
+                  
+                  {/* Right Column - Menu Grid */}
+                  <div className="flex-1 pl-8">
+                    {/* Top Row - Main Sections */}
+                    <div className="grid grid-cols-3 mb-8">
+                      {platformDropdownConfig.columns.map((column, idx) => (
+                        <div key={`col-${idx}`} className={column.title === 'Synoptix Library' ? 'ml-4' : ''}>
+                          <div className="mb-3">
+                            <div className="flex items-center">
+                              <Image src={column.icon} width={24} height={24} alt={`${column.title} icon`} className="mr-3" />
+                              <Link href={column.href || column.items[0]?.href || '/platform'} className="hover:opacity-80" onClick={() => setActive(null)}>
+                                <h3 
+                                  className="text-[#5662F6]" 
+                                  style={{ 
+                                    fontFamily: 'Syne', 
+                                    fontWeight: 700, 
+                                    fontSize: '20px', 
+                                    lineHeight: '100%', 
+                                    letterSpacing: '0px' 
+                                  }}
+                                >
+                                  {column.title}
+                                </h3>
+                              </Link>
+                            </div>
+                            {column.description && (
+                              <div className="ml-9 mt-2">
+                                <span 
+                                  className="text-gray-500 bg-gray-100 px-2 py-0.5 rounded-md" 
+                                  style={{ 
+                                    fontFamily: 'Poppins', 
+                                    fontWeight: 400, 
+                                    fontSize: '12px', 
+                                    lineHeight: '20px' 
+                                  }}
+                                >
+                                  {column.description}
+                                </span>
+                              </div>
+                            )}
+                          </div>
+                          <ul className="space-y-2 ml-9">
+                            {column.items.map((item, itemIdx) => (
+                              <li key={`item-${idx}-${itemIdx}`}>
+                                <Link 
+                                  href={item.href} 
+                                  className="text-gray-600 hover:text-blue-600 block" 
+                                  onClick={() => setActive(null)}
+                                  style={{ 
+                                    fontFamily: 'Poppins', 
+                                    fontWeight: 400, 
+                                    fontSize: '12px', 
+                                    lineHeight: '20px', 
+                                    letterSpacing: '0%' 
+                                  }}
+                                >
+                                  {item.name}
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                    </div>
+                    
+                    {/* Middle Row */}
+                    <div className="grid grid-cols-3 gap-6 mb-8">
+                      {platformDropdownConfig.bottom.map((section, idx) => (
+                        <div key={`bottom-${idx}`}>
+                          <div className="flex flex-col mb-3">
+                            <div className="flex items-center">
+                              <Image src={section.icon} width={24} height={24} alt={`${section.title} icon`} className="mr-3" />
+                              <Link href={section.href || (section.items && section.items[0]?.href) || '/platform'} className="hover:opacity-80" onClick={() => setActive(null)}>
+                                <h3 
+                                  className="text-[#5662F6]" 
+                                  style={{ 
+                                    fontFamily: 'Syne', 
+                                    fontWeight: 700, 
+                                    fontSize: '20px', 
+                                    lineHeight: '100%', 
+                                    letterSpacing: '0px' 
+                                  }}
+                                >
+                                  {section.title}
+                                </h3>
+                              </Link>
+                            </div>
+                            {section.description && (
+                              <div className="ml-9 mt-1">
+                                <span 
+                                  className="text-gray-500 bg-gray-100 px-2 py-0.5 rounded-md" 
+                                  style={{ 
+                                    fontFamily: 'Poppins', 
+                                    fontWeight: 400, 
+                                    fontSize: '12px', 
+                                    lineHeight: '20px' 
+                                  }}
+                                >
+                                  {section.description}
+                                </span>
+                              </div>
+                            )}
+                          </div>
+                          {section.items && section.items.length > 0 ? (
+                            <ul className="space-y-2 ml-9">
+                              {section.items.map((item, itemIdx) => (
+                                <li key={`bottom-item-${idx}-${itemIdx}`}>
+                                  <Link 
+                                    href={item.href} 
+                                    className="text-gray-600 hover:text-blue-600 block"
+                                    onClick={() => setActive(null)} 
+                                    style={{ 
+                                      fontFamily: 'Poppins', 
+                                      fontWeight: 400, 
+                                      fontSize: '12px', 
+                                      lineHeight: '20px', 
+                                      letterSpacing: '0%' 
+                                    }}
+                                  >
+                                    {item.name}
+                                  </Link>
+                                </li>
+                              ))}
+                            </ul>
+                          ) : (
+                            <div className="ml-9" style={{ height: '40px' }}></div>
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                    
+                    {/* Bottom Row - Footer */}
+                    <div className="grid grid-cols-3 gap-6 pt-6 border-t border-gray-200">
+                      {platformDropdownConfig.footer.map((item, idx) => (
+                        <div key={`footer-${idx}`}>
+                          <Link 
+                            href={item.href} 
+                            className="flex flex-col text-gray-600 hover:text-blue-600"
+                            onClick={() => setActive(null)}
+                          >
+                            <div className="flex items-center">
+                              <Image src={item.icon} width={24} height={24} alt={`${item.title} icon`} className="mr-3" />
+                              <span style={{ 
+                                fontFamily: 'Syne', 
+                                fontWeight: 700, 
+                                fontSize: '20px', 
+                                lineHeight: '100%', 
+                                letterSpacing: '0px' 
+                              }}>
+                                {item.title}
+                              </span>
+                            </div>
+                            <div className="ml-9 mt-1">
+                              <span 
+                                className="text-gray-500 bg-gray-100 px-2 py-0.5 rounded-md" 
+                                style={{ 
+                                  fontFamily: 'Poppins', 
+                                  fontWeight: 400, 
+                                  fontSize: '12px', 
+                                  lineHeight: '20px' 
+                                }}
+                              >
+                                Coming Soon...
+                              </span>
+                            </div>
+                          </Link>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
               </div>
             </MenuItem>
+
+            {/* <MenuItem setActive={setActive} active={active} item="SynoGuard" href="/ai-security-tool/syno-guard" /> */}
+
+            <MenuItem setActive={setActive} active={active} item="Services" href="/services/ai-consulting" />
 
             <MenuItem setActive={setActive} active={active} item="Resources">
               <div className="grid gap-4 w-64">
@@ -348,8 +607,10 @@ export const NavbarMenu = () => {
                 ))}
               </div>
             </MenuItem>
-            <MenuItem setActive={setActive} active={active} item="About Us" href="/about-us" />
-            <MenuItem setActive={setActive} active={active} item="Contact Us" href="/#contact" />
+            <div className="flex space-x-4">
+              <MenuItem setActive={setActive} active={active} item="About Us" href="/about-us" />
+              <MenuItem setActive={setActive} active={active} item="Contact Us" href="/contact-us" />
+            </div>
           </div>
         </Menu>
 
@@ -378,25 +639,113 @@ export const NavbarMenu = () => {
                   </Link>
                 </div>
 
-                <div className="space-y-2 animate-fadeIn" style={{ animationDelay: '200ms' }}>
+                <div className="space-y-4 animate-fadeIn" style={{ animationDelay: '200ms' }}>
                   <div className="text-lg font-medium py-2 px-4 text-gray-700">
                     Platform
                   </div>
-                  <div className="pl-4 space-y-2">
-                    {platformItems.map((item) => (
-                      <Link
-                        key={item.name}
-                        href={item.href}
-                        className={`flex items-center py-2 px-4 rounded-lg transition-colors ${pathname === item.href ? 'text-blue-600 bg-blue-50/50' : 'text-gray-600 hover:text-blue-600 hover:bg-blue-50/50'}`}
-                        onClick={() => setIsMobileMenuOpen(false)}
-                      >
-                        <span>{item.name}</span>
-                      </Link>
+                  <Link
+                    href={platformDropdownConfig.overview.href}
+                    className="block px-4 py-3 hover:bg-gray-50 transition-colors"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    <h3 className="text-base font-semibold text-gray-900">{platformDropdownConfig.overview.title}</h3>
+                    <p className="mt-1 text-sm text-gray-500">{platformDropdownConfig.overview.description}</p>
+                  </Link>
+                  <div className="pl-4 space-y-6">
+                    {/* Main sections */}
+                    {platformDropdownConfig.columns.map((section, idx) => (
+                      <div key={`mobile-platform-${idx}`} className="space-y-3">
+                        <div className="flex items-center">
+                          <Image src={section.icon} width={24} height={24} alt={`${section.title} icon`} className="mr-3" />
+                          <Link
+                            href={section.href}
+                            className="text-gray-900 font-semibold hover:text-blue-600"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                          >
+                            {section.title}
+                          </Link>
+                        </div>
+                        {section.description && (
+                          <p className="text-sm text-gray-500 ml-9">{section.description}</p>
+                        )}
+                        {section.items && section.items.length > 0 && (
+                          <ul className="ml-9 space-y-2">
+                            {section.items.map((item, itemIdx) => (
+                              <li key={`mobile-platform-item-${idx}-${itemIdx}`}>
+                                <Link
+                                  href={item.href}
+                                  className="text-sm text-gray-600 hover:text-blue-600 block"
+                                  onClick={() => setIsMobileMenuOpen(false)}
+                                >
+                                  {item.name}
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        )}
+                      </div>
                     ))}
+
+                    {/* Bottom sections */}
+                    <div className="border-t border-gray-200 pt-4">
+                      {platformDropdownConfig.bottom.map((section, idx) => (
+                        <div key={`mobile-platform-bottom-${idx}`} className="space-y-3 mb-6">
+                          <div className="flex items-center">
+                            <Image src={section.icon} width={24} height={24} alt={`${section.title} icon`} className="mr-3" />
+                            <Link
+                              href={section.href}
+                              className="text-gray-900 font-semibold hover:text-blue-600"
+                              onClick={() => setIsMobileMenuOpen(false)}
+                            >
+                              {section.title}
+                            </Link>
+                          </div>
+                          {section.description && (
+                            <p className="text-sm text-gray-500 ml-9">{section.description}</p>
+                          )}
+                          {section.items && section.items.length > 0 && (
+                            <ul className="ml-9 space-y-2">
+                              {section.items.map((item, itemIdx) => (
+                                <li key={`mobile-platform-bottom-item-${idx}-${itemIdx}`}>
+                                  <Link
+                                    href={item.href}
+                                    className="text-sm text-gray-600 hover:text-blue-600 block"
+                                    onClick={() => setIsMobileMenuOpen(false)}
+                                  >
+                                    {item.name}
+                                  </Link>
+                                </li>
+                              ))}
+                            </ul>
+                          )}
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* Footer sections */}
+                    <div className="border-t border-gray-200 pt-4">
+                      {platformDropdownConfig.footer.map((section, idx) => (
+                        <div key={`mobile-platform-footer-${idx}`} className="space-y-3 mb-6">
+                          <div className="flex items-center">
+                            <Image src={section.icon} width={24} height={24} alt={`${section.title} icon`} className="mr-3" />
+                            <Link
+                              href={section.href}
+                              className="text-gray-900 font-semibold hover:text-blue-600"
+                              onClick={() => setIsMobileMenuOpen(false)}
+                            >
+                              {section.title}
+                            </Link>
+                          </div>
+                          {section.description && (
+                            <p className="text-sm text-gray-500 ml-9">{section.description}</p>
+                          )}
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </div>
 
-                <div className="animate-fadeIn" style={{ animationDelay: '250ms' }}>
+                {/* <div className="animate-fadeIn" style={{ animationDelay: '250ms' }}>
                   <Link 
                     href="/ai-security-tool/syno-guard" 
                     className={`text-lg font-medium py-3 px-4 rounded-lg transition-colors ${pathname === '/syno-guard' ? 'text-blue-600 bg-blue-50/50' : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50/50'}`}
@@ -404,24 +753,16 @@ export const NavbarMenu = () => {
                   >
                     SynoGuard
                   </Link>
-                </div>
+                </div> */}
 
-                <div className="space-y-2 animate-fadeIn" style={{ animationDelay: '300ms' }}>
-                  <div className="text-lg font-medium py-2 px-4 text-gray-700">
+                <div className="animate-fadeIn" style={{ animationDelay: '300ms' }}>
+                  <Link 
+                    href="/services/ai-consulting" 
+                    className={`text-lg font-medium py-3 px-4 rounded-lg transition-colors ${pathname === '/services/ai-consulting' ? 'text-blue-600 bg-blue-50/50' : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50/50'}`}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
                     Services
-                  </div>
-                  <div className="pl-4 space-y-2">
-                    {servicesItems.map((item) => (
-                      <Link
-                        key={item.name}
-                        href={item.href}
-                        className={`flex items-center py-2 px-4 rounded-lg transition-colors ${pathname === item.href ? 'text-blue-600 bg-blue-50/50' : 'text-gray-600 hover:text-blue-600 hover:bg-blue-50/50'}`}
-                        onClick={() => setIsMobileMenuOpen(false)}
-                      >
-                        <span>{item.name}</span>
-                      </Link>
-                    ))}
-                  </div>
+                  </Link>
                 </div>
 
                 <div className="space-y-2 animate-fadeIn" style={{ animationDelay: '350ms' }}>
@@ -454,7 +795,7 @@ export const NavbarMenu = () => {
 
                 <div className="animate-fadeIn" style={{ animationDelay: '450ms' }}>
                   <Link 
-                    href="/#contact" 
+                    href="/contact-us" 
                     className={`text-lg font-medium py-3 px-4 rounded-lg transition-colors ${pathname === '/#contact' ? 'text-blue-600 bg-blue-50/50' : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50/50'}`}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >

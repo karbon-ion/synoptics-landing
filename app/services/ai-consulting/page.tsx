@@ -10,7 +10,7 @@ import TestimonialSection from './sections/TestimonialSection';
 import BlogSection from './sections/blogSection';
 import TechniquesSection from './sections/TechniquesSection';
 import FAQ from './sections/faq';
-import SmallFoot from '@/app/sections/smallFoot';
+import SmallFoot from '@/app/sections-old/smallFoot';
 
 export default function AIConsulting() {
   return (

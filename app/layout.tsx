@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { Inter, Syne, Poppins } from "next/font/google";
+import { Inter, Syne, Poppins, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { NavbarMenu } from "@/components/ui/navbar-menu";
-import Footer from "./sections/Footer";
+import Footer from "./sections-old/Footer";
 import Script from "next/script";
 import FontAwesome from "@/components/FontAwesome";
 
@@ -17,6 +17,11 @@ const syne = Syne({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
   variable: "--font-syne",
+});
+const jakartaSans = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-jakarta",
 });
 
 export const metadata: Metadata = {
@@ -35,7 +40,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`scroll-smooth ${poppins.variable} ${syne.variable}`}>
+    <html lang="en" className={`scroll-smooth ${poppins.variable} ${syne.variable} ${jakartaSans.variable}`}>
       <head>
         {/* Microsoft Clarity Analytics */}
         <Script id="microsoft-clarity-script" strategy="afterInteractive">

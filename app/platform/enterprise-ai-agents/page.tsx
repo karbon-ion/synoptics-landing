@@ -10,7 +10,7 @@ import RagStatsSection from "./sections/rag-stats";
 import FAQ from "./sections/faq";
 // import FeaturesSection from "../sections/FeaturesSection";
 import Capabilities from "./sections/capabilities";
-import SmallFoot from "@/app/sections/smallFoot";
+import SmallFoot from "@/app/sections-old/smallFoot";
 import ResultSection from "./sections/results";
 import TechniquesSection from "./sections/TechniqueSection";
 import WhySection from "./sections/WhySection";
