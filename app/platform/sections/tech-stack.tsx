@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function TechStackCard() {
   return (
@@ -8,13 +9,13 @@ export default function TechStackCard() {
           <span className="block" style={{ fontFamily: "Syne, sans-serif", fontWeight: 700, fontSize: "28px", lineHeight: "45px", letterSpacing: "0%", whiteSpace: "nowrap" }}>Seamless integrations with</span>
           <span className="block" style={{ fontFamily: "Syne, sans-serif", fontWeight: 700, fontSize: "28px", lineHeight: "45px", letterSpacing: "0%" }}>your entire tech stack</span>
         </h2>
-        <p className="text-sm mt-4 text-white/90" style={{ fontFamily: "Poppins, sans-serif", fontWeight: 400, fontSize: "12px", lineHeight: "24px", letterSpacing: "0%" }}>
+        <p className="text-sm mt-4 mb-4 text-white/90" style={{ fontFamily: "Poppins, sans-serif", fontWeight: 400, fontSize: "12px", lineHeight: "24px", letterSpacing: "0%" }}>
           Your unified brain, connected to everything you work with.
           Your unified brain, connected to everything you work with.
         </p>
-        <button className="mt-6 bg-white text-[#5662F6] px-5 py-2 rounded-full font-medium shadow-md hover:bg-gray-100 transition-all">
-          Get started →
-        </button>
+        <Link href="contact-us" className="mt-6 bg-white text-[#5662F6] px-5 py-2 rounded-full font-medium shadow-md hover:bg-gray-100 transition-all">
+          Get started
+        </Link>
       </div>
       <div className="absolute right-[-1%] top-1/2 transform -translate-y-1/2 md:w-[70%] h-full flex items-center justify-end">
         <Image
