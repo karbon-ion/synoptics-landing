@@ -49,8 +49,8 @@ export default function TestPage() {
   return (
     <div className="relative w-full">
       <HeroSection videoRef={videoRef} isInView={isInView} />
-      <EnterpriseSection />
-      <SynoptixComponent/>
+      {/* <EnterpriseSection /> */}
+      {/* <SynoptixComponent/> */}
       <TrackSection/>
       <EnterpriseSecuritySection/>
       <AiServicesSection/>

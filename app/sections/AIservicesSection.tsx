@@ -15,13 +15,11 @@ export default function AiServicesSection() {
     >
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6">
         {/* Top row: Main banner and Fine Tuning card */}
-        <div className="grid grid-cols-1 md:grid-cols-3  mb-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
           {/* Main Banner */}
           <div
-            className="md:col-span-2 flex flex-col justify-center relative overflow-hidden"
+            className="md:col-span-2 flex flex-col justify-center relative overflow-hidden h-[280px] w-full"
             style={{
-              width: '800px',
-              height: '280px',
               borderRadius: '22px',
               border: '10px solid white',
               backgroundImage: "url('/ai-services-card-background.png')",
@@ -44,25 +42,24 @@ export default function AiServicesSection() {
               AI Services That Gets <br className="hidden sm:block" />
               Enterprises from <span className="text-indigo-500">Idea to Impact</span>
             </h2>
-            <div className="mt-4 pl-10 md:mt-6">
+            <div className="mt-4 md:mt-6 flex justify-center md:justify-start md:pl-10 px-4 md:px-0">
               <Link
                 href="/services/ai-consulting"
-                className="inline-flex items-center justify-center gap-2 bg-[#5662F6] text-white px-4  py-2 md:px-6 md:py-3 rounded-full text-sm md:text-base font-bold transition-all duration-300 hover:shadow-md"
+                className="inline-flex items-center whitespace-nowrap justify-center gap-3 bg-[#5662F6] text-white px-6 py-3 rounded-full text-[13px] sm:text-sm md:text-base font-bold transition-all duration-300 hover:shadow-md"
                 style={{
                   fontFamily: "Syne, sans-serif",
                   fontWeight: 600,
-                  fontSize: "18px",
                   lineHeight: "100%",
                 }}
               >
-                Optimise Your Business with Synoptix AI
-                <ArrowRight className="h-4 w-4 ml-1" />
+                <span className="truncate">Optimise Your Business with Synoptix AI</span>
+                <ArrowRight className="h-4 w-4 flex-shrink-0 ml-1" />
               </Link>
             </div>
           </div>
 
           {/* Fine Tuning Card */}
-          <div className="bg-white rounded-xl  pl-8 pt-7 pr-5 pb-10 shadow-sm transition-all duration-300 hover:shadow-md flex flex-col justify-between h-[280px] w-[385px]">
+          <div className="bg-white rounded-xl pl-8 pt-7 pr-5 pb-10 shadow-sm transition-all duration-300 hover:shadow-md flex flex-col justify-between h-[280px] w-full">
             <div>
               <div className="bg-[#5662F6] p-2 rounded-full w-10 h-10 flex items-center justify-center mb-4">
                 <Image 
@@ -114,9 +111,9 @@ export default function AiServicesSection() {
         </div>
 
         {/* Bottom row: Three equal cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 ">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* AI Consulting Card */}
-          <div className="bg-white rounded-xl  pl-8 pt-7 pr-5 pb-10 shadow-sm transition-all duration-300 hover:shadow-md flex flex-col justify-between h-[280px] w-[385px]">
+          <div className="bg-white rounded-xl pl-8 pt-7 pr-5 pb-10 shadow-sm transition-all duration-300 hover:shadow-md flex flex-col justify-between h-[280px] w-full">
             <div>
               <div className="bg-[#5662F6] p-2 rounded-full w-10 h-10 flex items-center justify-center mb-4">
                 <Image 
@@ -167,7 +164,7 @@ export default function AiServicesSection() {
         
 
           {/* AI Strategy Card */}
-          <div className="bg-white rounded-xl  pl-8 pt-7 pr-5 pb-10 shadow-sm transition-all duration-300 hover:shadow-md flex flex-col justify-between h-[280px] w-[385px]">
+          <div className="bg-white rounded-xl pl-8 pt-7 pr-5 pb-10 shadow-sm transition-all duration-300 hover:shadow-md flex flex-col justify-between h-[280px] w-full">
             <div>
               <div className="bg-[#5662F6] p-2 rounded-full w-10 h-10 flex items-center justify-center mb-4">
                 <Image 
@@ -218,7 +215,7 @@ export default function AiServicesSection() {
         
 
           {/* Training & Education Card */}
-          <div className="bg-white rounded-xl  pl-8 pt-7 pr-5 pb-10 shadow-sm transition-all duration-300 hover:shadow-md flex flex-col justify-between h-[280px] w-[385px]">
+          <div className="bg-white rounded-xl pl-8 pt-7 pr-5 pb-10 shadow-sm transition-all duration-300 hover:shadow-md flex flex-col justify-between h-[280px] w-full">
             <div>
               <div className="bg-[#5662F6] p-2 rounded-full w-10 h-10 flex items-center justify-center mb-4">
                 <Image 
