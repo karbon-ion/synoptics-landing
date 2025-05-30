@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function HeroSection() {
   return (
@@ -32,7 +33,8 @@ export default function HeroSection() {
           </h1>
           
           <div className="mt-8 flex justify-center">
-            <button 
+            <Link 
+              href="/contact-us"
               className="bg-[#6B7BF7] text-white px-8 py-3 rounded-full transition-all hover:bg-[#5662F6]"
               style={{
                 fontFamily: "Syne",
@@ -40,8 +42,8 @@ export default function HeroSection() {
                 fontSize: "16px"
               }}
             >
-              Get in Touch
-            </button>
+              Get a Demo
+            </Link>
           </div>
         </div>
       </div>

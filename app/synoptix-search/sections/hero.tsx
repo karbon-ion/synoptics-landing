@@ -29,8 +29,8 @@ export default function SearchHero() {
                         Your unified brain, connected to everything you work with.Your unified brain,
                         connected to everything you work with.
                     </p>
-                    <Link href="/contact" className="bg-[#5662F6] text-white font-medium py-3 px-6 rounded-full hover:bg-blue-600 transition duration-300 inline-flex items-center">
-                        Get a Demo →
+                    <Link href="/contact-us" className="bg-[#5662F6] text-white font-medium py-3 px-6 rounded-full hover:bg-blue-600 transition duration-300 inline-flex items-center">
+                        Get a Demo
                     </Link>
                 </div>
             </div>
