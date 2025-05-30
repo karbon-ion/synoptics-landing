@@ -24,7 +24,7 @@ export default function TestPage() {
       ([entry]) => {
         setIsInView(entry.isIntersecting);
       },
-      { threshold: 0.5 }
+      { threshold: 0.1 }
     );
 
     if (videoRef.current) {
@@ -37,6 +37,12 @@ export default function TestPage() {
       }
     };
   }, []);
+  
+  useEffect(() => {
+    if (mounted) {
+      setIsInView(true);
+    }
+  }, [mounted]);
 
   if (!mounted) return null;
 
