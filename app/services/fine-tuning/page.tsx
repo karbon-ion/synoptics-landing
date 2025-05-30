@@ -8,7 +8,7 @@ import TechniquesSection from './sections/TechniquesSection';
 import WhySection from './sections/WhySection';
 import ResultSection from './sections/ResultsSection';
 import FAQ from './sections/faq';
-import SmallFoot from '@/app/sections/smallFoot';
+import SmallFoot from '@/app/sections-old/smallFoot';
 
 export default function FineTuning() {
   return (

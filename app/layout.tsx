@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Syne, Poppins, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { NavbarMenu } from "@/components/ui/navbar-menu";
-import Footer from "./sections/Footer";
+import Footer from "./sections-old/Footer";
 import Script from "next/script";
 import FontAwesome from "@/components/FontAwesome";
 

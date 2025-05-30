@@ -10,7 +10,7 @@ import RagStatsSection from "./sections/rag-stats";
 import FAQ from "./sections/faq";
 import WhySection from "./sections/WhySection";
 import TechniquesSection from "./sections/TechniquesSection";
-import SmallFoot from "@/app/sections/smallFoot";
+import SmallFoot from "@/app/sections-old/smallFoot";
 export default function RagApplication() {
     return (
         <main className="w-full">
