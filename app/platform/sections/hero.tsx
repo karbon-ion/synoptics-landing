@@ -11,12 +11,13 @@ export default function RagHero() {
                 backgroundRepeat: "no-repeat"
             }}
         >
-            <span style={{ fontFamily: "Syne, sans-serif", fontWeight: 700, fontSize: "48px", lineHeight: "72px", letterSpacing: "0%" }}>
-            <h1 className="text-3xl md:text-5xl  mb-60 text-[#323E50]" style={{ fontFamily: "Syne, sans-serif", fontWeight: 700, fontSize: "48px", lineHeight: "72px", letterSpacing: "0%" }}>
-                The <span className="text-[#5662F6] ">AI Platform</span> That Works with Your <br /> 
+            <h1
+                className="text-xl sm:text-2xl md:text-5xl mb-20 md:mb-60 text-[#323E50] leading-tight md:leading-[72px]"
+                style={{ fontFamily: 'Syne, sans-serif', fontWeight: 700, letterSpacing: '0%' }}
+            >
+                The <span className="text-[#5662F6]">AI Platform</span> That Works with Your <br className="hidden md:block" />
                 Enterprise Data—Not Just on It
             </h1>
-            </span>
         </section>
     );
 }

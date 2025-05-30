@@ -5,146 +5,149 @@ import Image from 'next/image';
 export default function PlatformFeatures() {
   return (
     <section
-      className="py-16 px-20 mb-15 max-w-7xl mt-15 mx-auto rounded-lg"
+      className="py-6 sm:py-12 md:py-16 px-3 sm:px-8 md:px-20 mb-6 md:mb-15 max-w-full md:max-w-7xl mt-4 md:mt-15 mx-auto rounded-lg overflow-hidden"
       style={{
         boxShadow: '0 -1px rgba(0, 0, 0, 0.1), 0 1px 5px rgba(0, 0, 0, 0.1)',
         background: 'linear-gradient(196.25deg, rgba(255, 255, 255, 0.4) 9.13%, rgba(219, 234, 254, 0.28) 92.56%)'
       }}
     >
-    <div className="bg-[#5662F6] bg-opacity-80 rounded-lg  mb-4 overflow-hidden">
-        <div className="py-2 px-6 flex items-center justify-center">
-          <Image src="/platform/agents-icon.svg" alt="Agents Icon" width={20} height={20} className="mr-2" />
-          <span className="text-white font-medium" style={{ fontFamily: 'Syne, sans-serif',fontWeight: '700',fontSize: '20px',lineHeight:'' }}>Agents</span>
+    <div className="bg-[#5662F6] bg-opacity-80 rounded-lg mb-4 overflow-hidden">
+        <div className="py-3 md:py-2 px-4 md:px-6 flex items-center justify-center">
+          <Image src="/platform/agents-icon.svg" alt="Agents Icon" width={16} height={16} className="mr-2 w-4 h-4 md:w-5 md:h-5" />
+          <span className="text-white font-medium text-base md:text-xl" style={{ fontFamily: 'Syne, sans-serif', fontWeight: '700' }}>Agents</span>
         </div>
         <div className="bg-white p-0 rounded-b-lg">
-          <div className="grid grid-cols-3 divide-x divide-gray-100">
-            <div className="p-6 text-center flex flex-col items-center">
-              
-              <p className="text-[#323E50] font-medium" style={{ fontFamily: 'Poppins, sans-serif',fontWeight: '600',fontSize: '16px',lineHeight:'' }}>Reasoning & Decision Marking</p>
+          <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-100">
+            <div className="py-4 md:py-6 px-4 md:px-6 text-center flex flex-col items-center">
+              <p className="text-[#323E50] font-medium text-sm md:text-base" style={{ fontFamily: 'Poppins, sans-serif',fontWeight: '600' }}>Reasoning & Decision Marking</p>
             </div>
-            <div className="p-6 text-center flex flex-col items-center">
-              
-              <p className="text-[#323E50] font-medium" style={{ fontFamily: 'Poppins, sans-serif',fontWeight: '600',fontSize: '16px',lineHeight:'' }}>Agent Collaboration & APIs</p>
+            <div className="py-4 md:py-6 px-4 md:px-6 text-center flex flex-col items-center">
+              <p className="text-[#323E50] font-medium text-sm md:text-base" style={{ fontFamily: 'Poppins, sans-serif',fontWeight: '600' }}>Agent Collaboration & APIs</p>
             </div>
-            <div className="p-6 text-center flex flex-col items-center">
-              
-              <p className="text-[#323E50]" style={{ fontFamily: 'Poppins, sans-serif',fontWeight: '600',fontSize: '16px',lineHeight:'' }}>Knowledge Access</p>
+            <div className="py-4 md:py-6 px-4 md:px-6 text-center flex flex-col items-center">
+              <p className="text-[#323E50] font-medium text-sm md:text-base" style={{ fontFamily: 'Poppins, sans-serif',fontWeight: '600' }}>Knowledge Access</p>
             </div>
           </div>
         </div>
       </div>
 
       <div className="bg-[#6A99FF] bg-opacity-80 rounded-lg mb-4 overflow-hidden">
-        <div className="py-2 px-6 flex items-center justify-center">
-          <Image src="/platform/enterprise-search-icon.svg" alt="Enterprise Search Icon" width={20} height={20} className="mr-2" />
-          <span className="text-white font-medium" style={{ fontFamily: 'Syne, sans-serif',fontWeight: '600',fontSize: '20px',lineHeight:'' }}>Enterprise Search</span>
+        <div className="py-3 md:py-2 px-4 md:px-6 flex items-center justify-center">
+          <Image src="/platform/enterprise-search-icon.svg" alt="Enterprise Search Icon" width={16} height={16} className="mr-2 w-4 h-4 md:w-5 md:h-5" />
+          <span className="text-white font-medium text-base md:text-xl" style={{ fontFamily: 'Syne, sans-serif', fontWeight: '600' }}>Enterprise Search</span>
         </div>
         <div className="bg-white p-0 rounded-b-lg">
-          <div className="grid grid-cols-3 divide-x divide-gray-100">
-            <div className="p-6 text-center flex flex-col items-center">
-              
-              <p className="text-[#323E50] font-medium" style={{ fontFamily: 'Poppins, sans-serif',fontWeight: '600',fontSize: '16px',lineHeight:'' }}>Query Understanding</p>
+          <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-100">
+            <div className="p-6 md:p-12 text-center flex flex-col items-center">
+              <p className="text-[#323E50] font-medium text-base md:text-lg" style={{ fontFamily: 'Poppins, sans-serif',fontWeight: '600' }}>Query Understanding</p>
             </div>
-            <div className="p-6 text-center flex flex-col items-center">
-              
-              <p className="text-[#323E50] font-medium" style={{ fontFamily: 'Poppins, sans-serif',fontWeight: '600',fontSize: '16px',lineHeight:'' }}>Content Understanding</p>
+            <div className="p-6 md:p-12 text-center flex flex-col items-center">
+              <p className="text-[#323E50] font-medium text-base md:text-lg" style={{ fontFamily: 'Poppins, sans-serif',fontWeight: '600' }}>Content Understanding</p>
             </div>
-            <div className="p-6 text-center flex flex-col items-center">
-              <p className="text-[#323E50] font-medium" style={{ fontFamily: 'Poppins, sans-serif',fontWeight: '600',fontSize: '16px',lineHeight:'' }}>Orchestration & Self Learning</p>
+            <div className="p-6 md:p-12 text-center flex flex-col items-center">
+              <p className="text-[#323E50] font-medium text-base md:text-lg" style={{ fontFamily: 'Poppins, sans-serif',fontWeight: '600' }}>Orchestration & Self Learning</p>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="grid grid-cols-12 gap-4 mb-4">
-  {/* Title Block */}
-  <div className="col-span-3 h-[132px] w-[255px] flex flex-col justify-center relative overflow-hidden rounded-l-[20px]" 
-    style={{ 
-      background: '#94ADFF',
-      boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)'
-    }}>
-    <div className="absolute top-0 right-0 w-full h-full" 
-      style={{
-        background: 'linear-gradient(125.97deg, transparent 30%, rgba(255, 255, 255, 0.2) 70%, rgba(255, 255, 255, 0.1) 100%)'
-      }}>
-    </div>
-    <p className="text-white font-bold text-center relative z-10 text-xl" style={{ fontFamily: 'Syne, sans-serif' }}>
-      Monitoring & Performance
-    </p>
-  </div>
+            {/* Monitoring & Performance Section */}
+      <div className="flex flex-col md:grid md:grid-cols-12 gap-3 md:gap-4 mb-4">
+        {/* Title Block - Full width on mobile */}
+        <div className="w-full md:col-span-3 md:w-[255px] h-[70px] md:h-[132px] flex flex-col justify-center relative overflow-hidden rounded-lg md:rounded-l-[20px] md:rounded-r-none mb-3 md:mb-0"
+          style={{ 
+            background: '#94ADFF',
+            boxShadow: '0 2px 4px rgba(0, 0, 0, 0.05)'
+          }}>
+          <div className="absolute top-0 right-0 w-full h-full" 
+            style={{
+              background: 'linear-gradient(125.97deg, transparent 30%, rgba(255, 255, 255, 0.2) 70%, rgba(255, 255, 255, 0.1) 100%)'
+            }}>
+          </div>
+          <p className="text-white font-bold text-center relative z-10 text-base md:text-xl" style={{ fontFamily: 'Syne, sans-serif' }}>
+            Monitoring & Performance
+          </p>
+        </div>
 
-  {/* Observability */}
-  <div className="col-span-3 bg-white h-[132px] rounded-lg shadow-sm flex flex-col items-center justify-center">
-    <div className="mb-3">
-      <Image src="/platform/ai-agents/observability.svg" alt="Observability" width={56} height={50} />
-    </div>
-    <p className="text-[#323E50] font-medium" style={{ fontFamily: 'Poppins, sans-serif',fontWeight: '600',fontSize: '20px',lineHeight:'45px' }}>Observability</p>
-  </div>
+        {/* Cards Grid - 3 columns on mobile, normal layout on desktop */}
+        <div className="grid grid-cols-3 md:contents gap-2 md:gap-4">
+          {/* Observability */}
+          <div className="md:col-span-3 bg-white h-[70px] md:h-[132px] rounded-lg shadow-sm flex flex-col items-center justify-center px-2 md:px-4">
+            <div className="mb-2 md:mb-3">
+              <Image src="/platform/ai-agents/observability.svg" alt="Observability" width={24} height={24} className="w-6 h-6 md:w-[56px] md:h-[50px]" />
+            </div>
+            <p className="text-[#323E50] font-medium text-xs md:text-xl" style={{ fontFamily: 'Poppins, sans-serif', fontWeight: '600' }}>Observability</p>
+          </div>
 
-  {/* Evaluations */}
-  <div className="col-span-3 bg-white h-[132px] rounded-lg shadow-sm flex flex-col items-center justify-center">
-    <div className="mb-3">
-      <Image src="/platform/ai-agents/evaluations.svg" alt="Evaluations" width={56} height={50} />
-    </div>
-    <p className="text-[#323E50] font-medium" style={{ fontFamily: 'Poppins, sans-serif',fontWeight: '600',fontSize: '20px',lineHeight:'45px' }}>Evaluations</p>
-  </div>
+          {/* Evaluations */}
+          <div className="md:col-span-3 bg-white h-[70px] md:h-[132px] rounded-lg shadow-sm flex flex-col items-center justify-center px-2 md:px-4">
+            <div className="mb-2 md:mb-3">
+              <Image src="/platform/ai-agents/evaluations.svg" alt="Evaluations" width={24} height={24} className="w-6 h-6 md:w-[56px] md:h-[50px]" />
+            </div>
+            <p className="text-[#323E50] font-medium text-xs md:text-xl" style={{ fontFamily: 'Poppins, sans-serif', fontWeight: '600' }}>Evaluations</p>
+          </div>
 
-  {/* LLM Ops */}
-  <div className="col-span-3 bg-white h-[132px] rounded-lg shadow-sm flex flex-col items-center justify-center">
-    <div className="mb-3">
-      <Image src="/platform/ai-agents/llm.svg" alt="LLM Ops" width={56} height={50} />
-    </div>
-    <p className="text-[#323E50] font-medium" style={{ fontFamily: 'Poppins, sans-serif',fontWeight: '600',fontSize: '20px',lineHeight:'45px' }}>LLM Ops</p>
-  </div>
-</div>
-
-
-<div className="grid grid-cols-12 gap-4 mb-4">
-  {/* Title Block */}
-  <div className="col-span-3 h-[132px] w-[255px] flex flex-col justify-center relative overflow-hidden rounded-l-[20px]" 
-    style={{ 
-      background: '#94ADFF',
-      boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)'
-    }}>
-    <div className="absolute top-0 right-0 w-full h-full" 
-      style={{
-        background: '#8DC2FF'
-      }}>
-    </div>
-    <p className="text-white font-bold text-center relative z-10 text-xl" style={{ fontFamily: 'Syne, sans-serif' }}>
-      Responsible AI
-    </p>
-  </div>
-
-  {/* Observability */}
-  <div className="col-span-3 bg-white h-[132px] rounded-lg shadow-sm flex flex-col items-center justify-center">
-    <div className="mb-3">
-      <Image src="/platform/ai-agents/observability.svg" alt="Observability" width={56} height={50} />
-    </div>
-    <p className="text-[#323E50]" style={{ fontFamily: 'Poppins, sans-serif',fontWeight: '600',fontSize: '20px',lineHeight:'45px' }}>Observability</p>
-  </div>
-
-  {/* Evaluations */}
-  <div className="col-span-3 bg-white h-[132px] rounded-lg shadow-sm flex flex-col items-center justify-center">
-    <div className="mb-3">
-      <Image src="/platform/ai-agents/evaluations.svg" alt="Evaluations" width={56} height={50} />
-    </div>
-    <p className="text-[#323E50] font-medium" style={{ fontFamily: 'Poppins, sans-serif',fontWeight: '600',fontSize: '20px',lineHeight:'45px' }}>Evaluations</p>
-  </div>
-
-  {/* LLM Ops */}
-  <div className="col-span-3 bg-white h-[132px] rounded-lg shadow-sm flex flex-col items-center justify-center">
-    <div className="mb-3">
-      <Image src="/platform/ai-agents/llm.svg" alt="LLM Ops" width={56} height={50} />
-    </div>
-    <p className="text-[#323E50] font-medium" style={{ fontFamily: 'Poppins, sans-serif',fontWeight: '600',fontSize: '20px',lineHeight:'45px' }}>LLM Ops</p>
-  </div>
-</div>
+          {/* LLM Ops */}
+          <div className="md:col-span-3 bg-white h-[70px] md:h-[132px] rounded-lg shadow-sm flex flex-col items-center justify-center px-2 md:px-4">
+            <div className="mb-2 md:mb-3">
+              <Image src="/platform/ai-agents/llm.svg" alt="LLM Ops" width={24} height={24} className="w-6 h-6 md:w-[56px] md:h-[50px]" />
+            </div>
+            <p className="text-[#323E50] font-medium text-xs md:text-xl" style={{ fontFamily: 'Poppins, sans-serif', fontWeight: '600' }}>LLM Ops</p>
+          </div>
+        </div>
+      </div>
 
 
-      <div className="grid grid-cols-12 gap-4 ">
-        {/* Integration Section - Spans from Responsible AI to Security (col-span-6) */}
-        <div className="col-span-6 bg-white rounded-lg p-4 pl-10 pr-10 shadow-sm">
+      {/* Responsible AI Section */}
+      <div className="flex flex-col md:grid md:grid-cols-12 gap-3 md:gap-4 mb-4">
+        {/* Title Block - Full width on mobile */}
+        <div className="w-full md:col-span-3 md:w-[255px] h-[70px] md:h-[132px] flex flex-col justify-center relative overflow-hidden rounded-lg md:rounded-l-[20px] md:rounded-r-none mb-3 md:mb-0"
+          style={{ 
+            background: '#94ADFF',
+            boxShadow: '0 2px 4px rgba(0, 0, 0, 0.05)'
+          }}>
+          <div className="absolute top-0 right-0 w-full h-full" 
+            style={{
+              background: '#8DC2FF'
+            }}>
+          </div>
+          <p className="text-white font-bold text-center relative z-10 text-base md:text-xl" style={{ fontFamily: 'Syne, sans-serif' }}>
+            Responsible AI
+          </p>
+        </div>
+
+        {/* Cards Grid - 3 columns on mobile, normal layout on desktop */}
+        <div className="grid grid-cols-3 md:contents gap-2 md:gap-4">
+          {/* Observability */}
+          <div className="md:col-span-3 bg-white h-[70px] md:h-[132px] rounded-lg shadow-sm flex flex-col items-center justify-center px-2 md:px-4">
+            <div className="mb-2 md:mb-3">
+              <Image src="/platform/ai-agents/observability.svg" alt="Observability" width={24} height={24} className="w-6 h-6 md:w-[56px] md:h-[50px]" />
+            </div>
+            <p className="text-[#323E50] font-medium text-xs md:text-xl" style={{ fontFamily: 'Poppins, sans-serif', fontWeight: '600' }}>Observability</p>
+          </div>
+
+          {/* Evaluations */}
+          <div className="md:col-span-3 bg-white h-[70px] md:h-[132px] rounded-lg shadow-sm flex flex-col items-center justify-center px-2 md:px-4">
+            <div className="mb-2 md:mb-3">
+              <Image src="/platform/ai-agents/evaluations.svg" alt="Evaluations" width={24} height={24} className="w-6 h-6 md:w-[56px] md:h-[50px]" />
+            </div>
+            <p className="text-[#323E50] font-medium text-xs md:text-xl" style={{ fontFamily: 'Poppins, sans-serif', fontWeight: '600' }}>Evaluations</p>
+          </div>
+
+          {/* LLM Ops */}
+          <div className="md:col-span-3 bg-white h-[70px] md:h-[132px] rounded-lg shadow-sm flex flex-col items-center justify-center px-2 md:px-4">
+            <div className="mb-2 md:mb-3">
+              <Image src="/platform/ai-agents/llm.svg" alt="LLM Ops" width={24} height={24} className="w-6 h-6 md:w-[56px] md:h-[50px]" />
+            </div>
+            <p className="text-[#323E50] font-medium text-xs md:text-xl" style={{ fontFamily: 'Poppins, sans-serif', fontWeight: '600' }}>LLM Ops</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-4">
+        {/* Integration Section - Full width on mobile, col-span-6 on desktop */}
+        <div className="col-span-1 md:col-span-6 bg-white rounded-lg p-4 md:pl-10 md:pr-10 shadow-sm mb-3 md:mb-0">
           <p className="text-[#5662F6] font-medium text-center mb-4" style={{ fontFamily: 'Syne, sans-serif',fontWeight: '700',fontSize: '18px',lineHeight:'' }}>Integration</p>
           <div className="flex justify-center w-full">
             <div className="grid grid-cols-7 w-full">
@@ -170,8 +173,8 @@ export default function PlatformFeatures() {
           </div>
         </div>
         
-        {/* Application & Tools Section - Same width as Compliance (col-span-3) */}
-        <div className="col-span-3 bg-white rounded-lg p-4 shadow-sm">
+        {/* Application & Tools Section - Full width on mobile, col-span-3 on desktop */}
+        <div className="col-span-1 md:col-span-3 bg-white rounded-lg p-4 shadow-sm mb-3 md:mb-0">
           <p className="text-[#5662F6] font-medium text-center mb-4" style={{ fontFamily: 'Syne, sans-serif',fontWeight: '700',fontSize: '18px',lineHeight:'' }}>Application & Tools</p>
           <div className="flex justify-center w-full">
             <div className="grid grid-cols-5 gap-2 w-full px-3">
@@ -193,8 +196,8 @@ export default function PlatformFeatures() {
           </div>
         </div>
         
-        {/* Deployment Section - Same width as Governance (col-span-3) */}
-        <div className="col-span-3 bg-white rounded-lg p-4 shadow-sm">
+        {/* Deployment Section - Full width on mobile, col-span-3 on desktop */}
+        <div className="col-span-1 md:col-span-3 bg-white rounded-lg p-4 shadow-sm">
           <p className="text-[#5662F6] font-medium text-center mb-4" style={{ fontFamily: 'Syne, sans-serif',fontWeight: '700',fontSize: '18px',lineHeight:'' }}>Deployment</p>
           <div className="flex justify-center w-full">
             <div className="grid grid-cols-3 w-full px-10">

@@ -15,12 +15,10 @@ export default function Platform() {
            <IntegrationSection/>
            <DeploymentSection/>
            <TechStack/>
-           <div className="container mx-auto mt-16">
-                <h2 style={{
+           <div className="container mx-auto mt-12 md:mt-16 px-4 md:px-0">
+                <h2 className="text-2xl md:text-[36px] leading-tight md:leading-[45px]" style={{
                     fontFamily: "Syne",
                     fontWeight: 700,
-                    fontSize: "36px",
-                    lineHeight: "45px",
                     letterSpacing: "0%",
                     textAlign: "center"
                 }}>
