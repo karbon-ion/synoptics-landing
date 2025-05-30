@@ -4,20 +4,20 @@ import Link from 'next/link';
 
 const Footer = () => {
   const platformLinks = [
-    { name: 'Enterprise RAG', href: '/platform/enterprise-rag-application' },
-    { name: 'AI Agent', href: '/platform/enterprise-ai-agents' },
-    { name: 'Workflows', href: '/platform/agentic-workflows' },
+    { name: 'Platform Overview', href: '/platform' },
+    { name: 'Synoptix Search', href: '/synoptix-search' },
+    { name: 'Synoptix Agents', href: '/synoptix-agents' },
     { name: 'Evaluations', href: '/platform/ai-performace-evaluation' },
     { name: 'SynoGuard', href: '/ai-security-tool/syno-guard' },
   ];
 
-  const solutionsLinks = [
-    { name: 'Sales', href: '/solutions/sales' },
-    { name: 'Marketing', href: '/solutions/marketing' },
-    { name: 'Finance', href: '/solutions/finance' },
-    { name: 'HR', href: '/solutions/hr' },
-    { name: 'IT', href: '/solutions/it' },
-  ];
+  // const solutionsLinks = [
+  //   { name: 'Sales', href: '/solutions/sales' },
+  //   { name: 'Marketing', href: '/solutions/marketing' },
+  //   { name: 'Finance', href: '/solutions/finance' },
+  //   { name: 'HR', href: '/solutions/hr' },
+  //   { name: 'IT', href: '/solutions/it' },
+  // ];
 
   const servicesLinks = [
     { name: 'AI Consulting', href: '/services/ai-consulting' },
@@ -87,7 +87,7 @@ hello@synoptix.ai
           </div>
 
           {/* Solutions Links */}
-          <div className="mb-8 md:mb-0">
+          {/* <div className="mb-8 md:mb-0">
           <h3 style={{
               fontFamily: 'Poppins, sans-serif',
               fontWeight: 500,
@@ -114,7 +114,7 @@ hello@synoptix.ai
               ))}
             </ul>
             </span>
-          </div>
+          </div> */}
 
           {/* Services Links */}
           <div className="mb-8 md:mb-0">

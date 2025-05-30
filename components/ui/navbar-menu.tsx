@@ -639,21 +639,109 @@ export const NavbarMenu = () => {
                   </Link>
                 </div>
 
-                <div className="space-y-2 animate-fadeIn" style={{ animationDelay: '200ms' }}>
+                <div className="space-y-4 animate-fadeIn" style={{ animationDelay: '200ms' }}>
                   <div className="text-lg font-medium py-2 px-4 text-gray-700">
                     Platform
                   </div>
-                  <div className="pl-4 space-y-2">
-                    {platformItems.map((item) => (
-                      <Link
-                        key={item.name}
-                        href={item.href}
-                        className={`flex items-center py-2 px-4 rounded-lg transition-colors ${pathname === item.href ? 'text-blue-600 bg-blue-50/50' : 'text-gray-600 hover:text-blue-600 hover:bg-blue-50/50'}`}
-                        onClick={() => setIsMobileMenuOpen(false)}
-                      >
-                        <span>{item.name}</span>
-                      </Link>
+                  <Link
+                    href={platformDropdownConfig.overview.href}
+                    className="block px-4 py-3 hover:bg-gray-50 transition-colors"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    <h3 className="text-base font-semibold text-gray-900">{platformDropdownConfig.overview.title}</h3>
+                    <p className="mt-1 text-sm text-gray-500">{platformDropdownConfig.overview.description}</p>
+                  </Link>
+                  <div className="pl-4 space-y-6">
+                    {/* Main sections */}
+                    {platformDropdownConfig.columns.map((section, idx) => (
+                      <div key={`mobile-platform-${idx}`} className="space-y-3">
+                        <div className="flex items-center">
+                          <Image src={section.icon} width={24} height={24} alt={`${section.title} icon`} className="mr-3" />
+                          <Link
+                            href={section.href}
+                            className="text-gray-900 font-semibold hover:text-blue-600"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                          >
+                            {section.title}
+                          </Link>
+                        </div>
+                        {section.description && (
+                          <p className="text-sm text-gray-500 ml-9">{section.description}</p>
+                        )}
+                        {section.items && section.items.length > 0 && (
+                          <ul className="ml-9 space-y-2">
+                            {section.items.map((item, itemIdx) => (
+                              <li key={`mobile-platform-item-${idx}-${itemIdx}`}>
+                                <Link
+                                  href={item.href}
+                                  className="text-sm text-gray-600 hover:text-blue-600 block"
+                                  onClick={() => setIsMobileMenuOpen(false)}
+                                >
+                                  {item.name}
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        )}
+                      </div>
                     ))}
+
+                    {/* Bottom sections */}
+                    <div className="border-t border-gray-200 pt-4">
+                      {platformDropdownConfig.bottom.map((section, idx) => (
+                        <div key={`mobile-platform-bottom-${idx}`} className="space-y-3 mb-6">
+                          <div className="flex items-center">
+                            <Image src={section.icon} width={24} height={24} alt={`${section.title} icon`} className="mr-3" />
+                            <Link
+                              href={section.href}
+                              className="text-gray-900 font-semibold hover:text-blue-600"
+                              onClick={() => setIsMobileMenuOpen(false)}
+                            >
+                              {section.title}
+                            </Link>
+                          </div>
+                          {section.description && (
+                            <p className="text-sm text-gray-500 ml-9">{section.description}</p>
+                          )}
+                          {section.items && section.items.length > 0 && (
+                            <ul className="ml-9 space-y-2">
+                              {section.items.map((item, itemIdx) => (
+                                <li key={`mobile-platform-bottom-item-${idx}-${itemIdx}`}>
+                                  <Link
+                                    href={item.href}
+                                    className="text-sm text-gray-600 hover:text-blue-600 block"
+                                    onClick={() => setIsMobileMenuOpen(false)}
+                                  >
+                                    {item.name}
+                                  </Link>
+                                </li>
+                              ))}
+                            </ul>
+                          )}
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* Footer sections */}
+                    <div className="border-t border-gray-200 pt-4">
+                      {platformDropdownConfig.footer.map((section, idx) => (
+                        <div key={`mobile-platform-footer-${idx}`} className="space-y-3 mb-6">
+                          <div className="flex items-center">
+                            <Image src={section.icon} width={24} height={24} alt={`${section.title} icon`} className="mr-3" />
+                            <Link
+                              href={section.href}
+                              className="text-gray-900 font-semibold hover:text-blue-600"
+                              onClick={() => setIsMobileMenuOpen(false)}
+                            >
+                              {section.title}
+                            </Link>
+                          </div>
+                          {section.description && (
+                            <p className="text-sm text-gray-500 ml-9">{section.description}</p>
+                          )}
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </div>
 
