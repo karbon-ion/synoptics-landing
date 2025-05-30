@@ -17,7 +17,7 @@ export default function HeroSection() {
       </div>
       
       <div className="container mx-auto relative z-10 px-4">
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-5xl mx-auto text-center">
           <h1 
             className="text-[#323E50] mb-6"
             style={{
@@ -29,7 +29,7 @@ export default function HeroSection() {
               textAlign: "center"
             }}
           >
-            Build, deploy, orchestrate, and govern AI agents.
+            Build, Launch and Manage Enterprise AI agents in Few Seconds 
           </h1>
           
           <div className="mt-8 flex justify-center">

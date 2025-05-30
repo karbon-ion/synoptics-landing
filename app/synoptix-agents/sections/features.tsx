@@ -6,34 +6,34 @@ import { ArrowRight } from 'lucide-react';
 
 const featuresData = [
   {
-    id: 'create-agents',
-    subtitle: 'REASONING AGENT',
-    title: 'Create AI agents effortlessly with natural language',
-    description: "Turn ideas into structured workflows using simple natural language prompts. Our intuitive interface helps you specify your agent's purpose and makes it easy to build with your data right away.",
+    id: 'Custom-Agent',
+    subtitle: 'CUSTOM AGENT',
+    title: 'Design and Deploy Intelligent AI Agents ',
+    description: "Create no-code Enterprise AI Agents that handle everything from quick answers to complex operations. With the Synoptix AI Platform for Enterprise, you can build, launch, and manage agents that align with your workflows, adapt to your data, and scale across your organisation. ",
     imageUrl: '/synoptix-agents/features/image-1.png',
     imagePosition: 'left'
   },
   {
-    id: 'customize-agent',
-    subtitle: 'CUSTOM AGENT',
-    title: 'Create AI agents effortlessly with natural language',
-    description: "Turn ideas into structured workflows using simple natural language prompts. Our intuitive interface helps you specify your agent's purpose and makes it easy to build with your data right away.",
+    id: 'Reasoning-Agent',
+    subtitle: 'REASONING AGENT',
+    title: 'Enterprise AI agents that plan and act with purpose ',
+    description: "Backed by Synoptix’s reasoning engine and enterprise data access, agents understand what needs to be done, find the right information, and carry out tasks with accuracy. Perfect for handling multi-step workflows, cross-team processes, and dynamic decision-making in fast-paced enterprise environments. ",
     imageUrl: '/synoptix-agents/features/image-2.png',
     imagePosition: 'right'
   },
   {
-    id: 'deploy-agent',
+    id: 'Knowledge-Access',
     subtitle: 'KNOWLEDGE ACCESS',
-    title: 'Create AI agents effortlessly with natural language',
-    description: "Turn ideas into structured workflows using simple natural language prompts. Our intuitive interface helps you specify your agent's purpose and makes it easy to build with your data right away.",
+    title: 'Give your Enterprise AI Agents access to what your business knows ',
+    description: "Synoptix connects agents to internal documents, emails, chats, and databases—so every response is grounded in accurate, real-time information from your trusted sources. Whether it’s policy enforcement, regulatory reporting, or internal support, agents operate with full context to drive consistent, compliant outcomes. ",
     imageUrl: '/synoptix-agents/features/image-3.png',
     imagePosition: 'left'
   },
   {
-    id: 'manage-agent',
+    id: 'Agent-Library',
     subtitle: 'AGENT LIBRARY',
-    title: 'Create AI agents effortlessly with natural language',
-    description: "Turn ideas into structured workflows using simple natural language prompts. Our intuitive interface helps you specify your agent's purpose and makes it easy to build with your data right away.",
+    title: 'Explore and share AI agents across your organisation ',
+    description: "Start with pre-built agent templates or design your own. The Synoptix AI Platform for Enterprise makes it easy to launch quickly, improve continuously, and scale agent-powered automation across every team. Reusable agents help standardise operations, reduce duplicated effort, and accelerate enterprise-wide adoption of intelligent workflows. ",
     imageUrl: '/synoptix-agents/features/image-4.png',
     imagePosition: 'right'
   }

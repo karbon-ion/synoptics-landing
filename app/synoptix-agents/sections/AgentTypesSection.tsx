@@ -8,51 +8,66 @@ const agentTypesData = [
   {
     id: 'code-gen',
     title: 'Code Gen agents',
-    heading: 'Eliminate redundant tasks and empower developers to focus on innovation.',
+    heading: 'Accelerate development with enterprise-grade automation ',
     description: [
-      'Synoptix AI Code Gen Agents generate clean, efficient code and optimize logic',
-      'in real time—reducing development cycles and minimising human error across',
-      'your engineering workflows.'
+      'Generate clean, efficient code with Enterprise AI Agents ',
+      'Eliminate repetitive coding tasks and reduce manual errors ',
+      'Optimise business logic in real time across applications ',
+      'Speed up release cycles with AI-driven development support ',
+      'Improve consistency across engineering workflows ',
+      'Built for developers on the Synoptix AI Platform for Enterprise '
     ]
   },
   {
     id: 'generative',
     title: 'Generative agents',
-    heading: 'Transform ideas into production-ready solutions with AI assistance.',
+    heading: 'Scale content and creativity across your organisation ',
     description: [
-      'Synoptix Generative Agents help you create complex systems from simple prompts,',
-      'accelerating development and enabling rapid prototyping while maintaining',
-      'high quality standards across your projects.'
+      'Create high-quality text, visuals, and code using Enterprise AI Agents ',
+      'Respond to creative needs on-demand—no wait, no bottlenecks  ',
+      'Support marketing, product, and operations with consistent outputs  ',
+      'Adapt content dynamically to your brand voice and format  ',
+      'Enable team-wide creative productivity at scale  ',
+      'Built into the Synoptix AI Platform for Enterprise teams  '
     ]
   },
   {
     id: 'assurance',
     title: 'Assurance agents',
-    heading: 'Ensure code quality and security at every stage of development.',
+    heading: 'Enforce quality, governance, and compliance—automatically ',
     description: [
-      'Synoptix Assurance Agents continuously monitor your codebase for vulnerabilities,',
-      'performance issues, and compliance concerns, providing real-time feedback',
-      'to maintain enterprise-grade standards.'
+      'Monitor outputs for errors, drift, or non-compliance  ',
+      'Validate responses against internal rules and external regulations   ',
+      'Keep every workflow aligned with enterprise standards  ',
+      'Flag inconsistencies in real time using AI-driven checks   ',
+      'Reduce the burden on QA and compliance teams  ',
+      'Powered by the Synoptix AI Platform for Enterprise assurance   '
     ]
   },
   {
     id: 'decision-support',
-    title: 'Decision Support & Analytical Agents',
-    heading: 'Make data-driven decisions with AI-powered insights.',
+    title: 'Analytical Agents ',
+    heading: 'Unlock insights with intelligent data analysis ',
     description: [
-      'Our Decision Support Agents analyze complex datasets and provide actionable',
-      'recommendations, helping your team make informed choices quickly and',
-      'confidently across all business operations.'
+     'Analyse structured and unstructured data with Enterprise AI Agents  ',
+      'Identify patterns, correlations, and emerging trends    ',
+      'Deliver real-time dashboards and actionable summaries   ',
+      'Enable proactive decision-making across business functions    ',
+      'Reduce reliance on manual reporting or ad-hoc analysis  ',
+      'Integrated into the Synoptix AI Platform for Enterprise insights   '
     ]
   },
   {
     id: 'anomalies',
-    title: 'Anomalies Detection Agents',
-    heading: 'Identify and address issues before they impact your business.',
+    title: 'Anomaly Detection Agents ',
+    heading: 'Protect operations with intelligent, real-time monitoring ',
     description: [
-      'Synoptix Anomaly Detection Agents continuously monitor systems and data',
-      'for unusual patterns, automatically alerting teams to potential problems',
-      'and suggesting remediation strategies.'
+      'Detect irregularities before they disrupt business operations   ',
+      'Monitor systems continuously for security and performance gaps     ',
+      'Send real-time alerts based on behavioural anomalies   ',
+      'Improve operational stability with self-learning detection    ',
+      'Reduce manual checks while increasing responsiveness  ',
+      'Fully embedded in the Synoptix AI Platform for Enterprise resilience   '
     ]
   }
 ];
@@ -72,7 +87,7 @@ export default function AgentTypesSection() {
             fontWeight: 700
           }}
         >
-          Discover the AI Agents Designed for <span className="text-indigo-500">Enterprise</span>
+          Discover the AI Agents Built for <span className="text-indigo-500">Enterprise Performance</span>
         </h2>
         
         <div className="relative overflow-hidden rounded-xl pt-20 w-full">
@@ -117,7 +132,7 @@ export default function AgentTypesSection() {
             <div className="lg:w-2/3 mt-10">
               <div className="max-w-xl">
                 <h3 
-                  className="text-xl font-semibold mb-4 text-gray-800"
+                  className={`text-xl font-semibold mb-4 text-gray-800${activeAgent.id === 'code-gen' || activeAgent.id === 'assurance' ? ' whitespace-nowrap' : ''}`}
                   style={{
                     fontFamily: "Poppins",
                     fontWeight: 600
