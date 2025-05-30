@@ -16,7 +16,7 @@ export default function SearchHero() {
                         lineHeight: '72px',
                         textAlign: 'center'
                     }}>
-                        <span className="text-[#5662F6]">AI-powered</span> workplace search.
+                        <span className="text-[#5662F6]">Unified AI Search for the</span> Modern Enterprise.
                     </h1>
                     <p style={{
                         fontFamily: 'Poppins, sans-serif',
@@ -26,8 +26,7 @@ export default function SearchHero() {
                         letterSpacing: '2%',
                         textAlign: 'center'
                     }} className="text-gray-600 max-w-2xl mx-auto my-6">
-                        Your unified brain, connected to everything you work with.Your unified brain,
-                        connected to everything you work with.
+                        AI-powered enterprise search platform that connects your tools, files, and messages—so teams can ask questions and get accurate answers instantly. 
                     </p>
                     <Link href="/contact-us" className="bg-[#5662F6] text-white font-medium py-3 px-6 rounded-full hover:bg-blue-600 transition duration-300 inline-flex items-center">
                         Get a Demo

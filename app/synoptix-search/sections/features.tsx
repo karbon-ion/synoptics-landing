@@ -12,9 +12,9 @@ const featuresData = [
     image: '/synoptix-search/functions/universal-knowledge.png',
     imageAlt: 'Universal Knowledge',
     points: [
-      'Bring together all your tools and content into a single search experience',
-      'Find anything you need regardless of where it\'s stored or what format it\'s in',
-      'Get the right information at the right time without having to switch between apps'
+      'Unify emails, documents, chats, and databases into one enterprise search platform for seamless access.',
+      'Deliver context-aware answers aligned with your organisation’s structure and language. ',
+      'Enable consistent knowledge sharing across departments with centralised access. '
     ],
     imageFirst: true
   },
@@ -25,9 +25,9 @@ const featuresData = [
     image: '/synoptix-search/functions/data-insights.png',
     imageAlt: 'Data Insights',
     points: [
-      'Analyze usage patterns to better understand what information your team needs most',
-      'Identify knowledge gaps and content that needs updating or archiving',
-      'Track search performance and optimize for better results over time'
+      'Use AI to analyse structured and unstructured data for decision-ready insights. ',
+      'Build role-specific dashboards within your AI platform for enterprise search',
+      'Predict outcomes and surface risks with built-in machine learning models. '
     ],
     imageFirst: false
   },
@@ -38,9 +38,9 @@ const featuresData = [
     image: '/synoptix-search/functions/enterprise-data-search.png',
     imageAlt: 'Enterprise Data Search',
     points: [
-      'Securely search across all your enterprise data sources with proper access controls',
-      'Connect to databases, APIs, and internal systems for comprehensive search',
-      'Find structured and unstructured data with the same simple interface'
+      'Power semantic search to understand query intent and return relevant results. ',
+      'Enforce role-based access to ensure security and compliance at scale with our enterprise search solutions. ',
+      'Reduce search time with instant results from all connected systems. '
     ],
     imageFirst: true
   },
@@ -51,9 +51,9 @@ const featuresData = [
     image: '/synoptix-search/functions/fine-tuning.png',
     imageAlt: 'Fine-Tuning/Industry Specific',
     points: [
-      'Customize search for your specific industry terminology and knowledge domains',
-      'Train models on your proprietary data to improve relevance and accuracy',
-      'Create specialized search experiences for different departments and use cases'
+      'Fine-tune large language models on your enterprise data for precise answers.',
+      'Improve relevance over time with continuous learning and feedback loops.',
+      'Maintain compliance with full visibility and control over AI responses.'
     ],
     imageFirst: false
   }
@@ -64,7 +64,7 @@ export default function FeaturesSection() {
     <section className="bg-white py-16 mb-25">
       <div className="container mx-auto max-w-7xl rounded-xl">
         <h2 className="text-center text-3xl font-bold mb-8" style={{fontFamily: "Syne",fontWeight:700,fontSize:"36px",lineHeight:"45px"}}>
-          High Level <span className="text-blue-600">Search Functions</span>
+        Smart Enterprise Search Solutions for  <span className="text-blue-600">Modern Workflows</span>
         </h2>
         
         <div className=" rounded-xl">

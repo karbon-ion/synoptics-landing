@@ -5,27 +5,27 @@ import Image from 'next/image';
 const aiPrinciples = [
   {
     id: 'safe',
-    title: 'Safe',
-    icon: '/icons/shield-check.svg',
-    description: 'No unpredictable decisions, only controlled automation.'
+    title: 'Predictable ',
+    icon: '/synoptix-search/responsible-ai/safe-icon.svg',
+    description: 'Outcomes stay within approved boundaries. '
   },
   {
     id: 'explainable',
-    title: 'Explainable',
-    icon: '/icons/grid.svg',
-    description: 'Every AI decision is auditable and transparent.'
+    title: 'Auditable ',
+    icon: '/synoptix-search/responsible-ai/explainable.svg',
+    description: 'Every result can be reviewed and explained. '
   },
   {
     id: 'unbiased',
-    title: 'Unbiased',
-    icon: '/icons/scale.svg',
-    description: 'No skewed outputs, just fair and accurate AI.'
+    title: 'Impartial  ',
+    icon: '/synoptix-search/responsible-ai/unbiased.svg',
+    description: 'Models are tested to avoid bias and promote fairness. '
   },
   {
     id: 'compliant',
-    title: 'Compliant',
-    icon: '/icons/document-check.svg',
-    description: 'Meets global security and governance standards.'
+    title: 'Regulatory-Ready  ',
+    icon: '/synoptix-search/responsible-ai/compliant.svg',
+    description: 'Designed to meet industry and global standards. '
   }
 ];
 
@@ -34,11 +34,10 @@ export default function ResponsibleAI() {
         <section className="bg-[#6B7BF7] py-16 text-white max-w-7xl rounded-xl mx-auto mb-30">
             <div className="container mx-auto px-4 max-w-6xl">
                 <h2 className="text-center text-4xl font-bold mb-4" style={{fontFamily: "Syne",fontWeight:700,fontSize:"36px",lineHeight:"45px"}}>
-                    Why Responsible AI Matters?
+                Why do Enterprises Need Responsible AI? 
                 </h2>
                 <p className="text-center max-w-3xl mx-auto mb-8" style={{fontFamily: "Poppins",fontWeight:400,fontSize:"16px",lineHeight:"30px",letterSpacing:"2%"}}>
-                    AI is only as good as its ethics, transparency, and reliability. Enterprises adopting AI
-                    at scale need more than just automation - they need AI that is:
+                AI that’s unchecked can do more harm than good. Responsible AI gives businesses the structure they need to scale safely and smartly. 
                 </p>
                 
                 <div className="w-full max-w-4xl mx-auto border-t border-white/30 pt-8 mb-12"></div>

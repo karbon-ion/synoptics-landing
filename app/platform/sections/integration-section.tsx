@@ -20,12 +20,12 @@ const IntegrationSection = () => {
         <div className="md:w-1/2 text- mb-5 md:text-left">
         <span style={{ fontFamily: "Syne, sans-serif", fontWeight: 700, fontSize: "36px", lineHeight: "72px", letterSpacing: "0%" }}>
           <h2 className="text-3xl md:text-4xl text-[#323E50]">
-            Seamless <span className="text-[#5662F6]">integrations</span> with your entire tech stack
+          Seamless    <span className="text-[#5662F6]">Integration</span> Across Your Entire Tech Stack
           </h2>
           </span>
           <span style={{ fontFamily: "Poppins, sans-serif", fontWeight: 400, fontSize: "14", lineHeight: "24px", letterSpacing: "0%", color: "#4A5565" }}>
           <p className="mt-4 text-[#4A5565]">
-            Your unified brain, connected to everything you work with. Your unified brain, connected to everything you work with.
+          Easily connect to your existing tools—our AI platform integrates across your stack to deliver insights and speed up securely and in real time. 
           </p>
           </span>
           <Link
