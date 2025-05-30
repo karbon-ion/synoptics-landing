@@ -44,15 +44,15 @@ export default function DeploymentSection() {
             </div>
             <div className="text-center md:text-left px-4">
               <h2 className="text-[#5662F6] font-bold text-2xl mb-1" style={{ fontFamily: "Syne, sans-serif" }}>Fully-Offline Deployment</h2>
-              <p className="text-gray-600 text-sm " style={{ fontFamily: "Poppins, sans-serif" }}>&nbsp;</p>
+              <p className="text-gray-600 text-sm " style={{ fontFamily: "Poppins, sans-serif" }}>(On-Premise/Private Cloud) </p>
               <ul className="space-y-1 mt-6">
-                <FeatureItem text="Fully managed LLM inference" />
-                <FeatureItem text="Integrated vector search" />
-                <FeatureItem text="Secure, resilient storage" />
-                <FeatureItem text="Built-in RAG pipelines" />
-                <FeatureItem text="Scalable API endpoints" />
-                <FeatureItem text="Enterprise security & compliance" />
-                <FeatureItem text="Extensible third-party integrations" />
+                <FeatureItem text="Local model hosting" />
+                <FeatureItem text="On‑prem vector database" />
+                <FeatureItem text="Self‑hosted object storage" />
+                <FeatureItem text="Modular RAG orchestration" />
+                <FeatureItem text="Container‑based deployment" />
+                <FeatureItem text="Local REST API & UI" />
+                <FeatureItem text="Complete data sovereignty" />
               </ul>
             </div>
           </div>
