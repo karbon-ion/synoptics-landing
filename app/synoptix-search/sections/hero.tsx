@@ -7,7 +7,7 @@ export default function SearchHero() {
     return (
         <section className="relative">
             {/* Hero Section */}
-            <div className="bg-[#E6EEFF] pt-20 pb-60 relative z-10">
+            <div className="relative pt-20 pb-60 z-10" style={{ backgroundImage: 'url(/synoptix-search/hero-background.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
                 <div className="container mx-auto mt-20 px-4 text-center">
                     <h1 style={{
                         fontFamily: 'Syne, sans-serif',
