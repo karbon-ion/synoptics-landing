@@ -47,12 +47,12 @@ const TrackSection = () => {
           
         </div>
         <div className="relative w-full flex justify-center items-start overflow-visible">
-            <div className="relative md:absolute md:right-0 md:top-1/2 md:-translate-y-1/2 w-full md:w-[780px] h-[400px] md:h-[550px] md:mr-10">
+            <div className="relative md:absolute  md:top-[60%] md:-translate-y-1/2 w-full md:w-[700px] h-[400px] md:h-[500px] md:mr-16">
               <Image
-                src="/test-page/Evaluation.png"
+                src="/test-page/evaluation-gif.gif"
                 alt="AI Analytics Dashboard"
                 fill
-                className="rounded-lg object-contain md:m-20"
+                className="rounded-lg object-contain md:mt-24 md:mr-0"
                 priority
               />
             </div>

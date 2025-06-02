@@ -11,6 +11,7 @@ import Testimonials from "./sections/Testimonials";
 import CertificationSection from "./sections/CertificationSection";
 import EnterpriseSecuritySection from "./sections/SecuritySection";
 import AiServicesSection from "./sections/AIservicesSection";
+import SecurityBadges from "./sections/SecurityBadges";
 
 export default function TestPage() {
   const [mounted, setMounted] = useState(false);
@@ -54,9 +55,10 @@ export default function TestPage() {
       <TrackSection/>
       <EnterpriseSecuritySection/>
       <AiServicesSection/>
+      <SecurityBadges/>
       <BlogsSection/>
       <Testimonials/>
-      <CertificationSection/>
+      {/* <CertificationSection/> */}
       
     </div>
   );

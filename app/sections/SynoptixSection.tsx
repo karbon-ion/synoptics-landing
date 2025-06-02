@@ -102,7 +102,7 @@ export default function SynoptixComponent() {
     <div className="max-w-7xl mx-auto mb-15 mt-[-150px] px-4 sm:px-6">
       <div className="bg-white rounded-2xl p-6">
         <div className="text-center mb-8 sm:mb-12">
-          <h2 className="text-2xl sm:text-3xl text-slate-800" style={{ fontFamily: "Syne, sans-serif",fontWeight: 700, fontSize: "36px", lineHeight: "45px" }}>
+          <h2 className="text-2xl sm:text-3xl text-slate-800" style={{ fontFamily: "Syne, sans-serif", fontWeight: 700, fontSize: "36px", lineHeight: "45px" }}>
             Synoptix is for <span className="text-indigo-500">Every Team</span>
           </h2>
         </div>
@@ -111,29 +111,23 @@ export default function SynoptixComponent() {
         <div className="shadow-lg">
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-0 w-full">
             {(["all", "marketing", "sales", "it", "finance", "hr"] as TabType[]).map((tab) => (
-              <div 
-                key={tab} 
-                className="w-full"
-                onClick={() => setActiveTab(tab)}
-                style={{
-                  cursor: "pointer"
-                }}
-              >
-                <div
+              <div
+              key={tab}
+              onClick={() => setActiveTab(tab)}
+              className={`relative py-3 text-center cursor-pointer border-b-2 transition-colors duration-200 ${
+                activeTab === tab
+                  ? "text-[#232F30] border-indigo-600"
+                  : "text-[#ACB6BE] border-transparent hover:text-gray-700"
+              }`}
+            >            
+                <span
                   style={{
                     fontFamily: "Syne",
                     fontWeight: 700,
                     fontSize: "14px",
                     lineHeight: "20px",
-                    letterSpacing: "0px",
-                    textAlign: "center",
-                    height: "48px",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    width: "100%"
+                    textAlign: "center"
                   }}
-                  className={`${activeTab === tab ? "text-[#232F30] border-b-2 border-indigo-600" : "text-[#ACB6BE] hover:text-gray-700"}`}
                 >
                   {tab === "all" && "All Teams"}
                   {tab === "marketing" && "I drive Marketing"}
@@ -141,12 +135,12 @@ export default function SynoptixComponent() {
                   {tab === "it" && "I drive IT"}
                   {tab === "finance" && "I drive Finance"}
                   {tab === "hr" && "I drive HR"}
-                </div>
+                </span>
               </div>
             ))}
           </div>
-        
-          {/* Content - Flex container */}
+
+          {/* Content */}
           <div className="flex flex-col md:flex-row gap-6 md:gap-10 p-4 sm:p-6">
             {/* Left - Image */}
             <div className="flex-1">
@@ -171,7 +165,7 @@ export default function SynoptixComponent() {
                       height={19}
                       className="flex-shrink-0 mr-2"
                     />
-                    <p className="text-[14px] text-[#000000] flex-grow mt-0.3 pr-15" style={{fontFamily: 'Poppins', fontWeight: 400, fontSize: '14px', lineHeight: '17px', letterSpacing: '0%', color: '#000000'}}>
+                    <p className="text-[14px] text-[#000000] flex-grow mt-0.3 pr-15" style={{ fontFamily: 'Poppins', fontWeight: 400, fontSize: '14px', lineHeight: '17px' }}>
                       <span style={{ fontWeight: 700 }}>{feature.bold}</span>
                       {feature.regular}
                       {index === 0 && " your reps' workflows"}
