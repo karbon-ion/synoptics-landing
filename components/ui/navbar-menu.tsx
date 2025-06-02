@@ -205,8 +205,9 @@ export const NavbarMenu = () => {
         title: 'Evaluation',
         href: '/platform/ai-performace-evaluation',
         items: [
-          { name: 'Prompt Library', href: '/platform/evaluation/prompts' },
-          { name: 'Agent Library', href: '/platform/evaluation/agents' }
+          { name: 'Real Time Performance Metrices', href: '/platform/ai-performace-evaluation#techniques-section', onClick: () => { const section = document.getElementById('techniques-section'); section?.scrollIntoView({ behavior: 'smooth' }); } },
+          { name: 'User Sentiment Insights', href: '/platform/ai-performace-evaluation#techniques-section', onClick: () => { const section = document.getElementById('techniques-section'); section?.scrollIntoView({ behavior: 'smooth' }); } },
+          { name: 'Usage & Cost Management', href: '/platform/ai-performace-evaluation#techniques-section', onClick: () => { const section = document.getElementById('techniques-section'); section?.scrollIntoView({ behavior: 'smooth' }); } }
         ]
       },
       {
@@ -214,8 +215,9 @@ export const NavbarMenu = () => {
         title: 'Synoguard',
         href: '/ai-security-tool/syno-guard',
         items: [
-          { name: 'Prompt Library', href: '/platform/synoguard/prompts' },
-          { name: 'Agent Library', href: '/platform/synoguard/agents' }
+          { name: 'Content Safety', href: '/ai-security-tool/syno-guard#synoguard-techniques', onClick: () => { const section = document.getElementById('synoguard-techniques'); section?.scrollIntoView({ behavior: 'smooth' }); } },
+          { name: 'Toxicity Detection', href: '/ai-security-tool/syno-guard#synoguard-techniques', onClick: () => { const section = document.getElementById('synoguard-techniques'); section?.scrollIntoView({ behavior: 'smooth' }); } },
+          { name: 'Data Privacy', href: '/ai-security-tool/syno-guard#synoguard-techniques', onClick: () => { const section = document.getElementById('synoguard-techniques'); section?.scrollIntoView({ behavior: 'smooth' }); } }
         ]
       },
       {
