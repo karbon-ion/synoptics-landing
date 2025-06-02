@@ -17,24 +17,66 @@ export default function Testimonials() {
   const testimonials: Testimonial[] = [
     {
       id: 1,
-      text: "Nisi rhoncus mattis rhoncus urna neque viverra. Turpis egestas pretium aenean pharetra magna ac placerat vestibulum.",
-      name: "ROBERT DOE",
-      position: "Businessman",
+      text: "Synoptix has transformed how we handle customer inquiries. The AI-powered responses are incredibly accurate and have cut our response time in half.",
+      name: "ROBERT CHEN",
+      position: "Customer Service Director",
       avatar: "https://randomuser.me/api/portraits/men/32.jpg",
     },
     {
       id: 2,
-      text: "Nisi rhoncus mattis rhoncus urna neque viverra. Turpis egestas pretium aenean pharetra magna ac placerat vestibulum.",
-      name: "JULIA DOE",
-      position: "Businesswoman",
+      text: "The analytics dashboard gives us invaluable insights into our team's performance. We've optimized our workflows and increased productivity by 40%.",
+      name: "JULIA MARTINEZ",
+      position: "Operations Manager",
       avatar: "https://randomuser.me/api/portraits/women/44.jpg",
     },
     {
       id: 3,
-      text: "Nisi rhoncus mattis rhoncus urna neque viverra. Turpis egestas pretium aenean pharetra magna ac placerat vestibulum.",
-      name: "SARAH DOE",
-      position: "Businesswoman",
+      text: "Security was our top concern, and Synoptix exceeded our expectations. The enterprise-grade protection gives us peace of mind with our sensitive data.",
+      name: "SARAH PATEL",
+      position: "IT Security Lead",
       avatar: "https://randomuser.me/api/portraits/women/68.jpg",
+    },
+    {
+      id: 4,
+      text: "The AI-powered content generation has revolutionized our marketing efforts. We're creating engaging campaigns in a fraction of the time.",
+      name: "MICHAEL WONG",
+      position: "Marketing Director",
+      avatar: "https://randomuser.me/api/portraits/men/45.jpg",
+    },
+    {
+      id: 5,
+      text: "Implementation was smooth and the support team was exceptional. Our entire team was up and running with minimal training required.",
+      name: "EMMA THOMPSON",
+      position: "HR Manager",
+      avatar: "https://randomuser.me/api/portraits/women/33.jpg",
+    },
+    {
+      id: 6,
+      text: "The ROI we've seen with Synoptix is remarkable. Our sales team closes deals faster with AI-powered insights and automated follow-ups.",
+      name: "DAVID KUMAR",
+      position: "Sales Director",
+      avatar: "https://randomuser.me/api/portraits/men/67.jpg",
+    },
+    {
+      id: 7,
+      text: "Synoptix's compliance features are top-notch. We maintain perfect audit trails while automating our financial processes.",
+      name: "LISA ANDERSON",
+      position: "Finance Controller",
+      avatar: "https://randomuser.me/api/portraits/women/22.jpg",
+    },
+    {
+      id: 8,
+      text: "The platform's scalability is impressive. As our company grew, Synoptix seamlessly adapted to our increasing demands.",
+      name: "JAMES WILSON",
+      position: "CTO",
+      avatar: "https://randomuser.me/api/portraits/men/92.jpg",
+    },
+    {
+      id: 9,
+      text: "Synoptix's integration capabilities are fantastic. It works perfectly with our existing tools, creating a unified workflow.",
+      name: "SOPHIA LEE",
+      position: "Systems Architect",
+      avatar: "https://randomuser.me/api/portraits/women/55.jpg",
     },
   ]
 
@@ -67,7 +109,7 @@ export default function Testimonials() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {testimonials.map((testimonial) => (
+        {testimonials.slice(activeIndex, activeIndex + 3).map((testimonial) => (
           <div key={testimonial.id} className="relative flex flex-col items-center text-center">
           <div
             className="bg-white shadow-md border border-gray-100 flex flex-col items-center text-center pt-16 pb-12 mb-10"
@@ -119,7 +161,7 @@ export default function Testimonials() {
                 </svg>
               </div>
             </div>
-            
+
             <div className="absolute bottom-10 w-20 h-20 rounded-full overflow-hidden border-4 border-white shadow-md">
               <Image
                 src={testimonial.avatar}
@@ -136,13 +178,13 @@ export default function Testimonials() {
       </div>
 
       <div className="flex justify-center mt-10 space-x-2">
-        {testimonials.map((_, index) => (
+        {Array.from({ length: Math.ceil(testimonials.length / 3) }).map((_, index) => (
           <button
             key={index}
-            onClick={() => setActiveIndex(index)}
+            onClick={() => setActiveIndex(index * 3)}
             className={`rounded-full transition-all duration-300
-              ${index === activeIndex ? "w-7 h-7 bg-[#5662F6]" : "w-4 h-4 mt-2 bg-[#9483FF]"}`}
-            aria-label={`Go to slide ${index + 1}`}
+              ${activeIndex === index * 3 ? "w-7 h-7 bg-[#5662F6]" : "w-4 h-4 mt-2 bg-[#9483FF]"}`}
+            aria-label={`Go to testimonial group ${index + 1}`}
           />
         ))}
       </div>
