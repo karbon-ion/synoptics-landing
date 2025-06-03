@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Syne, Poppins, Plus_Jakarta_Sans } from "next/font/google";
+import { Inter, Poppins, Plus_Jakarta_Sans, Syne, Raleway } from "next/font/google";
 import "./globals.css";
 import { NavbarMenu } from "@/components/ui/navbar-menu";
 import Footer from "./sections-old/Footer";
@@ -24,6 +24,12 @@ const jakartaSans = Plus_Jakarta_Sans({
   variable: "--font-jakarta",
 });
 
+const raleway = Raleway({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  variable: "--font-raleway",
+});
+
 export const metadata: Metadata = {
   title: "Enterprise AI Platform for Secure Automation | Synoptix.AI",
   description:
@@ -40,7 +46,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`scroll-smooth ${poppins.variable} ${syne.variable} ${jakartaSans.variable}`}>
+    <html lang="en" className={`scroll-smooth ${poppins.variable} ${syne.variable} ${jakartaSans.variable} ${raleway.variable}`}>
       <head>
         {/* Microsoft Clarity Analytics */}
         <Script id="microsoft-clarity-script" strategy="afterInteractive">

@@ -298,9 +298,91 @@ async function getBlogContent(id) {
     // Process SharePoint images if any
     const processedHtml = await processSharePointImages(html);
     
+    console.log('Original HTML:', processedHtml);
+    
+    // Extract first heading and image
+    let firstHeading = '';
+    let firstImage = '';
+    let remainingContent = processedHtml;
+    
+    // Extract first heading (h1)
+    const headingMatch = processedHtml.match(/<h1[^>]*>(.*?)<\/h1>/is);
+    console.log('Heading match:', headingMatch);
+    if (headingMatch) {
+      // Clean up any HTML tags from the heading
+      firstHeading = headingMatch[1].replace(/<[^>]+>/g, '');
+      // Decode HTML entities
+      firstHeading = firstHeading.replace(/&amp;/g, '&')
+                               .replace(/&lt;/g, '<')
+                               .replace(/&gt;/g, '>')
+                               .replace(/&quot;/g, '"')
+                               .replace(/&#39;/g, "'");
+      remainingContent = remainingContent.replace(headingMatch[0], '');
+      console.log('Extracted heading:', firstHeading);
+    }
+    
+    // Extract first image with data-src or src
+    const imageRegex = /<img[^>]+(?:data-src|src)="([^"]+)"[^>]*>/is;
+    const imageMatch = processedHtml.match(imageRegex);
+    console.log('Image match:', imageMatch);
+    if (imageMatch) {
+      // Look for data-src first, then fallback to src
+      const imgElement = imageMatch[0];
+      const dataSrcMatch = imgElement.match(/data-src="([^"]+)"/i);
+      const srcMatch = imgElement.match(/src="([^"]+)"/i);
+      firstImage = dataSrcMatch ? dataSrcMatch[1] : (srcMatch ? srcMatch[1] : '');
+      
+      // Process the image URL if needed
+      firstImage = processImageUrl(firstImage);
+      
+      remainingContent = remainingContent.replace(imageMatch[0], '');
+      console.log('Extracted image:', firstImage);
+    }
+
+    // If no h1 found, try h2
+    if (!firstHeading) {
+      const h2Match = processedHtml.match(/<h2[^>]*>(.*?)<\/h2>/is);
+      if (h2Match) {
+        firstHeading = h2Match[1];
+        remainingContent = remainingContent.replace(h2Match[0], '');
+        console.log('Using h2 as heading:', firstHeading);
+      }
+    }
+
+    // Remove any empty paragraphs that might be left after extraction
+    remainingContent = remainingContent.replace(/<p>\s*<\/p>/g, '');
+    
+    // If still no heading found, use the title from metadata
+    if (!firstHeading) {
+      const metadataPath = path.join(METADATA_DIR, file.replace('.docx', '.json'));
+      try {
+        const metadata = JSON.parse(await fs.readFile(metadataPath, 'utf8'));
+        firstHeading = metadata.title;
+        console.log('Using metadata title as heading:', firstHeading);
+      } catch (error) {
+        console.error('Error reading metadata for title fallback:', error);
+      }
+    }
+
+    // If no image found, use the first image from metadata
+    if (!firstImage) {
+      const metadataPath = path.join(METADATA_DIR, file.replace('.docx', '.json'));
+      try {
+        const metadata = JSON.parse(await fs.readFile(metadataPath, 'utf8'));
+        firstImage = metadata.image;
+        console.log('Using metadata image as fallback:', firstImage);
+      } catch (error) {
+        console.error('Error reading metadata for image fallback:', error);
+      }
+    }
+    
+    console.log('Final extracted data:', { firstHeading, firstImage });
+    
     return {
-      content: processedHtml,
-      fileName: file
+      content: remainingContent.trim(),
+      fileName: file,
+      firstHeading,
+      firstImage
     };
   } catch (error) {
     console.error('Error getting blog content:', error);
@@ -421,100 +503,88 @@ export default async function BlogPost({ params }) {
   }
   
   return (
-    <div className="max-w-7xl mx-auto px-4 py-16 pt-28">
-      {/* Back to blogs link */}
-      <div className="mb-8 mt-4">
-        <Link 
-          href="/resources/blogs"
-          className="inline-flex items-center text-blue-500 font-medium hover:text-blue-700 transition-colors duration-200"
-        >
-          <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-          </svg>
-          Back to Blogs
-        </Link>
-      </div>
-
-      {/* Two-column layout for TOC and content */}
-      <div className="flex flex-col md:flex-row gap-8 md:gap-12">
-        {/* Left sidebar with table of contents */}
-        <div className="md:w-1/4 lg:w-1/5 hidden md:block">
-          <div className="sticky top-28">
-            <TableOfContents content={contentData.content} />
-          </div>
-        </div>
-
-        {/* Main content area */}
-        <div className="md:w-3/4 lg:w-4/5">
-          <div className="prose prose-lg max-w-none blog-content bg-white rounded-lg p-6 md:p-8 shadow-sm border border-gray-100">
-            <BlogContent content={contentData.content} />
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-/**
- * Related blogs component
- */
-async function RelatedBlogs({ currentPostId }) {
-  // Get all blog posts
-  const allPosts = await getAllBlogPosts();
-  
-  // Filter out the current post and limit to 3 related posts
-  const relatedPosts = allPosts
-    .filter(post => post.id !== currentPostId)
-    .slice(0, 3);
-  
-  // If no related posts, don't show anything
-  if (relatedPosts.length === 0) {
-    return null;
-  }
-  
-  return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-      {relatedPosts.map((post) => (
-        <div 
-          key={post.id}
-          className="group bg-white rounded-xl border border-[rgba(66,153,225,0.2)] overflow-hidden hover:shadow-lg transition-all duration-300 flex flex-col h-full"
-        >
-          <div className="relative h-40 w-full overflow-hidden">
-            <div className="absolute top-2 right-2 z-10 bg-blue-500 text-white text-xs font-semibold py-1 px-2 rounded-full">
-              {post.category}
-            </div>
-            <Image
-              src={post.image}
-              alt={post.title}
-              fill
-              unoptimized
-              className="object-cover group-hover:scale-105 transition-transform duration-500"
-            />
-          </div>
-          <div className="p-5 flex-grow flex flex-col">
-            <div className="text-blue-400 text-xs mb-1">{post.date}</div>
+    <div>
+      <div className="relative bg-cover bg-center" style={{ backgroundImage: 'url(/blogs/background.png)' }}>
+        <div className="max-w-7xl mx-auto px-4 pt-28">
+          {/* Back to blogs link */}
+          <div className="mb-8">
             <Link 
-              href={`/blog/${post.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}
-              className="block"
+              href="/resources/blogs"
+              className="inline-flex items-center text-blue-500 font-medium hover:text-blue-700 transition-colors duration-200"
             >
-              <h3 className="text-lg font-semibold text-gray-900 mb-2 line-clamp-2 group-hover:text-blue-600 transition-colors duration-300 cursor-pointer">
-                {post.title}
-              </h3>
+              <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+              </svg>
+              Back to Blogs
             </Link>
-            <p className="text-gray-600 text-sm line-clamp-2 mb-3">
-              {post.description}
-            </p>
-            <div className="mt-auto">
-              <Link 
-                href={`/blog/${post.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}
-                className="text-blue-500 text-sm font-medium hover:text-blue-700 transition-colors duration-200"
-              >
-                Read More →
-              </Link>
+          </div>
+
+          {/* Blog header section */}
+          <div className="relative overflow-hidden min-h-[400px]">
+            <div className="max-w-7xl mx-auto relative z-10">
+              <div className="max-w-2xl pt-8">
+                <h1 className="text-[36px] font-bold mb-8 leading-[48px]" style={{ fontFamily: 'Syne' }}>
+                  {contentData.firstHeading}
+                </h1>
+                <div className="flex flex-col gap-2">
+                  <span className="text-[16px] leading-[100%] font-semibold" style={{ fontFamily: 'Syne' }}>Share with your community!</span>
+                  <div className="flex gap-3">
+                    <button className="w-10 h-10 rounded-full bg-[#E7F3FF] flex items-center justify-center hover:bg-[#E7F3FF]/90 transition-colors">
+                      <svg className="w-5 h-5 text-[#1877F2]" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                      </svg>
+                    </button>
+                    <button className="w-10 h-10 rounded-full bg-[#E8F4F9] flex items-center justify-center hover:bg-[#E8F4F9]/90 transition-colors">
+                      <svg className="w-5 h-5 text-[#0A66C2]" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                      </svg>
+                    </button>
+                    <button className="w-10 h-10 rounded-full bg-[#F7F7F7] flex items-center justify-center hover:bg-[#F7F7F7]/90 transition-colors">
+                      <svg className="w-4.5 h-4.5 text-black" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="absolute top-0 right-0 hidden md:block">
+              <div className="relative" style={{ width: '535px', height: '301px' }}>
+                <Image
+                  src={contentData.firstImage || post.image}
+                  alt="Blog header image"
+                  fill
+                  style={{ objectFit: 'cover', borderRadius: '20px' }}
+                  priority
+                />
+              </div>
             </div>
           </div>
         </div>
-      ))}
+      </div>
+
+      <div className="bg-white">
+        <div className="max-w-7xl mx-auto px-4">
+          {/* Two-column layout for content and TOC */}
+          <div className="flex flex-col md:flex-row gap-8 md:gap-6">
+            {/* Main content area */}
+            <div className="md:w-3/4 lg:w-4/5">
+              <div className="prose prose-lg max-w-none blog-content">
+                <BlogContent content={contentData.content} />
+              </div>
+            </div>
+
+            {/* Right sidebar with table of contents */}
+            <div className="md:w-1/4 lg:w-1/5 hidden md:block">
+              <div className="sticky top-28">
+                <div className="bg-white rounded-lg p-4 shadow-sm border border-gray-100">
+                  <TableOfContents content={contentData.content} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

@@ -1,6 +1,8 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
+import ReactDOM from 'react-dom/client';
+import SummarizeSection from './SummarizeSection';
 
 // Function to remove any existing table of contents from the blog content
 function removeExistingTableOfContents(content) {
@@ -116,18 +118,71 @@ const BlogContent = ({ content }) => {
     return processedHtml;
   };
   
+  const processSummarizeSection = (htmlContent) => {
+    if (!htmlContent) return htmlContent;
+
+    // Find content between Summarize heading and a line of dashes
+    const summarizeRegex = /<h[1-6][^>]*>\s*Summarize:?\s*<\/h[1-6]>\s*([\s\S]*?)(?:-{10,}|$)/i;
+    
+    return htmlContent.replace(summarizeRegex, (match, content) => {
+      // Clean up any trailing whitespace or empty paragraphs
+      const cleanContent = content.replace(/(<p>\s*<\/p>\s*)*$/, '');
+      // Return the content wrapped in our custom component's structure
+      return `<div class="summarize-section">${cleanContent}</div>`;
+    });
+  };
   useEffect(() => {
     // First remove any existing table of contents
     const contentWithoutToc = removeExistingTableOfContents(content);
     // Then add IDs to headings and process images
     const contentWithIds = addHeadingIds(contentWithoutToc);
-    // Process images and ensure center alignment
-    const processedWithImages = processContentWithImages(contentWithIds);
-    // Finally ensure center alignment is applied
-    const finalContent = ensureCenterAlignment(processedWithImages);
-    setProcessedContent(finalContent);
+    // Process the content with all our functions
+    const processed = processSummarizeSection(
+      processContentWithImages(
+        addHeadingIds(
+          removeExistingTableOfContents(
+            ensureCenterAlignment(content)
+          )
+        )
+      )
+    );
+    setProcessedContent(processed);
   }, [content]);
   
+  const createMarkup = () => {
+    if (!processedContent) return { __html: '' };
+    
+    // Replace the summarize section placeholder with the actual component
+    const contentWithComponents = processedContent.replace(
+      /<div class="summarize-section">(.*?)<\/div>/gs,
+      (match, content) => `<div class="summarize-wrapper" data-content="${encodeURIComponent(content)}"></div>`
+    );
+    
+    return { __html: contentWithComponents };
+  };
+
+  useEffect(() => {
+    // After rendering, replace placeholders with actual React components
+    const wrappers = document.querySelectorAll('.summarize-wrapper');
+    wrappers.forEach(wrapper => {
+      const content = decodeURIComponent(wrapper.getAttribute('data-content'));
+      const temp = document.createElement('div');
+      temp.innerHTML = content;
+      
+      // Create a new instance of SummarizeSection
+      const summarizeElement = document.createElement('div');
+      wrapper.parentNode.replaceChild(summarizeElement, wrapper);
+      
+      // Render the SummarizeSection component
+      const root = ReactDOM.createRoot(summarizeElement);
+      root.render(
+        <SummarizeSection>
+          <div dangerouslySetInnerHTML={{ __html: content }} />
+        </SummarizeSection>
+      );
+    });
+  }, [processedContent]);
+
   return (
     <>
       {/* Add the styles for blog content */}
@@ -218,7 +273,7 @@ const BlogContent = ({ content }) => {
       
       {/* Display the processed HTML content */}
       <div 
-        dangerouslySetInnerHTML={{ __html: processedContent }}
+        dangerouslySetInnerHTML={createMarkup()}
         className="docx-content blog-content-wrapper"
         style={{
           fontSize: '1.125rem',
