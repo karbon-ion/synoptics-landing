@@ -17,67 +17,41 @@ export default function Testimonials() {
   const testimonials: Testimonial[] = [
     {
       id: 1,
-      text: "Synoptix has transformed how we handle customer inquiries. The AI-powered responses are incredibly accurate and have cut our response time in half.",
-      name: "ROBERT CHEN",
-      position: "Customer Service Director",
+      text: "Before Synoptix, we were overwhelmed with customer inquiries. Now, AI handles over 70% of them, cutting down wait times and improving satisfaction. It’s a game changer for us.",
+      name: "David R",
+      position: "Head of Customer Experience",
       avatar: "https://randomuser.me/api/portraits/men/32.jpg",
     },
     {
       id: 2,
-      text: "The analytics dashboard gives us invaluable insights into our team's performance. We've optimized our workflows and increased productivity by 40%.",
-      name: "JULIA MARTINEZ",
-      position: "Operations Manager",
+      text: "We were looking for a solution that would integrate smoothly with our existing tools and keep our data secure. Synoptix nailed it—they made automation work without compromising on security.",
+      name: "Samantha L",
+      position: "IT Director",
       avatar: "https://randomuser.me/api/portraits/women/44.jpg",
     },
     {
       id: 3,
-      text: "Security was our top concern, and Synoptix exceeded our expectations. The enterprise-grade protection gives us peace of mind with our sensitive data.",
-      name: "SARAH PATEL",
-      position: "IT Security Lead",
+      text: "Compliance used to be one of our biggest bottlenecks. Since switching to Synoptix, we’ve cut processing time by nearly 60% and eliminated most of the manual work. It’s not just smart—it’s the only AI platform for enterprise that actually fits how we work. ",
+      name: "Mark T  ",
+      position: "Compliance Officer",
       avatar: "https://randomuser.me/api/portraits/women/68.jpg",
     },
     {
       id: 4,
-      text: "The AI-powered content generation has revolutionized our marketing efforts. We're creating engaging campaigns in a fraction of the time.",
-      name: "MICHAEL WONG",
-      position: "Marketing Director",
+      text: "AI felt like a huge leap at first, but Synoptix made it simple. Their AI agents are now part of our sales and marketing, and managing leads and customer interactions has never been smoother. Best enterprise AI platform! Highly Recomended!",
+      name: "Jessica P",
+      position: "VP of Marketing",
       avatar: "https://randomuser.me/api/portraits/men/45.jpg",
     },
     {
       id: 5,
-      text: "Implementation was smooth and the support team was exceptional. Our entire team was up and running with minimal training required.",
-      name: "EMMA THOMPSON",
-      position: "HR Manager",
+      text: "Data security is our priority, and Synoptix gave us that peace of mind. They helped us automate admin tasks, so our staff can focus on what truly matters—patient care",
+      name: "Dr. Andrew M",
+      position: "NovaCare Medica",
       avatar: "https://randomuser.me/api/portraits/women/33.jpg",
     },
-    {
-      id: 6,
-      text: "The ROI we've seen with Synoptix is remarkable. Our sales team closes deals faster with AI-powered insights and automated follow-ups.",
-      name: "DAVID KUMAR",
-      position: "Sales Director",
-      avatar: "https://randomuser.me/api/portraits/men/67.jpg",
-    },
-    {
-      id: 7,
-      text: "Synoptix's compliance features are top-notch. We maintain perfect audit trails while automating our financial processes.",
-      name: "LISA ANDERSON",
-      position: "Finance Controller",
-      avatar: "https://randomuser.me/api/portraits/women/22.jpg",
-    },
-    {
-      id: 8,
-      text: "The platform's scalability is impressive. As our company grew, Synoptix seamlessly adapted to our increasing demands.",
-      name: "JAMES WILSON",
-      position: "CTO",
-      avatar: "https://randomuser.me/api/portraits/men/92.jpg",
-    },
-    {
-      id: 9,
-      text: "Synoptix's integration capabilities are fantastic. It works perfectly with our existing tools, creating a unified workflow.",
-      name: "SOPHIA LEE",
-      position: "Systems Architect",
-      avatar: "https://randomuser.me/api/portraits/women/55.jpg",
-    },
+    
+    
   ]
 
   return (
@@ -115,7 +89,7 @@ export default function Testimonials() {
             className="bg-white shadow-md border border-gray-100 flex flex-col items-center text-center pt-16 pb-12 mb-10"
             style={{
               width: '370px',
-              height: '322px',
+              height: '335px',
               borderRadius: '5px',
               padding: '1.5rem', // equivalent to p-6
             }}
