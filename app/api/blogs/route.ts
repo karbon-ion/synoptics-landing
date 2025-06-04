@@ -55,8 +55,15 @@ async function getBlogPosts(): Promise<BlogPost[]> {
       let title = '';
       const titleMatch = htmlContent.match(/<h1[^>]*>(.*?)<\/h1>/i);
       if (titleMatch && titleMatch[1]) {
-        // Remove any HTML tags inside the heading
-        title = titleMatch[1].replace(/<[^>]*>/g, '').trim();
+        // Remove any HTML tags inside the heading and decode HTML entities
+        title = titleMatch[1]
+          .replace(/<[^>]*>/g, '')
+          .replace(/&amp;/g, '&')
+          .replace(/&lt;/g, '<')
+          .replace(/&gt;/g, '>')
+          .replace(/&quot;/g, '"')
+          .replace(/&#39;/g, "'")
+          .trim();
       }
       
       // If no h1 heading found, skip this blog post
