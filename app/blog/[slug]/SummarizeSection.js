@@ -27,8 +27,8 @@ const SummarizeSection = ({ children }) => {
   });
 
   return (
-    <div className="my-8 relative rounded-xl p-[1px] bg-gradient-to-r from-[#5B9FFF] to-[#FF5BCD]">
-      <div className="bg-white rounded-xl p-6">
+    <div className="my-8 relative rounded-[20px]" style={{ border: '2px solid', borderImageSource: 'linear-gradient(90deg, #155DFC -0.15%, #7FF4F9 39.97%, #A855FF 68.05%, #DF9C2F 100.15%)', borderImageSlice: '1' }}>
+      <div className="bg-white rounded-lg p-6">
         <div className="text-[#111111] space-y-3 font-syne text-base">
           {enhancedChildren}
         </div>
