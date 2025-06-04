@@ -12,6 +12,7 @@ const SecurityBadges = () => {
       />
 
       <div className="container mx-auto relative z-10">
+        <h2 className="text-4xl text-center text-white mb-16" style={{ fontFamily: "Syne", fontWeight: 700 }}>Built on Modern Security Standards<br/>and Certified Frameworks</h2>
         <div className="flex justify-center items-center gap-x-6">
           <div className="w-[214px] flex justify-center">
             <Image src="/test-page/iso.svg" alt="ISO 27001" width={214} height={255} />
