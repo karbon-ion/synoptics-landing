@@ -88,7 +88,7 @@ const TableOfContents = ({ content }) => {
               <Link
                 href={`#${heading.id}`}
                 className={`block relative hover:text-blue-600 transition-colors pl-3 ${activeId === heading.id ? 'text-blue-600 before:absolute before:left-0 before:top-0 before:h-full before:w-0.5 before:bg-blue-600' : 'text-gray-600'}`}
-                style={{ fontFamily: 'Syne', fontWeight: 600, fontSize: '16px', lineHeight: '100%', letterSpacing: '0%' }}
+                style={{ fontFamily: 'Poppins', fontWeight: 400, fontSize: '16px', lineHeight: '100%', letterSpacing: '0%' }}
                 onClick={(e) => {
                   e.preventDefault();
                   const element = document.getElementById(heading.id);
