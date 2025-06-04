@@ -11,7 +11,7 @@ export default function PlatformFeatures() {
         background: 'linear-gradient(196.25deg, rgba(255, 255, 255, 0.4) 9.13%, rgba(219, 234, 254, 0.28) 92.56%)'
       }}
     >
-    <div className="bg-[#5662F6] bg-opacity-80 rounded-lg mb-4 overflow-hidden">
+    <div className="border border-gray-200 rounded-lg mb-4 overflow-hidden" style={{ backgroundImage: 'url(/platform/agents-bar.png)', backgroundSize: '100% 100%', backgroundRepeat: 'no-repeat' }}>
         <div className="py-3 md:py-2 px-4 md:px-6 flex items-center justify-center">
           <Image src="/platform/agents-icon.svg" alt="Agents Icon" width={16} height={16} className="mr-2 w-4 h-4 md:w-5 md:h-5" />
           <span className="text-white font-medium text-base md:text-xl" style={{ fontFamily: 'Syne, sans-serif', fontWeight: '700' }}>Agents</span>
@@ -31,7 +31,7 @@ export default function PlatformFeatures() {
         </div>
       </div>
 
-      <div className="bg-[#6A99FF] bg-opacity-80 rounded-lg mb-4 overflow-hidden">
+      <div className="border border-gray-200 rounded-lg mb-4 overflow-hidden" style={{ backgroundImage: 'url(/platform/enterprise-search.png)', backgroundSize: '100% 100%', backgroundRepeat: 'no-repeat' }}>
         <div className="py-3 md:py-2 px-4 md:px-6 flex items-center justify-center">
           <Image src="/platform/enterprise-search-icon.svg" alt="Enterprise Search Icon" width={16} height={16} className="mr-2 w-4 h-4 md:w-5 md:h-5" />
           <span className="text-white font-medium text-base md:text-xl" style={{ fontFamily: 'Syne, sans-serif', fontWeight: '600' }}>Enterprise Search</span>
@@ -61,7 +61,9 @@ export default function PlatformFeatures() {
           }}>
           <div className="absolute top-0 right-0 w-full h-full" 
             style={{
-              background: 'linear-gradient(125.97deg, transparent 30%, rgba(255, 255, 255, 0.2) 70%, rgba(255, 255, 255, 0.1) 100%)'
+              backgroundImage: 'url(/platform/monitoring-bg.png)',
+              backgroundSize: '100% 100%',
+              backgroundRepeat: 'no-repeat'
             }}>
           </div>
           <p className="text-white font-bold text-center relative z-10 text-base md:text-xl" style={{ fontFamily: 'Syne, sans-serif' }}>
@@ -108,7 +110,9 @@ export default function PlatformFeatures() {
           }}>
           <div className="absolute top-0 right-0 w-full h-full" 
             style={{
-              background: '#8DC2FF'
+              backgroundImage: 'url(/platform/responsible-ai-bg.png)',
+              backgroundSize: '100% 100%',
+              backgroundRepeat: 'no-repeat'
             }}>
           </div>
           <p className="text-white font-bold text-center relative z-10 text-base md:text-xl" style={{ fontFamily: 'Syne, sans-serif' }}>
@@ -152,12 +156,12 @@ export default function PlatformFeatures() {
           <div className="flex justify-center w-full">
             <div className="grid grid-cols-7 w-full">
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/salesforce/salesforce-original.svg" alt="Salesforce" className="h-7 w-7 mx-auto" />
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg" alt="SQL Server" className="h-7 w-7 mx-auto" />
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/slack/slack-original.svg" alt="Slack" className="h-7 w-7 mx-auto" />
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg" alt="Jira" className="h-7 w-7 mx-auto" />
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/zapier/zapier-original.svg" alt="Zapier" className="h-7 w-7 mx-auto" />
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="Google" className="h-7 w-7 mx-auto" />
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" className="h-7 w-7 mx-auto" />
+              <img src="/platform/ai-agents/integration-icons/icon-2.svg" alt="SQL Server" className="h-7 w-7 mx-auto" />
+              <img src="/platform/ai-agents/integration-icons/excel.svg" alt="Slack" className="h-7 w-7 mx-auto" />
+              <img src="/platform/ai-agents/integration-icons/icon-4.svg" alt="Jira" className="h-9 w-9 mx-auto" />
+              <img src="/platform/ai-agents/integration-icons/icon-5.svg" alt="Zapier" className="h-7 w-7 mx-auto" />
+              <img src="/platform/ai-agents/integration-icons/icon-6.svg" alt="Google" className="h-7 w-7 mx-auto" />
+              <img src="/platform/ai-agents/integration-icons/icon-7.svg" alt="GitHub" className="h-7 w-7 mx-auto" />
             </div>
           </div>
           <div className="flex justify-center w-full mt-3">
@@ -165,8 +169,8 @@ export default function PlatformFeatures() {
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma" className="h-7 w-7 mx-auto" />
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" alt="Google Cloud" className="h-7 w-7 mx-auto" />
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="Azure" className="h-7 w-7 mx-auto" />
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gmail/gmail-original.svg" alt="Gmail" className="h-7 w-7 mx-auto" />
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftoffice/microsoftoffice-plain.svg" alt="Microsoft Office" className="h-7 w-7 mx-auto" />
+              <img src="/platform/ai-agents/integration-icons/icon-9.svg" alt="Gmail" className="h-7 w-7 mx-auto" />
+              <img src="/platform/ai-agents/integration-icons/icon-10.svg" alt="Microsoft Office" className="h-7 w-7 mx-auto" />
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" className="h-7 w-7 mx-auto" />
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" className="h-5 w-5 mx-auto" />
             </div>
@@ -178,20 +182,20 @@ export default function PlatformFeatures() {
           <p className="text-[#5662F6] font-medium text-center mb-4" style={{ fontFamily: 'Syne, sans-serif',fontWeight: '700',fontSize: '18px',lineHeight:'' }}>Application & Tools</p>
           <div className="flex justify-center w-full">
             <div className="grid grid-cols-5 gap-2 w-full px-3">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg" alt="Windows" className="h-5 w-5 mx-auto" />
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apple/apple-original.svg" alt="Apple" className="h-5 w-5 mx-auto" />
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg" alt="Android" className="h-5 w-5 mx-auto" />
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/chrome/chrome-original.svg" alt="Chrome" className="h-5 w-5 mx-auto" />
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firefox/firefox-original.svg" alt="Firefox" className="h-5 w-5 mx-auto" />
+              <img src="platform/ai-agents/application-and-tools/word.svg" alt="Windows" className="h-8 w-8 mx-auto" />
+              <img src="platform/ai-agents/application-and-tools/powerpoint.svg" alt="Apple" className="h-8 w-8 mx-auto" />
+              <img src="platform/ai-agents/application-and-tools/xcel.svg" alt="Android" className="h-8 w-8 mx-auto" />
+              <img src="platform/ai-agents/application-and-tools/pdf.svg" alt="Chrome" className="h-8 w-8 mx-auto" />
+              <img src="platform/ai-agents/application-and-tools/bars.svg" alt="Firefox" className="h-8 w-8 mx-auto" />
             </div>
           </div>
           <div className="flex justify-center w-full mt-3">
             <div className="grid grid-cols-5 gap-2 w-full px-3">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" className="h-8 w-8 mx-auto" />
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" className="h-8 w-8 mx-auto" />
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" className="h-8 w-8 mx-auto" />
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" className="h-8 w-8 mx-auto" />
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" className="h-8 w-8 mx-auto" />
+              <img src="platform/ai-agents/application-and-tools/search-folder.svg" alt="VS Code" className="h-8 w-8 mx-auto" />
+              <img src="platform/ai-agents/application-and-tools/web.svg" alt="HTML5" className="h-8 w-8 mx-auto" />
+              <img src="platform/ai-agents/application-and-tools/code.svg" alt="CSS3" className="h-8 w-8 mx-auto" />
+              <img src="platform/ai-agents/application-and-tools/translate.svg" alt="JavaScript" className="h-8 w-8 mx-auto" />
+              <img src="platform/ai-agents/application-and-tools/calculator.svg" alt="Python" className="h-8 w-8 mx-auto" />
             </div>
           </div>
         </div>
@@ -201,16 +205,16 @@ export default function PlatformFeatures() {
           <p className="text-[#5662F6] font-medium text-center mb-4" style={{ fontFamily: 'Syne, sans-serif',fontWeight: '700',fontSize: '18px',lineHeight:'' }}>Deployment</p>
           <div className="flex justify-center w-full">
             <div className="grid grid-cols-3 w-full px-10">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="Google" className="h-6 w-6 mx-auto" />
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="Azure" className="h-6 w-6 mx-auto" />
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" alt="AWS" className="h-6 w-6 mx-auto" />
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="Google" className="h-7 w-9 mx-auto" />
+              <img src="platform/ai-agents/deployment-icons/some-cloud.svg" alt="Azure" className="h-7 w-12 mx-auto" />
+              <img src="platform/ai-agents/deployment-icons/aws.svg" alt="AWS" className="h-7 w-12 mx-auto" />
             </div>
           </div>
           <div className="flex justify-center w-full mt-3">
             <div className="grid grid-cols-3 w-full px-10">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" className="h-6 w-6 mx-auto" />
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" alt="Google Cloud" className="h-8 w-8 mx-auto" />
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" alt="Kubernetes" className="h-8 w-8 mx-auto" />
+              <img src="platform/ai-agents/deployment-icons/stack.svg" alt="Docker" className="h-7 w-12 mx-auto" />
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" alt="Google Cloud" className="h-7 w-8 mx-auto" />
+              <img src="platform/ai-agents/deployment-icons/vpc.svg" alt="Kubernetes" className="h-6 w-12 mx-auto" />
             </div>
           </div>
         </div>
