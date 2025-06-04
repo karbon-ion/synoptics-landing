@@ -36,19 +36,37 @@ export const MenuItem = ({
         <Link href={href}>
           <motion.p
             transition={{ duration: 0.3 }}
-            className={`cursor-pointer hover:opacity-[0.9] uppercase ${pathname === href ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'}`}
+            className={`cursor-pointer hover:opacity-[0.9] uppercase flex items-center ${pathname === href ? 'text-blue-600' : 'text-[#364153] hover:text-blue-600'}`}
             style={{ fontFamily: 'Poppins', fontWeight: 500, fontSize: '14px', lineHeight: '20px', letterSpacing: '0%', whiteSpace: 'nowrap' }}
           >
             {item}
+            {item === 'Platform' && (
+              <Image
+                src="/down-arrow.svg"
+                alt="Platform dropdown"
+                width={12}
+                height={12}
+                className="ml-1"
+              />
+            )}
           </motion.p>
         </Link>
       ) : (
         <motion.p
           transition={{ duration: 0.3 }}
-          className="cursor-pointer text-gray-700 hover:text-blue-600 uppercase"
+          className="cursor-pointer text-[#364153] hover:text-[#364153] uppercase flex items-center"
           style={{ fontFamily: 'Poppins', fontWeight: 500, fontSize: '14px', lineHeight: '20px', letterSpacing: '0%', whiteSpace: 'nowrap' }}
         >
           {item}
+          {item === 'Platform' && (
+            <Image
+              src="/down-arrow.svg"
+              alt="Platform dropdown"
+              width={12}
+              height={9}
+              className="ml-1 mb-0.5"
+            />
+          )}
         </motion.p>
       )}
       {active !== null && children && (
