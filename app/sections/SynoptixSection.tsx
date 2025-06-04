@@ -15,6 +15,7 @@ interface FeatureText {
 interface TabContent {
   title: string
   features: FeatureText[]
+  learnMoreLink: string
 }
 
 export default function SynoptixComponent() {
@@ -42,6 +43,7 @@ export default function SynoptixComponent() {
         { bold: "Consistent Messaging", regular: "- Maintain brand and message alignment with centralised, approved content accessible to all teams." },
         { bold: "Scheduling & Admin Tasks", regular: " Automate calendar bookings, reminders, and meeting prep" }
       ],
+      learnMoreLink: "/blog/ai-platform-for-all-teams-smarter-faster-enterprise-work"
     },
     marketing: {
       title: "Synoptix is for Every Team",
@@ -52,6 +54,7 @@ export default function SynoptixComponent() {
         { bold: "Enhance team collaboration", regular: " – Centralised content access streamlines workflows and approvals" },
         { bold: "Enterprise-ready AI for Marketers", regular: " – Scalable, efficient AI platform for enterprise marketing teams" }
       ],
+      learnMoreLink: "/blog/ai-marketing-platform-for-faster-smarter-campaigns"
     },
     sales: {
       title: "Synoptix is for Every Team",
@@ -62,6 +65,7 @@ export default function SynoptixComponent() {
         { bold: "Close faster, convert more", regular: " – Reduce cycle times with consistent, high-quality communication at scale" },
         { bold: "Enterprise-grade and sales-ready", regular: " – Built to empower your team with speed, accuracy, and confidence" },
       ],
+      learnMoreLink: "/blog/empower-sales-teams-with-synoptix-ai-for-faster-deal-cycles"
     },
     it: {
       title: "Synoptix is for Every Team",
@@ -73,6 +77,7 @@ export default function SynoptixComponent() {
         { bold: "Reduce response time", regular: "—Empower teams to self-serve with support powered by your existing knowledge base." },
         { bold: "Optimise IT workflows", regular: "—Automate password resets, access requests, and repetitive admin tasks—securely." },
       ],
+      learnMoreLink: "/blog/ai-for-it-operations-faster-support-smart-automation"
     },
     finance: {
       title: "Synoptix is for Every Team",
@@ -83,6 +88,7 @@ export default function SynoptixComponent() {
         { bold: "Risk reduction", regular: " – Minimize operational risks while improving reporting speed and quality" },
         { bold: "Compliant, efficient platform", regular: " – Engineered for enterprise AI finance leaders focused on governance" },
       ],
+      learnMoreLink: "/blog/ai-for-finance-teams-real-time-insights-and-automation"
     },
     hr: {
       title: "Synoptix is for Every Team",
@@ -93,6 +99,7 @@ export default function SynoptixComponent() {
         { bold: "Robust data protection", regular: " – Secure sensitive employee information with strict access controls" },
         { bold: "People-first AI platform", regular: " – Designed for modern HR teams to streamline operations" },
       ],
+      learnMoreLink: "/blog/modern-hr-automation-platform-for-smarter-employee-support"
     },
   }
 
@@ -180,7 +187,7 @@ export default function SynoptixComponent() {
 
               <div className="mt-4">
                 <Link
-                  href="#"
+                  href={tabContent[activeTab].learnMoreLink}
                   className="inline-flex items-center text-[#5662F6] hover:text-indigo-700"
                   style={{
                     fontFamily: "Syne",

@@ -122,7 +122,7 @@ const BlogsPage = () => {
                       </h3>
                     </Link>
                     <p className="text-gray-600 text-base leading-relaxed mb-6">
-                      {post.description.replace(/https?:\/\/[^\s]+/g, '')}
+                      {post.description.replace(/(?:https?:\/\/[^\s]+|[^\s]+\.(?:jpg|jpeg|png|gif|webp))/gi, '').trim()}
                     </p>
                     <div className="mt-auto">
                       <Link 
