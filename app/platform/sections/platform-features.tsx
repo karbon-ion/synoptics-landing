@@ -125,25 +125,25 @@ export default function PlatformFeatures() {
           {/* Observability */}
           <div className="md:col-span-3 bg-white h-[70px] md:h-[132px] rounded-lg shadow-sm flex flex-col items-center justify-center px-2 md:px-4">
             <div className="mb-2 md:mb-3">
-              <Image src="/platform/ai-agents/observability.svg" alt="Observability" width={24} height={24} className="w-6 h-6 md:w-[56px] md:h-[50px]" />
+              <Image src="/platform/ai-agents/security.svg" alt="Observability" width={24} height={24} className="w-6 h-6 md:w-[56px] md:h-[50px]" />
             </div>
-            <p className="text-[#323E50] font-medium text-xs md:text-xl" style={{ fontFamily: 'Poppins, sans-serif', fontWeight: '600' }}>Observability</p>
+            <p className="text-[#323E50] font-medium text-xs md:text-xl" style={{ fontFamily: 'Poppins, sans-serif', fontWeight: '600' }}>Security</p>
           </div>
 
           {/* Evaluations */}
           <div className="md:col-span-3 bg-white h-[70px] md:h-[132px] rounded-lg shadow-sm flex flex-col items-center justify-center px-2 md:px-4">
             <div className="mb-2 md:mb-3">
-              <Image src="/platform/ai-agents/evaluations.svg" alt="Evaluations" width={24} height={24} className="w-6 h-6 md:w-[56px] md:h-[50px]" />
+              <Image src="/platform/ai-agents/compliance.svg" alt="Evaluations" width={24} height={24} className="w-6 h-6 md:w-[56px] md:h-[50px]" />
             </div>
-            <p className="text-[#323E50] font-medium text-xs md:text-xl" style={{ fontFamily: 'Poppins, sans-serif', fontWeight: '600' }}>Evaluations</p>
+            <p className="text-[#323E50] font-medium text-xs md:text-xl" style={{ fontFamily: 'Poppins, sans-serif', fontWeight: '600' }}>Compliance</p>
           </div>
 
           {/* LLM Ops */}
           <div className="md:col-span-3 bg-white h-[70px] md:h-[132px] rounded-lg shadow-sm flex flex-col items-center justify-center px-2 md:px-4">
             <div className="mb-2 md:mb-3">
-              <Image src="/platform/ai-agents/llm.svg" alt="LLM Ops" width={24} height={24} className="w-6 h-6 md:w-[56px] md:h-[50px]" />
+              <Image src="/platform/ai-agents/governance.svg" alt="LLM Ops" width={24} height={24} className="w-6 h-6 md:w-[56px] md:h-[50px]" />
             </div>
-            <p className="text-[#323E50] font-medium text-xs md:text-xl" style={{ fontFamily: 'Poppins, sans-serif', fontWeight: '600' }}>LLM Ops</p>
+            <p className="text-[#323E50] font-medium text-xs md:text-xl" style={{ fontFamily: 'Poppins, sans-serif', fontWeight: '600' }}>Governance</p>
           </div>
         </div>
       </div>
