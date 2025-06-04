@@ -17,8 +17,12 @@ const TableOfContents = ({ content }) => {
     const headingsArray = [];
 
     headingElements.forEach((heading) => {
+      const headingText = heading.textContent.trim();
+      
+      // Skip the Summarize heading
+      if (headingText.toLowerCase() === 'summarize') return;
+      
       if (!heading.id) {
-        const headingText = heading.textContent;
         const id = headingText
           .toLowerCase()
           .replace(/[^a-z0-9]+/g, '-')
@@ -28,7 +32,7 @@ const TableOfContents = ({ content }) => {
 
       headingsArray.push({
         id: heading.id,
-        text: heading.textContent.replace(/[^a-zA-Z0-9\s-]/g, '').trim(),
+        text: headingText.replace(/[^a-zA-Z0-9\s-]/g, '').trim(),
         level: parseInt(heading.tagName.substring(1), 10)
       });
     });
@@ -73,7 +77,7 @@ const TableOfContents = ({ content }) => {
 
   return (
     <nav className="text-sm">
-      <h4 className="font-medium mb-4 text-gray-900" style={{ fontFamily: 'Raleway' }}>In this article</h4>
+      <h4 className="font-medium mb-4 text-gray-900" style={{ fontFamily: 'Raleway', fontSize: '18px', fontWeight: 600, lineHeight: '100%', letterSpacing: '0%' }}>In this article</h4>
       {headings.length > 0 && (
         <ul className="space-y-6">
           {headings.map((heading) => (

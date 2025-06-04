@@ -1,25 +1,36 @@
 'use client';
 
-import React from 'react';
+import React, { Children, isValidElement, cloneElement } from 'react';
 import Image from 'next/image';
 
 const SummarizeSection = ({ children }) => {
-  return (
-    <div className="my-8 relative rounded-xl p-[1px] bg-gradient-to-r from-[#5B9FFF] to-[#FF5BCD]">
-      <div className="bg-white rounded-xl p-6">
-        <div className="flex items-center gap-3 mb-4">
-          <div className="w-8 h-8 flex items-center justify-center rounded-lg">
+  let foundFirstHeading = false;
+
+  const enhancedChildren = Children.map(children, (child) => {
+    if (!foundFirstHeading && isValidElement(child) && /^h[1-6]$/i.test(child.type)) {
+      foundFirstHeading = true;
+      return (
+        <div key="heading-with-icon" className="flex items-center gap-3">
+          <div className="w-6 h-6 flex items-center justify-center">
             <Image 
               src="/icons/summarize.svg" 
               alt="Summarize icon" 
-              width={24} 
-              height={24}
+              width={20} 
+              height={20}
             />
           </div>
-          <h2 className="text-[#111111] font-syne text-xl font-semibold">Summarize</h2>
+          {child}
         </div>
+      );
+    }
+    return child;
+  });
+
+  return (
+    <div className="my-8 relative rounded-xl p-[1px] bg-gradient-to-r from-[#5B9FFF] to-[#FF5BCD]">
+      <div className="bg-white rounded-xl p-6">
         <div className="text-[#111111] space-y-3 font-syne text-base">
-          {children}
+          {enhancedChildren}
         </div>
       </div>
       <style jsx global>{`
