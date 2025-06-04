@@ -3,7 +3,7 @@
 import { useEffect, useState, useRef } from "react";
 import HeroSection from "./sections/HeroSection";
 import EnterpriseSection from "./sections/EnterpriseSection";
-import SynoptixComponent from "./sections/SynoptixSection";
+
 import TrackSection from "./sections/TrackandOptimizeSection";
 import SecuritySection from "./sections/SecuritySection";
 import BlogsSection from "./sections/BlogsSection";
@@ -12,6 +12,7 @@ import CertificationSection from "./sections/CertificationSection";
 import EnterpriseSecuritySection from "./sections/SecuritySection";
 import AiServicesSection from "./sections/AIservicesSection";
 import SecurityBadges from "./sections/SecurityBadges";
+import SynoptixSection from "./sections/SynoptixSection";
 
 export default function TestPage() {
   const [mounted, setMounted] = useState(false);
@@ -51,7 +52,7 @@ export default function TestPage() {
     <div className="relative w-full">
       <HeroSection videoRef={videoRef} isInView={isInView} />
       <EnterpriseSection />
-      <SynoptixComponent/>
+      <SynoptixSection/>
       <TrackSection/>
       <EnterpriseSecuritySection/>
       <AiServicesSection/>
