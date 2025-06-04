@@ -3,8 +3,8 @@
 import Hero from "./sections/hero";
 import FeaturesSection from "./sections/features";
 import ResponsibleAI from "./sections/responsible-ai";
-import IntegrationSection from "../platform/sections/integration-section";
-import BlogSection from "../platform/sections/blog-section";
+import IntegrationSection from "../../platform/sections/integration-section";
+import BlogSection from "../../platform/sections/blog-section";
 
 export default function SynoptixSearch() {
     return (

@@ -190,23 +190,23 @@ export const NavbarMenu = () => {
       {
         icon: '/navbar-platform/synoptix-search-icon.svg',
         title: 'Synoptix Search',
-        href: '/synoptix-search',
+        href: '/platform/synoptix-ai-search',
         items: [
-          { name: 'Universal Knowledge', href: '/synoptix-search#universal-knowledge' },
-          { name: 'Data Insights', href: '/synoptix-search#data-insights' },
-          { name: 'Enterprise Data Search', href: '/synoptix-search#enterprise-data-search' },
-          { name: 'Fine-Tuning/Industry Specific', href: '/synoptix-search#fine-tuning' }
+          { name: 'Universal Knowledge', href: '/platform/synoptix-ai-search#universal-knowledge' },
+          { name: 'Data Insights', href: '/platform/synoptix-ai-search#data-insights' },
+          { name: 'Enterprise Data Search', href: '/platform/synoptix-ai-search#enterprise-data-search' },
+          { name: 'Fine-Tuning/Industry Specific', href: '/platform/synoptix-ai-search#fine-tuning' }
         ]
       },
       {
         icon: '/navbar-platform/synoptix-agent-icon.svg',
         title: 'Synoptix Agents',
-        href: '/synoptix-agents',
+        href: '/platform/synoptix-ai-agents',
         items: [
-          { name: 'Custom Agents', href: '/synoptix-agents#customize-agent' },
-          { name: 'Reasoning Agent', href: '/synoptix-agents#create-agents' },
-          { name: 'Knowledge Access', href: '/synoptix-agents#deploy-agent' },
-          { name: 'Agent Library', href: '/synoptix-agents#manage-agent' }
+          { name: 'Custom Agents', href: '/platform/synoptix-ai-agents#Custom-Agent' },
+          { name: 'Reasoning Agent', href: '/platform/synoptix-ai-agents#Reasoning-Agent' },
+          { name: 'Knowledge Access', href: '/platform/synoptix-ai-agents#Knowledge-Access' },
+          { name: 'Agent Library', href: '/platform/synoptix-ai-agents#Agent-Library' }
         ]
       },
       {
