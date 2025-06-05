@@ -122,13 +122,13 @@ const BlogContent = ({ content }) => {
     if (!htmlContent) return htmlContent;
 
     // Find content between Summarize heading and a line of dashes
-    const summarizeRegex = /<h[1-6][^>]*>\s*Summarize:?\s*<\/h[1-6]>\s*([\s\S]*?)(?:-{10,}|$)/i;
+    const summarizeRegex = /(<h[1-6][^>]*>\s*Summarize:?\s*<\/h[1-6]>)\s*([\s\S]*?)(?:-{10,}|$)/i;
     
-    return htmlContent.replace(summarizeRegex, (match, content) => {
+    return htmlContent.replace(summarizeRegex, (match, heading, content) => {
       // Clean up any trailing whitespace or empty paragraphs
       const cleanContent = content.replace(/(<p>\s*<\/p>\s*)*$/, '');
       // Return the content wrapped in our custom component's structure
-      return `<div class="summarize-section">${cleanContent}</div>`;
+      return `<div class="summarize-section">${heading}${cleanContent}</div>`;
     });
   };
   useEffect(() => {
