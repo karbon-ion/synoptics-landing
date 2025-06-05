@@ -231,11 +231,11 @@ export const NavbarMenu = () => {
       {
         icon: '/navbar-platform/synoguard-icon.svg',
         title: 'Synoguard',
-        href: '/ai-security-tool/syno-guard',
+        href: '/platform/ai-security-tool/syno-guard',
         items: [
-          { name: 'Content Safety', href: '/ai-security-tool/syno-guard#synoguard-techniques', onClick: () => { const section = document.getElementById('synoguard-techniques'); section?.scrollIntoView({ behavior: 'smooth' }); } },
-          { name: 'Toxicity Detection', href: '/ai-security-tool/syno-guard#synoguard-techniques', onClick: () => { const section = document.getElementById('synoguard-techniques'); section?.scrollIntoView({ behavior: 'smooth' }); } },
-          { name: 'Data Privacy', href: '/ai-security-tool/syno-guard#synoguard-techniques', onClick: () => { const section = document.getElementById('synoguard-techniques'); section?.scrollIntoView({ behavior: 'smooth' }); } }
+          { name: 'Content Safety', href: '/platform/ai-security-tool/syno-guard#synoguard-techniques', onClick: () => { const section = document.getElementById('synoguard-techniques'); section?.scrollIntoView({ behavior: 'smooth' }); } },
+          { name: 'Toxicity Detection', href: '/platform/ai-security-tool/syno-guard#synoguard-techniques', onClick: () => { const section = document.getElementById('synoguard-techniques'); section?.scrollIntoView({ behavior: 'smooth' }); } },
+          { name: 'Data Privacy', href: '/platform/ai-security-tool/syno-guard#synoguard-techniques', onClick: () => { const section = document.getElementById('synoguard-techniques'); section?.scrollIntoView({ behavior: 'smooth' }); } }
         ]
       },
       {
