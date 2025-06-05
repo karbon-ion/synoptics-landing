@@ -6,6 +6,12 @@ import IntegrationSection from "./sections/integration-section";
 import DeploymentSection from "./sections/deployment-section";
 import TechStack from "./sections/tech-stack";
 import BlogSection from "./sections/blog-section";
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Synoptix | Secure, Scalable Enterprise AI Platform',
+  description: 'Unify workflows, agents, and data with Synoptix—the enterprise AI platform powering automation, insight, and governance across your organisation.'
+};
 
 export default function Platform() {
     return (
