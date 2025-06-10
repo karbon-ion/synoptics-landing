@@ -55,12 +55,21 @@ async function getBlogPosts(): Promise<BlogPost[]> {
       let title = '';
       const titleMatch = htmlContent.match(/<h1[^>]*>(.*?)<\/h1>/i);
       if (titleMatch && titleMatch[1]) {
-        // Remove any HTML tags inside the heading
-        title = titleMatch[1].replace(/<[^>]*>/g, '').trim();
-      } else {
-        // Fallback to filename if no h1 found
-        const fileName = file.replace('.docx', '');
-        title = fileName.split(' - ')[1] || fileName;
+        // Remove any HTML tags inside the heading and decode HTML entities
+        title = titleMatch[1]
+          .replace(/<[^>]*>/g, '')
+          .replace(/&amp;/g, '&')
+          .replace(/&lt;/g, '<')
+          .replace(/&gt;/g, '>')
+          .replace(/&quot;/g, '"')
+          .replace(/&#39;/g, "'")
+          .trim();
+      }
+      
+      // If no h1 heading found, skip this blog post
+      if (!title) {
+        console.warn(`Skipping ${file} - No h1 heading found`);
+        continue;
       }
       
       // Extract content after the first heading for the description
@@ -159,8 +168,8 @@ async function getBlogPosts(): Promise<BlogPost[]> {
       const plainTextResult = await mammoth.extractRawText({ buffer });
       const content = plainTextResult.value;
       
-      // Use metadata title if available, otherwise use the extracted title
-      const finalTitle = metadataTitle || title;
+      // Only use the title from content
+      const finalTitle = title;
       
       blogPosts.push({
         id: i.toString(),

@@ -87,7 +87,7 @@ const TableOfContents = ({ content }) => {
             >
               <Link
                 href={`#${heading.id}`}
-                className={`block relative hover:text-blue-600 transition-colors pl-3 ${activeId === heading.id ? 'text-blue-600 before:absolute before:left-0 before:top-0 before:h-full before:w-0.5 before:bg-blue-600' : 'text-gray-600'}`}
+                className={`block relative hover:text-[#5662F6] transition-colors pl-3 ${activeId === heading.id ? 'text-[#5662F6] before:absolute before:left-0 before:top-0 before:h-full before:w-0.5 before:bg-[#5662F6]' : 'text-gray-600'}`}
                 style={{ fontFamily: 'Poppins', fontWeight: 400, fontSize: '16px', lineHeight: '100%', letterSpacing: '0%' }}
                 onClick={(e) => {
                   e.preventDefault();

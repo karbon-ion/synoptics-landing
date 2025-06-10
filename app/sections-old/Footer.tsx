@@ -21,7 +21,7 @@ const Footer = () => {
 
   const servicesLinks = [
     { name: 'AI Consulting', href: '/services/ai-consulting' },
-    { name: 'Fine-tuning & Optimization', href: '/services/fine-tuning' },
+    // { name: 'Fine-tuning & Optimization', href: '/services/fine-tuning' },
   ];
 
   const socialLinks = [

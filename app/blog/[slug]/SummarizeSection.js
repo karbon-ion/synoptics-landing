@@ -4,31 +4,64 @@ import React, { Children, isValidElement, cloneElement } from 'react';
 import Image from 'next/image';
 
 const SummarizeSection = ({ children }) => {
-  let foundFirstHeading = false;
+  const renderWithIcon = (heading) => (
+    <div key="heading-with-icon" className="flex items-center gap-3 pb-4 border-b border-[#E5E7EB] mb-4">
+      <div className="w-[50px] h-[50px] flex items-center justify-center rounded-full bg-[#F3F7FB] p-3">
+        <Image 
+          src="/synoptix_logo.png" 
+          alt="Summarize icon" 
+          width={30} 
+          height={30}
+          style={{ backgroundColor: 'transparent' }}
+          className="shadow-none"
+          objectFit="contain"
+        />
+      </div>
+      {React.cloneElement(heading, {
+        style: {
+          fontFamily: 'Syne',
+          fontWeight: 700,
+          fontSize: '40px',
+          lineHeight: '45px',
+          letterSpacing: '0%'
+        }
+      })}
+    </div>
+  );
 
+  let foundFirstHeading = false;
   const enhancedChildren = Children.map(children, (child) => {
+    // Handle direct heading elements
     if (!foundFirstHeading && isValidElement(child) && /^h[1-6]$/i.test(child.type)) {
       foundFirstHeading = true;
-      return (
-        <div key="heading-with-icon" className="flex items-center gap-3">
-          <div className="w-6 h-6 flex items-center justify-center">
-            <Image 
-              src="/icons/summarize.svg" 
-              alt="Summarize icon" 
-              width={20} 
-              height={20}
-            />
-          </div>
-          {child}
-        </div>
-      );
+      return renderWithIcon(child);
+    }
+    
+    // Handle headings inside dangerouslySetInnerHTML divs
+    if (!foundFirstHeading && isValidElement(child) && child.props.dangerouslySetInnerHTML) {
+      const tempDiv = document.createElement('div');
+      tempDiv.innerHTML = child.props.dangerouslySetInnerHTML.__html;
+      const headings = tempDiv.querySelectorAll('h1, h2, h3, h4, h5, h6');
+      
+      if (headings.length > 0) {
+        foundFirstHeading = true;
+        // Only modify the first heading
+        const modifiedHtml = child.props.dangerouslySetInnerHTML.__html.replace(
+          /(<h[1-6][^>]*>.*?<\/h[1-6]>)/i,
+          '<div class="flex items-center gap-3 pb-4 border-b border-[#E5E7EB] mb-4"><div class="w-[50px] h-[50px] flex items-center justify-center rounded-full bg-[#F3F7FB] p-3"><img src="/synoptix_logo.png" alt="Summarize icon" width="30" height="30" style="background-color: transparent; object-fit: contain;" class="shadow-none" /></div><div style="font-family: Syne; font-weight: 700; font-size: 40px; line-height: 45px; letter-spacing: 0%;">$1</div></div>'
+        );
+        
+        return React.cloneElement(child, {
+          dangerouslySetInnerHTML: { __html: modifiedHtml }
+        });
+      }
     }
     return child;
   });
 
   return (
-    <div className="my-8 relative rounded-xl p-[1px] bg-gradient-to-r from-[#5B9FFF] to-[#FF5BCD]">
-      <div className="bg-white rounded-xl p-6">
+    <div className="my-8 relative p-[1.5px] rounded-[20px] bg-gradient-to-r from-[#155DFC] via-[#7FF4F9] via-[#A855FF] to-[#DF9C2F]">
+      <div className="bg-white rounded-[20px] p-6 h-full">
         <div className="text-[#111111] space-y-3 font-syne text-base">
           {enhancedChildren}
         </div>

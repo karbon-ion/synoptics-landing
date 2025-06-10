@@ -115,6 +115,8 @@ export default function RootLayout({
             })(window,document,"script","//bat.bing.com/bat.js","uetq");
           `}
         </Script>
+        <script id="vtag-ai-js" async src="https://r2.leadsy.ai/tag.js" data-pid="9wW4yMR3XyNFUEOL" data-version="062024">
+        </script>
       </head>
       <body className={inter.className}>
         <FontAwesome />

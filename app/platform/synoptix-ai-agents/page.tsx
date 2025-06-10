@@ -1,7 +1,13 @@
 import HeroSection from './sections/hero';
 import FeaturesSection from './sections/features';
 import AgentTypesSection from './sections/AgentTypesSection';
-import BlogSection from "../platform/sections/blog-section";
+import BlogSection from "../../platform/sections/blog-section";
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Synoptix | Enterprise AI Agent Platform for Scalable Automation',
+  description: 'Create, deploy, and manage intelligent agents without code. Synoptix is the enterprise AI agent platform built for automation, compliance, and scale.'
+};
 
 export default function SynoptixAgentsPage() {
   return (

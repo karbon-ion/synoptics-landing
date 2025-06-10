@@ -124,7 +124,7 @@ export default function EnterpriseSection() {
             
             
             {tabData.map((tab) => (
-              <div className=" rounded-lg mb-1 border border-gray-100" key={tab.id}>
+              <div className=" rounded-lg mb-1 border border-gray-100" style={{ boxShadow: '0px 24px 32px 0px #00000006' }} key={tab.id}>
                 <button
                   onClick={() => handleTabChange(tab.id)}
                   className={`flex items-center w-full  px-6 justify-between bg-white rounded-lg ${activeTab === tab.id ? "border-t-[3.7px] border-t-[#5662f6]" : "border-t-transparent"} hover:bg-gray-50 transition-colors`}
