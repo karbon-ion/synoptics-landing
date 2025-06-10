@@ -1,8 +1,8 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Synoptix | Secure, Scalable Enterprise AI Platform',
-  description: 'Unify workflows, agents, and data with Synoptix—the enterprise AI platform powering automation, insight, and governance across your organisation.'
+  title: 'Enterprise AI Solutions | Synoptix Unified AI Platform',
+  description: 'Discover Synoptix\'s Enterprise AI platform—built for scalability, secure automation, and real-time data orchestration across your enterprise systems.'
 };
 
 export default function PlatformLayout({

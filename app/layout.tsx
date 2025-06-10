@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Poppins, Plus_Jakarta_Sans, Syne, Raleway } from "next/font/google";
+
+
 import "./globals.css";
 import { NavbarMenu } from "@/components/ui/navbar-menu";
 import Footer from "./sections-old/Footer";
@@ -31,9 +33,8 @@ const raleway = Raleway({
 });
 
 export const metadata: Metadata = {
-  title: "Enterprise AI Platform for Secure Automation | Synoptix.AI",
-  description:
-    "Explore Synoptix.AI – an enterprise AI platform to automate workflows, boost productivity, and keep your business data fully secure.",
+  title: 'Enterprise AI Platform | Synoptix.ai for Automation',
+  description: 'Synoptix.ai offers an enterprise AI platform that automates workflows, unifies data, and delivers intelligent tools for modern business operations and process.',
   metadataBase: new URL("https://synoptix.ai"),
   alternates: {
     canonical: "/",
