@@ -68,24 +68,43 @@ const features = [
 
 const OWASP = () => {
   return (
-    <section className="py-24 relative overflow-hidden">
+    <section className="py-24 mb-10 relative overflow-hidden">
       {/* Gradient background */}
       <div className="absolute inset-0 bg-gradient-to-b from-white via-blue-50 to-blue-100 z-0" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(59,130,246,0.04),transparent_25%),radial-gradient(circle_at_70%_50%,rgba(59,130,246,0.04),transparent_25%)]" />
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <div className="mb-4">
-            <span className="text-sm font-semibold tracking-wider uppercase text-gray-600">
-              SECURITY
-            </span>
-          </div>
+         
           
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8 max-w-4xl mx-auto">
-            OWASP Top 10 for LLMs
+          <h2 style={{
+            fontFamily: 'Syne',
+            fontWeight: 700,
+            fontSize: '48px',
+            lineHeight: '48px',
+            letterSpacing: '0%',
+            textAlign: 'center',
+            verticalAlign: 'middle',
+            marginBottom: '24px',
+            maxWidth: '4xl',
+            margin: '0 auto'
+          }}>
+            <span style={{ color: '#5662F6' }}>OWASP</span> Top 10 for LLMs
           </h2>
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-16">
-          Ensure your AI stays secure and compliant with SynoGuard. We continuously update your guardrails to align with the latest security standards, including the OWASP Top 10 for LLMs, so you’re always protected against emerging threats. 
+          <p style={{
+            fontFamily: 'Poppins',
+            fontWeight: 400,
+            fontSize: '16px',
+            lineHeight: '28px',
+            letterSpacing: '0%',
+            textAlign: 'center',
+            verticalAlign: 'middle',
+            color: '#666666',
+            maxWidth: '800px',
+            margin: '0 auto 32px'
+          }}>
+            Ensure your AI stays secure and compliant with SynoGuard. We continuously update your
+            guardrails to align with the latest security standards.
           </p>
           
           <div className="flex justify-center">
@@ -93,7 +112,6 @@ const OWASP = () => {
                     href="/#contact" 
                     variant="primary"
                     size="lg"
-                    className="mb-10 sm:mb-16"
                 >
               Contact us for more information
             </Button>
@@ -139,16 +157,40 @@ const Feature = ({
       )}
     >
       <div className="opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-t from-white/80 to-transparent pointer-events-none" />
-      <div className="mb-4 relative z-10 px-10 text-blue-500">
-        <span className="text-sm font-medium">{code}</span>
+      <div className="mb-4 relative z-10 px-10">
+        <span style={{
+          fontFamily: 'Inter',
+          fontWeight: 500,
+          fontSize: '14px',
+          lineHeight: '20px',
+          letterSpacing: '0%',
+          verticalAlign: 'middle',
+          color: '#5662F6'
+        }}>{code}</span>
       </div>
-      <div className="text-lg font-bold mb-2 relative z-10 px-10">
+      <div className="relative z-10 px-10 mb-2">
         <div className="absolute left-0 inset-y-0 h-6 group-hover/feature:h-8 w-1 rounded-tr-full rounded-br-full bg-blue-400 group-hover/feature:bg-blue-500 transition-all duration-200 origin-center" />
-        <span className="group-hover/feature:translate-x-2 transition duration-200 inline-block text-gray-800">
+        <span style={{
+          fontFamily: 'Syne',
+          fontWeight: 700,
+          fontSize: '18px',
+          lineHeight: '28px',
+          letterSpacing: '0%',
+          verticalAlign: 'middle',
+          color: '#323E50'
+        }} className="group-hover/feature:translate-x-2 transition duration-200 inline-block">
           {title}
         </span>
       </div>
-      <p className="text-sm text-gray-600 max-w-xs relative z-10 px-10">
+      <p style={{
+        fontFamily: 'Poppins',
+        fontWeight: 400,
+        fontSize: '12px',
+        lineHeight: '20px',
+        letterSpacing: '0%',
+        verticalAlign: 'middle',
+        color: '#4A5565'
+      }} className="max-w-xs relative z-10 px-10">
         {description}
       </p>
     </div>
