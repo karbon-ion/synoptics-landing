@@ -1,17 +1,31 @@
 'use client';
 
 import Image from 'next/image';
+import { useState } from 'react';
+import ExtendedView from './extended-view';
 
 export default function PlatformFeatures() {
+  const [extended, setExtended] = useState(false);
+
+  if (extended) {
+    return <ExtendedView onClose={() => setExtended(false)} />;
+  }
+
   return (
     <section
-      className="py-6 sm:py-12 md:py-16 px-3 sm:px-8 md:px-20 mb-6 md:mb-15 max-w-full md:max-w-7xl mt-4 md:mt-15 mx-auto rounded-lg overflow-hidden"
+      className="py-6 sm:py-12 md:py-16 px-3 sm:px-8 md:px-20 mb-6 md:mb-15 max-w-full md:max-w-7xl mt-4 md:mt-15 mx-auto rounded-lg overflow-hidden relative"
       style={{
         boxShadow: '0 -1px rgba(0, 0, 0, 0.1), 0 1px 5px rgba(0, 0, 0, 0.1)',
         background: 'linear-gradient(196.25deg, rgba(255, 255, 255, 0.4) 9.13%, rgba(219, 234, 254, 0.28) 92.56%)'
       }}
     >
-    <div className="border border-gray-200 rounded-lg mb-4 overflow-hidden" style={{ backgroundImage: 'url(/platform/agents-bar.png)', backgroundSize: '100% 100%', backgroundRepeat: 'no-repeat' }}>
+      <button
+        onClick={() => setExtended(true)}
+        className="absolute top-4 right-4 z-20 bg-white border border-gray-300 rounded-full px-3 py-1 text-xs md:text-sm shadow hover:bg-gray-100 transition-colors"
+      >
+        Extended View
+      </button>
+      <div className="border border-gray-200 rounded-lg mb-4 overflow-hidden" style={{ backgroundImage: 'url(/platform/agents-bar.png)', backgroundSize: '100% 100%', backgroundRepeat: 'no-repeat' }}>
         <div className="py-3 md:py-2 px-4 md:px-6 flex items-center justify-center">
           <Image src="/platform/agents-icon.svg" alt="Agents Icon" width={16} height={16} className="mr-2 w-4 h-4 md:w-5 md:h-5" />
           <span className="text-white font-medium text-base md:text-xl" style={{ fontFamily: 'Syne, sans-serif', fontWeight: '700' }}>Agents</span>
