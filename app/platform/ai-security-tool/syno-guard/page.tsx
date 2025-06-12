@@ -1,14 +1,13 @@
 'use client'
 
 import Hero from "./sections/hero";
-import PlatformFeatures from "../sections/platform-features";
-import IntegrationSection from "../sections/integration-section";
-import DeploymentSection from "../sections/deployment-section";
-import TechStack from "../sections/tech-stack";
-import BlogSection from "../sections/blog-section";
+import IntegrationSection from "./sections/integration-section";
+import DeploymentSection from "./sections/deployment-section";
+import TechStack from "./sections/tech-stack";
+import BlogSection from "./sections/blog-section";
 import SecurityBadges from "@/app/sections/SecurityBadges";
 import EnterpriseSecuritySection from "@/app/sections/SecuritySection";
-import OWASP from "../ai-security-tool/syno-guard/sections/owasp";
+import OWASP from "./sections/owasp";
 import AgentTypesSection from "./sections/responsible-ai";
 
 
