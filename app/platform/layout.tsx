@@ -1,8 +1,8 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Enterprise AI Solutions | Synoptix Unified AI Platform',
-  description: 'Discover Synoptix\'s Enterprise AI platform—built for scalability, secure automation, and real-time data orchestration across your enterprise systems.',
+  title: 'Enterprise AI Platform for Secure Deployment | Synoptix AI',
+  description: 'Explore the Enterprise AI Platform—designed for secure, scalable deployment, seamless integration, and real-time insights across your tech stack | Synoptix AI',
   alternates: {
     canonical: '/platform'
   }

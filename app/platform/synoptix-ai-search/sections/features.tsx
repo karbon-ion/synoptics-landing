@@ -16,7 +16,8 @@ const featuresData = [
       'Deliver context-aware answers aligned with your organisation’s structure and language. ',
       'Enable consistent knowledge sharing across departments with centralised access. '
     ],
-    imageFirst: true
+    imageFirst: true,
+    url: '/blog/synoptix-universal-knowledge-unifies-enterprise-data-and-real-time-web-internet-data'
   },
   {
     id: 'data-insights',
@@ -29,7 +30,8 @@ const featuresData = [
       'Build role-specific dashboards within your AI platform for enterprise search',
       'Predict outcomes and surface risks with built-in machine learning models. '
     ],
-    imageFirst: false
+    imageFirst: false,
+    url: '/blog/synoptix-ai-for-data-insights-turning-files-apps-and-databases-into-actionable-insights'
   },
   {
     id: 'enterprise-data-search',
@@ -42,7 +44,8 @@ const featuresData = [
       'Enforce role-based access to ensure security and compliance at scale with our enterprise search solutions. ',
       'Reduce search time with instant results from all connected systems. '
     ],
-    imageFirst: true
+    imageFirst: true,
+    url: '/platform/synoptix-ai-search/enterprise-data-search'
   },
   {
     id: 'fine-tuning',
@@ -55,7 +58,8 @@ const featuresData = [
       'Improve relevance over time with continuous learning and feedback loops.',
       'Maintain compliance with full visibility and control over AI responses.'
     ],
-    imageFirst: false
+    imageFirst: false,
+    url: '/platform/synoptix-ai-search/fine-tuning'
   }
 ];
 
@@ -92,7 +96,7 @@ export default function FeaturesSection() {
                     </ul>
                     <div className="mt-6">
                       <Link
-                        href="#"
+                        href={feature.url}
                         className="inline-flex items-center gap-1 text-indigo-500"
                         style={{
                           fontFamily: "Syne, sans-serif",

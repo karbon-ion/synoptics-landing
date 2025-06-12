@@ -25,7 +25,7 @@ const IntegrationSection = () => {
           </span>
           <span style={{ fontFamily: "Poppins, sans-serif", fontWeight: 400, fontSize: "14", lineHeight: "24px", letterSpacing: "0%", color: "#4A5565" }}>
           <p className="mt-4 text-[#4A5565]">
-          Easily connect to your existing tools—our AI platform integrates across your stack to deliver insights and speed up securely and in real time. 
+          Easily connect to your existing tools—our AI platform for enterprise integrates across your stack to deliver insights and speed up securely and in real time. 
           </p>
           </span>
           <Link
