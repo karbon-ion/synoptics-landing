@@ -37,7 +37,7 @@ const features = [
   {
     id: 'llm06',
     title: 'Permission Issues',
-    description: 'Weak permissions can leave the door open for unwanted access. Synoptix AI tracks everything—no one gets in without permission, and no actions go unchecked.',
+    description: 'Ensure your AI stays secure and compliant with SynoGuard. We continuously update your guardrails to align with the latest security standards, including the OWASP Top 10 for LLMs, so you’re always protected against emerging threats. ',
     code: 'LLM06',
   },
   {
@@ -85,7 +85,7 @@ const OWASP = () => {
             OWASP Top 10 for LLMs
           </h2>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-16">
-          Ensure your AI stays secure and compliant with Synoptix AI Guard. We continuously update your guardrails to align with the latest security standards, including the OWASP Top 10 for LLMs, so you’re always protected against emerging threats. 
+          Ensure your AI stays secure and compliant with SynoGuard. We continuously update your guardrails to align with the latest security standards, including the OWASP Top 10 for LLMs, so you’re always protected against emerging threats.  
           </p>
           
           <div className="flex justify-center">

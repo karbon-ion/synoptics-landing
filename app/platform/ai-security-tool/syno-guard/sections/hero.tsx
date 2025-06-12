@@ -34,7 +34,7 @@ export default function SynoGuardHero() {
                     maxWidth: '800px',
                     margin: '24px auto 48px'
                 }}>
-                   Attackers Don’t Wait—Neither Should You. Identify and fix AI security vulnerabilities before they become threats.  
+                   Attackers Don’t Wait—Neither Should You. Identify and fix AI vulnerabilities before they become threats with the AI security tool.   
                 </p>
                 <div className="relative w-full max-w-5xl mx-auto">
                     <img 
