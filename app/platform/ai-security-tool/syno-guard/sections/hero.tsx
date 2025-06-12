@@ -1,26 +1,49 @@
-import { Button } from "@/components/ui/Button";
+'use client';
 
-export default function RagHero() {
+export default function SynoGuardHero() {
     return (
-        <section className="min-h-screen flex flex-col items-center justify-center text-center px-4 py-16 bg-gradient-to-b bg-[#f0f5ff]">
-            <h1 className="text-5xl md:text-6xl font-bold mb-8">
-                Stay Compliant. Stay Secure. Stay in Control.
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-700 max-w-4xl mb-6">
-                Attackers Don’t Wait—Neither Should You. Identify and fix AI security vulnerabilities
-                before they become threats.
-            </p>
-            {/* <p className="text-2xl md:text-3xl font-semibold text-gray-800 max-w-3xl mb-12">
-                The future of work isn’t coming—it’s here.
-            </p> */}
-            <Button
-                    href="/#contact" 
-                    variant="primary"
-                    size="lg"
-                    className="mb-10 sm:mb-16"
-                >   
-                Get Your Free Security Demo
-            </Button>
+        <section className="w-full mb-20 min-h-screen flex flex-col items-center justify-center text-center relative overflow-hidden"
+            style={{
+                backgroundImage: "url('/syno-guard/image.png')",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+                width: '100%',
+                height: '100vh'
+            }}
+        >
+            <div className="max-w-6xl mx-auto mt-40">
+                <h1 style={{
+                    fontFamily: 'Syne',
+                    fontWeight: 700,
+                    fontSize: '48px',
+                    lineHeight: '72px',
+                    letterSpacing: '0%',
+                    textAlign: 'center'
+                }}>
+                    Protect Your Data to Stay in Control of Your Enterprise 
+                </h1>
+                <p style={{
+                    fontFamily: 'Poppins',
+                    fontWeight: 400,
+                    fontSize: '16px',
+                    lineHeight: '30px',
+                    letterSpacing: '2%',
+                    textAlign: 'center',
+                    color: '#666666',
+                    maxWidth: '800px',
+                    margin: '24px auto 48px'
+                }}>
+                   Attackers Don’t Wait—Neither Should You. Identify and fix AI security vulnerabilities before they become threats.  
+                </p>
+                <div className="relative w-full max-w-5xl mx-auto">
+                    <img 
+                        src="/syno-guard/hero-image.png"
+                        alt="Synoptix Guard Platform Overview"
+                        className="w-full h-auto"
+                    />
+                </div>
+            </div>
         </section>
     );
 }
