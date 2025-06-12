@@ -9,6 +9,7 @@ import BlogSection from "../sections/blog-section";
 import SecurityBadges from "@/app/sections/SecurityBadges";
 import EnterpriseSecuritySection from "@/app/sections/SecuritySection";
 import OWASP from "../ai-security-tool/syno-guard/sections/owasp";
+import AgentTypesSection from "./sections/responsible-ai";
 
 
 export default function SynoGuard() {
@@ -16,7 +17,8 @@ export default function SynoGuard() {
         <main className="w-full">
            <Hero/>
            <SecurityBadges/>
-           <EnterpriseSecuritySection/>
+           <AgentTypesSection/>
+           {/* <EnterpriseSecuritySection/> */}
            <OWASP/>
            <TechStack/>
            {/* <PlatformFeatures/>

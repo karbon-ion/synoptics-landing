@@ -7,7 +7,7 @@ const features = [
   {
     id: 'llm01',
     title: 'Prompt Injections',
-    description: 'Smart hackers can feed your AI harmful inputs to steal data or trigger unauthorised actions. With Synoptix AI, we intercept these attacks before they even start.',
+    description: 'Smart hackers can feed your AI harmful inputs to steal data or trigger unauthorized actions. With Synoptix AI, we intercept these attacks before they even start.',
     code: 'LLM01',
   },
   {
@@ -68,7 +68,7 @@ const features = [
 
 const OWASP = () => {
   return (
-    <section className="py-24 relative overflow-hidden">
+    <section className="py-24 mb-10 relative overflow-hidden">
       {/* Gradient background */}
       <div className="absolute inset-0 bg-gradient-to-b from-white via-blue-50 to-blue-100 z-0" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(59,130,246,0.04),transparent_25%),radial-gradient(circle_at_70%_50%,rgba(59,130,246,0.04),transparent_25%)]" />
@@ -85,7 +85,7 @@ const OWASP = () => {
             OWASP Top 10 for LLMs
           </h2>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-16">
-          Ensure your AI stays secure and compliant with SynoGuard. We continuously update your guardrails to align with the latest security standards, including the OWASP Top 10 for LLMs, so you’re always protected against emerging threats. 
+          Ensure your AI stays secure and compliant with Synoptix AI Guard. We continuously update your guardrails to align with the latest security standards, including the OWASP Top 10 for LLMs, so you’re always protected against emerging threats. 
           </p>
           
           <div className="flex justify-center">
@@ -95,7 +95,7 @@ const OWASP = () => {
                     size="lg"
                     className="mb-10 sm:mb-16"
                 >
-              Contact us for more information
+              Contact us
             </Button>
           </div>
         </div>
