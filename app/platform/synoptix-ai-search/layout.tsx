@@ -1,8 +1,11 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Enterprise AI Search | Synoptix Intelligent Search Tools',
-  description: 'Unlock insights with Synoptix\'s Enterprise AI Search. Connect data across systems, retrieve answers instantly, and power an intelligent decision-making process.'
+  title: 'Powerful Enterprise AI Search Platform | Synoptix AI',
+  description: 'Discover Enterprise AI Search that connects tools, files, and chats to get instant, accurate answers and drive smarter decisions across your organisation.',
+  alternates: {
+    canonical: '/platform/synoptix-ai-search'
+  }
 };
 
 export default function SearchLayout({

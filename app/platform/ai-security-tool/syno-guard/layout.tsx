@@ -4,7 +4,7 @@ export const metadata: Metadata = {
   title: "SynoGuard – AI Security Tool for Enterprises | Synoptix.AI",
   description: "Protect your enterprise AI with SynoGuard. Monitor usage, enforce policies, and prevent data exposure in real time.",
   alternates: {
-    canonical: '/ai-security-tool/syno-guard',
+    canonical: '/platform/ai-security-tool/syno-guard',
   },
 };
 

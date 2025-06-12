@@ -1,198 +1,224 @@
 'use client';
-import { Button } from "@/components/ui/Button";
-import { cn } from "@/lib/utils";
-import Link from 'next/link';
 
-const features = [
-  {
-    id: 'llm01',
-    title: 'Prompt Injections',
-    description: 'Smart hackers can feed your AI harmful inputs to steal data or trigger unauthorised actions. With Synoptix AI, we intercept these attacks before they even start.',
-    code: 'LLM01',
-  },
-  {
-    id: 'llm02',
-    title: 'Insecure Output Handling',
-    description: 'Unchecked AI responses can be a prospect for malicious actors. Synoptix AI makes sure every output gets the green light before it ever leaves your system.',
-    code: 'LLM02',
-  },
-  {
-    id: 'llm03',
-    title: 'Training Data Poisoning',
-    description: 'If your AI learns from the wrong data, it could mislead users and spread misinformation. Synoptix AI filters out toxic data, ensuring your AI stays sharp, focused, and trustworthy.',
-    code: 'LLM03',
-  },
-  {
-    id: 'llm04',
-    title: 'Denial of Service',
-    description: 'Some attacks aim to slow your AI down or rack up costs. Synoptix AI keeps a real-time eye on usage, spotting any spikes before they become a problem.',
-    code: 'LLM04',
-  },
-  {
-    id: 'llm05',
-    title: 'Supply Chain',
-    description: 'Vulnerabilities in the AI supply chain are a hidden risk. Synoptix AI evaluates your models for biases, weaknesses, and performance gaps, so you can spot and fix them before they harm your system.',
-    code: 'LLM05',
-  },
-  {
-    id: 'llm06',
-    title: 'Permission Issues',
-    description: 'Weak permissions can leave the door open for unwanted access. Synoptix AI tracks everything—no one gets in without permission, and no actions go unchecked.',
-    code: 'LLM06',
-  },
-  {
-    id: 'llm07',
-    title: 'Data Leakage',
-    description: 'Sensitive data slipping through the cracks? Not with Synoptix AI. We scan your inputs and outputs to stop leaks in their tracks, protecting your privacy and user data.',
-    code: 'LLM07',
-  },
-  {
-    id: 'llm08',
-    title: 'Excessive Agency',
-    description: 'LLMs shouldn’t be making decisions on their own. Synoptix AI ensures your system only does what it\'s supposed to, with strict controls embedded into every action.',
-    code: 'LLM08',
-  },
-  {
-    id: 'llm09',
-    title: 'Overreliance',
-    description: 'AI mistakes can lead to chaos—misleading responses and faulty data. Synoptix AI makes it easy to identify and correct these errors, keeping your AI on track and accurate every time.',
-    code: 'LLM09',
-  },
-  {
-    id: 'llm10',
-    title: 'Insecure Plugins',
-    description: 'Plugins can be a weak spot for your AI. Synoptix AI continuously monitors these connections, ensuring malicious requests don’t slip through the cracks and compromise your system.',
-    code: 'LLM10',
-  }
-];
+import Image from 'next/image';
 
-const OWASP = () => {
+export default function PlatformFeatures() {
   return (
-    <section className="py-24 mb-10 relative overflow-hidden">
-      {/* Gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-white via-blue-50 to-blue-100 z-0" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(59,130,246,0.04),transparent_25%),radial-gradient(circle_at_70%_50%,rgba(59,130,246,0.04),transparent_25%)]" />
-      
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-         
-          
-          <h2 style={{
-            fontFamily: 'Syne',
-            fontWeight: 700,
-            fontSize: '48px',
-            lineHeight: '48px',
-            letterSpacing: '0%',
-            textAlign: 'center',
-            verticalAlign: 'middle',
-            marginBottom: '24px',
-            maxWidth: '4xl',
-            margin: '0 auto'
+    <section
+      className="py-6 sm:py-12 md:py-16 px-3 sm:px-8 md:px-20 mb-6 md:mb-15 max-w-full md:max-w-7xl mt-4 md:mt-15 mx-auto rounded-lg overflow-hidden"
+      style={{
+        boxShadow: '0 -1px rgba(0, 0, 0, 0.1), 0 1px 5px rgba(0, 0, 0, 0.1)',
+        background: 'linear-gradient(196.25deg, rgba(255, 255, 255, 0.4) 9.13%, rgba(219, 234, 254, 0.28) 92.56%)'
+      }}
+    >
+    <div className="border border-gray-200 rounded-lg mb-4 overflow-hidden" style={{ backgroundImage: 'url(/platform/agents-bar.png)', backgroundSize: '100% 100%', backgroundRepeat: 'no-repeat' }}>
+        <div className="py-3 md:py-2 px-4 md:px-6 flex items-center justify-center">
+          <Image src="/platform/agents-icon.svg" alt="Agents Icon" width={16} height={16} className="mr-2 w-4 h-4 md:w-5 md:h-5" />
+          <span className="text-white font-medium text-base md:text-xl" style={{ fontFamily: 'Syne, sans-serif', fontWeight: '700' }}>Agents</span>
+        </div>
+        <div className="bg-white p-0 rounded-b-lg">
+          <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-100">
+            <div className="py-4 md:py-6 px-4 md:px-6 text-center flex flex-col items-center">
+              <p className="text-[#323E50] font-medium text-sm md:text-base" style={{ fontFamily: 'Poppins, sans-serif',fontWeight: '600' }}>Reasoning & Decision Marking</p>
+            </div>
+            <div className="py-4 md:py-6 px-4 md:px-6 text-center flex flex-col items-center">
+              <p className="text-[#323E50] font-medium text-sm md:text-base" style={{ fontFamily: 'Poppins, sans-serif',fontWeight: '600' }}>Agent Collaboration & APIs</p>
+            </div>
+            <div className="py-4 md:py-6 px-4 md:px-6 text-center flex flex-col items-center">
+              <p className="text-[#323E50] font-medium text-sm md:text-base" style={{ fontFamily: 'Poppins, sans-serif',fontWeight: '600' }}>Knowledge Access</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="border border-gray-200 rounded-lg mb-4 overflow-hidden" style={{ backgroundImage: 'url(/platform/enterprise-search.png)', backgroundSize: '100% 100%', backgroundRepeat: 'no-repeat' }}>
+        <div className="py-3 md:py-2 px-4 md:px-6 flex items-center justify-center">
+          <Image src="/platform/enterprise-search-icon.svg" alt="Enterprise Search Icon" width={16} height={16} className="mr-2 w-4 h-4 md:w-5 md:h-5" />
+          <span className="text-white font-medium text-base md:text-xl" style={{ fontFamily: 'Syne, sans-serif', fontWeight: '600' }}>Enterprise Search</span>
+        </div>
+        <div className="bg-white p-0 rounded-b-lg">
+          <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-100">
+            <div className="p-6 md:p-12 text-center flex flex-col items-center">
+              <p className="text-[#323E50] font-medium text-base md:text-lg" style={{ fontFamily: 'Poppins, sans-serif',fontWeight: '600' }}>Query Understanding</p>
+            </div>
+            <div className="p-6 md:p-12 text-center flex flex-col items-center">
+              <p className="text-[#323E50] font-medium text-base md:text-lg" style={{ fontFamily: 'Poppins, sans-serif',fontWeight: '600' }}>Content Understanding</p>
+            </div>
+            <div className="p-6 md:p-12 text-center flex flex-col items-center">
+              <p className="text-[#323E50] font-medium text-base md:text-lg" style={{ fontFamily: 'Poppins, sans-serif',fontWeight: '600' }}>Orchestration & Self Learning</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+            {/* Monitoring & Performance Section */}
+      <div className="flex flex-col md:grid md:grid-cols-12 gap-3 md:gap-4 mb-4">
+        {/* Title Block - Full width on mobile */}
+        <div className="w-full md:col-span-3 md:w-[255px] h-[70px] md:h-[132px] flex flex-col justify-center relative overflow-hidden rounded-lg md:rounded-l-[20px] md:rounded-r-none mb-3 md:mb-0"
+          style={{ 
+            background: '#94ADFF',
+            boxShadow: '0 2px 4px rgba(0, 0, 0, 0.05)'
           }}>
-            <span style={{ color: '#5662F6' }}>OWASP</span> Top 10 for LLMs
-          </h2>
-          <p style={{
-            fontFamily: 'Poppins',
-            fontWeight: 400,
-            fontSize: '16px',
-            lineHeight: '28px',
-            letterSpacing: '0%',
-            textAlign: 'center',
-            verticalAlign: 'middle',
-            color: '#666666',
-            maxWidth: '800px',
-            margin: '0 auto 32px'
-          }}>
-            Ensure your AI stays secure and compliant with SynoGuard. We continuously update your
-            guardrails to align with the latest security standards.
+          <div className="absolute top-0 right-0 w-full h-full" 
+            style={{
+              backgroundImage: 'url(/platform/monitoring-bg.png)',
+              backgroundSize: '100% 100%',
+              backgroundRepeat: 'no-repeat'
+            }}>
+          </div>
+          <p className="text-white font-bold text-center relative z-10 text-base md:text-xl" style={{ fontFamily: 'Syne, sans-serif' }}>
+            Monitoring & Performance
           </p>
-          
-          <div className="flex justify-center">
-          <Button 
-                    href="/#contact" 
-                    variant="primary"
-                    size="lg"
-                >
-              Contact us for more information
-            </Button>
+        </div>
+
+        {/* Cards Grid - 3 columns on mobile, normal layout on desktop */}
+        <div className="grid grid-cols-3 md:contents gap-2 md:gap-4">
+          {/* Observability */}
+          <div className="md:col-span-3 bg-white h-[70px] md:h-[132px] rounded-lg shadow-sm flex flex-col items-center justify-center px-2 md:px-4">
+            <div className="mb-2 md:mb-3">
+              <Image src="/platform/ai-agents/observability.svg" alt="Observability" width={24} height={24} className="w-6 h-6 md:w-[56px] md:h-[50px]" />
+            </div>
+            <p className="text-[#323E50] font-medium text-xs md:text-xl" style={{ fontFamily: 'Poppins, sans-serif', fontWeight: '600' }}>Observability</p>
+          </div>
+
+          {/* Evaluations */}
+          <div className="md:col-span-3 bg-white h-[70px] md:h-[132px] rounded-lg shadow-sm flex flex-col items-center justify-center px-2 md:px-4">
+            <div className="mb-2 md:mb-3">
+              <Image src="/platform/ai-agents/evaluations.svg" alt="Evaluations" width={24} height={24} className="w-6 h-6 md:w-[56px] md:h-[50px]" />
+            </div>
+            <p className="text-[#323E50] font-medium text-xs md:text-xl" style={{ fontFamily: 'Poppins, sans-serif', fontWeight: '600' }}>Evaluations</p>
+          </div>
+
+          {/* LLM Ops */}
+          <div className="md:col-span-3 bg-white h-[70px] md:h-[132px] rounded-lg shadow-sm flex flex-col items-center justify-center px-2 md:px-4">
+            <div className="mb-2 md:mb-3">
+              <Image src="/platform/ai-agents/llm.svg" alt="LLM Ops" width={24} height={24} className="w-6 h-6 md:w-[56px] md:h-[50px]" />
+            </div>
+            <p className="text-[#323E50] font-medium text-xs md:text-xl" style={{ fontFamily: 'Poppins, sans-serif', fontWeight: '600' }}>LLM Ops</p>
+          </div>
+        </div>
+      </div>
+
+
+      {/* Responsible AI Section */}
+      <div className="flex flex-col md:grid md:grid-cols-12 gap-3 md:gap-4 mb-4">
+        {/* Title Block - Full width on mobile */}
+        <div className="w-full md:col-span-3 md:w-[255px] h-[70px] md:h-[132px] flex flex-col justify-center relative overflow-hidden rounded-lg md:rounded-l-[20px] md:rounded-r-none mb-3 md:mb-0"
+          style={{ 
+            background: '#94ADFF',
+            boxShadow: '0 2px 4px rgba(0, 0, 0, 0.05)'
+          }}>
+          <div className="absolute top-0 right-0 w-full h-full" 
+            style={{
+              backgroundImage: 'url(/platform/responsible-ai-bg.png)',
+              backgroundSize: '100% 100%',
+              backgroundRepeat: 'no-repeat'
+            }}>
+          </div>
+          <p className="text-white font-bold text-center relative z-10 text-base md:text-xl" style={{ fontFamily: 'Syne, sans-serif' }}>
+            Responsible AI
+          </p>
+        </div>
+
+        {/* Cards Grid - 3 columns on mobile, normal layout on desktop */}
+        <div className="grid grid-cols-3 md:contents gap-2 md:gap-4">
+          {/* Observability */}
+          <div className="md:col-span-3 bg-white h-[70px] md:h-[132px] rounded-lg shadow-sm flex flex-col items-center justify-center px-2 md:px-4">
+            <div className="mb-2 md:mb-3">
+              <Image src="/platform/ai-agents/security.svg" alt="Observability" width={24} height={24} className="w-6 h-6 md:w-[56px] md:h-[50px]" />
+            </div>
+            <p className="text-[#323E50] font-medium text-xs md:text-xl" style={{ fontFamily: 'Poppins, sans-serif', fontWeight: '600' }}>Security</p>
+          </div>
+
+          {/* Evaluations */}
+          <div className="md:col-span-3 bg-white h-[70px] md:h-[132px] rounded-lg shadow-sm flex flex-col items-center justify-center px-2 md:px-4">
+            <div className="mb-2 md:mb-3">
+              <Image src="/platform/ai-agents/compliance.svg" alt="Evaluations" width={24} height={24} className="w-6 h-6 md:w-[56px] md:h-[50px]" />
+            </div>
+            <p className="text-[#323E50] font-medium text-xs md:text-xl" style={{ fontFamily: 'Poppins, sans-serif', fontWeight: '600' }}>Compliance</p>
+          </div>
+
+          {/* LLM Ops */}
+          <div className="md:col-span-3 bg-white h-[70px] md:h-[132px] rounded-lg shadow-sm flex flex-col items-center justify-center px-2 md:px-4">
+            <div className="mb-2 md:mb-3">
+              <Image src="/platform/ai-agents/governance.svg" alt="LLM Ops" width={24} height={24} className="w-6 h-6 md:w-[56px] md:h-[50px]" />
+            </div>
+            <p className="text-[#323E50] font-medium text-xs md:text-xl" style={{ fontFamily: 'Poppins, sans-serif', fontWeight: '600' }}>Governance</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-4">
+        {/* Integration Section - Full width on mobile, col-span-6 on desktop */}
+        <div className="col-span-1 md:col-span-6 bg-white rounded-lg p-4 md:pl-10 md:pr-10 shadow-sm mb-3 md:mb-0">
+          <p className="text-[#5662F6] font-medium text-center mb-4" style={{ fontFamily: 'Syne, sans-serif',fontWeight: '700',fontSize: '18px',lineHeight:'' }}>Integration</p>
+          <div className="flex justify-center w-full">
+            <div className="grid grid-cols-7 w-full">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/salesforce/salesforce-original.svg" alt="Salesforce" className="h-7 w-7 mx-auto" />
+              <img src="/platform/ai-agents/integration-icons/icon-2.svg" alt="SQL Server" className="h-7 w-7 mx-auto" />
+              <img src="/platform/ai-agents/integration-icons/excel.svg" alt="Slack" className="h-7 w-7 mx-auto" />
+              <img src="/platform/ai-agents/integration-icons/icon-4.svg" alt="Jira" className="h-9 w-9 mx-auto" />
+              <img src="/platform/ai-agents/integration-icons/icon-5.svg" alt="Zapier" className="h-7 w-7 mx-auto" />
+              <img src="/platform/ai-agents/integration-icons/icon-6.svg" alt="Google" className="h-7 w-7 mx-auto" />
+              <img src="/platform/ai-agents/integration-icons/icon-7.svg" alt="GitHub" className="h-7 w-7 mx-auto" />
+            </div>
+          </div>
+          <div className="flex justify-center w-full mt-3">
+            <div className="grid grid-cols-7 w-full">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma" className="h-7 w-7 mx-auto" />
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" alt="Google Cloud" className="h-7 w-7 mx-auto" />
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="Azure" className="h-7 w-7 mx-auto" />
+              <img src="/platform/ai-agents/integration-icons/icon-9.svg" alt="Gmail" className="h-7 w-7 mx-auto" />
+              <img src="/platform/ai-agents/integration-icons/icon-10.svg" alt="Microsoft Office" className="h-7 w-7 mx-auto" />
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" className="h-7 w-7 mx-auto" />
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" className="h-5 w-5 mx-auto" />
+            </div>
           </div>
         </div>
         
-        <FeaturesSection />
+        {/* Application & Tools Section - Full width on mobile, col-span-3 on desktop */}
+        <div className="col-span-1 md:col-span-3 bg-white rounded-lg p-4 shadow-sm mb-3 md:mb-0">
+          <p className="text-[#5662F6] font-medium text-center mb-4" style={{ fontFamily: 'Syne, sans-serif',fontWeight: '700',fontSize: '18px',lineHeight:'' }}>Application & Tools</p>
+          <div className="flex justify-center w-full">
+            <div className="grid grid-cols-5 gap-2 w-full px-3">
+              <img src="platform/ai-agents/application-and-tools/word.svg" alt="Windows" className="h-8 w-8 mx-auto" />
+              <img src="platform/ai-agents/application-and-tools/powerpoint.svg" alt="Apple" className="h-8 w-8 mx-auto" />
+              <img src="platform/ai-agents/application-and-tools/xcel.svg" alt="Android" className="h-8 w-8 mx-auto" />
+              <img src="platform/ai-agents/application-and-tools/pdf.svg" alt="Chrome" className="h-8 w-8 mx-auto" />
+              <img src="platform/ai-agents/application-and-tools/bars.svg" alt="Firefox" className="h-8 w-8 mx-auto" />
+            </div>
+          </div>
+          <div className="flex justify-center w-full mt-3">
+            <div className="grid grid-cols-5 gap-2 w-full px-3">
+              <img src="platform/ai-agents/application-and-tools/search-folder.svg" alt="VS Code" className="h-8 w-8 mx-auto" />
+              <img src="platform/ai-agents/application-and-tools/web.svg" alt="HTML5" className="h-8 w-8 mx-auto" />
+              <img src="platform/ai-agents/application-and-tools/code.svg" alt="CSS3" className="h-8 w-8 mx-auto" />
+              <img src="platform/ai-agents/application-and-tools/translate.svg" alt="JavaScript" className="h-8 w-8 mx-auto" />
+              <img src="platform/ai-agents/application-and-tools/calculator.svg" alt="Python" className="h-8 w-8 mx-auto" />
+            </div>
+          </div>
+        </div>
+        
+        {/* Deployment Section - Full width on mobile, col-span-3 on desktop */}
+        <div className="col-span-1 md:col-span-3 bg-white rounded-lg p-4 shadow-sm">
+          <p className="text-[#5662F6] font-medium text-center mb-4" style={{ fontFamily: 'Syne, sans-serif',fontWeight: '700',fontSize: '18px',lineHeight:'' }}>Deployment</p>
+          <div className="flex justify-center w-full">
+            <div className="grid grid-cols-3 w-full px-10">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="Google" className="h-7 w-9 mx-auto" />
+              <img src="platform/ai-agents/deployment-icons/some-cloud.svg" alt="Azure" className="h-7 w-12 mx-auto" />
+              <img src="platform/ai-agents/deployment-icons/aws.svg" alt="AWS" className="h-7 w-12 mx-auto" />
+            </div>
+          </div>
+          <div className="flex justify-center w-full mt-3">
+            <div className="grid grid-cols-3 w-full px-10">
+              <img src="platform/ai-agents/deployment-icons/stack.svg" alt="Docker" className="h-7 w-12 mx-auto" />
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" alt="Google Cloud" className="h-7 w-8 mx-auto" />
+              <img src="platform/ai-agents/deployment-icons/vpc.svg" alt="Kubernetes" className="h-6 w-12 mx-auto" />
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
-};
-
-export default OWASP;
-
-function FeaturesSection() {
-  return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 relative z-10 py-10 max-w-7xl mx-auto">
-      {features.map((feature, index) => (
-        <Feature key={feature.title} {...feature} index={index} />
-      ))}
-    </div>
-  );
 }
-
-const Feature = ({
-  title,
-  description,
-  code,
-  index,
-}: {
-  title: string;
-  description: string;
-  code: string;
-  index: number;
-}) => {
-  return (
-    <div
-      className={cn(
-        "flex flex-col py-10 relative group/feature bg-white/40 backdrop-blur-sm",
-        (index === 0 || index === 5 || index === 10) && "lg:border-l border-blue-100",
-        index < 10 && (index % 5 === 4 ? "" : "lg:border-b border-blue-100"),
-        (index + 1) % 5 !== 0 && "lg:border-r border-blue-100"
-      )}
-    >
-      <div className="opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-t from-white/80 to-transparent pointer-events-none" />
-      <div className="mb-4 relative z-10 px-10">
-        <span style={{
-          fontFamily: 'Inter',
-          fontWeight: 500,
-          fontSize: '14px',
-          lineHeight: '20px',
-          letterSpacing: '0%',
-          verticalAlign: 'middle',
-          color: '#5662F6'
-        }}>{code}</span>
-      </div>
-      <div className="relative z-10 px-10 mb-2">
-        <div className="absolute left-0 inset-y-0 h-6 group-hover/feature:h-8 w-1 rounded-tr-full rounded-br-full bg-blue-400 group-hover/feature:bg-blue-500 transition-all duration-200 origin-center" />
-        <span style={{
-          fontFamily: 'Syne',
-          fontWeight: 700,
-          fontSize: '18px',
-          lineHeight: '28px',
-          letterSpacing: '0%',
-          verticalAlign: 'middle',
-          color: '#323E50'
-        }} className="group-hover/feature:translate-x-2 transition duration-200 inline-block">
-          {title}
-        </span>
-      </div>
-      <p style={{
-        fontFamily: 'Poppins',
-        fontWeight: 400,
-        fontSize: '12px',
-        lineHeight: '20px',
-        letterSpacing: '0%',
-        verticalAlign: 'middle',
-        color: '#4A5565'
-      }} className="max-w-xs relative z-10 px-10">
-        {description}
-      </p>
-    </div>
-  );
-};

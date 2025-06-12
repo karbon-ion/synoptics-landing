@@ -1,34 +1,39 @@
+'use client'
 
-import Hero from './sections/hero'
-import Certifications from './sections/certifications'
-import Metrics from "./sections/metrics";
-// import Security from "./sections/security";
-import TestimonialsSection from "../../../sections-old/TestimonialsSection";
-import OWASP from './sections/owasp';
-import SmallFoot from "../../../sections-old/smallFoot";
-import ActivateSynoGuard from './sections/activate-synoguard';
-import WhySection from './sections/WhySection';
+import Hero from "./sections/hero";
+import IntegrationSection from "./sections/integration-section";
+import DeploymentSection from "./sections/deployment-section";
+import TechStack from "./sections/tech-stack";
+import BlogSection from "./sections/blog-section";
+import SecurityBadges from "@/app/sections/SecurityBadges";
+import EnterpriseSecuritySection from "@/app/sections/SecuritySection";
+import OWASP from "./sections/owasp";
+import AgentTypesSection from "./sections/responsible-ai";
+
 
 export default function SynoGuard() {
     return (
         <main className="w-full">
-            <Hero />
-            {/* <Certifications /> */}
-            {/* <Features />
-            <Capabilities />
-            <Ideas />
-            <FeaturesSection /> */}
-            {/* <Metrics /> */}
-            {/* <Security /> */}
-            <ActivateSynoGuard />
-            <WhySection />
-            <OWASP />
-            {/* <RagStatsSection /> */}
-            {/* <QuantumSection />
-            <FAQ /> */}
-            {/* <TestimonialsSection /> */}
-            <SmallFoot title="Take Control of Your Platform’s Security" buttonOne="Request a Demo" buttonTwo="Talk to an Expert" />
+           <Hero/>
+           <SecurityBadges/>
+           <AgentTypesSection/>
+           {/* <EnterpriseSecuritySection/> */}
+           <OWASP/>
+           <TechStack/>
+           {/* <PlatformFeatures/>
+           <IntegrationSection/>
+           <DeploymentSection/> */}
+           <div className="container mx-auto mt-12 md:mt-16 px-4 md:px-0">
+                <h2 className="text-2xl md:text-[36px] leading-tight md:leading-[45px]" style={{
+                    fontFamily: "Syne",
+                    fontWeight: 700,
+                    letterSpacing: "0%",
+                    textAlign: "center"
+                }}>
+                    Other Resources
+                </h2>
+            </div>
+           <BlogSection/>
         </main>
     );
 }
- 

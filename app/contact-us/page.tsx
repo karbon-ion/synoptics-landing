@@ -119,12 +119,12 @@ export default function ContactForm() {
             <div className="mb-6 md:mb-8">
               <span style={{ fontFamily: "Syne, sans-serif", fontWeight: 700, fontSize: "clamp(28px, 5vw, 36px)", lineHeight: 1.2, letterSpacing: "0%" }}>
               <h2 className="tracking-tight">
-                See <span className="text-[#6366f1]">Synoptix</span> in action
+                Built for <span className="text-[#6366f1]">Trust.</span> <br/> Designed for <span className="text-[#6366f1]">Trust.</span>
               </h2>
               </span>
             </div>
 
-            <div className="space-y-6 md:space-y-8">
+            <div className="space-y-6 md:space-y-5">
               <div className="flex items-start gap-3">
                 <Image 
                   src="/test-page/synoptix/star.png" 
@@ -134,7 +134,7 @@ export default function ContactForm() {
                   className="mt-1 flex-shrink-0" 
                 />
                 <span style={{ fontFamily: "Poppins, sans-serif", fontWeight: 400, fontSize: "clamp(13px, 2vw, 14px)", lineHeight: 1.4, letterSpacing: "0.4%", color: "#000000" }}>
-                <p>Deliver real-time, AI-driven answers directly within your reps' workflows</p>
+                <p>Get real-time answers grounded in your enterprise data—securely and instantly.</p>
                 </span>
               </div>
 
@@ -147,7 +147,7 @@ export default function ContactForm() {
                   className="mt-1 flex-shrink-0" 
                 />
                 <span style={{ fontFamily: "Poppins, sans-serif", fontWeight: 400, fontSize: "clamp(13px, 2vw, 14px)", lineHeight: 1.4, letterSpacing: "0.4%", color: "#000000" }}>
-                <p>Surface personalized content based on customer context and rep engagement</p>
+                <p>Your data is protected by the most comprehensive enterprise compliance and security controls. </p>
                 </span>
               </div>
 
@@ -160,7 +160,7 @@ export default function ContactForm() {
                   className="mt-1 flex-shrink-0" 
                 />
                 <span style={{ fontFamily: "Poppins, sans-serif", fontWeight: 400, fontSize: "clamp(13px, 2vw, 14px)", lineHeight: 1.4, letterSpacing: "0.4%", color: "#000000" }}>
-                <p>Cut down prospecting prep with instant access to current battle cards</p>
+                <p>Your data is not used to train foundation models.  </p>
                 </span>
               </div>
             </div>
