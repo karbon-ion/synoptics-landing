@@ -37,7 +37,7 @@ export default function ResponsibleAI() {
                 Why do Enterprises Need Responsible AI? 
                 </h2>
                 <p className="text-center max-w-3xl mx-auto mb-8" style={{fontFamily: "Poppins",fontWeight:400,fontSize:"16px",lineHeight:"30px",letterSpacing:"2%"}}>
-                AI that’s unchecked can do more harm than good. Responsible AI gives businesses the structure they need to scale safely and smartly. 
+                AI that’s unchecked can do more harm than good. Synoptix builds responsibility into every layer of the Enterprise AI Search process, so you scale smartly and safely.  
                 </p>
                 
                 <div className="w-full max-w-4xl mx-auto border-t border-white/30 pt-8 mb-12"></div>

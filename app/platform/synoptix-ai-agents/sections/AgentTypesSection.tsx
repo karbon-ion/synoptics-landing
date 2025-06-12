@@ -11,12 +11,12 @@ const agentTypesData = [
     title: 'Code Gen agents',
     heading: 'Accelerate development with enterprise-grade automation ',
     description: [
-      'Generate clean, efficient code with Enterprise AI Agents ',
-      'Eliminate repetitive coding tasks and reduce manual errors ',
+      'Generate clean, efficient code with Synoptix AI Agents',
+      'Eliminate repetitive coding tasks and reduce manual errors  ',
       'Optimise business logic in real time across applications ',
       'Speed up release cycles with AI-driven development support ',
       'Improve consistency across engineering workflows ',
-      'Built for developers on the Synoptix AI Platform for Enterprise '
+      'Built for developers on the Synoptix AI Agents '
     ]
   },
   {
@@ -24,12 +24,12 @@ const agentTypesData = [
     title: 'Generative agents',
     heading: 'Scale content and creativity across your organisation ',
     description: [
-      'Create high-quality text, visuals, and code using Enterprise AI Agents ',
+      'Create high-quality text, visuals, and code using Enterprise AI Agents  ',
       'Respond to creative needs on-demand—no wait, no bottlenecks  ',
-      'Support marketing, product, and operations with consistent outputs  ',
-      'Adapt content dynamically to your brand voice and format  ',
-      'Enable team-wide creative productivity at scale  ',
-      'Built into the Synoptix AI Platform for Enterprise teams  '
+      'Support marketing, product, and operations with consistent outputs   ',
+      'Adapt content dynamically to your brand voice and format   ',
+      'Enable team-wide creative productivity at scale   ',
+      'Built into the Synoptix AI Platform for Enterprise teams   '
     ]
   },
   {
@@ -50,7 +50,7 @@ const agentTypesData = [
     title: 'Analytical Agents ',
     heading: 'Unlock insights with intelligent data analysis ',
     description: [
-     'Analyse structured and unstructured data with Enterprise AI Agents  ',
+     'Analyse structured and unstructured data with Synoptix AI Agents  ',
       'Identify patterns, correlations, and emerging trends    ',
       'Deliver real-time dashboards and actionable summaries   ',
       'Enable proactive decision-making across business functions    ',

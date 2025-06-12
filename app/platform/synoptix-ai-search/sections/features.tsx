@@ -49,13 +49,13 @@ const featuresData = [
   },
   {
     id: 'fine-tuning',
-    title: 'Fine-Tuning/Industry Specific',
+    title: 'Fine-Tuning LLM Models ',
     icon: '/synoptix-search/functions/icons/fine-tuning-icon.svg',
     image: '/synoptix-search/functions/fine-tuning.png',
     imageAlt: 'Fine-Tuning/Industry Specific',
     points: [
-      'Fine-tune large language models on your enterprise data for precise answers.',
-      'Improve relevance over time with continuous learning and feedback loops.',
+      'Enhance your AI Search for Enterprise with custom-trained models.',
+      'Improve relevance over time with continuous learning and feedback loops. ',
       'Maintain compliance with full visibility and control over AI responses.'
     ],
     imageFirst: false,
