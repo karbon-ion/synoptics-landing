@@ -26,7 +26,7 @@ export default function SearchHero() {
                         letterSpacing: '2%',
                         textAlign: 'center'
                     }} className="text-gray-600 max-w-2xl mx-auto my-6">
-                        AI-powered enterprise AI search platform that connects your tools, files, and conversations. Empower your teams to ask questions and receive accurate, instant answers across the organisation.  
+                        Enterprise AI search platform that connects your tools, files, and conversations. Empower your teams to ask questions and receive accurate, instant answers across the organisation.   
                     </p>
                     <Link href="/contact-us" className="bg-[#5662F6] text-white font-medium py-3 px-6 rounded-full hover:bg-blue-600 transition duration-300 inline-flex items-center">
                         Get a Demo

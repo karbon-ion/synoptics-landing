@@ -12,7 +12,7 @@ const featuresData = [
     image: '/synoptix-search/functions/universal-knowledge.png',
     imageAlt: 'Universal Knowledge',
     points: [
-      'Unify emails, documents, chats, and databases into one enterprise search platform for seamless access.',
+      'Unify emails, documents, chats, and databases into one AI search for enterprise for access. ',
       'Deliver context-aware answers aligned with your organisation’s structure and language. ',
       'Enable consistent knowledge sharing across departments with centralised access. '
     ],
@@ -26,8 +26,8 @@ const featuresData = [
     image: '/synoptix-search/functions/data-insights.png',
     imageAlt: 'Data Insights',
     points: [
-      'Use AI to analyse structured and unstructured data for decision-ready insights. ',
-      'Build role-specific dashboards within your AI platform for enterprise search',
+      'Use AI to analyse structured and unstructured data for decision-ready insights.  ',
+      'Build role-specific dashboards within your AI platform for enterprise search. ',
       'Predict outcomes and surface risks with built-in machine learning models. '
     ],
     imageFirst: false,
@@ -41,8 +41,8 @@ const featuresData = [
     imageAlt: 'Enterprise Data Search',
     points: [
       'Power semantic search to understand query intent and return relevant results. ',
-      'Enforce role-based access to ensure security and compliance at scale with our enterprise search solutions. ',
-      'Reduce search time with instant results from all connected systems. '
+      'Enforce role-based access to ensure security and compliance at scale with our enterprise AI search solutions.  ',
+      'Reduce search time with instant results from all connected systems.  '
     ],
     imageFirst: true,
     url: '/platform/synoptix-ai-search/enterprise-data-search'
