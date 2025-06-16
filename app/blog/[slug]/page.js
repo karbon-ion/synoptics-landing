@@ -31,10 +31,19 @@ async function getBlogPostBySlug(slug) {
     // Find the post with a matching slug
     const normalizedSlug = slug.toLowerCase().trim();
     
+    console.log('Raw slug from URL:', slug);
+    console.log('Normalized slug:', normalizedSlug);
+    console.log('All posts:', allPosts);
+
     // Create an array of all posts with their slugs for debugging
     const postsWithSlugs = allPosts.map(post => {
       // Normalize the title to create a slug
-      const postSlug = post.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+      const postSlug = post.title.toLowerCase()
+        .replace(/[^a-z0-9\s-]+/g, '')  // Remove all non-alphanumeric except spaces and hyphens
+        .replace(/\s+/g, '-')           // Replace spaces with hyphens
+        .replace(/--+/g, '-')           // Replace multiple hyphens with single
+        .replace(/^-|-$/g, '');         // Remove leading/trailing hyphens
+      console.log(`Title: "${post.title}" -> Slug: "${postSlug}"`);
       return { ...post, slug: postSlug };
     });
     
@@ -51,7 +60,7 @@ async function getBlogPostBySlug(slug) {
     // 2. Try matching by keywords (more flexible approach)
     // Extract keywords from the slug (words that are likely meaningful)
     const slugKeywords = normalizedSlug.split('-').filter(word => 
-      word.length > 3 && !['what', 'will', 'with', 'this', 'that', 'your', 'from', 'have', 'been'].includes(word)
+      word.length > 2 && !['what', 'will', 'with', 'this', 'that', 'your', 'from', 'have', 'been', 'and', 'the', 'for', 'ai'].includes(word)
     );
     
     console.log('Looking for keywords:', slugKeywords);
@@ -59,15 +68,29 @@ async function getBlogPostBySlug(slug) {
     // Find posts that match most keywords
     let bestMatch = null;
     let highestMatchScore = 0;
+    let allScores = [];
     
     postsWithSlugs.forEach(post => {
+      // Split post slug into words for exact word matching
+      const postWords = post.slug.split('-');
+      console.log(`Checking post: "${post.title}" with words:`, postWords);
+      
       // Count how many keywords match
       let matchScore = 0;
+      let matchedKeywords = [];
+      
       slugKeywords.forEach(keyword => {
-        if (post.slug.includes(keyword)) {
-          matchScore++;
+        // Check for exact word match first
+        if (postWords.includes(keyword)) {
+          matchScore += 2;
+          matchedKeywords.push(`${keyword} (exact)`);
+        } else if (post.slug.includes(keyword)) {
+          matchScore += 1;
+          matchedKeywords.push(`${keyword} (partial)`);
         }
       });
+      
+      allScores.push({ title: post.title, score: matchScore, matches: matchedKeywords });
       
       // If this post matches more keywords than our current best match, update best match
       if (matchScore > highestMatchScore) {
@@ -76,7 +99,9 @@ async function getBlogPostBySlug(slug) {
       }
     });
     
-    // If we found a post that matches at least 2 keywords, use it
+    console.log('All post scores:', allScores);
+    
+    // If we found a post that matches keywords well (at least one exact match or two partial matches)
     if (bestMatch && highestMatchScore >= 2) {
       console.log(`Found best match with ${highestMatchScore} keyword matches:`, bestMatch);
       return bestMatch;

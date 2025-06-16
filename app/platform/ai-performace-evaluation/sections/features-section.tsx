@@ -38,7 +38,7 @@ const featuresData = [
     imagePosition: 'right'
   }
 ];
-
+ 
 export default function FeaturesSection() {
   return (
     <section className="relative py-16  bg-white overflow-hidden">
