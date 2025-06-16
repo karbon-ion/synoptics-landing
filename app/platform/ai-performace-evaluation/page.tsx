@@ -1,33 +1,29 @@
+'use client'
 
-import RagHero from "./sections/hero";
-import Features from "./sections/features";
-import Ideas from "./sections/ideas";
-import Metrics from "./sections/metrics";
-// import Security from "./sections/security";
-import RagStatsSection from "./sections/rag-stats";
-// import QuantumSection from "./sections/quantum";
-import FAQ from "./sections/faq";
-import SmallFoot from "@/app/sections-old/smallFoot";
-import IntroSection from "./sections/IntroSection";
-import TechniquesSection from "./sections/TechniquesSection";
-import WhySection from "./sections/WhySection";
 
-export default function RagApplication() {
+import BlogSection from "../sections/blog-section";
+import SecurityBadges from "@/app/sections/SecurityBadges";
+import Hero from "./sections/hero";
+import FeaturesSection from "./sections/features-section";
+import TechniquesSection from "./sections/techniques-section";
+
+export default function Evaluation() {
     return (
         <main className="w-full">
-            <RagHero />
-            <IntroSection />
-            {/* <Features /> */}
-            <Ideas />
-            {/* <Metrics /> */}
-            <TechniquesSection />
-            {/* <Security /> */}
-            <WhySection />
-            <RagStatsSection />
-            {/* <QuantumSection /> */}
-            <FAQ />
-            <SmallFoot title="Get Started with Smarter AI Evaluations" buttonOne="Request a Demo" buttonTwo="Need answers? Let's Talk." />
+           <Hero/>
+           <FeaturesSection/>
+           <TechniquesSection/>
+           <div className="container mx-auto mt-12 md:mt-16 px-4 md:px-0">
+                <h2 className="text-2xl md:text-[36px] leading-tight md:leading-[45px]" style={{
+                    fontFamily: "Syne",
+                    fontWeight: 700,
+                    letterSpacing: "0%",
+                    textAlign: "center"
+                }}>
+                    Other Resources
+                </h2>
+            </div>
+           <BlogSection/>
         </main>
     );
 }
- 
