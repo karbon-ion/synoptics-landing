@@ -34,7 +34,7 @@ function getPageRoutes(dir: string, basePath: string = '', routes: string[] = []
 function getBlogSlugs(): string[] {
   const metadataDir = path.join(process.cwd(), 'app/resources/blogs/metadata')
   const files = fs.readdirSync(metadataDir)
-  return files.map(file => file.replace('.json', ''))
+  return files.map(file => encodeURIComponent(file.replace('.json', '')))
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -60,7 +60,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   
   // Map routes to sitemap entries
   const sitemapEntries = combinedRoutes.map(route => ({
-    url: `${baseUrl}${route}`,
+    url: `${baseUrl}${route.startsWith('/') ? route : `/${route}`}`,
     lastModified: new Date(),
     changeFrequency: 'weekly' as const,
     priority: getPriority(route),
