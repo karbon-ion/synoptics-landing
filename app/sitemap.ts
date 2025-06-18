@@ -11,11 +11,13 @@ function getPageRoutes(dir: string, basePath: string = '', routes: string[] = []
     const fullPath = path.join(dir, entry.name)
     const relativePath = path.join(basePath, entry.name)
     
-    // Skip API routes, components, utils, and other non-page directories
+    // Skip API routes, components, utils, dynamic routes, and other non-page directories
     if (entry.isDirectory() && 
         !['api', 'components', 'utils', 'sections'].includes(entry.name) && 
         !entry.name.startsWith('_') && 
-        !entry.name.startsWith('.')) {
+        !entry.name.startsWith('.') &&
+        !entry.name.startsWith('[') && 
+        !entry.name.endsWith(']')) {
       // Check if this directory has a page.tsx or page.js file
       const hasPage = fs.existsSync(path.join(fullPath, 'page.tsx')) || 
                       fs.existsSync(path.join(fullPath, 'page.js'))
@@ -105,7 +107,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   
   // Get blog slugs and create blog routes
   const blogSlugs = await getBlogSlugs()
-  const blogRoutes = blogSlugs.map(slug => `/blog/${slug}`)
+  const blogRoutes = blogSlugs.map(slug => `/resources/blogs/${slug}`)
   
   // Combine all routes
   const combinedRoutes = [...allRoutes, ...blogRoutes]
@@ -113,7 +115,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Define priority levels based on route depth
   const getPriority = (route: string): number => {
     if (route === '') return 1.0 // Homepage has highest priority
-    if (route.startsWith('/blog/')) return 0.8 // Blog posts get high priority
+    if (route.startsWith('/resources/blogs/')) return 0.8 // Blog posts get high priority
     const segments = route.split('/').filter(Boolean).length
     return Math.max(0.5, 0.9 - (segments * 0.1)) // Deeper routes get lower priority
   }
