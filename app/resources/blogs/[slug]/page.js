@@ -3,7 +3,7 @@ import path from 'path';
 import Image from 'next/image';
 import Link from 'next/link';
 import mammoth from 'mammoth';
-import { processSharePointImages, processImageUrl } from '../../utils/azureStorage';
+import { processSharePointImages, processImageUrl } from '../../../utils/azureStorage';
 import BlogContent from './BlogContent';
 import SummarizeSection from './SummarizeSection';
 import ShareButtons from './ShareButtons';
