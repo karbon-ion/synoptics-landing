@@ -2,12 +2,13 @@ import { MetadataRoute } from 'next'
 import fs from 'fs'
 import path from 'path'
 
-function formatSlug(filename: string): string {
-  return filename
-    .replace('.json', '')
+const METADATA_DIR = path.join(process.cwd(), 'app/resources/blogs/metadata')
+
+function generateBlogSlug(title: string): string {
+  return title
     .toLowerCase()
-    .replace(/\s+/g, '-')
-    .replace(/[^a-z0-9-]/g, '')
+    .replace(/[^a-z0-9]+/g, '-')  // Replace all non-alphanumeric with hyphens
+    .replace(/^-|-$/g, '')         // Remove leading/trailing hyphens
 }
 
 // Function to recursively get all page routes from the app directory
@@ -43,30 +44,31 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://synoptix.ai'
   const appDirectory = path.join(process.cwd(), 'app')
   
-  // Get all page routes dynamically
-  const allRoutes = ['', ...getPageRoutes(appDirectory)]
-  
+  // Get all static page routes dynamically
+  const staticRoutes = ['', ...getPageRoutes(appDirectory)]
+
   // Get blog routes from metadata files
-  const metadataDir = path.join(process.cwd(), 'app/resources/blogs/metadata')
-  const blogFiles = fs.readdirSync(metadataDir)
-  const blogRoutes = blogFiles.map(file => {
-    try {
-      const metadataContent = fs.readFileSync(path.join(metadataDir, file), 'utf8')
-      const metadata = JSON.parse(metadataContent)
-      const slug = metadata.title
-        .toLowerCase()
-        .replace(/[^a-z0-9\s-]/g, '') // Remove special chars except spaces and hyphens
-        .replace(/\s+/g, '-') // Replace spaces with hyphens
-        .replace(/-+/g, '-') // Replace multiple hyphens with single hyphen
-      return `/blog/${slug}`
-    } catch (error) {
-      console.error(`Error processing blog metadata ${file}:`, error)
-      return ''
-    }
-  }).filter(route => route !== '')
-  
+  const metadataFiles = fs.readdirSync(METADATA_DIR)
+  const blogRoutes = metadataFiles
+    .filter(file => file.endsWith('.json'))
+    .map(file => {
+      try {
+        // Read the metadata file
+        const metadataContent = fs.readFileSync(path.join(METADATA_DIR, file), 'utf8')
+        const metadata = JSON.parse(metadataContent)
+        
+        // Generate the slug using the same logic as the blog pages
+        const slug = generateBlogSlug(metadata.title)
+        return `/blog/${slug}`
+      } catch (error) {
+        console.error(`Error processing metadata file ${file}:`, error)
+        return ''
+      }
+    })
+    .filter(route => route !== '')
+
   // Combine all routes
-  const combinedRoutes = [...allRoutes, ...blogRoutes]
+  const routes = [...staticRoutes, ...blogRoutes]
   
   // Define priority levels based on route depth
   const getPriority = (route: string): number => {
@@ -76,7 +78,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }
   
   // Map routes to sitemap entries
-  const sitemapEntries = combinedRoutes.map(route => ({
+  const sitemapEntries = routes.map(route => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
     changeFrequency: 'weekly' as const,
