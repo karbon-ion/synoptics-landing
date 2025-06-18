@@ -2,6 +2,14 @@ import { MetadataRoute } from 'next'
 import fs from 'fs'
 import path from 'path'
 
+function formatSlug(filename: string): string {
+  return filename
+    .replace('.json', '')
+    .toLowerCase()
+    .replace(/\s+/g, '-')
+    .replace(/[^a-z0-9-]/g, '')
+}
+
 // Function to recursively get all page routes from the app directory
 function getPageRoutes(dir: string, basePath: string = '', routes: string[] = []): string[] {
   const entries = fs.readdirSync(dir, { withFileTypes: true })
@@ -31,12 +39,6 @@ function getPageRoutes(dir: string, basePath: string = '', routes: string[] = []
   return routes
 }
 
-function getBlogSlugs(): string[] {
-  const metadataDir = path.join(process.cwd(), 'app/resources/blogs/metadata')
-  const files = fs.readdirSync(metadataDir)
-  return files.map(file => encodeURIComponent(file.replace('.json', '')))
-}
-
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://synoptix.ai'
   const appDirectory = path.join(process.cwd(), 'app')
@@ -45,8 +47,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const allRoutes = ['', ...getPageRoutes(appDirectory)]
   
   // Get blog slugs
-  const blogSlugs = getBlogSlugs()
-  const blogRoutes = blogSlugs.map(slug => `/blog/${slug}`)
+  const metadataDir = path.join(process.cwd(), 'app/resources/blogs/metadata')
+  const blogFiles = fs.readdirSync(metadataDir)
+  const blogRoutes = blogFiles.map(file => `/blog/${formatSlug(file)}`)
   
   // Combine all routes
   const combinedRoutes = [...allRoutes, ...blogRoutes]
@@ -60,7 +63,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   
   // Map routes to sitemap entries
   const sitemapEntries = combinedRoutes.map(route => ({
-    url: `${baseUrl}${route.startsWith('/') ? route : `/${route}`}`,
+    url: `${baseUrl}${route}`,
     lastModified: new Date(),
     changeFrequency: 'weekly' as const,
     priority: getPriority(route),
