@@ -1,6 +1,7 @@
 import { MetadataRoute } from 'next'
 import fs from 'fs'
 import path from 'path'
+import mammoth from 'mammoth'
 
 // Function to recursively get all page routes from the app directory
 function getPageRoutes(dir: string, basePath: string = '', routes: string[] = []): string[] {
@@ -31,13 +32,71 @@ function getPageRoutes(dir: string, basePath: string = '', routes: string[] = []
   return routes
 }
 
-function getBlogSlugs(): string[] {
-  const metadataDir = path.join(process.cwd(), 'app/resources/blogs/metadata')
-  const files = fs.readdirSync(metadataDir)
-  return files.map(file => file.replace('.json', ''))
+async function getBlogSlugs(): Promise<string[]> {
+  const uploadsDir = path.join(process.cwd(), 'app/resources/blogs/uploads')
+  const files = fs.readdirSync(uploadsDir)
+  const docxFiles = files.filter(file => file.endsWith('.docx'))
+  
+  const slugs: string[] = []
+  
+  for (const file of docxFiles) {
+    const filePath = path.join(uploadsDir, file)
+    const buffer = fs.readFileSync(filePath)
+    
+    try {
+      // Convert DOCX to HTML
+      const result = await mammoth.convertToHtml({ buffer })
+      const html = result.value
+      
+      // Extract first heading (h1)
+      const headingMatch = html.match(/<h1[^>]*>(.*?)<\/h1>/i)
+      if (headingMatch) {
+        // Clean up any HTML tags from the heading
+        let heading = headingMatch[1].replace(/<[^>]+>/g, '')
+        // Decode HTML entities
+        heading = heading.replace(/&amp;/g, '&')
+                        .replace(/&lt;/g, '<')
+                        .replace(/&gt;/g, '>')
+                        .replace(/&quot;/g, '"')
+                        .replace(/&#39;/g, "'")
+        
+        // Convert heading to slug
+        const slug = heading.toLowerCase()
+          .replace(/[^a-z0-9\s-]+/g, '')  // Remove all non-alphanumeric except spaces and hyphens
+          .replace(/\s+/g, '-')           // Replace spaces with hyphens
+          .replace(/--+/g, '-')           // Replace multiple hyphens with single
+          .replace(/^-|-$/g, '')          // Remove leading/trailing hyphens
+        
+        slugs.push(slug)
+      } else {
+        // If no h1, try h2
+        const h2Match = html.match(/<h2[^>]*>(.*?)<\/h2>/i)
+        if (h2Match) {
+          let heading = h2Match[1].replace(/<[^>]+>/g, '')
+          heading = heading.replace(/&amp;/g, '&')
+                          .replace(/&lt;/g, '<')
+                          .replace(/&gt;/g, '>')
+                          .replace(/&quot;/g, '"')
+                          .replace(/&#39;/g, "'")
+          
+          const slug = heading.toLowerCase()
+            .replace(/[^a-z0-9\s-]+/g, '')
+            .replace(/\s+/g, '-')
+            .replace(/--+/g, '-')
+            .replace(/^-|-$/g, '')
+          
+          slugs.push(slug)
+        }
+      }
+    } catch (error) {
+      console.error(`Error processing ${file}:`, error)
+    }
+  }
+  
+  return slugs
 }
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = 'https://synoptix.ai'
   const appDirectory = path.join(process.cwd(), 'app')
   
@@ -45,7 +104,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const allRoutes = ['', ...getPageRoutes(appDirectory)]
   
   // Get blog slugs and create blog routes
-  const blogSlugs = getBlogSlugs()
+  const blogSlugs = await getBlogSlugs()
   const blogRoutes = blogSlugs.map(slug => `/blog/${slug}`)
   
   // Combine all routes
