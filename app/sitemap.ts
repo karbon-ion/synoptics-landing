@@ -1,36 +1,6 @@
 import { MetadataRoute } from 'next'
 import fs from 'fs'
 import path from 'path'
-import mammoth from 'mammoth'
-
-const UPLOADS_DIR = path.join(process.cwd(), 'app/resources/blogs/uploads')
-
-async function getFirstHeading(docxPath: string): Promise<string> {
-  try {
-    const buffer = fs.readFileSync(docxPath)
-    const result = await mammoth.convertToHtml({ buffer })
-    const html = result.value
-
-    // Extract the first heading (h1 or h2)
-    const headingMatch = html.match(/<h[12][^>]*>([^<]+)<\/h[12]>/i)
-    if (headingMatch) {
-      return headingMatch[1].trim()
-    }
-
-    // If no heading found, return empty string
-    return ''
-  } catch (error) {
-    console.error(`Error extracting heading from ${docxPath}:`, error)
-    return ''
-  }
-}
-
-function generateBlogSlug(title: string): string {
-  return title
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, '-')  // Replace all non-alphanumeric with hyphens
-    .replace(/^-|-$/g, '')         // Remove leading/trailing hyphens
-}
 
 // Function to recursively get all page routes from the app directory
 function getPageRoutes(dir: string, basePath: string = '', routes: string[] = []): string[] {
@@ -61,53 +31,36 @@ function getPageRoutes(dir: string, basePath: string = '', routes: string[] = []
   return routes
 }
 
-export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+function getBlogSlugs(): string[] {
+  const metadataDir = path.join(process.cwd(), 'app/resources/blogs/metadata')
+  const files = fs.readdirSync(metadataDir)
+  return files.map(file => file.replace('.json', ''))
+}
+
+export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://synoptix.ai'
   const appDirectory = path.join(process.cwd(), 'app')
   
-  // Get all static page routes dynamically
-  const staticRoutes = ['', ...getPageRoutes(appDirectory)]
-
-  // Get blog routes from DOCX files
-  const files = fs.readdirSync(UPLOADS_DIR)
-  const docxFiles = files.filter(file => file.endsWith('.docx'))
+  // Get all page routes dynamically
+  const allRoutes = ['', ...getPageRoutes(appDirectory)]
   
-  // Convert to async operations
-  const blogRoutePromises = docxFiles.map(async file => {
-    try {
-      const docxPath = path.join(UPLOADS_DIR, file)
-      const heading = await getFirstHeading(docxPath)
-      
-      if (!heading) {
-        console.error(`No heading found in ${file}`)
-        return ''
-      }
-      
-      // Generate the slug using the same logic as the blog pages
-      const slug = generateBlogSlug(heading)
-      return `/blog/${slug}`
-    } catch (error) {
-      console.error(`Error processing file ${file}:`, error)
-      return ''
-    }
-  })
+  // Get blog slugs and create blog routes
+  const blogSlugs = getBlogSlugs()
+  const blogRoutes = blogSlugs.map(slug => `/blog/${slug}`)
   
-  // Wait for all blog routes to be processed
-  const blogRoutes = (await Promise.all(blogRoutePromises))
-    .filter(route => route !== '')
-
   // Combine all routes
-  const routes = [...staticRoutes, ...blogRoutes]
+  const combinedRoutes = [...allRoutes, ...blogRoutes]
   
   // Define priority levels based on route depth
   const getPriority = (route: string): number => {
     if (route === '') return 1.0 // Homepage has highest priority
+    if (route.startsWith('/blog/')) return 0.8 // Blog posts get high priority
     const segments = route.split('/').filter(Boolean).length
     return Math.max(0.5, 0.9 - (segments * 0.1)) // Deeper routes get lower priority
   }
   
   // Map routes to sitemap entries
-  const sitemapEntries = routes.map(route => ({
+  const sitemapEntries = combinedRoutes.map(route => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
     changeFrequency: 'weekly' as const,
