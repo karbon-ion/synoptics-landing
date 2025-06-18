@@ -17,7 +17,7 @@ const featuresData = [
       'Enable consistent knowledge sharing across departments with centralised access. '
     ],
     imageFirst: true,
-    url: '/blog/synoptix-universal-knowledge-unifies-enterprise-data-and-real-time-web-internet-data'
+    url: '/resources/blogs/synoptix-universal-knowledge-unifies-enterprise-data-and-real-time-web-internet-data'
   },
   {
     id: 'data-insights',
@@ -31,7 +31,7 @@ const featuresData = [
       'Predict outcomes and surface risks with built-in machine learning models. '
     ],
     imageFirst: false,
-    url: '/blog/synoptix-ai-for-data-insights-turning-files-apps-and-databases-into-actionable-insights'
+    url: '/resources/blogs/synoptix-ai-for-data-insights-turning-files-apps-and-databases-into-actionable-insights'
   },
   {
     id: 'enterprise-data-search',
@@ -45,7 +45,7 @@ const featuresData = [
       'Reduce search time with instant results from all connected systems.  '
     ],
     imageFirst: true,
-    url: '/platform/synoptix-ai-search/enterprise-data-search'
+    url: '/resources/blogs/enterprise-data-search-that-helps-teams-move-faster-with-confidence'
   },
   {
     id: 'fine-tuning',
@@ -59,7 +59,7 @@ const featuresData = [
       'Maintain compliance with full visibility and control over AI responses.'
     ],
     imageFirst: false,
-    url: '/platform/synoptix-ai-search/fine-tuning'
+    url: '/resources/blogs/train-enterprise-with-ai-that-speaks-your-language-with-synoptix-llm-fine-tuning-services'
   }
 ];
 
