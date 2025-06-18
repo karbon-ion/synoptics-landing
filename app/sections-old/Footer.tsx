@@ -8,7 +8,7 @@ const Footer = () => {
     { name: 'Synoptix Search', href: '/synoptix-search' },
     { name: 'Synoptix Agents', href: '/synoptix-agents' },
     { name: 'Evaluations', href: '/platform/ai-performace-evaluation' },
-    { name: 'SynoGuard', href: '/ai-security-tool/syno-guard' },
+    { name: 'SynoGuard', href: '/platform/ai-security-tool/syno-guard' },
   ];
 
   // const solutionsLinks = [

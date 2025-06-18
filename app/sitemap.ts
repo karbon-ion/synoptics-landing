@@ -31,12 +31,25 @@ function getPageRoutes(dir: string, basePath: string = '', routes: string[] = []
   return routes
 }
 
+function getBlogSlugs(): string[] {
+  const metadataDir = path.join(process.cwd(), 'app/resources/blogs/metadata')
+  const files = fs.readdirSync(metadataDir)
+  return files.map(file => file.replace('.json', ''))
+}
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://synoptix.ai'
   const appDirectory = path.join(process.cwd(), 'app')
   
   // Get all page routes dynamically
   const allRoutes = ['', ...getPageRoutes(appDirectory)]
+  
+  // Get blog slugs
+  const blogSlugs = getBlogSlugs()
+  const blogRoutes = blogSlugs.map(slug => `/blog/${slug}`)
+  
+  // Combine all routes
+  const combinedRoutes = [...allRoutes, ...blogRoutes]
   
   // Define priority levels based on route depth
   const getPriority = (route: string): number => {
@@ -46,7 +59,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }
   
   // Map routes to sitemap entries
-  const sitemapEntries = allRoutes.map(route => ({
+  const sitemapEntries = combinedRoutes.map(route => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
     changeFrequency: 'weekly' as const,
