@@ -46,10 +46,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Get all page routes dynamically
   const allRoutes = ['', ...getPageRoutes(appDirectory)]
   
-  // Get blog slugs
+  // Get blog routes from metadata files
   const metadataDir = path.join(process.cwd(), 'app/resources/blogs/metadata')
   const blogFiles = fs.readdirSync(metadataDir)
-  const blogRoutes = blogFiles.map(file => `/blog/${formatSlug(file)}`)
+  const blogRoutes = blogFiles.map(file => {
+    try {
+      const metadataContent = fs.readFileSync(path.join(metadataDir, file), 'utf8')
+      const metadata = JSON.parse(metadataContent)
+      const slug = metadata.title
+        .toLowerCase()
+        .replace(/[^a-z0-9\s-]/g, '') // Remove special chars except spaces and hyphens
+        .replace(/\s+/g, '-') // Replace spaces with hyphens
+        .replace(/-+/g, '-') // Replace multiple hyphens with single hyphen
+      return `/blog/${slug}`
+    } catch (error) {
+      console.error(`Error processing blog metadata ${file}:`, error)
+      return ''
+    }
+  }).filter(route => route !== '')
   
   // Combine all routes
   const combinedRoutes = [...allRoutes, ...blogRoutes]
