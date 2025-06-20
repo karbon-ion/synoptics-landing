@@ -5,8 +5,8 @@ import Link from 'next/link';
 const Footer = () => {
   const platformLinks = [
     { name: 'Platform Overview', href: '/platform' },
-    { name: 'Synoptix Search', href: '/synoptix-search' },
-    { name: 'Synoptix Agents', href: '/synoptix-agents' },
+    { name: 'Synoptix Search', href: '/platform/synoptix-ai-search' },
+    { name: 'Synoptix Agents', href: '/platform/synoptix-ai-agents' },
     { name: 'Evaluations', href: '/platform/ai-performace-evaluation' },
     { name: 'SynoGuard', href: '/platform/ai-security-tool/syno-guard' },
   ];
