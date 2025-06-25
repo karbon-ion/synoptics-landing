@@ -4,7 +4,7 @@ import Link from 'next/link'
 export default function Hero() {
   return (
     <section 
-      className="w-full py-30 relative overflow-hidden"
+      className="w-full py-30 relative overflow-hidden" 
       style={{
         backgroundImage: "url('/evaluations/bg.png')",
         backgroundSize: "cover",
