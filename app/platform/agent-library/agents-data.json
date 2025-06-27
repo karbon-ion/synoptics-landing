@@ -1,0 +1,56 @@
+[
+  {
+    "id": "blog-generator",
+    "name": "Blog Generator",
+    "category": "Marketing",
+    "description": "A blog generator that creates engaging and SEO-friendly content"
+  },
+  {
+    "id": "knowledge-base-agent",
+    "name": "Knowledge Base Agent",
+    "category": "Support",
+    "description": "A blog generator that creates engaging and SEO-friendly content"
+  },
+  {
+    "id": "spreadsheet-assistant",
+    "name": "Spreadsheet Assistant",
+    "category": "Finance",
+    "description": "A blog generator that creates engaging and SEO-friendly content"
+  },
+  {
+    "id": "blog-generator-2",
+    "name": "Blog Generator",
+    "category": "Sales",
+    "description": "A blog generator that creates engaging and SEO-friendly content"
+  },
+  {
+    "id": "blog-generator-3",
+    "name": "Blog Generator",
+    "category": "Marketing",
+    "description": "A blog generator that creates engaging and SEO-friendly content"
+  },
+  {
+    "id": "blog-generator-4",
+    "name": "Blog Generator",
+    "category": "HR",
+    "description": "A blog generator that creates engaging and SEO-friendly content"
+  },
+  {
+    "id": "blog-generator-5",
+    "name": "Blog Generator",
+    "category": "IT Operations",
+    "description": "A blog generator that creates engaging and SEO-friendly content"
+  },
+  {
+    "id": "blog-generator-6",
+    "name": "Blog Generator",
+    "category": "Product Development",
+    "description": "A blog generator that creates engaging and SEO-friendly content"
+  },
+  {
+    "id": "blog-generator-7",
+    "name": "Blog Generator",
+    "category": "Security",
+    "description": "A blog generator that creates engaging and SEO-friendly content"
+  }
+]

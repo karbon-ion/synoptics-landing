@@ -1,7 +1,6 @@
 'use client'
 
 import Image from 'next/image'
-import Link from 'next/link'
 
 const Hero = () => {
     return ( 
@@ -26,8 +25,7 @@ const Hero = () => {
                         letterSpacing: "0%",
                         textAlign: "center"
                     }}>
-                       Powering Enterprise Intelligence with Responsible AI
-
+                        Our mission is to accelerate the development of AI applications
                     </h1>
                     
                     <p className="mt-6" style={{
@@ -38,14 +36,15 @@ const Hero = () => {
                         letterSpacing: "2%",
                         textAlign: "center"
                     }}>
-                        Synoptix AI is a Microsoft-certified platform that transforms how organizations interact with their data by delivering real-time, AI-powered answers from complex documents and systems.
-
+                        Better data leads to more performant models. Performant models lead to faster deployment. 
+                        We help deliver value from AI investments faster with better data by providing an end-to-end 
+                        solution to manage the entire ML lifecycle.
                     </p>
                     
                     <div className="mt-8">
-                    <Link href="/contact-us" className="bg-[#5662F6] text-white font-medium py-3 px-6 rounded-full hover:bg-blue-600 transition duration-300 inline-flex items-center">
-            Want to learn more?
-          </Link>
+                        <button className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-md transition-colors">
+                            Start a free project
+                        </button>
                     </div>
                 </div>
             </div>

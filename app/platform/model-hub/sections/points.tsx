@@ -3,20 +3,20 @@ import Image from 'next/image'
 const Points = () => {
   const cardData = [
     {
-      title: "Deploy AI Agents",
-      description: "Launch task-specific AI agents in seconds — from summarizing documents to answering complex queries"
+      title: "Optimise Agent Performance with the Right Model",
+      description: "Explore and fine-tune the latest models to enhance how your agents respond. Mix and match models to suit specific workflows, use cases, or departments."
     },
     {
-      title: "Customize Models",
-      description: "Fine-tune behavior and responses using real examples and natural language, not code."
+      title: "Model Flexibility with Full Control",
+      description: "Select your preferred models using the Synoptix AI Model Directory. Maintain control over model access, deployment, and performance on your terms, in your environment."
     },
     {
-      title: "Connect Your Data",
-      description: "Seamlessly link models with your CRMs, ERPs, SharePoint, Outlook, and more."
+      title: "Safe Testing in an Enterprise-Ready Environment",
+      description: "Test with confidence in a secure, compliance-friendly space. Synoptix ensures that all model testing meets enterprise standards for data privacy, governance, and reliability."
     },
     {
-      title: "Build Secure Workflows",
-      description: "Create AI-driven processes that respect your internal governance."
+      title: "Leading Commercial and Open-Source Models",
+      description: "Test the latest LLMs from top providers, all in a secure, no-code environment. Teams can explore how different models perform with agents, instantly."
     }
   ];
 
@@ -34,7 +34,7 @@ const Points = () => {
           {/* Large card on the left */}
           <div 
             className="rounded-lg p-10 flex flex-col justify-center relative overflow-hidden" 
-            style={{ width: '407px', height: '485px' }}
+            style={{ width: '407px', height: '600px' }}
           >
             <Image
               src="/model-hub/card-1-bg.png"
@@ -53,21 +53,21 @@ const Points = () => {
               position: 'relative',
               zIndex: 10
             }}>
-              All your AI tools.
+              Access the Latest  
               <br />
-              One powerful
+              Language Models in
               <br />
-              workspace.
+              Synoptix Model Directory
             </h2>
           </div>
 
           {/* 2x2 grid of smaller cards on the right */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {cardData.map((card, index) => (
               <div 
                 key={index}
-                className="bg-white rounded-lg pt-6 pl-6 pr-6 shadow-sm flex flex-col" 
-                style={{ width: '384px', height: '240px' }}
+                className="bg-white rounded-lg pt-6 pl-6 pr-6 pb-6 shadow-sm flex flex-col" 
+                style={{ width: '384px', minHeight: '280px', maxHeight: '300px', overflow: 'hidden' }}
               >
                 <div className="mb-4 w-12 h-12 rounded-full flex items-center justify-center">
                   <Image 
@@ -77,15 +77,15 @@ const Points = () => {
                     height={69}
                   />
                 </div>
-                <h3 className='' style={{
+                <h3 style={{
                   fontFamily: 'Syne',
                   fontWeight: 700,
-                  fontSize: '26px',
+                  fontSize: '22px',
                   lineHeight: '28px',
                   letterSpacing: '0px',
                   color: '#323E50',
-                  marginBottom: '0.5rem',
-                  paddingRight:"8rem"
+                  marginBottom: '1rem',
+                  paddingRight: '1rem'
                 }}>
                   {card.title}
                 </h3>

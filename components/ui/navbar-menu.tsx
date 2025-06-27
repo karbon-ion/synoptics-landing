@@ -180,6 +180,21 @@ export const NavbarMenu = () => {
   }, [scrolled]);
 
   // Platform dropdown configuration that matches the image layout
+  // Define types for the platform dropdown configuration
+  type NavItem = {
+    name: string;
+    href: string;
+    onClick?: () => void;
+  };
+
+  type ColumnItem = {
+    icon: string;
+    title: string;
+    href: string;
+    description?: string;
+    items: NavItem[];
+  };
+
   const platformDropdownConfig = {
     overview: {
       title: 'Platform Overview →',
@@ -191,6 +206,7 @@ export const NavbarMenu = () => {
         icon: '/navbar-platform/synoptix-search-icon.svg',
         title: 'Synoptix Search',
         href: '/platform/synoptix-ai-search',
+        description: '',
         items: [
           { name: 'Universal Knowledge', href: '/platform/synoptix-ai-search#universal-knowledge' },
           { name: 'Data Insights', href: '/platform/synoptix-ai-search#data-insights' },
@@ -202,19 +218,23 @@ export const NavbarMenu = () => {
         icon: '/navbar-platform/synoptix-agent-icon.svg',
         title: 'Synoptix Agents',
         href: '/platform/synoptix-ai-agents',
+        description: '',
         items: [
           { name: 'Custom Agents', href: '/platform/synoptix-ai-agents#Custom-Agent' },
           { name: 'Reasoning Agent', href: '/platform/synoptix-ai-agents#Reasoning-Agent' },
           { name: 'Knowledge Access', href: '/platform/synoptix-ai-agents#Knowledge-Access' },
-          { name: 'Agent Library', href: '/platform/synoptix-ai-agents#Agent-Library' }
+          { name: 'Agent Library', href: '/platform/agent-library' }
         ]
       },
       {
         icon: '/navbar-platform/synoptix-library-icon.svg',
         title: 'Synoptix Library',
-        href: '/',
-        description: 'Coming Soon...',
-        items: []
+        href: '/platform/synoptix-library',
+        description: '',
+        items: [
+          { name: 'Prompt Library', href: '/platform/prompt-library' },
+          { name: 'Agent Library', href: '/platform/agent-library' }
+        ]
       }
     ],
     bottom: [
@@ -222,6 +242,7 @@ export const NavbarMenu = () => {
         icon: '/navbar-platform/evaluatiom-icon.svg',
         title: 'Evaluation',
         href: '/platform/ai-performace-evaluation',
+        description: '',
         items: [
           { name: 'Real Time Performance Metrices', href: '/platform/ai-performace-evaluation#techniques-section', onClick: () => { const section = document.getElementById('techniques-section'); section?.scrollIntoView({ behavior: 'smooth' }); } },
           { name: 'User Sentiment Insights', href: '/platform/ai-performace-evaluation#techniques-section', onClick: () => { const section = document.getElementById('techniques-section'); section?.scrollIntoView({ behavior: 'smooth' }); } },
@@ -232,6 +253,7 @@ export const NavbarMenu = () => {
         icon: '/navbar-platform/synoguard-icon.svg',
         title: 'Synoguard',
         href: '/platform/ai-security-tool/syno-guard',
+        description: '',
         items: [
           { name: 'Content Safety', href: '/platform/ai-security-tool/syno-guard#synoguard-techniques', onClick: () => { const section = document.getElementById('synoguard-techniques'); section?.scrollIntoView({ behavior: 'smooth' }); } },
           { name: 'Toxicity Detection', href: '/platform/ai-security-tool/syno-guard#synoguard-techniques', onClick: () => { const section = document.getElementById('synoguard-techniques'); section?.scrollIntoView({ behavior: 'smooth' }); } },
@@ -251,13 +273,13 @@ export const NavbarMenu = () => {
         icon: '/navbar-platform/integration-icon.svg',
         title: 'Integration',
         href: '/',
-        description: 'Coming Soon...'
+        description: ''
       },
       {
         icon: '/navbar-platform/model-hub.svg',
         title: 'Model Hub',
-        href: '/',
-        description: 'Coming Soon...'
+        href: '/platform/model-hub',
+        description: ''
       },
       {
         icon: '/navbar-platform/apis-icon.svg',
@@ -582,19 +604,21 @@ export const NavbarMenu = () => {
                                 {item.title}
                               </span>
                             </div>
-                            <div className="ml-9 mt-1">
-                              <span 
-                                className="text-gray-500 bg-gray-100 px-2 py-0.5 rounded-md" 
-                                style={{ 
-                                  fontFamily: 'Poppins', 
-                                  fontWeight: 400, 
-                                  fontSize: '12px', 
-                                  lineHeight: '20px' 
-                                }}
-                              >
-                                Coming Soon...
-                              </span>
-                            </div>
+                            {(item.title === 'APIs' || item.title === 'Integration') && (
+                              <div className="ml-9 mt-1">
+                                <span 
+                                  className="text-gray-500 bg-gray-100 px-2 py-0.5 rounded-md" 
+                                  style={{ 
+                                    fontFamily: 'Poppins', 
+                                    fontWeight: 400, 
+                                    fontSize: '12px', 
+                                    lineHeight: '20px' 
+                                  }}
+                                >
+                                  Coming Soon...
+                                </span>
+                              </div>
+                            )}
                           </Link>
                         </div>
                       ))}

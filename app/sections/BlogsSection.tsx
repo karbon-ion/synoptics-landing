@@ -133,7 +133,11 @@ const BlogsSection = () => {
                 <div className="p-8 flex-grow flex flex-col">
                   <div className="text-blue-400 text-sm mb-2">{post.date}</div>
                   <Link 
-                    href={`/resources/blogs/${post.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}`}
+                    href={`/resources/blogs/${post.title.toLowerCase()
+                      .replace(/[^a-z0-9\s-]+/g, '')  
+                      .replace(/\s+/g, '-')           
+                      .replace(/--+/g, '-')           
+                      .replace(/^-|-$/g, '')}`}
                     className="block"
                   >
                     <h3 className="text-xl font-semibold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors duration-300 cursor-pointer">
@@ -145,7 +149,11 @@ const BlogsSection = () => {
                   </p>
                   <div className="mt-auto">
                     <Link 
-                      href={`/resources/blogs/${post.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}`}
+                      href={`/resources/blogs/${post.title.toLowerCase()
+                        .replace(/[^a-z0-9\s-]+/g, '')  
+                        .replace(/\s+/g, '-')           
+                        .replace(/--+/g, '-')           
+                        .replace(/^-|-$/g, '')}`}
                       className="inline-flex items-center text-blue-500 font-medium group-hover:text-blue-700 transition-colors duration-300"
                     >
                       Read More

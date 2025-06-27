@@ -1,0 +1,216 @@
+{
+  "agents": [
+    {
+      "title": "Blog Generator",
+      "description": "Create engaging, SEO-friendly blogs tailored to your audience, driving visibility and brand authority."
+    },
+    {
+      "title": "Knowledge Base Agent",
+      "description": "Retrieve and deliver knowledge instantly for informed decision-making."
+    },
+    {
+      "title": "Spreadsheet Assistant",
+      "description": "Helps with spreadsheet operations, data analysis, and formula generation."
+    },
+    {
+      "title": "FAQs Generator",
+      "description": "Extract and craft clear FAQs from your content."
+    },
+    {
+      "title": "Process Map Generator",
+      "description": "Generates clear, easy-to-follow process maps for better visualization and execution."
+    },
+    {
+      "title": "Code Debugger",
+      "description": "Detect, analyse, and fix code errors efficiently to streamline your development."
+    },
+    {
+      "title": "Code Generator",
+      "description": "Generate clean, optimized code snippets instantly for high quality solutions."
+    },
+    {
+      "title": "Social Media Growth Advisor",
+      "description": "Provide strategies to enhance social media engagement, follower growth, and viral content creation."
+    },
+    {
+      "title": "HR Policy Explainer",
+      "description": "Simplify and explain HR policies to boost employee clarity and policy compliance."
+    },
+    {
+      "title": "Sales Contract Summariser",
+      "description": "Summarize contract details for a sale contract."
+    },
+    {
+      "title": "Draft High Priority Email",
+      "description": "Create a reminder email about an assigned task using the information provided."
+    },
+    {
+      "title": "IT Help Desk",
+      "description": "Resolve IT issues faster with an agent that answers questions."
+    },
+    {
+      "title": "Finance Report Summariser",
+      "description": "Generate quick summaries of financial reports."
+    },
+    {
+      "title": "Invoice Data Extractor",
+      "description": "Extract Invoice details."
+    },
+    {
+      "title": "Offer Letter Drafter",
+      "description": "Quickly create customizable offer letters"
+    },
+    {
+      "title": "Draft Resume Questions",
+      "description": "Analyze resumes to generate targeted interview questions."
+    },
+    {
+      "title": "Interview Questions Generator",
+      "description": "Create a list of questions for an interview with a job function."
+    },
+    {
+      "title": "Project Risk Tracker",
+      "description": "Create a structured list of project risks and mitigations."
+    },
+    {
+      "title": "Review Legal Document",
+      "description": "Identify and summarize the key obligations and liabilities in a contract."
+    },
+    {
+      "title": "Extract Legal Facts",
+      "description": "Identify facts and opinion from legal documents"
+    },
+    {
+      "title": "Compliance Risk Detector",
+      "description": "Analyse compliance gaps from regulatory documents"
+    },
+    {
+      "title": "LinkedIn Post Creator",
+      "description": "Generate professional and engaging LinkedIn posts"
+    },
+    {
+      "title": "X Post Creator",
+      "description": "Generate concise and attention-grabbing posts tailored for X"
+    },
+    {
+      "title": "Email Marketing Agent",
+      "description": "Draft promotional or outreach emails for marketing campaigns"
+    },
+    {
+      "title": "Error Resolver",
+      "description": "Diagnose Python errors and suggest possible causes and solutions"
+    },
+    {
+      "title": "Trends Analyst",
+      "description": "Identify and summarize latest market or industry trends"
+    },
+    {
+      "title": "Industry Research Agent",
+      "description": "Provide detailed insights on a specific industry"
+    },
+    {
+      "title": "Competitors Analyst",
+      "description": "Discover key competitors in a given industry"
+    },
+    {
+      "title": "Mitigation Strategy Assistant",
+      "description": "Suggest strategies to mitigate identified risks and issues"
+    },
+    {
+      "title": "Log Summarisation Agent",
+      "description": "Summarize logs to detect anomalies, frequent issues, and errors"
+    },
+    {
+      "title": "Access Request Assistant",
+      "description": "Assist with access request processes based on internal policies"
+    },
+    {
+      "title": "Lead Qualification Agent",
+      "description": "Qualify and score leads based on budget, need, and timeline"
+    },
+    {
+      "title": "Meeting Scheduler Agent",
+      "description": "Automatically schedule and manage meetings with clients or prospects"
+    },
+    {
+      "title": "Forecasting & Budgeting Agent",
+      "description": "Generate revenue forecasts and budget insights using previous data"
+    },
+    {
+      "title": "Expense Management & Policy Compliance Agent",
+      "description": "Review and validate expenses for policy violations, anomalies, and duplicates"
+    },
+    {
+      "title": "Financial Anomaly Detector",
+      "description": "Detect financial anomalies, cost spikes, and hidden spending trends"
+    },
+    {
+      "title": "Finance Report Generator",
+      "description": "Generate automated financial reports such as P&L, balance sheets, and cash flow summaries"
+    },
+    {
+      "title": "Strategic Benefits Extractor",
+      "description": "Extracts high-impact program benefits from detailed business cases"
+    },
+    {
+      "title": "Benefits Realization Planner",
+      "description": "Creates governance-backed plans to realize program benefits"
+    },
+    {
+      "title": "DevOps Ticket Manager",
+      "description": "Manage DevOps tickets—fetch, review, update, and create tasks"
+    },
+    {
+      "title": "HR Helpdesk",
+      "description": "Responds to common HR queries around leaves, benefits, and payroll across channels"
+    },
+    {
+      "title": "Onboarding Assistant",
+      "description": "Guides new hires through forms, policy reviews, and training timelines to accelerate onboarding"
+    },
+    {
+      "title": "Recruitment Coordinator",
+      "description": "Screens resume and handles interview scheduling"
+    },
+    {
+      "title": "Exit Interview Analyser",
+      "description": "Analyzes exit interviews to uncover attrition trends and common departure reasons"
+    },
+    {
+      "title": "Career Coach",
+      "description": "Recommends internal roles and skill development paths based on career goals"
+    },
+    {
+      "title": "Policy Adherence Agent",
+      "description": "Detects policy violations and offers real-time guidance for compliant communication and behavior"
+    },
+    {
+      "title": "Audit & Risk Monitor",
+      "description": "Continuously monitors systems and logs to flag compliance gaps and audit triggers"
+    },
+    {
+      "title": "Regulatory Intelligence Agent",
+      "description": "Tracks regulatory changes and translates them into actionable internal policy summaries"
+    },
+    {
+      "title": "Third-Party Compliance Agent",
+      "description": "Evaluates the compliance status and risk level of external vendors, partners, or contractors"
+    },
+    {
+      "title": "Compliance Training Assistant",
+      "description": "Delivers and tracks interactive training modules for compliance requirements"
+    },
+    {
+      "title": "PII Guard",
+      "description": "Scans enterprise content for sensitive data and ensures privacy regulation compliance"
+    },
+    {
+      "title": "Custom Compliance Workflow Agent",
+      "description": "Automates end-to-end compliance workflows like ESG or industry-specific reporting"
+    },
+    {
+      "title": "Sales Intelligent Agent",
+      "description": "Automatically schedule and manage meetings with clients or prospectsDeliver real-time insights on leads, decision-makers, and market signals"
+    }
+  ]
+}

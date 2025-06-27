@@ -210,8 +210,8 @@ export default function EnterpriseSection() {
                     </div>
                     {tab.showLearnMore && (
                       <Link
-                        href={tab.id === "agents" ? "/synoptix-agents" : 
-                              tab.id === "search" ? "/synoptix-search" : 
+                        href={tab.id === "agents" ? "/platform/synoptix-ai-agents" : 
+                              tab.id === "search" ? "/platform/synoptix-ai-search" : 
                               "/"}
                         className="inline-flex items-center text-[#5662F6] hover:text-blue-800"
                         style={{ fontFamily: "Syne", fontWeight: 700,fontSize: "16px" }}

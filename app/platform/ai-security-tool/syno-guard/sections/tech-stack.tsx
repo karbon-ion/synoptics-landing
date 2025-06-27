@@ -13,7 +13,7 @@ export default function TechStackCard() {
         Our platform acts as an AI security tool for your organization, connecting your tools, workflows, and teams. It protects your company data, supports compliance, and keeps your business running without disruption.  
         </p>
         <Link href="contact-us" className="inline-block mt-4 md:mt-6 bg-white text-[#5662F6] px-4 md:px-5 py-2 text-sm md:text-base rounded-full font-medium shadow-md hover:bg-gray-100 transition-all">
-        Request for Demo  
+        Book a consultant
         </Link>
       </div>
       <div className="absolute right-[-15%] md:right-[-1%] top-1/2 transform -translate-y-1/2 w-[90%] md:w-[70%] h-full flex items-center justify-end opacity-30 md:opacity-100">

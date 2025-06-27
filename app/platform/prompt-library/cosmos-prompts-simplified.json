@@ -1,0 +1,212 @@
+[
+  {
+    "id": "1",
+    "name": "Referral Program Designer",
+    "category": "Marketing",
+    "descriptions": "Designs industry-specific referral programs based on a given topic or business type.",
+    "user_prompt": "Design a tailored referral program strategy for the [industry] sector, including offer details, participation model, and optimization tips."
+  },
+  {
+    "id": "2",
+    "name": "Draft Blog from Launch Document",
+    "category": "Marketing",
+    "descriptions": "Creates a blog post using the provided launch document.",
+    "user_prompt": "Using the product launch document available at [launch_doc_url], draft a compelling blog post. The content should clearly highlight key launch features, product value, and generate interest for readers to continue exploring the post."
+  },
+  {
+    "id": "3",
+    "name": "Loyalty Program Optimization",
+    "category": "Marketing",
+    "descriptions": "Evaluates loyalty programs in a given industry and suggests improvements.",
+    "user_prompt": "Analyze and suggest improvements for a loyalty program within the [industry] industry, focusing on increasing customer retention and satisfaction."
+  },
+  {
+    "id": "4",
+    "name": "A/B Testing Plan",
+    "category": "Marketing",
+    "descriptions": "Develop an A/B testing plan for a website or app.",
+    "user_prompt": "Create a comprehensive A/B testing plan for the [industry] industry to test variations in website or app design. Optimize key content elements, and improve overall conversion rates based on user behavior and performance metrics."
+  },
+  {
+    "id": "5",
+    "name": "Create Content for a Talk at an Event",
+    "category": "Marketing",
+    "descriptions": "Creates a session title, abstract, and track for a conference talk.",
+    "user_prompt": "Generate a professional conference session title, abstract, and 60-minute talk track based on the uploaded event brief document [event_brief_doc_url]. Make sure the content aligns with the event's core theme and target audience."
+  },
+  {
+    "id": "6",
+    "name": "Create Blog",
+    "category": "Marketing",
+    "descriptions": "Generates a blog introduction based on a document.",
+    "user_prompt": "Based on the uploaded document [document_url], generate a complete and well-structured blog post. Include an engaging introduction, key takeaways from the content, and a clear, informative conclusion. Ensure the tone is aligned with the document’s purpose."
+  },
+  {
+    "id": "7",
+    "name": "Create Webinar Landing Page Copy",
+    "category": "Marketing",
+    "descriptions": "Generates a landing page intro and titles for an upcoming webinar.",
+    "user_prompt": "Generate 5 strong title options and an engaging abstract for a webinar on [topic], featuring [speakers_name], scheduled on [webinar_date] at [webinar_time]. Avoid overly promotional language and focus on clarity and relevance."
+  },
+  {
+    "id": "8",
+    "name": "Market Expansion Strategy",
+    "category": "Marketing",
+    "descriptions": "Designs a growth strategy by identifying new markets or customer segments.",
+    "user_prompt": "Create a comprehensive market expansion strategy tailored for the [industry] sector. Identify untapped geographic regions or high-potential customer segments that align with growth goals and industry dynamics."
+  },
+  {
+    "id": "9",
+    "name": "Prep for Follow-Up Call with Prospect",
+    "category": "Sales",
+    "descriptions": "Prepares a meeting summary and questions for a follow-up call with a prospect.",
+    "user_prompt": "Summarize the last conversation with [customer_name] from [company_name], including any action items or follow-ups. Use the attached [documents] and extract relevant notes from [slack_channel] to help draft thoughtful questions for the upcoming follow-up call."
+  },
+  {
+    "id": "10",
+    "name": "Draft Email from Call Transcript",
+    "category": "Sales",
+    "descriptions": "Generates an email summary based on a transcript of a customer call.",
+    "user_prompt": "Review the customer conversation using the Teams call transcript from [teams_call_url], and draft a follow-up email summarizing concerns raised and clearly stating the next steps and responsible parties, all in plain text without using bullet points or numbered formatting."
+  },
+  {
+    "id": "11",
+    "name": "Sales Contract Summary",
+    "category": "Sales",
+    "descriptions": "Summarizes contract terms and obligations from uploaded documents.",
+    "user_prompt": "Analyze the uploaded [sale_contract] and summarize the key contract terms, including payment structure, project deliverables, deadlines, and any automatic renewal clauses or obligations mentioned."
+  },
+  {
+    "id": "12",
+    "name": "Draft High Priority Email",
+    "category": "Sales",
+    "descriptions": "Creates a task reminder email using content from a prior message.",
+    "user_prompt": "Using the provided [email] content, write a concise and professional reminder message that highlights the urgency and summarizes the task that needs follow-up or action."
+  },
+  {
+    "id": "13",
+    "name": "Summarize the Deal Progression",
+    "category": "Finance",
+    "descriptions": "Summarize the latest status, asks, and next steps in the deal progression based on Slack and meeting notes.",
+    "user_prompt": "Summarize the latest updates, requests, and pending actions in the [company] deal based on the notes from [slack_channel] and [meeting_url], including where the deal currently stands in the pipeline."
+  },
+  {
+    "id": "14",
+    "name": "Create a Meeting Agenda for a Contract Review",
+    "category": "Finance",
+    "descriptions": "Creates a structured meeting agenda for contract review alignment.",
+    "user_prompt": "Based on the [meeting_url] and contract review topic [topic], create a clear and structured meeting agenda that aligns participants on recommendations and responsibilities."
+  },
+  {
+    "id": "15",
+    "name": "Outline and Simplify Investment Summary",
+    "category": "Finance",
+    "descriptions": "Simplifies financial investment summaries into clear, investor-friendly formats.",
+    "user_prompt": "Use the uploaded financial report [uploaded_file] to generate a simplified investment summary, focusing on investor-friendly language, key metrics, and overall performance insights."
+  },
+  {
+    "id": "16",
+    "name": "Presentation outline for scenario planning",
+    "category": "Finance",
+    "descriptions": "Creates a strategic scenario-based presentation outline from uploaded analysis documents.",
+    "user_prompt": "Based on the uploaded analysis document [uploaded_file], generate a structured presentation outline that includes scenario-based projections, risk factors, and strategic recommendations."
+  },
+  {
+    "id": "17",
+    "name": "Contract Summary Generator",
+    "category": "Finance",
+    "descriptions": "Summarizes uploaded legal contracts into 5 concise paragraphs.",
+    "user_prompt": "Summarize the uploaded legal contract [uploaded_file] into 5 clear paragraphs, highlighting deliverables, payment terms, liability clauses, and intellectual property details."
+  },
+  {
+    "id": "18",
+    "name": "Finance Process Training Guide",
+    "category": "Finance",
+    "descriptions": "Creates a structured onboarding guide for new hires covering key finance processes.",
+    "user_prompt": "Create a new hire training guide for the finance team that includes step-by-step processes, key tools, and common challenges for [topic_1] and [topic_2]."
+  },
+  {
+    "id": "19",
+    "name": "Financial Proposal Considerations",
+    "category": "Finance",
+    "descriptions": "Analyzes financial proposals and generates additional considerations grouped by category.",
+    "user_prompt": "Evaluate the uploaded financial proposal [uploaded_file] and outline additional considerations grouped by compliance, tax, reporting, and operations, with reasoning for each."
+  },
+  {
+    "id": "20",
+    "name": "Generate Interview Question",
+    "category": "Recruitment",
+    "descriptions": "Generates a tailored list of interview questions and explanations based on a job description and focus areas.",
+    "user_prompt": "Generate 10 tailored interview questions using this [job_description] and targeting the [focus_areas], with explanations for assessing both technical and behavioral competencies."
+  },
+  {
+    "id": "21",
+    "name": "Summarize Interview Feedback",
+    "category": "Recruitment",
+    "descriptions": "Summarizes candidate interview feedback packets into structured, decision-ready reports.",
+    "user_prompt": "Summarize the uploaded interview feedback file [uploaded_feedback_file] into a decision-ready report highlighting strengths, concerns, opinions, and suggested next steps."
+  },
+  {
+    "id": "22",
+    "name": "Summarise Security Pull Request",
+    "category": "Security",
+    "descriptions": "Analyzes code changes in a GitHub pull request for security vulnerabilities and summarizes key findings.",
+    "user_prompt": "Analyze the GitHub pull request at [github_pr_url] to detect any security vulnerabilities or improvements, and summarize the key findings in a security-focused report."
+  },
+  {
+    "id": "23",
+    "name": "Generate Onboarding Checklist",
+    "category": "HR",
+    "descriptions": "Generates a personalized onboarding checklist using company docs and employee details.",
+    "user_prompt": "Using the uploaded onboarding document [uploaded_doc], generate a 10-step checklist for a new hire joining as [role] in the [department] starting on [start_date], covering all essential tasks for a smooth first week."
+  },
+  {
+    "id": "24",
+    "name": "Employee Announcement",
+    "category": "HR",
+    "descriptions": "Creates a warm and engaging announcement post for social media to introduce new hires.",
+    "user_prompt": "Create a warm and professional LinkedIn post announcing that [employee_name] has joined our [team] team as a [role]. Format it for publishing on [social_media_channel]."
+  },
+  {
+    "id": "25",
+    "name": "Communicate Change Rollout",
+    "category": "IT",
+    "descriptions": "Drafts a professional internal email communication about upcoming system changes, including impact and support contact.",
+    "user_prompt": "Draft an internal email announcing the rollout of [change_description], planned for [planned_date], including its impact on [affected_systems] and support contact details."
+  },
+  {
+    "id": "26",
+    "name": "Rewrite Legal Clauses",
+    "category": "Legal",
+    "descriptions": "Rewrites legal clauses into a simpler or specified tone while maintaining their legal accuracy.",
+    "user_prompt": "Rewrite the legal clause '[clause_text]' into a [target_tone] tone, ensuring it retains its legal intent while being easier to understand."
+  },
+  {
+    "id": "27",
+    "name": "Extract Contract Key Data",
+    "category": "Legal",
+    "descriptions": "Extracts essential legal terms such as contract duration, renewal options, and termination clauses from uploaded contracts.",
+    "user_prompt": "Extract key legal data such as contract term, renewal options, and termination clauses from the uploaded contract [uploaded_contract]. Present the findings in a clear and structured summary without altering the original legal language."
+  },
+  {
+    "id": "28",
+    "name": "Compare Legal Contracts",
+    "category": "Legal",
+    "descriptions": "Compares two contracts and highlights key differences in legal terms that could affect obligations or risk exposure.",
+    "user_prompt": "Compare the two uploaded contracts — [first_contract] and [second_contract] — highlighting differences in parties, dates, obligations, payment terms, termination clauses, and governing law."
+  },
+  {
+    "id": "29",
+    "name": "Check Contract Completeness",
+    "category": "Legal",
+    "descriptions": "Reviews a contract to identify missing essential elements such as signatures, payment terms, governing law, and checks for blank or incomplete pages.",
+    "user_prompt": "Review the uploaded contract [uploaded_contract] and list any missing elements such as signatures, payment terms, governing law, or incomplete sections."
+  },
+  {
+    "id": "30",
+    "name": "Task Extractor from Text",
+    "category": "All Teams",
+    "descriptions": "Identifies action items, tasks, or to-dos from uploaded text and presents them in a clean checklist format.",
+    "user_prompt": "Analyze the uploaded doc [uploaded_doc] and extract all action items, tasks, or to-do points in a clear bullet format."
+  }
+]
