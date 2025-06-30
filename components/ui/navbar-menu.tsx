@@ -229,7 +229,7 @@ export const NavbarMenu = () => {
       {
         icon: '/navbar-platform/synoptix-library-icon.svg',
         title: 'Synoptix Library',
-        href: '/platform/synoptix-library',
+        href: '/',
         description: '',
         items: [
           { name: 'Prompt Library', href: '/platform/prompt-library' },
