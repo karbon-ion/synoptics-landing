@@ -16,7 +16,7 @@ export default function SearchHero() {
                         lineHeight: 'clamp(40px, 7vw, 72px)',
                         textAlign: 'center'
                     }}>
-                        <span className="text-[#5662F6]">Unified AI Search for the</span> Modern Enterprise.
+                        <span className="text-[#5662F6]">Unified AI Search for </span> Modern Enterprise.
                     </h1>
                     <p style={{
                         fontFamily: 'Poppins, sans-serif',
@@ -26,7 +26,7 @@ export default function SearchHero() {
                         letterSpacing: '2%',
                         textAlign: 'center'
                     }} className="text-gray-600 max-w-2xl mx-auto my-6">
-                        Enterprise AI search platform that connects your tools, files, and conversations. Empower your teams to ask questions and receive accurate, instant answers across the organisation.   
+                        Empower your team to find accurate information across all company data sources, documents, spreadsheets, and presentations by asking questions in simple language.    
                     </p>
                     <Link href="/contact-us" className="bg-[#5662F6] text-white font-medium py-3 px-6 rounded-full hover:bg-blue-600 transition duration-300 inline-flex items-center">
                         Get a Demo

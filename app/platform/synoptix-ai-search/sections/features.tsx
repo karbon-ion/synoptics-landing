@@ -7,56 +7,56 @@ import { ArrowRight } from 'lucide-react';
 const featuresData = [
   {
     id: 'universal-knowledge',
-    title: 'Universal Knowledge',
+    title: 'External Intelligence ',
     icon: '/synoptix-search/functions/icons/universal-knowledge-icon.svg',
     image: '/synoptix-search/functions/universal-knowledge.png',
     imageAlt: 'Universal Knowledge',
     points: [
-      'Unify emails, documents, chats, and databases into one AI search for enterprise for access. ',
-      'Deliver context-aware answers aligned with your organisation’s structure and language. ',
-      'Enable consistent knowledge sharing across departments with centralised access. '
+      'Search across public web content, industry databases, and LLM-trained knowledge sources. ',
+      'Explore competitor moves, market signals, global best practices, and emerging trends.  ',
+      'Answers are backed by citations, making it easy to verify sources and follow up with confidence. '
     ],
     imageFirst: true,
     url: '/resources/blogs/synoptix-universal-knowledge-unifies-enterprise-data-and-real-time-web-internet-data'
   },
   {
     id: 'data-insights',
-    title: 'Data Insights',
+    title: 'Unified Enterprise Data Search ',
     icon: '/synoptix-search/functions/icons/data-insights-icon.svg',
     image: '/synoptix-search/functions/data-insights.png',
     imageAlt: 'Data Insights',
     points: [
-      'Use AI to analyse structured and unstructured data for decision-ready insights.  ',
-      'Build role-specific dashboards within your AI platform for enterprise search. ',
-      'Predict outcomes and surface risks with built-in machine learning models. '
+      'Understands natural language queries and retrieves precise, contextually relevant results.',
+      'Synoptix AI recognises user roles, intent, and historical interactions for personalised responses.',
+      'Maintains strict access controls and compliance through permission-aware retrieval and clear source citations.'
     ],
     imageFirst: false,
     url: '/resources/blogs/synoptix-ai-for-data-insights-turning-files-apps-and-databases-into-actionable-insights'
   },
   {
     id: 'enterprise-data-search',
-    title: 'Enterprise Data Search',
+    title: 'Real-Time Insights  ',
     icon: '/synoptix-search/functions/icons/enterprise-data-search-icon.svg',
     image: '/synoptix-search/functions/enterprise-data-search.png',
     imageAlt: 'Enterprise Data Search',
     points: [
-      'Power semantic search to understand query intent and return relevant results. ',
-      'Enforce role-based access to ensure security and compliance at scale with our enterprise AI search solutions.  ',
-      'Reduce search time with instant results from all connected systems.  '
+      'Delivers consolidated insights across formats and systems in a single enterprise AI search environment.',
+      'Enhances productivity by automating knowledge retrieval and reducing time-to-insight.',
+      'Supports strategic, operational, and customer-facing decisions with contextual understanding.'
     ],
     imageFirst: true,
     url: '/resources/blogs/enterprise-data-search-that-helps-teams-move-faster-with-confidence'
   },
   {
     id: 'fine-tuning',
-    title: 'Fine-Tuning LLM Models ',
+    title: 'Model Alignment ',
     icon: '/synoptix-search/functions/icons/fine-tuning-icon.svg',
     image: '/synoptix-search/functions/fine-tuning.png',
     imageAlt: 'Fine-Tuning/Industry Specific',
     points: [
-      'Enhance your AI Search for Enterprise with custom-trained models.',
-      'Improve relevance over time with continuous learning and feedback loops. ',
-      'Maintain compliance with full visibility and control over AI responses.'
+      'Adapts to internal terminology, processes, and compliance requirements.',
+      'Improves search accuracy, response quality, and automation over time with usage.',
+      'Ensures outputs reflect how your organisation truly works, not generic AI assumptions.'
     ],
     imageFirst: false,
     url: '/resources/blogs/train-enterprise-with-ai-that-speaks-your-language-with-synoptix-llm-fine-tuning-services'
@@ -68,7 +68,7 @@ export default function FeaturesSection() {
     <section className="bg-white py-16 mb-25">
       <div className="container mx-auto max-w-7xl rounded-xl">
         <h2 className="text-center text-3xl font-bold mb-8" style={{fontFamily: "Syne",fontWeight:700,fontSize:"36px",lineHeight:"45px"}}>
-        Smart Enterprise Search Solutions for  <span className="text-blue-600">Modern Workflows</span>
+        Enterprise AI Search Solutions for <span className="text-blue-600">Modern Workflows</span>
         </h2>
         
         <div className=" rounded-xl">
