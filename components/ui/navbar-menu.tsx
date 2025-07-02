@@ -277,8 +277,8 @@ export const NavbarMenu = () => {
       },
       {
         icon: '/navbar-platform/model-hub.svg',
-        title: 'Model Hub',
-        href: '/platform/model-hub',
+        title: 'Model Directory',
+        href: '/platform/model-directory',
         description: ''
       },
       {

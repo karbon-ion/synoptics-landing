@@ -131,8 +131,8 @@ const Navbar = () => {
       },
       {
         icon: '📦',
-        title: 'Model Hub',
-        href: '/platform/model-hub'
+        title: 'Model Directory',
+        href: '/platform/model-directory'
       },
       {
         icon: '🔌',
