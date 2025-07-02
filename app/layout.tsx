@@ -33,8 +33,8 @@ const raleway = Raleway({
 });
 
 export const metadata: Metadata = {
-  title: 'Enterprise AI Platform | Synoptix.ai for Automation',
-  description: 'Synoptix.ai offers an enterprise AI platform that automates workflows, unifies data, and delivers intelligent tools for modern business operations and process.',
+  title: 'Enterprise AI Platform for Scalable Automation | Synoptix AI',
+  description: 'Power your enterprise with Synoptix AI—a scalable, secure enterprise AI platform built to drive innovation, automation, and intelligent business decisions.',
   metadataBase: new URL("https://synoptix.ai"),
   alternates: {
     canonical: "/",

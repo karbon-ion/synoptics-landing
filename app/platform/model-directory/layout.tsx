@@ -1,8 +1,8 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'AI Model Hub | Synoptix AI',
-  description: 'Access a wide range of AI models through Synoptix Model Hub. Integrate with leading AI models to power your enterprise applications.',
+  title: 'AI Model Directory for Enterprise Automation | Synoptix AI',
+  description: 'Explore Synoptix AI Model Directory—your gateway for AI models ready to accelerate AI development and solve real business problems.',
   alternates: {
     canonical: 'https://synoptix.ai/platform/model-hub'
   }

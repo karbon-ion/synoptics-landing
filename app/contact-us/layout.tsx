@@ -1,8 +1,8 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Contact Synoptix – Request a Demo & Connect with AI Experts',
-  description: 'Contact Synoptix.ai to explore enterprise AI agents, request a demo, or get expert support. Share your company email—our contact team will respond promptly.',
+  title: 'Contact Synoptix AI | Request a Demo or Talk to Experts',
+  description: 'Connect with the Synoptix AI team for demos, partnerships, and support. Let us help you discover how enterprise AI can solve your biggest challenges.',
   alternates: {
     canonical: 'https://synoptix.ai/contact-us'
   }
