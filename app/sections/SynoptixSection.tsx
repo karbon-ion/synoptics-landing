@@ -37,11 +37,11 @@ export default function SynoptixComponent() {
     all: {
       title: "Synoptix is for Every Team",
       features: [
-        { bold: "Faster Prospecting", regular: " - Equip sales teams with real-time battle cards, lead insights, and AI-generated follow-up" },
-        { bold: "Document & Email Drafting", regular: " Generate proposals, reports, follow-ups, and emails in second." },
+        { bold: "Document & Email Drafting", regular: "- Generate proposals, reports, follow-ups, and emails in seconds using an enterprise AI platform.  " },
         { bold: "Instant Answers", regular: " - Use natural language search to find the right file, policy, or client detail—across systems." },
         { bold: "Consistent Messaging", regular: "- Maintain brand and message alignment with centralised, approved content accessible to all teams." },
-        { bold: "Scheduling & Admin Tasks", regular: " Automate calendar bookings, reminders, and meeting prep" }
+        { bold: "Scheduling & Admin Tasks", regular: " Automate calendar bookings, reminders, and meeting prep" },
+        { bold: "Meeting Preparation", regular: " Get insights and prior history about the person or topic ahead of the meeting. " },
       ],
       learnMoreLink: "/resources/blogs/ai-platform-for-all-teams-smarter-faster-enterprise-work"
     },
@@ -49,55 +49,54 @@ export default function SynoptixComponent() {
       title: "Synoptix is for Every Team",
       features: [
         { bold: "Ensure brand consistency", regular: " – Distribute approved content seamlessly across all campaigns and channels" },
-        { bold: "Unlock content performance insights", regular: " – Use AI to identify and amplify high-impact assets" },
-        { bold: "Automate creative generation", regular: " – Quickly produce drafts, taglines, and messaging variations with AI" },
-        { bold: "Enhance team collaboration", regular: " – Centralised content access streamlines workflows and approvals" },
-        { bold: "Enterprise-ready AI for Marketers", regular: " – Scalable, efficient AI platform for enterprise marketing teams" }
+        { bold: "Hyper-personalised content generation", regular: " – Use customer data and content repositories to generate targeted marketing emails, landing pages, or campaigns. " },
+        { bold: "Automate creative generation", regular: " – Create marketing posts, blogs, and outreach emails with no-code agents powered by an AI platform for enterprise. " },
+        { bold: "Customer insights from unstructured data", regular: " – Analyses unstructured data to surface key themes, pain points, and sentiment trends. " },
+        { bold: "Campaign Review", regular: " – Scans marketing materials against regulatory guidelines, brand tone, and approved language. " }
       ],
       learnMoreLink: "/resources/blogs/ai-marketing-platform-for-faster-smarter-campaigns"
     },
     sales: {
       title: "Synoptix is for Every Team",
       features: [
-        { bold: "Access insights instantly", regular: " – Get customer data, battle cards, and documents directly within your sales tools" },
-        { bold: "Personalize every interaction", regular: " – Use AI-generated messaging based on live context and buyer intent" },
-        { bold: "Automate proposals and follow-ups", regular: " – Create polished, on-brand content with minimal manual effort" },
-        { bold: "Close faster, convert more", regular: " – Reduce cycle times with consistent, high-quality communication at scale" },
-        { bold: "Enterprise-grade and sales-ready", regular: " – Built to empower your team with speed, accuracy, and confidence" },
+        { bold: "Access insights instantly", regular: " – Get customer data, battle cards, and document proposals in seconds. " },
+        { bold: "Personalize every interaction", regular: " – Human-like generated messaging based on context and buyer intent.  " },
+        { bold: "Cut down proposal writing time", regular: " – Write proposals by scanning your database for previous precedents for similar requirements. " },
+        { bold: "Summarise contracts instantly", regular: " – Pull key deal terms from lengthy sales contracts to enable faster decisions. " },
+        { bold: "Close faster, convert more", regular: " –  Qualify leads instantly and shorten sales cycles through consistent and high-quality communication. " },
       ],
       learnMoreLink: "/resources/blogs/empower-sales-teams-with-synoptix-ai-for-faster-deal-cycles"
     },
     it: {
       title: "Synoptix is for Every Team",
       features: [
-        { bold: "Resolve issues instantly", regular: "—AI answers for routine IT support questions." },
-        { bold: "Access quick fixes", regular: "—Find device setups, system FAQs, and internal docs fast." },
-        { bold: "Simplify record keeping", regular: "—Log updates, tickets, and change history automatically." },
-        { bold: "Standardise troubleshooting", regular: "—Provide consistent resolutions using AI internal documentation." },
-        { bold: "Reduce response time", regular: "—Empower teams to self-serve with support powered by your existing knowledge base." },
-        { bold: "Optimise IT workflows", regular: "—Automate password resets, access requests, and repetitive admin tasks—securely." },
+        { bold: "Instant Troubleshooting", regular: " — Investigate root causes and provide instant answers to routine IT support questions.  " },
+        { bold: "IT Policy Assistant", regular: " — Conversational assistant retrieves and summarises the most relevant parts of IT policies and security procedures. " },
+        { bold: "Faster mean time to resolution", regular: " — Ingest logs, incident reports, and system documentation to diagnose symptoms and recommend fixes. " },
+        { bold: "Change impact assessment", regular: " — Map dependencies using internal documentation, system diagrams, and historical data to provide impact analysis. " },
+        { bold: "Security & compliance document auditing", regular: " — Scan documents for gaps in policy, missing control definitions, or non-compliant language with support from an AI platform for enterprise.  " },
       ],
       learnMoreLink: "/resources/blogs/ai-for-it-operations-faster-support-smart-automation"
     },
     finance: {
       title: "Synoptix is for Every Team",
       features: [
-        { bold: "Instant insights extraction", regular: "—Quickly analyse financial reports, contracts, and compliance docs" },
-        { bold: "Task automation", regular: "—Streamline repetitive work from data validation to audit prep" },
-        { bold: "Full output traceability", regular: " – Ensure accuracy and accountability across AI-generated results" },
-        { bold: "Risk reduction", regular: " – Minimize operational risks while improving reporting speed and quality" },
-        { bold: "Compliant, efficient platform", regular: " – Engineered for enterprise AI finance leaders focused on governance" },
+        { bold: "Instant insights extraction", regular: ": Quickly analyse financial reports, invoices, contracts, and compliance docs." },
+        { bold: "Contract & Invoice Intelligence", regular: ": Extract payment terms, escalation clauses, and obligations from contracts and flag inconsistencies using an enterprise AI platform." },
+        { bold: "Improve forecasting accuracy", regular: ": Use historical trends to inform accurate and predictive financial insights." },
+        { bold: "Financial report automation", regular: ": Extract key metrics from ERP systems, excel files, and previous reports to generate financial summaries, forecasts, and variance analysis." },
+        { bold: "Audit readiness and document search", regular: ": Provide instant access to audit-relevant records, retrieve historical compliance data and flag any gaps through an AI platform for enterprise." },
       ],
       learnMoreLink: "/resources/blogs/ai-for-finance-teams-real-time-insights-and-automation"
     },
     hr: {
       title: "Synoptix is for Every Team",
       features: [
-        { bold: "AI-powered employee support", regular: " – Answer queries with agents trained on your policies and docs" },
-        { bold: "Automated onboarding", regular: " – Deliver training materials and policy updates effortlessly" },
-        { bold: "Consistent communication", regular: " – Maintain aligned messaging across teams and locations" },
-        { bold: "Robust data protection", regular: " – Secure sensitive employee information with strict access controls" },
-        { bold: "People-first AI platform", regular: " – Designed for modern HR teams to streamline operations" },
+        { bold: "HR Policy Assistant", regular: ": A Conversational assistant retrieves relevant sections from HR handbooks, contracts, and policy documents instantly." },
+        { bold: "Automated Role and JD alignment", regular: ": Generate and update role descriptions based on internal benchmarks, skill metrics, and market standards." },
+        { bold: "Performance Review Support", regular: ": Ensure employee performance data, peer feedback, and goal tracking are summarized into a structured review summarise." },
+        { bold: "Employees sentiment analysis", regular: ": Analyses employees surveys, feedback forms, and exit interviews to surface sentiment trends." },
+        { bold: "Compliance & Policy Risk Monitoring", regular: ": Scans HR documents to identify non-compliant language or inconsistencies." },
       ],
       learnMoreLink: "/resources/blogs/modern-hr-automation-platform-for-smarter-employee-support"
     },
@@ -110,7 +109,7 @@ export default function SynoptixComponent() {
       <div className="bg-white rounded-2xl p-6">
         <div className="text-center mb-8 sm:mb-12">
           <h2 className="text-2xl sm:text-3xl text-slate-800" style={{ fontFamily: "Syne, sans-serif", fontWeight: 700, fontSize: "36px", lineHeight: "45px" }}>
-            Synoptix is for <span className="text-indigo-500">Every Team</span>
+            Synoptix is for <span className="text-indigo-500">Every Team</span> in the Enterprise
           </h2>
         </div>
 

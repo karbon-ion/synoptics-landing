@@ -91,7 +91,7 @@ export default function AiServicesSection() {
                   lineHeight: "20px",
                 }}
               >
-                Our enterprise AI platform fine- tunes large language models using your business-specific datasets to boost accuracy, efficiency, and relevance across every use case.
+                Fine-tunes large language models using your business-specific datasets to boost accuracy, efficiency, and relevance on a particular task or domain. 
               </p>
             </div>
             <Link
@@ -144,7 +144,7 @@ export default function AiServicesSection() {
                   lineHeight: "20px",
                 }}
               >
-                Our enterprise AI consultants' partner with your teams to design, implement, and scale AI strategies that align with your goals, ensure compliance, and deliver measurable ROI.
+               We help you unlock AI’s potential where strategy meets technology. Embedding intelligence across your operations to turn promise into measurable performance. 
               </p>
             </div>
             <Link
@@ -184,7 +184,7 @@ export default function AiServicesSection() {
                   color: "#323E50",
                 }}
               >
-                AI Strategy Development
+                Proof of Concepts (PoC) 
               </h3>
               <p
                 className="mt-2 pb-2 text-slate-600 text-sm leading-5"
@@ -195,7 +195,7 @@ export default function AiServicesSection() {
                   lineHeight: "20px",
                 }}
               >
-                Our enterprise AI platform helps you identify the highest-impact AI opportunities, align initiatives with your business roadmap, and create a sustainable strategy to scale intelligently.
+               Prototype AI solutions to validate performance, usability, and ROI before full-scale implementation. Our PoC helps de-risk innovation and builds confidence. 
               </p>
             </div>
             <Link
@@ -246,7 +246,7 @@ export default function AiServicesSection() {
                   lineHeight: "20px",
                 }}
               >
-                From custom learning paths to leadership workshops, we train your teams on how to use, manage, and scale AI responsibly — no technical background required.
+               Equip your teams with the knowledge and skills to adopt and govern AI responsibly. From executive briefings to hands-on technical workshops with enterprise AI platform. 
               </p>
             </div>
             <Link

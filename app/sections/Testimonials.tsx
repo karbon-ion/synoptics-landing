@@ -57,6 +57,13 @@ export default function Testimonials() {
       position: "Founding Partner & CEO, SKV Invest GmbH  ",
       avatar: "https://randomuser.me/api/portraits/women/33.jpg",
     },
+    {
+      id: 7,
+      text: "Synoptix AI emphasis on security and compliance is reassuring. Having real-time, AI-powered answers dramatically enhances operational efficiency.” ",
+      name: "Zefyron ",
+      position: "Software Engineer ",
+      avatar: "https://randomuser.me/api/portraits/women/33.jpg",
+    },
     
     
   ]

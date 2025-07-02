@@ -20,7 +20,7 @@ const TrackSection = () => {
               fontWeight: 700,
             }}
           >
-            <span className="text-[#5662F6] ">Track and Optimise</span> Performance at Scale
+            <span className="text-[#5662F6] ">Real-time   </span> Performance Monitoring
           </h1>
 
           <p 
@@ -32,8 +32,7 @@ const TrackSection = () => {
               color: '#000000'
             }}
           >
-            Monitor usage, efficiency, and accuracy in real time with enterprise-grade analytics. 
-            Measure impact across teams, identify optimisation opportunities, and continuously refine your AI agents to maximise productivity, ROI, and business outcomes with enterprise AI platform.
+            Gain real-time visibility into model and data health across all data connections. Track response times, usage, user feedback, and quality metrics, including groundedness, relevance, fluency, and similarity, all in one central dashboard with built-in evaluations. 
           </p>
           <div className="flex justify-center md:justify-start">
             <Link
@@ -41,7 +40,7 @@ const TrackSection = () => {
               className="bg-[#5662F6] hover:bg-indigo-600 text-white py-2.5 sm:py-3 px-6 sm:px-8 rounded-full inline-flex items-center justify-center transition-colors whitespace-nowrap max-w-[200px] sm:max-w-none"
               style={{ fontFamily: 'Syne', fontWeight: 500, fontSize: '16px', lineHeight: '24px' }}
             >
-              Get started <ArrowRight className="ml-2 h-4 w-4" />
+              Learn more <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </div>
           

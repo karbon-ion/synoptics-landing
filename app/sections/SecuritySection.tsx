@@ -6,7 +6,7 @@ export default function EnterpriseSecuritySection() {
     <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-34">
       <div className="flex flex-col md:flex-row justify-between items-center mb-8 md:mb-12 gap-4">
         <h2 className="text-2xl sm:text-3xl md:text-[36px] text-center md:text-left text-gray-800" style={{ fontFamily: 'Syne, sans-serif', lineHeight: '45px',fontWeight: 700 }}>
-          Responsible AI Built for  <span className="text-indigo-500">Enterprise</span>
+        Responsible AI That Protects     <span className="text-indigo-500">Enterprise Data</span>
         </h2>
         <Link
           href="/platform/ai-security-tool/syno-guard"
@@ -58,7 +58,7 @@ export default function EnterpriseSecuritySection() {
                 Anti Hallucination <ArrowRight className="ml-2 h-4 w-4" />
               </h3>
               <p className="text-xs ml-8 pb-5 text-white/80 leading-relaxed">
-                Reduce AI errors with real-world data and scoring benchmarks
+              Detect LLM hallucinations to ensure outputs are accurate and grounded in data. 
               </p>
             </div>
           </div>
@@ -80,7 +80,7 @@ export default function EnterpriseSecuritySection() {
                 Toxicity Detection <ArrowRight className="ml-2 h-4 w-4" />
               </h3>
               <p className="text-xs ml-6 pb-5 text-slate-600 leading-relaxed">
-                Detect and minimise harmful language using enterprise-grade filters
+              Detects and blocks violence, hate, sexual content, and self-harm content using enterprise-grade filters.  
               </p>
             </div>
           </div>
@@ -102,7 +102,7 @@ export default function EnterpriseSecuritySection() {
                 PII Extraction <ArrowRight className="ml-2 h-4 w-4" />
               </h3>
               <p className="text-xs ml-8 pb-5 text-slate-600 leading-relaxed">
-                Identify and extract personal data to support compliance standards
+              Identify and extract personally identifiable information to support compliance standards.  
               </p>
             </div>
           </div>
