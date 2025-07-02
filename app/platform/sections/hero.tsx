@@ -15,8 +15,7 @@ export default function RagHero() {
                 className="text-xl sm:text-2xl md:text-5xl mb-20 md:mb-60 text-[#323E50] leading-tight md:leading-[72px]"
                 style={{ fontFamily: 'Syne, sans-serif', fontWeight: 700, letterSpacing: '0%' }}
             >
-                The <span className="text-[#5662F6]">Enterprise AI Platform</span> That Works  <br className="hidden md:block" />
-                with Your Data—Not Just on It
+                AI That Understands  <span className="text-[#5662F6]">Your Business</span> 
             </h1>
         </section>
     );

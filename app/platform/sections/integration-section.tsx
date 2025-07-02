@@ -25,7 +25,7 @@ const IntegrationSection = () => {
           </span>
           <span style={{ fontFamily: "Poppins, sans-serif", fontWeight: 400, fontSize: "14", lineHeight: "24px", letterSpacing: "0%", color: "#4A5565" }}>
           <p className="mt-4 text-[#4A5565]">
-          Easily connect to your existing tools—our AI platform for enterprise integrates across your stack to deliver insights and speed up securely and in real time. 
+          Connect all business applications, such as CRMs, ERPs, and Teams, in one place. Our enterprise AI platform integrates multiple data sources, documents, spreadsheets, presentations, and emails. 
           </p>
           </span>
           <Link
@@ -33,7 +33,7 @@ const IntegrationSection = () => {
             className="bg-[#5662F6] mt-4 hover:bg-indigo-600 text-white py-2 sm:py-3 px-6 sm:px-8 rounded-full inline-flex items-center transition-colors whitespace-nowrap"
             style={{ fontFamily: 'Syne', fontWeight: 500, fontSize: 'clamp(16px, 4vw, 18px)' }}
           >
-            Contact Us <ArrowRight className="ml-2 h-4 w-4" />
+           Get to know about Integration  <ArrowRight className="ml-2 h-4 w-4" />
           </Link>
         </div>
 

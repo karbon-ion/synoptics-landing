@@ -4,6 +4,9 @@ export default function DeploymentSection() {
   return (
     <section className="w-full py-6 md:py-10 bg-white">
       <div className="max-w-6xl mx-auto px-4 md:px-6">
+        <h1 className="text-center text-3xl font-bold mb-8" style={{fontFamily: "Syne", fontWeight: 700, fontSize: "36px", lineHeight: "45px"}}>
+          Deployment Options Tailored to <span className="text-[#5662F6]">Enterprise Needs</span>
+        </h1>
         <div className="flex flex-col md:flex-row gap-8 md:gap-16 justify-center">
           {/* Cloud-Native Deployment */}
           <div className="bg-white rounded-xl md:rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100 w-full md:w-[600px]">
@@ -20,13 +23,11 @@ export default function DeploymentSection() {
               <h2 className="text-[#5662F6] font-bold text-xl md:text-2xl mb-1" style={{ fontFamily: "Syne, sans-serif" }}>Cloud-Native Deployment</h2>
               <p className="text-gray-600 text-xs md:text-sm mb-4 md:mb-6" style={{ fontFamily: "Poppins, sans-serif" }}>(Client's Environment)</p>
               <ul className="space-y-1.5 md:space-y-1">
-                <FeatureItem text="Fully managed LLM inference" />
-                <FeatureItem text="Integrated vector search" />
-                <FeatureItem text="Secure, resilient storage" />
-                <FeatureItem text="Built-in RAG pipelines" />
-                <FeatureItem text="Scalable API endpoints" />
-                <FeatureItem text="Enterprise security & compliance" />
-                <FeatureItem text="Extensible third-party integrations" />
+                <FeatureItem text="Client-hosted in Azure environment" />
+                <FeatureItem text="Data sovereignty" />
+                <FeatureItem text="Low maintenance overhead" />
+                <FeatureItem text="Compliance ready" />
+                <FeatureItem text="Rapid scalability" />
               </ul>
             </div>
           </div>
@@ -46,13 +47,11 @@ export default function DeploymentSection() {
               <h2 className="text-[#5662F6] font-bold text-xl md:text-2xl mb-1" style={{ fontFamily: "Syne, sans-serif" }}>Fully-Offline Deployment</h2>
               <p className="text-gray-600 text-xs md:text-sm" style={{ fontFamily: "Poppins, sans-serif" }}>(On-Premise/Private Cloud) </p>
               <ul className="space-y-1.5 md:space-y-1 mt-4 md:mt-6">
-                <FeatureItem text="Local model hosting" />
-                <FeatureItem text="On‑prem vector database" />
-                <FeatureItem text="Self‑hosted object storage" />
-                <FeatureItem text="Modular RAG orchestration" />
-                <FeatureItem text="Container‑based deployment" />
-                <FeatureItem text="Local REST API & UI" />
-                <FeatureItem text="Complete data sovereignty" />
+                <FeatureItem text="On-premise deployment" />
+                <FeatureItem text="Self-hosted and controlled" />
+                <FeatureItem text="Custom integrations supported" />
+                <FeatureItem text="Offline evaluations" />
+                <FeatureItem text="No cloud dependency" />
               </ul>
             </div>
           </div>
