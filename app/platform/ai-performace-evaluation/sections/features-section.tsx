@@ -68,7 +68,7 @@ export default function FeaturesSection() {
                 }}>
                   {feature.description}
                 </p>
-                <Link
+                {/* <Link
                   href="#"
                   className="inline-flex items-center text-[#6B7BF7] hover:opacity-80 transition-opacity"
                   style={{
@@ -80,7 +80,7 @@ export default function FeaturesSection() {
                 >
                   {feature.learnMoreText}
                   <ArrowRight className="h-3 w-3 ml-1" />
-                </Link>
+                </Link> */}
               </div>
             </div>
 
