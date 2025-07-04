@@ -229,11 +229,11 @@ export const NavbarMenu = () => {
       {
         icon: '/navbar-platform/synoptix-library-icon.svg',
         title: 'Synoptix Library',
-        href: '/',
+        href: '/platform/synoptix-library',
         description: '',
         items: [
-          { name: 'Prompt Library', href: '/platform/prompt-library' },
-          { name: 'Agent Library', href: '/platform/agent-library' }
+          { name: 'Prompt Library', href: '/platform/synoptix-library/prompt-library' },
+          { name: 'Agent Library', href: '/platform/synoptix-library/agent-library' }
         ]
       }
     ],
