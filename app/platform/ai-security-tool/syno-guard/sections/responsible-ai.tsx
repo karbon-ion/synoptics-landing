@@ -147,7 +147,7 @@ export default function AgentTypesSection() {
             fontWeight: 700
           }}
         >
-          Synoptix: Responsible AI Built for <span className="text-indigo-500"> Enterprise </span>
+          SynoptixAI: Responsible AI Built for <span className="text-indigo-500"> Enterprise </span>
         </h2>
         
         <div className="relative overflow-hidden rounded-xl w-full hidden lg:block">
