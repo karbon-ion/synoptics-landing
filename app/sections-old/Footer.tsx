@@ -35,7 +35,7 @@ const Footer = () => {
     { name: 'Facebook', href: 'https://www.facebook.com/profile.php?id=61574933377526', icon: '/facebook-icon.svg' },
     { name: 'Twitter', href: 'https://x.com/Synoptix_AI', icon: '/twitter-icon.svg' },
     { name: 'LinkedIn', href: 'https://www.linkedin.com/company/synoptix-ai', icon: '/linkedin-icon.svg' },
-    { name: 'YouTube', href: 'https://www.youtube.com', icon: '/youtube-icon.svg' },
+    // { name: 'YouTube', href: 'https://www.youtube.com', icon: '/youtube-icon.svg' },
   ];
 
   return (
