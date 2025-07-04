@@ -325,7 +325,7 @@ export const NavbarMenu = () => {
 
   const resourcesItems = [
     { name: 'Blog', href: '/resources/blogs', description: 'Latest insights and updates' },
-    // { name: 'Tutorials', href: '/resources/tutorials', description: 'Step-by-step guides' },
+    { name: 'Glossary', href: '/resources/glossary', description: 'Definitions of key terms and concept' },
   ];
 
   return (
@@ -335,7 +335,7 @@ export const NavbarMenu = () => {
         <Link href="/" className="flex items-center gap-2 group">
           <div className="relative w-7 h-7 transition-transform duration-300 group-hover:scale-110">
             <Image
-              src="/synoptix_logo.png"
+              src="/synoptix_logo.svg"
               alt="Synoptix Logo"
               fill
               className="object-contain"
@@ -394,7 +394,7 @@ export const NavbarMenu = () => {
     <Link href="/" className="flex items-center gap-2 group">
       <div className="relative w-8 h-8 transition-transform duration-300 group-hover:scale-110">
         <Image
-          src="/synoptix_logo.png"
+          src="/synoptix_logo.svg"
           alt="Synoptix Logo"
           fill
           className="object-contain"
@@ -524,9 +524,9 @@ export const NavbarMenu = () => {
                           <div className="flex flex-col mb-3">
                             <div className="flex items-center">
                               <Image src={section.icon} width={24} height={24} alt={`${section.title} icon`} className="mr-3" />
-                              <Link href={section.href || (section.items && section.items[0]?.href) || '/platform'} className="hover:opacity-80" onClick={() => setActive(null)}>
+                              {section.title === 'Synoptix Voice Agents' ? (
                                 <h3 
-                                  className="text-[#5662F6]" 
+                                  className="text-[#5662F6] cursor-default" 
                                   style={{ 
                                     fontFamily: 'Syne', 
                                     fontWeight: 700, 
@@ -537,7 +537,22 @@ export const NavbarMenu = () => {
                                 >
                                   {section.title}
                                 </h3>
-                              </Link>
+                              ) : (
+                                <Link href={section.href || (section.items && section.items[0]?.href) || '/platform'} className="hover:opacity-80" onClick={() => setActive(null)}>
+                                  <h3 
+                                    className="text-[#5662F6]" 
+                                    style={{ 
+                                      fontFamily: 'Syne', 
+                                      fontWeight: 700, 
+                                      fontSize: '20px', 
+                                      lineHeight: '100%', 
+                                      letterSpacing: '0px' 
+                                    }}
+                                  >
+                                    {section.title}
+                                  </h3>
+                                </Link>
+                              )}
                             </div>
                             {section.description && (
                               <div className="ml-9 mt-1">
@@ -587,23 +602,42 @@ export const NavbarMenu = () => {
                     <div className="grid grid-cols-3 gap-6 pt-6 border-t border-gray-200">
                       {platformDropdownConfig.footer.map((item, idx) => (
                         <div key={`footer-${idx}`}>
-                          <Link 
-                            href={item.href} 
-                            className="flex flex-col text-gray-600 hover:text-blue-600"
-                            onClick={() => setActive(null)}
-                          >
-                            <div className="flex items-center">
-                              <Image src={item.icon} width={24} height={24} alt={`${item.title} icon`} className="mr-3" />
-                              <span style={{ 
-                                fontFamily: 'Syne', 
-                                fontWeight: 700, 
-                                fontSize: '20px', 
-                                lineHeight: '100%', 
-                                letterSpacing: '0px' 
-                              }}>
-                                {item.title}
-                              </span>
+                          {item.title === 'APIs' ? (
+                            <div className="flex flex-col text-gray-600">
+                              <div className="flex items-center">
+                                <Image src={item.icon} width={24} height={24} alt={`${item.title} icon`} className="mr-3" />
+                                <span style={{ 
+                                  fontFamily: 'Syne', 
+                                  fontWeight: 700, 
+                                  fontSize: '20px', 
+                                  lineHeight: '100%', 
+                                  letterSpacing: '0px',
+                                  cursor: 'default'
+                                }}>
+                                  {item.title}
+                                </span>
+                              </div>
                             </div>
+                          ) : (
+                            <Link 
+                              href={item.href} 
+                              className="flex flex-col text-gray-600 hover:text-blue-600"
+                              onClick={() => setActive(null)}
+                            >
+                              <div className="flex items-center">
+                                <Image src={item.icon} width={24} height={24} alt={`${item.title} icon`} className="mr-3" />
+                                <span style={{ 
+                                  fontFamily: 'Syne', 
+                                  fontWeight: 700, 
+                                  fontSize: '20px', 
+                                  lineHeight: '100%', 
+                                  letterSpacing: '0px' 
+                                }}>
+                                  {item.title}
+                                </span>
+                              </div>
+                            </Link>
+                          )}
                             {(item.title === 'APIs' || item.title === 'Integration') && (
                               <div className="ml-9 mt-1">
                                 <span 
@@ -619,7 +653,6 @@ export const NavbarMenu = () => {
                                 </span>
                               </div>
                             )}
-                          </Link>
                         </div>
                       ))}
                     </div>

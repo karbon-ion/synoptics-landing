@@ -47,7 +47,7 @@ const Footer = () => {
           <div className="mb-8 md:mb-0">
             <div className="flex items-center mb-4">
               <Image
-                src="/synoptix_logo.png"
+                src="/synoptix_logo.svg"
                 alt="Synoptix AI"
                 width={36}
                 height={36}

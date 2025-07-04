@@ -127,8 +127,10 @@ const BlogContent = ({ content }) => {
     return htmlContent.replace(summarizeRegex, (match, heading, content) => {
       // Clean up any trailing whitespace or empty paragraphs
       const cleanContent = content.replace(/(<p>\s*<\/p>\s*)*$/, '');
+      // Replace 'Summarize' with 'Summary' in the heading
+      const updatedHeading = heading.replace(/(>\s*)Summarize(:?\s*<)/i, '$1Summary$2');
       // Return the content wrapped in our custom component's structure
-      return `<div class="summarize-section">${heading}${cleanContent}</div>`;
+      return `<div class="summarize-section">${updatedHeading}${cleanContent}</div>`;
     });
   };
   useEffect(() => {

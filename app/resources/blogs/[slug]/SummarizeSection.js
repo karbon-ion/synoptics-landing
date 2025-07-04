@@ -5,11 +5,11 @@ import Image from 'next/image';
 
 const SummarizeSection = ({ children }) => {
   const renderWithIcon = (heading) => (
-    <div key="heading-with-icon" className="flex items-center gap-3 pb-4 border-b border-[#E5E7EB] mb-4">
+    <div key="heading-with-icon" className="flex items-center gap-3  border-b border-[#E5E7EB] ">
       <div className="w-[50px] h-[50px] flex items-center justify-center rounded-full bg-[#F3F7FB] p-3">
         <Image 
-          src="/synoptix_logo.png" 
-          alt="Summarize icon" 
+          src="/synoptix_logo.svg" 
+          alt="Summary icon" 
           width={30} 
           height={30}
           style={{ backgroundColor: 'transparent' }}
@@ -48,7 +48,7 @@ const SummarizeSection = ({ children }) => {
         // Only modify the first heading
         const modifiedHtml = child.props.dangerouslySetInnerHTML.__html.replace(
           /(<h[1-6][^>]*>.*?<\/h[1-6]>)/i,
-          '<div class="flex items-center gap-3 pb-4 border-b border-[#E5E7EB] mb-4"><div class="w-[50px] h-[50px] flex items-center justify-center rounded-full bg-[#F3F7FB] p-3"><img src="/synoptix_logo.png" alt="Summarize icon" width="30" height="30" style="background-color: transparent; object-fit: contain;" class="shadow-none" /></div><div style="font-family: Syne; font-weight: 700; font-size: 40px; line-height: 45px; letter-spacing: 0%;">$1</div></div>'
+          '<div class="flex items-center gap-3  border-b border-[#E5E7EB] mb-4"><div class="w-[50px] h-[50px] flex items-center justify-center rounded-full bg-[#F3F7FB] p-3"><img src="/synoptix_logo.svg" alt="Summary icon" width="30" height="30" style="background-color: transparent; object-fit: contain;" class="shadow-none" /></div><div style="font-family: Syne; font-weight: 700; font-size: 40px; line-height: 45px; letter-spacing: 0%;">$1</div></div>'
         );
         
         return React.cloneElement(child, {
