@@ -32,7 +32,7 @@ const Hero = () => {
           textAlign: 'center',
           marginBottom: '1rem'
         }}>
-          Seamlessly integrate your apps
+          Seamless Integrations for Smarter Enterprise AI
         </h1>
         <p style={{
           fontFamily: 'Poppins',
@@ -44,7 +44,7 @@ const Hero = () => {
           maxWidth: '40rem',
           margin: '0 auto 4rem'
         }}>
-          Connect all your existing applications. Experience the power of your company's collective knowledge all in one place.
+          Connect your existing business application and data sources. Unlock the full power of your enterprise data in one unified platform.
         </p>
         <div className="flex justify-center items-center gap-8 flex-wrap">
           {integrations.map((integration, index) => (

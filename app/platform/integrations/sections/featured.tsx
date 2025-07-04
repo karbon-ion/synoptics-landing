@@ -50,7 +50,7 @@ const Featured = () => {
           textAlign: 'center',
           marginBottom: '1rem'
         }}>
-          featured integrations
+          Featured Integration
         </h2>
         <p style={{
           fontFamily: 'Poppins',
@@ -62,7 +62,7 @@ const Featured = () => {
           maxWidth: '60rem',
           margin: '0 auto 4rem'
         }}>
-          Synoptix easily integrates with your key applications and systems, enabling your entire workforce to find answers, automate tasks, and boost productivity
+         Synoptix AI connects with hundreds of enterprise systems so that you can embed AI into workflows. Access and act on your business data directly through your existing tools.
         </p>
         <div style={{ 
           display: 'grid', 

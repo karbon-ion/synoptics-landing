@@ -32,10 +32,10 @@ export default function VideoSection({ videoRef, isInView }: VideoSectionProps) 
     : "https://www.youtube.com/embed/MgRh-vN9ZBg?si=2cCxYwAaUmSEDIrb&rel=0";
 
   return (
-    <div className="relative w-full py-16 bg-[#F9FBFF]">
+    <div className="relative ml-20 ">
       <div className="container mx-auto">
         {isMobile ? (
-          <div className="px-4 sm:px-6">
+          <div className="sm:px-6">
             <div className="relative mx-auto w-full max-w-[360px]">
               <div className="relative w-full pt-[56.25%]">
                 <iframe
