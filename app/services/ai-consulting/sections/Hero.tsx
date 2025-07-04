@@ -1,25 +1,64 @@
-import { Button } from "@/components/ui/Button";
+import Image from 'next/image';
+import Link from 'next/link';
 
-export default function RagHero() {
+export default function Hero() {
   return (
-      <section className="min-h-screen flex flex-col items-center justify-center text-center px-4 py-16 bg-gradient-to-b bg-[#f0f5ff]">
-          <h1 className="text-5xl md:text-6xl font-bold mb-8">
+    <div className="relative w-full h-[500px] flex flex-col items-center justify-center overflow-hidden">
+      <Image
+        src="/services/bg.png"
+        alt="Services Background"
+        fill
+        className="object-cover z-0"
+        priority
+      />
+      <div className="absolute inset-0 z-10"></div>
+      <div className="relative z-20 max-w-4xl mx-auto px-4 text-center">
+        <h1 style={{
+          fontFamily: 'Syne',
+          fontWeight: 700,
+          fontSize: '48px',
+          lineHeight: '72px',
+          letterSpacing: '0%',
+          textAlign: 'center',
+          color: '#323E50',
+          marginBottom: '16px'
+        }}>
           AI Consulting Services
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-700 max-w-4xl mb-6">
-          Boost efficiency, automate workflows, and accelerate success with customised AI Consulting and integration. Let’s transform the way you work.
-          </p>
-          {/* <p className="text-2xl md:text-3xl font-semibold text-gray-800 max-w-3xl mb-12">
-              Your data holds the answers—put it to work and take control.
-          </p> */}
-        <Button 
-                    href="/#contact" 
-                    variant="primary"
-                    size="lg"
-                    className="mb-10 sm:mb-16"
-                >
-              Book a Meeting
-          </Button>
-      </section>
+        </h1>
+        <p style={{
+          fontFamily: 'Poppins',
+          fontWeight: 400,
+          fontSize: '16px',
+          lineHeight: '30px',
+          letterSpacing: '2%',
+          textAlign: 'center',
+          color: '#323E50',
+          maxWidth: '800px',
+          margin: '0 auto'
+        }}>
+          Boost efficiency, automate workflows, and accelerate success with customised AI Consulting and integration. Let's transform the way you work.
+        </p>
+        <div style={{ marginTop: '32px' }}>
+          <Link 
+            href="/contact" 
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              backgroundColor: '#5E5CFF',
+              color: 'white',
+              fontFamily: 'Poppins',
+              fontWeight: 500,
+              padding: '12px 24px',
+              borderRadius: '50px',
+              transition: 'all 0.3s ease',
+              textDecoration: 'none'
+            }}
+          >
+            Book a consultation →
+          </Link>
+        </div>
+      </div>
+    </div>
   );
 }

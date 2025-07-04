@@ -84,7 +84,17 @@ const ResultSection = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         
         
-      <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 max-w-4xl mx-auto">
+      <h2 style={{
+        fontFamily: 'Syne',
+        fontWeight: 700,
+        fontSize: '36px',
+        lineHeight: '48px',
+        letterSpacing: '0%',
+        textAlign: 'center',
+        verticalAlign: 'middle',
+        color: '#323E50',
+        marginBottom: '24px'
+      }}>
           Results You Can Expect 
         </h2>
         
@@ -96,7 +106,18 @@ const ResultSection = () => {
             <div key={stat.id} className="flex flex-col items-start">
               <div className="w-full mb-4">
                 
-                <h3 className="text-sm font-semibold tracking-wider uppercase text-gray-600 mb-2 text-left">
+                <h3 style={{
+                  fontFamily: 'Poppins',
+                  fontWeight: 600,
+                  fontSize: '14px',
+                  lineHeight: '20px',
+                  letterSpacing: '0.7px',
+                  verticalAlign: 'middle',
+                  textTransform: 'uppercase',
+                  color: '#323E50',
+                  marginBottom: '8px',
+                  textAlign: 'left'
+                }}>
                   {stat.category}
                 </h3>
                 <div className="h-[2px] w-full bg-gradient-to-r from-blue-400 to-blue-600 rounded-full" />
@@ -113,7 +134,17 @@ const ResultSection = () => {
                     </span>
                   )}
                 </div>
-                <p className="mt-2 text-gray-600 text-left">
+                <p style={{
+                  fontFamily: 'Poppins',
+                  fontWeight: 400,
+                  fontSize: '14px',
+                  lineHeight: '24px',
+                  letterSpacing: '0%',
+                  verticalAlign: 'middle',
+                  color: '#323E50',
+                  marginTop: '8px',
+                  textAlign: 'left'
+                }}>
                   {stat.description}
                 </p>
               </div>
