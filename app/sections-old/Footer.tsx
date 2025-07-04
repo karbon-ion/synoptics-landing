@@ -9,16 +9,15 @@ const Footer = () => {
     { name: 'Synoptix Agents', href: '/platform/synoptix-ai-agents' },
     { name: 'Evaluations', href: '/platform/ai-performace-evaluation' },
     { name: 'SynoGuard', href: '/platform/ai-security-tool/syno-guard' },
-    { name: 'Synoptix Library', href: '/synoptix-library' },
+    { name: 'Synoptix Library', href: '/platform/synoptix-library' },
+    { name: 'Integration', href: '/platform/integration' },
   ];
 
-  // const solutionsLinks = [
-  //   { name: 'Sales', href: '/solutions/sales' },
-  //   { name: 'Marketing', href: '/solutions/marketing' },
-  //   { name: 'Finance', href: '/solutions/finance' },
-  //   { name: 'HR', href: '/solutions/hr' },
-  //   { name: 'IT', href: '/solutions/it' },
-  // ];
+  const solutionsLinks = [
+    { name: 'Blog', href: '/resources/blogs' },
+    { name: 'Glossary', href: '/resources/glossary' },
+   
+  ];
 
   const servicesLinks = [
     { name: 'AI Consulting', href: '/services/ai-consulting' },
@@ -28,8 +27,8 @@ const Footer = () => {
   const companyLinks = [
     { name: 'About Us', href: '/about-us' },
     { name: 'Contact Us', href: '/contact-us' },
-    { name: 'Integration', href: '/integration' },
-    { name: 'Model Hub', href: '/model-hub' },
+    // { name: 'Integration', href: '/platform/integration' },
+    { name: 'Model Directory', href: '/platform/model-directory' },
   ];
 
   const socialLinks = [
@@ -125,7 +124,7 @@ hello@synoptix.ai
               </span>
           </div>
           
-          {/* Solutions Links - Commented out
+          {/* Solutions Links - Commented out */}
           <div className="mb-8 md:mb-0">
             <h3 style={{
               fontFamily: 'Poppins, sans-serif',
@@ -134,7 +133,7 @@ hello@synoptix.ai
               lineHeight: '20px',
               letterSpacing: '0%',
               textTransform: 'uppercase',
-              color: '#626DFF' }} className="mb-4">SOLUTIONS</h3>
+              color: '#626DFF' }} className="mb-4">RESOURCES</h3>
             <span style={{
               fontFamily: 'Poppins, sans-serif',
               fontWeight: 400,
@@ -154,7 +153,7 @@ hello@synoptix.ai
               </ul>
             </span>
           </div>
-          */}
+         
 
           {/* Services Links */}
           <div className="mb-8 md:mb-0">

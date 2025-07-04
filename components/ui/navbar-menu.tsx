@@ -272,7 +272,7 @@ export const NavbarMenu = () => {
       {
         icon: '/navbar-platform/integration-icon.svg',
         title: 'Integration',
-        href: '/',
+        href: '/platform/integrations',
         description: ''
       },
       {
@@ -638,7 +638,7 @@ export const NavbarMenu = () => {
                               </div>
                             </Link>
                           )}
-                            {(item.title === 'APIs' || item.title === 'Integration') && (
+                            {(item.title === 'APIs') && (
                               <div className="ml-9 mt-1">
                                 <span 
                                   className="text-gray-500 bg-gray-100 px-2 py-0.5 rounded-md" 
