@@ -106,19 +106,32 @@ const AccordionItem = ({
           color: '#1E2939'
         }} className="mb-4">{description}</p>
               <div className="space-y-3">
-                {benefits.map((benefit, idx) => (
-                  <div key={idx} className="flex items-start">
-                    <span style={{ color: '#000000', fontSize: '24px', lineHeight: '28px', marginRight: '12px', marginTop: '-2px' }}>•</span>
-                    <span style={{
-          fontFamily: 'Poppins',
-          fontWeight: 400,
-          fontSize: '14px',
-          lineHeight: '28px',
-          letterSpacing: '0%',
-          color: '#1E2939'
-        }}>{benefit}</span>
-                  </div>
-                ))}
+                {benefits.map((benefit, idx) => {
+                  const colonIndex = benefit.indexOf(':');
+                  const beforeColon = colonIndex > -1 ? benefit.substring(0, colonIndex) : '';
+                  const afterColon = colonIndex > -1 ? benefit.substring(colonIndex) : benefit;
+                  
+                  return (
+                    <div key={idx} className="flex items-start">
+                      <span style={{ color: '#000000', fontSize: '24px', lineHeight: '28px', marginRight: '12px', marginTop: '-2px' }}>•</span>
+                      <span style={{
+                        fontFamily: 'Poppins',
+                        fontWeight: 400,
+                        fontSize: '14px',
+                        lineHeight: '28px',
+                        letterSpacing: '0%',
+                        color: '#1E2939'
+                      }}>
+                        {colonIndex > -1 ? (
+                          <>
+                            <span style={{ fontWeight: 700 }}>{beforeColon}</span>
+                            {afterColon}
+                          </>
+                        ) : benefit}
+                      </span>
+                    </div>
+                  );
+                })}
               </div>
             </div>
           </motion.div>
@@ -248,19 +261,32 @@ const TechniquesSection = () => {
                 </p>
 
                 <div className="space-y-5">
-                  {techniqueData[activeIndex].benefits.map((benefit, index) => (
-                    <div key={index} className="flex items-start">
-                      <span style={{ color: '#000000', fontSize: '15px', lineHeight: '28px', marginRight: '12px', marginTop: '2px' }}>•</span>
-                      <span style={{
-                  fontFamily: 'Poppins',
-                  fontWeight: 400,
-                  fontSize: '14px',
-                  lineHeight: '28px',
-                  letterSpacing: '0%',
-                  color: '#1E2939'
-                }}>{benefit}</span>
-                    </div>
-                  ))}
+                  {techniqueData[activeIndex].benefits.map((benefit, index) => {
+                    const colonIndex = benefit.indexOf(':');
+                    const beforeColon = colonIndex > -1 ? benefit.substring(0, colonIndex) : '';
+                    const afterColon = colonIndex > -1 ? benefit.substring(colonIndex) : benefit;
+                    
+                    return (
+                      <div key={index} className="flex items-start">
+                        <span style={{ color: '#000000', fontSize: '15px', lineHeight: '28px', marginRight: '12px', marginTop: '2px' }}>•</span>
+                        <span style={{
+                          fontFamily: 'Poppins',
+                          fontWeight: 400,
+                          fontSize: '14px',
+                          lineHeight: '28px',
+                          letterSpacing: '0%',
+                          color: '#1E2939'
+                        }}>
+                          {colonIndex > -1 ? (
+                            <>
+                              <span style={{ fontWeight: 700 }}>{beforeColon}</span>
+                              {afterColon}
+                            </>
+                          ) : benefit}
+                        </span>
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
             </div>

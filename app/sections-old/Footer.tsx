@@ -9,19 +9,24 @@ const Footer = () => {
     { name: 'Synoptix Agents', href: '/platform/synoptix-ai-agents' },
     { name: 'Evaluations', href: '/platform/ai-performace-evaluation' },
     { name: 'SynoGuard', href: '/platform/ai-security-tool/syno-guard' },
-    { name: 'Synoptix Library', href: '/platform/synoptix-library' },
-    { name: 'Integration', href: '/platform/integrations' },
+    // { name: 'Synoptix Library', href: '/platform/synoptix-library' },
+    { name: 'Integrations', href: '/platform/integrations' },
   ];
 
   const solutionsLinks = [
     { name: 'Blog', href: '/resources/blogs' },
     { name: 'Glossary', href: '/resources/glossary' },
-   
+    { name: 'Agent Library', href: '/platform/synoptix-library/agent-library' },
+    { name: 'Prompt Library', href: '/platform/synoptix-library/prompt-library' },
+    { name: 'Model Directory', href: '/platform/model-directory' },
+    { name: 'About Us', href: '/about-us' },
   ];
 
   const servicesLinks = [
     { name: 'AI Consulting', href: '/services/ai-consulting' },
-    // { name: 'Fine-tuning & Optimization', href: '/services/fine-tuning' },
+    { name: 'Fine-tuning & Optimization', href: '/services/ai-consulting' },
+    { name: 'Proof of Concepts', href: '/services/ai-consulting' },
+    { name: 'Training and Education', href: '/services/ai-consulting' },
   ];
   
   const companyLinks = [
@@ -54,10 +59,12 @@ const Footer = () => {
               />
               <span className="text-xl font-bold">Synoptix.AI</span>
             </div>
-            <p className="text-sm text-gray-300 mb-2">
-hello@synoptix.ai
-
-</p>
+            <Image
+  src="/footer/trusted.png"
+  alt="Trusted Partners"
+  width={200}
+  height={50}
+/>
           </div>
 
           {/* Platform Links */}
@@ -94,7 +101,7 @@ hello@synoptix.ai
           </div>
           
           {/* Company Links */}
-          <div className="mb-8 md:mb-0">
+          {/* <div className="mb-8 md:mb-0">
             <h3 style={{
                 fontFamily: 'Poppins, sans-serif',
                 fontWeight: 500,
@@ -122,7 +129,7 @@ hello@synoptix.ai
                 ))}
               </ul>
               </span>
-          </div>
+          </div> */}
           
           {/* Solutions Links - Commented out */}
           <div className="mb-8 md:mb-0">
@@ -252,6 +259,10 @@ hello@synoptix.ai
                 </svg>
               </Link>
             </div>
+            <p className="text-sm text-gray-300 mt-3 mb-2">
+hello@synoptix.ai
+
+</p>
           </div>
         </div>
 

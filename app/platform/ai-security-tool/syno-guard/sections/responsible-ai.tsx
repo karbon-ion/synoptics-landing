@@ -189,8 +189,8 @@ export default function AgentTypesSection() {
             </div>
             
             {/* Right side - Content */}
-            <div className="lg:w-2/3 mt-10">
-              <div className="max-w-xl">
+            <div className="lg:w-2/3 mt-10 flex flex-col" style={{ height: '100%' }}>
+              <div className={`max-w-xl ${activeAgent.id === 'decision-support' || activeAgent.id === 'anomalies' ? 'my-auto' : ''}`}>
                 <h3 
                   className={`text-xl font-semibold mb-4 text-gray-800${activeAgent.id === 'code-gen' || activeAgent.id === 'assurance' ? ' whitespace-nowrap' : ''}`}
                   style={{

@@ -9,7 +9,7 @@ export default function DeploymentSection() {
         </h1>
         <div className="flex flex-col md:flex-row gap-8 md:gap-16 justify-center">
           {/* Cloud-Native Deployment */}
-          <div className="bg-white rounded-xl md:rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100 w-full md:w-[600px]">
+          <div className="bg-white rounded-xl md:rounded-2xl p-6 md:p-8 shadow-md border-t-4 border-[#5662F6] border-r border-l border-b border-gray-200 w-full md:w-[600px] transition-all hover:shadow-lg">
             <div className="h-[250px] md:h-[400px] relative flex items-center justify-center bg-white rounded-xl overflow-hidden">
               <Image
                 src="/platform/cloud-native-development.svg"
@@ -33,7 +33,7 @@ export default function DeploymentSection() {
           </div>
 
           {/* Fully-Offline Deployment */}
-          <div className="bg-white rounded-xl md:rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100 w-full md:w-[600px]">
+          <div className="bg-white rounded-xl md:rounded-2xl p-6 md:p-8 shadow-md border-t-4 border-[#5662F6] border-r border-l border-b border-gray-200 w-full md:w-[600px] transition-all hover:shadow-lg">
             <div className="h-[250px] md:h-[400px] relative flex items-center justify-center bg-white rounded-xl overflow-hidden">
               <Image
                 src="/platform/fully-offline-development.svg"

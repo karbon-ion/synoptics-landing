@@ -9,11 +9,12 @@ export default function PlatformFeatures() {
 
   return (
     <section
-      className="relative py-6 sm:py-12 md:py-16 px-3 sm:px-8 md:px-20 mb-6 md:mb-15 max-w-full md:max-w-7xl mt-4 md:mt-15 mx-auto rounded-lg"
+      className="relative py-12 sm:py-16 md:py-20 px-3 sm:px-8 md:px-20 mb-6 md:mb-15 max-w-full md:max-w-7xl mt-12 md:mt-20 mx-auto rounded-lg border-t-4 border-[#5662F6]"
       style={{
         background: 'linear-gradient(196.25deg, rgba(255, 255, 255, 0.4) 9.13%, rgba(219, 234, 254, 0.28) 92.56%)',
+        boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
         ...(showExtended && {
-          boxShadow: ''
+          boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)'
         })
       }}
     >
@@ -166,7 +167,7 @@ export default function PlatformFeatures() {
                 <div className="grid grid-cols-7 w-full">
                   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/salesforce/salesforce-original.svg" alt="Salesforce" className="h-7 w-7 mx-auto" />
                   <img src="/platform/ai-agents/integration-icons/icon-2.svg" alt="SQL Server" className="h-7 w-7 mx-auto" />
-                  <img src="/platform/ai-agents/integration-icons/excel.svg" alt="Slack" className="h-7 w-7 mx-auto" />
+                  <img src="/platform/ai-agents/integration-icons/sap.png" alt="Slack" className="h-5 w-10 mt-1 mx-auto" />
                   <img src="/platform/ai-agents/integration-icons/icon-4.svg" alt="Jira" className="h-9 w-9 mx-auto" />
                   <img src="/platform/ai-agents/integration-icons/icon-5.svg" alt="Zapier" className="h-7 w-7 mx-auto" />
                   <img src="/platform/ai-agents/integration-icons/icon-6.svg" alt="Google" className="h-7 w-7 mx-auto" />
