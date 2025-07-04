@@ -131,51 +131,49 @@ const AccordionItem = ({
 const techniqueData = [
   {
     name: "Real-Time Performance Metrics",
-    description: "AI performance evaluation shouldn’t be a black box. Track, measure, and optimize key insights in real time to ensure every response is fast, accurate, and aligned with expectations. ",
+    description: "AI performance evaluation should not be a black box. Track, measure, and optimize key insights in real time to ensure every response is fast, accurate, and aligned with expectations.",
     benefits: [
-      "Query Count: Track the total number of processed requests in real time. Gain visibility into AI workload and system efficiency. ",
-      "Response Time: Measure how fast AI processes and delivers responses. Identify and eliminate latency issues for seamless AI performance. ",
-      "User Feedback: Monitor approval and rejection rates from real users. Understand AI effectiveness and refine outputs for better engagement. ",
-      "Accuracy Score: valuate how well AI-generated responses align with expectations. Ensure precision, relevance, and reliability in every interaction with ongoing AI evaluation. "
+      "Query Count: Track the total number of processed requests in real time. Gain visibility into AI workload and system efficiency.",
+      "Response Time: Measure how fast AI processes and delivers responses. Identify and eliminate latency issues for seamless AI performance.",
+      "User Feedback: Monitor approval and rejection rates from real users. Understand AI effectiveness and refine outputs for better engagement.",
+      "Accuracy Score: Evaluate how well AI-generated responses align with expectations. Ensure precision, relevance, and reliability in every interaction with ongoing AI evaluation."
     ]
   },
   {
     name: "User Sentiment Insights",
-    description: "AI performance goes beyond accuracy; it’s about how users interact with it. Track real-time sentiment analysis to refine responses and enhance engagement. ",
+    description: "AI performance goes beyond accuracy; it is about how users interact with it. Track real-time sentiment analysis to refine responses and enhance engagement.",
     benefits: [
-      "Positive Responses: Track where AI successfully meets user expectations. Leverage these insights to reinforce accuracy and maintain high engagement. ",
-      "Negative Responses: Detect where AI-generated outputs fail to meet user needs. Adjust models to improve accuracy, reduce errors, and optimize performance. "
+      "Positive Responses: Track where AI successfully meets user expectations. Leverage these insights to reinforce accuracy and maintain high engagement.",
+      "Negative Responses: Detect where AI-generated outputs fail to meet user needs. Adjust models to improve accuracy, reduce errors, and optimise performance."
     ]
   },
   {
-    name: "Hallucination & Latency Tracking ",
-    description: "AI should be accurate, reliable, and free from misinformation. Monitor, detect, and correct errors in real time to maintain precision and efficiency. ",
+    name: "Hallucination & Latency Tracking",
+    description: "AI should be accurate, reliable, and free from misinformation. Monitor, detect, and correct errors in real time to maintain precision and efficiency.",
     benefits: [
-      "Identify Hallucinations: Detect AI-generated responses that are incorrect, misleading, or out of context. Ensure fact-based outputs every time. ",
-      "Track Latency: Monitor slow response times. Improve processing speeds to optimise AI performance. ",
-      "Eliminate Errors: Proactively address inaccuracies before they disrupt workflows. Keep AI performance sharp, responsive, and trustworthy. "
-
+      "Identify Hallucinations: Detect AI-generated responses that are incorrect, misleading, or out of context. Ensure fact-based outputs every time.",
+      "Track Latency: Monitor slow response times. Improve processing speeds to optimise AI performance.",
+      "Eliminate Errors: Proactively address inaccuracies before they disrupt workflows. Keep AI performance responsive, and trustworthy."
     ]
   },
   {
-    name: "Usage & Cost Management ",
-    description: "AI processing comes at a cost—ensure every token is used efficiently. Monitor usage in real time to reduce waste and maximize value. ",
+    name: "Usage & Cost Management",
+    description: "AI processing comes at a cost; ensure every token is used efficiently. Monitor usage in real time to reduce waste and maximize value.",
     benefits: [
-      "Incoming Tokens: Track how much input data AI is processing. Optimize requests to avoid unnecessary consumption. ",
-      "Outgoing Tokens: Measure the size of AI-generated responses. Streamline outputs without sacrificing accuracy.  ",
-      "Caching: Improve response times and reduce token costs by reusing recent responses, an important aspect of scalable AI "
-
+      "Incoming Tokens: Track how much input data AI is processing. Optimize requests to avoid unnecessary consumption.",
+      "Outgoing Tokens: Measure the size of AI-generated responses. Streamline outputs without sacrificing accuracy.",
+      "Caching: Improve response times and reduce token costs by reusing recent responses, an important aspect of scaling AI"
     ]
   },
   {
     name: "AI Performance Benchmarks",
-    description: "AI performance goes beyond speed—it’s about precision, consistency, and usability. Synoptix AI evaluates critical metrics to ensure every response meets high-quality standards. ",
+    description: "AI performance goes beyond speed; it is about precision, consistency, and usability. Synoptix AI evaluates critical metrics to ensure every response meets high-quality standards.",
     benefits: [
-      "Groundedness: Ensure AI responses are factually accurate and backed by reliable data. Prevent misinformation and maintain trust in AI-driven decisions. ",
-      "Relevance: Verify that AI delivers meaningful, useful answers tailored to user needs. Eliminate off-topic or low-value responses. ",
-      "Fluency: Assess if AI-generated responses are well-structured and natural. Improve readability and clarity for better user interactions. ",
-      "Similarity: Maintain consistency across responses to avoid contradictions. Ensure AI provides uniform answers across different queries. ",
-      "F1 Score: Measure balanced AI performance through precision and recall—essential for enterprise readiness. "
+      "Groundedness: Ensure AI responses are factually accurate and backed by reliable data. Prevent misinformation and maintain trust in AI-driven decisions.",
+      "Relevance: Verify that AI delivers meaningful, useful answers tailored to user needs. Eliminate off-topic or low-value responses.",
+      "Fluency: Assess if AI-generated responses are well-structured and natural. Improve readability and clarity for better user interactions.",
+      "Similarity: Maintain consistency across responses to avoid contradictions. Ensure AI provides uniform answers across different queries.",
+      "F1 Score: Measure balanced AI performance through precision and recall, essential for enterprise readiness."
     ]
   }
 ];

@@ -7,35 +7,35 @@ import { ArrowRight } from 'lucide-react';
 const featuresData = [
   {
     id: 'Custom-Agent',
-    subtitle: 'EVALUATE',
-    title: 'Understand Your Models Before They Go Live  ',
-    description: "Get a complete view of your AI performance from the start. Synoptix lets you evaluate data and models early, generating clear model cards and AI performance evaluation reports with a single command.  ",
+    title: 'Flexible AI Model Serving',
+    description: "Choose the right AI model for every task. Synoptix AI supports external models, Microsoft-hosted models, and thoroughly custom AI agents from scratch. The platform makes it easy to deploy and test AI models, with full control over how they run across the enterprise.",
     imageUrl: '/evaluations/features-section/know-your-model.png',
-    imagePosition: 'left'
+    imagePosition: 'left',
+    learnMoreText: 'Learn more about model serving'
   },
   {
     id: 'Reasoning-Agent',
-    subtitle: 'TEST',
-    title: 'Deploy with Confidence  ',
-    description: "Run structured checks at every stage of the workflow including data ingestion, model scoring, and CI/CD. Catch incorrect inputs, unexpected values, or quality issues before they reach production. Ensure every release meets your AI evaluation standards. ",
+    title: 'AI Performance and Efficiency',
+    description: "Monitor key metrics like latency, token usage, and system behavior to understand AI model performance. Get real-time visibility into incoming and outgoing tokens, detect issues early, and optimise AI outputs for reliable performance.",
     imageUrl: '/evaluations/features-section/ship-with-confidence.png',
-    imagePosition: 'right'
+    imagePosition: 'right',
+    learnMoreText: 'Learn more about performance metrics'
   },
   {
     id: 'Knowledge-Access',
-    subtitle: 'MONITOR',
-    title: 'Track AI Performance in Real Time ',
-    description: "Gain continuous visibility into model and data health across all production systems. Detect drifts, shifts, and unexpected behaviour before they affect outcomes. Synoptix helps you maintain consistent AI performance. ",
+    title: 'User Feedback and Interactions',
+    description: "Monitor how the AI model performs and how users respond to it. From response speed to user behavior and feedback, get a clear view of what is working and where improvements are needed.",
     imageUrl: '/evaluations/features-section/get-live-insights.png',
-    imagePosition: 'left'
+    imagePosition: 'left',
+    learnMoreText: 'Learn more about user feedback'
   },
   {
     id: 'Agent-Library',
-    subtitle: 'DEBUG',
-    title: 'Find and Fix Issues Faster  ',
-    description: "StartUse intuitive summaries and visual reports to isolate issues by feature or timeframe. Speed up root cause analysis and improve models where it counts. Synoptix makes AI performance evaluation practical and actionable. ",
+    title: 'Find and Fix Issues Faster',
+    description: "Monitor the quality of AI's responses using key metrics to check if answers are accurate, relevant, and aligned with the user's data. Stay ahead of issues like hallucinations by keeping a close eye on groundedness and similarity scores.",
     imageUrl: '/evaluations/features-section/continues-evaluation.png',
-    imagePosition: 'right'
+    imagePosition: 'right',
+    learnMoreText: 'Learn more about issue resolution'
   }
 ];
  
@@ -54,16 +54,6 @@ export default function FeaturesSection() {
             {/* Text Content */}
             <div className="w-full lg:w-2/5 z-10">
               <div className="max-w-lg">
-                <p className="text-[#323E50] mb-2" style={{
-                  fontFamily: 'Poppins',
-                  fontSize: '14px',
-                  lineHeight: '1',
-                  letterSpacing: '0.5px',
-                  textTransform: 'uppercase',
-                  fontWeight: 500
-                }}>
-                  {feature.subtitle}
-                </p>
                 <h2 className="mb-4 text-3xl md:text-4xl font-bold text-gray-900" style={{
                   fontFamily: 'Syne',
                   lineHeight: '1.2',
@@ -88,8 +78,8 @@ export default function FeaturesSection() {
                     lineHeight: '100%'
                   }}
                 >
-                  {/* Learn more about {feature.id.split('-').join(' ')}
-                  <ArrowRight className="h-3 w-3 ml-1" /> */}
+                  {feature.learnMoreText}
+                  <ArrowRight className="h-3 w-3 ml-1" />
                 </Link>
               </div>
             </div>

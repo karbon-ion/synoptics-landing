@@ -15,11 +15,11 @@ export default function SynoGuard() {
     return (
         <main className="w-full">
            <Hero/>
-           <SecurityBadges/>
            <AgentTypesSection/>
            {/* <EnterpriseSecuritySection/> */}
            <OWASP/>
            <TechStack/>
+           <SecurityBadges/>
            {/* <PlatformFeatures/>
            <IntegrationSection/>
            <DeploymentSection/> */}

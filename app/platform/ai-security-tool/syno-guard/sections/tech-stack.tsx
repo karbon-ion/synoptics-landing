@@ -6,11 +6,11 @@ export default function TechStackCard() {
     <div className="bg-[#5662F6] w-[92%] md:w-full max-w-6xl mx-auto rounded-xl md:rounded-2xl mb-6 md:mb-10 p-4 md:p-10 flex flex-col md:flex-row items-center relative overflow-hidden text-white">
       <div className="w-[90%] md:w-full md:max-w-md mb-4 md:mb-0 p-3 md:p-10 z-10">
         <h2 className="font-semibold leading-tight md:leading-snug">
-          <span className="block" style={{ fontFamily: "Syne, sans-serif", fontWeight: 700, fontSize: "24px", lineHeight: "32px", letterSpacing: "0%", whiteSpace: "normal", marginBottom: "4px" }}>Designed to Secure Your Enterprise’s Data </span>
+          <span className="block" style={{ fontFamily: "Syne, sans-serif", fontWeight: 700, fontSize: "24px", lineHeight: "32px", letterSpacing: "0%", whiteSpace: "normal", marginBottom: "4px" }}>Your AI Security Strategy Starts Here  </span>
           {/* <span className="block" style={{ fontFamily: "Syne, sans-serif", fontWeight: 700, fontSize: "24px", lineHeight: "normal", letterSpacing: "0%", whiteSpace: "nowrap" }}>Secure and Built for Enterprise </span> */}
         </h2>
         <p className="text-xs md:text-sm mt-3 md:mt-4 mb-4 text-white/90" style={{ fontFamily: "Poppins, sans-serif", fontWeight: 400, lineHeight: "20px", letterSpacing: "0%" }}>
-        Our platform acts as an AI security tool for your organization, connecting your tools, workflows, and teams. It protects your company data, supports compliance, and keeps your business running without disruption.  
+        Unlock the full potential of secure, responsible AI. Speak with our experts to explore how SynoGuard, the trusted AI security tool for enterprises, can help you detect risks, enforce compliance, and safeguard your GenAI ecosystem.   
         </p>
         <Link href="contact-us" className="inline-block mt-4 md:mt-6 bg-white text-[#5662F6] px-4 md:px-5 py-2 text-sm md:text-base rounded-full font-medium shadow-md hover:bg-gray-100 transition-all">
         Book a consultant

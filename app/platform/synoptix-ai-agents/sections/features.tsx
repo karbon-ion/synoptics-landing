@@ -7,35 +7,35 @@ import { ArrowRight } from 'lucide-react';
 const featuresData = [
   {
     id: 'Custom-Agent',
-    subtitle: 'CUSTOM AGENT',
-    title: 'Design and Deploy Intelligent AI Agents ',
-    description: "Create no-code Enterprise AI Agents that handle everything from quick answers to complex operations. With the Synoptix AI Platform for Enterprise, you can build, launch, and manage agents that align with your workflows, adapt to your data, and scale across your organisation. ",
+    title: 'Custom Agents',
+    description: "Synoptix AI allows enterprises to create and launch custom agents that follow natural language instructions and execute business-specific tasks without coding. Choose the data sources, connect data sources, and define how each agent should behave.",
     imageUrl: '/synoptix-agents/features/image-1.png',
-    imagePosition: 'left'
+    imagePosition: 'left',
+    learnMoreText: 'Learn more about Custom Agent'
   },
   {
     id: 'Reasoning-Agent',
-    subtitle: 'REASONING AGENT',
-    title: 'Enterprise AI agents that plan and act with purpose ',
-    description: "Backed by Synoptix’s reasoning engine and enterprise data access, agents understand what needs to be done, find the right information, and carry out tasks with accuracy. Perfect for handling multi-step workflows, cross-team processes, and dynamic decision-making in fast-paced enterprise environments. ",
+    title: 'Reasoning Agent',
+    description: "Reasoning agents follow instructions in natural language and adjust actions as needed to deliver context-aware results. Ideal for managing detailed workflows, team processes, and everyday decisions across the organisation.",
     imageUrl: '/synoptix-agents/features/image-2.png',
-    imagePosition: 'right'
+    imagePosition: 'right',
+    learnMoreText: 'Learn more about Reasoning Agent'
   },
   {
     id: 'Knowledge-Access',
-    subtitle: 'KNOWLEDGE ACCESS',
-    title: 'Give your Enterprise AI Agents access to what your business knows ',
-    description: "Synoptix connects agents to internal documents, emails, chats, and databases—so every response is grounded in accurate, real-time information from your trusted sources. Whether it’s policy enforcement, regulatory reporting, or internal support, agents operate with full context to drive consistent, compliant outcomes. ",
+    title: 'Knowledge Access',
+    description: "Synoptix AI connects agents to the tools, files, and systems your teams use every day. They can search emails, documents, databases, and internal portals in real time to find the most relevant information.",
     imageUrl: '/synoptix-agents/features/image-3.png',
-    imagePosition: 'left'
+    imagePosition: 'left',
+    learnMoreText: 'Learn more about Knowledge Access'
   },
   {
     id: 'Agent-Library',
-    subtitle: 'AGENT LIBRARY',
-    title: 'Explore and share AI agents across your organisation ',
-    description: "Start with pre-built agent templates or design your own. The Synoptix AI Platform for Enterprise makes it easy to launch quickly, improve continuously, and scale agent-powered automation across every team. Reusable agents help standardise operations, reduce duplicated effort, and accelerate enterprise-wide adoption of intelligent workflows. ",
+    title: 'Agent Library',
+    description: "Synoptix AI offers pre-configured agents for common business needs across departments like HR, Finance, Marketing, Sales, and IT to streamline and automate day-to-day routine tasks.",
     imageUrl: '/synoptix-agents/features/image-4.png',
-    imagePosition: 'right'
+    imagePosition: 'right',
+    learnMoreText: 'Check out our Agent Library'
   }
 ];
 
@@ -54,16 +54,6 @@ export default function FeaturesSection() {
             {/* Text Content */}
             <div className="w-full lg:w-2/5 z-10">
               <div className="max-w-lg">
-                <p className="text-[#323E50] mb-2" style={{
-                  fontFamily: 'Poppins',
-                  fontSize: '14px',
-                  lineHeight: '1',
-                  letterSpacing: '0.5px',
-                  textTransform: 'uppercase',
-                  fontWeight: 500
-                }}>
-                  {feature.subtitle}
-                </p>
                 <h2 className="mb-4 text-3xl md:text-4xl font-bold text-gray-900" style={{
                   fontFamily: 'Syne',
                   lineHeight: '1.2',
@@ -88,7 +78,7 @@ export default function FeaturesSection() {
                     lineHeight: '100%'
                   }}
                 >
-                  Learn more about {feature.id.split('-').join(' ')}
+                  {feature.learnMoreText}
                   <ArrowRight className="h-3 w-3 ml-1" />
                 </Link>
               </div>

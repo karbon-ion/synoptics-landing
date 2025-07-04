@@ -8,67 +8,56 @@ import { motion, AnimatePresence } from 'framer-motion';
 const agentTypesData = [
   {
     id: 'code-gen',
-    title: 'Code Gen agents',
-    heading: 'Accelerate development with enterprise-grade automation ',
+    title: 'Code Gen Agents',
+    heading: 'Accelerate development without compromising quality.',
     description: [
-      'Generate clean, efficient code with Synoptix AI Agents',
-      'Eliminate repetitive coding tasks and reduce manual errors  ',
-      'Optimise business logic in real time across applications ',
-      'Speed up release cycles with AI-driven development support ',
-      'Improve consistency across engineering workflows ',
-      'Built for developers on the Synoptix AI Agents '
+      'Generate clean, production-ready code across multiple languages to speed up delivery while reducing errors.',
+      'Eliminate repetitive tasks so developers can focus on solving complex, high-value problems.',
+      'Optimise business logic in real time, agents evolve with your requirements and maintain consistency across your codebase.'
     ]
   },
   {
     id: 'generative',
-    title: 'Generative agents',
-    heading: 'Scale content and creativity across your organisation ',
+    title: 'Generative Agents',
+    heading: 'Scale content creation across the enterprise.',
     description: [
-      'Create high-quality text, visuals, and code using Enterprise AI Agents  ',
-      'Respond to creative needs on-demand—no wait, no bottlenecks  ',
-      'Support marketing, product, and operations with consistent outputs   ',
-      'Adapt content dynamically to your brand voice and format   ',
-      'Enable team-wide creative productivity at scale   ',
-      'Built into the Synoptix AI Platform for Enterprise teams   '
+      'Enterprise AI Agents produce high-quality text, visuals, and code instantly—without waiting for specialist input.',
+      'Support marketing, product, and operations with content that is aligned to your brand voice, tone, and structure.',
+      'Break through creative bottlenecks and deliver faster across teams.',
+      'Empower everyone to create, not just content specialists.'
     ]
   },
   {
     id: 'assurance',
-    title: 'Assurance agents',
-    heading: 'Enforce quality, governance, and compliance—automatically ',
+    title: 'Assurance Agents',
+    heading: 'Automate compliance, governance, and quality control',
     description: [
-      'Monitor outputs for errors, drift, or non-compliance  ',
-      'Validate responses against internal rules and external regulations   ',
-      'Keep every workflow aligned with enterprise standards  ',
-      'Flag inconsistencies in real time using AI-driven checks   ',
-      'Reduce the burden on QA and compliance teams  ',
-      'Powered by the Synoptix AI Platform for Enterprise assurance   '
+      'Monitor decisions and outputs for accuracy, policy alignment, and regulatory risk all in real time.',
+      'These AI Agents for enterprise conduct background checks silently, ensuring issues are caught early.',
+      'Validate AI responses against your internal policies and external regulations.',
+      'Reduce QA overhead and build trust in automation with agents that flag drift and inconsistencies before they escalate.'
     ]
   },
   {
     id: 'decision-support',
-    title: 'Analytical Agents ',
-    heading: 'Unlock insights with intelligent data analysis ',
+    title: 'Analytical Agents',
+    heading: 'Turn data into enterprise-wide intelligence.',
     description: [
-     'Analyse structured and unstructured data with Synoptix AI Agents  ',
-      'Identify patterns, correlations, and emerging trends    ',
-      'Deliver real-time dashboards and actionable summaries   ',
-      'Enable proactive decision-making across business functions    ',
-      'Reduce reliance on manual reporting or ad-hoc analysis  ',
-      'Integrated into the Synoptix AI Platform for Enterprise insights   '
+      'Analyse structured and unstructured data across systems without requiring a data science team.',
+      'Identify trends, patterns, and outliers with speed and precision.',
+      'Deliver real-time dashboards and insights that keep teams aligned and decision-makers informed.',
+      'Eliminate manual reporting and reduce time spent in spreadsheets.'
     ]
   },
   {
     id: 'anomalies',
-    title: 'Anomaly Detection Agents ',
-    heading: 'Protect operations with intelligent, real-time monitoring ',
+    title: 'Anomaly Detection Agents',
+    heading: 'Protect critical operations with intelligent monitoring.',
     description: [
-      'Detect irregularities before they disrupt business operations   ',
-      'Monitor systems continuously for security and performance gaps     ',
-      'Send real-time alerts based on behavioural anomalies   ',
-      'Improve operational stability with self-learning detection    ',
-      'Reduce manual checks while increasing responsiveness  ',
-      'Fully embedded in the Synoptix AI Platform for Enterprise resilience   '
+      'Detect deviations and risks before they become problems.',
+      'These agents monitor systems continuously, flagging issues early to reduce downtime and exposure.',
+      'Send smart, actionable alerts when anomalies arise.',
+      'With self-learning capabilities, accuracy improves over time, reducing the need for manual checks or static thresholds.'
     ]
   }
 ];
@@ -169,7 +158,7 @@ export default function AgentTypesSection() {
             />
           </div>
           
-          <div className="relative z-10 flex flex-col lg:flex-row gap-8 lg:gap-16 p-8 lg:p-20">
+          <div className="relative z-10 flex flex-col lg:flex-row gap-8 mt-10 lg:gap-16 p-8 lg:p-20">
             {/* Left side - Agent types */}
             <div className="lg:w-1/3 ">
               <div className="space-y-3">
@@ -223,8 +212,8 @@ export default function AgentTypesSection() {
                 ))}
               </div>
               
-              <div className="mt-8 flex justify-end">
-                <div className="w-48 h-48 relative">
+              <div className=" flex justify-end">
+                <div className="w-48 h-70 relative">
                   {/* <Image
                     src="/synoptix-agents/features/layers-icon.svg"
                     alt="Layers Icon"

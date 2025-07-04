@@ -11,10 +11,9 @@ const agentTypesData = [
     title: 'Content Safety',
     heading: '',
     description: [
-      { text: 'Your business runs on trust including the technology that powers it. SynoGuard ensures every interaction is secure, compliant, and risk-free, so you can focus on growth with confidence.' },
-      { text: 'Bad actors use prompt injection and jailbreaks to exploit vulnerabilities, bypass security, and access sensitive data. SynoGuard stops these threats before they become a problem, keeping your business protected, compliant, and in control.' },
-      { bold: 'Prompt Injection:', text: 'Don\'t let bad actors manipulate your systems. SynoGuard ensures every response is secure, accurate, and compliant, preventing data leaks and breaches.' },
-      { bold: 'Jailbreaks:', text: 'Hackers look for loopholes—SynoGuard makes sure they don\'t find any. Our built-in safeguards ensure compliance, uphold ethical standards, and keep your business data secure.' }
+      { text: 'Bad actors use prompt injection and jailbreaks to exploit vulnerabilities, bypass security, and access sensitive data. Content safety detects and blocks these threats before they become a problem, keeping your business protected, compliant, and in control with an AI security tool you can trust.' },
+      { bold: 'Prompt Injection:', text: 'Prompt injection happens when users include hidden or misleading instructions in their input to manipulate the AI behavior bypassing rules. SynoGuard carefully analyses every prompt before it reaches the model and blocks anything suspicious to ensure the AI stays safe and aligned with compliance standards.' },
+      { bold: 'Jailbreaks:', text: 'A jailbreak is an advanced prompt attack where someone tries to strip away all the AI built-in safeguards. SynoGuard detects these attempts in real time and stops them in their tracks, so your AI does not produce anything risky or unauthorized.' }
     ]
   },
   {
@@ -22,12 +21,11 @@ const agentTypesData = [
     title: 'Toxicity Detection',
     heading: '',
     description: [
-      { text: 'A single harmful message can damage trust, but with SynoGuard, your platform stays secure, respectful, and compliant—without disrupting the user experience. Our AI-powered system scans content instantly, filtering out threats before they become a problem.' },
-      { bold: 'Violent Content:', text: 'Block harmful content before it escalates. Synoptix AI detects and blocks threats, graphic violence, and incitement—protecting your users and your business.' },
-      { bold: 'Hate Content:', text: 'Toxic content damages trust. Our AI-powered filters stop slurs, harmful biases, and offensive language—ensuring an inclusive and compliant platform.' },
-      { bold: 'Sexual Content:', text: 'Explicit and exploitative content can ruin credibility. Synoptix AI automatically scans and blocks inappropriate material, keeping your platform aligned with content policies.' },
-      { bold: 'Self-Harm Content:', text: 'Early detection saves lives. Our system flags suicide or self-injury in real time, allowing businesses to act responsibly and prevent harmful messaging.' },
-      { text: 'Built into the Synoptix AI Platform for Enterprise teams' }
+      { text: 'With SynoGuard, your platform stays secure and respectful without disrupting the user experience. Our AI-powered system detects harmful content instantly, detecting threats before they become a problem.' },
+      { bold: 'Violent Content:', text: 'Flag and control violent language, threats, or references to weapons and extremism to maintain a secure environment.' },
+      { bold: 'Hate Content:', text: 'Detect and mitigate discriminatory or harmful language targeting identity groups to ensure respectful, inclusive AI outputs.' },
+      { bold: 'Sexual Content:', text: 'Safeguard your systems against explicit, exploitative, or abusive sexual content, including child safety violations.' },
+      { bold: 'Self-Harm Content:', text: 'Identify and block content related to self-injury, suicidal ideation, or eating disorders to promote user well-being.' }
     ]
   },
   {
@@ -35,8 +33,8 @@ const agentTypesData = [
     title: 'Data Privacy',
     heading: '',
     description: [
-      { text: 'Your business runs on data—keeping it secure isn\'t optional. Synoptix AI Guard protects sensitive information, prevents data leaks, and ensures compliance, all without slowing you down.' },
-      { text: 'Automatically detect and redact sensitive information before it\'s exposed.' },
+      { text: 'Enterprises run on data; keeping it secure is not optional. SynoGuard protects sensitive information, prevents data leaks, and ensures compliance, all without slowing you down.' },
+      { text: 'Automatically detect and redact sensitive information before it is exposed.' },
       { text: 'Meet regulatory requirements with real-time privacy enforcement.' },
       { text: 'Zero-trust security, end-to-end encryption, and integration into your existing systems.' }
     ]
@@ -46,8 +44,7 @@ const agentTypesData = [
     title: 'PII Extraction',
     heading: '',
     description: [
-      { text: 'Your business handles sensitive information daily—keeping it secure is non-negotiable. Synoptix AI Guard automates PII detection and redaction, ensuring names, addresses, financial data, and proprietary information stay protected.' },
-      { bold: 'Custom PII filters:', text: 'Not all data is the same, and neither are your security needs. Synoptix AI Guard lets you customize what gets masked, redacted, or restricted, giving you full control over sensitive information.' }
+      { text: 'Automatically identify and redact personally identifiable information such as names, addresses, contact details, and government IDs to ensure data privacy and regulatory compliance across your AI workflows. A reliable AI security tool ensures your systems stay compliant without sacrificing performance.' }
     ]
   },
   {
@@ -55,10 +52,7 @@ const agentTypesData = [
     title: 'Anti Hallucination',
     heading: '',
     description: [
-      { text: 'AI hallucinations aren\'t just mistakes—they\'re risks. Misinformation can mislead customers, damage credibility, and create compliance issues. SynoGuard keeps your AI honest by detecting and eliminating false or misleading outputs before they reach your users.' },
-      { bold: 'Real-Time Hallucination Detection:', text: 'Instantly flag and correct AI-generated misinformation to ensure accuracy.' },
-      { bold: 'Customisable AI Fine-Tuning:', text: 'Train your models to minimize inaccuracies and align with verified data.' },
-      { bold: 'Continuous Model Evaluation:', text: 'Identify Knowledge Gaps and stop AI drift by securing lexical analysis, field mapping, and data enrichment before inconsistencies disrupt your business.' }
+      { text: 'AI hallucinations are not just mistakes; they are risks. Misinformation can mislead customers and damage credibility. SynoGuard Ensure the accuracy and reliability of AI-generated content by detecting and correcting hallucinations through groundedness detection, aligning outputs with trusted data sources.' }
     ]
   }
 ];

@@ -2,7 +2,7 @@
 
 export default function SynoGuardHero() {
     return (
-        <section className="w-full mb-20 min-h-screen flex flex-col items-center justify-center text-center relative overflow-hidden"
+        <section className="w-full  mb-20 min-h-screen flex flex-col items-center justify-center text-center relative overflow-hidden"
             style={{
                 backgroundImage: "url('/syno-guard/image.png')",
                 backgroundSize: "cover",
@@ -21,7 +21,7 @@ export default function SynoGuardHero() {
                     letterSpacing: '0%',
                     textAlign: 'center'
                 }}>
-                    Protect Your Data to Stay in Control of Your Enterprise 
+                   Visibility. Protection. Control.  
                 </h1>
                 <p style={{
                     fontFamily: 'Poppins',
@@ -34,7 +34,7 @@ export default function SynoGuardHero() {
                     maxWidth: '800px',
                     margin: '24px auto 48px'
                 }}>
-                   Attackers Don’t Wait—Neither Should You. Identify and fix AI vulnerabilities before they become threats with the AI security tool.   
+                  Purpose-built to protect AI applications, agents, and MCPs with enterprise-grade security.    
                 </p>
                 <div className="relative w-full max-w-5xl mx-auto">
                     <img 

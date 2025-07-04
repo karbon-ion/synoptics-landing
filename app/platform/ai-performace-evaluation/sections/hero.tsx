@@ -31,10 +31,10 @@ export default function Hero() {
             letterSpacing: '2%',
             color: '#666666'
           }} className="mt-6 mb-8">
-           Get real time visibility into every interaction with built-in AI performance evaluation. Detect issues early, measure accuracy and efficiency, and resolve problems fast so your AI stays on track. 
+           Get real-time visibility into every interaction with built-in AI performance evaluation. Detect issues, measure accuracy, and resolve problems fast so AI stays on track. 
           </p>
           <Link href="/contact-us" className="bg-[#5662F6] text-white font-medium py-3 px-6 rounded-full hover:bg-blue-600 transition duration-300 inline-flex items-center">
-            Request a Demo
+            Explore AI Performance
           </Link>
         </div>
         <div className="flex-1 mt-10">

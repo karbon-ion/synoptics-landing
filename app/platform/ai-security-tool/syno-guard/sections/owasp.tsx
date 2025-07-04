@@ -6,62 +6,62 @@ import Link from 'next/link';
 const features = [
   {
     id: 'llm01',
-    title: 'Prompt Injections',
-    description: 'Smart hackers can feed your AI harmful inputs to steal data or trigger unauthorized actions. With Synoptix AI, we intercept these attacks before they even start.',
+    title: 'Prompt Injection',
+    description: 'Attackers can craft prompts that override system behavior or extract sensitive data. SynoGuard inspects every input to detect and block manipulative prompts before they reach your AI—so the model always responds within safe, authorised boundaries.',
     code: 'LLM01',
   },
   {
     id: 'llm02',
-    title: 'Insecure Output Handling',
-    description: 'Unchecked AI responses can be a prospect for malicious actors. Synoptix AI makes sure every output gets the green light before it ever leaves your system.',
+    title: 'Sensitive Information Disclosure',
+    description: 'AI systems can unintentionally leak private or restricted data. SynoGuard scans all inputs and outputs to prevent exposure of sensitive content, keeping your users privacy and your business data fully protected.',
     code: 'LLM02',
   },
   {
     id: 'llm03',
-    title: 'Training Data Poisoning',
-    description: 'If your AI learns from the wrong data, it could mislead users and spread misinformation. Synoptix AI filters out toxic data, ensuring your AI stays sharp, focused, and trustworthy.',
+    title: 'Supply Chain',
+    description: 'Third-party components and models can introduce hidden risks. SynoGuard audits your AI supply chain, checking model sources, datasets, and integrations for weaknesses, bias, or unsafe dependencies, before they impact performance or security.',
     code: 'LLM03',
   },
   {
     id: 'llm04',
-    title: 'Denial of Service',
-    description: 'Some attacks aim to slow your AI down or rack up costs. Synoptix AI keeps a real-time eye on usage, spotting any spikes before they become a problem.',
+    title: 'Data and Model Poisoning',
+    description: 'Corrupted or biased training data can lead your AI to generate misleading or harmful responses. SynoGuard filters out low-quality or adversarial data sources during training and fine-tuning, keeping your model clean, accurate, and trustworthy.',
     code: 'LLM04',
   },
   {
     id: 'llm05',
-    title: 'Supply Chain',
-    description: 'Vulnerabilities in the AI supply chain are a hidden risk. Synoptix AI evaluates your models for biases, weaknesses, and performance gaps, so you can spot and fix them before they harm your system.',
+    title: 'Improper Output Handling',
+    description: 'Unchecked AI responses may be misused or cause harm if shared externally. SynoGuard validates every output in real time to ensure it meets your safety, compliance, and content standards before it ever leaves your system.',
     code: 'LLM05',
   },
   {
     id: 'llm06',
-    title: 'Permission Issues',
-    description: 'Ensure your AI stays secure and compliant with SynoGuard. We continuously update your guardrails to align with the latest security standards, including the OWASP Top 10 for LLMs, so you’re always protected against emerging threats. ',
+    title: 'Excessive Agency',
+    description: 'When an LLM can access tools, APIs, or plugins, it gains the power to act on its own. SynoGuard sets clear limits on what the model can do, monitors every action, and blocks any unauthorised or unsafe behaviour, keeping system control firmly in your hands.',
     code: 'LLM06',
   },
   {
     id: 'llm07',
-    title: 'Data Leakage',
-    description: 'Sensitive data slipping through the cracks? Not with Synoptix AI. We scan your inputs and outputs to stop leaks in their tracks, protecting your privacy and user data.',
+    title: 'System Prompt Leakage',
+    description: 'If attackers gain visibility into system prompts, they can manipulate model behavior. SynoGuard keeps all system instructions secure and monitors for leakage risks, so the core of your AI logic stays protected and private.',
     code: 'LLM07',
   },
   {
     id: 'llm08',
-    title: 'Excessive Agency',
-    description: 'LLMs shouldn’t be making decisions on their own. Synoptix AI ensures your system only does what it\'s supposed to, with strict controls embedded into every action.',
+    title: 'Embedding & Vector Manipulation',
+    description: 'Attackers may exploit embedded systems to inject harmful data or distort retrieval results. SynoGuard monitors your embeddings for anomalies, filters adversarial inputs, and ensures consistent, reliable semantic search performance.',
     code: 'LLM08',
   },
   {
     id: 'llm09',
-    title: 'Overreliance',
-    description: 'AI mistakes can lead to chaos—misleading responses and faulty data. Synoptix AI makes it easy to identify and correct these errors, keeping your AI on track and accurate every time.',
+    title: 'Misinformation',
+    description: 'AI-generated misinformation can harm brand credibility and decision-making. SynoGuard tracks response accuracy and context, alerting your team to misleading outputs and offering correction workflows to prevent reputational damage.',
     code: 'LLM09',
   },
   {
     id: 'llm10',
-    title: 'Insecure Plugins',
-    description: 'Plugins can be a weak spot for your AI. Synoptix AI continuously monitors these connections, ensuring malicious requests don’t slip through the cracks and compromise your system.',
+    title: 'Unbounded Consumption',
+    description: 'Some prompts or plugins can cause runaway compute usage or intentional slowdowns. SynoGuard watches for spikes in usage, throttles excessive activity, and helps you stay within performance and cost thresholds without compromising functionality.',
     code: 'LLM10',
   }
 ];
@@ -81,10 +81,26 @@ const OWASP = () => {
             </span>
           </div>
           
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8 max-w-4xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8 max-w-4xl mx-auto" style={{
+            fontFamily: "Syne",
+            fontWeight: 700,
+            fontSize: "48px",
+            lineHeight: "48px",
+            letterSpacing: "0%",
+            textAlign: "center",
+            verticalAlign: "middle"
+          }}>
             OWASP Top 10 for LLMs
           </h2>
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-16">
+          <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-16" style={{
+            fontFamily: "Poppins",
+            fontWeight: 400,
+            fontSize: "16px",
+            lineHeight: "28px",
+            letterSpacing: "0%",
+            textAlign: "center",
+            verticalAlign: "middle"
+          }}>
           Ensure your AI stays secure and compliant with SynoGuard. We continuously update your guardrails to align with the latest security standards, including the OWASP Top 10 for LLMs, so you’re always protected against emerging threats.  
           </p>
           
@@ -144,11 +160,25 @@ const Feature = ({
       </div>
       <div className="text-lg font-bold mb-2 relative z-10 px-10">
         <div className="absolute left-0 inset-y-0 h-6 group-hover/feature:h-8 w-1 rounded-tr-full rounded-br-full bg-blue-400 group-hover/feature:bg-blue-500 transition-all duration-200 origin-center" />
-        <span className="group-hover/feature:translate-x-2 transition duration-200 inline-block text-gray-800">
+        <span className="group-hover/feature:translate-x-2 transition duration-200 inline-block text-gray-800" style={{
+          fontFamily: "Syne",
+          fontWeight: 700,
+          fontSize: "18px",
+          lineHeight: "28px",
+          letterSpacing: "0%",
+          verticalAlign: "middle"
+        }}>
           {title}
         </span>
       </div>
-      <p className="text-sm text-gray-600 max-w-xs relative z-10 px-10">
+      <p className="text-sm text-gray-600 max-w-xs relative z-10 px-10" style={{
+        fontFamily: "Poppins",
+        fontWeight: 400,
+        fontSize: "12px",
+        lineHeight: "20px",
+        letterSpacing: "0%",
+        verticalAlign: "middle"
+      }}>
         {description}
       </p>
     </div>
