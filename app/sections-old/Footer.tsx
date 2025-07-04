@@ -10,7 +10,7 @@ const Footer = () => {
     { name: 'Evaluations', href: '/platform/ai-performace-evaluation' },
     { name: 'SynoGuard', href: '/platform/ai-security-tool/syno-guard' },
     { name: 'Synoptix Library', href: '/platform/synoptix-library' },
-    { name: 'Integration', href: '/platform/integration' },
+    { name: 'Integration', href: '/platform/integrations' },
   ];
 
   const solutionsLinks = [
