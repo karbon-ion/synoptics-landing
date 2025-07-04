@@ -9,6 +9,7 @@ const Footer = () => {
     { name: 'Synoptix Agents', href: '/platform/synoptix-ai-agents' },
     { name: 'Evaluations', href: '/platform/ai-performace-evaluation' },
     { name: 'SynoGuard', href: '/platform/ai-security-tool/syno-guard' },
+    { name: 'Synoptix Library', href: '/synoptix-library' },
   ];
 
   // const solutionsLinks = [
@@ -22,6 +23,13 @@ const Footer = () => {
   const servicesLinks = [
     { name: 'AI Consulting', href: '/services/ai-consulting' },
     // { name: 'Fine-tuning & Optimization', href: '/services/fine-tuning' },
+  ];
+  
+  const companyLinks = [
+    { name: 'About Us', href: '/about-us' },
+    { name: 'Contact Us', href: '/contact-us' },
+    { name: 'Integration', href: '/integration' },
+    { name: 'Model Hub', href: '/model-hub' },
   ];
 
   const socialLinks = [
@@ -85,10 +93,41 @@ hello@synoptix.ai
             </ul>
             </span>
           </div>
-
-          {/* Solutions Links */}
-          {/* <div className="mb-8 md:mb-0">
-          <h3 style={{
+          
+          {/* Company Links */}
+          <div className="mb-8 md:mb-0">
+            <h3 style={{
+                fontFamily: 'Poppins, sans-serif',
+                fontWeight: 500,
+                fontSize: '14px',
+                lineHeight: '20px',
+                letterSpacing: '0%',
+                textTransform: 'uppercase',
+                color: '#626DFF'
+              }} className="mb-4">COMPANY</h3>
+              <span style={{
+                fontFamily: 'Poppins, sans-serif',
+                fontWeight: 400,
+                fontSize: '16px',
+                lineHeight: '24px',
+                letterSpacing: '0%',
+                color: '#626DFF'
+              }}>
+              <ul className="space-y-2">
+                {companyLinks.map((link) => (
+                  <li key={link.name}>
+                    <Link href={link.href} className="text-sm text-gray-300 hover:text-white transition-colors">
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+              </span>
+          </div>
+          
+          {/* Solutions Links - Commented out
+          <div className="mb-8 md:mb-0">
+            <h3 style={{
               fontFamily: 'Poppins, sans-serif',
               fontWeight: 500,
               fontSize: '14px',
@@ -96,7 +135,7 @@ hello@synoptix.ai
               letterSpacing: '0%',
               textTransform: 'uppercase',
               color: '#626DFF' }} className="mb-4">SOLUTIONS</h3>
-               <span style={{
+            <span style={{
               fontFamily: 'Poppins, sans-serif',
               fontWeight: 400,
               fontSize: '16px',
@@ -104,17 +143,18 @@ hello@synoptix.ai
               letterSpacing: '0%',
               color: '#626DFF'
             }}>
-            <ul className="space-y-2">
-              {solutionsLinks.map((link) => (
-                <li key={link.name}>
-                  <Link href={link.href} className="text-sm text-gray-300 hover:text-white transition-colors">
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+              <ul className="space-y-2">
+                {solutionsLinks.map((link) => (
+                  <li key={link.name}>
+                    <Link href={link.href} className="text-sm text-gray-300 hover:text-white transition-colors">
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </span>
-          </div> */}
+          </div>
+          */}
 
           {/* Services Links */}
           <div className="mb-8 md:mb-0">
