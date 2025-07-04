@@ -69,7 +69,7 @@ export default function FeaturesSection() {
                   {feature.description}
                 </p>
                 <Link
-                  href={feature.id === 'Agent-Library' ? '/platform/agent-library' : '#'}
+                  href={feature.id === 'Agent-Library' ? '/platform/synoptix-library/agent-library' : '#'}
                   className="inline-flex items-center text-[#6B7BF7] hover:opacity-80 transition-opacity"
                   style={{
                     fontFamily: 'Syne',

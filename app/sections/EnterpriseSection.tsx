@@ -212,6 +212,7 @@ export default function EnterpriseSection() {
                       <Link
                         href={tab.id === "agents" ? "/platform/synoptix-ai-agents" : 
                               tab.id === "search" ? "/platform/synoptix-ai-search" : 
+                              tab.id === "library" ? "/platform/synoptix-library" :
                               "/"}
                         className="inline-flex items-center text-[#5662F6] hover:text-blue-800"
                         style={{ fontFamily: "Syne", fontWeight: 700,fontSize: "16px" }}

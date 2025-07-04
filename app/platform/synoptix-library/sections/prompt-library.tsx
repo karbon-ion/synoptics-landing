@@ -30,7 +30,7 @@ export default function PromptLibrarySection() {
             Explore Prompt Library
           </h2>
           
-          <Link href="/platform/prompt-library" className="bg-[#5662F6] text-white font-medium py-3 px-6 rounded-full hover:bg-blue-600 transition duration-300 inline-flex items-center">
+          <Link href="/platform/synoptix-library/prompt-library" className="bg-[#5662F6] text-white font-medium py-3 px-6 rounded-full hover:bg-blue-600 transition duration-300 inline-flex items-center">
                         Get Started
                     </Link>
         </div>
