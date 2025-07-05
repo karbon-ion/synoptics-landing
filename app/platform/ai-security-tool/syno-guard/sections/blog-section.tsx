@@ -133,7 +133,7 @@ const BlogsSection = () => {
                 <div className="p-4 sm:p-6 md:p-8 flex-grow flex flex-col">
                   <div className="text-blue-400 text-sm mb-2">{post.date}</div>
                   <Link 
-                    href={`/blog/${post.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}`}
+                    href={`/resources/blogs/${post.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}`}
                     className="block"
                   >
                     <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-3 sm:mb-4 group-hover:text-blue-600 transition-colors duration-300 cursor-pointer">
