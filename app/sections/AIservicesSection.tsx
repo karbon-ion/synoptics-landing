@@ -187,7 +187,7 @@ export default function AiServicesSection() {
                 Proof of Concepts (PoC) 
               </h3>
               <p
-                className="mt-2 pb-2 text-slate-600 text-sm leading-5"
+                className="mt-2 pb-7 text-slate-600 text-sm leading-5"
                 style={{
                   fontFamily: "Poppins, sans-serif",
                   fontSize: "12px",
@@ -238,7 +238,7 @@ export default function AiServicesSection() {
                 Training & Education
               </h3>
               <p
-                className="mt-2 pb-14 text-slate-600 text-sm leading-5"
+                className="mt-2 pb-9 text-slate-600 text-sm leading-5"
                 style={{
                   fontFamily: "Poppins, sans-serif",
                   fontSize: "12px",
