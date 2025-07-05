@@ -38,7 +38,7 @@ export default function EnterpriseSearchSection() {
     },
     {
       items: [
-        { title: 'Citation/Relevance\nDocument' },
+        { title: 'Citation\nDocument' },
         { title: 'Data\nLabelling' },
         { title: 'Vector Search' },
         { title: 'Caching' },
