@@ -23,7 +23,7 @@ export default function Hero() {
           color: '#323E50',
           marginBottom: '16px'
         }}>
-          AI Consulting Services
+          AI Consulting Services for Enterprises
         </h1>
         <p style={{
           fontFamily: 'Poppins',
@@ -36,11 +36,11 @@ export default function Hero() {
           maxWidth: '800px',
           margin: '0 auto'
         }}>
-          Boost efficiency, automate workflows, and accelerate success with customised AI Consulting and integration. Let's transform the way you work.
+          Unlock the full potential of Artificial Intelligence with Synoptix AI's tailored consulting services. Our expertise lies in transforming complex business challenges into streamlined, intelligent solutions that drive efficiency, reduce errors, and accelerate decision-making.
         </p>
         <div style={{ marginTop: '32px' }}>
           <Link 
-            href="/contact" 
+            href="/contact-us" 
             style={{
               display: 'inline-flex',
               alignItems: 'center',

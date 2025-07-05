@@ -7,7 +7,7 @@ export default function ProofOfConcept() {
       {/* Heading Section with White Background */}
       <div className="bg-white py-16 text-center">
         <div className="max-w-3xl mx-auto px-4">
-          <h2 style={{
+          {/* <h2 style={{
             fontSize: '14px',
             textTransform: 'uppercase',
             letterSpacing: '0.05em',
@@ -15,7 +15,7 @@ export default function ProofOfConcept() {
             marginBottom: '8px'
           }}>
             PROOF OF CONCEPT
-          </h2>
+          </h2> */}
           <h3 style={{
             fontFamily: 'Syne',
             fontWeight: 700,
@@ -24,7 +24,7 @@ export default function ProofOfConcept() {
             letterSpacing: '0px',
             color: '#323E50'
           }}>
-            Discover how a well-executed<br />proof of concept can help
+            Why Choose Synoptix AI Consulting?
           </h3>
         </div>
       </div>
@@ -60,7 +60,7 @@ export default function ProofOfConcept() {
                   color: '#323E50',
                   marginBottom: '16px'
                 }}>
-                  Get a validated & formed product's idea
+                  Customized AI Solutions
                 </h4>
                 <p style={{
                   fontFamily: 'Poppins',
@@ -71,7 +71,7 @@ export default function ProofOfConcept() {
                   verticalAlign: 'middle',
                   color: '#323E50'
                 }}>
-                  Proving the concept makes sure your idea is viable and gives you a certain roadmap based on a solid research.
+                  We develop AI strategies that align with your unique business objectives, ensuring relevance and effectiveness.
                 </p>
               </div>
             </div>
@@ -96,7 +96,7 @@ export default function ProofOfConcept() {
                   color: '#323E50',
                   marginBottom: '16px'
                 }}>
-                  Attract and amaze potential investors
+                  Seamless Integration
                 </h4>
                 <p style={{
                   fontFamily: 'Poppins',
@@ -107,7 +107,7 @@ export default function ProofOfConcept() {
                   verticalAlign: 'middle',
                   color: '#323E50'
                 }}>
-                  POC will demonstrate how your solution covers market demands and will make potential investors believe in your idea based on real feedback.
+                  Our solutions are designed to integrate effortlessly with your existing systems, minimizing disruption and maximizing adoption.
                 </p>
               </div>
             </div>
@@ -132,7 +132,7 @@ export default function ProofOfConcept() {
                   color: '#323E50',
                   marginBottom: '16px'
                 }}>
-                  Ensure the cost effectiveness
+                 Scalable and Secure
                 </h4>
                 <p style={{
                   fontFamily: 'Poppins',
@@ -143,7 +143,7 @@ export default function ProofOfConcept() {
                   verticalAlign: 'middle',
                   color: '#323E50'
                 }}>
-                  Cut unnecessary budget needs, reduce risks on early stages and make well-informed decisions in further direction.
+                  Built with enterprise-grade security, our AI solutions are scalable to grow with your business needs.
                 </p>
               </div>
             </div>
@@ -152,7 +152,7 @@ export default function ProofOfConcept() {
           {/* CTA Button */}
           <div className="text-center mt-12">
             <Link 
-              href="/contact" 
+              href="/contact-us" 
               className="inline-flex items-center justify-center bg-[#5E5CFF] hover:bg-[#4A48FF] text-white font-poppins font-medium px-8 py-3 rounded-full transition-all duration-300"
             >
               Talk to our Expert →

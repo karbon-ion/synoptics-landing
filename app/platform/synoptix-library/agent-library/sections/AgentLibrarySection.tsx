@@ -15,6 +15,7 @@ import agentsJson from '../agents.json'
 interface Agent {
   title: string
   description: string
+  category: string
 }
 
 export function AgentLibrarySection() {
@@ -28,11 +29,8 @@ export function AgentLibrarySection() {
     const loadedAgents = agentsJson.agents as Agent[]
     setAgents(loadedAgents)
     
-    // Create some sample categories based on the first word of each title
-    const extractedCategories = loadedAgents.map(agent => {
-      const firstWord = agent.title.split(' ')[0]
-      return firstWord
-    })
+    // Get unique categories from the agents
+    const extractedCategories = loadedAgents.map(agent => agent.category).filter(category => category !== 'All')
     const categories = ['All', ...new Set(extractedCategories)]
     setUniqueCategories(categories)
   }, [])
@@ -52,13 +50,10 @@ export function AgentLibrarySection() {
 
   // Map JSON data to the format expected by AgentCard
   const agentsCardData = agents.map(agent => {
-    // Extract the first word of the title to use as a tag
-    const firstWord = agent.title.split(' ')[0]
-    
     return {
       title: agent.title,
       description: agent.description,
-      tags: [firstWord],
+      tags: [agent.category],
       icons: [slackIcon, notionIcon, githubIcon], // Default icons for all agents
     }
   })

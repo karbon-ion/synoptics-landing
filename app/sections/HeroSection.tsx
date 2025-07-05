@@ -97,8 +97,8 @@ export default function HeroSection({ videoRef, isInView }: HeroSectionProps) {
     return null; // Or a loader/spinner
   }
   const videoUrl = isInView 
-    ? "https://www.youtube.com/embed/MgRh-vN9ZBg?si=2cCxYwAaUmSEDIrb&autoplay=1&mute=1&rel=0"
-    : "https://www.youtube.com/embed/MgRh-vN9ZBg?si=2cCxYwAaUmSEDIrb&rel=0";
+    ? "https://www.youtube.com/embed/MgRh-vN9ZBg?si=2cCxYwAaUmSEDIrb&autoplay=1&mute=1&rel=0&modestbranding=1&controls=1&showinfo=0&fs=1"
+    : "https://www.youtube.com/embed/MgRh-vN9ZBg?si=2cCxYwAaUmSEDIrb&rel=0&modestbranding=1&controls=1&showinfo=0&fs=1";
 
   return (
     <>
@@ -221,50 +221,61 @@ export default function HeroSection({ videoRef, isInView }: HeroSectionProps) {
         {isMobile ? (
   <div className="absolute bottom-0 left-0 right-0 translate-y-1/2 px-4 sm:px-6">
 
-    <div className="relative mx-auto w-full max-w-[360px]">
-      <div className="relative w-full pt-[56.25%]"> {/* 16:9 ratio */}
-        <iframe
-          src={videoUrl}
-          title="Demo Video Mobile"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-          className="absolute top-0 left-0 w-full h-full rounded-lg z-10 pt-7 pl-6.5 pr-9 pb-9"
-          style={{ border: 'none' }}
-        />
-        <Image
-          src="/test-page/videoFrame.png"
-          alt="Mobile Video Frame"
-          fill
-          className="absolute top-0 left-0 z-20 pointer-events-none rounded-lg"
-          priority
-        />
+    <div className="relative mx-auto w-[80%] max-w-[280px]">
+      <div className="relative w-full" style={{ paddingTop: '56.25%' }}> {/* 16:9 aspect ratio */}
+        <div className="absolute top-0 left-0 w-full h-full rounded-lg overflow-hidden" style={{ backgroundColor: '#F5F5F5', boxShadow: '0 10px 25px rgba(0,0,0,0.1)' }}>
+          {/* Browser header */}
+          <div className="h-[30px] bg-white border-b border-gray-200 flex items-center mb-5 px-2">
+            {/* Window controls */}
+            <div className="flex space-x-1.5">
+              <div className="w-2.5 h-2.5 rounded-full bg-red-500"></div>
+              <div className="w-2.5 h-2.5 rounded-full bg-yellow-500"></div>
+              <div className="w-2.5 h-2.5 rounded-full bg-green-500"></div>
+            </div>
+          </div>
+          {/* Video content */}
+          <div className="w-full h-[calc(100%-30px)] bg-black flex items-center justify-center overflow-hidden">
+            <iframe
+              src={videoUrl}
+              title="Demo Video Mobile"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              style={{ border: 'none', width: '100%', height: '100%', position: 'absolute', left: '0', top: '0' }}
+            />
+          </div>
+        </div>
       </div>
     </div>
   </div>
 ) : (
   <div className="absolute bottom-0 left-0 right-0 translate-y-1/2 px-4 sm:px-6">
-    <div className="relative mx-auto w-[1200px] h-[750px]">
-      <div ref={videoRef} className="relative w-full h-full">
+   <div className="relative mx-auto w-[70%] max-w-[840px]">
+  <div ref={videoRef} className="relative w-full" style={{ paddingTop: '56.25%' }}> {/* 16:9 aspect ratio */}
+    <div className="absolute top-0 left-0 w-full h-full rounded-lg overflow-hidden" style={{ backgroundColor: '#F5F5F5', boxShadow: '0 10px 25px rgba(0,0,0,0.1)' }}>
+      {/* Browser header */}
+      <div className="h-[40px] bg-white border-b border-gray-200 flex items-center px-4">
+        {/* Window controls */}
+        <div className="flex space-x-2">
+          <div className="w-3 h-3 rounded-full bg-red-500"></div>
+          <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+          <div className="w-3 h-3 rounded-full bg-green-500"></div>
+        </div>
+      </div>
+      {/* Video content */}
+      <div className="w-full h-[calc(100%-40px)] bg-black flex items-center justify-center overflow-hidden">
         <iframe
           src={videoUrl}
           title="Demo Video"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
-          width="950"
-          height="590"
-          className="absolute top-[8px] left-[50px]  pl-23 pt-28 z-10 rounded-lg"
-          style={{ border: 'none' }}
-        />
-        <Image
-          src="/test-page/videoFrame.png"
-          alt="Video Frame"
-          width={1100}
-          height={600}
-          className="absolute top-0 left-10 z-20 pointer-events-none"
-          priority
+          style={{ border: 'none', width: '100%', height: '100%', position: 'absolute', left: '0', top: '0' }}
         />
       </div>
     </div>
+  </div>
+</div>
+
+
   </div>
 )}
 

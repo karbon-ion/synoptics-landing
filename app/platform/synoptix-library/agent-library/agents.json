@@ -2,215 +2,268 @@
   "agents": [
     {
       "title": "Blog Generator",
-      "description": "Create engaging, SEO-friendly blogs tailored to your audience, driving visibility and brand authority."
+      "description": "Create engaging, SEO-friendly blogs tailored to your audience, driving visibility and brand authority.",
+      "category": "Marketing"
     },
     {
       "title": "Knowledge Base Agent",
-      "description": "Retrieve and deliver knowledge instantly for informed decision-making."
+      "description": "Retrieve and deliver knowledge instantly for informed decision-making.",
+      "category": "IT"
     },
     {
       "title": "Spreadsheet Assistant",
-      "description": "Helps with spreadsheet operations, data analysis, and formula generation."
+      "description": "Helps with spreadsheet operations, data analysis, and formula generation.",
+      "category": "Finance"
     },
     {
       "title": "FAQs Generator",
-      "description": "Extract and craft clear FAQs from your content."
+      "description": "Extract and craft clear FAQs from your content.",
+      "category": "Marketing"
     },
     {
       "title": "Process Map Generator",
-      "description": "Generates clear, easy-to-follow process maps for better visualization and execution."
+      "description": "Generates clear, easy-to-follow process maps for better visualization and execution.",
+      "category": "IT"
     },
     {
       "title": "Code Debugger",
-      "description": "Detect, analyse, and fix code errors efficiently to streamline your development."
+      "description": "Detect, analyse, and fix code errors efficiently to streamline your development.",
+      "category": "IT"
     },
     {
       "title": "Code Generator",
-      "description": "Generate clean, optimized code snippets instantly for high quality solutions."
+      "description": "Generate clean, optimized code snippets instantly for high quality solutions.",
+      "category": "IT"
     },
     {
       "title": "Social Media Growth Advisor",
-      "description": "Provide strategies to enhance social media engagement, follower growth, and viral content creation."
+      "description": "Provide strategies to enhance social media engagement, follower growth, and viral content creation.",
+      "category": "Marketing"
     },
     {
       "title": "HR Policy Explainer",
-      "description": "Simplify and explain HR policies to boost employee clarity and policy compliance."
+      "description": "Simplify and explain HR policies to boost employee clarity and policy compliance.",
+      "category": "HR"
     },
     {
       "title": "Sales Contract Summariser",
-      "description": "Summarize contract details for a sale contract."
+      "description": "Summarize contract details for a sale contract.",
+      "category": "Sales"
     },
     {
       "title": "Draft High Priority Email",
-      "description": "Create a reminder email about an assigned task using the information provided."
+      "description": "Create a reminder email about an assigned task using the information provided.",
+      "category": "All"
     },
     {
       "title": "IT Help Desk",
-      "description": "Resolve IT issues faster with an agent that answers questions."
+      "description": "Resolve IT issues faster with an agent that answers questions.",
+      "category": "IT"
     },
     {
       "title": "Finance Report Summariser",
-      "description": "Generate quick summaries of financial reports."
+      "description": "Generate quick summaries of financial reports.",
+      "category": "Finance"
     },
     {
       "title": "Invoice Data Extractor",
-      "description": "Extract Invoice details."
+      "description": "Extract Invoice details.",
+      "category": "Finance"
     },
     {
       "title": "Offer Letter Drafter",
-      "description": "Quickly create customizable offer letters"
+      "description": "Quickly create customizable offer letters",
+      "category": "HR"
     },
     {
       "title": "Draft Resume Questions",
-      "description": "Analyze resumes to generate targeted interview questions."
+      "description": "Analyze resumes to generate targeted interview questions.",
+      "category": "HR"
     },
     {
       "title": "Interview Questions Generator",
-      "description": "Create a list of questions for an interview with a job function."
+      "description": "Create a list of questions for an interview with a job function.",
+      "category": "HR"
     },
     {
       "title": "Project Risk Tracker",
-      "description": "Create a structured list of project risks and mitigations."
+      "description": "Create a structured list of project risks and mitigations.",
+      "category": "All"
     },
     {
       "title": "Review Legal Document",
-      "description": "Identify and summarize the key obligations and liabilities in a contract."
+      "description": "Identify and summarize the key obligations and liabilities in a contract.",
+      "category": "All"
     },
     {
       "title": "Extract Legal Facts",
-      "description": "Identify facts and opinion from legal documents"
+      "description": "Identify facts and opinion from legal documents",
+      "category": "All"
     },
     {
       "title": "Compliance Risk Detector",
-      "description": "Analyse compliance gaps from regulatory documents"
+      "description": "Analyse compliance gaps from regulatory documents",
+      "category": "All"
     },
     {
       "title": "LinkedIn Post Creator",
-      "description": "Generate professional and engaging LinkedIn posts"
+      "description": "Generate professional and engaging LinkedIn posts",
+      "category": "Marketing"
     },
     {
       "title": "X Post Creator",
-      "description": "Generate concise and attention-grabbing posts tailored for X"
+      "description": "Generate concise and attention-grabbing posts tailored for X",
+      "category": "Marketing"
     },
     {
       "title": "Email Marketing Agent",
-      "description": "Draft promotional or outreach emails for marketing campaigns"
+      "description": "Draft promotional or outreach emails for marketing campaigns",
+      "category": "Marketing"
     },
     {
       "title": "Error Resolver",
-      "description": "Diagnose Python errors and suggest possible causes and solutions"
+      "description": "Diagnose Python errors and suggest possible causes and solutions",
+      "category": "IT"
     },
     {
       "title": "Trends Analyst",
-      "description": "Identify and summarize latest market or industry trends"
+      "description": "Identify and summarize latest market or industry trends",
+      "category": "Marketing"
     },
     {
       "title": "Industry Research Agent",
-      "description": "Provide detailed insights on a specific industry"
+      "description": "Provide detailed insights on a specific industry",
+      "category": "Marketing"
     },
     {
       "title": "Competitors Analyst",
-      "description": "Discover key competitors in a given industry"
+      "description": "Discover key competitors in a given industry",
+      "category": "Marketing"
     },
     {
       "title": "Mitigation Strategy Assistant",
-      "description": "Suggest strategies to mitigate identified risks and issues"
+      "description": "Suggest strategies to mitigate identified risks and issues",
+      "category": "All"
     },
     {
       "title": "Log Summarisation Agent",
-      "description": "Summarize logs to detect anomalies, frequent issues, and errors"
+      "description": "Summarize logs to detect anomalies, frequent issues, and errors",
+      "category": "IT"
     },
     {
       "title": "Access Request Assistant",
-      "description": "Assist with access request processes based on internal policies"
+      "description": "Assist with access request processes based on internal policies",
+      "category": "IT"
     },
     {
       "title": "Lead Qualification Agent",
-      "description": "Qualify and score leads based on budget, need, and timeline"
+      "description": "Qualify and score leads based on budget, need, and timeline",
+      "category": "Sales"
     },
     {
       "title": "Meeting Scheduler Agent",
-      "description": "Automatically schedule and manage meetings with clients or prospects"
+      "description": "Automatically schedule and manage meetings with clients or prospects",
+      "category": "Sales"
     },
     {
       "title": "Forecasting & Budgeting Agent",
-      "description": "Generate revenue forecasts and budget insights using previous data"
+      "description": "Generate revenue forecasts and budget insights using previous data",
+      "category": "Finance"
     },
     {
       "title": "Expense Management & Policy Compliance Agent",
-      "description": "Review and validate expenses for policy violations, anomalies, and duplicates"
+      "description": "Review and validate expenses for policy violations, anomalies, and duplicates",
+      "category": "Finance"
     },
     {
       "title": "Financial Anomaly Detector",
-      "description": "Detect financial anomalies, cost spikes, and hidden spending trends"
+      "description": "Detect financial anomalies, cost spikes, and hidden spending trends",
+      "category": "Finance"
     },
     {
       "title": "Finance Report Generator",
-      "description": "Generate automated financial reports such as P&L, balance sheets, and cash flow summaries"
+      "description": "Generate automated financial reports such as P&L, balance sheets, and cash flow summaries",
+      "category": "Finance"
     },
     {
       "title": "Strategic Benefits Extractor",
-      "description": "Extracts high-impact program benefits from detailed business cases"
+      "description": "Extracts high-impact program benefits from detailed business cases",
+      "category": "Finance"
     },
     {
       "title": "Benefits Realization Planner",
-      "description": "Creates governance-backed plans to realize program benefits"
+      "description": "Creates governance-backed plans to realize program benefits",
+      "category": "Finance"
     },
     {
       "title": "DevOps Ticket Manager",
-      "description": "Manage DevOps tickets—fetch, review, update, and create tasks"
+      "description": "Manage DevOps tickets—fetch, review, update, and create tasks",
+      "category": "IT"
     },
     {
       "title": "HR Helpdesk",
-      "description": "Responds to common HR queries around leaves, benefits, and payroll across channels"
+      "description": "Responds to common HR queries around leaves, benefits, and payroll across channels",
+      "category": "HR"
     },
     {
       "title": "Onboarding Assistant",
-      "description": "Guides new hires through forms, policy reviews, and training timelines to accelerate onboarding"
+      "description": "Guides new hires through forms, policy reviews, and training timelines to accelerate onboarding",
+      "category": "HR"
     },
     {
       "title": "Recruitment Coordinator",
-      "description": "Screens resume and handles interview scheduling"
+      "description": "Screens resume and handles interview scheduling",
+      "category": "HR"
     },
     {
       "title": "Exit Interview Analyser",
-      "description": "Analyzes exit interviews to uncover attrition trends and common departure reasons"
+      "description": "Analyzes exit interviews to uncover attrition trends and common departure reasons",
+      "category": "HR"
     },
     {
       "title": "Career Coach",
-      "description": "Recommends internal roles and skill development paths based on career goals"
+      "description": "Recommends internal roles and skill development paths based on career goals",
+      "category": "HR"
     },
     {
       "title": "Policy Adherence Agent",
-      "description": "Detects policy violations and offers real-time guidance for compliant communication and behavior"
+      "description": "Detects policy violations and offers real-time guidance for compliant communication and behavior",
+      "category": "All"
     },
     {
       "title": "Audit & Risk Monitor",
-      "description": "Continuously monitors systems and logs to flag compliance gaps and audit triggers"
+      "description": "Continuously monitors systems and logs to flag compliance gaps and audit triggers",
+      "category": "All"
     },
     {
       "title": "Regulatory Intelligence Agent",
-      "description": "Tracks regulatory changes and translates them into actionable internal policy summaries"
+      "description": "Tracks regulatory changes and translates them into actionable internal policy summaries",
+      "category": "All"
     },
     {
       "title": "Third-Party Compliance Agent",
-      "description": "Evaluates the compliance status and risk level of external vendors, partners, or contractors"
+      "description": "Evaluates the compliance status and risk level of external vendors, partners, or contractors",
+      "category": "All"
     },
     {
       "title": "Compliance Training Assistant",
-      "description": "Delivers and tracks interactive training modules for compliance requirements"
+      "description": "Delivers and tracks interactive training modules for compliance requirements",
+      "category": "HR"
     },
     {
       "title": "PII Guard",
-      "description": "Scans enterprise content for sensitive data and ensures privacy regulation compliance"
+      "description": "Scans enterprise content for sensitive data and ensures privacy regulation compliance",
+      "category": "IT"
     },
     {
       "title": "Custom Compliance Workflow Agent",
-      "description": "Automates end-to-end compliance workflows like ESG or industry-specific reporting"
+      "description": "Automates end-to-end compliance workflows like ESG or industry-specific reporting",
+      "category": "All"
     },
     {
       "title": "Sales Intelligent Agent",
-      "description": "Automatically schedule and manage meetings with clients or prospectsDeliver real-time insights on leads, decision-makers, and market signals"
+      "description": "Automatically schedule and manage meetings with clients or prospectsDeliver real-time insights on leads, decision-makers, and market signals",
+      "category": "Sales"
     }
   ]
 }

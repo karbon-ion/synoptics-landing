@@ -47,7 +47,7 @@ export function AgentCard({ title, description, tags, icons, onConfigure }: Agen
                 </div>
               ))}
             </div>
-            <button 
+            {/* <button 
               onClick={(e) => {
                 e.stopPropagation()
                 onConfigure?.()
@@ -56,7 +56,7 @@ export function AgentCard({ title, description, tags, icons, onConfigure }: Agen
               style={{fontFamily: 'Syne'}}
             >
               Configure →
-            </button>
+            </button> */}
           </div>
         </div>
       </div>
