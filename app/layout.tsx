@@ -123,7 +123,7 @@ export default function RootLayout({
         <FontAwesome />
         <div className="fixed w-full top-0 z-[60] text-center py-2 mb-4 font-medium text-white
         bg-[#5662F6] backdrop-blur-sm">
-          Upcoming Event- See Synoptix in action at National Convention Centre Canberra | 31 July 2025
+          Upcoming Event- See Synoptix AI in action at National Convention Centre Canberra | 31 July 2025
         </div>
         <div className="h-10"></div>
         <NavbarMenu />
