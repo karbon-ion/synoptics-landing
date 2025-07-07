@@ -329,7 +329,7 @@ export const NavbarMenu = () => {
   ];
 
   return (
-    <div className={`fixed w-full left-0 top-0 z-50 transition-all duration-300 flex justify-center items-center ${scrolled ? 'py-2' : 'py-6'}`}>
+    <div className={`fixed w-full left-0 top-0 z-50 mt-6 transition-all duration-300 flex justify-center items-center ${scrolled ? 'py-2' : 'py-6'}`}>
       {/* Mobile header bar with logo and hamburger - Only visible on mobile */}
       <div className="md:hidden fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-4 py-3 bg-white/80 backdrop-blur-sm">
         <Link href="/" className="flex items-center gap-2 group">
