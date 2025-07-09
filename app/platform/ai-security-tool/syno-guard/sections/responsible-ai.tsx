@@ -33,7 +33,7 @@ const agentTypesData = [
     title: 'Data Privacy',
     heading: '',
     description: [
-      { text: 'Enterprises run on data; keeping it secure is not optional. SynoGuard protects sensitive information, prevents data leaks, and ensures compliance, all without slowing you down.' },
+      { text: 'SynoGuard protects sensitive information, prevents data leaks, and ensures compliance, all without slowing you down.' },
       { text: 'Automatically detect and redact sensitive information before it is exposed.' },
       { text: 'Meet regulatory requirements with real-time privacy enforcement.' },
       { text: 'Zero-trust security, end-to-end encryption, and integration into your existing systems.' }

@@ -37,7 +37,7 @@ export default function SynoptixComponent() {
     all: {
       title: "Synoptix is for Every Team",
       features: [
-        { bold: "Document & Email Drafting:", regular: "Generate proposals, reports, follow-ups, and emails in seconds using an enterprise AI platform.  " },
+        { bold: "Document & Email Drafting:", regular: " Generate proposals, reports, follow-ups, and emails in seconds using an enterprise AI platform.  " },
         { bold: "Instant Answers:", regular: " Use natural language search to find the right file, policy, or client detail—across systems." },
         { bold: "Consistent Messaging:", regular: " Maintain brand and message alignment with centralised, approved content accessible to all teams." },
         { bold: "Scheduling & Admin Tasks:", regular: " Automate calendar bookings, reminders, and meeting prep." },
@@ -139,11 +139,11 @@ export default function SynoptixComponent() {
                   }}
                 >
                   {tab === "all" && "All Teams"}
-                  {tab === "marketing" && "I drive Marketing"}
+                  {tab === "marketing" && "I lead Marketing"}
                   {tab === "sales" && "I drive Sales"}
-                  {tab === "it" && "I drive IT"}
-                  {tab === "finance" && "I drive Finance"}
-                  {tab === "hr" && "I drive HR"}
+                  {tab === "it" && "I manage IT"}
+                  {tab === "finance" && "I optimise Finance"}
+                  {tab === "hr" && "I transform HR"}
                 </span>
               </div>
             ))}

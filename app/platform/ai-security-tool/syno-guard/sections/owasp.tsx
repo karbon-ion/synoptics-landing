@@ -105,9 +105,9 @@ const OWASP = () => {
           </p>
           
           <div className="flex justify-center">
-          <Link href="/contact-us" className="bg-[#5662F6] text-white font-medium py-3 px-6 rounded-full hover:bg-blue-600 transition duration-300 inline-flex items-center">
+          {/* <Link href="/contact-us" className="bg-[#5662F6] text-white font-medium py-3 px-6 rounded-full hover:bg-blue-600 transition duration-300 inline-flex items-center">
                         Book a consultation 
-                    </Link>
+                    </Link> */}
           </div>
         </div>
         

@@ -18,7 +18,7 @@ export default function SynoGuard() {
            <AgentTypesSection/>
            {/* <EnterpriseSecuritySection/> */}
            <OWASP/>
-           <TechStack/>
+           {/* <TechStack/> */}
            <SecurityBadges/>
            {/* <PlatformFeatures/>
            <IntegrationSection/>
