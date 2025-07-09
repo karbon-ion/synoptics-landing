@@ -27,7 +27,7 @@ export default function PromptLibrarySection() {
             letterSpacing: '0%',
             textAlign: 'center'
           }} className="mb-6">
-            Explore Prompt Library
+            Explore Our Prompt Library
           </h2>
           
           <Link href="/platform/synoptix-library/prompt-library" className="bg-[#5662F6] text-white font-medium py-3 px-6 rounded-full hover:bg-blue-600 transition duration-300 inline-flex items-center">

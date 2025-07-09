@@ -208,7 +208,7 @@ export default function EnterpriseSection() {
                         />
                       </div>
                     </div>
-                    {tab.showLearnMore && (
+                    {tab.showLearnMore && tab.id !== "voice" && (
                       <Link
                         href={tab.id === "agents" ? "/platform/synoptix-ai-agents" : 
                               tab.id === "search" ? "/platform/synoptix-ai-search" : 
@@ -234,6 +234,21 @@ export default function EnterpriseSection() {
                           <polyline points="12 5 19 12 12 19"></polyline>
                         </svg>
                       </Link>
+                    )}
+                    {tab.id === "voice" && (
+                      <div className="mt-1 mb-2">
+                        <span 
+                          className="text-gray-500 bg-gray-100 px-2 py-0.5 rounded-md" 
+                          style={{ 
+                            fontFamily: 'Poppins', 
+                            fontWeight: 400, 
+                            fontSize: '12px', 
+                            lineHeight: '20px' 
+                          }}
+                        >
+                          Coming Soon...
+                        </span>
+                      </div>
                     )}
                   </div>
                 )}

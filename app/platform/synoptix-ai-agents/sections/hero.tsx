@@ -29,7 +29,7 @@ export default function HeroSection() {
               textAlign: "center"
             }}
           >
-            Build, Launch and Manage Enterprise AI agents in Few Seconds
+            Build, Launch and Manage Enterprise AI agents in a Few Seconds
           </h1>
           
           <div className="mt-8 flex justify-center">
