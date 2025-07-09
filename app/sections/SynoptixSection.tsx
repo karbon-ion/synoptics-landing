@@ -38,9 +38,9 @@ export default function SynoptixComponent() {
       title: "Synoptix is for Every Team",
       features: [
         { bold: "Document & Email Drafting:", regular: " Generate proposals, reports, follow-ups, and emails in seconds using an enterprise AI platform.  " },
-        { bold: "Instant Answers:", regular: " Use natural language search to find the right file, policy, or client detail—across systems." },
-        { bold: "Consistent Messaging:", regular: " Maintain brand and message alignment with centralised, approved content accessible to all teams." },
-        { bold: "Scheduling & Admin Tasks:", regular: " Automate calendar bookings, reminders, and meeting prep." },
+        { bold: "Instant Answers:", regular: " Use natural language search to find the right file, policy, or client detail across systems.  " },
+        { bold: "Consistent Messaging:", regular: " Maintain brand and message alignment with centralised, approved content accessible to all teams.  " },
+        { bold: "Scheduling & Admin Tasks:", regular: " Automate calendar bookings, reminders, and meeting preparation.  " },
         { bold: "Meeting Preparation:", regular: " Get insights and prior history about the person or topic ahead of the meeting. " },
       ],
       learnMoreLink: "/resources/blogs/ai-platform-for-all-teams-smarter-faster-enterprise-work"
@@ -48,11 +48,11 @@ export default function SynoptixComponent() {
     marketing: {
       title: "Synoptix is for Every Team",
       features: [
-        { bold: "Ensure brand consistency:", regular: " Distribute approved content seamlessly across all campaigns and channels" },
+        { bold: "Ensure brand consistency:", regular: " Distribute approved content seamlessly across all campaigns and channels to maintain a consistent brand presence.  " },
         { bold: "Hyper-personalised content generation:", regular: " Use customer data and content repositories to generate targeted marketing emails, landing pages, or campaigns. " },
         { bold: "Automate creative generation:", regular: " Create marketing posts, blogs, and outreach emails with no-code agents powered by an AI platform for enterprise. " },
-        { bold: "Customer insights from unstructured data:", regular: " Analyses unstructured data to surface key themes, pain points, and sentiment trends. " },
-        { bold: "Campaign Review:", regular: " Scans marketing materials against regulatory guidelines, brand tone, and approved language. " }
+        { bold: "Customer insights from unstructured data:", regular: " Analyse unstructured data to surface key themes, pain points, and sentiment trends. " },
+        { bold: "Campaign Review:", regular: " Scan marketing materials against regulatory guidelines, brand tone, and approved language. " }
       ],
       learnMoreLink: "/resources/blogs/ai-marketing-platform-for-faster-smarter-campaigns"
     },
@@ -60,8 +60,8 @@ export default function SynoptixComponent() {
       title: "Synoptix is for Every Team",
       features: [
         { bold: "Access insights instantly:", regular: " Get customer data, battle cards, and document proposals in seconds. " },
-        { bold: "Personalize every interaction:", regular: " Human-like generated messaging based on context and buyer intent.  " },
-        { bold: "Cut down proposal writing time:", regular: " Write proposals by scanning your database for previous precedents for similar requirements. " },
+        { bold: "Personalise every interaction:", regular: " Human-like generated messaging based on context and buyer intent.  " },
+        { bold: "Cut down proposal writing time:", regular: " Write proposals by scanning database for previous precedents for similar requirements. " },
         { bold: "Summarise contracts instantly:", regular: " Pull key deal terms from lengthy sales contracts to enable faster decisions. " },
         { bold: "Close faster, convert more:", regular: " Qualify leads instantly and shorten sales cycles through consistent and high-quality communication. " },
       ],
@@ -81,22 +81,22 @@ export default function SynoptixComponent() {
     finance: {
       title: "Synoptix is for Every Team",
       features: [
-        { bold: "Instant insights extraction:", regular: " Quickly analyse financial reports, invoices, contracts, and compliance docs." },
-        { bold: "Contract & Invoice Intelligence:", regular: " Extract payment terms, escalation clauses, and obligations from contracts and flag inconsistencies using an enterprise AI platform." },
-        { bold: "Improve forecasting accuracy:", regular: " Use historical trends to inform accurate and predictive financial insights." },
-        { bold: "Financial report automation:", regular: " Extract key metrics from ERP systems, excel files, and previous reports to generate financial summaries, forecasts, and variance analysis." },
-        { bold: "Audit readiness and document search:", regular: " Provide instant access to audit-relevant records, retrieve historical compliance data and flag any gaps through an AI platform for enterprise." },
+        { bold: "Instant insights extraction:", regular: " Quickly analyse financial reports, invoices, contracts, and compliance docs.  " },
+        { bold: "Contract & Invoice Intelligence:", regular: " Extract payment terms, escalation clauses, and obligations from contracts and flag inconsistencies using an enterprise AI platform. " },
+        { bold: "Improve forecasting accuracy:", regular: " Use historical trends to inform accurate and predictive financial insights. " },
+        { bold: "Financial report automation:", regular: " Extract key metrics from ERP systems, excel files, and previous reports to generate financial summaries, forecasts, and variance analysis. " },
+        { bold: "Audit readiness and document search:", regular: " Provide instant access to audit-relevant records, retrieve historical compliance data and flag any gaps through an AI platform for enterprise.  " },
       ],
       learnMoreLink: "/resources/blogs/ai-for-finance-teams-real-time-insights-and-automation"
     },
     hr: {
       title: "Synoptix is for Every Team",
       features: [
-        { bold: "HR Policy Assistant:", regular: " A Conversational assistant retrieves relevant sections from HR handbooks, contracts, and policy documents instantly." },
-        { bold: "Automated Role and JD alignment:", regular: " Generate and update role descriptions based on internal benchmarks, skill metrics, and market standards." },
-        { bold: "Performance Review Support:", regular: " Ensure employee performance data, peer feedback, and goal tracking are summarized into a structured review summarise." },
-        { bold: "Employees sentiment analysis:", regular: " Analyses employees surveys, feedback forms, and exit interviews to surface sentiment trends." },
-        { bold: "Compliance & Policy Risk Monitoring:", regular: " Scans HR documents to identify non-compliant language or inconsistencies." },
+        { bold: "HR Policy Assistant:", regular: " A Conversational assistant retrieves relevant sections from HR handbooks, contracts, and policy documents instantly. " },
+        { bold: "Automated Role and JD alignment:", regular: " Generate and update role descriptions based on internal benchmarks, skill metrics, and market standards. " },
+        { bold: "Performance Review Support:", regular: " Ensures employee performance data, peer feedback, and goal tracking are summarized into a structured review. " },
+        { bold: "Employees sentiment analysis:", regular: " Analyse employees surveys, feedback forms, and exit interviews to surface sentiment trends. " },
+        { bold: "Compliance & Policy Risk Monitoring:", regular: " Scan HR documents to identify non-compliant language or inconsistencies. " },
       ],
       learnMoreLink: "/resources/blogs/modern-hr-automation-platform-for-smarter-employee-support"
     },
@@ -198,7 +198,7 @@ export default function SynoptixComponent() {
                     lineHeight: "100%",
                   }}
                 >
-                  Learn More <ArrowRight className="h-5 w-5 ml-2" />
+                  Read Our Blog <ArrowRight className="h-5 w-5 ml-2" />
                 </Link>
               </div>
             </div>

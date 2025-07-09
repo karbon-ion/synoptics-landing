@@ -105,7 +105,7 @@ export default function FeaturesSection() {
                           lineHeight: "100%",
                         }}
                       >
-                        Learn More
+                        Read Our Blog
                         <ArrowRight className="h-3 w-3 ml-1" />
                       </Link>
                     </div>
