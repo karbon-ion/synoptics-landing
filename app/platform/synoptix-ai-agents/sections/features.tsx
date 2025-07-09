@@ -8,7 +8,7 @@ const featuresData = [
   {
     id: 'Custom-Agent',
     title: 'Custom Agents',
-    description: "Synoptix AI allows enterprises to create and launch custom agents that follow natural language instructions and execute business-specific tasks without coding. Choose the data sources, connect data sources, and define how each agent should behave.",
+    description: "Custom agents are purpose-built AI Agents tailored to perform specific business tasks using your internal data and rules without writing any code. Each agent is designed to follow natural language instructions, access only the data you allow, and execute workflows aligned with your operations. ",
     imageUrl: '/synoptix-agents/features/image-1.png',
     imagePosition: 'left',
     learnMoreText: 'Learn more about Custom Agent'
