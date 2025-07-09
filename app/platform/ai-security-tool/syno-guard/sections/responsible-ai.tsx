@@ -52,7 +52,7 @@ const agentTypesData = [
     title: 'Anti Hallucination',
     heading: '',
     description: [
-      { text: 'AI hallucinations are not just mistakes; they are risks. Misinformation can mislead customers and damage credibility. SynoGuard Ensure the accuracy and reliability of AI-generated content by detecting and correcting hallucinations through groundedness detection, aligning outputs with trusted data sources.' }
+      { text: 'AI hallucinations are not just mistakes; they are risks. Misinformation can mislead customers and damage credibility. SynoGuard ensures the accuracy and reliability of AI-generated content by detecting and correcting hallucinations through groundedness detection, aligning outputs with trusted data sources.' }
     ]
   }
 ];
