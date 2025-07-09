@@ -188,7 +188,7 @@ export default function HeroSection({ videoRef, isInView }: HeroSectionProps) {
               </div>
             </div>
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-3 sm:mb-4 font-bold" style={{ fontFamily: 'Syne', lineHeight: '1.2' }}>
-              <span className="text-[#323E50]">AI Handle Your </span>
+              <span className="text-[#323E50]">Let AI Handle Your </span>
               <span className="text-[#5662F6]">
                 <Typewriter
                   words={['Paperwork', 'Routine Tasks', 'Manual Workflows', 'Repetitive Tasks']}

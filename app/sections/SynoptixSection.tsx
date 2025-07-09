@@ -40,7 +40,7 @@ export default function SynoptixComponent() {
         { bold: "Document & Email Drafting", regular: "- Generate proposals, reports, follow-ups, and emails in seconds using an enterprise AI platform.  " },
         { bold: "Instant Answers", regular: " - Use natural language search to find the right file, policy, or client detail—across systems." },
         { bold: "Consistent Messaging", regular: "- Maintain brand and message alignment with centralised, approved content accessible to all teams." },
-        { bold: "Scheduling & Admin Tasks", regular: " Automate calendar bookings, reminders, and meeting prep" },
+        { bold: "Scheduling & Admin Tasks", regular: " Automate calendar bookings, reminders, and meeting prep." },
         { bold: "Meeting Preparation", regular: " Get insights and prior history about the person or topic ahead of the meeting. " },
       ],
       learnMoreLink: "/resources/blogs/ai-platform-for-all-teams-smarter-faster-enterprise-work"
@@ -174,11 +174,11 @@ export default function SynoptixComponent() {
                     <p className="text-[14px] text-[#000000] flex-grow mt-0.3 pr-15" style={{ fontFamily: 'Poppins', fontWeight: 400, fontSize: '14px', lineHeight: '17px' }}>
                       <span style={{ fontWeight: 700 }}>{feature.bold}</span>
                       {feature.regular}
-                      {index === 0 && " your reps' workflows"}
+                      {/* {index === 0 && " your reps' workflows"}
                       {index === 1 && " and rep engagement"}
                       {index === 2 && " cards"}
                       {index === 4 && " materials"}
-                      {index === 5 && " support"}
+                      {index === 5 && " support"} */}
                     </p>
                   </div>
                 ))}
