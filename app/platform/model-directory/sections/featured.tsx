@@ -1,24 +1,17 @@
+'use client';
+
 import Image from 'next/image'
+import { useState, useEffect } from 'react';
 
 const Featured = () => {
-  const boxStyle = {
-    width: '225px',
-    height: '214px',
-    display: 'flex',
-    flexDirection: 'column' as const,
-    alignItems: 'center',
-    justifyContent: 'center',
-    position: 'relative' as const,
-    padding: '20px'
-  }
-
-  const alternateBoxStyle = {
-    ...boxStyle,
-    width: '224.98px',
-    height: '213.8px',
-    background: '#FFFFFF',
-    transform: 'translateY(12px)'
-  }
+  const [windowWidth, setWindowWidth] = useState(1024);
+  
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    setWindowWidth(window.innerWidth);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
   const integrations = [
     { name: 'XAI - Grok', src: '/model-hub/logos/Grok logo.jpeg', hasBackground: false },
     { name: 'DeepSeek', src: '/model-hub/logos/Deepseek logo.png', hasBackground: true },
@@ -33,7 +26,7 @@ const Featured = () => {
   ]
 
   return (
-    <section className="mt-20 relative py-20">
+    <section className="mt-10 md:mt-20 relative py-10 md:py-20">
       <Image
         src="/integrations/featured/bg.png"
         alt="Background"
@@ -45,58 +38,48 @@ const Featured = () => {
         <h2 style={{
           fontFamily: 'Syne',
           fontWeight: 700,
-          fontSize: '48px',
-          lineHeight: '72px',
+          fontSize: windowWidth < 768 ? '30px' : windowWidth < 1024 ? '36px' : '48px',
+          lineHeight: windowWidth < 768 ? '1.2' : '72px',
           textAlign: 'center',
-          marginBottom: '1rem'
+          marginBottom: windowWidth < 768 ? '12px' : '16px'
         }}>
           Featured Models 
         </h2>
         <p style={{
           fontFamily: 'Poppins',
           fontWeight: 400,
-          fontSize: '16px',
-          lineHeight: '30px',
-          letterSpacing: '2%',
+          fontSize: windowWidth < 768 ? '14px' : '16px',
+          lineHeight: windowWidth < 768 ? '1.5' : '30px',
           textAlign: 'center',
           maxWidth: '60rem',
-          margin: '0 auto 4rem'
+          margin: '0 auto',
+          marginBottom: windowWidth < 768 ? '32px' : '64px'
         }}>
           Synoptix supports a wide range of leading AI models, allowing you to leverage the best technology for your specific use cases and requirements 
         </p>
-        <div style={{ 
-          display: 'grid', 
-          gridTemplateColumns: 'repeat(5, 1fr)', 
-          gap: '24px',
-          maxWidth: '1200px',
-          margin: '0 auto',
-          alignItems: 'start'
-        }}>
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-6 max-w-[1200px] mx-auto">
           {integrations.map((integration, index) => (
             <div
               key={index}
+              className={`flex flex-col items-center justify-center p-4 md:p-5 rounded-lg ${index % 2 === 0 ? 'shadow-lg bg-white' : 'bg-white md:transform md:translate-y-3'}`}
               style={{
-                ...(index % 2 === 1 ? alternateBoxStyle : boxStyle),
-                boxShadow: index % 2 === 0 ? '0px 6px 40px 0px #E4E9F180' : 'none',
-                borderRadius: '8px'
+                minHeight: '160px',
+                height: '100%'
               }}
             >
-              <div style={{ marginBottom: '16px' }}>
+              <div className="mb-3 md:mb-4 flex items-center justify-center" style={{height: '64px'}}>
                 <Image
                   src={integration.src}
                   alt={integration.name}
                   width={64}
                   height={64}
-                  className="object-contain"
+                  className="object-contain max-h-[64px]"
                 />
               </div>
               <p style={{
                 fontFamily: 'Poppins',
-                fontSize: '22px',
-                fontWeight: 400,
-                lineHeight: '26px',
+                fontSize: windowWidth < 768 ? '16px' : windowWidth < 1024 ? '18px' : '20px',
                 textAlign: 'center',
-                verticalAlign: 'middle',
                 color: '#323E50'
               }}>
                 {integration.name}

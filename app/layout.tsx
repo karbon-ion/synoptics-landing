@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import { Inter, Poppins, Plus_Jakarta_Sans, Syne, Raleway } from "next/font/google";
 
-
 import "./globals.css";
 import { NavbarMenu } from "@/components/ui/navbar-menu";
 import Footer from "./sections-old/Footer";
 import Script from "next/script";
 import FontAwesome from "@/components/FontAwesome";
+import EventBanner from "@/components/ui/event-banner";
 
 // Font configurations
 const inter = Inter({ subsets: ["latin"], weight: ["400", "500", "600", "700"], variable: "--font-inter" });
@@ -121,10 +121,7 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <FontAwesome />
-        <div className="fixed w-full top-0 z-[60] text-center py-2 mb-4 font-medium text-white
-        bg-[#5662F6] backdrop-blur-sm">
-          Upcoming Event- See Synoptix AI in action at National Convention Centre Canberra | 31 July 2025
-        </div>
+        <EventBanner />
         <div className="h-10"></div>
         <NavbarMenu />
         <main>{children}</main>
