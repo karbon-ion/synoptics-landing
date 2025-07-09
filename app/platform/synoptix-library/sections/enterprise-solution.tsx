@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function EnterpriseSection() {
   return (
@@ -17,6 +18,9 @@ export default function EnterpriseSection() {
         }} className="mb-6">
           Explore Pre-Built AI Agents for <span className="text-[#5662F6]">Instant Deployment</span>
         </h2>
+        <Link href="/platform/synoptix-library/agent-library" className="bg-[#5662F6] text-white font-medium py-3 px-6 rounded-full hover:bg-blue-600 transition duration-300 inline-flex items-center">
+                        View Agent Library
+                    </Link>
         </div>
         
         <div className="flex justify-center">

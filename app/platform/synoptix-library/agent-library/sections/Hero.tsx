@@ -14,8 +14,7 @@ export function Hero() {
               Supercharge Growth with Pre-built AI Agents
             </h1>
             <p className="text-lg text-gray-600 mb-8">
-              Your unified brain, connected to everything you work with.
-              Your unified brain, connected to everything you work with.
+            Unlock smarter workflows with AI-powered agents that streamline operations and accelerate your team’s daily tasks. 
             </p>
             <Link href="/contact-us" className="bg-[#5662F6] text-white font-medium py-3 px-6 rounded-full hover:bg-blue-600 transition duration-300 inline-flex items-center">
             Get a Demo

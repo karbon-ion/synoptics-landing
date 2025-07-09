@@ -7,31 +7,31 @@ import { ArrowRight } from 'lucide-react';
 const featuresData = [
   {
     id: 'universal-knowledge',
-    title: 'Test models safely in a secure enterprise environment',
+    title: 'Large Language Model ',
     subtitle: 'Secure Environment',
     image: '/model-hub/features/image-1.png',
     imageAlt: 'Universal Knowledge',
-    description: 'Test and compare new models without compromising data privacy. Your information stays protected, never used for training, and you decide which models are accessible across your organisation.',
+    description: 'Ideal for customer-facing interactions. Use this when the model needs to be good at creating conversations and should have attributes like conversational abilities, contextual awareness, and adaptability. ',
     imageFirst: true,
     url: '/resources/blogs/synoptix-universal-knowledge-unifies-enterprise-data-and-real-time-web-internet-data'
   },
   {
     id: 'data-insights',
-    title: 'Choose the correct commercial model at every stage of workflow',
+    title: 'Reasoning Models',
     subtitle: 'Commercial Models',
     image: '/model-hub/features/image-2.png',
     imageAlt: 'Data Insights',
-    description: "Use models like GPT-4o, Claude 3, Gemini 1.5, and Jurassic-2 where they perform best—whether that’s reasoning, summarisation, or chat-based interaction. Access them through secure, enterprise-grade platforms like Azure OpenAI, Amazon Bedrock, or Google Vertex AI, with built-in compliance and SLA-backed reliability. With minimal setup and no infrastructure to manage, your team can integrate these models directly into business workflows and scale confidently across departments.",
+    description: "Best for backend processes that involve multiple tool calling. Use this when your AI must reason, plan, and make decisions to execute complex workflows. ",
     imageFirst: false,
     url: '/resources/blogs/synoptix-ai-for-data-insights-turning-files-apps-and-databases-into-actionable-insights'
   },
   {
     id: 'enterprise-data-search',
-    title: 'One interface to run open-source models',
+    title: 'Small Language Model ',
     subtitle: 'Open Sources Models',
     image: '/model-hub/features/image-3.png',
     imageAlt: 'Enterprise Data Search',
-    description: 'Use models like LLaMA 3, Mixtral, Command R+, and Falcon,  where they work best, whether that’s data retrieval, reasoning, or content generation. Fine-tune them on your data, host them securely cloud-native or offline, and integrate them directly into your existing systems. With no vendor lock-in, your team keeps full flexibility to build, optimise, and scale AI on your terms.',
+    description: 'Choose this model when solving a specific use case with limited scope, such as form filling or basic classification. ',
     imageFirst: true,
     url: '/resources/blogs/enterprise-data-search-that-helps-teams-move-faster-with-confidence'
   },
@@ -43,7 +43,7 @@ export default function FeaturesSection() {
     <section className="bg-white py-16 mb-25">
       <div className="container mx-auto max-w-7xl rounded-xl">
         <h2 className="text-center text-3xl font-bold mb-8" style={{fontFamily: "Syne",fontWeight:700,fontSize:"36px",lineHeight:"45px"}}>
-        Access the Latest Language Models in   <span className="text-blue-600">Synoptix Model Directory</span>
+        AI Models That Adapt to    <span className="text-blue-600">Your Business </span>
         </h2>
         
         <div className=" rounded-xl">

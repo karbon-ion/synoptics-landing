@@ -28,7 +28,7 @@ const Hero = () => {
               zIndex: 20
             }}>
               Find the Best Model for <br />
-              Every Workflow
+              Each Enterprise Task
             </h1>
             <p style={{
               fontFamily: 'Poppins',
@@ -39,7 +39,7 @@ const Hero = () => {
               color: '#323E50',
               marginBottom: '2rem'
             }}>
-              Deploy top-performing LLMs from OpenAI, Azure, Google Vertex, xAI, and Deepseek within a secure enterprise environment.
+             Deploy top-performing LLMs from Azure Open AI, Google Vertex, xAI, and Deepseek within a secure enterprise environment. 
               </p>
               <Link href="/contact-us" className="bg-[#5662F6] text-white font-medium py-3 px-6 rounded-full hover:bg-blue-600 transition duration-300 inline-flex items-center">
                         Get a Demo

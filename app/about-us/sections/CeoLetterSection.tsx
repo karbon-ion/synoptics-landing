@@ -78,11 +78,7 @@ const CeoLetterSection = () => {
                             letterSpacing: "0%",
                             textAlign: "center"
                         }}>
-                            "Artificial intelligence must be built with accountability, transparency, and trust at its core. As enterprises embrace AI to drive efficiency and innovation, the responsibility to deploy it safely and ethically becomes even more critical.
-My commitment to Responsible AI starts with how my team has designed and developed the platform. Synoptix AI is built to operate within your infrastructure, ensuring full control over data access, usage, and governance. We support strict role-based permissions, audit trails, and fine-tuned agent behaviour to ensure AI outcomes align with enterprise standards.
-We’ve embedded safeguards throughout the platform, from toxicity and bias detection to privacy filters and automated evaluations. Every AI interaction is traceable, explainable, and auditable so that teams can make informed decisions with confidence.
-Responsible AI isn’t a checkbox. It’s a continuous practice. I have partnered with customers to ensure that AI adoption remains safe, compliant, and aligned with their values. As the technology evolves, so does our commitment to building AI that supports people, respects data, and earns trust at every level.
-Thank you for joining us in building AI that works not just efficiently, but responsibly.
+                            "Synoptix AI was founded on the belief that trust is the foundation of enterprise AI adoption. Our mission is to deliver AI not just for performance, but for transparency, accountability, and control. We are a Microsoft partner, and our platform is fully aligned with Microsoft’s security, compliance, and governance standards. Our platform is purpose-built for compliance-driven environments, enabling enterprises to scale AI securely and productively.  
 "
                         </p>
                     </div>

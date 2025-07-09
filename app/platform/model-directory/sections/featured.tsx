@@ -50,7 +50,7 @@ const Featured = () => {
           textAlign: 'center',
           marginBottom: '1rem'
         }}>
-          featured AI models
+          Featured Models 
         </h2>
         <p style={{
           fontFamily: 'Poppins',
@@ -62,7 +62,7 @@ const Featured = () => {
           maxWidth: '60rem',
           margin: '0 auto 4rem'
         }}>
-          Synoptix supports a wide range of leading AI models, allowing you to leverage the best technology for your specific use cases and requirements
+          Synoptix supports a wide range of leading AI models, allowing you to leverage the best technology for your specific use cases and requirements 
         </p>
         <div style={{ 
           display: 'grid', 

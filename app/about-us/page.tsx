@@ -52,7 +52,7 @@ export default function About() {
           maxWidth: '60rem',
           margin: '0 auto 4rem'
         }}>
-        Synoptix AI was founded on the belief that trust is the foundation of enterprise AI adoption. Our mission is to deliver AI not just for performance, but for transparency, accountability, and control. We are a Microsoft partner, and our platform is fully aligned with Microsoft’s security, compliance, and governance standards. Our platform is purpose-built for compliance-driven environments, enabling enterprises to scale AI securely and productively.
+       Synoptix AI was founded on the belief that trust is the foundation of enterprise AI adoption. Our mission is to deliver AI not just for performance, but for transparency, accountability, and control. We are a Microsoft partner, and our platform is fully aligned with Microsoft’s security, compliance, and governance standards. Our platform is purpose-built for compliance-driven environments, enabling enterprises to scale AI securely and productively.  
         </p>
             <VideoSection videoRef={videoRef} isInView={isInView} />
         </main>

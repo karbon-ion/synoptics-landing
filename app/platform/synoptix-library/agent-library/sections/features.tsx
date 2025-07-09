@@ -9,8 +9,8 @@ const featuresData = [
   {
     id: 'Custom Agents',
     subtitle: '',
-    title: 'Ready AI Agents that engage dynamically and meet business goals ',
-    description: "Turn ideas into structured workflows using simple, natural language prompts or our visual builder. Glean interprets your goals and makes it easy to build, edit, and scale agents — no code required.",
+    title: 'Pre-configured AI Agents for Your Enterprise Needs ',
+    description: "Synoptix AI pre-built agents are built to handle various operational needs. These agents are equipped with tools, memory, and context to conduct routine tasks. ",
     imageUrl: '/synoptix-agents/features/image-2.png',
     imagePosition: 'right'
   },
@@ -56,7 +56,7 @@ export default function FeaturesSection() {
                 }}>
                   {feature.description}
                 </p>
-                <Link
+                {/* <Link
                   href="#"
                   className="inline-flex items-center text-[#6B7BF7] hover:opacity-80 transition-opacity"
                   style={{
@@ -68,7 +68,7 @@ export default function FeaturesSection() {
                 >
                   Learn more about {feature.id.split('-').join(' ')}
                   <ArrowRight className="h-3 w-3 ml-1" />
-                </Link>
+                </Link> */}
               </div>
             </div>
 

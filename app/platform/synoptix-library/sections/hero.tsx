@@ -27,7 +27,7 @@ export default function Hero() {
               lineHeight: "56px",
               color: "#1E293B"
             }}>
-              Deploy AI Agents Without Starting from Scratch
+              Pre-Built AI Agents Designed for Real-Time Enterprise Needs 
 
             </h1>
             
@@ -37,7 +37,7 @@ export default function Hero() {
               fontSize: "16px",
               lineHeight: "28px"
             }}>
-              Explore the agent library to automate the workflows. Deploy and share them across teams like HR, Finance, Marketing, Sales, and IT to streamline across enterprises.
+              Streamline daily operations with pre-built agents designed for enterprise. Easily deploy and share them across departments like HR, Finance, Marketing, Sales, and IT to accelerate routine tasks. 
             </p>
             
             <Link href="/contact-us" className="bg-[#5662F6] text-white font-medium py-3 px-6 mt-5 rounded-full hover:bg-blue-600 transition duration-300 inline-flex items-center">

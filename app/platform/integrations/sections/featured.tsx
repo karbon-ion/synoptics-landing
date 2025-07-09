@@ -62,7 +62,7 @@ const Featured = () => {
           maxWidth: '60rem',
           margin: '0 auto 4rem'
         }}>
-         Synoptix AI connects with hundreds of enterprise systems so that you can embed AI into workflows. Access and act on your business data directly through your existing tools.
+        Synoptix AI connects with multiple enterprise systems so that you can embed AI into workflows. Access and act on your business data directly through your existing tools. 
         </p>
         <div style={{ 
           display: 'grid', 

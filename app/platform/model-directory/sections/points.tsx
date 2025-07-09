@@ -3,19 +3,19 @@ import Image from 'next/image'
 const Points = () => {
   const cardData = [
     {
-      title: "Optimise Agent Performance with the Right Model",
-      description: "Explore and fine-tune the latest models to enhance how your agents respond. Mix and match models to suit specific workflows, use cases, or departments."
+      title: "Optimise Agent Performance",
+      description: "Explore and fine-tune the latest models to enhance how your agents respond. Mix and match models to suit specific workflows, use cases, or requirements."
     },
     {
-      title: "Model Flexibility with Full Control",
-      description: "Select your preferred models using the Synoptix AI Model Directory. Maintain control over model access, deployment, and performance on your terms, in your environment."
+      title: "Flexibility and Full Control",
+      description: "Maintain control over model access, deployment, and performance on your terms, in your environment."
     },
     {
-      title: "Safe Testing in an Enterprise-Ready Environment",
-      description: "Test with confidence in a secure, compliance-friendly space. Synoptix ensures that all model testing meets enterprise standards for data privacy, governance, and reliability."
+      title: "Avoid Single-Model Dependency",
+      description: "Relying on one language model introduces operational and strategic risk. Synoptix AI gives you the flexibility, so you're prepared with a Plan B."
     },
     {
-      title: "Leading Commercial and Open-Source Models",
+      title: "Commercial and Open-Source Models",
       description: "Test the latest LLMs from top providers, all in a secure, no-code environment. Teams can explore how different models perform with agents, instantly."
     }
   ];
@@ -53,11 +53,11 @@ const Points = () => {
               position: 'relative',
               zIndex: 10
             }}>
-              Access the Latest  
+              Discover, Compare, and Deploy the     
               <br />
-              Language Models in
+               Best Language 
               <br />
-              Synoptix Model Directory
+              Models All in One Place
             </h2>
           </div>
 

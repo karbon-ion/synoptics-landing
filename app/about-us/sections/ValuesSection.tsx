@@ -5,16 +5,20 @@ import Image from 'next/image'
 const ValuesSection = () => {
     const valueCards = [
         {
-            title: "Responsible AI",
-            description: "We build AI that is safe, fair, and governed. Every response is traceable, every action auditable, and every deployment aligned with ethical and compliance standards."
+            title: "Trust by Design",
+            description: "We build systems with security, transparency, and accountability at the core because trust isn't a feature, it's a foundation. We uphold the highest standards of data ethics—respecting privacy, minimising bias, and ensuring responsible AI deployment at every step."
+        },
+        {
+            title: "Purposeful Innovation",
+            description: "We don't chase trends. We solve real problems using AI that is practical, scalable, and aligned with enterprise needs. We go beyond answers by understanding your data, workflows, and objectives, we deliver relevance at enterprise scale."
         },
         {
             title: "Human-Centred Automation",
-            description: "We design agents and workflows that support teams, enhance productivity, and strengthen collaboration across the organisation."
+            description: "We build systems that augment people, not replace them. Our mission is to empower teams, not sideline them. We design agents and workflows that support teams, enhance productivity, and strengthen collaboration across the organisation."
         },
         {
-            title: "Security by Design",
-            description: "Security is built into everything we do. From role-based access controls to private deployments and data isolation, Synoptix protects enterprise information at every layer."
+            title: "Security & Privacy by Design",
+            description: "Security, data privacy, and user control are embedded into every layer of the platform. Enterprises maintain full data ownership, whether deployed in the cloud or a fully offline environment."
         }
     ];
     return (
@@ -62,12 +66,13 @@ const ValuesSection = () => {
                     </div>
                 </div>
                 
-                {/* Value cards */}
-                <div className="flex flex-wrap justify-center gap-6 md:gap-8">
+                {/* Value cards - 2x2 grid */}
+                <div className="grid grid-cols-1 md:grid-cols-2 justify-items-center gap-6 md:gap-12 max-w-[1000px] mx-auto">
                     {valueCards.map((card, index) => (
                         <div key={index} className="bg-white shadow-lg overflow-hidden" style={{
-                            width: "360px",
-                            height: "287px",
+                            width: "450px",
+                            height: "auto",
+                            minHeight: "320px",
                             borderRadius: "16px"
                         }}>
                             <div className="p-8">
