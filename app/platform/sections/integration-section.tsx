@@ -29,7 +29,7 @@ const IntegrationSection = () => {
           </p>
           </span>
           <Link
-            href="/contact-us"
+            href="/platform/integrations"
             className="bg-[#5662F6] mt-4 hover:bg-indigo-600 text-white py-2 sm:py-3 px-6 sm:px-8 rounded-full inline-flex items-center transition-colors whitespace-nowrap"
             style={{ fontFamily: 'Syne', fontWeight: 500, fontSize: 'clamp(16px, 4vw, 18px)' }}
           >

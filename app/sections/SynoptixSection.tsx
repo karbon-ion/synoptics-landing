@@ -114,7 +114,10 @@ export default function SynoptixComponent() {
         </div>
 
         {/* Tabs */}
-        <div className="shadow-lg">
+        <div className="shadow-lg border-t-4 border-[#5662F6] rounded-lg" style={{
+          background: 'linear-gradient(196.25deg, rgba(255, 255, 255, 0.4) 9.13%, rgba(219, 234, 254, 0.28) 92.56%)',
+          boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)'
+        }}>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-0 w-full">
             {(["all", "marketing", "sales", "it", "finance", "hr"] as TabType[]).map((tab) => (
               <div

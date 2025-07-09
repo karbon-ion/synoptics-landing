@@ -49,7 +49,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between mb-12">
           {/* Logo and Enterprise RAG */}
           <div className="mb-8 md:mb-0">
-            <div className="flex items-center mb-4">
+            <div className="ml-4 flex items-center ">
               <Image
                 src="/synoptix_logo.svg"
                 alt="Synoptix AI"
@@ -59,12 +59,42 @@ const Footer = () => {
               />
               <span className="text-xl font-bold">Synoptix.AI</span>
             </div>
-            <Image
-  src="/footer/trusted.png"
-  alt="Trusted Partners"
-  width={200}
-  height={50}
-/>
+            
+            <div className="bg-[#323e50] p-4 rounded-lg">
+              <div className="flex items-center">
+                <div>
+                  <div style={{ fontFamily: 'Syne', fontWeight: 700, fontSize: '12px', lineHeight: '37px', letterSpacing: '0%' }}>iawards ACT finalists</div>
+                  <Image
+                    src="/footer/finalist.png"
+                    alt="iawards ACT finalists"
+                    width={100}
+                    height={100}
+                  />
+                </div>
+                
+                <Image
+                  src="/footer/vertical-line.png"
+                  alt="Vertical Line"
+                  width={2}
+                  height={80}
+                  className="mx-6"
+                />
+                
+                <div>
+                  <div className='mb-6' style={{ fontFamily: 'Syne', fontWeight: 700, fontSize: '12px', lineHeight: '24px', letterSpacing: '0%' }}>Trusted by</div>
+                  <a href="https://aidirectory.industry.gov.au/organisation/synoptix-ai" target="_blank" rel="noopener noreferrer">
+                    <Image
+                      src="/footer/intellegence.png"
+                      alt="National Artificial Intelligence Centre"
+                      width={100}
+                      height={40}
+                      style={{ marginTop: '-5px' }}
+                    />
+                  </a>
+                  
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* Platform Links */}
@@ -132,34 +162,7 @@ const Footer = () => {
           </div> */}
           
           {/* Solutions Links - Commented out */}
-          <div className="mb-8 md:mb-0">
-            <h3 style={{
-              fontFamily: 'Poppins, sans-serif',
-              fontWeight: 500,
-              fontSize: '14px',
-              lineHeight: '20px',
-              letterSpacing: '0%',
-              textTransform: 'uppercase',
-              color: '#626DFF' }} className="mb-4">RESOURCES</h3>
-            <span style={{
-              fontFamily: 'Poppins, sans-serif',
-              fontWeight: 400,
-              fontSize: '16px',
-              lineHeight: '24px',
-              letterSpacing: '0%',
-              color: '#626DFF'
-            }}>
-              <ul className="space-y-2">
-                {solutionsLinks.map((link) => (
-                  <li key={link.name}>
-                    <Link href={link.href} className="text-sm text-gray-300 hover:text-white transition-colors">
-                      {link.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </span>
-          </div>
+        
          
 
           {/* Services Links */}
@@ -190,6 +193,35 @@ const Footer = () => {
                 </li>
               ))}
             </ul>
+            </span>
+          </div>
+
+          <div className="mb-8 md:mb-0">
+            <h3 style={{
+              fontFamily: 'Poppins, sans-serif',
+              fontWeight: 500,
+              fontSize: '14px',
+              lineHeight: '20px',
+              letterSpacing: '0%',
+              textTransform: 'uppercase',
+              color: '#626DFF' }} className="mb-4">RESOURCES</h3>
+            <span style={{
+              fontFamily: 'Poppins, sans-serif',
+              fontWeight: 400,
+              fontSize: '16px',
+              lineHeight: '24px',
+              letterSpacing: '0%',
+              color: '#626DFF'
+            }}>
+              <ul className="space-y-2">
+                {solutionsLinks.map((link) => (
+                  <li key={link.name}>
+                    <Link href={link.href} className="text-sm text-gray-300 hover:text-white transition-colors">
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </span>
           </div>
 
@@ -259,10 +291,17 @@ const Footer = () => {
                 </svg>
               </Link>
             </div>
-            <p className="text-sm text-gray-300 mt-3 mb-2">
+            <p className="text-sm text-gray-300 mt-3 mb-4">
 hello@synoptix.ai
-
 </p>
+            <a href="https://azuremarketplace.microsoft.com/en-us/marketplace/apps/ihaconsulting1737191751062.synoptix_azure-managed-application?tab=Overview" target="_blank" rel="noopener noreferrer" className="block mb-4">
+              <Image
+                src="/footer/MS_Azure_Marketplace.png"
+                alt="Microsoft Azure Marketplace"
+                width={150}
+                height={40}
+              />
+            </a>
           </div>
         </div>
 
