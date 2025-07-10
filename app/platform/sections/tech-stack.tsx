@@ -6,7 +6,7 @@ export default function TechStackCard() {
     <div className="bg-[#5662F6] w-[92%] md:w-full max-w-6xl mx-auto rounded-xl md:rounded-2xl mb-6 md:mb-10 p-4 md:p-10 flex flex-col md:flex-row items-center relative overflow-hidden text-white">
       <div className="w-[90%] md:w-full md:max-w-md mb-4 md:mb-0 p-3 md:p-10 z-10">
         <h2 className="font-semibold leading-tight md:leading-snug">
-          <span className="block" style={{ fontFamily: "Syne, sans-serif", fontWeight: 700, fontSize: "24px", lineHeight: "normal", letterSpacing: "0%", whiteSpace: "nowrap" }}>Secure and Built for Enterprise  </span>
+          <span className="block text-xl md:text-2xl" style={{ fontFamily: "Syne, sans-serif", fontWeight: 700, lineHeight: "normal", letterSpacing: "0%" }}>Secure and Built for Enterprise</span>
         </h2>
         <p className="text-xs md:text-sm mt-3 md:mt-4 mb-4 text-white/90" style={{ fontFamily: "Poppins, sans-serif", fontWeight: 400, lineHeight: "20px", letterSpacing: "0%" }}>
         Protect what matters. SynoGuard is built into the Synoptix AI Platform for Enterprise to defend against prompt injection, unauthorised access, and data leakage—so your AI works safely across departments.  

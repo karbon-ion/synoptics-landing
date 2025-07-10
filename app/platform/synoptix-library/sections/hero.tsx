@@ -23,26 +23,21 @@ export default function Hero() {
             <h1 style={{
               fontFamily: "Syne",
               fontWeight: 700,
-              fontSize: "48px",
-              lineHeight: "56px",
               color: "#1E293B"
-            }}>
-              Pre-Built AI Agents Designed for Real-Time Enterprise Needs 
-
+            }} className="text-3xl md:text-[48px] leading-tight md:leading-[56px]">
+              Pre-Built AI Agents Designed for Real-Time Enterprise Needs
             </h1>
             
-            <p className="mt-6 text-gray-600" style={{
+            <p style={{
               fontFamily: "Poppins",
-              fontWeight: 400,
-              fontSize: "16px",
-              lineHeight: "28px"
-            }}>
+              fontWeight: 400
+            }} className="mt-4 md:mt-6 text-gray-600 text-sm md:text-[16px] leading-relaxed md:leading-[28px]">
               Streamline daily operations with pre-built agents designed for enterprise. Easily deploy and share them across departments like HR, Finance, Marketing, Sales, and IT to accelerate routine tasks. 
             </p>
             
-            <Link href="/contact-us" className="bg-[#5662F6] text-white font-medium py-3 px-6 mt-5 rounded-full hover:bg-blue-600 transition duration-300 inline-flex items-center">
-                        Get a Demo
-                    </Link>
+            <Link href="/contact-us" className="bg-[#5662F6] text-white font-medium py-2.5 md:py-3 px-5 md:px-6 mt-4 md:mt-5 rounded-full hover:bg-blue-600 transition duration-300 inline-flex items-center text-sm md:text-base">
+              Get a Demo
+            </Link>
           </div>
           
           <div className="md:w-1/2 md:pl-10">
@@ -52,7 +47,7 @@ export default function Hero() {
                 alt="Synoptix Library"
                 width={600}
                 height={400}
-                className="object-contain"
+                className="object-contain w-full h-auto"
               />
             </div>
           </div>

@@ -63,40 +63,23 @@ const AllIntegrations = () => {
     })
 
   return (
-    <section className="py-20 max-w-7xl mx-auto">
+    <section className="py-12 sm:py-16 md:py-20 max-w-7xl mx-auto">
       <div className="container mx-auto px-4">
         <h2 style={{
           fontFamily: 'Syne',
           fontWeight: 700,
-          fontSize: '48px',
-          lineHeight: '72px',
+          fontSize: '32px',
+          lineHeight: '1.3',
           textAlign: 'left',
-          marginBottom: '40px'
-        }}>
+          marginBottom: '24px'
+        }} className="text-3xl sm:text-4xl md:text-5xl mb-6 sm:mb-8 md:mb-10">
           All integrations
         </h2>
 
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: '220px 1fr',
-          gap: '40px',
-          alignItems: 'start'
-        }}>
+        <div className="flex flex-col md:grid md:grid-cols-[180px_1fr] lg:grid-cols-[220px_1fr] gap-6 md:gap-8 lg:gap-10">
           {/* Left sidebar */}
-          <div className="border border-gray-200 rounded-lg pt-2 pb-2 pl-8" style={{
-            display: 'flex',
-            flexDirection: 'column',
-            gap: '16px'
-          }}>
-            <h3 style={{
-              fontFamily: 'Syne',
-              fontSize: '22px',
-              fontWeight: 500,
-              lineHeight: '32px',
-              verticalAlign: 'middle',
-              color: '#323E50',
-              marginBottom: '16px'
-            }}>
+          <div className="border border-gray-200 rounded-lg p-4 sm:p-6 md:pl-8 flex flex-col gap-3 sm:gap-4 mb-6 md:mb-0">
+            <h3 className="font-syne text-lg sm:text-xl md:text-2xl font-medium text-[#323E50] mb-2 sm:mb-4">
               Categories
             </h3>
             {categories.map((category, index) => (
@@ -124,20 +107,7 @@ const AllIntegrations = () => {
                     <span style={{ color: 'white', fontSize: '12px' }}>✓</span>
                   )}
                 </div>
-                <span style={{
-                  fontFamily: 'Poppins',
-                  fontSize: '12px',
-                  fontWeight: 400,
-                  lineHeight: '22.5px',
-                  color: '#666',
-                  textAlign: 'left',
-                  padding: ' 0',
-                  border: 'none',
-                  background: 'none',
-                  cursor: 'pointer',
-                  verticalAlign: 'middle'
-                }}
-              >
+                <span className="font-poppins text-xs sm:text-sm text-[#666] cursor-pointer">
                 {category}
               </span>
               </div>
@@ -146,66 +116,30 @@ const AllIntegrations = () => {
 
           {/* Right content */}
           <div>
-            <div style={{
-              marginBottom: '32px'
-            }}>
+            <div className="mb-6 sm:mb-8">
               <input
                 type="text"
                 placeholder="Search"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                style={{
-                  width: '980px',
-                  height: '55px',
-                  padding: '0 24px',
-                  border: '1px solid #E4E9F1',
-                  borderRadius: '20px',
-                  fontFamily: 'Poppins',
-                  fontSize: '16px',
-                  outline: 'none'
-                }}
+                className="w-full md:w-[90%] lg:w-[980px] h-10 sm:h-12 md:h-[55px] px-4 sm:px-6 border border-[#E4E9F1] rounded-lg sm:rounded-xl md:rounded-2xl font-poppins text-sm sm:text-base outline-none"
               />
             </div>
 
-            <div style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(5, 1fr)',
-              gap: '24px',
-              maxWidth: '900px'
-            }}>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 sm:gap-4 md:gap-6 max-w-[900px]">
           {allIntegrations.map((integration, index) => (
             <div
               key={index}
-              style={{
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                justifyContent: 'center',
-                padding: '20px',
-                background: '#FFFFFF',
-                borderRadius: '8px',
-                boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.05)',
-                cursor: 'pointer',
-                height: '120px'
-              }}
+              className="flex flex-col items-center justify-center p-3 sm:p-4 md:p-5 bg-white rounded-lg shadow-sm h-[90px] sm:h-[100px] md:h-[120px] cursor-pointer"
             >
               <Image
                 src={integration.src}
                 alt={integration.name}
-                width={40}
-                height={40}
-                className="object-contain"
+                width={32}
+                height={32}
+                className="object-contain w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12"
               />
-              <p style={{
-                fontFamily: 'Inter',
-                fontSize: '18px',
-                fontWeight: 400,
-                lineHeight: '26px',
-                textAlign: 'center',
-                verticalAlign: 'middle',
-                marginTop: '12px',
-                color: '#323E50'
-              }}>
+              <p className="font-inter text-xs sm:text-sm md:text-base text-center mt-2 sm:mt-3 text-[#323E50] line-clamp-2">
                 {integration.name}
               </p>
             </div>

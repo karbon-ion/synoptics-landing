@@ -22,21 +22,19 @@ export default function PromptLibrarySection() {
           <h2 style={{
             fontFamily: 'Syne',
             fontWeight: 700,
-            fontSize: '36px',
-            lineHeight: '45px',
             letterSpacing: '0%',
             textAlign: 'center'
-          }} className="mb-6">
+          }} className="text-2xl md:text-[36px] leading-tight md:leading-[45px] mb-4 md:mb-6 px-2">
             Explore Our Prompt Library
           </h2>
           
-          <Link href="/platform/synoptix-library/prompt-library" className="bg-[#5662F6] text-white font-medium py-3 px-6 rounded-full hover:bg-blue-600 transition duration-300 inline-flex items-center">
-                        View Prompt Library
-                    </Link>
+          <Link href="/platform/synoptix-library/prompt-library" className="bg-[#5662F6] text-white font-medium py-2.5 md:py-3 px-5 md:px-6 rounded-full hover:bg-blue-600 transition duration-300 inline-flex items-center text-sm md:text-base">
+            View Prompt Library
+          </Link>
         </div>
         
-        <div className="flex justify-center">
-          <div className="relative w-full ">
+        <div className="flex justify-center mt-8 md:mt-12">
+          <div className="relative w-full px-2 md:px-0">
             <Image
               src="/synoptix-library/prompts.png"
               alt="Prompt Library"

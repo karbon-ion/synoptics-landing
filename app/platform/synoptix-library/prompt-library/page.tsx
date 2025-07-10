@@ -70,9 +70,9 @@ export default function PromptLibrary() {
   })
 
   return (
-    <main className="relative">
+    <main className="relative overflow-x-hidden">
       {/* Hero Section with Title and Description Only */}
-      <section className="relative pt-40 pb-96">
+      <section className="relative pt-24 md:pt-32 pb-48 md:pb-64">
         <Image
           src="/prompt-library/hero-background.png"
           alt="Background"
@@ -84,55 +84,39 @@ export default function PromptLibrary() {
           <h1 style={{
             fontFamily: 'Syne',
             fontWeight: 700,
-            fontSize: '48px',
-            lineHeight: '72px',
             color: '#323E50',
             textAlign: 'center',
             marginBottom: '1rem'
-          }}>
+          }} className="text-3xl md:text-[48px] leading-tight md:leading-[72px]">
             Prompt Library
           </h1>
           <p style={{
             fontFamily: 'Poppins',
             fontWeight: 400,
-            fontSize: '16px',
-            lineHeight: '30px',
             letterSpacing: '2%',
             textAlign: 'center',
-            maxWidth: '40rem',
             margin: '0 auto'
-          }}>
+          }} className="text-sm md:text-[16px] leading-relaxed md:leading-[30px] max-w-xs md:max-w-2xl lg:max-w-[40rem]">
             Explore optimized prompts for a breadth of business and personal tasks.
           </p>
         </div>
       </section>
 
       {/* Content Section - Starting within the hero */}
-      <div className="container mx-auto px-4 relative" style={{ marginTop: '-320px' }}>
+      <div className="container mx-auto px-4 relative" style={{ marginTop: 'clamp(-180px, -20vw, -240px)' }}>
         <div className="relative z-10 max-w-7xl mx-auto">
           {/* Main grid layout */}
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: '220px 1fr',
-            gap: '40px',
-            alignItems: 'start'
-          }}>
+          <div className="grid grid-cols-1 md:grid-cols-[220px_1fr] gap-6 md:gap-10 lg:gap-[40px] items-start">
             {/* Left sidebar - Categories */}
-            <div className="border border-gray-200 rounded-lg pt-4 pb-4 pl-8 bg-white" style={{
-              display: 'flex',
-              flexDirection: 'column',
-              gap: '16px',
+            <div className="border border-gray-200 rounded-lg pt-4 pb-4 pl-4 md:pl-8 bg-white flex flex-col gap-4 md:gap-[16px] shadow-sm mb-6 md:mb-0" style={{
               boxShadow: '0 2px 8px rgba(0,0,0,0.05)'
             }}>
               <h3 style={{
                 fontFamily: 'Syne',
-                fontSize: '22px',
                 fontWeight: 500,
-                lineHeight: '32px',
                 verticalAlign: 'middle',
-                color: '#323E50',
-                marginBottom: '16px'
-              }}>
+                color: '#323E50'
+              }} className="text-lg md:text-[22px] leading-tight md:leading-[32px] mb-3 md:mb-[16px]">
                 Categories
               </h3>
               {uniqueCategories.map((category: string, index: number) => (
@@ -182,34 +166,21 @@ export default function PromptLibrary() {
             {/* Right side - Search Bar and Prompt Cards */}
             <div>
               {/* Search Bar */}
-              <div style={{ marginBottom: '24px' }}>
+              <div className="mb-4 md:mb-6">
                 <input
                   type="text"
                   placeholder="Looking for a prompt?"
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
+                  className="w-full h-12 md:h-[55px] px-4 md:px-6 border border-[#E4E9F1] rounded-xl md:rounded-[20px] font-['Poppins'] text-sm md:text-base outline-none bg-white shadow-sm"
                   style={{
-                    width: '100%',
-                    height: '55px',
-                    padding: '0 24px',
-                    border: '1px solid #E4E9F1',
-                    borderRadius: '20px',
-                    fontFamily: 'Poppins',
-                    fontSize: '16px',
-                    outline: 'none',
-                    backgroundColor: 'white',
                     boxShadow: '0 2px 8px rgba(0,0,0,0.05)'
                   }}
                 />
               </div>
               
               {/* Prompt Cards Grid - immediately under search bar */}
-              <div style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(3, 1fr)',
-                gap: '24px',
-                marginBottom: '80px'
-              }}>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 lg:gap-6 mb-12 md:mb-20">
                 {filteredPrompts.map((prompt, index) => (
                   <PromptCard
                     key={index}

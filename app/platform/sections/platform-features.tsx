@@ -18,7 +18,7 @@ export default function PlatformFeatures() {
         })
       }}
     >
-       <h1 className="text-center text-3xl font-bold mb-8" style={{fontFamily: "Syne", fontWeight: 700, fontSize: "36px", lineHeight: "45px"}}>
+       <h1 className="text-center font-bold mb-6 md:mb-8" style={{fontFamily: "Syne", fontWeight: 700, fontSize: "clamp(24px, 5vw, 36px)", lineHeight: "1.25"}}>
        Deploy AI with a Secure Enterprise  <span className="text-[#5662F6]">AI Agent Platform</span>
         </h1>
       <div className="flex justify-end mb-8">

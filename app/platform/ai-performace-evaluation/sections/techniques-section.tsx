@@ -207,11 +207,9 @@ const TechniquesSection = () => {
         <h2 style={{
           fontFamily: 'Syne',
           fontWeight: 700,
-          fontSize: '36px',
-          lineHeight: '45px',
           letterSpacing: '0%',
           textAlign: 'center'
-        }} className="mb-6">
+        }} className="text-2xl md:text-[36px] leading-tight md:leading-[45px] mb-4 md:mb-6 px-2">
           Actionable AI Monitoring for Enterprise <span className="text-[#5662F6]">Performance</span>
         </h2>
         </div>

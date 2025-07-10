@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function Hero() {
   return (
-    <div className="relative w-full h-[500px] flex flex-col items-center justify-center overflow-hidden">
+    <div className="relative w-full h-[420px] sm:h-[450px] md:h-[500px] flex flex-col items-center justify-center overflow-hidden">
       <Image
         src="/services/bg.png"
         alt="Services Background"
@@ -12,33 +12,33 @@ export default function Hero() {
         priority
       />
       <div className="absolute inset-0 z-10"></div>
-      <div className="relative z-20 max-w-4xl mx-auto px-4 text-center">
+      <div className="relative z-20 max-w-4xl mx-auto px-4 sm:px-6 text-center mt-12 sm:mt-8 md:mt-0">
         <h1 style={{
           fontFamily: 'Syne',
           fontWeight: 700,
-          fontSize: '48px',
-          lineHeight: '72px',
+          fontSize: '32px',
+          lineHeight: '1.3',
           letterSpacing: '0%',
           textAlign: 'center',
           color: '#323E50',
-          marginBottom: '16px'
-        }}>
+          marginBottom: '12px'
+        }} className="text-3xl sm:text-4xl md:text-5xl md:leading-tight">
           AI Consulting Services for Enterprises
         </h1>
         <p style={{
           fontFamily: 'Poppins',
           fontWeight: 400,
-          fontSize: '16px',
-          lineHeight: '30px',
+          fontSize: '14px',
+          lineHeight: '1.5',
           letterSpacing: '2%',
           textAlign: 'center',
           color: '#323E50',
           maxWidth: '800px',
           margin: '0 auto'
-        }}>
+        }} className="text-sm sm:text-base md:text-lg md:leading-relaxed px-1">
           Unlock the full potential of Artificial Intelligence with Synoptix AI's tailored consulting services. Our expertise lies in transforming complex business challenges into streamlined, intelligent solutions that drive efficiency, reduce errors, and accelerate decision-making.
         </p>
-        <div style={{ marginTop: '32px' }}>
+        <div style={{ marginTop: '16px' }} className="mt-3 sm:mt-5 md:mt-8">
           <Link 
             href="/contact-us" 
             style={{
@@ -49,12 +49,11 @@ export default function Hero() {
               color: 'white',
               fontFamily: 'Poppins',
               fontWeight: 500,
-              padding: '12px 24px',
+              padding: '8px 16px',
               borderRadius: '50px',
               transition: 'all 0.3s ease',
               textDecoration: 'none'
-            }}
-          >
+            }} className="text-xs sm:text-sm md:text-base py-4 px-8 sm:py-2 sm:px-5 md:py-3 md:px-6">
             Book a consultation →
           </Link>
         </div>

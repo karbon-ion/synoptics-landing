@@ -4,7 +4,7 @@ import PromptLibrarySection from './sections/prompt-library';
 
 export default function SynoptixLibraryPage() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen overflow-x-hidden">
       <Hero />
       <EnterpriseSection />
       <PromptLibrarySection />

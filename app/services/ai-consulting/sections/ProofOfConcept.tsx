@@ -30,18 +30,18 @@ export default function ProofOfConcept() {
       </div>
       
       {/* Cards Section with Background Image */}
-      <div className="relative py-20 overflow-hidden">
+      <div className="relative py-10 sm:py-20 overflow-hidden">
         <Image
           src="/services/POC/cards-bg.png"
           alt="Cards Background"
           fill
-          className="object-contain z-0"
+          className="object-cover md:object-contain z-0"
         />
         
         <div className="relative z-10 max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center">
             {/* Card 1 */}
-            <div className="bg-white rounded-lg p-8 shadow-lg w-[379px] h-[360px]">
+            <div className="bg-white rounded-lg p-6 sm:p-8 shadow-lg w-full max-w-[379px] h-auto min-h-[320px] sm:h-[360px]">
               <div className="flex flex-col items-start">
                 <div className="mb-6">
                   <Image 
@@ -77,7 +77,7 @@ export default function ProofOfConcept() {
             </div>
             
             {/* Card 2 - Positioned slightly higher */}
-            <div className="bg-white rounded-lg p-8 shadow-lg w-[379px] h-[360px] md:-mt-8">
+            <div className="bg-white rounded-lg p-6 sm:p-8 shadow-lg w-full max-w-[379px] h-auto min-h-[320px] sm:h-[360px] md:-mt-8">
               <div className="flex flex-col items-start">
                 <div className="mb-6">
                   <Image 
@@ -113,7 +113,7 @@ export default function ProofOfConcept() {
             </div>
             
             {/* Card 3 */}
-            <div className="bg-white rounded-lg p-8 shadow-lg w-[379px] h-[360px]">
+            <div className="bg-white rounded-lg p-6 sm:p-8 shadow-lg w-full max-w-[379px] h-auto min-h-[320px] sm:h-[360px]">
               <div className="flex flex-col items-start">
                 <div className="mb-6">
                   <Image 

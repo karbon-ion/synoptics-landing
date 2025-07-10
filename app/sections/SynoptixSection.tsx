@@ -94,7 +94,7 @@ export default function SynoptixComponent() {
       features: [
         { bold: "HR Policy Assistant:", regular: " A Conversational assistant retrieves relevant sections from HR handbooks, contracts, and policy documents instantly. " },
         { bold: "Automated Role and JD alignment:", regular: " Generate and update role descriptions based on internal benchmarks, skill metrics, and market standards. " },
-        { bold: "Performance Review Support:", regular: " Ensures employee performance data, peer feedback, and goal tracking are summarized into a structured review. " },
+        { bold: "Performance Review Support:", regular: " Ensures employee performance data, peer feedback, and goal tracking are summarised into a structured review. " },
         { bold: "Employees sentiment analysis:", regular: " Analyse employees surveys, feedback forms, and exit interviews to surface sentiment trends. " },
         { bold: "Compliance & Policy Risk Monitoring:", regular: " Scan HR documents to identify non-compliant language or inconsistencies. " },
       ],

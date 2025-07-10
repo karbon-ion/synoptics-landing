@@ -3,7 +3,7 @@ import GlossaryContent from './sections/GlossaryContent';
 
 export default function GlossaryPage() {
   return (
-    <main>
+    <main className="overflow-x-hidden">
       <Hero />
       <GlossaryContent />
     </main>

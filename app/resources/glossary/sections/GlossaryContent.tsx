@@ -147,13 +147,13 @@ export default function GlossaryContent() {
   });
 
   return (
-    <section className="py-12 bg-white">
+    <section className="py-8 sm:py-10 md:py-12 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row gap-8">
+        <div className="flex flex-col md:flex-row gap-6 md:gap-8">
           {/* Left sidebar with search and alphabet */}
-          <div className="w-full md:w-80 lg:w-96 flex-shrink-0">
+          <div className="w-full md:w-72 lg:w-80 xl:w-96 flex-shrink-0">
             {/* Search bar */}
-            <div className="mb-8">
+            <div className="mb-6 sm:mb-8">
               <div className="relative">
                 <input
                   type="text"
@@ -163,7 +163,7 @@ export default function GlossaryContent() {
                   className="w-full py-2 pl-10 pr-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                  <svg className="h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                  <svg className="h-4 w-4 sm:h-5 sm:w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clipRule="evenodd" />
                   </svg>
                 </div>
@@ -173,7 +173,7 @@ export default function GlossaryContent() {
 
             
             {/* Alphabet filter - single line layout */}
-            <div className="flex flex-wrap">
+            <div className="flex flex-wrap justify-center sm:justify-start">
               {alphabet.map(letter => (
                 <button
                   key={letter}
@@ -181,7 +181,7 @@ export default function GlossaryContent() {
                     setSelectedLetter(letter === selectedLetter ? '' : letter);
                     setSearchTerm('');
                   }}
-                  className={`w-6 h-6 flex items-center justify-center text-xs ${
+                  className={`w-6 h-6 sm:w-7 sm:h-7 flex items-center justify-center text-xs sm:text-sm ${
                     selectedLetter === letter ? 'text-blue-600 font-bold' : 'text-gray-700'
                   } ${!uniqueLetters.includes(letter) ? 'opacity-40 cursor-not-allowed' : 'hover:text-blue-800'}`}
                   disabled={!uniqueLetters.includes(letter)}
@@ -193,16 +193,16 @@ export default function GlossaryContent() {
             
             {/* Current letter display */}
             {!searchTerm && selectedLetter && (
-              <div className="mt-8 text-center">
-                <span className="text-5xl font-bold text-blue-600">{selectedLetter}</span>
+              <div className="mt-6 sm:mt-8 text-center md:text-left">
+                <span className="text-4xl sm:text-5xl font-bold text-blue-600">{selectedLetter}</span>
               </div>
             )}
             
             {/* List of terms for the selected letter - only shown on mobile */}
-            <div className="mt-8 md:hidden">
-              <ul className="space-y-2">
+            <div className="mt-6 sm:mt-8 md:hidden">
+              <ul className="space-y-2 text-sm sm:text-base">
                 {filteredTerms.map(term => (
-                  <li key={term.id} className="text-blue-600 hover:text-blue-800">
+                  <li key={term.id} className="text-blue-600 hover:text-blue-800 py-1">
                     <a href={`#${term.id}`}>{term.term}</a>
                   </li>
                 ))}
@@ -212,17 +212,17 @@ export default function GlossaryContent() {
           
           {/* Right side with glossary terms */}
           <div className="flex-grow">
-            <div className="space-y-12">
+            <div className="space-y-8 sm:space-y-10 md:space-y-12">
               {filteredTerms.map(term => (
-                <div key={term.id} id={term.id} className="mb-8">
-                  <h2 className="text-2xl font-bold text-gray-900 mb-2">{term.term}</h2>
-                  <p className="text-gray-600">{term.definition}</p>
+                <div key={term.id} id={term.id} className="mb-6 sm:mb-8">
+                  <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">{term.term}</h2>
+                  <p className="text-sm sm:text-base text-gray-600">{term.definition}</p>
                 </div>
               ))}
               
               {filteredTerms.length === 0 && (
-                <div className="text-center py-12">
-                  <p className="text-gray-500">No terms found for {searchTerm ? `"${searchTerm}"` : `letter ${selectedLetter}`}</p>
+                <div className="text-center py-8 sm:py-10 md:py-12">
+                  <p className="text-gray-500 text-sm sm:text-base">No terms found for {searchTerm ? `"${searchTerm}"` : `letter ${selectedLetter}`}</p>
                 </div>
               )}
             </div>

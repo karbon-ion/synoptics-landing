@@ -35,13 +35,24 @@ const Points = () => {
           <div 
             className="lg:hidden rounded-lg p-6 sm:p-8 flex flex-col justify-center relative overflow-hidden w-full max-w-[407px] h-[300px] sm:h-[400px]"
           >
-            <Image
-              src="/model-hub/card-1-bg.png"
-              alt="Card Background"
-              fill
-              className="object-contain z-0"
-              quality={100}
-            />
+            <div className="hidden sm:block">
+              <Image
+                src="/model-hub/card-1-bg.png"
+                alt="Card Background"
+                fill
+                className="object-contain z-0"
+                quality={100}
+              />
+            </div>
+            <div className="sm:hidden">
+              <Image
+                src="/model-hub/card-1-bg-rotate.png"
+                alt="Card Background"
+                fill
+                className="object-contain z-0"
+                quality={100}
+              />
+            </div>
             <h2 style={{
               fontFamily: 'Syne',
               fontWeight: 700,

@@ -77,7 +77,7 @@ const ResultSection = () => {
   };
 
   return (
-    <section ref={sectionRef} className="py-24 relative overflow-hidden">
+    <section ref={sectionRef} className="py-12 sm:py-16 md:py-24 relative overflow-hidden">
       {/* Gradient background */}
       <div className="absolute inset-0 bg-white from-blue-50 to-blue-100 z-0" />
       
@@ -87,21 +87,22 @@ const ResultSection = () => {
       <h2 style={{
         fontFamily: 'Syne',
         fontWeight: 700,
-        fontSize: '36px',
-        lineHeight: '48px',
+        fontSize: '28px',
+        lineHeight: '1.3',
         letterSpacing: '0%',
         textAlign: 'center',
         verticalAlign: 'middle',
         color: '#323E50',
-        marginBottom: '24px'
-      }}>
+        marginBottom: '16px',
+        marginTop: '8px'
+      }} className="text-2xl sm:text-3xl md:text-4xl md:leading-tight mb-4 sm:mb-6 md:mb-8">
           Results You Can Expect 
         </h2>
         
        
         
         {/* Stats grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 mt-8">
           {stats.map((stat, index) => (
             <div key={stat.id} className="flex flex-col items-start">
               <div className="w-full mb-4">
@@ -125,7 +126,7 @@ const ResultSection = () => {
               
               <div className="flex flex-col items-start">
                 <div className="flex items-baseline">
-                  <span className="text-5xl font-bold text-gray-900">
+                  <span className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900">
                     {animated ? `${percentages[index]}%` : '0%'}
                   </span>
                   {stat.label && (
@@ -137,14 +138,14 @@ const ResultSection = () => {
                 <p style={{
                   fontFamily: 'Poppins',
                   fontWeight: 400,
-                  fontSize: '14px',
-                  lineHeight: '24px',
+                  fontSize: '13px',
+                  lineHeight: '1.5',
                   letterSpacing: '0%',
                   verticalAlign: 'middle',
                   color: '#323E50',
-                  marginTop: '8px',
+                  marginTop: '6px',
                   textAlign: 'left'
-                }}>
+                }} className="text-xs sm:text-sm md:text-base md:leading-relaxed">
                   {stat.description}
                 </p>
               </div>

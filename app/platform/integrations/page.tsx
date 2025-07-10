@@ -5,7 +5,7 @@ import RequestIntegration from './sections/request-integration'
 
 export default function Integrations() {
   return (
-    <main>
+    <main className="overflow-x-hidden">
       <Hero />
       <Featured />
       <RequestIntegration />

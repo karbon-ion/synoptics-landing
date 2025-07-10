@@ -6,7 +6,7 @@ import { AgentLibrarySection } from './sections/AgentLibrarySection'
 
 export default function AgentLibrary() {
   return (
-    <main>
+    <main className="overflow-x-hidden">
       <Hero />
       <FeaturesSection />
       <AgentLibrarySection />

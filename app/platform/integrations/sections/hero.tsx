@@ -14,7 +14,7 @@ const Hero = () => {
   ]
 
   return (
-    <section className="relative  py-40">
+    <section className="relative py-20 sm:py-28 md:py-40">
       <Image
         src="/integrations/bg.png"
         alt="Background"
@@ -22,39 +22,40 @@ const Hero = () => {
         className="object-cover z-0"
         quality={100}
       />
-      <div className="relative z-10 container mx-auto px-4">
+      <div className="relative z-10 container mx-auto px-4 sm:px-6">
         <h1 style={{
           fontFamily: 'Syne',
           fontWeight: 700,
-          fontSize: '48px',
-          lineHeight: '72px',
+          fontSize: '32px',
+          lineHeight: '1.3',
           color: '#323E50',
           textAlign: 'center',
           marginBottom: '1rem'
-        }}>
+        }} className="text-3xl sm:text-4xl md:text-5xl">
           Seamless Integrations for Smarter Enterprise AI 
         </h1>
         <p style={{
           fontFamily: 'Poppins',
           fontWeight: 400,
-          fontSize: '16px',
-          lineHeight: '30px',
+          fontSize: '14px',
+          lineHeight: '1.6',
           letterSpacing: '2%',
           textAlign: 'center',
           maxWidth: '40rem',
-          margin: '0 auto 4rem'
-        }}>
+          margin: '0 auto 2rem',
+          padding: '0 8px'
+        }} className="text-sm sm:text-base md:text-lg mb-6 sm:mb-8 md:mb-16">
          Connect your existing business application and data sources. Unlock the full power of your enterprise data in one unified platform. 
         </p>
-        <div className="flex justify-center items-center gap-8 flex-wrap">
+        <div className="flex justify-center items-center gap-4 sm:gap-6 md:gap-8 flex-wrap">
           {integrations.map((integration, index) => (
-            <div key={index} className="w-20 h-20 relative flex items-center justify-center">
+            <div key={index} className="w-16 h-16 sm:w-18 sm:h-18 md:w-20 md:h-20 relative flex items-center justify-center">
               <Image
                 src={integration.src}
                 alt={integration.name}
-                width={86}
-                height={86}
-                className="object-contain"
+                width={64}
+                height={64}
+                className="object-contain w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20"
               />
             </div>
           ))}

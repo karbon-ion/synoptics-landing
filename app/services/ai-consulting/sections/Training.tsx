@@ -3,44 +3,46 @@ import Link from 'next/link';
 
 export default function Training() {
   return (
-    <section className="w-full mb-10 mt-10 relative">
-      <div className="relative py-20 overflow-hidden">
+    <section className="w-full mb-8 mt-8 sm:mb-10 sm:mt-10 relative">
+      <div className="relative py-16 sm:py-16 md:py-20 overflow-hidden">
         <Image
           src="/services/Training/bg-train.png"
           alt="Training Background"
           fill
-          className="object-contain z-0"
+          className="object-cover md:object-contain z-0"
         />
         
-        <div className="relative z-10 max-w-4xl mx-auto px-4 text-center">
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center py-8 sm:py-4 md:py-0">
           <h2 style={{
             fontFamily: 'Syne',
             fontWeight: 700,
-            fontSize: '36px',
-            lineHeight: '45px',
+            fontSize: '28px',
+            lineHeight: '1.3',
             letterSpacing: '0%',
             textAlign: 'center',
             color: 'white',
-            marginBottom: '16px'
-          }}>
+            marginBottom: '12px'
+          }} className="text-2xl sm:text-3xl md:text-4xl md:leading-tight">
             Training and Education
           </h2>
           
           <p style={{
             fontFamily: 'Poppins',
             fontWeight: 400,
-            fontSize: '16px',
-            lineHeight: '30px',
+            fontSize: '14px',
+            lineHeight: '1.6',
             letterSpacing: '2%',
             textAlign: 'center',
             color: 'white',
             maxWidth: '800px',
-            margin: '0 auto'
-          }}>
+            margin: '0 auto',
+            paddingLeft: '8px',
+            paddingRight: '8px'
+          }} className="text-sm sm:text-base md:text-lg md:leading-relaxed mb-6 sm:mb-4">
             Boost efficiency, automate workflows, and accelerate success with customised AI Consulting and integration. Let's transform the way you work.
           </p>
           
-          <Link href="/contact-us" className="bg-[#ffffff] text-[#5662F6] font-medium py-2 px-6 rounded-full hover:bg-[#ffffff] mt-5 transition duration-300 inline-flex items-center">
+          <Link href="/contact-us" className="bg-[#ffffff] text-[#5662F6] font-medium py-2 px-5 sm:py-2 sm:px-6 text-sm sm:text-base rounded-full hover:bg-[#ffffff] mt-4 sm:mt-5 transition duration-300 inline-flex items-center">
                         Get Started
                     </Link>
         </div>
