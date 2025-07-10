@@ -92,7 +92,7 @@ export default function FeaturesSection() {
                   }}>
                     <p style={{ marginBottom: windowWidth < 640 ? '16px' : '24px' }}>{feature.description}</p>
                     <div style={{ marginTop: windowWidth < 640 ? '16px' : '24px' }}>
-                      <Link
+                      {/* <Link
                         href={feature.url}
                         style={{
                           display: 'inline-flex',
@@ -107,7 +107,7 @@ export default function FeaturesSection() {
                       >
                         Read Our Blog
                         <ArrowRight style={{ height: '12px', width: '12px', marginLeft: '4px' }} />
-                      </Link>
+                      </Link> */}
                     </div>
                   </div>
                 </div>
