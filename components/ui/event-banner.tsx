@@ -12,7 +12,7 @@ export default function EventBanner() {
     const checkIfMobile = () => {
       setIsMobile(window.innerWidth < 768);
     };
-
+// 
     checkIfMobile();
     window.addEventListener('resize', checkIfMobile);
 
