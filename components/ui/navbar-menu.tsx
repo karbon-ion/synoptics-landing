@@ -21,14 +21,18 @@ export const MenuItem = ({
   item,
   children,
   href,
+  isScrolled,
 }: {
   setActive: (item: string) => void;
   active: string | null;
   item: string;
   children?: React.ReactNode;
   href?: string;
+  isScrolled?: boolean;
 }) => {
   const pathname = usePathname();
+  const isTrainingPage = pathname?.includes('/services/training');
+  const shouldBeWhite = isTrainingPage && !isScrolled;
 
   return (
     <div onMouseEnter={() => setActive(item)} className="relative">
@@ -36,7 +40,7 @@ export const MenuItem = ({
         <Link href={href}>
           <motion.p
             transition={{ duration: 0.3 }}
-            className={`cursor-pointer hover:opacity-[0.9] uppercase flex items-center ${pathname === href ? 'text-blue-600' : 'text-[#364153] hover:text-blue-600'}`}
+            className={`cursor-pointer hover:opacity-[0.9] uppercase flex items-center ${pathname === href ? 'text-blue-600' : shouldBeWhite ? 'text-white hover:text-white' : 'text-[#364153] hover:text-blue-600'}`}
             style={{ fontFamily: 'Poppins', fontWeight: 500, fontSize: '14px', lineHeight: '20px', letterSpacing: '0%', whiteSpace: 'nowrap' }}
           >
             {item}
@@ -54,7 +58,7 @@ export const MenuItem = ({
       ) : (
         <motion.p
           transition={{ duration: 0.3 }}
-          className="cursor-pointer text-[#364153] hover:text-[#364153] uppercase flex items-center"
+          className={`cursor-pointer uppercase flex items-center ${shouldBeWhite ? 'text-white hover:text-white' : 'text-[#364153] hover:text-[#364153]'}`}
           style={{ fontFamily: 'Poppins', fontWeight: 500, fontSize: '14px', lineHeight: '20px', letterSpacing: '0%', whiteSpace: 'nowrap' }}
         >
           {item}
@@ -319,8 +323,10 @@ export const NavbarMenu = () => {
   ];
 
   const servicesItems = [
-    // { name: 'Fine-Tuning', href: '/services/fine-tuning', description: 'Custom Model Fine-Tuning' },
-    { name: 'AI Consulting', href: '/services/ai-consulting', description: 'Enterprise AI Solutions' },
+    { name: 'AI Consulting', href: '/services/ai-consulting', description: 'Enterprise AI strategy and implementation' },
+    { name: 'Fine-Tuning', href: '/services/fine-tuning', description: 'Custom model training and optimization' },
+    { name: 'Proof of Concepts', href: '/services/proof-of-concepts', description: 'Rapid AI solution prototyping' },
+    { name: 'Training', href: '/services/training', description: 'AI education and skill development' },
   ];
 
   const resourcesItems = [
@@ -400,16 +406,16 @@ export const NavbarMenu = () => {
           className="object-contain"
         />
       </div>
-      <span className="text-[28px] font-bold tracking-tight">
-        Synoptix<span className="text-blue-500">.</span>AI
+      <span className="text-[28px] font-bold tracking-tight" style={{ color: pathname?.includes('/services/training') && !scrolled ? '#ffffff' : 'inherit' }}>
+        Synoptix<span className={pathname?.includes('/services/training') && !scrolled ? 'text-white' : 'text-blue-500'}>.</span>AI
       </span>
     </Link>
   </div>
 
   <div className="ml-10 flex items-center space-x-8">
-            <MenuItem setActive={setActive} active={active} item="Home" href="/" />
+            <MenuItem setActive={setActive} active={active} item="Home" href="/" isScrolled={scrolled} />
 
-            <MenuItem setActive={setActive} active={active} item="Platform">
+            <MenuItem setActive={setActive} active={active} item="Platform" isScrolled={scrolled}>
               <div className="w-[1419px] bg-white p-10" style={{ height: '' }}>
                 {/* Main Container - Two Column Layout */}
                 <div className="flex w-full">
@@ -663,9 +669,27 @@ export const NavbarMenu = () => {
 
             {/* <MenuItem setActive={setActive} active={active} item="SynoGuard" href="/ai-security-tool/syno-guard" /> */}
 
-            <MenuItem setActive={setActive} active={active} item="Services" href="/services/ai-consulting" />
+            <MenuItem setActive={setActive} active={active} item="Services" isScrolled={scrolled}>
+              <div className="grid gap-4 w-64">
+                {servicesItems.map((item) => (
+                  <div key={item.name} className="w-full">
+                    <Link 
+                      href={item.href}
+                      className="group flex flex-col py-2 px-2 hover:bg-gray-50 rounded-lg transition-colors"
+                    >
+                      <p className="text-sm font-medium text-gray-900 group-hover:text-blue-600">
+                        {item.name}
+                      </p>
+                      <p className="text-xs text-gray-500 group-hover:text-blue-500">
+                        {item.description}
+                      </p>
+                    </Link>
+                  </div>
+                ))}
+              </div>
+            </MenuItem>
 
-            <MenuItem setActive={setActive} active={active} item="Resources">
+            <MenuItem setActive={setActive} active={active} item="Resources" isScrolled={scrolled}>
               <div className="grid gap-4 w-64">
                 {resourcesItems.map((item) => (
                   <div key={item.name} className="w-full">
@@ -685,8 +709,8 @@ export const NavbarMenu = () => {
               </div>
             </MenuItem>
             <div className="flex space-x-4">
-              <MenuItem setActive={setActive} active={active} item="About Us" href="/about-us" />
-              <MenuItem setActive={setActive} active={active} item="Contact Us" href="/contact-us" />
+              <MenuItem setActive={setActive} active={active} item="About Us" href="/about-us" isScrolled={scrolled} />
+              <MenuItem setActive={setActive} active={active} item="Contact Us" href="/contact-us" isScrolled={scrolled} />
             </div>
           </div>
         </Menu>

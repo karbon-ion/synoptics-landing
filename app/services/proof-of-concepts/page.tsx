@@ -5,14 +5,14 @@ import Training from './sections/Training';
 import FeaturesSection from './sections/features';
 import ResultsSection from './sections/ResultsSection';
 
-export default function ServicesPage() {
+export default function ProofOfConcepts() {
   return (
     <main className="overflow-x-hidden">
       <Hero />
       <ProofOfConcept />
       <Training />
-      {/* <FeaturesSection /> */}
-      {/* <ResultsSection/> */}
+      {/* <FeaturesSection />
+      <ResultsSection/> */}
       <div className="container mx-auto mt-8 sm:mt-10 md:mt-16 px-4 sm:px-6 md:px-8">
                 <h2 className="text-xl sm:text-2xl md:text-[36px] leading-tight md:leading-[45px]" style={{
                     fontFamily: "Syne",

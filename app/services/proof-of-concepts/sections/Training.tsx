@@ -23,7 +23,7 @@ export default function Training() {
             color: 'white',
             marginBottom: '12px'
           }} className="text-2xl sm:text-3xl md:text-4xl md:leading-tight">
-            Unlock AI’s full potential with expert guidance tailored to your business needs. Speak with our consultants today.
+           Ready to prove AI’s impact? Talk to our experts to start a low-risk pilot project that validates your AI vision and strategy.  
           </h2>
           
           {/* <p style={{
@@ -36,14 +36,14 @@ export default function Training() {
             color: 'white',
             maxWidth: '800px',
             margin: '0 auto',
-            paddingLeft: '10px',
-            paddingRight: '10px'
+            paddingLeft: '8px',
+            paddingRight: '8px'
           }} className="text-sm sm:text-base md:text-lg md:leading-relaxed mb-6 sm:mb-4">
-           Unlock AI’s full potential with expert guidance tailored to your business needs. Speak with our consultants today.  
+            Boost efficiency, automate workflows, and accelerate success with customised AI Consulting and integration. Let's transform the way you work.
           </p> */}
           
           <Link href="/contact-us" className="bg-[#ffffff] text-[#5662F6] font-medium py-2 px-5 sm:py-2 sm:px-6 text-sm sm:text-base rounded-full hover:bg-[#ffffff] mt-4 sm:mt-5 transition duration-300 inline-flex items-center">
-                        Talk to out Expert
+                        Get Started
                     </Link>
         </div>
       </div>

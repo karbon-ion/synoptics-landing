@@ -3,19 +3,19 @@ import Link from 'next/link';
 
 export default function Hero() {
   return (
-    <div className="relative w-full max-w-[1500px] rounded-[20px] mx-auto mt-20 h-[420px] sm:h-[450px] md:h-[500px] flex flex-col items-center justify-center overflow-hidden">
+    <div className="relative w-full py-20  mx-auto  h-[420px] sm:h-[450px] md:h-[650px] flex flex-col items-center justify-center overflow-hidden">
       <Image
-        src="/services/fine-tuning/bg.png"
+        src="/services/Ai consulting services-bg.jpg"
         alt="Services Background"
         fill
         className="object-cover z-0"
-        priority
         style={{
           filter: 'blur(6px)',
           transform: 'scale(1.1)'
         }}
+        priority
       />
-      <div className="absolute inset-0 z-10"></div>
+      <div className="absolute inset-0 z-10" style={{ backgroundColor: '#10103A', opacity: 0.58 }}></div>
       <div className="relative z-20 max-w-4xl mx-auto px-4 sm:px-6 text-center mt-12 sm:mt-8 md:mt-0">
         <h1 style={{
           fontFamily: 'Syne',
@@ -27,7 +27,7 @@ export default function Hero() {
           color: '#ffffff',
           marginBottom: '12px'
         }} className="text-3xl sm:text-4xl md:text-5xl md:leading-tight">
-         Fine-Tuning and Optimisation Services 
+          Training and Education  
         </h1>
         <p style={{
           fontFamily: 'Poppins',
@@ -40,7 +40,7 @@ export default function Hero() {
           maxWidth: '800px',
           margin: '0 auto'
         }} className="text-sm sm:text-base md:text-lg md:leading-relaxed px-1">
-        Boost AI performance with fine-tuning tailored for domain-specific tasks to deliver accuracy, relevance, and impact through advanced optimisation.   
+          Our expert-led programs demystify AI, upskill your teams, and align strategy to drive sustainable innovation, growth, and transformation.  
         </p>
         <div style={{ marginTop: '16px' }} className="mt-3 sm:mt-5 md:mt-8">
           <Link 

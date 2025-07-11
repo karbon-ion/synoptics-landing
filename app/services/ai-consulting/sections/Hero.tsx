@@ -3,15 +3,19 @@ import Link from 'next/link';
 
 export default function Hero() {
   return (
-    <div className="relative w-full h-[420px] sm:h-[450px] md:h-[500px] flex flex-col items-center justify-center overflow-hidden">
+    <div className="relative w-full max-w-[1500px] rounded-[20px] mx-auto mt-20 h-[420px] sm:h-[450px] md:h-[500px] flex flex-col items-center justify-center overflow-hidden">
       <Image
-        src="/services/bg.png"
+        src="/services/Ai consulting services-bg.jpg"
         alt="Services Background"
         fill
         className="object-cover z-0"
+        style={{
+          filter: 'blur(6px)',
+          transform: 'scale(1.1)'
+        }}
         priority
       />
-      <div className="absolute inset-0 z-10"></div>
+      <div className="absolute inset-0 z-10" style={{ backgroundColor: '#10103A', opacity: 0.58 }}></div>
       <div className="relative z-20 max-w-4xl mx-auto px-4 sm:px-6 text-center mt-12 sm:mt-8 md:mt-0">
         <h1 style={{
           fontFamily: 'Syne',
@@ -20,10 +24,10 @@ export default function Hero() {
           lineHeight: '1.3',
           letterSpacing: '0%',
           textAlign: 'center',
-          color: '#323E50',
+          color: '#ffffff',
           marginBottom: '12px'
         }} className="text-3xl sm:text-4xl md:text-5xl md:leading-tight">
-          AI Consulting Services for Enterprises
+          AI Consulting Services 
         </h1>
         <p style={{
           fontFamily: 'Poppins',
@@ -32,11 +36,11 @@ export default function Hero() {
           lineHeight: '1.5',
           letterSpacing: '2%',
           textAlign: 'center',
-          color: '#323E50',
+          color: '#ffffff',
           maxWidth: '800px',
           margin: '0 auto'
         }} className="text-sm sm:text-base md:text-lg md:leading-relaxed px-1">
-          Unlock the full potential of Artificial Intelligence with Synoptix AI's tailored consulting services. Our expertise lies in transforming complex business challenges into streamlined, intelligent solutions that drive efficiency, reduce errors, and accelerate decision-making.
+          Identify high-value AI opportunities, streamline operations, and achieve measurable ROI with our expert consultants. 
         </p>
         <div style={{ marginTop: '16px' }} className="mt-3 sm:mt-5 md:mt-8">
           <Link 

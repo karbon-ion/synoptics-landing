@@ -6,7 +6,7 @@ export default function ProofOfConcept() {
     <section className="w-full">
       {/* Heading Section with White Background */}
       <div className="bg-white py-16 text-center">
-        <div className="max-w-5xl mx-auto px-4">
+        <div className="max-w-3xl mx-auto px-4">
           {/* <h2 style={{
             fontSize: '14px',
             textTransform: 'uppercase',
@@ -24,7 +24,7 @@ export default function ProofOfConcept() {
             letterSpacing: '0px',
             color: '#323E50'
           }}>
-            Discover How Strategic AI Consulting Services Delivers Operational benefits 
+           Discover How a Well-Executed Proof of Concept Can Help 
           </h3>
         </div>
       </div>
@@ -60,7 +60,7 @@ export default function ProofOfConcept() {
                   color: '#323E50',
                   marginBottom: '16px'
                 }}>
-                 Custom AI Strategy & Roadmap  
+                  Risk Reduction & Validation  
                 </h4>
                 <p style={{
                   fontFamily: 'Poppins',
@@ -71,8 +71,8 @@ export default function ProofOfConcept() {
                   verticalAlign: 'middle',
                   color: '#323E50'
                 }}>
-                  Define and prioritise AI opportunities that align with your business goals. This ensures every initiative drives measurable growth and efficiency, maximising ROI. 
-</p>
+                We rapidly develop a small-scale prototype to test key AI ideas, ensuring they are feasible and aligned with your goals before you commit significant resources. 
+                </p>
               </div>
             </div>
             
@@ -96,7 +96,7 @@ export default function ProofOfConcept() {
                   color: '#323E50',
                   marginBottom: '16px'
                 }}>
-                  Governance and Ethical AI Frameworks  
+                  Technical and Data Insight  
                 </h4>
                 <p style={{
                   fontFamily: 'Poppins',
@@ -107,7 +107,7 @@ export default function ProofOfConcept() {
                   verticalAlign: 'middle',
                   color: '#323E50'
                 }}>
-                 Implement data privacy, bias mitigation, and compliance frameworks to safeguard trust and reduce regulatory risk. 
+                 Our team evaluates your existing data and systems during the PoC, uncovering any challenges or gaps early. This helps refine your strategy and avoid surprises in later stages. 
                 </p>
               </div>
             </div>
@@ -132,7 +132,7 @@ export default function ProofOfConcept() {
                   color: '#323E50',
                   marginBottom: '16px'
                 }}>
-                 Change Management and Adoption Support 
+                 Accelerated Time-to-Value  
                 </h4>
                 <p style={{
                   fontFamily: 'Poppins',
@@ -143,7 +143,7 @@ export default function ProofOfConcept() {
                   verticalAlign: 'middle',
                   color: '#323E50'
                 }}>
-                 Design custom training and communication plans to ensure rapid user buy-in and seamless integration. 
+                By focusing on a targeted business problem, the PoC delivers actionable insights and quick wins. You see proof of AI’s impact and establish a clear roadmap for scaling up. 
                 </p>
               </div>
             </div>

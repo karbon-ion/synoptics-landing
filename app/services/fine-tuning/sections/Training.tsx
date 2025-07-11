@@ -23,10 +23,10 @@ export default function Training() {
             color: 'white',
             marginBottom: '12px'
           }} className="text-2xl sm:text-3xl md:text-4xl md:leading-tight">
-            Unlock AI’s full potential with expert guidance tailored to your business needs. Speak with our consultants today.
+           Fine-Tune Your Model with Purpose.  
           </h2>
           
-          {/* <p style={{
+          <p style={{
             fontFamily: 'Poppins',
             fontWeight: 400,
             fontSize: '14px',
@@ -36,14 +36,14 @@ export default function Training() {
             color: 'white',
             maxWidth: '800px',
             margin: '0 auto',
-            paddingLeft: '10px',
-            paddingRight: '10px'
+            paddingLeft: '8px',
+            paddingRight: '8px'
           }} className="text-sm sm:text-base md:text-lg md:leading-relaxed mb-6 sm:mb-4">
-           Unlock AI’s full potential with expert guidance tailored to your business needs. Speak with our consultants today.  
-          </p> */}
+           Work with our AI specialists to optimise your models and elevate performance across the board.  
+          </p>
           
           <Link href="/contact-us" className="bg-[#ffffff] text-[#5662F6] font-medium py-2 px-5 sm:py-2 sm:px-6 text-sm sm:text-base rounded-full hover:bg-[#ffffff] mt-4 sm:mt-5 transition duration-300 inline-flex items-center">
-                        Talk to out Expert
+                        Get Started
                     </Link>
         </div>
       </div>

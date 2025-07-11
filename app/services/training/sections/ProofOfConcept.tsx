@@ -24,7 +24,7 @@ export default function ProofOfConcept() {
             letterSpacing: '0px',
             color: '#323E50'
           }}>
-            Discover How Strategic AI Consulting Services Delivers Operational benefits 
+           Our Workshops & Training    
           </h3>
         </div>
       </div>
@@ -60,7 +60,7 @@ export default function ProofOfConcept() {
                   color: '#323E50',
                   marginBottom: '16px'
                 }}>
-                 Custom AI Strategy & Roadmap  
+                 AI Awareness    
                 </h4>
                 <p style={{
                   fontFamily: 'Poppins',
@@ -71,7 +71,7 @@ export default function ProofOfConcept() {
                   verticalAlign: 'middle',
                   color: '#323E50'
                 }}>
-                  Define and prioritise AI opportunities that align with your business goals. This ensures every initiative drives measurable growth and efficiency, maximising ROI. 
+               Build a solid foundation in artificial intelligence in what it is, where it's used, and why it matters. Perfect for beginners looking to understand AI’s growing role in life and work.  
 </p>
               </div>
             </div>
@@ -96,7 +96,7 @@ export default function ProofOfConcept() {
                   color: '#323E50',
                   marginBottom: '16px'
                 }}>
-                  Governance and Ethical AI Frameworks  
+                AI Fundamentals    
                 </h4>
                 <p style={{
                   fontFamily: 'Poppins',
@@ -107,7 +107,7 @@ export default function ProofOfConcept() {
                   verticalAlign: 'middle',
                   color: '#323E50'
                 }}>
-                 Implement data privacy, bias mitigation, and compliance frameworks to safeguard trust and reduce regulatory risk. 
+                Explore behind-the-scenes of how AI works. Learn key principles, methods, and the data-driven logic behind today’s emerging technologies.  
                 </p>
               </div>
             </div>
@@ -132,7 +132,7 @@ export default function ProofOfConcept() {
                   color: '#323E50',
                   marginBottom: '16px'
                 }}>
-                 Change Management and Adoption Support 
+                AI for Business Leaders   
                 </h4>
                 <p style={{
                   fontFamily: 'Poppins',
@@ -143,7 +143,7 @@ export default function ProofOfConcept() {
                   verticalAlign: 'middle',
                   color: '#323E50'
                 }}>
-                 Design custom training and communication plans to ensure rapid user buy-in and seamless integration. 
+                Gain strategic insight into transformative technologies like LLMs and RAG. Learn how to assess, implement, and lead AI initiatives that drive business impact.  
                 </p>
               </div>
             </div>

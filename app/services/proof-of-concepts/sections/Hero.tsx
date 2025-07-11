@@ -27,7 +27,7 @@ export default function Hero() {
           color: '#ffffff',
           marginBottom: '12px'
         }} className="text-3xl sm:text-4xl md:text-5xl md:leading-tight">
-         Fine-Tuning and Optimisation Services 
+         Proof of Concept Services 
         </h1>
         <p style={{
           fontFamily: 'Poppins',
@@ -40,7 +40,7 @@ export default function Hero() {
           maxWidth: '800px',
           margin: '0 auto'
         }} className="text-sm sm:text-base md:text-lg md:leading-relaxed px-1">
-        Boost AI performance with fine-tuning tailored for domain-specific tasks to deliver accuracy, relevance, and impact through advanced optimisation.   
+         Our experts design and execute pilot solutions that demonstrate feasibility, unlock insights, and accelerate decision-making while delivering early results. 
         </p>
         <div style={{ marginTop: '16px' }} className="mt-3 sm:mt-5 md:mt-8">
           <Link 
