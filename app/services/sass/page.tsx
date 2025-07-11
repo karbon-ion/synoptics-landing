@@ -1,5 +1,5 @@
 import Image from "next/image";
-import f1 from '@/public/features1.png';
+// import f1 from '@/public/features1.png';
 
 
 export default ()=> (
@@ -15,7 +15,7 @@ export default ()=> (
               title: "Design & Deploy Scalable SaaS Solutions",
               subtitle: "CUSTOM SaaS PLATFORM",
               description: "From simple applications to enterprise-grade solutions, Synoptix's SaaS platform lets you design, deploy, and scale seamlessly. Build custom SaaS solutions tailored to your business needs—without the complexity of traditional development.",
-              image: f1,
+              image: '',
               ctaText: "Learn More",
               ctaLink: "/services/sass"
             },
