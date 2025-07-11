@@ -326,12 +326,13 @@ export const NavbarMenu = () => {
     { name: 'AI Consulting', href: '/services/ai-consulting', description: 'Enterprise AI strategy and implementation' },
     { name: 'Fine-Tuning', href: '/services/fine-tuning', description: 'Custom model training and optimization' },
     { name: 'Proof of Concepts', href: '/services/proof-of-concepts', description: 'Rapid AI solution prototyping' },
-    { name: 'Training', href: '/services/training', description: 'AI education and skill development' },
+    { name: 'Training & Education', href: '/services/training', description: 'AI education and skill development' },
   ];
 
   const resourcesItems = [
     { name: 'Blog', href: '/resources/blogs', description: 'Latest insights and updates' },
     { name: 'Glossary', href: '/resources/glossary', description: 'Definitions of key terms and concept' },
+    { name: 'Events', href: '/events', description: 'Upcoming AI industry events and conferences' },
   ];
 
   return (

@@ -20,13 +20,14 @@ const Footer = () => {
     { name: 'Prompt Library', href: '/platform/synoptix-library/prompt-library' },
     { name: 'Model Directory', href: '/platform/model-directory' },
     { name: 'About Us', href: '/about-us' },
+    { name: 'Events', href: '/events' },
   ];
 
   const servicesLinks = [
     { name: 'AI Consulting', href: '/services/ai-consulting' },
-    { name: 'Fine-tuning & Optimization', href: '/services/ai-consulting' },
-    { name: 'Proof of Concepts', href: '/services/ai-consulting' },
-    { name: 'Training and Education', href: '/services/ai-consulting' },
+    { name: 'Fine-tuning & Optimization', href: '/services/fine-tuning' },
+    { name: 'Proof of Concepts', href: '/services/proof-of-concepts' },
+    { name: 'Training and Education', href: '/services/training' },
   ];
   
   const companyLinks = [
