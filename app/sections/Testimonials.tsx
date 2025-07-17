@@ -13,6 +13,20 @@ interface Testimonial {
 
 export default function Testimonials() {
   const [activeIndex, setActiveIndex] = useState(0)
+  
+  const handlePrevious = () => {
+    setActiveIndex((prevIndex) => {
+      const newIndex = prevIndex - 3
+      return newIndex < 0 ? 0 : newIndex
+    })
+  }
+
+  const handleNext = (maxIndex: number) => {
+    setActiveIndex((prevIndex) => {
+      const newIndex = prevIndex + 3
+      return newIndex > maxIndex ? maxIndex : newIndex
+    })
+  }
 
   const testimonials: Testimonial[] = [
     {
@@ -64,8 +78,6 @@ export default function Testimonials() {
       position: "Software Engineer ",
       avatar: "/testimonials/Zefron.png",
     },
-    
-    
   ]
 
   return (
@@ -96,7 +108,30 @@ export default function Testimonials() {
 
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="relative">
+        <button
+          onClick={handlePrevious}
+          className={`absolute left-[-40px] top-[30%] z-10 flex items-center justify-center w-10 h-10 rounded-full bg-white shadow-md border border-gray-200 transition-all hover:bg-gray-50 ${activeIndex === 0 ? 'opacity-50 cursor-not-allowed' : ''}`}
+          disabled={activeIndex === 0}
+          aria-label="Previous testimonials"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#5662F6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M15 18l-6-6 6-6" />
+          </svg>
+        </button>
+        
+        <button
+          onClick={() => handleNext(Math.ceil(testimonials.length / 3) * 3 - 3)}
+          className={`absolute right-[-40px] top-[30%] z-10 flex items-center justify-center w-10 h-10 rounded-full bg-white shadow-md border border-gray-200 transition-all hover:bg-gray-50 ${activeIndex >= Math.ceil(testimonials.length / 3) * 3 - 3 ? 'opacity-50 cursor-not-allowed' : ''}`}
+          disabled={activeIndex >= Math.ceil(testimonials.length / 3) * 3 - 3}
+          aria-label="Next testimonials"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#5662F6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M9 18l6-6-6-6" />
+          </svg>
+        </button>
+        
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {testimonials.slice(activeIndex, activeIndex + 3).map((testimonial) => (
           <div key={testimonial.id} className="relative flex flex-col items-center text-center">
             <div
@@ -210,6 +245,7 @@ export default function Testimonials() {
             aria-label={`Go to testimonial group ${index + 1}`}
           />
         ))}
+      </div>
       </div>
 
     </div>

@@ -16,7 +16,7 @@ export default function SearchHero() {
                         lineHeight: 'clamp(40px, 7vw, 72px)',
                         textAlign: 'center'
                     }}>
-                        <span className="text-[#5662F6]">Unified AI Search for </span> Modern Enterprise.
+                        <span className="text-[#5662F6]">Unified AI Search for </span> Modern Enterprises.
                     </h1>
                     <p style={{
                         fontFamily: 'Poppins, sans-serif',

@@ -96,8 +96,8 @@ export default function PromptLibrary() {
             letterSpacing: '2%',
             textAlign: 'center',
             margin: '0 auto'
-          }} className="text-sm md:text-[16px] leading-relaxed md:leading-[30px] max-w-xs md:max-w-2xl lg:max-w-[40rem]">
-            Explore optimized prompts for a breadth of business and personal tasks.
+          }} className="text-sm md:text-[16px] leading-relaxed md:leading-[30px] max-w-xs md:max-w-2xl lg:max-w-[50rem]">
+            Discover optimised prompts designed to streamline a wide range of enterprise tasks.
           </p>
         </div>
       </section>

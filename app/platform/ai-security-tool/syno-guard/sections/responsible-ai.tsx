@@ -147,7 +147,8 @@ export default function AgentTypesSection() {
             fontWeight: 700
           }}
         >
-          SynoptixAI: Responsible AI Built for <span className="text-indigo-500"> Enterprise </span>
+         SynoGuard: Responsible AI Security Tool Built for  
+         <span className="text-indigo-500"> Enterprise </span>
         </h2>
         
         <div className="relative overflow-hidden rounded-xl w-full hidden lg:block">

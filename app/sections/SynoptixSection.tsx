@@ -61,7 +61,7 @@ export default function SynoptixComponent() {
       features: [
         { bold: "Access insights instantly:", regular: " Get customer data, battle cards, and document proposals in seconds. " },
         { bold: "Personalise every interaction:", regular: " Human-like generated messaging based on context and buyer intent.  " },
-        { bold: "Cut down proposal writing time:", regular: " Write proposals by scanning database for previous precedents for similar requirements. " },
+        { bold: "Proposal writing time:", regular: " Write proposals by scanning database for previous precedents for similar requirements. " },
         { bold: "Summarise contracts instantly:", regular: " Pull key deal terms from lengthy sales contracts to enable faster decisions. " },
         { bold: "Close faster, convert more:", regular: " Qualify leads instantly and shorten sales cycles through consistent and high-quality communication. " },
       ],
