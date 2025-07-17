@@ -26,6 +26,6 @@ export default function Platform() {
                 </h2>
             </div>
            <BlogSection/>
-        </main>
+        </main> 
     );
 }

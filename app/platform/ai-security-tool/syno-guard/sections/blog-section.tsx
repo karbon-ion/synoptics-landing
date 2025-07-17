@@ -80,7 +80,7 @@ const BlogsSection = () => {
   }, []);
 
   return (
-    <section className="py-6 sm:py-8 md:py-10 bg-white">
+    <section className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* <div className="text-center mb-16">
           <span className="text-blue-500 text-sm font-medium tracking-wider uppercase">
@@ -111,13 +111,13 @@ const BlogsSection = () => {
         )}
 
         {!isLoading && (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-8 sm:mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             {blogPosts.map((post) => (
               <div 
                 key={post.id}
                 className="group bg-white rounded-[32px] border border-[rgba(66,153,225,0.2)] overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col h-full"
               >
-                <div className="relative h-48 sm:h-52 md:h-56 w-full overflow-hidden">
+                <div className="relative h-56 w-full overflow-hidden">
                   <div className="absolute top-4 right-4 z-10 bg-blue-500 text-white text-xs font-semibold py-1 px-3 rounded-full">
                     {post.category}
                   </div>
@@ -130,23 +130,56 @@ const BlogsSection = () => {
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
-                <div className="p-4 sm:p-6 md:p-8 flex-grow flex flex-col">
-                  <div className="text-blue-400 text-sm mb-2">{post.date}</div>
+                <div className="p-8 flex-grow flex flex-col">
+                  <div className="text-blue-400 mb-2" style={{
+                    fontFamily: 'Poppins, sans-serif',
+                    fontWeight: 500,
+                    fontSize: '12px',
+                    lineHeight: '20px',
+                    letterSpacing: '0%'
+                  }}>{post.date}</div>
                   <Link 
-                    href={`/resources/blogs/${post.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}`}
+                    href={`/resources/blogs/${post.title.toLowerCase()
+                      .replace(/[^a-z0-9\s-]+/g, '')  
+                      .replace(/\s+/g, '-')           
+                      .replace(/--+/g, '-')           
+                      .replace(/^-|-$/g, '')}`}
                     className="block"
                   >
-                    <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-3 sm:mb-4 group-hover:text-blue-600 transition-colors duration-300 cursor-pointer">
+                    <h3 className="text-gray-900 mb-4 group-hover:text-blue-600 transition-colors duration-300 cursor-pointer" style={{
+                      fontFamily: 'Syne, sans-serif',
+                      fontWeight: 600,
+                      fontSize: '18px',
+                      lineHeight: '28px',
+                      letterSpacing: '0%'
+                    }}>
                       {post.title}
                     </h3>
                   </Link>
-                  <p className="text-gray-600 text-base leading-relaxed mb-6">
+                  <p className="text-gray-600 mb-6" style={{
+                    fontFamily: 'Poppins, sans-serif',
+                    fontWeight: 400,
+                    fontSize: '14px',
+                    lineHeight: '26px',
+                    letterSpacing: '0%'
+                  }}>
                     {post.description.replace(/https?:\/\/[^\s]+/g, '')}
                   </p>
                   <div className="mt-auto">
                     <Link 
-                      href={`/blog/${post.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}`}
-                      className="inline-flex items-center text-blue-500 font-medium group-hover:text-blue-700 transition-colors duration-300"
+                      href={`/resources/blogs/${post.title.toLowerCase()
+                        .replace(/[^a-z0-9\s-]+/g, '')  
+                        .replace(/\s+/g, '-')           
+                        .replace(/--+/g, '-')           
+                        .replace(/^-|-$/g, '')}`}
+                      className="inline-flex items-center text-blue-500 group-hover:text-blue-700 transition-colors duration-300"
+                      style={{
+                        fontFamily: 'Syne, sans-serif',
+                        fontWeight: 700,
+                        fontSize: '18px',
+                        lineHeight: '100%',
+                        letterSpacing: '0px'
+                      }}
                     >
                       Read Our Blog
                       <svg className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
