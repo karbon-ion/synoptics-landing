@@ -1,8 +1,12 @@
+'use client';
+
 import React from 'react';
+import SchemaOrgPrivacyPolicy from './schema';
 
 export default function PrivacyPolicy() {
   return (
     <div className="container mx-auto px-4 py-16 max-w-4xl">
+      <SchemaOrgPrivacyPolicy />
       <h1 className="text-4xl font-bold mb-4 mt-15">SYNOPTIX.AI Privacy Policy</h1>
       <div className="text-sm text-gray-600 mb-8">
         <p>Version: 1.1</p>

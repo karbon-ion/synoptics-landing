@@ -1,8 +1,12 @@
+'use client';
+
 import React from 'react';
+import SchemaOrgTerms from './schema';
 
 export default function TermsAndConditions() {
   return (
     <div className="container mx-auto px-4 py-16 max-w-4xl">
+      <SchemaOrgTerms />
       <h1 className="text-4xl font-bold mb-4 mt-15">Synoptix AI Terms & Conditions</h1>
       <div className="text-sm text-gray-600 mb-8">
         <p>Effective Date: 28 February 2025</p>
