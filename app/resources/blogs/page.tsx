@@ -22,7 +22,10 @@ const fallbackBlogPosts = [
 
 const BlogsPage = () => {
   const [blogPosts, setBlogPosts] = useState<BlogPost[]>(fallbackBlogPosts);
+  const [filteredPosts, setFilteredPosts] = useState<BlogPost[]>(fallbackBlogPosts);
+  const [searchTerm, setSearchTerm] = useState('');
   const [isLoading, setIsLoading] = useState(true);
+  const [activeCategory, setActiveCategory] = useState('All');
 
   useEffect(() => {
     async function loadBlogs() {
@@ -50,6 +53,7 @@ const BlogsPage = () => {
             return dateB.getTime() - dateA.getTime();
           });
           setBlogPosts(sortedPosts);
+          setFilteredPosts(sortedPosts);
         }
       } catch (error) {
         console.error('Error loading blog posts:', error);
@@ -60,22 +64,140 @@ const BlogsPage = () => {
 
     loadBlogs();
   }, []);
+  
+  useEffect(() => {
+    let filtered = [...blogPosts];
+    
+    // Filter by search term
+    if (searchTerm.trim() !== '') {
+      const searchTermLower = searchTerm.toLowerCase();
+      filtered = filtered.filter(post => (
+        post.title.toLowerCase().includes(searchTermLower) ||
+        post.description.toLowerCase().includes(searchTermLower) ||
+        post.category.toLowerCase().includes(searchTermLower) ||
+        post.content.toLowerCase().includes(searchTermLower)
+      ));
+    }
+    
+    // Filter by category
+    if (activeCategory !== 'All') {
+      filtered = filtered.filter(post => post.category === activeCategory);
+    }
+    
+    setFilteredPosts(filtered);
+  }, [searchTerm, activeCategory, blogPosts]);
 
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-blue-50 to-blue-100 py-24">
+      <div style={{
+        backgroundImage: 'url("/blogs/background.png")',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        padding: '4rem 0',
+      }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <span className="text-blue-500 text-sm font-medium tracking-wider uppercase">
-            INSIGHTS & KNOWLEDGE
-          </span>
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mt-4 mb-8 max-w-4xl mx-auto">
+          
+          <h1 style={{
+            fontFamily: 'var(--font-syne)',
+            fontWeight: 700,
+            fontSize: '48px',
+            lineHeight: '72px',
+            letterSpacing: '0%',
+            textAlign: 'center',
+            color: '#1a202c',
+            marginTop: '1rem',
+            marginBottom: '2rem',
+            maxWidth: '56rem',
+            marginLeft: 'auto',
+            marginRight: 'auto'
+          }}>
             Latest Blogs and Industry Insights
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+          <p style={{
+            fontFamily: 'var(--font-poppins)',
+            fontWeight: 400,
+            fontSize: '16px',
+            lineHeight: '30px',
+            letterSpacing: '2%',
+            textAlign: 'center',
+            color: '#4a5568',
+            maxWidth: '48rem',
+            marginLeft: 'auto',
+            marginRight: 'auto',
+            marginBottom: '2rem'
+          }}>
             Explore our collection of thought leadership, technical guides, and industry analyses to stay ahead in the world of AI and enterprise solutions.
           </p>
-          <div className="h-1 w-16 bg-blue-500 mx-auto rounded-full"></div>
+          
+          {/* Search Bar */}
+          <div className="max-w-2xl mx-auto mt-12 mb-8">
+            <div className="relative flex items-center">
+              <input
+                type="text"
+                placeholder="Search blogs..."
+                className="w-full py-3 pl-12 pr-4 text-gray-700 bg-white border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+              />
+              <div className="absolute inset-y-0 left-0 flex items-center pl-4 pointer-events-none">
+                <svg className="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                </svg>
+              </div>
+             
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Category Tabs */}
+      <div className="mt-3">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-center space-x-12">
+            {!isLoading && (
+              <>
+                <button
+                  onClick={() => setActiveCategory('All')}
+                  style={{
+                    fontFamily: 'var(--font-syne)',
+                    fontWeight: 700,
+                    fontSize: '14px',
+                    lineHeight: '20px',
+                    letterSpacing: '0px',
+                    textAlign: 'center',
+                    padding: '0.5rem 0',
+                    position: 'relative',
+                    color: activeCategory === 'All' ? '#1a202c' : '#ACB6BE',
+                    borderBottom: activeCategory === 'All' ? '2px solid #3182ce' : 'none'
+                  }}
+                >
+                  All Blogs
+                </button>
+                {Array.from(new Set(blogPosts.map(post => post.category))).map((category) => (
+                  <button
+                    key={category}
+                    onClick={() => setActiveCategory(category)}
+                    style={{
+                      fontFamily: 'var(--font-syne)',
+                      fontWeight: 700,
+                      fontSize: '14px',
+                      lineHeight: '20px',
+                      letterSpacing: '0px',
+                      textAlign: 'center',
+                      padding: '0.5rem 0',
+                      position: 'relative',
+                      color: activeCategory === category ? '#1a202c' : '#718096',
+                      borderBottom: activeCategory === category ? '2px solid #3182ce' : 'none'
+                    }}
+                  >
+                    {category}
+                  </button>
+                ))}
+              </>
+            )}
+          </div>
+          {/* <div className="border-b border-gray-200 mt-2"></div> */}
         </div>
       </div>
 
@@ -93,7 +215,7 @@ const BlogsPage = () => {
           {/* Blogs Grid */}
           {!isLoading && (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-              {blogPosts.map((post) => (
+              {filteredPosts.map((post) => (
                 <div 
                   key={post.id}
                   className="group bg-white rounded-[32px] border border-[rgba(66,153,225,0.2)] overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col h-full"
@@ -112,25 +234,61 @@ const BlogsPage = () => {
                     />
                   </div>
                   <div className="p-8 flex-grow flex flex-col">
-                    <div className="text-blue-400 text-sm mb-2">{post.date}</div>
+                    <div style={{
+                      fontFamily: 'var(--font-poppins)',
+                      fontWeight: 500,
+                      fontSize: '12px',
+                      lineHeight: '20px',
+                      letterSpacing: '0%',
+                      color: '#60a5fa',
+                      marginBottom: '0.5rem'
+                    }}>{post.date}</div>
                     <Link 
                       href={`/resources/blogs/${post.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}`}
                       className="block"
                     >
-                      <h3 className="text-xl font-semibold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors duration-300 cursor-pointer">
+                      <h3 style={{
+                        fontFamily: 'var(--font-syne)',
+                        fontWeight: 600,
+                        fontSize: '18px',
+                        lineHeight: '28px',
+                        letterSpacing: '0%',
+                        color: '#1a202c',
+                        marginBottom: '1rem',
+                        transition: 'color 0.3s ease',
+                        cursor: 'pointer'
+                      }} className="group-hover:text-blue-600">
                         {post.title}
                       </h3>
                     </Link>
-                    <p className="text-gray-600 text-base leading-relaxed mb-6">
+                    <p style={{
+                      fontFamily: 'var(--font-poppins)',
+                      fontWeight: 400,
+                      fontSize: '14px',
+                      lineHeight: '26px',
+                      letterSpacing: '0%',
+                      color: '#4a5568',
+                      marginBottom: '1.5rem'
+                    }}>
                       {post.description.replace(/(?:https?:\/\/[^\s]+|[^\s]+\.(?:jpg|jpeg|png|gif|webp))/gi, '').trim()}
                     </p>
                     <div className="mt-auto">
                       <Link 
                         href={`/resources/blogs/${post.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}`}
-                        className="inline-flex items-center text-blue-500 font-medium group-hover:text-blue-700 transition-colors duration-300"
-                        onClick={() => console.log(`Navigating to blog ${post.id}`, `/resources/blogs/${post.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}`)}
+                        style={{
+                          fontFamily: 'var(--font-syne)',
+                          fontWeight: 700,
+                          fontSize: '18px',
+                          lineHeight: '100%',
+                          letterSpacing: '0px',
+                          color: '#3b82f6',
+                          display: 'inline-flex',
+                          alignItems: 'center',
+                          transition: 'color 0.3s ease'
+                        }}
+                        className="group-hover:text-blue-700"
                       >
-                        Read More
+                        Read Our Blog
                         <svg className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                         </svg>
