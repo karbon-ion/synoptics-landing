@@ -9,11 +9,60 @@ import SummarizeSection from './SummarizeSection';
 import ShareButtons from './ShareButtons';
 import TableOfContents from './TableOfContents';
 import { Metadata } from 'next';
+import Script from 'next/script';
 
 // Constants for file paths
 const UPLOADS_DIR = path.join(process.cwd(), 'app/resources/blogs/uploads');
 const METADATA_DIR = path.join(process.cwd(), 'app/resources/blogs/metadata');
 const DEFAULT_IMAGE = 'https://images.unsplash.com/photo-1581090700227-1e37b190418e?q=80&w=1000';
+
+/**
+ * Generate Schema.org JSON-LD for a blog post
+ */
+function generateBlogPostSchema(post, content, baseUrl) {
+  const datePublished = post.date;
+  
+  // Try to parse the date or use the original string
+  let formattedDate = datePublished;
+  try {
+    const parsedDate = new Date(datePublished);
+    if (!isNaN(parsedDate.getTime())) {
+      formattedDate = parsedDate.toISOString().split('T')[0];
+    }
+  } catch (e) {
+    console.log('Could not parse date, using original format');
+  }
+  
+  return {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": content.firstHeading || post.title,
+    "name": content.firstHeading || post.title,
+    "description": post.description,
+    "image": content.firstImage || post.image,
+    "datePublished": formattedDate,
+    "dateModified": formattedDate,
+    "author": {
+      "@type": "Organization",
+      "name": "Synoptix",
+      "url": baseUrl.split('/resources')[0]
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Synoptix",
+      "logo": {
+        "@type": "ImageObject",
+        "url": `${baseUrl.split('/resources')[0]}/logo.png`
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": baseUrl
+    },
+    "keywords": [post.category || "AI", "Enterprise AI", "Synoptix"],
+    "articleBody": content.content?.replace(/<[^>]*>/g, ' ').substring(0, 500) + '...'
+  };
+}
 
 /**
  * Get blog post by slug
@@ -529,8 +578,19 @@ export default async function BlogPost({ params }) {
     );
   }
   
+  // Create the base URL for this blog post
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://synoptix.ai';
+  const canonicalUrl = `${baseUrl}/resources/blogs/${resolvedParams.slug}`;
+  
+  // Generate the schema
+  const schema = generateBlogPostSchema(post, contentData, canonicalUrl);
+
   return (
     <div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
       <div className="relative bg-cover bg-center" style={{ backgroundImage: 'url(/blogs/background.png)' }}>
         <div className="max-w-7xl mx-auto px-4 pt-28">
           {/* Back to blogs link */}

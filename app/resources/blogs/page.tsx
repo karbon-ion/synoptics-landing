@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import type { BlogPost } from '../../utils/blog-utils';
 
 
@@ -19,6 +19,103 @@ const fallbackBlogPosts = [
     fileName: ''
   }
 ];
+
+const SchemaOrgBlogList = ({ posts }: { posts: BlogPost[] }) => {
+  const jsonLdRef = useRef<HTMLScriptElement>(null);
+  
+  useEffect(() => {
+    if (!jsonLdRef.current || !posts.length) return;
+    
+    const itemListElements = posts.map((post, index) => {
+      // Try to parse the date or use the original string
+      let formattedDate = post.date;
+      try {
+        const parsedDate = new Date(post.date);
+        if (!isNaN(parsedDate.getTime())) {
+          formattedDate = parsedDate.toISOString().split('T')[0];
+        }
+      } catch (e) {
+        console.log('Could not parse date, using original format');
+      }
+      
+      return {
+        "@type": "ListItem",
+        "position": index + 1,
+        "item": {
+          "@type": "BlogPosting",
+          "@id": `${window.location.origin}/resources/blogs/${post.id}`,
+          "headline": post.title,
+          "name": post.title,
+          "description": post.description,
+          "image": post.image,
+          "datePublished": formattedDate,
+          "dateModified": formattedDate,
+          "author": {
+            "@type": "Organization",
+            "name": "Synoptix",
+            "url": window.location.origin
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Synoptix",
+            "logo": {
+              "@type": "ImageObject",
+              "url": `${window.location.origin}/logo.png`
+            }
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": `${window.location.origin}/resources/blogs/${post.id}`
+          },
+          "keywords": [post.category || "AI", "Enterprise AI", "Synoptix"]
+        }
+      };
+    });
+
+    // Create breadcrumb list schema
+    const breadcrumbSchema = {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": window.location.origin
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Resources",
+          "item": `${window.location.origin}/resources`
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Blogs",
+          "item": `${window.location.origin}/resources/blogs`
+        }
+      ]
+    };
+    
+    // Main blog list schema
+    const blogListSchema = {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "itemListElement": itemListElements,
+      "numberOfItems": posts.length,
+      "name": "Synoptix Blog Posts",
+      "description": "Latest articles and insights from Synoptix on AI, enterprise solutions, and industry trends"
+    };
+    
+    // Combine both schemas into an array
+    const schemas = [breadcrumbSchema, blogListSchema];
+    
+    jsonLdRef.current.textContent = JSON.stringify(schemas);
+  }, [posts]);
+  
+  return <script type="application/ld+json" ref={jsonLdRef} />;
+};
 
 const BlogsPage = () => {
   const [blogPosts, setBlogPosts] = useState<BlogPost[]>(fallbackBlogPosts);
@@ -89,6 +186,7 @@ const BlogsPage = () => {
 
   return (
     <div className="bg-white">
+      <SchemaOrgBlogList posts={filteredPosts} />
       {/* Hero Section */}
       <div style={{
         backgroundImage: 'url("/blogs/background.png")',

@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import type { BlogPost } from '@/app/utils/blog-utils';
@@ -37,6 +37,64 @@ const fallbackBlogPosts = [
     fileName: ''
   }
 ];
+
+const SchemaOrgBlogList = ({ posts }: { posts: BlogPost[] }) => {
+  const jsonLdRef = useRef<HTMLScriptElement>(null);
+  
+  useEffect(() => {
+    if (!jsonLdRef.current || !posts.length) return;
+    
+    const itemListElements = posts.map((post, index) => {
+      let formattedDate = post.date;
+      try {
+        const parsedDate = new Date(post.date);
+        if (!isNaN(parsedDate.getTime())) {
+          formattedDate = parsedDate.toISOString().split('T')[0];
+        }
+      } catch (e) {}
+      
+      return {
+        "@type": "ListItem",
+        "position": index + 1,
+        "item": {
+          "@type": "BlogPosting",
+          "@id": `${window.location.origin}/resources/blogs/${post.id}`,
+          "headline": post.title,
+          "name": post.title,
+          "description": post.description,
+          "image": post.image,
+          "datePublished": formattedDate,
+          "author": {
+            "@type": "Organization",
+            "name": "Synoptix",
+            "url": window.location.origin
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Synoptix",
+            "logo": {
+              "@type": "ImageObject",
+              "url": `${window.location.origin}/logo.png`
+            }
+          }
+        }
+      };
+    });
+
+    const schema = {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "itemListElement": itemListElements,
+      "numberOfItems": posts.length,
+      "name": "Featured Blog Posts",
+      "description": "Latest insights and articles from Synoptix"
+    };
+    
+    jsonLdRef.current.textContent = JSON.stringify(schema);
+  }, [posts]);
+  
+  return <script type="application/ld+json" ref={jsonLdRef} />;
+};
 
 const BlogsSection = () => {
   const [blogPosts, setBlogPosts] = useState<BlogPost[]>(fallbackBlogPosts);
@@ -80,8 +138,9 @@ const BlogsSection = () => {
   }, []);
 
   return (
-    <section className="py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="blogs" className="py-16 bg-white">
+      <SchemaOrgBlogList posts={blogPosts} />
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* <div className="text-center mb-16">
           <span className="text-blue-500 text-sm font-medium tracking-wider uppercase">
             LATEST INSIGHTS

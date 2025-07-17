@@ -1,16 +1,6 @@
 'use client'
 
-import { useEffect, useRef } from 'react';
-import HeroSection from './sections/hero';
-import FeaturesSection from './sections/features';
-import AgentTypesSection from './sections/AgentTypesSection';
-import BlogSection from "../../platform/sections/blog-section";
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: 'Synoptix | Enterprise AI Agent Platform for Scalable Automation',
-  description: 'Create, deploy, and manage intelligent agents without code. Synoptix is the enterprise AI agent platform built for automation, compliance, and scale.'
-};
+import { useEffect, useRef } from 'react'
 
 const SchemaOrgAIAgents = () => {
   const jsonLdRef = useRef<HTMLScriptElement>(null);
@@ -18,6 +8,7 @@ const SchemaOrgAIAgents = () => {
   useEffect(() => {
     if (!jsonLdRef.current) return;
     
+    // Product schema for AI Agents
     const productSchema = {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
@@ -34,6 +25,7 @@ const SchemaOrgAIAgents = () => {
       "featureList": "No-code agent creation, Enterprise compliance, Scalable automation, Agent management"
     };
     
+    // WebPage schema
     const webpageSchema = {
       "@context": "https://schema.org",
       "@type": "WebPage",
@@ -69,6 +61,7 @@ const SchemaOrgAIAgents = () => {
       }
     };
     
+    // Combine schemas
     const schemas = [productSchema, webpageSchema];
     
     jsonLdRef.current.textContent = JSON.stringify(schemas);
@@ -77,28 +70,4 @@ const SchemaOrgAIAgents = () => {
   return <script type="application/ld+json" ref={jsonLdRef} />;
 };
 
-
-
-export default function SynoptixAgentsPage() {
-  return (
-    <main className="min-h-screen">
-      <SchemaOrgAIAgents />
-      <HeroSection />
-      <FeaturesSection />
-      <AgentTypesSection />
-      <div className="container mx-auto mt-16">
-                <h2 style={{
-                    fontFamily: "Syne",
-                    fontWeight: 700,
-                    fontSize: "36px",
-                    lineHeight: "45px",
-                    letterSpacing: "0%",
-                    textAlign: "center"
-                }}>
-                    Other Resources
-                </h2>
-            </div>
-      <BlogSection/>
-    </main>
-  );
-}
+export default SchemaOrgAIAgents;

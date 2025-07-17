@@ -14,6 +14,110 @@ import AiServicesSection from "./sections/AIservicesSection";
 import SecurityBadges from "./sections/SecurityBadges";
 import SynoptixSection from "./sections/SynoptixSection";
 
+const SchemaOrgWebsite = () => {
+  const jsonLdRef = useRef<HTMLScriptElement>(null);
+  
+  useEffect(() => {
+    if (!jsonLdRef.current) return;
+    
+    // Organization schema
+    const organizationSchema = {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Synoptix",
+      "url": window.location.origin,
+      "logo": `${window.location.origin}/logo.png`,
+      "description": "Synoptix provides enterprise AI solutions for workflow automation, security, and business optimization.",
+      "sameAs": [
+        "https://www.linkedin.com/company/synoptix",
+        "https://twitter.com/synoptix"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "San Francisco",
+        "addressRegion": "CA",
+        "addressCountry": "US"
+      },
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "customer service",
+          "email": "contact@synoptix.ai",
+          "availableLanguage": ["English"]
+        },
+        {
+          "@type": "ContactPoint",
+          "contactType": "sales",
+          "email": "sales@synoptix.ai",
+          "availableLanguage": ["English"]
+        }
+      ],
+      "foundingDate": "2020",
+      "foundingLocation": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "San Francisco",
+          "addressRegion": "CA",
+          "addressCountry": "US"
+        }
+      }
+    };
+    
+    // WebSite schema
+    const websiteSchema = {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Synoptix",
+      "url": window.location.origin,
+      "description": "Enterprise AI solutions for workflow automation, security, and business optimization",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": `${window.location.origin}/search?q={search_term_string}`,
+        "query-input": "required name=search_term_string"
+      }
+    };
+    
+    // WebPage schema for homepage
+    const webpageSchema = {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": `${window.location.origin}/#webpage`,
+      "url": window.location.origin,
+      "name": "Synoptix - Enterprise AI Solutions",
+      "description": "Synoptix provides enterprise AI solutions for workflow automation, security, and business optimization.",
+      "isPartOf": {
+        "@id": `${window.location.origin}/#website`
+      },
+      "about": {
+        "@id": `${window.location.origin}/#organization`
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": `${window.location.origin}/hero-image.png`
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": window.location.origin
+          }
+        ]
+      }
+    };
+    
+    // Combine all schemas
+    const schemas = [organizationSchema, websiteSchema, webpageSchema];
+    
+    jsonLdRef.current.textContent = JSON.stringify(schemas);
+  }, []);
+  
+  return <script type="application/ld+json" ref={jsonLdRef} />;
+};
+
 export default function TestPage() {
   const [mounted, setMounted] = useState(false);
   const videoRef = useRef<HTMLDivElement>(null);
@@ -50,6 +154,7 @@ export default function TestPage() {
 
   return (
     <div className="relative w-full">
+      <SchemaOrgWebsite />
       <HeroSection videoRef={videoRef} isInView={isInView} />
       <EnterpriseSection />
       <SynoptixSection/>

@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { PromptCard } from './components/PromptCard'
 
 // Platform icons
@@ -19,6 +19,77 @@ interface Prompt {
   descriptions: string
   user_prompt: string
 }
+
+const SchemaOrgPromptLibrary = () => {
+  const jsonLdRef = useRef<HTMLScriptElement>(null);
+  
+  useEffect(() => {
+    if (!jsonLdRef.current) return;
+    
+    const productSchema = {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Synoptix Prompt Library",
+      "applicationCategory": "AIApplication",
+      "applicationSubCategory": "AI Prompt Library",
+      "operatingSystem": "All",
+      "description": "Collection of pre-built AI prompts for various enterprise use cases and workflows",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "featureList": "Pre-built prompts, Customizable templates, Enterprise workflows, Domain-specific solutions"
+    };
+    
+    const webpageSchema = {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": `${window.location.origin}/platform/synoptix-library/prompt-library#webpage`,
+      "url": `${window.location.origin}/platform/synoptix-library/prompt-library`,
+      "name": "Prompt Library - Synoptix",
+      "description": "Browse and use pre-built AI prompts for your enterprise needs",
+      "isPartOf": {
+        "@id": `${window.location.origin}/#website`
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": window.location.origin
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Platform",
+            "item": `${window.location.origin}/platform`
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Synoptix Library",
+            "item": `${window.location.origin}/platform/synoptix-library`
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Prompt Library",
+            "item": `${window.location.origin}/platform/synoptix-library/prompt-library`
+          }
+        ]
+      }
+    };
+    
+    const schemas = [productSchema, webpageSchema];
+    
+    jsonLdRef.current.textContent = JSON.stringify(schemas);
+  }, []);
+  
+  return <script type="application/ld+json" ref={jsonLdRef} />;
+};
 
 export default function PromptLibrary() {
   const [searchTerm, setSearchTerm] = useState('')
@@ -71,6 +142,7 @@ export default function PromptLibrary() {
 
   return (
     <main className="relative overflow-x-hidden">
+      <SchemaOrgPromptLibrary />
       {/* Hero Section with Title and Description Only */}
       <section className="relative pt-24 md:pt-32 pb-48 md:pb-64">
         <Image
