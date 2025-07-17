@@ -1,10 +1,14 @@
+'use client';
+
 import Image from "next/image";
 import Link from "next/link";
+import SchemaOrgServices from "./schema";
 // import f1 from '@/public/features1.png';
 
 
 export default ()=> (
     <section className="py-20 bg-white relative overflow-hidden">
+      <SchemaOrgServices />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="text-center mb-16 relative">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 max-w-4xl mx-auto leading-tight">

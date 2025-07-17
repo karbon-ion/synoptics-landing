@@ -1,13 +1,17 @@
+'use client';
+
 import BlogsSection from '../../sections/BlogsSection';
 import Hero from './sections/Hero';
 import ProofOfConcept from './sections/ProofOfConcept';
 import Training from './sections/Training';
 import FeaturesSection from './sections/features';
 import ResultsSection from './sections/ResultsSection';
+import SchemaOrgProofOfConcepts from './schema';
 
 export default function ProofOfConcepts() {
   return (
     <main className="overflow-x-hidden">
+      <SchemaOrgProofOfConcepts />
       <Hero />
       <ProofOfConcept />
       <Training />

@@ -4,6 +4,7 @@ import { useRef, useState, useEffect } from 'react'
 import Hero from './sections/Hero'
 import ValuesSection from './sections/ValuesSection'
 import VideoSection from './components/VideoSection'
+import SchemaOrgAboutUs from './schema'
 
 export default function About() {
     const videoRef = useRef(null)
@@ -30,6 +31,7 @@ export default function About() {
     
     return (
         <main className="w-full overflow-x-hidden">
+            <SchemaOrgAboutUs />
             <Hero />
             <ValuesSection />
             <div className="px-4 sm:px-6 md:px-8">
