@@ -1,8 +1,8 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Prompt Library | Synoptix AI',
-  description: 'Access our curated collection of optimized prompts for various AI use cases. Leverage tested prompt templates to get the best results from AI models.',
+  title: 'AI Prompt Library for Creators & Developers | Synoptix AI',
+  description: 'Boost creativity and productivity with Synoptix AI curated AI Prompt Library. Designed for teams building with LLMs.',
   alternates: {
     canonical: 'https://synoptix.ai/platform/synoptix-library/prompt-library'
   }

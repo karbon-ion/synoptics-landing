@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "AI Fine Tuning and Optimisation Services | Synoptix.AI",
-  description: "Customise and fine-tune AI models for your enterprise needs with expert optimisation services for higher precision and relevance.",
+  title: "AI Fine Tuning and Optimisation Services | Synoptix AI",
+  description: "Tailor AI models for enterprise precision with Synoptix AI's Fine-Tuning and Optimisation Services. Enhance performance and reduce hallucinations.",
   alternates: {
-    canonical: '/services/fine-tuning',
+    canonical: '/services/ai-consulting',
   },
 };
 
-export default function FinetuningLayout({
+export default function AIConsultingLayout({
     children,
 }: {
     children: React.ReactNode

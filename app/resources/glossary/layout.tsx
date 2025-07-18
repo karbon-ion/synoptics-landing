@@ -1,8 +1,8 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'AI Model Directory for Enterprise Automation | Synoptix AI',
-  description: 'Explore Synoptix AI Model Directory—your gateway for AI models ready to accelerate AI development and solve real business problems.',
+  title: 'Synoptix AI Glossary | Key Terms in Enterprise AI',
+  description: 'Browse the Synoptix AI Glossary to understand essential terms in enterprise AI, automation, agents, RAG, security, and AI-driven transformation.',
   alternates: {
     canonical: 'https://synoptix.ai/resources/glossary'
   }

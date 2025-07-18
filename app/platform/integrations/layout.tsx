@@ -1,8 +1,8 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Integrations | Synoptix AI',
-  description: 'Discover all the software integrations available with Synoptix AI platform. Connect your existing tools and systems for seamless AI-powered workflows.',
+  title: 'AI Integrations for Your Enterprise Systems | Synoptix AI',
+  description: 'Integrate AI Agents with enterprise AI integrations like Microsoft, Salesforce, and more. Enable seamless automation across data and workflows.',
   alternates: {
     canonical: 'https://synoptix.ai/platform/integrations'
   }

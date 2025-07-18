@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "AI Consulting Services for Enterprises | Synoptix.AI",
-  description: "Get expert AI consulting to plan, deploy, and scale enterprise-grade AI systems that deliver real value and measurable results.",
+  title: "Proof of Concept Services for Enterprises | Synoptix AI",
+  description: "Validate enterprise AI ideas with Synoptix AI's Proof of Concept Services. Reduce risk, prove feasibility, and fast-track implementation.",
   alternates: {
-    canonical: '/services/ai-consulting',
+    canonical: '/services/proof-of-concepts',
   },
 };
 
