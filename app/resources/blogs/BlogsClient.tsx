@@ -65,8 +65,49 @@ const BlogsPageClient = () => {
     setFilteredPosts(filtered);
   }, [searchTerm, activeCategory, blogPosts]);
 
+  const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "itemListElement": filteredPosts.map((post, index) => ({
+    "@type": "ListItem",
+    "position": index + 1,
+    "item": {
+      "@type": "BlogPosting",
+      "@id": `https://synoptix.ai/resources/blogs/${post.id}`,
+      "headline": post.title,
+      "name": post.title,
+      "description": post.description,
+      "image": post.image,
+      "datePublished": new Date(post.date).toISOString().split("T")[0],
+      "dateModified": new Date(post.date).toISOString().split("T")[0],
+      "author": {
+        "@type": "Organization",
+        "name": "Synoptix",
+        "url": "https://synoptix.ai"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Synoptix",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://synoptix.ai/logo.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": `https://synoptix.ai/resources/blogs/${post.id}`
+      },
+      "keywords": [post.category || "AI", "Enterprise AI", "Synoptix"]
+    }
+  }))
+};
+
   return (
     <div className="bg-white">
+        <script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+/>
       {/* Hero Section */}
       <div
         style={{
