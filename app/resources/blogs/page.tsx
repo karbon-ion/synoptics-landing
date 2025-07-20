@@ -81,19 +81,19 @@ const SchemaOrgBlogList = ({ posts }: { posts: BlogPost[] }) => {
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": window.location.origin
+          "url": window.location.origin
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Resources",
-          "item": `${window.location.origin}/resources`
+          "url": `${window.location.origin}/resources`
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "Blogs",
-          "item": `${window.location.origin}/resources/blogs`
+          "url": `${window.location.origin}/resources/blogs`
         }
       ]
     };
@@ -104,8 +104,9 @@ const SchemaOrgBlogList = ({ posts }: { posts: BlogPost[] }) => {
       "@type": "ItemList",
       "itemListElement": itemListElements,
       "numberOfItems": posts.length,
-      "name": "Synoptix Blog Posts",
-      "description": "Latest articles and insights from Synoptix on AI, enterprise solutions, and industry trends"
+      "headline": "Synoptix Blog Posts",
+      "url": "https://synoptix.ai/resources/blogs",
+      "text": "Latest articles and insights from Synoptix on AI, enterprise solutions, and industry trends"
     };
     
     // Combine both schemas into an array
