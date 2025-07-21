@@ -3,7 +3,7 @@
 import { useEffect, useState, useRef } from "react";
 import HeroSection from "./sections/HeroSection";
 import EnterpriseSection from "./sections/EnterpriseSection";
-
+import Script from "next/script";
 import TrackSection from "./sections/TrackandOptimizeSection";
 import SecuritySection from "./sections/SecuritySection";
 import BlogsSection from "./sections/BlogsSection";
@@ -157,25 +157,55 @@ export default function TestPage() {
       <SchemaOrgWebsite />
       <HeroSection videoRef={videoRef} isInView={isInView} />
       <EnterpriseSection />
-      <SynoptixSection/>
-      <TrackSection/>
-      <EnterpriseSecuritySection/>
-      <AiServicesSection/>
-      <SecurityBadges/>
+      <SynoptixSection />
+      <TrackSection />
+      <EnterpriseSecuritySection />
+      <AiServicesSection />
+      <SecurityBadges />
       <div className="container mx-auto mt-12 md:mt-16 px-4 md:px-0">
-                <h2 className="text-2xl md:text-[36px] leading-tight md:leading-[45px]" style={{
-                    fontFamily: "Syne",
-                    fontWeight: 700,
-                    letterSpacing: "0%",
-                    textAlign: "center"
-                }}>
-                    Other Resources
-                </h2>
-            </div>
-      <BlogsSection/>
-      <Testimonials/>
-      {/* <CertificationSection/> */}
+        <h2 className="text-2xl md:text-[36px] leading-tight md:leading-[45px]" style={{
+          fontFamily: "Syne",
+          fontWeight: 700,
+          letterSpacing: "0%",
+          textAlign: "center"
+        }}>
+          Other Resources
+        </h2>
+      </div>
+      <BlogsSection />
+      <Testimonials />
       
+      {/* RB2B Script */}
+      <Script id="rb2b-snippet" strategy="afterInteractive">
+        {`!function () {
+          var reb2b = window.reb2b = window.reb2b || [];
+          if (reb2b.invoked) return;
+          reb2b.invoked = true;
+          reb2b.methods = ["identify", "collect"];
+          reb2b.factory = function (method) {
+            return function () {
+              var args = Array.prototype.slice.call(arguments);
+              args.unshift(method);
+              reb2b.push(args);
+              return reb2b;
+            };
+          };
+          for (var i = 0; i < reb2b.methods.length; i++) {
+            var key = reb2b.methods[i];
+            reb2b[key] = reb2b.factory(key);
+          }
+          reb2b.load = function (key) {
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async = true;
+            script.src = "https://ddwl4m2hdecbv.cloudfront.net/b/" + key + "/LNKLDHPD53OJ.js.gz";
+            var first = document.getElementsByTagName("script")[0];
+            first.parentNode.insertBefore(script, first);
+          };
+          reb2b.SNIPPET_VERSION = "1.0.1";
+          reb2b.load("LNKLDHPD53OJ");
+        }();`}
+      </Script>
     </div>
   );
 }
