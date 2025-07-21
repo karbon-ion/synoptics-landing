@@ -21,7 +21,7 @@ export default function PlatformFeatures() {
        <h1 className="text-center font-bold mb-6 md:mb-8" style={{fontFamily: "Syne", fontWeight: 700, fontSize: "clamp(24px, 5vw, 36px)", lineHeight: "1.25"}}>
        Deploy AI with a Secure Enterprise  <span className="text-[#5662F6]">AI Agent Platform</span>
         </h1>
-      <div className="flex justify-end mb-8">
+      {/* <div className="flex justify-end mb-8">
         <button
           onClick={() => setShowExtended(!showExtended)}
           className="bg-[#5662F6] hover:bg-indigo-600 text-white py-2 sm:py-3 px-6 sm:px-8 rounded-full inline-flex items-center transition-colors whitespace-nowrap"
@@ -29,7 +29,7 @@ export default function PlatformFeatures() {
         >
           {showExtended ? 'Normal View' : 'Extended View'}
         </button>
-      </div>
+      </div> */}
 
       {showExtended ? (
         <ExtendedView />
