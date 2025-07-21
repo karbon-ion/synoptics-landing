@@ -1,10 +1,11 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import { Search } from "lucide-react";
 
 const transition = {
   type: "spring",
@@ -169,6 +170,11 @@ export const NavbarMenu = () => {
   const [active, setActive] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isSearchModalOpen, setIsSearchModalOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [searchResults, setSearchResults] = useState<any[]>([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const searchInputRef = useRef<HTMLInputElement>(null);
   const pathname = usePathname();
 
   React.useEffect(() => {
@@ -182,6 +188,37 @@ export const NavbarMenu = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, [scrolled]);
+  
+  useEffect(() => {
+    if (isSearchModalOpen && searchInputRef.current) {
+      searchInputRef.current.focus();
+    }
+  }, [isSearchModalOpen]);
+  
+  const handleSearch = async () => {
+    if (!searchQuery.trim()) return;
+    
+    setIsLoading(true);
+    try {
+      const response = await fetch(`/api/blogs/search?query=${encodeURIComponent(searchQuery)}`);
+      if (!response.ok) {
+        throw new Error('Search failed');
+      }
+      const data = await response.json();
+      setSearchResults(data);
+    } catch (error) {
+      console.error('Error searching:', error);
+      setSearchResults([]);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+  
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === 'Enter') {
+      handleSearch();
+    }
+  };
 
   // Platform dropdown configuration that matches the image layout
   // Define types for the platform dropdown configuration
@@ -709,9 +746,19 @@ export const NavbarMenu = () => {
                 ))}
               </div>
             </MenuItem>
-            <div className="flex space-x-4">
-              <MenuItem setActive={setActive} active={active} item="About Us" href="/about-us" isScrolled={scrolled} />
-              <MenuItem setActive={setActive} active={active} item="Contact Us" href="/contact-us" isScrolled={scrolled} />
+            <MenuItem setActive={setActive} active={active} item="About Us" href="/about-us" isScrolled={scrolled} />
+            <MenuItem setActive={setActive} active={active} item="Contact Us" href="/contact-us" isScrolled={scrolled} />
+            
+            <div className="relative mb-1" onMouseEnter={() => setActive("Seek")}>
+              <motion.p
+                transition={{ duration: 0.3 }}
+                onClick={() => setIsSearchModalOpen(true)}
+                className={`cursor-pointer uppercase flex items-center ${pathname?.includes('/services/training') && !scrolled ? 'text-white hover:text-white' : 'text-[#364153] hover:text-blue-600'}`}
+                style={{ fontFamily: 'Syne', fontWeight: 500, fontSize: '16px', lineHeight: '20px', letterSpacing: '0%', whiteSpace: 'nowrap' }}
+              >
+                <Search className="w-4 h-4 mr-2" />
+                SEEK
+              </motion.p>
             </div>
           </div>
         </Menu>
@@ -907,6 +954,163 @@ export const NavbarMenu = () => {
 
 
               </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+        
+        {/* Smart Search Modal */}
+        <AnimatePresence>
+          {isSearchModalOpen && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              className="fixed inset-0 z-50 flex items-start justify-center pt-20 px-4 bg-black/60 backdrop-blur-sm"
+              onClick={() => {
+                setIsSearchModalOpen(false);
+                setSearchQuery('');
+                setSearchResults([]);
+              }}
+            >
+              <motion.div
+                initial={{ y: -20, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                exit={{ y: -20, opacity: 0 }}
+                transition={{ type: "spring", damping: 25, stiffness: 300 }}
+                className="bg-white w-full max-w-2xl rounded-xl shadow-2xl overflow-hidden"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <div className="p-4 border-b border-gray-100">
+                  <div className="flex items-center">
+                    <div className="flex-1 flex items-center bg-gray-50 rounded-lg px-4 py-2">
+                      <svg 
+                        xmlns="http://www.w3.org/2000/svg" 
+                        width="18" 
+                        height="18" 
+                        viewBox="0 0 24 24" 
+                        fill="none" 
+                        stroke="currentColor" 
+                        strokeWidth="2" 
+                        strokeLinecap="round" 
+                        strokeLinejoin="round" 
+                        className="text-gray-400 mr-3"
+                      >
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.3-4.3"></path>
+                      </svg>
+                      <input
+                        ref={searchInputRef}
+                        type="text"
+                        placeholder="Search blogs, articles, and more..."
+                        className="flex-1 bg-transparent border-none outline-none py-2 text-gray-700"
+                        value={searchQuery}
+                        onChange={(e) => setSearchQuery(e.target.value)}
+                        onKeyDown={handleKeyDown}
+                      />
+                      {searchQuery && (
+                        <button
+                          onClick={() => setSearchQuery('')}
+                          className="text-gray-400 hover:text-gray-600"
+                        >
+                          <svg 
+                            xmlns="http://www.w3.org/2000/svg" 
+                            width="16" 
+                            height="16" 
+                            viewBox="0 0 24 24" 
+                            fill="none" 
+                            stroke="currentColor" 
+                            strokeWidth="2" 
+                            strokeLinecap="round" 
+                            strokeLinejoin="round"
+                          >
+                            <path d="M18 6 6 18"></path>
+                            <path d="m6 6 12 12"></path>
+                          </svg>
+                        </button>
+                      )}
+                    </div>
+                    <button
+                      onClick={handleSearch}
+                      className="ml-3 px-4 py-2 bg-[#5662F6] text-white rounded-lg hover:bg-blue-700 transition-colors"
+                      style={{ fontFamily: 'Poppins', fontWeight: 500 }}
+                    >
+                      Search
+                    </button>
+                  </div>
+                </div>
+                
+                <div className="max-h-[70vh] overflow-y-auto custom-scrollbar">
+                  <style jsx global>{`
+                    .custom-scrollbar::-webkit-scrollbar {
+                      width: 8px;
+                    }
+                    .custom-scrollbar::-webkit-scrollbar-track {
+                      background: #f1f1f1;
+                      border-radius: 4px;
+                    }
+                    .custom-scrollbar::-webkit-scrollbar-thumb {
+                      background: #cfd7e3;
+                      border-radius: 4px;
+                    }
+                    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+                      background: #a0aec0;
+                    }
+                  `}</style>
+                  {!searchQuery && (
+                    <div className="text-center py-4 px-4 border-b border-gray-100">
+                      <p className="text-gray-500">Type your search query and press Enter</p>
+                    </div>
+                  )}
+                  
+                  {isLoading ? (
+                    <div className="flex justify-center items-center py-12">
+                      <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
+                    </div>
+                  ) : searchResults.length > 0 ? (
+                    <div className="p-4">
+                      {searchResults.map((result, index) => (
+                        <div 
+                          key={index} 
+                          className="mb-6 p-4 border border-gray-100 rounded-lg hover:border-blue-200 hover:bg-blue-50/30 transition-colors"
+                        >
+                          <Link 
+                            href={result.url || `/resources/blogs/${result.id}`} 
+                            onClick={() => {
+                              setIsSearchModalOpen(false);
+                              setSearchQuery('');
+                              setSearchResults([]);
+                            }}
+                            className="block"
+                          >
+                            <h3 
+                              className="text-lg font-semibold text-gray-900 mb-2"
+                              style={{ fontFamily: 'Syne' }}
+                            >
+                              {result.title}
+                            </h3>
+                            <p className="text-gray-600 text-sm mb-3">
+                              {result.overview || result.excerpt || result.content?.substring(0, 150)}...
+                            </p>
+                            <div className="flex items-center text-xs text-gray-500">
+                              {result.date && (
+                                <span className="mr-3">
+                                  {new Date(result.date).toLocaleDateString()}
+                                </span>
+                              )}
+                              {result.category && (
+                                <span className="bg-gray-100 px-2 py-1 rounded">
+                                  {result.category}
+                                </span>
+                              )}
+                            </div>
+                          </Link>
+                        </div>
+                      ))}
+                    </div>
+                  ) : null}
+                </div>
+              </motion.div>
             </motion.div>
           )}
         </AnimatePresence>
