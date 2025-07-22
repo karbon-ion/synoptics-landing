@@ -82,7 +82,7 @@ const Footer = () => {
                 />
                 
                 <div>
-                  <div className='mb-6' style={{ fontFamily: 'Syne', fontWeight: 700, fontSize: '12px', lineHeight: '24px', letterSpacing: '0%' }}>Trusted by</div>
+                  <div className='mb-6' style={{ fontFamily: 'Syne', fontWeight: 700, fontSize: '12px', lineHeight: '24px', letterSpacing: '0%' }}>Listed On</div>
                   <a href="https://aidirectory.industry.gov.au/organisation/synoptix-ai" target="_blank" rel="noopener noreferrer">
                     <Image
                       src="/footer/intellegence.png"
