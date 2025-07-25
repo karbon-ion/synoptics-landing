@@ -174,6 +174,7 @@ export const NavbarMenu = () => {
   const [searchResults, setSearchResults] = useState<any>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [searchMode, setSearchMode] = useState<"list" | "summarize">("list");
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const searchInputRef = useRef<HTMLInputElement>(null);
   const pathname = usePathname();
 
@@ -1043,23 +1044,39 @@ export const NavbarMenu = () => {
               >
                 <div className="p-4 border-b border-gray-100">
                   <div className="flex items-center">
-                    <div className="mr-2 relative">
-                      <div className="relative">
-                        <select
-                          value={searchMode}
-                          onChange={(e) => setSearchMode(e.target.value as "list" | "summarize")}
-                          className="appearance-none bg-white border border-gray-200 text-gray-800 py-2 pl-3 pr-10 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-[#5662F6] focus:border-[#5662F6] font-medium cursor-pointer shadow-sm hover:border-gray-300 transition-colors"
-                          style={{ fontFamily: 'Poppins' }}
-                        >
-                          <option value="list">List</option>
-                          <option value="summarize">Summarize</option>
-                        </select>
-                        <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                    <div className="mr-2 relative z-10">
+                      <div 
+                        className="relative bg-white border border-gray-200 text-gray-800 py-2 pl-3 pr-10 rounded-lg text-sm font-medium cursor-pointer shadow-sm hover:border-gray-300 transition-colors flex items-center justify-between"
+                        style={{ fontFamily: 'Poppins', minWidth: '110px' }}
+                        onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                      >
+                        <span>{searchMode === 'list' ? 'List' : 'Summarize'}</span>
+                        <div className="absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
                           <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                             <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
                           </svg>
                         </div>
                       </div>
+                      
+                      {isDropdownOpen && (
+                        <div 
+                          className="absolute top-full left-0 mt-1 w-full bg-white rounded-lg shadow-lg border border-gray-100 overflow-hidden z-20"
+                          onClick={() => setIsDropdownOpen(false)}
+                        >
+                          <div 
+                            className={`py-2 px-3 cursor-pointer hover:bg-[#5662F6] hover:text-white transition-colors ${searchMode === 'list' ? 'bg-[#5662F6] text-white' : ''}`}
+                            onClick={() => setSearchMode('list')}
+                          >
+                            List
+                          </div>
+                          <div 
+                            className={`py-2 px-3 cursor-pointer hover:bg-[#5662F6] hover:text-white transition-colors ${searchMode === 'summarize' ? 'bg-[#5662F6] text-white' : ''}`}
+                            onClick={() => setSearchMode('summarize')}
+                          >
+                            Summarize
+                          </div>
+                        </div>
+                      )}
                     </div>
                     <div className="flex-1 flex items-center bg-gray-50 rounded-lg px-4 py-2">
                       <svg 
@@ -1080,7 +1097,7 @@ export const NavbarMenu = () => {
                       <input
                         ref={searchInputRef}
                         type="text"
-                        placeholder="Search blogs, articles, and more..."
+                        placeholder="Search..."
                         className="flex-1 bg-transparent border-none outline-none py-2 text-gray-700"
                         value={searchQuery}
                         onChange={(e) => setSearchQuery(e.target.value)}
@@ -1148,8 +1165,8 @@ export const NavbarMenu = () => {
                     </div>
                   ) : searchQuery && !searchResults?.results?.length && !Array.isArray(searchResults) ? (
                     <div className="flex flex-col justify-center items-center py-12">
-                      <p className="text-gray-600 mb-2">No results found</p>
-                      <p className="text-gray-500 text-sm">Try a different search term</p>
+                      <p className="text-gray-600 mb-2">Plain English works perfectly here</p>
+                      {/* <p className="text-gray-500 text-sm">Try a different search term</p> */}
                     </div>
                   ) : searchResults ? (
                     <div className="p-4">
