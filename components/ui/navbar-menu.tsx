@@ -5,7 +5,6 @@ import { motion, AnimatePresence } from "motion/react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Search } from "lucide-react";
 
 const transition = {
   type: "spring",
@@ -172,8 +171,9 @@ export const NavbarMenu = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isSearchModalOpen, setIsSearchModalOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
-  const [searchResults, setSearchResults] = useState<any[]>([]);
+  const [searchResults, setSearchResults] = useState<any>(null);
   const [isLoading, setIsLoading] = useState(false);
+  const [searchMode, setSearchMode] = useState<"list" | "summarize">("list");
   const searchInputRef = useRef<HTMLInputElement>(null);
   const pathname = usePathname();
 
@@ -195,20 +195,78 @@ export const NavbarMenu = () => {
     }
   }, [isSearchModalOpen]);
   
+  // Define the search result interface
+  interface SearchResult {
+    id?: string;
+    title: string;
+    url?: string;
+    overview?: string;
+    excerpt?: string;
+    content?: string;
+    date?: string;
+    category?: string;
+    name?: string;
+  }
+
   const handleSearch = async () => {
     if (!searchQuery.trim()) return;
     
     setIsLoading(true);
+    setSearchResults(null); // Clear previous results
+    
     try {
-      const response = await fetch(`/api/blogs/search?query=${encodeURIComponent(searchQuery)}`);
+      // Use our API endpoint which will handle the event stream processing
+      const response = await fetch(`/api/blogs/search?query=${encodeURIComponent(searchQuery)}&generate_mode=${searchMode}`);
       if (!response.ok) {
         throw new Error('Search failed');
       }
+      
       const data = await response.json();
-      setSearchResults(data);
+      console.log('Search results:', data);
+      
+      // Create search results object with summary if available
+      const searchResultsObj: any = { results: [] };
+      
+      // Add summary if it exists in the response
+      if (data.summary) {
+        searchResultsObj.summary = data.summary;
+      }
+      
+      if (data && data.results && Array.isArray(data.results) && data.results.length > 0) {
+        // Format the results to match the expected structure
+        const formattedResults = data.results.map((result: any) => {
+          // Extract data from schema_object if available
+          if (result.schema_object) {
+            return {
+              id: result.schema_object.id || result.id,
+              title: result.schema_object.title || result.name,
+              url: result.url || result.schema_object.url,
+              content: result.schema_object.description || result.description,
+              date: result.schema_object.date,
+              category: result.schema_object.category,
+              excerpt: result.description || result.schema_object.description
+            };
+          }
+          
+          return {
+            id: result.id,
+            title: result.name || result.title,
+            url: result.url,
+            content: result.description,
+            excerpt: result.description
+          };
+        });
+        
+        searchResultsObj.results = formattedResults;
+        setSearchResults(searchResultsObj);
+      } else {
+        // No results found
+        searchResultsObj.results = [];
+        setSearchResults(searchResultsObj);
+      }
     } catch (error) {
       console.error('Error searching:', error);
-      setSearchResults([]);
+      setSearchResults({ results: [] });
     } finally {
       setIsLoading(false);
     }
@@ -756,8 +814,10 @@ export const NavbarMenu = () => {
                 className={`cursor-pointer uppercase flex items-center ${pathname?.includes('/services/training') && !scrolled ? 'text-white hover:text-white' : 'text-[#364153] hover:text-blue-600'}`}
                 style={{ fontFamily: 'Syne', fontWeight: 500, fontSize: '16px', lineHeight: '20px', letterSpacing: '0%', whiteSpace: 'nowrap' }}
               >
-                <Search className="w-4 h-4 mr-2" />
-                SEEK
+                <div className="mr-2 flex items-center justify-center rounded-full bg-[#5662f6]" style={{ width: '32px', height: '32px', padding: '4px' }}>
+                  <Image src="/search-icon.svg" alt="Search" width={16} height={16} />
+                </div>
+                
               </motion.p>
             </div>
           </div>
@@ -983,6 +1043,24 @@ export const NavbarMenu = () => {
               >
                 <div className="p-4 border-b border-gray-100">
                   <div className="flex items-center">
+                    <div className="mr-2 relative">
+                      <div className="relative">
+                        <select
+                          value={searchMode}
+                          onChange={(e) => setSearchMode(e.target.value as "list" | "summarize")}
+                          className="appearance-none bg-white border border-gray-200 text-gray-800 py-2 pl-3 pr-10 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-[#5662F6] focus:border-[#5662F6] font-medium cursor-pointer shadow-sm hover:border-gray-300 transition-colors"
+                          style={{ fontFamily: 'Poppins' }}
+                        >
+                          <option value="list">List</option>
+                          <option value="summarize">Summarize</option>
+                        </select>
+                        <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                          <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                            <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
                     <div className="flex-1 flex items-center bg-gray-50 rounded-lg px-4 py-2">
                       <svg 
                         xmlns="http://www.w3.org/2000/svg" 
@@ -1059,54 +1137,118 @@ export const NavbarMenu = () => {
                   `}</style>
                   {!searchQuery && (
                     <div className="text-center py-4 px-4 border-b border-gray-100">
-                      <p className="text-gray-500">Type your search query and press Enter</p>
+                      <p className="text-gray-500">Plain English works perfectly here</p>
                     </div>
                   )}
                   
                   {isLoading ? (
-                    <div className="flex justify-center items-center py-12">
-                      <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
+                    <div className="flex flex-col justify-center items-center py-12">
+                      <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mb-4"></div>
+                      <p className="text-gray-600">Searching for results...</p>
                     </div>
-                  ) : searchResults.length > 0 ? (
+                  ) : searchQuery && !searchResults?.results?.length && !Array.isArray(searchResults) ? (
+                    <div className="flex flex-col justify-center items-center py-12">
+                      <p className="text-gray-600 mb-2">No results found</p>
+                      <p className="text-gray-500 text-sm">Try a different search term</p>
+                    </div>
+                  ) : searchResults ? (
                     <div className="p-4">
-                      {searchResults.map((result, index) => (
-                        <div 
-                          key={index} 
-                          className="mb-6 p-4 border border-gray-100 rounded-lg hover:border-blue-200 hover:bg-blue-50/30 transition-colors"
-                        >
-                          <Link 
-                            href={result.url || `/resources/blogs/${result.id}`} 
-                            onClick={() => {
-                              setIsSearchModalOpen(false);
-                              setSearchQuery('');
-                              setSearchResults([]);
-                            }}
-                            className="block"
-                          >
-                            <h3 
-                              className="text-lg font-semibold text-gray-900 mb-2"
-                              style={{ fontFamily: 'Syne' }}
-                            >
-                              {result.title}
-                            </h3>
-                            <p className="text-gray-600 text-sm mb-3">
-                              {result.overview || result.excerpt || result.content?.substring(0, 150)}...
-                            </p>
-                            <div className="flex items-center text-xs text-gray-500">
-                              {result.date && (
-                                <span className="mr-3">
-                                  {new Date(result.date).toLocaleDateString()}
-                                </span>
-                              )}
-                              {result.category && (
-                                <span className="bg-gray-100 px-2 py-1 rounded">
-                                  {result.category}
-                                </span>
-                              )}
-                            </div>
-                          </Link>
+                      {searchMode === 'summarize' && searchResults.summary ? (
+                        <div className="mb-6 p-4 border border-gray-100 rounded-lg bg-blue-50/30">
+                          <h3 className="text-lg font-semibold text-gray-900 mb-2" style={{ fontFamily: 'Syne' }}>
+                            Summary
+                          </h3>
+                          <p className="text-gray-600">
+                            {typeof searchResults.summary === 'string' ? searchResults.summary : 
+                             searchResults.summary.message ? searchResults.summary.message : 
+                             JSON.stringify(searchResults.summary)}
+                          </p>
                         </div>
-                      ))}
+                      ) : null}
+                      
+                      {Array.isArray(searchResults) ? (
+                        searchResults.map((result: any, index: number) => (
+                          <div 
+                            key={index} 
+                            className="mb-6 p-4 border border-gray-100 rounded-lg hover:border-blue-200 hover:bg-blue-50/30 transition-colors"
+                          >
+                            <Link 
+                              href={result.url || `/resources/blogs/${result.id}`} 
+                              onClick={() => {
+                                setIsSearchModalOpen(false);
+                                setSearchQuery('');
+                                setSearchResults(null);
+                              }}
+                              className="block"
+                            >
+                              <h3 
+                                className="text-lg font-semibold text-gray-900 mb-2"
+                                style={{ fontFamily: 'Syne' }}
+                              >
+                                {result.title}
+                              </h3>
+                              <p className="text-gray-600 text-sm mb-3">
+                                {result.overview || result.excerpt || result.content?.substring(0, 150)}...
+                              </p>
+                              <div className="flex items-center text-xs text-gray-500">
+                                {result.date && (
+                                  <span className="mr-3">
+                                    {new Date(result.date).toLocaleDateString()}
+                                  </span>
+                                )}
+                                {result.category && (
+                                  <span className="bg-gray-100 px-2 py-1 rounded">
+                                    {result.category}
+                                  </span>
+                                )}
+                              </div>
+                            </Link>
+                          </div>
+                        ))
+                      ) : searchResults && searchResults.results && Array.isArray(searchResults.results) ? (
+                        searchResults.results.map((result: any, index: number) => (
+                          <div 
+                            key={index} 
+                            className="mb-6 p-4 border border-gray-100 rounded-lg hover:border-blue-200 hover:bg-blue-50/30 transition-colors"
+                          >
+                            <Link 
+                              href={result.url || `/resources/blogs/${result.id}`} 
+                              onClick={() => {
+                                setIsSearchModalOpen(false);
+                                setSearchQuery('');
+                                setSearchResults(null);
+                              }}
+                              className="block"
+                            >
+                              <h3 
+                                className="text-lg font-semibold text-gray-900 mb-2"
+                                style={{ fontFamily: 'Syne' }}
+                              >
+                                {result.title}
+                              </h3>
+                              <p className="text-gray-600 text-sm mb-3">
+                                {result.overview || result.excerpt || result.content?.substring(0, 150)}...
+                              </p>
+                              <div className="flex items-center text-xs text-gray-500">
+                                {result.date && (
+                                  <span className="mr-3">
+                                    {new Date(result.date).toLocaleDateString()}
+                                  </span>
+                                )}
+                                {result.category && (
+                                  <span className="bg-gray-100 px-2 py-1 rounded">
+                                    {result.category}
+                                  </span>
+                                )}
+                              </div>
+                            </Link>
+                          </div>
+                        ))
+                      ) : null}
+                    </div>
+                  ) : searchQuery && !isLoading ? (
+                    <div className="p-4 text-center text-gray-500">
+                     Plain English works perfectly here
                     </div>
                   ) : null}
                 </div>
